@@ -33,6 +33,8 @@
     "bike_recommendation"
   ],
   "image": "assets/mountain-bike-industry-context.png",
+  "idealizedImage": "assets/mountain-bike-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor idealized suspension linkage model with load, points, dimensions, and link angle.",
   "source": "index.html",
   "problemStatement": "<p>A mountain-bike or lightweight e-bike product team is reviewing the rear suspension linkage that supports rider load through a seat support member and shock absorber linkage. During riding, a vertical load from the rider is transmitted through the saddle into a curved support member, then into frame-mounted pins and the shock/link assembly.</p><p>As a junior mechanical engineer, you must simplify the real suspension assembly into a mechanics model and determine whether the pins at B and C have adequate resistance against shear failure under the specified design load. The analysis is limited to static equilibrium and average double-shear stress in the pins. Detailed dynamic loading, fatigue, bearing pressure, bushing wear, and frame deformation are outside the base problem.</p>",
   "engineeringGoal": "<p>Determine the forces transmitted through the suspension linkage and evaluate the factor of safety of pins B and C against shear failure. Identify the governing pin and make a limited mechanics-based recommendation for the specified static load case.</p>"

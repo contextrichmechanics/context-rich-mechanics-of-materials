@@ -10,6 +10,8 @@
   ],
   "derivedPlaceholders": [],
   "image": "assets/problem-image.png",
+  "idealizedImage": "assets/instructor-idealized-model.png",
+  "idealizedImageAlt": "Instructor reference idealization with dimensions, loads, and labels.",
   "source": "index.html",
   "problemStatement": "<p>Write the main scenario, engineering role, operating context, and physical system description here. This section always appears in generated student and instructor documents.</p>",
   "engineeringGoal": "<p>Write the main engineering task and decision students must make here.</p>"

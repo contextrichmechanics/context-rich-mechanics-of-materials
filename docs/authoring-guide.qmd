@@ -81,24 +81,34 @@ Each problem folder should include its own images:
 problems/new-problem-slug/assets/problem-image.png
 ```
 
-Then reference the image in `problem.json`:
+Then reference the main industry/context image in `problem.json`:
 
 ```json
 "image": "assets/problem-image.png"
 ```
 
-The same image can appear in the library card, builder preview, student document, instructor document, and exported DOC/PDF.
+The context image appears in the library card, builder preview, student document, instructor document, and exported DOC/PDF.
 
-If a specific question needs its own figure, keep that figure in the same `assets/` folder and reference it from the question:
+If the problem has an instructor/reference idealized diagram with dimensions, labels, geometry, or the model students need for numerical analysis, store it as a problem-level image:
+
+```json
+"image": "assets/problem-image.png",
+"idealizedImage": "assets/instructor-idealized-model.png",
+"idealizedImageAlt": "Instructor reference idealization with dimensions and loads."
+```
+
+The `idealizedImage` appears in student packets, instructor packets, the Instructor Builder preview, and generated HTML/QMD/DOCX/PDF exports in a dedicated **Instructor Reference Idealization and Input Variables** section before the Given Data table. It is inserted after the student has completed the context reasoning and student-generated modeling work, and immediately before the numerical mechanics questions. This image is the official reference model for solving the mechanical-analysis questions.
+
+Do not attach the instructor/reference idealized diagram to a student-generated idealization question. That question should ask students to sketch or describe their own model first. Put only truly question-specific figures in `questions.json`, such as a zoomed-in detail, alternate failure mode, or extra image needed by one question:
 
 ```json
 {
-  "id": "bracket-idealization",
-  "title": "Bracket Idealization and Variables",
-  "image": "assets/bracket-idealization-2d.png",
-  "imageAlt": "Dimensioned two-dimensional bracket idealization.",
-  "student": "<p>Use the dimensioned bracket image supplied by the instructor.</p>",
-  "instructor": "<p>Students should define every symbol before applying equilibrium.</p>"
+  "id": "connector-detail",
+  "title": "Connector Detail",
+  "image": "assets/connector-detail.png",
+  "imageAlt": "Close-up of connector detail for bearing stress.",
+  "student": "<p>Use the connector detail to identify the bearing area.</p>",
+  "instructor": "<p>Students should identify the projected contact area before calculating bearing stress.</p>"
 }
 ```
 
@@ -151,6 +161,7 @@ Questions are stored in `questions.json`:
   {
     "id": "q1",
     "title": "Load Path and Free-Body Diagram",
+    "section": "transition",
     "selected": true,
     "tags": ["fbd", "load path"],
     "type": "fbd/modeling",
@@ -168,6 +179,7 @@ Each question should include:
 
 - `id`: short and unique within the problem.
 - `title`: visible in the builder and generated documents.
+- `section`: one of `context`, `transition`, or `analysis`; this controls where the question appears relative to the instructor reference idealization.
 - `selected`: whether it is checked by default.
 - `tags`: topic labels for future filtering and review.
 - `type`: question mode, such as `conceptual`, `estimation`, `fbd/modeling`, `calculation planning`, or `decision`.
@@ -204,15 +216,23 @@ The editor validates required fields, duplicate question IDs, and unknown placeh
 
 # Question Design
 
-Prefer questions that make students move through the engineering workflow:
+Every problem packet follows the same teaching sequence:
 
-1. interpret the product or system;
-2. identify loads and assumptions;
-3. select materials and dimensions;
-4. draw a model and free-body diagram;
-5. estimate or calculate governing responses;
-6. compare against criteria;
-7. make a decision and state missing information.
+1. **Engineering Context and Main Goal**: the industry/context image, scenario, main problem statement, and engineering goal.
+2. **Context and Mechanics Reasoning Questions** (`section: "context"`): function, external loads, supports, load path, critical components, likely mechanical response, and relevant parameters.
+3. **Transition to a Mechanics Model** (`section: "transition"`): the student's own structural idealization or FBD, assumptions, and mechanics analysis plan.
+4. **Instructor Reference Idealization and Input Variables**: the official problem-level `idealizedImage`, followed by the instructor-selected variable values.
+5. **Mechanics Analysis Questions** (`section: "analysis"`): boundary conditions from the official diagram, unknown forces, equilibrium, stress/deformation/FOS calculations, comparison to criteria, and an engineering recommendation.
+
+Student packets show the prompts in this sequence without solutions. Instructor packets use the same sequence and include the representative answer, learning objectives, grading notes, and common mistakes directly after each prompt. Keeping both packet types structurally identical makes classroom use and grading easier.
+
+The official instructor idealization must not appear before the `transition` questions. Students should first interpret the real system and create their own model. The official diagram and numerical variables are then revealed for the common mechanics analysis.
+
+In the Question Editor, choose the **Packet section** for every question. New questions should be assigned by purpose:
+
+- Use `context` when the answer comes from interpreting the physical system or engineering situation.
+- Use `transition` when students create or justify an idealization, FBD, assumptions, or analysis plan.
+- Use `analysis` when students use the official idealized diagram and supplied values to calculate or judge mechanical behavior.
 
 Good context-rich questions usually do not ask only for a number. They ask students to explain what the number means and whether the design is acceptable.
 
@@ -247,7 +267,7 @@ Use the Problem Health page to review package completeness across the library. I
 - number of variables;
 - number of questions;
 - number of saved variants;
-- missing tags, type, difficulty, or learning objectives.
+- missing tags, type, difficulty, learning objectives, or packet section.
 
 The health page is generated from the same catalog as the Instructor Builder.
 

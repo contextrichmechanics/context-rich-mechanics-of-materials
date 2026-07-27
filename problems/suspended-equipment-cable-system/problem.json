@@ -35,6 +35,8 @@
     "cable_design_recommendation"
   ],
   "image": "assets/cable-industry-context.png",
+  "idealizedImage": "assets/cable-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference idealization of the two-cable suspended equipment system.",
   "source": "index.html",
   "problemStatement": "<p>An industrial facility is installing a compact sensor or inspection equipment pod in a maintenance bay. The pod is suspended above the floor using two steel wire cables connected to wall-mounted brackets on opposite structural columns. The cable angles are not symmetric, so the load is not shared equally between the two cables.</p><p>As a junior facilities or mechanical engineer, evaluate whether the cable support arrangement can safely carry the equipment weight. The goal is not to redesign the full support structure, but to use Mechanics of Materials tools to determine cable tensions, cable tensile stresses, and the required cable diameters or factors of safety.</p>",
   "engineeringGoal": "<p>Determine whether the two inclined steel cables can safely support the suspended equipment pod under the specified static loading. Identify the cable with the larger tensile demand and determine either the minimum required cable diameter for a specified factor of safety or the actual factor of safety for selected cable diameters.</p>"

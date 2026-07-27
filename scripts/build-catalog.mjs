@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const problemsDir = path.join(root, "problems");
 const dataDir = path.join(root, "data");
+const allowedQuestionSections = new Set(["context", "transition", "analysis"]);
 
 function readJson(filePath) {
   return JSON.parse(readFileSync(filePath, "utf8"));
@@ -109,6 +110,9 @@ const catalog = problemPackages().flatMap((slug) => {
 
   questions.forEach((question, index) => {
     requireFields(question, ["id", "title", "student", "instructor"], `${questionsPath}#${index}`);
+    if (question.section && !allowedQuestionSections.has(question.section)) {
+      throw new Error(`${slug} question ${question.id} has invalid section: ${question.section}`);
+    }
   });
 
   const duplicateVariableKeys = duplicateValues(variables.map((variable) => variable.key));
@@ -124,6 +128,12 @@ const catalog = problemPackages().flatMap((slug) => {
   const imagePath = path.join(packageDir, problem.image);
   if (!existsSync(imagePath)) {
     throw new Error(`${path.relative(root, problemPath)} references missing image: ${problem.image}`);
+  }
+  if (problem.idealizedImage) {
+    const idealizedImagePath = path.join(packageDir, problem.idealizedImage);
+    if (!existsSync(idealizedImagePath)) {
+      throw new Error(`${path.relative(root, problemPath)} references missing idealized image: ${problem.idealizedImage}`);
+    }
   }
 
   ["index.qmd", "student-packet.qmd", "instructor-guide.qmd"].forEach((fileName) => {
@@ -172,6 +182,9 @@ const catalog = problemPackages().flatMap((slug) => {
   return [{
     ...problem,
     image: normalizeSitePath("problems", slug, problem.image),
+    idealizedImage: problem.idealizedImage
+      ? normalizeSitePath("problems", slug, problem.idealizedImage)
+      : "",
     source: normalizeSitePath("problems", slug, problem.source || "index.html"),
     variables,
     questions,
@@ -198,6 +211,7 @@ const health = catalog.map((problem) => {
   const questionsWithoutType = problem.questions.filter((question) => !question.type);
   const questionsWithoutDifficulty = problem.questions.filter((question) => !question.difficulty);
   const questionsWithoutObjectives = problem.questions.filter((question) => !Array.isArray(question.learningObjectives) || question.learningObjectives.length === 0);
+  const questionsWithoutSection = problem.questions.filter((question) => !question.section);
 
   if (questionsWithoutTags.length > 0) {
     warnings.push(`${questionsWithoutTags.length} question(s) missing tags`);
@@ -210,6 +224,9 @@ const health = catalog.map((problem) => {
   }
   if (questionsWithoutObjectives.length > 0) {
     warnings.push(`${questionsWithoutObjectives.length} question(s) missing learning objectives`);
+  }
+  if (questionsWithoutSection.length > 0) {
+    warnings.push(`${questionsWithoutSection.length} question(s) missing template section`);
   }
   if ((problem.variants || []).length === 0) {
     warnings.push("No saved variants");

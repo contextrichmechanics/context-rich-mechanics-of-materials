@@ -2,6 +2,7 @@
   {
     "id": "q1",
     "title": "Problem Interpretation",
+    "section": "context",
     "selected": true,
     "tags": ["interpretation", "loading"],
     "type": "conceptual",
@@ -14,6 +15,7 @@
   {
     "id": "q2",
     "title": "Model Development",
+    "section": "transition",
     "selected": true,
     "tags": ["modeling", "fbd"],
     "type": "fbd/modeling",
@@ -21,5 +23,18 @@
     "learningObjectives": ["Create a simplified mechanics model", "State assumptions and limitations"],
     "student": "<p>Create an appropriate simplified mechanics model using the characteristic length <strong>L = {{L}} {{L_unit}}</strong>. State what the model includes and excludes.</p>",
     "instructor": "<p>Strong answers should justify the simplified model, define dimensions and coordinates, identify supports and applied loads, and explain limitations of the idealization.</p>"
+  },
+  {
+    "id": "q3",
+    "title": "Mechanics Analysis",
+    "section": "analysis",
+    "selected": true,
+    "tags": ["calculation", "engineering decision"],
+    "type": "calculation",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Apply the instructor reference model", "Interpret the calculated response"],
+    "gradingNotes": "<p>Require equations, substituted values with units, and a mechanics-based conclusion.</p>",
+    "student": "<p>Using the instructor reference idealization and the given values, calculate the requested mechanical response and explain what the result means for the system.</p>",
+    "instructor": "<p>A complete solution should identify the governing equation, maintain consistent units, calculate the response, and connect the result to an engineering criterion.</p>"
   }
 ]

@@ -741,6 +741,16 @@ function selectedQuestions(problem, variant) {
   return problem.questions.filter((question) => question.selected);
 }
 
+const questionSections = [
+  { id: "context", title: "Context and Mechanics Reasoning Questions" },
+  { id: "transition", title: "Transition to a Mechanics Model" },
+  { id: "analysis", title: "Mechanics Analysis Questions" }
+];
+
+function questionsBySection(questions, section) {
+  return questions.filter((question) => (question.section || "analysis") === section);
+}
+
 function questionImageFile(problem, question) {
   if (!question.image) {
     return "";
@@ -776,6 +786,27 @@ function renderQuestionImageMarkdown(problem, question, outDir) {
   return `![${alt}](<${imagePath}>)\n\n`;
 }
 
+function problemImageMarkdown(problem, image, alt, outDir) {
+  if (!image) {
+    return "";
+  }
+  const imagePath = path
+    .relative(outDir, path.join(root, image))
+    .split(path.sep)
+    .join("/");
+  const safeAlt = String(alt || `${problem.title} image`).replace(/]/g, "\\]");
+  return `![${safeAlt}](<${imagePath}>)`;
+}
+
+function renderIdealizedImageHtml(problem) {
+  if (!problem.idealizedImage) {
+    return "";
+  }
+  const imagePath = path.join(root, problem.idealizedImage);
+  const alt = problem.idealizedImageAlt || `${problem.title} instructor reference idealization`;
+  return `<section><h2>Instructor Reference Idealization and Input Variables</h2><figure><img src="${escapeHtml(imagePath)}" alt="${escapeHtml(alt)}"></figure></section>`;
+}
+
 function documentStyles() {
   return `
 body { color: #343a40; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.5; margin: 2rem auto; max-width: 850px; padding: 0 1rem; }
@@ -807,11 +838,32 @@ function renderInstructorSupport(question, problem, values) {
   return `${renderLearningObjectives(question)}${gradingNotes}${commonMistakes}`;
 }
 
+function renderQuestionSectionHtml(problem, questions, section, isInstructor, values, numberById) {
+  const sectionQuestions = questionsBySection(questions, section.id);
+  if (sectionQuestions.length === 0) {
+    return "";
+  }
+
+  return `
+  <section class="packet-question-section">
+    <h2>${section.title}</h2>
+    ${sectionQuestions.map((question) => `
+      <section class="generated-question">
+        <h3>${numberById.get(question.id)}. ${escapeHtml(question.title)}</h3>
+        <p class="question-meta">${[question.type, question.difficulty, ...(question.tags || [])].filter(Boolean).map(escapeHtml).join(" · ")}</p>
+        ${renderQuestionImageHtml(problem, question)}
+        ${substitute(question.student, problem, values)}
+        ${isInstructor ? `<div class="answer-block"><h4>Representative Instructor Answer</h4>${substitute(question.instructor, problem, values)}</div>${renderInstructorSupport(question, problem, values)}` : ""}
+      </section>`).join("")}
+  </section>`;
+}
+
 function renderBody(problem, variant, type) {
   const isInstructor = type === "instructor";
   const documentTitle = isInstructor ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
   const values = { ...(variant?.variables || {}) };
   const questions = selectedQuestions(problem, variant);
+  const numberById = new Map(questions.map((question, index) => [question.id, index + 1]));
   const imagePath = path.join(root, problem.image);
 
   const rows = problem.variables.map((variable) => {
@@ -829,18 +881,11 @@ function renderBody(problem, variant, type) {
   <figure><img src="${escapeHtml(imagePath)}" alt="${escapeHtml(problem.title)} problem image"></figure>
   <section><h2>Main Problem Statement</h2>${substitute(problem.problemStatement, problem, values)}</section>
   <section><h2>Engineering Design Goal</h2>${substitute(problem.engineeringGoal, problem, values)}</section>
+  ${renderQuestionSectionHtml(problem, questions, questionSections[0], isInstructor, values, numberById)}
+  ${renderQuestionSectionHtml(problem, questions, questionSections[1], isInstructor, values, numberById)}
+  ${renderIdealizedImageHtml(problem)}
   <section><h2>Given Data</h2><table><thead><tr><th>Symbol</th><th>Quantity</th><th>Value</th></tr></thead><tbody>${rows}</tbody></table></section>
-  <section>
-    <h2>${isInstructor ? "Selected Questions and Answers" : "Selected Homework Questions"}</h2>
-    ${questions.map((question, index) => `
-      <section class="generated-question">
-        <h3>${index + 1}. ${escapeHtml(question.title)}</h3>
-        <p class="question-meta">${[question.type, question.difficulty, ...(question.tags || [])].filter(Boolean).map(escapeHtml).join(" · ")}</p>
-        ${renderQuestionImageHtml(problem, question)}
-        ${substitute(question.student, problem, values)}
-        ${isInstructor ? `<div class="answer-block"><h4>Representative Instructor Answer</h4>${substitute(question.instructor, problem, values)}</div>${renderInstructorSupport(question, problem, values)}` : ""}
-      </section>`).join("")}
-  </section>
+  ${renderQuestionSectionHtml(problem, questions, questionSections[2], isInstructor, values, numberById)}
 </article>`;
 }
 
@@ -865,15 +910,22 @@ function qmdDocument(problem, variant, type, outDir) {
   const isInstructor = type === "instructor";
   const values = { ...(variant?.variables || {}) };
   const questions = selectedQuestions(problem, variant);
+  const numberById = new Map(questions.map((question, index) => [question.id, index + 1]));
   const imagePath = path
     .relative(outDir, path.join(root, problem.image))
     .split(path.sep)
     .join("/");
+  const idealizedImage = problemImageMarkdown(
+    problem,
+    problem.idealizedImage,
+    problem.idealizedImageAlt || `${problem.title} instructor reference idealization`,
+    outDir
+  );
   const rows = problem.variables.map((variable) => {
     const value = values[variable.key] ?? variable.value;
     return `| ${tableCell(symbolHtml(variable.symbol))} | ${tableCell(variable.label)} | ${tableCell(valueWithUnitHtml(value, variable.unit))} |`;
   }).join("\n");
-  const renderedQuestions = questions.map((question, index) => {
+  const renderQuestion = (question) => {
     const meta = [question.type, question.difficulty, ...(question.tags || [])].filter(Boolean).join(" · ");
     const support = isInstructor
       ? [
@@ -886,7 +938,7 @@ function qmdDocument(problem, variant, type, outDir) {
         ].filter(Boolean).join("\n\n")
       : "";
 
-    return `### ${index + 1}. ${question.title}
+    return `### ${numberById.get(question.id)}. ${question.title}
 
 *${meta}*
 
@@ -894,7 +946,14 @@ ${renderQuestionImageMarkdown(problem, question, outDir)}
 ${htmlToMarkdown(substitute(question.student, problem, values))}
 
 ${support}`;
-  }).join("\n\n");
+  };
+  const renderQuestionSection = (section) => {
+    const sectionQuestions = questionsBySection(questions, section.id);
+    if (sectionQuestions.length === 0) {
+      return "";
+    }
+    return `## ${section.title}\n\n${sectionQuestions.map(renderQuestion).join("\n\n")}`;
+  };
 
   return `---
 title: "${title.replace(/"/g, '\\"')} — ${problem.title.replace(/"/g, '\\"')}"
@@ -915,15 +974,17 @@ ${htmlToMarkdown(substitute(problem.problemStatement, problem, values))}
 
 ${htmlToMarkdown(substitute(problem.engineeringGoal, problem, values))}
 
-## Given Data
+${renderQuestionSection(questionSections[0])}
+
+${renderQuestionSection(questionSections[1])}
+
+${idealizedImage ? `## Instructor Reference Idealization and Input Variables\n\n${idealizedImage}\n\n` : ""}## Given Data
 
 | Symbol | Quantity | Value |
 |---|---|---:|
 ${rows}
 
-## ${isInstructor ? "Selected Questions and Answers" : "Selected Homework Questions"}
-
-${renderedQuestions}
+${renderQuestionSection(questionSections[2])}
 `;
 }
 

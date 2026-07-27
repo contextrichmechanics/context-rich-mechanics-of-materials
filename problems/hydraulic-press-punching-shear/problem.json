@@ -25,6 +25,8 @@
     "press_governing_fos"
   ],
   "image": "assets/press-industry-context.png",
+  "idealizedImage": "assets/press-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor idealization showing the press ram, plate, bearing area, and punching shear sections.",
   "source": "index.html",
   "problemStatement": "<p>A manufacturing engineering team is evaluating a hydraulic press fixture used to apply a vertical compressive load through a cylindrical ram onto a flat metal plate. The plate is supported by two fixture blocks with an opening beneath the loaded region. This type of setup appears in pressing operations, material testing, tooling qualification, and shop-floor fixtures where concentrated loads are introduced into relatively thin plates.</p><p>As a junior mechanical or manufacturing engineer, you must identify how the load is transferred from the ram into the supported plate and determine the average stress quantities that are relevant to the simplified Solid Mechanics model. The analysis focuses on two different average-stress mechanisms: bearing stress under the ram and punching shear stress through the plate along sections AC and BD.</p>",
   "engineeringGoal": "<p>Determine the average punching shear stress developed in the plate along sections AC and BD, and determine the average bearing stress on the plate surface under the cylindrical ram. Use these results to identify which simplified stress quantity is larger and state what additional material data would be needed before accepting the fixture for service.</p>"

@@ -721,6 +721,16 @@ function selectedQuestions(problem) {
   });
 }
 
+const questionSections = [
+  { id: "context", title: "Context and Mechanics Reasoning Questions" },
+  { id: "transition", title: "Transition to a Mechanics Model" },
+  { id: "analysis", title: "Mechanics Analysis Questions" }
+];
+
+function questionsBySection(questions, section) {
+  return questions.filter((question) => (question.section || "analysis") === section);
+}
+
 function questionIsSelected(question) {
   const variant = selectedVariant();
   if (variant && Array.isArray(variant.selectedQuestions)) {
@@ -867,6 +877,21 @@ function imagePath(problem, embeddedImage) {
   return new URL(problem.image, window.location.href).href;
 }
 
+function renderIdealizedImage(problem) {
+  if (!problem.idealizedImage) {
+    return "";
+  }
+  const alt = problem.idealizedImageAlt || `${problem.title} instructor reference idealization`;
+  return `
+      <section>
+        <h2>Instructor Reference Idealization and Input Variables</h2>
+        <figure>
+          <img src="${new URL(problem.idealizedImage, window.location.href).href}" alt="${escapeHtml(alt)}">
+        </figure>
+      </section>
+  `;
+}
+
 function renderLearningObjectives(question) {
   if (!Array.isArray(question.learningObjectives) || question.learningObjectives.length === 0) {
     return "";
@@ -900,6 +925,38 @@ function renderInstructorSupport(question, problem) {
   return `${renderLearningObjectives(question)}${gradingNotes}${commonMistakes}`;
 }
 
+function renderQuestionSection(problem, questions, section, isInstructor, numberById) {
+  const sectionQuestions = questionsBySection(questions, section.id);
+  if (sectionQuestions.length === 0) {
+    return "";
+  }
+
+  return `
+      <section class="packet-question-section">
+        <h2>${section.title}</h2>
+        ${sectionQuestions.map((question) => `
+          <section class="generated-question">
+            <h3>${numberById.get(question.id)}. ${escapeHtml(question.title)}</h3>
+            <p class="question-meta">${[
+              question.type,
+              question.difficulty,
+              ...(question.tags || [])
+            ].filter(Boolean).map(escapeHtml).join(" · ")}</p>
+            ${renderQuestionImage(problem, question)}
+            ${substitute(question.student, problem)}
+            ${isInstructor ? `
+              <div class="answer-block">
+                <h4>Representative Instructor Answer</h4>
+                ${substitute(question.instructor, problem)}
+              </div>
+              ${renderInstructorSupport(question, problem)}
+            ` : ""}
+          </section>
+        `).join("")}
+      </section>
+  `;
+}
+
 function questionImagePath(problem, question) {
   if (!question.image) {
     return "";
@@ -929,6 +986,7 @@ function renderDocumentBody(type, embeddedImage = "") {
   const isInstructor = type === "instructor";
   const documentTitle = isInstructor ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
   const questions = selectedQuestions(problem);
+  const numberById = new Map(questions.map((question, index) => [question.id, index + 1]));
 
   return `
     <article class="generated-packet">
@@ -952,6 +1010,12 @@ function renderDocumentBody(type, embeddedImage = "") {
         ${substitute(problem.engineeringGoal, problem)}
       </section>
 
+      ${renderQuestionSection(problem, questions, questionSections[0], isInstructor, numberById)}
+
+      ${renderQuestionSection(problem, questions, questionSections[1], isInstructor, numberById)}
+
+      ${renderIdealizedImage(problem)}
+
       <section>
         <h2>Given Data</h2>
         <table>
@@ -966,28 +1030,7 @@ function renderDocumentBody(type, embeddedImage = "") {
         </table>
       </section>
 
-      <section>
-        <h2>${isInstructor ? "Selected Questions and Answers" : "Selected Homework Questions"}</h2>
-        ${questions.map((question, index) => `
-          <section class="generated-question">
-            <h3>${index + 1}. ${escapeHtml(question.title)}</h3>
-            <p class="question-meta">${[
-              question.type,
-              question.difficulty,
-              ...(question.tags || [])
-            ].filter(Boolean).map(escapeHtml).join(" · ")}</p>
-            ${renderQuestionImage(problem, question)}
-            ${substitute(question.student, problem)}
-            ${isInstructor ? `
-              <div class="answer-block">
-                <h4>Representative Instructor Answer</h4>
-                ${substitute(question.instructor, problem)}
-              </div>
-              ${renderInstructorSupport(question, problem)}
-            ` : ""}
-          </section>
-        `).join("")}
-      </section>
+      ${renderQuestionSection(problem, questions, questionSections[2], isInstructor, numberById)}
     </article>
   `;
 }

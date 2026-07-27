@@ -56,6 +56,14 @@ toc: false
         <span>Difficulty</span>
         <input id="field-difficulty" type="text" placeholder="introductory, intermediate">
       </label>
+      <label class="builder-field">
+        <span>Packet section</span>
+        <select id="field-section">
+          <option value="context">Context and mechanics reasoning</option>
+          <option value="transition">Transition to a mechanics model</option>
+          <option value="analysis">Mechanics analysis</option>
+        </select>
+      </label>
       <label class="builder-field editor-wide">
         <span>Tags, comma separated</span>
         <input id="field-tags" type="text">
@@ -111,6 +119,7 @@ const fields = {
   title: document.getElementById("field-title"),
   type: document.getElementById("field-type"),
   difficulty: document.getElementById("field-difficulty"),
+  section: document.getElementById("field-section"),
   tags: document.getElementById("field-tags"),
   objectives: document.getElementById("field-objectives"),
   selected: document.getElementById("field-selected"),
@@ -190,6 +199,7 @@ function loadQuestionIntoForm() {
   fields.title.value = question.title || "";
   fields.type.value = question.type || "";
   fields.difficulty.value = question.difficulty || "";
+  fields.section.value = question.section || "analysis";
   fields.tags.value = (question.tags || []).join(", ");
   fields.objectives.value = (question.learningObjectives || []).join("\n");
   fields.selected.checked = Boolean(question.selected);
@@ -208,6 +218,7 @@ function saveFormToQuestion() {
   question.title = fields.title.value.trim();
   question.type = fields.type.value.trim();
   question.difficulty = fields.difficulty.value.trim();
+  question.section = fields.section.value;
   question.tags = fields.tags.value.split(",").map((tag) => tag.trim()).filter(Boolean);
   question.learningObjectives = fields.objectives.value.split("\n").map((item) => item.trim()).filter(Boolean);
   question.selected = fields.selected.checked;
@@ -242,6 +253,9 @@ function validateQuestions() {
       errors.push(`${label}: duplicate question id`);
     }
     seenIds.add(question.id);
+    if (!["context", "transition", "analysis"].includes(question.section)) {
+      errors.push(`${label}: select a valid packet section`);
+    }
 
     [
       ["student", question.student],
@@ -898,6 +912,7 @@ function renderPreview() {
     <article class="generated-question">
       <h3>${escapeHtml(question.title || "Untitled question")}</h3>
       <p class="question-meta">${[
+        question.section,
         question.type,
         question.difficulty,
         ...(question.tags || [])
@@ -936,6 +951,7 @@ function addQuestion() {
   editableQuestions.push({
     id: `q${editableQuestions.length + 1}`,
     title: "New question",
+    section: "context",
     selected: true,
     tags: [],
     type: "conceptual",
