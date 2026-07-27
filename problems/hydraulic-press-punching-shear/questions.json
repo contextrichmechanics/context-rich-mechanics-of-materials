@@ -1,0 +1,213 @@
+[
+  {
+    "id": "q1",
+    "title": "Primary Function of the System",
+    "selected": true,
+    "tags": ["context", "load transfer", "fixture"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Connect the physical press setup to load transfer", "Identify local plate stress concerns"],
+    "student": "<p>What is the primary structural function of the press fixture system?</p>",
+    "instructor": "<p>The system transfers a compressive load from a hydraulic press ram into a flat metal plate and then into the support blocks and press table. The plate must resist local contact/bearing stress under the ram and possible punching shear through its thickness.</p><p>Students should connect the physical setup to load transfer, not describe the entire press machine in broad terms.</p>"
+  },
+  {
+    "id": "q2",
+    "title": "External Load",
+    "selected": true,
+    "tags": ["loading", "ram"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify where the load is applied", "Relate the press ram to the idealized load"],
+    "student": "<p>Where is the external load applied, and what is its direction?</p>",
+    "instructor": "<p>The external load <em>P</em> is applied vertically downward through the cylindrical ram onto the top surface of the flat plate.</p><p>The industry image has no labels; students should use the problem statement and idealized diagram to identify the load.</p>"
+  },
+  {
+    "id": "q3",
+    "title": "Supports and Boundary Conditions",
+    "selected": true,
+    "tags": ["supports", "boundary conditions"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify simplified supports", "Distinguish local stress checks from beam bending analysis"],
+    "student": "<p>Identify the supports or boundary constraints in the idealized fixture model.</p>",
+    "instructor": "<p>The plate is supported from below by two support blocks on either side of the opening. In the simplified model, the supports provide upward reaction forces to the plate while the central region between the supports is unsupported.</p><p>This is not a fixed-end beam problem for the base analysis; the focus is average bearing and punching shear.</p>"
+  },
+  {
+    "id": "q4",
+    "title": "Load Path",
+    "selected": true,
+    "tags": ["load path", "bearing", "punching shear"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Trace load from ram to fixture base", "Name the contact and shear-transfer regions"],
+    "student": "<p>Using the component list, trace the load path from the press ram to the fixture base.</p>",
+    "instructor": "<p>One acceptable load path is: hydraulic ram &rarr; bearing contact region on top of the plate &rarr; plate material around the loaded region &rarr; punching shear sections AC and BD &rarr; support blocks &rarr; press table/fixture base.</p><p>The key point is that the load does not vanish at the plate; it must transfer through contact and shear regions into the supports.</p>"
+  },
+  {
+    "id": "q5",
+    "title": "Critical Components and Locations",
+    "selected": true,
+    "tags": ["critical locations", "plate"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify critical locations for average stress checks", "Separate included and excluded components"],
+    "student": "<p>Which components or locations are likely to be critical for this simplified problem?</p>",
+    "instructor": "<p>The flat plate is the critical component. The important locations are the contact area directly under the ram and the potential punching shear sections AC and BD through the plate thickness.</p><p>Students may mention support blocks, but the base problem provides geometry for the plate stress checks only.</p>"
+  },
+  {
+    "id": "q6",
+    "title": "Critical Mechanical Response",
+    "selected": true,
+    "tags": ["bearing stress", "punching shear"],
+    "type": "conceptual",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Distinguish bearing stress from punching shear stress", "Identify the relevant stress mechanism at each location"],
+    "student": "<p>For each critical location, identify the relevant mechanical response or failure mechanism considered in this problem.</p>",
+    "instructor": "<p>At the top surface under the ram, the relevant response is average bearing/compressive contact stress. Along sections AC and BD, the relevant response is average punching shear stress through the plate thickness.</p><p>Bending, contact nonlinearity, local yielding, and plastic deformation are not included in the simplified calculation.</p>"
+  },
+  {
+    "id": "q7",
+    "title": "Relevant Geometric and Load Parameters",
+    "selected": true,
+    "tags": ["geometry", "area", "average stress"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify variables controlling bearing and punching shear", "Connect area definitions to stress definitions"],
+    "student": "<p>Identify the geometric and load parameters that control the bearing stress and punching shear stress.</p>",
+    "instructor": "<p>The relevant parameters are applied load <em>P</em>, ram diameter <em>d</em>, plate thickness <em>t</em>, support opening distance <em>s</em>, and overall plate/support width <em>b</em>. For the simplified calculations here, bearing stress is controlled by the contact area under the ram, and punching shear is controlled by the shear area through sections AC and BD.</p><p>Students should connect area definitions to stress definitions rather than simply listing dimensions.</p>"
+  },
+  {
+    "id": "q8",
+    "title": "Student-Generated Structural Idealization",
+    "selected": true,
+    "tags": ["idealization", "stress surfaces", "modeling"],
+    "type": "fbd/modeling",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Translate a press setup into an average-stress model", "Identify bearing and punching shear surfaces"],
+    "image": "assets/press-instructor-idealization.png",
+    "imageAlt": "Instructor idealization showing a press ram, plate, support blocks, bearing stress under the ram, and punching shear sections AC and BD.",
+    "student": "<p>Convert the real hydraulic press fixture into a simplified Mechanics of Materials model. Your sketch should show the cylindrical ram, flat plate, support blocks, applied load <em>P</em>, plate thickness <em>t</em>, ram diameter <em>d</em>, support opening <em>s</em>, total plate/support width <em>b</em>, and the potential punching shear sections AC and BD.</p><p>Student model placeholder: insert or draw the simplified model and load-transfer/stress-surface diagram here.</p>",
+    "instructor": "<p>A correct idealization shows a vertical load <em>P</em> applied through the ram onto the plate, bearing stress distributed over the ram contact area, and two vertical punching shear sections AC and BD through the plate thickness at the loaded region.</p><p>For the student packet, provide a blank sketch space first. The instructor reference diagram can be shown after students attempt their own model if desired.</p>"
+  },
+  {
+    "id": "q9",
+    "title": "Modeling Assumptions",
+    "selected": true,
+    "tags": ["assumptions", "average stress"],
+    "type": "conceptual",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["State simplifying assumptions for average stress", "Identify excluded effects"],
+    "student": "<p>State the assumptions used to convert the real press setup into the simplified Solid Mechanics model.</p>",
+    "instructor": "<p>Assumptions may include static vertical load; ram is rigid relative to the plate; plate is checked using average stress; bearing stress is uniformly distributed over the idealized contact footprint; punching shear is uniformly distributed over sections AC and BD; support blocks are rigid; and stress concentrations, plate bending, plasticity, contact nonlinearity, and friction are neglected.</p><p>Expected answers do not need every assumption but should include the average-stress idealization.</p>"
+  },
+  {
+    "id": "q10",
+    "title": "Mechanics Analysis Plan",
+    "selected": true,
+    "tags": ["analysis plan", "area", "stress"],
+    "type": "calculation planning",
+    "difficulty": "introductory",
+    "learningObjectives": ["Plan the average-stress calculation sequence", "Select the correct areas before applying stress formulas"],
+    "student": "<p>Before calculating, describe the analysis sequence needed to determine punching shear stress and bearing stress.</p>",
+    "instructor": "<p>The analysis sequence is: identify the load <em>P</em>; identify the contact/bearing area under the ram; identify the punching shear area along sections AC and BD; calculate &tau;<sub>p</sub> = <em>P</em>/<em>A</em><sub>p</sub> for punching shear; calculate &sigma;<sub>b</sub> = <em>P</em>/<em>A</em><sub>b</sub> for bearing stress; compare the stress magnitudes; and state what material allowables would be needed for a design decision.</p><p>This helps students organize the calculation before substituting values.</p>"
+  },
+  {
+    "id": "q11",
+    "title": "Boundary and Loading Conditions from Instructor Diagram",
+    "selected": true,
+    "tags": ["loading", "supports", "diagram interpretation"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Read load and support conditions from the idealized diagram", "Focus on local stress instead of support reactions"],
+    "student": "<p>From the instructor diagram, identify the loading and support conditions used in the simplified model.</p>",
+    "instructor": "<p>The cylindrical ram applies a downward compressive load <em>P</em> to the plate. The plate is supported below by two rigid support blocks on either side of the opening. The model focuses on local bearing under the ram and punching shear through sections AC and BD.</p><p>This replaces a full support-reaction analysis because the base learning goal is average stress, not beam bending.</p>"
+  },
+  {
+    "id": "q12",
+    "title": "Potential Failure or Stress Surfaces",
+    "selected": true,
+    "tags": ["stress surfaces", "bearing", "punching shear"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify the surfaces over which stresses are evaluated", "Distinguish contact area from shear-through-thickness area"],
+    "student": "<p>Identify the surfaces over which bearing stress and punching shear stress are evaluated.</p>",
+    "instructor": "<p>Bearing stress is evaluated over the idealized contact footprint under the ram. Punching shear stress is evaluated through the plate thickness along sections AC and BD.</p><p>Students should distinguish a surface contact area from a shear-through-thickness area.</p>"
+  },
+  {
+    "id": "q13",
+    "title": "Bearing Area Under the Ram",
+    "selected": true,
+    "tags": ["bearing area", "contact area"],
+    "type": "calculation",
+    "difficulty": "introductory",
+    "learningObjectives": ["Compute circular contact area", "Use the stated bearing-area convention"],
+    "student": "<p>Determine the idealized contact area used to calculate average bearing stress under the cylindrical ram.</p>",
+    "instructor": "<p>Using a circular contact footprint, <em>A</em><sub>b</sub> = &pi;<em>d</em><sup>2</sup>/4. With <em>d</em> = {{d}} {{d_unit}}, <em>A</em><sub>b</sub> = &pi;({{d}} mm)<sup>2</sup>/4 = {{press_bearing_area_mm2}} mm<sup>2</sup>.</p><p>If an instructor wants a projected rectangular bearing area instead, that convention should be stated explicitly. This filled example uses the circular footprint area.</p>"
+  },
+  {
+    "id": "q14",
+    "title": "Punching Shear Area Along Sections AC and BD",
+    "selected": true,
+    "tags": ["punching shear area", "through-thickness shear"],
+    "type": "calculation",
+    "difficulty": "introductory",
+    "learningObjectives": ["Compute the two-section punching shear area", "Use plate thickness in the shear area"],
+    "student": "<p>Determine the total idealized punching shear area through sections AC and BD.</p>",
+    "instructor": "<p>Each punching shear section has idealized area <em>dt</em>. Since there are two sections, <em>A</em><sub>p</sub> = 2<em>dt</em>. With <em>d</em> = {{d}} {{d_unit}} and <em>t</em> = {{t}} {{t_unit}}, <em>A</em><sub>p</sub> = 2({{d}})({{t}}) = {{press_punching_area_mm2}} mm<sup>2</sup>.</p><p>This calculation uses the simplified two-section punching shear idealization shown in the instructor diagram.</p>"
+  },
+  {
+    "id": "q15",
+    "title": "Average Punching Shear Stress",
+    "selected": true,
+    "tags": ["punching shear stress", "average stress"],
+    "type": "calculation",
+    "difficulty": "introductory",
+    "learningObjectives": ["Calculate average punching shear stress", "Use N and mm units to obtain MPa"],
+    "student": "<p>Calculate the average punching shear stress developed in the plate along sections AC and BD.</p>",
+    "instructor": "<p>Convert the load to N: <em>P</em> = {{press_load_N}} N. Then &tau;<sub>p</sub> = <em>P</em>/<em>A</em><sub>p</sub> = {{press_load_N}}/{{press_punching_area_mm2}} = {{press_punching_shear_MPa}} MPa.</p><p>Use N and mm units so N/mm<sup>2</sup> = MPa.</p>"
+  },
+  {
+    "id": "q16",
+    "title": "Average Bearing Stress Under the Ram",
+    "selected": true,
+    "tags": ["bearing stress", "contact stress"],
+    "type": "calculation",
+    "difficulty": "introductory",
+    "learningObjectives": ["Calculate average bearing stress", "Interpret bearing as compressive contact stress"],
+    "student": "<p>Calculate the average bearing stress developed on the plate surface under the cylindrical ram.</p>",
+    "instructor": "<p>&sigma;<sub>b</sub> = <em>P</em>/<em>A</em><sub>b</sub> = {{press_load_N}}/{{press_bearing_area_mm2}} = {{press_bearing_stress_MPa}} MPa.</p><p>This is an average compressive contact stress, not a tensile stress.</p>"
+  },
+  {
+    "id": "q17",
+    "title": "Compare Stress Magnitudes",
+    "selected": true,
+    "tags": ["comparison", "engineering interpretation"],
+    "type": "calculation",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Compare average stress magnitudes", "Avoid declaring failure without allowables"],
+    "student": "<p>Compare the calculated average punching shear stress and average bearing stress. Which stress quantity is larger?</p>",
+    "instructor": "<p>Using the stated idealization, &tau;<sub>p</sub> = {{press_punching_shear_MPa}} MPa and &sigma;<sub>b</sub> = {{press_bearing_stress_MPa}} MPa. The larger average stress quantity is {{press_larger_stress}} = {{press_larger_stress_MPa}} MPa.</p><p>Larger stress magnitude does not automatically mean governing failure unless shear and bearing allowables are known.</p>"
+  },
+  {
+    "id": "q18",
+    "title": "Strength Factor of Safety and Mechanics-Based Modification",
+    "selected": true,
+    "tags": ["factor of safety", "design modification"],
+    "type": "decision",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Compute optional factors of safety", "Recommend modifications based on stress-area relationships"],
+    "student": "<p>If allowable bearing and shear stresses are provided by the instructor, determine the factor of safety for bearing and punching shear. If the plate does not meet the required strength criterion, identify a mechanics-based modification that would reduce bearing stress or punching shear stress.</p>",
+    "instructor": "<p>Using the optional allowables in the current input set, FOS<sub>shear</sub> = &tau;<sub>allow</sub>/&tau;<sub>p</sub> = {{tau_allow}}/{{press_punching_shear_MPa}} = {{press_fos_shear}}, and FOS<sub>bearing</sub> = &sigma;<sub>bearing,allow</sub>/&sigma;<sub>b</sub> = {{sigma_bearing_allow}}/{{press_bearing_stress_MPa}} = {{press_fos_bearing}}. The smaller simplified factor of safety is {{press_governing_fos}} for {{press_governing_fos_mode}}.</p><p>Possible modifications include increasing plate thickness <em>t</em> to reduce punching shear stress, increasing ram diameter <em>d</em> or using a load-spreading pad to reduce bearing stress, reducing load <em>P</em>, using a stronger plate material, or changing the support geometry to reduce local failure risk.</p>"
+  },
+  {
+    "id": "q19",
+    "title": "Engineering Assessment and Recommendation",
+    "selected": true,
+    "tags": ["recommendation", "limitations", "missing data"],
+    "type": "decision",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Make a limited mechanics-based recommendation", "State missing material data and excluded checks"],
+    "student": "<p>Use the mechanics results to make a limited engineering recommendation. Identify the larger calculated average stress and state what additional information is needed before accepting the fixture for service.</p>",
+    "instructor": "<p>For the stated data and idealization, &tau;<sub>p</sub> = {{press_punching_shear_MPa}} MPa and &sigma;<sub>b</sub> = {{press_bearing_stress_MPa}} MPa. The larger average stress is {{press_larger_stress}}.</p><p>However, accepting the fixture requires allowable shear stress, allowable bearing/compressive stress, required factor of safety, and possibly checks for plate bending, yielding, plastic indentation, contact nonlinearity, support deformation, and fixture alignment. The final recommendation should not overclaim safety without material allowables.</p>"
+  }
+]

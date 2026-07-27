@@ -1,0 +1,37 @@
+---
+title: "Problem title"
+description: "One-sentence description."
+image: "assets/industry-image.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+course_topics:
+  - replace-me
+problem_types:
+  - replace-me
+competencies:
+  - replace-me
+industries:
+  - replace-me
+difficulty: "Introductory"
+status: "Draft"
+problem_id: "MOS-XXX-000"
+version: "0.1.0"
+---
+
+## Industry Scenario
+
+Describe the engineering role, product, operating environment, and end goal.
+
+## Question 1
+
+Add the first approved question here.
+
+## Modeling stage
+
+Do not reveal the simplified model until students have completed the product,
+material, geometry, loading, critical-location, and evaluation-criteria questions.
+
+## Student deliverable
+
+State what students must submit.

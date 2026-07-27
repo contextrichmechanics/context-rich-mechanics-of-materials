@@ -1,0 +1,57 @@
+---
+title: "Rear Suspension Linkage Pin Safety Check for a Mountain Bike"
+description: "A context-rich mechanics problem on rear suspension linkage forces, double-shear pin stress, and factor of safety."
+image: "assets/mountain-bike-industry-context.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - design
+course_topics:
+  - equilibrium
+  - shear
+  - pins
+  - factor of safety
+  - connections
+textbook_chapters:
+  - Rigid-body equilibrium
+  - Shear stress
+  - Connections and fasteners
+  - Factor of safety
+problem_types:
+  - free-body diagram
+  - calculation
+  - design evaluation
+competencies:
+  - load path reasoning
+  - two-force member idealization
+  - moment equilibrium
+  - connector shear
+  - engineering judgment
+industries:
+  - mountain bike design
+  - e-bike design
+  - lightweight mobility systems
+difficulty: "Intermediate"
+status: "Draft"
+problem_id: "MOS-BIKE-004"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for a MEEN 305-style equilibrium and double-shear factor-of-safety assignment. Use the Instructor Builder to adjust the load, geometry, pin diameters, or selected questions.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=mountain-bike-suspension-pin){.btn .btn-secondary}
+
+## Package Files
+
+- `problem.json`: catalog metadata, main statement, and engineering goal.
+- `variables.json`: editable values for load, geometry, pin sizes, and material shear strength.
+- `questions.json`: selectable student questions and instructor answers.
+- `assets/`: the reference idealization diagram.

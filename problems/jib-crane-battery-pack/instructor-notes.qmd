@@ -1,0 +1,20 @@
+---
+title: "Instructor Notes — Wall-Mounted Swing-Jib Crane"
+format:
+  html:
+    toc: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+draft: true
+---
+
+## Status
+
+Instructor guidance, expected reasoning, misconceptions, rubrics, and model
+solutions will be added modularly as each question is approved.
+
+## Question 1 guidance
+
+To be developed after the student-facing wording is finalized.

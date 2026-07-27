@@ -1,0 +1,36 @@
+---
+title: "Replace With Problem Title"
+description: "One-sentence problem summary."
+image: "assets/problem-image.png"
+categories:
+  - context-rich
+course_topics:
+  - replace-me
+textbook_chapters:
+  - Replace with chapter or topic
+problem_types:
+  - replace-me
+competencies:
+  - replace-me
+industries:
+  - replace-me
+difficulty: "Introductory"
+status: "Draft"
+problem_id: "MOS-NEW-001"
+version: "0.1.0"
+---
+
+This page is the public problem-library entry. Keep the problem-specific builder data in:
+
+- `problem.json`
+- `variables.json`
+- `questions.json`
+- `assets/`
+
+After editing those files, run:
+
+```bash
+node scripts/build-catalog.mjs
+quarto render instructor-builder.qmd
+quarto render index.qmd
+```

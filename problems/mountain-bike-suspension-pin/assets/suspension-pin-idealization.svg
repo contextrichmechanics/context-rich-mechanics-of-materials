@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Mountain bike rear suspension pin idealization</title>
+  <desc id="desc">A simplified two-dimensional suspension linkage with points A, B, C, and D, a downward load P at A, dimensions 300 millimeters and 100 millimeters, 30 millimeter vertical offset, and a 60 degree shock link.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#263238"/>
+    </marker>
+    <marker id="load-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c62828"/>
+    </marker>
+  </defs>
+  <rect width="960" height="560" fill="#f7f9fb"/>
+  <g fill="none" stroke="#cfd8dc" stroke-width="2">
+    <path d="M 95 440 H 865"/>
+    <path d="M 95 120 H 865"/>
+    <path d="M 120 90 V 470"/>
+    <path d="M 840 90 V 470"/>
+  </g>
+  <g stroke="#455a64" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 190 235 C 280 175, 470 185, 650 285" fill="none" stroke-width="24"/>
+    <path d="M 610 300 L 775 110" fill="none" stroke="#607d8b" stroke-width="18"/>
+    <path d="M 650 285 L 790 125" fill="none" stroke="#78909c" stroke-width="8"/>
+    <path d="M 650 285 L 720 378" fill="none" stroke="#37474f" stroke-width="16"/>
+    <path d="M 145 255 C 190 210, 260 190, 330 195" fill="none" stroke="#263238" stroke-width="8"/>
+  </g>
+  <g fill="#fff" stroke="#263238" stroke-width="5">
+    <circle cx="190" cy="235" r="18"/>
+    <circle cx="650" cy="285" r="18"/>
+    <circle cx="775" cy="110" r="18"/>
+    <circle cx="720" cy="378" r="18"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#263238" font-weight="700">
+    <text x="168" y="220" font-size="30">A</text>
+    <text x="626" y="274" font-size="30">B</text>
+    <text x="750" y="98" font-size="30">D</text>
+    <text x="735" y="418" font-size="30">C</text>
+  </g>
+  <path d="M 190 125 V 207" stroke="#c62828" stroke-width="8" marker-end="url(#load-arrow)"/>
+  <text x="156" y="112" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#c62828">P</text>
+  <g stroke="#263238" stroke-width="3" fill="none" marker-start="url(#arrow)" marker-end="url(#arrow)">
+    <path d="M 190 475 H 650"/>
+    <path d="M 650 475 H 720"/>
+    <path d="M 650 338 H 720"/>
+    <path d="M 832 126 A 82 82 0 0 1 792 188"/>
+  </g>
+  <g stroke="#263238" stroke-width="2" fill="none">
+    <path d="M 190 245 V 490"/>
+    <path d="M 650 295 V 490"/>
+    <path d="M 720 390 V 490"/>
+    <path d="M 650 285 H 735"/>
+    <path d="M 720 285 V 378"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#263238">
+    <text x="380" y="512">300 mm</text>
+    <text x="660" y="512">100 mm</text>
+    <text x="682" y="327">30 mm</text>
+    <text x="805" y="205">60 deg</text>
+    <text x="716" y="224">shock/link BD</text>
+    <text x="365" y="162">seat support member</text>
+  </g>
+</svg>

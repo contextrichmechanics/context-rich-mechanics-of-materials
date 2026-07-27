@@ -1,0 +1,30 @@
+{
+  "id": "exam-version",
+  "title": "Exam Version - calculation sequence",
+  "variables": {
+    "L": 3.0,
+    "Lb": 2.0,
+    "theta": 42,
+    "M": 520,
+    "H": 650,
+    "e_H": 0.25,
+    "gamma_d": 1.3,
+    "S_boom": 110000,
+    "I_boom": 12000000,
+    "E": 200000,
+    "A_brace": 780,
+    "d_pin": 24,
+    "t_plate": 14,
+    "sigma_y": 250,
+    "N_y": 2,
+    "delta_allow": 12,
+    "K_brace": 1,
+    "r_min": 32,
+    "I_brace": 1800000,
+    "N_b": 2,
+    "n_s": 2,
+    "tau_allow": 80,
+    "bearing_allow": 150
+  },
+  "selectedQuestions": ["idealization", "q7", "q8", "q9", "q10", "q11"]
+}

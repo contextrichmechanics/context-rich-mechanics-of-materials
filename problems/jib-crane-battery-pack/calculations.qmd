@@ -1,0 +1,53 @@
+---
+title: "Calculations — Wall-Mounted Swing-Jib Crane"
+format:
+  html:
+    code-fold: true
+    toc: true
+  pdf:
+    documentclass: scrartcl
+    toc: true
+  ipynb: default
+jupyter: python3
+execute:
+  echo: true
+  warning: false
+---
+
+
+# Reference 2D Structural Model
+
+The following idealized side view defines the geometry and variables used in the numerical analysis.
+
+![Two-dimensional idealized swing-jib crane model used for calculations.](assets/jib-crane-industry-2d.png){fig-alt="Idealized swing-jib crane showing geometric variables, wall supports, boom, brace, trolley, and battery-pack mass." width=100%}
+
+# Purpose
+
+This notebook is reserved for calculations added after the conceptual questions are approved.
+
+Potential calculations include:
+
+- design-load estimation;
+- dynamic amplification;
+- support reactions;
+- brace axial force;
+- boom bending stress;
+- pin shear and bearing stress;
+- brace buckling;
+- boom deflection;
+- sensitivity studies.
+
+```{python}
+#| label: setup
+import math
+```
+
+```{python}
+#| label: preliminary-load-model
+
+# Replace these placeholders with approved scenario values.
+battery_weight = None
+fixture_weight = None
+hoist_weight = None
+dynamic_factor = None
+```

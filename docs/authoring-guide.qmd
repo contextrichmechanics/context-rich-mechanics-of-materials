@@ -1,0 +1,336 @@
+---
+title: "Problem Authoring Guide"
+toc: true
+---
+
+# Purpose
+
+This library is organized as modular problem packages. Each problem owns its scenario, variables, questions, instructor answers, and images. The Instructor Builder reads those packages through a generated catalog, so professors can add problems without editing the builder code.
+
+# Package Structure
+
+Create one folder per problem:
+
+```text
+problems/problem-slug/
+  problem.json
+  variables.json
+  questions.json
+  index.qmd
+  student-packet.qmd
+  instructor-guide.qmd
+  assets/
+  variants/
+```
+
+The folder name should be stable, lowercase, and hyphenated, such as `pressure-vessel-tank` or `bolted-bracket-lift-arm`.
+
+# Starting A New Problem
+
+Use the generator:
+
+```bash
+node scripts/new-problem.mjs "Pressure Vessel Tank"
+```
+
+Or copy the package template manually:
+
+```bash
+cp -R templates/problem-package problems/new-problem-slug
+```
+
+Then edit these files:
+
+- `problem.json`: title, summary, image, main problem statement, and engineering design goal.
+- `variables.json`: instructor-editable values.
+- `questions.json`: selectable student questions and instructor answers.
+- `index.qmd`: library-card metadata.
+- `assets/`: images owned by the problem.
+
+After creating a package, open `problem.json` and confirm that the `slug` matches the folder name.
+
+# Catalog Metadata
+
+Use both concept tags and textbook chapters. Concept tags help instructors find problems by mechanics idea; textbook chapters help them align assignments with a course calendar.
+
+In `index.qmd`, include:
+
+```yaml
+course_topics:
+  - bending
+  - shear
+textbook_chapters:
+  - Shear stress
+  - Bending stress
+```
+
+In `problem.json`, include the same chapter list for the Instructor Builder and generated catalog:
+
+```json
+"textbookChapters": [
+  "Shear stress",
+  "Bending stress"
+]
+```
+
+# Images
+
+Each problem folder should include its own images:
+
+```text
+problems/new-problem-slug/assets/problem-image.png
+```
+
+Then reference the image in `problem.json`:
+
+```json
+"image": "assets/problem-image.png"
+```
+
+The same image can appear in the library card, builder preview, student document, instructor document, and exported DOC/PDF.
+
+If a specific question needs its own figure, keep that figure in the same `assets/` folder and reference it from the question:
+
+```json
+{
+  "id": "bracket-idealization",
+  "title": "Bracket Idealization and Variables",
+  "image": "assets/bracket-idealization-2d.png",
+  "imageAlt": "Dimensioned two-dimensional bracket idealization.",
+  "student": "<p>Use the dimensioned bracket image supplied by the instructor.</p>",
+  "instructor": "<p>Students should define every symbol before applying equilibrium.</p>"
+}
+```
+
+Question images are shown in the direct student and instructor packet pages, the Instructor Builder preview, and generated HTML/QMD/DOCX/PDF exports.
+
+# Variables
+
+Variables are stored in `variables.json`:
+
+```json
+[
+  {
+    "key": "P",
+    "symbol": "P",
+    "label": "Applied load",
+    "value": 1000,
+    "unit": "N",
+    "min": 0,
+    "max": 10000,
+    "step": 100
+  }
+]
+```
+
+Use short stable keys such as `P`, `L`, `theta`, `M`, `d`, or `t`. The builder automatically creates these placeholders:
+
+```text
+{{P}}
+{{P_unit}}
+{{P_label}}
+```
+
+Some problems also use calculated placeholders, such as a design load or computed stress in the instructor answer. List those keys in `problem.json`:
+
+```json
+"derivedPlaceholders": [
+  "P_design_N",
+  "max_stress_MPa"
+]
+```
+
+Derived placeholders must be supported by the builder/export calculation code before they are used in questions. If a new problem needs a new calculation, add the variable inputs first, then add the derived placeholder names, then add the formula to the builder/export scripts.
+
+# Questions
+
+Questions are stored in `questions.json`:
+
+```json
+[
+  {
+    "id": "q1",
+    "title": "Load Path and Free-Body Diagram",
+    "selected": true,
+    "tags": ["fbd", "load path"],
+    "type": "fbd/modeling",
+    "difficulty": "introductory",
+    "learningObjectives": ["Trace the load path", "Draw a complete FBD"],
+    "gradingNotes": "<p>Look for a clear load path and correctly placed reactions.</p>",
+    "commonMistakes": "<p>Common mistakes include omitting the support couple or placing reactions on the wrong body.</p>",
+    "student": "<p>Draw an FBD for load <strong>P = {{P}} {{P_unit}}</strong>.</p>",
+    "instructor": "<p>Representative answers should show the applied load, support reactions, and dominant load path.</p>"
+  }
+]
+```
+
+Each question should include:
+
+- `id`: short and unique within the problem.
+- `title`: visible in the builder and generated documents.
+- `selected`: whether it is checked by default.
+- `tags`: topic labels for future filtering and review.
+- `type`: question mode, such as `conceptual`, `estimation`, `fbd/modeling`, `calculation planning`, or `decision`.
+- `difficulty`: question-level difficulty.
+- `learningObjectives`: one or more objectives supported by the question.
+- `image`: optional problem-relative image path, such as `assets/bracket-detail.png`.
+- `imageAlt`: optional alt text for the question image.
+- `student`: prompt shown to students.
+- `instructor`: representative answer shown only in instructor output.
+- `gradingNotes`: optional notes shown only in instructor output.
+- `commonMistakes`: optional common mistakes shown only in instructor output.
+
+# Editing Questions Without Writing JSON
+
+Use the Question Editor page when you want to edit questions in a form rather than editing `questions.json` directly.
+
+Workflow:
+
+1. Open **Question Editor** from the site navigation.
+2. Select the problem.
+3. Select, edit, add, duplicate, or delete questions.
+4. Check the validation messages.
+5. Click **Download questions.json**.
+6. Replace the problem package's existing `questions.json` with the downloaded file.
+7. Run:
+
+```bash
+node scripts/build-catalog.mjs
+quarto render instructor-builder.qmd
+quarto render index.qmd
+```
+
+The editor validates required fields, duplicate question IDs, and unknown placeholders such as `{{diameter}}` when no variable key named `diameter` exists.
+
+# Question Design
+
+Prefer questions that make students move through the engineering workflow:
+
+1. interpret the product or system;
+2. identify loads and assumptions;
+3. select materials and dimensions;
+4. draw a model and free-body diagram;
+5. estimate or calculate governing responses;
+6. compare against criteria;
+7. make a decision and state missing information.
+
+Good context-rich questions usually do not ask only for a number. They ask students to explain what the number means and whether the design is acceptable.
+
+# Variants
+
+Variants save common values and question selections:
+
+```text
+problems/new-problem-slug/variants/section-a.json
+```
+
+Example:
+
+```json
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "variables": {
+    "P": 1200,
+    "L": 0.8
+  },
+  "selectedQuestions": ["q1", "q3", "decision"]
+}
+```
+
+Variants are optional. If a problem has variants, the Instructor Builder shows a Variant dropdown.
+
+# Problem Health
+
+Use the Problem Health page to review package completeness across the library. It reports:
+
+- number of variables;
+- number of questions;
+- number of saved variants;
+- missing tags, type, difficulty, or learning objectives.
+
+The health page is generated from the same catalog as the Instructor Builder.
+
+# Rebuild The Catalog
+
+After editing any problem package, run:
+
+```bash
+node scripts/build-catalog.mjs
+```
+
+The script creates:
+
+```text
+data/problem-catalog.json
+data/problem-catalog.js
+data/problem-health.json
+data/problem-health.js
+```
+
+Then render the builder and library:
+
+```bash
+quarto render instructor-builder.qmd
+quarto render index.qmd
+```
+
+# Validation
+
+The catalog script checks for common authoring errors:
+
+- missing required fields;
+- missing problem image;
+- missing packet pages;
+- duplicate problem IDs;
+- duplicate variable keys;
+- duplicate question IDs;
+- unknown placeholders such as `{{load}}` when no variable key `load` exists;
+- variants that reference unknown variables or questions.
+
+Fix any reported issue, then rerun the catalog script.
+
+# Export Assignments From The Command Line
+
+The browser-based Instructor Builder can download Word-compatible `.doc` files and open print-to-PDF previews. For repeatable exports, use:
+
+```bash
+node scripts/render-assignment.mjs --problem jib-crane-battery-pack --variant section-a --type student --format html
+```
+
+Supported `--type` values:
+
+```text
+student
+instructor
+```
+
+Supported `--format` values:
+
+```text
+html
+doc
+qmd
+docx
+pdf
+```
+
+The `docx` and `pdf` options call Quarto. If Quarto or the required PDF tools are unavailable, use `html`, `doc`, or `qmd` first.
+
+Outputs are written under:
+
+```text
+exports/problem-slug/variant-id/
+```
+
+# Recommended Writing Pattern
+
+For context-rich mechanics problems, structure the problem package so generated documents read in this order:
+
+1. Main problem statement.
+2. Engineering design goal.
+3. Given data.
+4. Selected homework questions.
+5. Instructor answers, only in instructor output.
+
+The main statement should describe the engineering role, physical system, operating context, and uncertainty. The questions should then ask students to reason, model, calculate, and make a defensible recommendation.

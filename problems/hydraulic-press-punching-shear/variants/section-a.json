@@ -1,0 +1,35 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - punching shear and bearing",
+  "description": "Default MEEN 305-style sequence for bearing area, punching shear area, average stresses, and interpretation.",
+  "selectedQuestions": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15",
+    "q16",
+    "q17",
+    "q18",
+    "q19"
+  ],
+  "variables": {
+    "P": 40,
+    "d": 50,
+    "t": 10,
+    "s": 60,
+    "b": 120,
+    "tau_allow": 80,
+    "sigma_bearing_allow": 120
+  }
+}

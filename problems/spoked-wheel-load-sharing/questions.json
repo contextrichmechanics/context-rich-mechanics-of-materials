@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q1",
+    "title": "Primary Function of the System",
+    "selected": true,
+    "tags": ["context", "function", "load path"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify the structural function of the wheel-spoke system", "Use load-transfer language"],
+    "student": "<p>What is the primary structural function of the wheel-spoke system?</p>",
+    "instructor": "<p>The system transfers the vertical axle load from the hub through the spokes into the rigid rim and then into the ground. The spokes serve as axial load-carrying members that connect the hub to the rim.</p><p>Good answers should use load-transfer language rather than only naming parts of the wheel.</p>"
+  },
+  {
+    "id": "q2",
+    "title": "External Load",
+    "selected": true,
+    "tags": ["loading", "axle load"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify where the external load enters the system", "Distinguish hub load from rim/ground contact"],
+    "student": "<p>Where is the external load applied, and what is its direction?</p>",
+    "instructor": "<p>The external load <em>P</em> is applied at the hub/axle point A and acts vertically downward. In the numerical case, <em>P</em> = {{P}} {{P_unit}}.</p><p>Students should not apply the load at the rim or ground contact. The axle load enters the wheel at the hub.</p>"
+  },
+  {
+    "id": "q3",
+    "title": "Supports and Boundary Conditions",
+    "selected": true,
+    "tags": ["boundary conditions", "rigid rim"],
+    "type": "conceptual",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Describe the rigid-rim boundary assumption", "Explain why spoke attachment points are fixed relative to the rim"],
+    "student": "<p>Identify the effective support or constraint in the idealized model.</p>",
+    "instructor": "<p>The rim is idealized as rigid and supported through ground contact. The points where the spokes attach to the rim are treated as fixed relative to the rigid rim. The hub can displace slightly under load, causing axial deformation of the spokes.</p><p>This is not a simple pin-support reaction problem. The key modeling assumption is the rigid rim plus deformable axial spokes.</p>"
+  },
+  {
+    "id": "q4",
+    "title": "Load Path",
+    "selected": true,
+    "tags": ["load path", "rim", "ground contact"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Trace load from axle to ground", "Include the rim in the load path"],
+    "student": "<p>Trace the load path from the axle to the ground.</p>",
+    "instructor": "<p>The load path is: axle load at hub A &rarr; axial forces in spokes AB, AC, and AD &rarr; rigid outer rim &rarr; ground contact region &rarr; ground/supporting surface.</p><p>The rim should be included explicitly because it transfers the spoke loads to the ground.</p>"
+  },
+  {
+    "id": "q5",
+    "title": "Critical Components",
+    "selected": true,
+    "tags": ["critical components", "spokes"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify the components included in the simplified analysis", "Separate base-model checks from later design checks"],
+    "student": "<p>Which components are critical for the simplified analysis?</p>",
+    "instructor": "<p>The three spokes are the critical components for the simplified analysis because they carry the axial forces created by the vertical axle load. The rim is assumed rigid and is not stress-checked in this base problem.</p><p>If the problem is extended later, rim bending, hub connection details, and spoke stress can be checked.</p>"
+  },
+  {
+    "id": "q6",
+    "title": "Critical Mechanical Response",
+    "selected": true,
+    "tags": ["axial force", "tension", "compression"],
+    "type": "conceptual",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Identify axial force as the target response", "Interpret tension and compression in the spokes"],
+    "student": "<p>For each critical component, identify the relevant mechanical response.</p>",
+    "instructor": "<p>The relevant mechanical response is axial force in each spoke. The vertical spoke AB develops tensile force, while the two lower inclined spokes AC and AD develop compressive force in the idealized rigid-rim model. A full stress analysis would require each spoke cross-sectional area.</p><p>This is an important conceptual point: equal material and area do not imply equal force in all spokes because force distribution depends on compatibility and geometry.</p>"
+  },
+  {
+    "id": "q7",
+    "title": "Relevant Geometric and Material Parameters",
+    "selected": true,
+    "tags": ["geometry", "material", "stiffness"],
+    "type": "conceptual",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Identify the variables controlling load sharing", "Explain why equal stiffness causes E and area to cancel in the base force solution"],
+    "student": "<p>Identify the geometric and material parameters that control the spoke forces.</p>",
+    "instructor": "<p>Relevant parameters are the applied axle load <em>P</em>, spoke radius/length <em>r</em>, spoke angular spacing &theta;, cross-sectional area <em>A</em><sub>s</sub>, and elastic modulus <em>E</em>. Since all spokes have the same material, cross-sectional area, and length, their axial stiffnesses are equal, so the force distribution depends mainly on geometry and compatibility.</p><p>In the base problem, the actual force values are independent of <em>E</em> and <em>A</em><sub>s</sub> because the stiffnesses are equal; however, <em>E</em> and <em>A</em><sub>s</sub> would be needed to compute displacements or stresses.</p>"
+  },
+  {
+    "id": "q8",
+    "title": "Student-Generated Structural Idealization",
+    "selected": true,
+    "tags": ["idealization", "compatibility", "axial members"],
+    "type": "fbd/modeling",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Convert a real wheel into a 2D mechanics model", "Represent rigid rim and axial spokes"],
+    "image": "assets/spoked-wheel-instructor-idealization.png",
+    "imageAlt": "Instructor idealization of the three-spoke wheel with hub A, spokes AB, AC, AD, load P, radius r, and 120 degree spacing.",
+    "student": "<p>Convert the real wheel into a simplified 2D Mechanics of Materials model. The model should show the rigid rim, hub point A, three spokes AB, AC, and AD, the downward axle load <em>P</em> at A, the spoke radius <em>r</em>, and the {{theta}} {{theta_unit}} angular spacing.</p><p>Student model placeholder: insert or draw the simplified model and free-body/compatibility diagram here.</p>",
+    "instructor": "<p>A correct student idealization shows a rigid circular rim with three axial spokes connected to a central hub. The external load <em>P</em> acts downward at the hub. The spokes are treated as axial members of equal stiffness because they have the same material, cross-sectional area, and length.</p><p>This should be completed before the final mechanics equations are developed.</p>"
+  },
+  {
+    "id": "q9",
+    "title": "Modeling Assumptions",
+    "selected": true,
+    "tags": ["assumptions", "model limitations"],
+    "type": "conceptual",
+    "difficulty": "intermediate",
+    "learningObjectives": ["State assumptions for an axial-spoke model", "Recognize when tension-only spokes would invalidate the compression result"],
+    "student": "<p>State the assumptions used to convert the real wheel into the simplified mechanics model.</p>",
+    "instructor": "<p>Assumptions may include static loading; rim is rigid; spokes are straight axial members; spokes have the same material, cross-sectional area, and length; deformations are small; the hub displacement is vertical by symmetry; bending of the rim and spokes is neglected; local hub/rim connection stresses are neglected; and the lower spokes can carry compression in the idealized model.</p><p>The last assumption is important. If the physical spokes were tension-only wires, the lower spokes would not carry compression and the model would need to be modified.</p>"
+  },
+  {
+    "id": "q10",
+    "title": "Mechanics Analysis Plan",
+    "selected": true,
+    "tags": ["analysis plan", "compatibility", "equilibrium"],
+    "type": "calculation planning",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Plan a compatibility and equilibrium solution", "Explain why equilibrium alone is insufficient"],
+    "student": "<p>Before calculating, describe the sequence needed to determine the force in each spoke.</p>",
+    "instructor": "<p>Use symmetry to recognize that the two lower spoke forces are equal. Use deformation compatibility to relate the axial deformation of each spoke to the vertical displacement of the hub. Use equal axial stiffness to relate deformation to spoke force. Finally, apply vertical force equilibrium at the hub to solve for the spoke forces.</p><p>The correct solution requires compatibility plus equilibrium, not equilibrium alone.</p>"
+  },
+  {
+    "id": "q11",
+    "title": "Boundary and Loading Conditions from Instructor Diagram",
+    "selected": true,
+    "tags": ["boundary conditions", "loading", "rigid rim"],
+    "type": "conceptual",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Read loading and idealization from the diagram", "Distinguish axial load sharing from rim bending"],
+    "student": "<p>From the instructor diagram, identify the loading condition and the primary idealization of the rim and spokes.</p>",
+    "instructor": "<p>The hub A is subjected to a downward load <em>P</em>. The rim is treated as rigid, so the spoke attachment points B, C, and D remain fixed relative to the rim. The spokes are treated as equal-stiffness axial members.</p><p>This problem is about load sharing through compatible axial deformation, not about bending stress in the rim.</p>"
+  },
+  {
+    "id": "q12",
+    "title": "Unknown Spoke Forces",
+    "selected": true,
+    "tags": ["unknowns", "symmetry"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify unknown internal spoke forces", "Use symmetry to reduce unknowns"],
+    "student": "<p>Identify the unknown internal forces that must be determined.</p>",
+    "instructor": "<p>The unknowns are the axial forces <em>F</em><sub>B</sub>, <em>F</em><sub>C</sub>, and <em>F</em><sub>D</sub> in spokes AB, AC, and AD. By symmetry, <em>F</em><sub>C</sub> = <em>F</em><sub>D</sub>.</p><p>Use a sign convention. In this solution, positive axial force means tension; negative axial force means compression.</p>"
+  },
+  {
+    "id": "q13",
+    "title": "Symmetry of Hub Displacement",
+    "selected": true,
+    "tags": ["symmetry", "displacement"],
+    "type": "conceptual",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Use symmetry to infer displacement direction", "Reduce the compatibility model to one displacement variable"],
+    "student": "<p>Explain why the hub displacement can be assumed vertical in the idealized model.</p>",
+    "instructor": "<p>The geometry and loading are symmetric about the vertical centerline. The two lower spokes are mirror images, and the external load has no horizontal component. Therefore the horizontal displacement of the hub is zero and the hub displacement is vertical.</p><p>This lets students use one displacement variable, such as &delta;, for the vertical hub displacement.</p>"
+  },
+  {
+    "id": "q14",
+    "title": "Compatibility of Spoke Deformations",
+    "selected": true,
+    "tags": ["compatibility", "axial deformation"],
+    "type": "calculation",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Relate hub displacement to axial deformation", "Interpret elongation and shortening signs"],
+    "student": "<p>Let the hub move downward by a small displacement &delta;. Determine the axial deformation of each spoke in terms of &delta;.</p>",
+    "instructor": "<p>The vertical spoke AB elongates by &delta;. Each lower spoke has a vertical projection equal to cos(60&deg;) = 1/2 relative to the hub displacement direction, so each lower spoke shortens by &delta;/2. Therefore, &Delta;<sub>B</sub> = &delta; and &Delta;<sub>C</sub> = &Delta;<sub>D</sub> = -&delta;/2.</p><p>The negative sign for the lower spokes means shortening, which corresponds to compression under the chosen tension-positive sign convention.</p>"
+  },
+  {
+    "id": "q15",
+    "title": "Force-Deformation Relations",
+    "selected": true,
+    "tags": ["Hooke's law", "axial stiffness", "compatibility"],
+    "type": "calculation",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Use equal axial stiffness to relate force and deformation", "Derive force ratios before using equilibrium"],
+    "student": "<p>Using equal axial stiffness <em>k</em><sub>s</sub> = <em>EA</em><sub>s</sub>/<em>r</em> for all spokes, express <em>F</em><sub>B</sub>, <em>F</em><sub>C</sub>, and <em>F</em><sub>D</sub> in terms of <em>k</em><sub>s</sub> and &delta;.</p>",
+    "instructor": "<p><em>F</em><sub>B</sub> = <em>k</em><sub>s</sub>&delta;. <em>F</em><sub>C</sub> = <em>F</em><sub>D</sub> = -<em>k</em><sub>s</sub>&delta;/2. Therefore, <em>F</em><sub>C</sub> = <em>F</em><sub>D</sub> = -<em>F</em><sub>B</sub>/2.</p><p>This is the compatibility step that makes the problem determinate.</p>"
+  },
+  {
+    "id": "q16",
+    "title": "Equilibrium and Spoke Force Values",
+    "selected": true,
+    "tags": ["equilibrium", "spoke force", "tension compression"],
+    "type": "calculation",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Apply vertical force equilibrium at the hub", "Compute spoke forces and interpret signs"],
+    "student": "<p>Write vertical force equilibrium at the hub A using the spoke force components and the downward load <em>P</em>. Then determine the axial force in each spoke for <em>P</em> = {{P}} {{P_unit}}.</p>",
+    "instructor": "<p>Using positive tension along each spoke, vertical equilibrium is <em>F</em><sub>B</sub> - (1/2)<em>F</em><sub>C</sub> - (1/2)<em>F</em><sub>D</sub> - <em>P</em> = 0. Substituting <em>F</em><sub>C</sub> = <em>F</em><sub>D</sub> = -<em>F</em><sub>B</sub>/2 gives (3/2)<em>F</em><sub>B</sub> = <em>P</em>.</p><p>Therefore, <em>F</em><sub>B</sub> = 2<em>P</em>/3 = {{wheel_force_B_kN}} kN, and <em>F</em><sub>C</sub> = <em>F</em><sub>D</sub> = -<em>P</em>/3 = {{wheel_force_C_kN}} kN. Thus spoke AB is in {{wheel_force_B_abs_kN}} kN tension, and spokes AC and AD are each in {{wheel_force_C_abs_kN}} kN compression.</p><p>Report both sign and physical meaning. A negative result should not be discarded; it indicates compression relative to the tension-positive convention.</p>"
+  },
+  {
+    "id": "q17",
+    "title": "Governing Spoke Force Magnitude",
+    "selected": true,
+    "tags": ["governing member", "force magnitude"],
+    "type": "calculation",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Compare axial force magnitudes", "Identify which member would be checked first"],
+    "student": "<p>Which spoke has the largest axial force magnitude?</p>",
+    "instructor": "<p>The vertical spoke AB has the largest magnitude, |<em>F</em><sub>B</sub>| = {{wheel_force_B_abs_kN}} kN. The lower spokes each have magnitude |<em>F</em><sub>C</sub>| = |<em>F</em><sub>D</sub>| = {{wheel_force_C_abs_kN}} kN.</p><p>The governing spoke for force magnitude is {{wheel_governing_spoke}} with {{wheel_governing_force_kN}} kN. This identifies which member would be checked first if area and material strength were provided.</p>"
+  },
+  {
+    "id": "q18",
+    "title": "Stress, Stiffness, and Engineering Recommendation",
+    "selected": true,
+    "tags": ["stress extension", "displacement", "engineering judgment"],
+    "type": "decision",
+    "difficulty": "intermediate",
+    "learningObjectives": ["State data needed for stress or FOS", "Make a limited engineering recommendation", "Recognize tension-only limitations"],
+    "student": "<p>What additional information would be needed to compute stress or factor of safety in the spokes? Use the mechanics results to make a limited engineering recommendation for the wheel-spoke system.</p>",
+    "instructor": "<p>To compute stress, the cross-sectional area <em>A</em><sub>s</sub> of each spoke is needed, using &sigma;<sub>i</sub> = <em>F</em><sub>i</sub>/<em>A</em><sub>s</sub>. To compute factor of safety, allowable tensile and compressive stresses or material strengths are needed. If the spokes are tension-only, compression capacity is not valid and the physical model must be reconsidered.</p><p>For the current optional area value, the stress estimates are &sigma;<sub>B</sub> = {{wheel_stress_B_MPa}} MPa, &sigma;<sub>C</sub> = {{wheel_stress_C_MPa}} MPa, and &sigma;<sub>D</sub> = {{wheel_stress_D_MPa}} MPa, with negative stress indicating compression. If <em>E</em> and <em>A</em><sub>s</sub> are used for a stiffness extension, &delta; = 2<em>Pr</em>/(3<em>EA</em><sub>s</sub>) = {{wheel_hub_displacement_mm}} mm.</p><p>For the idealized model, the vertical spoke AB carries the largest axial force, {{wheel_force_B_abs_kN}} kN in tension. The two lower spokes each carry {{wheel_force_C_abs_kN}} kN in compression. A detailed design decision requires spoke cross-sectional area, material tensile/compressive allowable stresses, and confirmation that the lower spokes are capable of carrying compression. If the spokes are tension-only, this rigid-rim equal-spoke model is not physically acceptable without modification.</p>"
+  }
+]

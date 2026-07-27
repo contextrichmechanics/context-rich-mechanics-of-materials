@@ -1,0 +1,55 @@
+---
+title: "Industrial Clevis-Pin Linkage Under Tensile Load"
+description: "A context-rich mechanics problem on axial normal stress in rods and double-shear stress in a clevis pin."
+image: "assets/clevis-industry-context.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - design
+course_topics:
+  - axial loading
+  - normal stress
+  - shear stress
+  - double shear
+  - connections
+textbook_chapters:
+  - Stress and strain
+  - Axial loading
+  - Shear stress
+  - Connections and fasteners
+  - Factor of safety
+problem_types:
+  - free-body diagram
+  - average stress
+  - connector analysis
+  - design evaluation
+competencies:
+  - load path reasoning
+  - component identification
+  - axial stress
+  - double-shear connector idealization
+  - engineering judgment
+industries:
+  - industrial machinery
+  - hydraulic actuator linkages
+  - lifting equipment
+  - automation joints
+  - mechanical test fixtures
+difficulty: "Introductory to intermediate"
+status: "Draft"
+problem_id: "MOS-CLEVIS-007"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for axial normal stress and double-shear connector stress. Optional allowable-stress variables let instructors turn the final interpretation into a factor-of-safety extension.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=clevis-pin-tensile-linkage){.btn .btn-secondary}
+

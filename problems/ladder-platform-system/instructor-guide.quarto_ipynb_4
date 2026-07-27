@@ -1,0 +1,72 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Instructor Guide — Commercial Aluminum Ladder-Platform System\"\n",
+        "subtitle: \"Representative Answers and Evaluation Guidance\"\n",
+        "author: \"Context-Rich Mechanics of Materials Library\"\n",
+        "format:\n",
+        "  html:\n",
+        "    toc: true\n",
+        "    number-sections: true\n",
+        "  pdf:\n",
+        "    documentclass: scrartcl\n",
+        "    papersize: letter\n",
+        "    toc: true\n",
+        "    number-sections: true\n",
+        "  ipynb: default\n",
+        "jupyter: python3\n",
+        "execute:\n",
+        "  enabled: false\n",
+        "---\n",
+        "\n",
+        "# Purpose\n",
+        "\n",
+        "These answers are not the only acceptable responses. Award credit for physically sound reasoning, clearly stated assumptions, correct mechanics, and recognition of uncertainty.\n",
+        "\n",
+        "Students should begin with the complete ladder-platform system and only then move to the adjustable bracket as a critical component. A correct bracket calculation alone is not enough to approve the product.\n",
+        "\n",
+        "# Generated Question Set and Solutions\n",
+        "\n",
+        "```{=html}\n",
+        "<div id=\"ladder-platform-instructor-questions\"></div>\n",
+        "<script src=\"../../data/problem-catalog.js\"></script>\n",
+        "<script src=\"../../scripts/packet-renderer.js\"></script>\n",
+        "<script>\n",
+        "document.addEventListener(\"DOMContentLoaded\", () => {\n",
+        "  window.renderProblemPacket({\n",
+        "    slug: \"ladder-platform-system\",\n",
+        "    targetId: \"ladder-platform-instructor-questions\",\n",
+        "    type: \"instructor\"\n",
+        "  });\n",
+        "});\n",
+        "</script>\n",
+        "```\n",
+        "\n",
+        "# Supplemental Evaluation Notes\n",
+        "\n",
+        "The strongest submissions connect the system-level hazards to the bracket-level calculations. Look for:\n",
+        "\n",
+        "- a complete load path from worker and tools to the platform, brackets, ladders, wall, and ground;\n",
+        "- clear separation of strength, stiffness, stability, fatigue, and durability;\n",
+        "- bracket equations based on equilibrium rather than memorized formulas;\n",
+        "- explicit assumptions about load sharing, contact, friction, and connection idealization;\n",
+        "- a final recommendation that names unresolved data before commercial approval.\n"
+      ],
+      "id": "56d877b5"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/sak/Library/CloudStorage/OneDrive-TexasA&MUniversity/Summer 2026 Dr S Textbook work/context-rich-mos-quarto-v3/.venv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

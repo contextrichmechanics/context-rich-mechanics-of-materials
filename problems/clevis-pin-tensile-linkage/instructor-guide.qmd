@@ -1,0 +1,50 @@
+---
+title: "Instructor Guide — Industrial Clevis-Pin Linkage"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+    number-sections: true
+  ipynb: default
+jupyter: python3
+execute:
+  enabled: false
+---
+
+# Purpose
+
+These answers are representative, not the only acceptable responses. Award credit for correct load-path reasoning, average-stress area calculations, correct interpretation of double shear, consistent N/mm units, and a recommendation that does not overclaim service acceptance without allowable stresses and detailed connector checks.
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="clevis-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "clevis-pin-tensile-linkage",
+    targetId: "clevis-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Supplemental Assessment Structure
+
+Suggested weighting:
+
+- context interpretation and load path: 20%;
+- critical response identification and idealization: 20%;
+- area calculations: 20%;
+- normal/shear stress calculations: 30%;
+- interpretation, limitations, and recommendation: 10%.
+

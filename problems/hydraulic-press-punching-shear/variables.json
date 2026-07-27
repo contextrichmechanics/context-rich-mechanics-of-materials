@@ -1,0 +1,72 @@
+[
+  {
+    "key": "P",
+    "symbol": "P",
+    "label": "Applied compressive load",
+    "value": 40,
+    "unit": "kN",
+    "min": 1,
+    "max": 300,
+    "step": 1
+  },
+  {
+    "key": "d",
+    "symbol": "d",
+    "label": "Ram / shaft diameter",
+    "value": 50,
+    "unit": "mm",
+    "min": 5,
+    "max": 250,
+    "step": 1
+  },
+  {
+    "key": "t",
+    "symbol": "t",
+    "label": "Plate thickness",
+    "value": 10,
+    "unit": "mm",
+    "min": 1,
+    "max": 80,
+    "step": 1
+  },
+  {
+    "key": "s",
+    "symbol": "s",
+    "label": "Support opening distance",
+    "value": 60,
+    "unit": "mm",
+    "min": 10,
+    "max": 400,
+    "step": 5
+  },
+  {
+    "key": "b",
+    "symbol": "b",
+    "label": "Overall plate/support width in idealized view",
+    "value": 120,
+    "unit": "mm",
+    "min": 20,
+    "max": 800,
+    "step": 5
+  },
+  {
+    "key": "tau_allow",
+    "symbol": "tau_allow",
+    "label": "Optional allowable punching shear stress",
+    "value": 80,
+    "unit": "MPa",
+    "min": 5,
+    "max": 500,
+    "step": 5
+  },
+  {
+    "key": "sigma_bearing_allow",
+    "symbol": "sigma_bearing_allow",
+    "label": "Optional allowable bearing stress",
+    "value": 120,
+    "unit": "MPa",
+    "min": 5,
+    "max": 800,
+    "step": 5
+  }
+]

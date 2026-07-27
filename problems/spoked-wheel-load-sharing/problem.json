@@ -1,0 +1,33 @@
+{
+  "id": "MOS-WHEEL-005",
+  "slug": "spoked-wheel-load-sharing",
+  "title": "Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load",
+  "studentDocumentTitle": "Student Homework Questions",
+  "instructorDocumentTitle": "Instructor Answers",
+  "summary": "A context-rich mechanics problem on load sharing in a rigid-rim wheel with three equal axial spokes.",
+  "textbookChapters": [
+    "Axial loading",
+    "Rigid-body equilibrium",
+    "Deformation compatibility",
+    "Stress and strain",
+    "Factor of safety"
+  ],
+  "derivedPlaceholders": [
+    "wheel_force_B_kN",
+    "wheel_force_C_kN",
+    "wheel_force_D_kN",
+    "wheel_force_B_abs_kN",
+    "wheel_force_C_abs_kN",
+    "wheel_force_D_abs_kN",
+    "wheel_governing_spoke",
+    "wheel_governing_force_kN",
+    "wheel_stress_B_MPa",
+    "wheel_stress_C_MPa",
+    "wheel_stress_D_MPa",
+    "wheel_hub_displacement_mm"
+  ],
+  "image": "assets/spoked-wheel-industry-context.png",
+  "source": "index.html",
+  "problemStatement": "<p>A product engineering team is evaluating a lightweight three-spoke wheel used in a mobility device, small robotic platform, or compact ground-support vehicle. A vertical axle load is transferred from the hub into the spoke network and then into the rigid outer rim and ground contact region.</p><p>Because the rim is much stiffer than the spokes, the first-order mechanics model treats the rim as rigid. The spokes are modeled as axial members made from the same material and having the same cross-sectional area. The engineering task is to determine how the axle load is shared among the three spokes and to identify which spoke force has the largest magnitude before a later stress or safety-factor check is performed.</p>",
+  "engineeringGoal": "<p>Determine the axial force in each of the three spokes under the applied axle load. Use the result to identify which spoke is in tension, which spokes are in compression, and what additional information would be required to perform a complete stress or factor-of-safety check.</p>"
+}

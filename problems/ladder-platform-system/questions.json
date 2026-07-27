@@ -1,0 +1,171 @@
+[
+  {
+    "id": "q1",
+    "title": "Design, Manufacturing, and Commercialization",
+    "selected": true,
+    "tags": ["design", "manufacturing", "commercialization", "safety"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify commercial design requirements", "Prioritize safety, usability, and manufacturing constraints"],
+    "student": "<p>What considerations likely influenced the design, manufacture, installation, operation, and commercialization of the ladder-platform system?</p><p>Discuss intended commercial applications, maximum working height, platform size, portability and product weight, compatibility with different ladders, ease of assembly and adjustment, worker safety and fall hazards, prevention of incorrect installation, corrosion resistance, standard sections and fasteners, fabrication methods, inspection and maintenance, transportation and storage, rated-load labeling, product cost, service life, and liability associated with misuse.</p><p>Conclude by identifying the three most important requirements that must be satisfied before this product can be approved for commercial use.</p>",
+    "instructor": "<p>A strong response should discuss portability and low mass, compatibility with standard commercial ladders, rapid assembly and adjustment, prevention of incorrect installation, adequate rated load, corrosion resistance, repeated-use durability, low manufacturing cost, standard materials and fasteners, inspection and replacement, storage and transportation, liability, and safe-use instructions.</p><p>Three likely governing requirements are adequate strength and stability under credible service and misuse loads, acceptable platform and bracket deformation, and reliable, intuitive, and inspectable attachment to the ladders.</p>"
+  },
+  {
+    "id": "q2",
+    "title": "Complete Load Path",
+    "selected": true,
+    "tags": ["load path", "reactions", "contact"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Trace load transfer through a complete system", "Identify vertical, horizontal, bearing, friction, and moment transfer"],
+    "student": "<p>For the configuration shown, describe the complete load path through the system.</p><p>Begin with the worker and tools or construction materials. Trace the load through the worker's feet, platform, platform-support brackets, ladder rungs or rails, ladder side rails, wall contact, ground contact, and the wall and ground structures.</p><p>Identify where the system transfers vertical force, horizontal force, bending moment, bearing force, and friction force. Identify locations where the load path could be interrupted by slipping, loss of contact, loose connections, local deformation, incorrect installation, or component failure.</p>",
+    "instructor": "<p>The primary load path is worker and tools to platform to brackets to ladder rungs or rails to ladder side rails to wall and ground contacts.</p><p>The platform carries bending and shear. The brackets transfer vertical load, horizontal force, and possibly moment into the ladders. The ladder rails carry combined axial force and bending. Wall contact provides a horizontal reaction, while the feet provide vertical reaction and frictional resistance.</p><p>Potential interruptions include bracket disengagement, rung crushing, pin failure, foot slip, loss of wall contact, loose hardware, and local deformation.</p>"
+  },
+  {
+    "id": "q3",
+    "title": "Critical Components for Strength, Stiffness, Stability, and Durability",
+    "selected": true,
+    "tags": ["failure modes", "stiffness", "stability", "fatigue"],
+    "type": "conceptual",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Separate strength, stiffness, stability, and fatigue concerns", "Identify critical components in a multi-part product"],
+    "student": "<p>Identify the components and locations that should be evaluated.</p><p><strong>Strength-critical components:</strong> consider the work platform, ladder rungs, ladder side rails, platform-support brackets, adjustment slots, locking pins or bolts, welded connections, wall-contact regions, and ladder feet. Potential failure modes include yielding, fracture, pin shear, bearing, tear-out, local crushing, weld failure, rung bending, and rail bending.</p><p><strong>Stiffness-critical components:</strong> consider platform deflection, platform rotation, ladder-rail deformation, bracket deflection, connection looseness, and differential deformation between supports. Explain why a component may satisfy a strength requirement but remain unsuitable because of excessive deformation.</p><p><strong>Stability-critical behavior:</strong> consider ladder sliding, overturning, loss of wall contact, unequal reactions between ladders, lateral instability, and platform rotation.</p><p><strong>Fatigue-critical locations:</strong> consider weld toes, pin holes, adjustment slots, repeated-contact regions, section transitions, and locking mechanisms.</p>",
+    "instructor": "<p>Strength-critical locations include the platform at maximum bending moment, bracket horizontal arm, brace, adjustment slot, pins and bolts, welds, ladder rungs, ladder rails, and ladder feet.</p><p>Stiffness-critical quantities include platform sag, bracket rotation, ladder-rail bending, and unequal support deformation. Stability-critical behavior includes sliding, overturning, lateral motion, and loss of contact. Fatigue-critical locations include weld toes, holes, slots, section transitions, and repeated-contact surfaces.</p><p>A structure may remain below yield yet be unsafe because excessive motion can cause loss of balance, platform slope, redistribution of load, or loss of engagement.</p>"
+  },
+  {
+    "id": "q4",
+    "title": "Material Properties",
+    "selected": true,
+    "tags": ["materials", "stiffness", "fatigue", "corrosion"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Connect material properties to design requirements", "Distinguish stiffness, yielding, fracture, wear, and durability"],
+    "student": "<p>What material properties are important for evaluating the ladder rails, rungs, platform, brackets, diagonal braces, pins, bolts, welds, hooks, and bearing surfaces?</p><p>Discuss elastic modulus <em>E</em>, yield strength &sigma;<sub>y</sub>, ultimate strength &sigma;<sub>u</sub>, shear strength, fatigue resistance, fracture toughness, hardness, wear resistance, corrosion resistance, density, weldability, machinability, cost, and availability.</p><p>Explain which properties control stiffness, permanent deformation, fracture, fatigue life, wear, portability, and outdoor durability.</p>",
+    "instructor": "<p><em>E</em> controls elastic stiffness and deflection. &sigma;<sub>y</sub> controls onset of permanent deformation. &sigma;<sub>u</sub> relates to fracture or rupture. Fatigue strength governs repeated loading. Toughness resists brittle failure and impact. Hardness and wear resistance matter at hooks, pins, slots, and bearing surfaces. Corrosion resistance matters for outdoor exposure. Density influences portability. Weldability and machinability influence fabrication cost.</p><p>Aluminum is attractive for ladders and platforms because of low density and corrosion resistance. Steel may be preferred for pins, locking hardware, and high-wear contacts.</p>"
+  },
+  {
+    "id": "q5",
+    "title": "Critical Geometric Parameters",
+    "selected": true,
+    "tags": ["geometry", "load distribution", "connections"],
+    "type": "modeling",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Identify geometry that controls stress and deflection", "Relate system, member, and connection geometry to mechanics response"],
+    "student": "<p>Identify the geometric parameters that most strongly affect structural behavior.</p><p>Consider ladder length and angle, spacing between ladders, platform span, width, and thickness, worker position, support spacing, rung spacing, ladder-rail cross section, bracket-arm length, diagonal-brace length and angle, vertical spacing between bracket contacts, pin diameter, plate thickness, hole diameter, edge distance, and weld size.</p><p>For each parameter, explain whether it primarily affects load distribution, axial force, bending moment, shear stress, bearing stress, deflection, buckling, sliding, overturning, or local connection behavior.</p>",
+    "instructor": "<p>Important system-level variables include ladder length, ladder angle, support spacing, platform span, and worker position. Important component-level variables include platform section properties, ladder-rail section properties, bracket-arm length, brace angle, and brace slenderness. Important connection variables include pin diameter, hole diameter, plate thickness, edge distance, slot geometry, and weld dimensions.</p><p>Increasing span or worker eccentricity generally increases bending moment and deflection. Increasing section modulus reduces bending stress. Increasing second moment of area reduces deflection. Increasing brace slenderness increases buckling sensitivity.</p>"
+  },
+  {
+    "id": "q6",
+    "title": "Loading Conditions",
+    "selected": true,
+    "tags": ["loading", "dynamic loads", "impact", "cyclic loading"],
+    "type": "estimation",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Classify load types", "Identify likely governing operating scenarios"],
+    "student": "<p>Identify the loads that may act during commercial operation.</p><p>Consider worker weight, tools and construction materials, platform self-weight, ladder self-weight, climbing forces, worker movement, horizontal worker force, wind, impact from stepping onto the platform, eccentric loading, accidental overload, and repeated use.</p><p>Classify each load as static, quasi-static, dynamic, impact, cyclic, or accidental. Explain which loading scenario is likely to govern platform bending, bracket loading, ladder reactions, sliding, overturning, and connection forces.</p>",
+    "instructor": "<p>Loads include worker, tools, and materials as static or quasi-static loads; platform and ladder self-weight as static loads; stepping and climbing as dynamic or impact loads; worker movement as time-varying load; wind as lateral and potentially dynamic load; accidental overload as an abnormal load; and repeated use as cyclic loading.</p><p>The governing platform and bracket load commonly occurs when the worker stands near one bracket or near an unsupported platform region. Sliding and overturning may be governed by horizontal force, eccentric loading, or wind.</p>"
+  },
+  {
+    "id": "q7",
+    "title": "Numerical Strength, Stiffness, Stability, and Durability Criteria",
+    "selected": true,
+    "tags": ["criteria", "safety factors", "serviceability"],
+    "type": "calculation planning",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Define numerical acceptance criteria", "Explain why ultimate strength alone is insufficient"],
+    "student": "<p>Discuss suitable numerical criteria for evaluating the system.</p><p><strong>Strength:</strong> possible criteria include &sigma;<sub>eq</sub> &le; &sigma;<sub>y</sub>/<em>N</em><sub>y</sub>, &tau;<sub>avg</sub> &le; &tau;<sub>allow</sub>, and &sigma;<sub>bearing</sub> &le; &sigma;<sub>bearing,allow</sub>. Discuss yielding, ultimate failure, pin or bolt shear, bearing, tear-out, net-section rupture, weld failure, rung failure, and rail failure.</p><p><strong>Stiffness:</strong> possible serviceability criteria include &delta;<sub>platform</sub> &le; &delta;<sub>allow</sub> and &theta;<sub>platform</sub> &le; &theta;<sub>allow</sub>. Discuss platform sag, bracket deflection, ladder deformation, and platform rotation.</p><p><strong>Stability:</strong> discuss sliding, overturning, maintenance of wall contact, lateral stability, minimum required friction, and mechanical anchoring.</p><p><strong>Durability:</strong> discuss fatigue, wear, corrosion, and repeated assembly and disassembly. Explain why ultimate strength alone is insufficient for a reusable commercial access system.</p>",
+    "instructor": "<p>Relevant criteria include yield, ultimate rupture, shear, bearing, tear-out, net-section failure, buckling, deflection, rotation, sliding, overturning, fatigue, and wear.</p><p>Ultimate strength alone is insufficient because permanent deformation, instability, excessive deflection, or fatigue can make the system unsafe before fracture.</p>"
+  },
+  {
+    "id": "q8",
+    "title": "Suitability for SolidWorks and Finite Element Analysis",
+    "selected": true,
+    "tags": ["FEA", "SolidWorks", "model verification"],
+    "type": "simulation planning",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Decide what hand calculations should precede simulation", "Identify appropriate FEA idealizations and verification checks"],
+    "student": "<p>Is the complete ladder-platform system a good candidate for SolidWorks simulation or finite element analysis?</p><p>Discuss beam, shell, and solid idealizations; wall and ground contact; friction; ladder-platform contact; bracket-rung contact; nonlinear contact; geometric nonlinearity; and load sharing between ladders.</p><p>Explain which questions should first be answered using hand calculations, which questions are better suited to FEA, how the FEA model should be verified, and why a more detailed model is not automatically more accurate.</p>",
+    "instructor": "<p>The system is suitable for FEA only after a simpler load-path and equilibrium model is established. Appropriate representations may include beam elements for ladder rails, rungs, and platform; shell elements for thin bracket plates; solid elements for pins, slots, hooks, and detailed connections; and nonlinear contact for wall, ground, bracket, and rung interfaces.</p><p>Hand calculations should establish reactions, load sharing, approximate bending, and stability first. FEA is valuable for local stress concentration, contact, connection deformation, and three-dimensional effects. The FEA model must be checked against equilibrium, limiting cases, mesh convergence, and hand calculations.</p>"
+  },
+  {
+    "id": "q9",
+    "title": "Simplified Structural Idealization",
+    "selected": true,
+    "tags": ["idealization", "free-body diagram", "system model"],
+    "type": "fbd/modeling",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Develop a two-dimensional system model", "State validity and limitations of simplifying assumptions"],
+    "student": "<p>Develop a simplified two-dimensional model of the complete ladder-platform system.</p><p>Include both ladders, the platform, worker and equipment loads, platform supports, wall contact, ground contact, relevant dimensions, and reaction forces.</p><p>Discuss the validity of planar behavior, identical ladder behavior, equal load sharing, rigid wall and ground, point representation of the worker load, beam representation of the platform, negligible connection clearance, and simplified friction forces. Clearly identify the physical effects excluded from the model.</p>",
+    "instructor": "<p>A reasonable preliminary model treats the platform as a beam supported by two bracket reactions. Each ladder may be modeled as an inclined beam with wall and ground contact.</p><p>Equal load sharing is valid only for symmetric geometry, loading, and stiffness. A worker close to one bracket produces unequal reactions. The simplified model excludes lateral motion, detailed rung contact, clearance, torsion, local weld stress, and three-dimensional instability.</p>"
+  },
+  {
+    "id": "transition-bracket",
+    "title": "Transition from the Ladder System to the Bracket",
+    "selected": true,
+    "tags": ["load transfer", "critical component", "bracket"],
+    "type": "context transition",
+    "difficulty": "introductory",
+    "learningObjectives": ["Connect system-level behavior to component-level analysis", "Identify why the adjustable bracket is critical"],
+    "image": "assets/adjustable-bracket.png",
+    "imageAlt": "Adjustable ladder-platform support bracket.",
+    "student": "<p>The system-level assessment identifies the adjustable ladder-platform bracket as a critical load-transfer component.</p><p>The platform load is transferred into the bracket and then from the bracket into the ladder rungs or rails. Failure or excessive deformation of the bracket could cause platform rotation, loss of support, local ladder damage, connection failure, worker instability, or collapse.</p><p><strong>Component-level engineering goal:</strong> determine whether one bracket can safely support the governing platform load and transfer it into the ladder without yielding of the horizontal arm, excessive arm deflection, buckling of the diagonal brace, pin or bolt failure, plate bearing failure, or loss of engagement with the ladder.</p>",
+    "instructor": "<p>This transition is important pedagogically because students should not begin with an isolated bracket formula. They should first explain why the bracket is a critical component in the complete system load path and what system-level assumptions are being passed into the component model.</p>"
+  },
+  {
+    "id": "bracket-idealization",
+    "title": "Bracket Idealization and Variables",
+    "selected": true,
+    "tags": ["idealization", "variables", "bracket"],
+    "type": "model setup",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Define variables for a bracket FBD", "Translate a product image into an analyzable mechanics model"],
+    "image": "assets/bracket-idealization-2d.png",
+    "imageAlt": "Dimensioned two-dimensional idealization of the adjustable ladder-platform bracket.",
+    "student": "<p>Use the dimensioned two-dimensional bracket image supplied by the instructor.</p><p>Define <em>L</em> as the horizontal support-arm length; <em>H</em> as the vertical spacing between the upper and lower ladder contacts; <em>L</em><sub>d</sub> as the diagonal-brace length; &theta; as the diagonal-brace angle relative to the horizontal; <em>w</em> as the uniformly distributed platform load acting on the arm; <em>A</em><sub>d</sub> as the diagonal-brace cross-sectional area; <em>I</em><sub>d</sub> as the minimum second moment of area of the diagonal brace; <em>r</em><sub>min</sub> as the minimum radius of gyration of the brace; <em>K</em> as the effective-length factor; <em>S</em><sub>a</sub> as the section modulus of the horizontal arm; <em>I</em><sub>a</sub> as the second moment of area of the horizontal arm; <em>E</em> as the elastic modulus; &sigma;<sub>y</sub> as the yield strength; <em>d</em><sub>p</sub> as the connection-pin diameter; <em>t</em> as the connection-plate thickness; <em>n</em><sub>s</sub> as the number of effective pin shear planes; <em>N</em><sub>y</sub> as the required factor of safety against yielding; <em>N</em><sub>b</sub> as the required factor of safety against buckling; &tau;<sub>allow</sub> as the allowable pin shear stress; and &sigma;<sub>bearing,allow</sub> as the allowable bearing stress.</p><p>Define the horizontal distance from the upper ladder contact to the brace connection as <em>a</em> = <em>L</em><sub>d</sub> cos&theta;. The vertical projection is <em>H</em> = <em>L</em><sub>d</sub> sin&theta;. The uniformly distributed load has resultant <em>W</em> = <em>wL</em>, acting at <em>x</em> = <em>L</em>/2.</p><p>Assume the horizontal arm behaves as a beam; the diagonal brace is a two-force member; the upper and lower bracket contacts are idealized as pins; loading is planar; bracket self-weight is neglected; the distributed load is uniform; and connection eccentricity is neglected.</p>",
+    "instructor": "<p>Students should define all symbols before using equations. The model should make clear that <em>a</em> is the horizontal lever arm from the upper contact to the brace force component, while <em>L</em> is the full loaded support-arm length.</p><p>For the default values, <em>a</em> = <em>L</em><sub>d</sub> cos&theta; = {{ladder_a_m}} m and the vertical projection is <em>L</em><sub>d</sub> sin&theta; = {{ladder_H_projected_m}} m. This is why the default displayed contact spacing is set to match the projected height. If an instructor edits <em>H</em>, <em>L</em><sub>d</sub>, or &theta;, those three geometry values should be checked for compatibility.</p><p>The assumptions should be judged by whether they preserve the dominant load path and whether omitted effects are named.</p>"
+  },
+  {
+    "id": "q10",
+    "title": "Brace Force and Upper Contact Reactions",
+    "selected": true,
+    "tags": ["equilibrium", "brace force", "reactions"],
+    "type": "calculation",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Replace a distributed load with a resultant", "Use moment equilibrium to determine brace force and reactions"],
+    "student": "<p>Use the free-body diagram of the horizontal arm.</p><p>Tasks: replace the distributed load with its equivalent resultant; apply moment equilibrium about the upper ladder contact; determine the vertical brace-force component; determine the brace axial force; determine the horizontal brace-force component; determine the horizontal and vertical reactions at the upper contact; and state whether the brace is in tension or compression.</p>",
+    "instructor": "<p>The distributed-load resultant is <em>W</em> = <em>wL</em> = {{ladder_load_resultant_N}} N, acting at <em>L</em>/2.</p><p>The brace horizontal lever arm is <em>a</em> = <em>L</em><sub>d</sub> cos&theta; = {{ladder_a_m}} m. Taking moments about the upper contact gives <em>F</em><sub>d,y</sub><em>a</em> = (<em>wL</em>)(<em>L</em>/2). Therefore, <em>F</em><sub>d,y</sub> = <em>wL</em><sup>2</sup>/(2<em>a</em>) = {{ladder_brace_vertical_N}} N.</p><p>Since <em>F</em><sub>d,y</sub> = <em>F</em><sub>d</sub> sin&theta;, the brace force is <em>F</em><sub>d</sub> = <em>wL</em><sup>2</sup>/(2<em>a</em> sin&theta;) = {{ladder_brace_force_N}} N. Using <em>a</em> = <em>L</em><sub>d</sub> cos&theta;, this may be written as <em>F</em><sub>d</sub> = <em>wL</em><sup>2</sup>/(2<em>L</em><sub>d</sub> sin&theta; cos&theta;).</p><p>The horizontal component is <em>F</em><sub>d,x</sub> = <em>F</em><sub>d</sub> cos&theta; = {{ladder_brace_horizontal_N}} N. Force equilibrium gives <em>A</em><sub>x</sub> + <em>F</em><sub>d,x</sub> = 0 and <em>A</em><sub>y</sub> + <em>F</em><sub>d,y</sub> - <em>wL</em> = 0. Thus, <em>A</em><sub>x</sub> = -<em>F</em><sub>d,x</sub> = {{ladder_upper_reaction_x_N}} N and <em>A</em><sub>y</sub> = <em>wL</em> - <em>F</em><sub>d,y</sub> = {{ladder_upper_reaction_y_N}} N. The brace pushes upward on the arm and is therefore in compression for the configuration shown.</p>"
+  },
+  {
+    "id": "q11",
+    "title": "Horizontal-Arm Bending Strength",
+    "selected": true,
+    "tags": ["shear diagram", "bending moment", "bending stress"],
+    "type": "calculation",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Derive shear and moment functions", "Evaluate maximum bending stress in the bracket arm"],
+    "student": "<p>Using the reactions from Question 10, derive the shear-force function for 0 &le; <em>x</em> &lt; <em>a</em>; derive the shear-force function for <em>a</em> &le; <em>x</em> &le; <em>L</em>; derive the corresponding bending-moment functions; identify all locations where a maximum bending moment may occur; determine <em>M</em><sub>max</sub> = max |<em>M</em>(<em>x</em>)|; calculate &sigma;<sub>max</sub> = <em>M</em><sub>max</sub>/<em>S</em><sub>a</sub>; and check &sigma;<sub>max</sub> &le; &sigma;<sub>y</sub>/<em>N</em><sub>y</sub>.</p><p>Explain how <em>L</em>, <em>a</em>, <em>S</em><sub>a</sub>, and <em>w</em> affect the maximum stress.</p>",
+    "instructor": "<p>Using upward reactions <em>A</em><sub>y</sub> at <em>x</em> = 0 and <em>F</em><sub>d,y</sub> at <em>x</em> = <em>a</em>: for 0 &le; <em>x</em> &lt; <em>a</em>, the shear force is <em>V</em><sub>1</sub>(<em>x</em>) = <em>A</em><sub>y</sub> - <em>wx</em>, and the bending moment is <em>M</em><sub>1</sub>(<em>x</em>) = <em>A</em><sub>y</sub><em>x</em> - <em>wx</em><sup>2</sup>/2.</p><p>For <em>a</em> &le; <em>x</em> &le; <em>L</em>, the shear force is <em>V</em><sub>2</sub>(<em>x</em>) = <em>A</em><sub>y</sub> + <em>F</em><sub>d,y</sub> - <em>wx</em>. Since <em>A</em><sub>y</sub> + <em>F</em><sub>d,y</sub> = <em>wL</em>, this may be written as <em>V</em><sub>2</sub>(<em>x</em>) = <em>w</em>(<em>L</em> - <em>x</em>). The bending moment is <em>M</em><sub>2</sub>(<em>x</em>) = <em>A</em><sub>y</sub><em>x</em> + <em>F</em><sub>d,y</sub>(<em>x</em> - <em>a</em>) - <em>wx</em><sup>2</sup>/2.</p><p>Candidate locations for maximum absolute bending moment are <em>x</em> = 0, <em>x</em> = <em>a</em>, <em>x</em> = <em>L</em>, any valid interior point satisfying <em>V</em><sub>1</sub>(<em>x</em>) = 0, and any valid interior point satisfying <em>V</em><sub>2</sub>(<em>x</em>) = 0. For the default values, the maximum absolute moment is <em>M</em><sub>max</sub> = {{ladder_Mmax_Nm}} N*m at <em>x</em> = {{ladder_Mmax_location_m}} m.</p><p>Convert moment to N*mm before using <em>S</em><sub>a</sub> in mm<sup>3</sup>. Then &sigma;<sub>max</sub> = <em>M</em><sub>max</sub>(1000)/<em>S</em><sub>a</sub> = {{ladder_bending_MPa}} MPa. The allowable yield stress is &sigma;<sub>y</sub>/<em>N</em><sub>y</sub> = {{ladder_yield_allow_MPa}} MPa, so the arm bending utilization ratio is {{ladder_arm_stress_utilization}}.</p><p>Increasing <em>L</em> or <em>w</em> generally increases bending demand. Increasing <em>S</em><sub>a</sub> reduces stress. Moving the brace connection outward generally reduces the brace force and changes the bending distribution. Arm deflection requires <em>EI</em><sub>a</sub>, support compatibility, brace axial stiffness, and connection flexibility.</p>"
+  },
+  {
+    "id": "q12",
+    "title": "Diagonal Brace and Connection",
+    "selected": true,
+    "tags": ["axial stress", "buckling", "pin shear", "bearing"],
+    "type": "calculation",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Check brace yielding and Euler buckling", "Check pin shear and plate bearing"],
+    "student": "<p>Use the brace force obtained in Question 10.</p><p><strong>Brace yielding:</strong> calculate &sigma;<sub>d</sub> = <em>F</em><sub>d</sub>/<em>A</em><sub>d</sub> and check |&sigma;<sub>d</sub>| &le; &sigma;<sub>y</sub>/<em>N</em><sub>y</sub>.</p><p><strong>Brace buckling:</strong> calculate &lambda; = <em>KL</em><sub>d</sub>/<em>r</em><sub>min</sub>. When Euler buckling is applicable, calculate <em>P</em><sub>cr</sub> = &pi;<sup>2</sup><em>EI</em><sub>d</sub>/(<em>KL</em><sub>d</sub>)<sup>2</sup> and check <em>F</em><sub>d</sub> &le; <em>P</em><sub>cr</sub>/<em>N</em><sub>b</sub>.</p><p><strong>Pin shear:</strong> calculate <em>A</em><sub>p</sub> = &pi;<em>d</em><sub>p</sub><sup>2</sup>/4 and &tau;<sub>avg</sub> = <em>F</em><sub>d</sub>/(<em>n</em><sub>s</sub><em>A</em><sub>p</sub>). Check &tau;<sub>avg</sub> &le; &tau;<sub>allow</sub>.</p><p><strong>Plate bearing:</strong> calculate &sigma;<sub>bearing</sub> = <em>F</em><sub>d</sub>/(<em>td</em><sub>p</sub>). Check &sigma;<sub>bearing</sub> &le; &sigma;<sub>bearing,allow</sub>.</p><p>Identify at least four additional connection checks.</p>",
+    "instructor": "<p>The brace force from Question 10 is <em>F</em><sub>d</sub> = {{ladder_brace_force_N}} N.</p><p><strong>Brace yielding:</strong> &sigma;<sub>d</sub> = <em>F</em><sub>d</sub>/<em>A</em><sub>d</sub> = {{ladder_brace_stress_MPa}} MPa. The allowable yield stress is &sigma;<sub>y</sub>/<em>N</em><sub>y</sub> = {{ladder_yield_allow_MPa}} MPa, so the brace yielding utilization ratio is {{ladder_brace_yield_utilization}}.</p><p><strong>Brace buckling:</strong> use mm units with <em>E</em> in MPa and <em>I</em><sub>d</sub> in mm<sup>4</sup>. Brace slenderness is &lambda; = <em>KL</em><sub>d</sub>/<em>r</em><sub>min</sub> = {{ladder_brace_slenderness}}. When Euler buckling is appropriate, <em>P</em><sub>cr</sub> = &pi;<sup>2</sup><em>EI</em><sub>d</sub>/(<em>KL</em><sub>d</sub>)<sup>2</sup> = {{ladder_brace_buckling_N}} N. The allowable buckling load is <em>P</em><sub>cr</sub>/<em>N</em><sub>b</sub> = {{ladder_brace_buckling_allow_N}} N, so the buckling utilization ratio is {{ladder_brace_buckling_utilization}}. Euler buckling is a preliminary elastic-buckling model and should be used only when the brace is slender enough and the end-condition assumption is defensible.</p><p><strong>Pin shear:</strong> <em>A</em><sub>p</sub> = &pi;<em>d</em><sub>p</sub><sup>2</sup>/4 = {{ladder_pin_area_mm2}} mm<sup>2</sup>. Average pin shear stress is &tau;<sub>avg</sub> = <em>F</em><sub>d</sub>/(<em>n</em><sub>s</sub><em>A</em><sub>p</sub>) = {{ladder_pin_shear_MPa}} MPa. Compared with &tau;<sub>allow</sub>, the pin shear utilization ratio is {{ladder_pin_shear_utilization}}.</p><p><strong>Plate bearing:</strong> nominal bearing stress is &sigma;<sub>bearing</sub> = <em>F</em><sub>d</sub>/(<em>td</em><sub>p</sub>) = {{ladder_bearing_MPa}} MPa. Compared with &sigma;<sub>bearing,allow</sub>, the bearing utilization ratio is {{ladder_bearing_utilization}}.</p><p>Additional required checks include pin bending, plate tear-out, net-section rupture, weld failure, fatigue, wear, edge distance, hole clearance, retaining-device failure, and local deformation of the ladder contact region.</p>"
+  },
+  {
+    "id": "final-recommendation",
+    "title": "Final Engineering Recommendation",
+    "selected": true,
+    "tags": ["engineering judgment", "recommendation", "decision"],
+    "type": "decision",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Use system and component results to make a recommendation", "Identify unresolved hazards before commercial approval"],
+    "student": "<p>Using the system-level assessment and bracket calculations, recommend whether the ladder-platform concept should be accepted for detailed design, modified, rejected, or held pending additional information.</p><p>Identify the governing system-level concern, the governing bracket failure mode, whether strength, stiffness, stability, or durability controls, at least two recommended design improvements, and additional information required before final approval.</p>",
+    "instructor": "<p>The student should not approve the complete product solely because the bracket passes its local checks. For the default bracket values, the calculated utilization ratios are: horizontal-arm bending = {{ladder_arm_stress_utilization}}, brace yielding = {{ladder_brace_yield_utilization}}, brace buckling = {{ladder_brace_buckling_utilization}}, pin shear = {{ladder_pin_shear_utilization}}, and plate bearing = {{ladder_bearing_utilization}}. The largest bracket utilization is {{ladder_governing_utilization}}, governed by {{ladder_governing_mode}}, so the bracket-level result {{ladder_design_recommendation}}.</p><p>The final product recommendation must still consider complete-system sliding and overturning, ladder-rung and rail capacity, platform strength and deflection, bracket strength and buckling, connection failure, fatigue and wear, misuse, and installation uncertainty. A defensible preliminary conclusion should identify the largest utilization ratio and the unresolved system-level hazards.</p>"
+  }
+]

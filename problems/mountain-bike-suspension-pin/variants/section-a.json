@@ -1,0 +1,39 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - pin shear FOS",
+  "description": "Default MEEN 305-style sequence for equilibrium, double-shear stress, factor of safety, and recommendation.",
+  "selectedQuestions": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15",
+    "q16",
+    "q17",
+    "q18",
+    "q19",
+    "q20",
+    "q21"
+  ],
+  "variables": {
+    "P": 1500,
+    "x_AB": 300,
+    "x_BC": 100,
+    "y_BC": 30,
+    "theta_BD": 60,
+    "tau_fail": 150,
+    "d_B": 7.5,
+    "d_C": 6.5,
+    "n_s": 2
+  }
+}

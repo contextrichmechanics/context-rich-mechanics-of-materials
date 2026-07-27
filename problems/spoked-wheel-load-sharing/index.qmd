@@ -1,0 +1,53 @@
+---
+title: "Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load"
+description: "A context-rich mechanics problem on load sharing in a rigid-rim wheel with three equal axial spokes."
+image: "assets/spoked-wheel-industry-context.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - design
+course_topics:
+  - axial loading
+  - compatibility
+  - equilibrium
+  - stress
+problem_types:
+  - free-body diagram
+  - compatibility
+  - calculation
+  - design evaluation
+textbook_chapters:
+  - Axial loading
+  - Rigid-body equilibrium
+  - Deformation compatibility
+  - Stress and strain
+  - Factor of safety
+competencies:
+  - load path reasoning
+  - symmetry
+  - axial member idealization
+  - compatibility
+  - engineering judgment
+industries:
+  - mobility devices
+  - wheelchair wheels
+  - robotic platforms
+  - ground-support equipment
+difficulty: "Intermediate"
+status: "Draft"
+problem_id: "MOS-WHEEL-005"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for a MEEN 305-style axial compatibility and equilibrium problem. The optional stress/displacement extension is included in the instructor answers and can be kept or removed depending on class coverage.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=spoked-wheel-load-sharing){.btn .btn-secondary}
+

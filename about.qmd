@@ -1,0 +1,17 @@
+---
+title: "About the Library"
+---
+
+This project treats each mechanics problem as a modular **scenario package** rather
+than as a single calculation. A package may contain:
+
+- a real-world image and scenario;
+- open-ended engineering questions;
+- a student packet;
+- instructor notes and solution guidance;
+- computational notebooks;
+- rubrics and assessment variants;
+- metadata for search, filtering, and reuse.
+
+The physical folder structure is organized by problem package. Discovery is handled
+through metadata rather than by forcing each problem into only one chapter.

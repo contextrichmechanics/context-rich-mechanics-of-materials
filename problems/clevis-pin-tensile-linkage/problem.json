@@ -1,0 +1,37 @@
+{
+  "id": "MOS-CLEVIS-007",
+  "slug": "clevis-pin-tensile-linkage",
+  "title": "Industrial Clevis-Pin Linkage Under Tensile Load",
+  "studentDocumentTitle": "Student Homework Questions",
+  "instructorDocumentTitle": "Instructor Answers",
+  "summary": "A context-rich mechanics problem on axial normal stress in rods and double-shear stress in a clevis pin.",
+  "textbookChapters": [
+    "Stress and strain",
+    "Axial loading",
+    "Shear stress",
+    "Connections and fasteners",
+    "Factor of safety"
+  ],
+  "derivedPlaceholders": [
+    "clevis_load_N",
+    "clevis_shear_plane_load_N",
+    "clevis_area_1_mm2",
+    "clevis_area_2_mm2",
+    "clevis_pin_area_mm2",
+    "clevis_pin_total_shear_area_mm2",
+    "clevis_sigma_1_MPa",
+    "clevis_sigma_2_MPa",
+    "clevis_tau_A_MPa",
+    "clevis_largest_stress_mode",
+    "clevis_largest_stress_MPa",
+    "clevis_fos_1",
+    "clevis_fos_2",
+    "clevis_fos_pin",
+    "clevis_governing_fos_mode",
+    "clevis_governing_fos"
+  ],
+  "image": "assets/clevis-industry-context.png",
+  "source": "index.html",
+  "problemStatement": "<p>A mechanical design team is reviewing a clevis-and-pin linkage used in an industrial actuator assembly. The linkage transfers a tensile force between two cylindrical rod members through a forked yoke and a transverse pin. This type of connection is common in hydraulic actuators, lifting mechanisms, automated machinery, and mechanical test fixtures.</p><p>Because the connection is part of a load path, the team must verify which components carry axial tension and which connector carries shear. For this introductory Solid Mechanics analysis, the rods are checked using average normal stress, and the pin is checked using average shear stress assuming double shear. More detailed effects such as bearing stress, stress concentration near holes, bending of the pin, contact pressure, fatigue, and manufacturing tolerances are noted as limitations but are not required for the basic calculation.</p>",
+  "engineeringGoal": "<p>Determine the average normal stress in each rod and the average shear stress in the pin at A. Use the results to identify which idealized component has the largest average stress demand and make a limited mechanics-based recommendation about what additional information would be needed before accepting the connection for service.</p>"
+}

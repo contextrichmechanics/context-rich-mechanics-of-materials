@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Bolted wall bracket supporting a lift arm</title>
+  <desc id="desc">A steel wall bracket with two anchor bolts supports a horizontal lift arm carrying a downward load at the free end.</desc>
+  <rect width="1200" height="760" fill="#f7f9fb"/>
+  <rect x="90" y="80" width="150" height="600" fill="#d7dde3" stroke="#6b7682" stroke-width="4"/>
+  <g stroke="#a0a9b2" stroke-width="2">
+    <line x1="120" y1="95" x2="210" y2="185"/>
+    <line x1="120" y1="170" x2="210" y2="260"/>
+    <line x1="120" y1="245" x2="210" y2="335"/>
+    <line x1="120" y1="320" x2="210" y2="410"/>
+    <line x1="120" y1="395" x2="210" y2="485"/>
+    <line x1="120" y1="470" x2="210" y2="560"/>
+    <line x1="120" y1="545" x2="210" y2="635"/>
+  </g>
+  <rect x="240" y="230" width="105" height="300" rx="6" fill="#f0f3f5" stroke="#25313d" stroke-width="5"/>
+  <circle cx="292.5" cy="295" r="30" fill="#ffffff" stroke="#25313d" stroke-width="5"/>
+  <circle cx="292.5" cy="465" r="30" fill="#ffffff" stroke="#25313d" stroke-width="5"/>
+  <circle cx="292.5" cy="295" r="13" fill="#6a737d"/>
+  <circle cx="292.5" cy="465" r="13" fill="#6a737d"/>
+  <rect x="345" y="350" width="620" height="60" fill="#5b8fc9" stroke="#25313d" stroke-width="5"/>
+  <polygon points="345,410 520,410 345,530" fill="#86b6e2" stroke="#25313d" stroke-width="5"/>
+  <line x1="965" y1="410" x2="965" y2="555" stroke="#25313d" stroke-width="5"/>
+  <rect x="900" y="555" width="130" height="70" rx="8" fill="#39424e" stroke="#171d23" stroke-width="4"/>
+  <path d="M965 635 v55" stroke="#25313d" stroke-width="5"/>
+  <path d="M935 690 q30 48 60 0" fill="none" stroke="#25313d" stroke-width="5"/>
+  <line x1="345" y1="185" x2="965" y2="185" stroke="#25313d" stroke-width="3"/>
+  <line x1="345" y1="170" x2="345" y2="200" stroke="#25313d" stroke-width="3"/>
+  <line x1="965" y1="170" x2="965" y2="200" stroke="#25313d" stroke-width="3"/>
+  <text x="640" y="165" font-family="Arial, sans-serif" font-size="34" fill="#25313d">L</text>
+  <line x1="390" y1="295" x2="390" y2="465" stroke="#25313d" stroke-width="3"/>
+  <line x1="375" y1="295" x2="405" y2="295" stroke="#25313d" stroke-width="3"/>
+  <line x1="375" y1="465" x2="405" y2="465" stroke="#25313d" stroke-width="3"/>
+  <text x="410" y="390" font-family="Arial, sans-serif" font-size="34" fill="#25313d">s</text>
+  <path d="M1060 545 v-95" stroke="#b72f2f" stroke-width="6" marker-end="url(#arrow)"/>
+  <text x="1080" y="505" font-family="Arial, sans-serif" font-size="36" fill="#b72f2f">P</text>
+  <text x="252" y="585" font-family="Arial, sans-serif" font-size="27" fill="#25313d">plate t</text>
+  <text x="870" y="338" font-family="Arial, sans-serif" font-size="27" fill="#25313d">arm</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b72f2f"/>
+    </marker>
+  </defs>
+</svg>

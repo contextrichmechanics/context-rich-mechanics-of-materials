@@ -1,0 +1,101 @@
+---
+title: "Problem Library"
+listing:
+  contents: "problems/*/index.qmd"
+  type: grid
+  sort: "title"
+  filter-ui:
+    - title
+    - textbook_chapters
+    - categories
+    - course_topics
+    - problem_types
+    - competencies
+    - industries
+    - difficulty
+  fields:
+    - title
+    - description
+    - image
+    - textbook_chapters
+    - categories
+    - course_topics
+    - problem_types
+    - competencies
+    - industries
+    - difficulty
+    - status
+  page-size: 12
+---
+
+Use the search box and filters to find problems by **mechanics topic, problem type,
+competency, industry context, or difficulty**. Each entry is a self-contained scenario
+package that can later include student prompts, instructor notes, calculations, rubrics,
+and assessment variants.
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".quarto-grid-link");
+
+  cards.forEach((cardLink) => {
+    const cardBody = cardLink.querySelector(".card-body");
+    if (!cardBody || cardBody.querySelector(".packet-actions")) {
+      return;
+    }
+
+    const problemHref = cardLink.getAttribute("href");
+    const problemBase = problemHref.replace(/index\.html$/, "");
+    const valuesTable = cardBody.querySelector(".card-other-values");
+    const metadata = {};
+
+    valuesTable?.querySelectorAll("tr").forEach((row) => {
+      const cells = row.querySelectorAll("td");
+      if (cells.length === 2) {
+        metadata[cells[0].textContent.trim()] = cells[1].textContent.trim();
+      }
+    });
+
+    const summary = document.createElement("div");
+    summary.className = "card-quick-meta";
+    [
+      ["Difficulty", metadata.difficulty],
+      ["Status", metadata.status],
+    ].forEach(([label, value]) => {
+      if (!value) {
+        return;
+      }
+      const item = document.createElement("span");
+      item.textContent = `${label}: ${value}`;
+      summary.appendChild(item);
+    });
+
+    if (summary.children.length > 0) {
+      cardBody.appendChild(summary);
+    }
+
+    const actions = document.createElement("div");
+    actions.className = "packet-actions";
+
+    [
+      ["Student packet", `${problemBase}student-packet.html`],
+      ["Instructor packet", `${problemBase}instructor-guide.html`],
+      ["Customize", `./instructor-builder.html?problem=${encodeURIComponent(problemBase)}`],
+    ].forEach(([label, href]) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "packet-action";
+      button.textContent = label;
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        window.location.href = href;
+      });
+      actions.appendChild(button);
+    });
+
+    cardBody.appendChild(actions);
+  });
+});
+</script>
+```

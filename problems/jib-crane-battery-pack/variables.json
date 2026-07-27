@@ -1,0 +1,232 @@
+[
+  {
+    "key": "L",
+    "symbol": "L",
+    "label": "Boom length",
+    "value": 2.4,
+    "unit": "m",
+    "min": 0.5,
+    "max": 6,
+    "step": 0.1
+  },
+  {
+    "key": "Lb",
+    "symbol": "L_b",
+    "label": "Brace attachment distance",
+    "value": 1.6,
+    "unit": "m",
+    "min": 0.3,
+    "max": 5,
+    "step": 0.1
+  },
+  {
+    "key": "theta",
+    "symbol": "theta",
+    "label": "Brace angle",
+    "value": 35,
+    "unit": "deg",
+    "min": 15,
+    "max": 75,
+    "step": 1
+  },
+  {
+    "key": "M",
+    "symbol": "M",
+    "label": "Battery pack mass",
+    "value": 450,
+    "unit": "kg",
+    "min": 100,
+    "max": 1000,
+    "step": 10
+  },
+  {
+    "key": "H",
+    "symbol": "H",
+    "label": "Horizontal service load",
+    "value": 500,
+    "unit": "N",
+    "min": 0,
+    "max": 3000,
+    "step": 25
+  },
+  {
+    "key": "e_H",
+    "symbol": "e_H",
+    "label": "Vertical offset of horizontal load below boom centerline",
+    "value": 0.3,
+    "unit": "m",
+    "min": 0,
+    "max": 1.5,
+    "step": 0.05
+  },
+  {
+    "key": "gamma_d",
+    "symbol": "gamma_d",
+    "label": "Dynamic load factor",
+    "value": 1.25,
+    "unit": "-",
+    "min": 1,
+    "max": 2,
+    "step": 0.05
+  },
+  {
+    "key": "S_boom",
+    "symbol": "S",
+    "label": "Boom section modulus",
+    "value": 85000,
+    "unit": "mm^3",
+    "min": 20000,
+    "max": 300000,
+    "step": 5000
+  },
+  {
+    "key": "I_boom",
+    "symbol": "I",
+    "label": "Boom second moment of area",
+    "value": 8500000,
+    "unit": "mm^4",
+    "min": 1000000,
+    "max": 50000000,
+    "step": 500000
+  },
+  {
+    "key": "E",
+    "symbol": "E",
+    "label": "Steel elastic modulus",
+    "value": 200000,
+    "unit": "MPa",
+    "min": 180000,
+    "max": 210000,
+    "step": 1000
+  },
+  {
+    "key": "A_brace",
+    "symbol": "A_b",
+    "label": "Brace cross-sectional area",
+    "value": 650,
+    "unit": "mm^2",
+    "min": 150,
+    "max": 3000,
+    "step": 50
+  },
+  {
+    "key": "d_pin",
+    "symbol": "d_p",
+    "label": "Brace pin diameter",
+    "value": 20,
+    "unit": "mm",
+    "min": 8,
+    "max": 60,
+    "step": 1
+  },
+  {
+    "key": "t_plate",
+    "symbol": "t",
+    "label": "Connection plate thickness",
+    "value": 12,
+    "unit": "mm",
+    "min": 4,
+    "max": 40,
+    "step": 1
+  },
+  {
+    "key": "sigma_y",
+    "symbol": "sigma_y",
+    "label": "Steel yield strength",
+    "value": 250,
+    "unit": "MPa",
+    "min": 200,
+    "max": 550,
+    "step": 10
+  },
+  {
+    "key": "N_y",
+    "symbol": "N_y",
+    "label": "Yield safety factor",
+    "value": 2,
+    "unit": "-",
+    "min": 1,
+    "max": 5,
+    "step": 0.1
+  },
+  {
+    "key": "delta_allow",
+    "symbol": "delta_allow",
+    "label": "Allowable load-point deflection",
+    "value": 10,
+    "unit": "mm",
+    "min": 1,
+    "max": 50,
+    "step": 1
+  },
+  {
+    "key": "K_brace",
+    "symbol": "K",
+    "label": "Brace effective-length factor",
+    "value": 1,
+    "unit": "-",
+    "min": 0.5,
+    "max": 2,
+    "step": 0.05
+  },
+  {
+    "key": "r_min",
+    "symbol": "r_min",
+    "label": "Brace minimum radius of gyration",
+    "value": 28,
+    "unit": "mm",
+    "min": 5,
+    "max": 100,
+    "step": 1
+  },
+  {
+    "key": "I_brace",
+    "symbol": "I_b",
+    "label": "Brace second moment of area for buckling",
+    "value": 1200000,
+    "unit": "mm^4",
+    "min": 50000,
+    "max": 10000000,
+    "step": 50000
+  },
+  {
+    "key": "N_b",
+    "symbol": "N_b",
+    "label": "Buckling safety factor",
+    "value": 2,
+    "unit": "-",
+    "min": 1,
+    "max": 5,
+    "step": 0.1
+  },
+  {
+    "key": "n_s",
+    "symbol": "n_s",
+    "label": "Number of pin shear planes",
+    "value": 1,
+    "unit": "-",
+    "min": 1,
+    "max": 2,
+    "step": 1
+  },
+  {
+    "key": "tau_allow",
+    "symbol": "tau_allow",
+    "label": "Allowable average pin shear stress",
+    "value": 80,
+    "unit": "MPa",
+    "min": 20,
+    "max": 250,
+    "step": 5
+  },
+  {
+    "key": "bearing_allow",
+    "symbol": "sigma_bearing_allow",
+    "label": "Allowable plate bearing stress",
+    "value": 150,
+    "unit": "MPa",
+    "min": 50,
+    "max": 500,
+    "step": 10
+  }
+]

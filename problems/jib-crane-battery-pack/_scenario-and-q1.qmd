@@ -1,0 +1,49 @@
+![Wall-mounted swing-jib crane in an automotive manufacturing environment.](assets/jib-crane-industry.png){fig-alt="A wall-mounted industrial swing-jib crane lifting a battery-pack-like mechanical component in a manufacturing workshop." width=100%}
+
+## Industry Scenario
+
+You are a manufacturing engineer responsible for designing a compact,
+wall-mounted swing-jib crane for an automotive assembly line. The crane is used
+to lift and position battery packs during installation into vehicle frames.
+
+The crane must operate within a restricted workstation, allow the suspended
+battery pack to be moved between a staging fixture and the vehicle, and be safely
+operated by production personnel throughout repeated assembly cycles. The system
+includes a wall-mounted support, horizontal boom, diagonal brace, rotating joints,
+trolley or hoist assembly, lifting chains, and attachment hardware.
+
+Only a preliminary concept image and a general description of the intended
+application are available. Detailed design loads, dimensions, materials,
+connection specifications, and allowable performance limits have not yet been
+finalized.
+
+Your task is to evaluate the engineering requirements of the crane, identify the
+information needed for analysis, develop justified estimates where data are
+unavailable, and determine how the real system should eventually be simplified
+into an appropriate structural model.
+
+## Question 1 — Design and Commercialization Considerations
+
+Discuss the considerations that should influence the design, manufacture,
+installation, operation, and commercialization of this wall-mounted swing-jib
+crane.
+
+Address the following:
+
+1. The functional requirements of the crane.
+2. The required lifting capacity, reach, range of motion, and positioning accuracy.
+3. The effects of limited assembly-line space and interference with nearby equipment.
+4. Operator safety during lifting, swinging, positioning, and lowering of the battery pack.
+5. The consequences of accidental overload, impact, load swing, or improper operation.
+6. Manufacturing methods for the boom, brace, mounting plates, pins, and connections.
+7. The use of standard structural sections, commercial hoists, bearings, fasteners, and lifting hardware.
+8. Installation requirements for the wall support and surrounding building structure.
+9. Inspection, maintenance, lubrication, wear, corrosion, and replacement of components.
+10. Production-rate requirements, repeated loading cycles, reliability, downtime, and ease of repair.
+11. Product cost, weight, transport, installation time, rated capacity, warranty, and liability.
+12. Information that must be supplied to the customer, including rated load, operating limits, inspection intervals, and safety instructions.
+
+### Required conclusion
+
+Identify and justify the **three most important design requirements** that must be
+satisfied before the crane can be approved for use on the assembly line.

@@ -1,0 +1,61 @@
+---
+title: "Problem Health"
+toc: false
+---
+
+```{=html}
+<div class="health-summary" id="health-summary"></div>
+<div class="health-table-wrap">
+  <table class="health-table">
+    <thead>
+      <tr>
+        <th>Problem</th>
+        <th>Status</th>
+        <th>Variables</th>
+        <th>Questions</th>
+        <th>Variants</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody id="health-table-body"></tbody>
+  </table>
+</div>
+
+<script src="../data/problem-health.js"></script>
+<script>
+const health = window.PROBLEM_HEALTH || [];
+const summary = document.getElementById("health-summary");
+const body = document.getElementById("health-table-body");
+const okCount = health.filter((item) => item.status === "OK").length;
+const reviewCount = health.length - okCount;
+
+summary.innerHTML = `
+  <div class="health-card">
+    <strong>${health.length}</strong>
+    <span>Total problems</span>
+  </div>
+  <div class="health-card">
+    <strong>${okCount}</strong>
+    <span>OK</span>
+  </div>
+  <div class="health-card">
+    <strong>${reviewCount}</strong>
+    <span>Needs review</span>
+  </div>
+`;
+
+body.innerHTML = health.map((item) => `
+  <tr>
+    <td>
+      <strong>${item.title}</strong><br>
+      <code>${item.slug}</code>
+    </td>
+    <td><span class="health-status ${item.status === "OK" ? "ok" : "review"}">${item.status}</span></td>
+    <td>${item.variables}</td>
+    <td>${item.questions}</td>
+    <td>${item.variants}</td>
+    <td>${item.warnings.length ? item.warnings.join("<br>") : "No issues found"}</td>
+  </tr>
+`).join("");
+</script>
+```

@@ -1,0 +1,41 @@
+{
+  "id": "MOS-CABLE-008",
+  "slug": "suspended-equipment-cable-system",
+  "title": "Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables",
+  "studentDocumentTitle": "Student Homework Questions",
+  "instructorDocumentTitle": "Instructor Answers",
+  "summary": "A context-rich mechanics problem on 2D cable equilibrium, axial cable stress, minimum diameter, and factor of safety.",
+  "textbookChapters": [
+    "Equilibrium of a particle",
+    "Stress and strain",
+    "Axial loading",
+    "Factor of safety",
+    "Design of tension members"
+  ],
+  "derivedPlaceholders": [
+    "cable_weight_N",
+    "cable_T_AB_N",
+    "cable_T_BC_N",
+    "cable_T_AB_kN",
+    "cable_T_BC_kN",
+    "cable_governing_tension_member",
+    "cable_allowable_stress_MPa",
+    "cable_A_AB_req_mm2",
+    "cable_A_BC_req_mm2",
+    "cable_d_AB_min_mm",
+    "cable_d_BC_min_mm",
+    "cable_A_AB_mm2",
+    "cable_A_BC_mm2",
+    "cable_sigma_AB_MPa",
+    "cable_sigma_BC_MPa",
+    "cable_FOS_AB",
+    "cable_FOS_BC",
+    "cable_governing_fos_member",
+    "cable_governing_fos",
+    "cable_design_recommendation"
+  ],
+  "image": "assets/cable-industry-context.png",
+  "source": "index.html",
+  "problemStatement": "<p>An industrial facility is installing a compact sensor or inspection equipment pod in a maintenance bay. The pod is suspended above the floor using two steel wire cables connected to wall-mounted brackets on opposite structural columns. The cable angles are not symmetric, so the load is not shared equally between the two cables.</p><p>As a junior facilities or mechanical engineer, evaluate whether the cable support arrangement can safely carry the equipment weight. The goal is not to redesign the full support structure, but to use Mechanics of Materials tools to determine cable tensions, cable tensile stresses, and the required cable diameters or factors of safety.</p>",
+  "engineeringGoal": "<p>Determine whether the two inclined steel cables can safely support the suspended equipment pod under the specified static loading. Identify the cable with the larger tensile demand and determine either the minimum required cable diameter for a specified factor of safety or the actual factor of safety for selected cable diameters.</p>"
+}

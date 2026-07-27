@@ -1,0 +1,92 @@
+[
+  {
+    "key": "P",
+    "symbol": "P",
+    "label": "Applied rider/design load",
+    "value": 1500,
+    "unit": "N",
+    "min": 200,
+    "max": 5000,
+    "step": 50
+  },
+  {
+    "key": "x_AB",
+    "symbol": "x_AB",
+    "label": "Horizontal distance from A to B",
+    "value": 300,
+    "unit": "mm",
+    "min": 50,
+    "max": 800,
+    "step": 10
+  },
+  {
+    "key": "x_BC",
+    "symbol": "x_BC",
+    "label": "Horizontal distance from B to C",
+    "value": 100,
+    "unit": "mm",
+    "min": 20,
+    "max": 400,
+    "step": 5
+  },
+  {
+    "key": "y_BC",
+    "symbol": "y_BC",
+    "label": "Vertical offset between B and C",
+    "value": 30,
+    "unit": "mm",
+    "min": 0,
+    "max": 200,
+    "step": 5
+  },
+  {
+    "key": "theta_BD",
+    "symbol": "theta_BD",
+    "label": "Shock/link angle from horizontal",
+    "value": 60,
+    "unit": "deg",
+    "min": 20,
+    "max": 80,
+    "step": 1
+  },
+  {
+    "key": "tau_fail",
+    "symbol": "tau_fail",
+    "label": "Shear failure stress of pin material",
+    "value": 150,
+    "unit": "MPa",
+    "min": 40,
+    "max": 500,
+    "step": 5
+  },
+  {
+    "key": "d_B",
+    "symbol": "d_B",
+    "label": "Diameter of pin B",
+    "value": 7.5,
+    "unit": "mm",
+    "min": 3,
+    "max": 25,
+    "step": 0.5
+  },
+  {
+    "key": "d_C",
+    "symbol": "d_C",
+    "label": "Diameter of pin C",
+    "value": 6.5,
+    "unit": "mm",
+    "min": 3,
+    "max": 25,
+    "step": 0.5
+  },
+  {
+    "key": "n_s",
+    "symbol": "n_s",
+    "label": "Number of shear planes per pin",
+    "value": 2,
+    "unit": "-",
+    "min": 1,
+    "max": 2,
+    "step": 1
+  }
+]

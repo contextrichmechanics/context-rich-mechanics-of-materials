@@ -1,0 +1,86 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Calculations — Wall-Mounted Swing-Jib Crane\"\n",
+        "format:\n",
+        "  html:\n",
+        "    code-fold: true\n",
+        "    toc: true\n",
+        "  pdf:\n",
+        "    documentclass: scrartcl\n",
+        "    toc: true\n",
+        "  ipynb: default\n",
+        "jupyter: python3\n",
+        "execute:\n",
+        "  echo: true\n",
+        "  warning: false\n",
+        "---\n",
+        "\n",
+        "\n",
+        "# Reference 2D Structural Model\n",
+        "\n",
+        "The following idealized side view defines the geometry and variables used in the numerical analysis.\n",
+        "\n",
+        "![Two-dimensional idealized swing-jib crane model used for calculations.](assets/jib-crane-industry-2d.png){fig-alt=\"Idealized swing-jib crane showing geometric variables, wall supports, boom, brace, trolley, and battery-pack mass.\" width=100%}\n",
+        "\n",
+        "# Purpose\n",
+        "\n",
+        "This notebook is reserved for calculations added after the conceptual questions are approved.\n",
+        "\n",
+        "Potential calculations include:\n",
+        "\n",
+        "- design-load estimation;\n",
+        "- dynamic amplification;\n",
+        "- support reactions;\n",
+        "- brace axial force;\n",
+        "- boom bending stress;\n",
+        "- pin shear and bearing stress;\n",
+        "- brace buckling;\n",
+        "- boom deflection;\n",
+        "- sensitivity studies."
+      ],
+      "id": "68a4b636"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| label: setup\n",
+        "import math"
+      ],
+      "id": "setup",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| label: preliminary-load-model\n",
+        "\n",
+        "# Replace these placeholders with approved scenario values.\n",
+        "battery_weight = None\n",
+        "fixture_weight = None\n",
+        "hoist_weight = None\n",
+        "dynamic_factor = None"
+      ],
+      "id": "preliminary-load-model",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/sak/Library/CloudStorage/OneDrive-TexasA&MUniversity/Summer 2026 Dr S Textbook work/context-rich-mos-quarto-v3/.venv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

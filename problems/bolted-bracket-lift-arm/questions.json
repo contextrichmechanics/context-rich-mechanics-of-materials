@@ -1,0 +1,59 @@
+[
+  {
+    "id": "q1",
+    "title": "Load Path and Free-Body Diagram",
+    "selected": true,
+    "tags": ["load path", "fbd", "connections"],
+    "type": "fbd/modeling",
+    "difficulty": "introductory",
+    "learningObjectives": ["Trace load path through a bracket", "Draw a complete free-body diagram"],
+    "gradingNotes": "<p>Look for a clear connection between eccentric loading and the anchor reaction couple.</p>",
+    "student": "<p>The bracket carries a suspended service load <strong>P = {{P}} {{P_unit}}</strong> at a distance <strong>L = {{L}} {{L_unit}}</strong> from the wall plate. Draw a free-body diagram of the arm and mounting plate, and describe the load path from the suspended load into the wall.</p>",
+    "instructor": "<p>Representative answers should show the downward load at the arm end, wall reactions at the plate or anchor group, shear transfer through the plate, and a resisting couple created by the anchor pair. The eccentric moment is approximately M = PL for the idealized side-view model.</p>"
+  },
+  {
+    "id": "q2",
+    "title": "Anchor Force Estimate",
+    "selected": true,
+    "tags": ["anchors", "estimation", "moment"],
+    "type": "estimation",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Estimate anchor tension from an eccentric moment", "State assumptions behind a simple couple model"],
+    "student": "<p>Using the bolt spacing <strong>s = {{s}} {{s_unit}}</strong>, estimate the tensile force that may develop in the upper anchor bolt if the anchor pair resists the moment as a simple couple. State the assumptions behind this estimate.</p>",
+    "instructor": "<p>A first estimate treats the eccentric moment as M = PL and the anchor tension-compression couple as T s. Thus T is approximately PL/s, before adding direct shear, prying, preload, wall flexibility, eccentricity, or code-based anchor design factors.</p>"
+  },
+  {
+    "id": "q3",
+    "title": "Bolt Shear and Bearing",
+    "selected": true,
+    "tags": ["shear", "bearing", "connections"],
+    "type": "calculation planning",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Identify bolt shear and bearing checks", "Distinguish nominal stress checks from rated anchor capacity"],
+    "commonMistakes": "<p>Common mistakes include checking only average shear and ignoring bearing, tear-out, and combined tension-shear demand.</p>",
+    "student": "<p>The anchor bolt diameter is <strong>d = {{d}} {{d_unit}}</strong> and the plate thickness is <strong>t = {{t}} {{t_unit}}</strong>. Identify the checks needed for bolt shear, plate bearing, net-section failure, and edge tear-out.</p>",
+    "instructor": "<p>Good answers should identify average bolt shear, bearing stress in the plate, net-section tension, tear-out near plate edges, combined tension-shear anchor demand, and the difference between nominal member checks and certified anchor capacity.</p>"
+  },
+  {
+    "id": "q4",
+    "title": "Arm Bending and Deflection",
+    "selected": true,
+    "tags": ["bending", "deflection", "beam"],
+    "type": "calculation planning",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Model a lift arm as a cantilever", "Identify section properties needed for stress and deflection"],
+    "student": "<p>Model the lift arm as a cantilever of length <strong>L = {{L}} {{L_unit}}</strong> carrying end load <strong>P = {{P}} {{P_unit}}</strong>. Identify the maximum bending moment location and describe what section properties are needed to estimate bending stress and tip deflection.</p>",
+    "instructor": "<p>The maximum moment occurs at the wall connection and is approximately M_max = PL for the simplified cantilever model. Bending stress requires section modulus or second moment of area, while tip deflection requires E, I, support fixity assumptions, and connection flexibility estimates.</p>"
+  },
+  {
+    "id": "q5",
+    "title": "Design Recommendation",
+    "selected": true,
+    "tags": ["decision", "safety", "design"],
+    "type": "decision",
+    "difficulty": "intermediate",
+    "learningObjectives": ["Make a preliminary design recommendation", "Identify missing installation and capacity data"],
+    "student": "<p>Recommend whether the bracket concept should be accepted for detailed design, modified, or rejected. Identify the additional information needed before approval for repeated shop-floor use.</p>",
+    "instructor": "<p>Most preliminary recommendations should be conditional. Required information includes wall material and anchor rating, embedment depth, edge distances, weld details, arm cross section, steel grade, fatigue or cycle demand, overload requirements, deflection limits, installation procedure, inspection access, and applicable workplace safety requirements.</p>"
+  }
+]

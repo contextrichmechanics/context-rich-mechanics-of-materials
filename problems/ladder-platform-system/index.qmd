@@ -1,0 +1,67 @@
+---
+title: "Commercial Aluminum Ladder-Platform System and Adjustable Support Bracket"
+description: "A context-rich mechanics problem on a portable ladder-supported work platform and its adjustable support bracket."
+image: "assets/ladder-platform-system.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - design
+course_topics:
+  - stress
+  - shear
+  - bending
+  - deflection
+  - buckling
+  - fatigue
+  - connections
+textbook_chapters:
+  - Stress and strain
+  - Axial loading
+  - Shear stress
+  - Bending stress
+  - Beam deflection
+  - Buckling
+  - Connections and fasteners
+  - Fatigue
+problem_types:
+  - open-ended
+  - design evaluation
+  - free-body diagram
+  - calculation planning
+  - component analysis
+competencies:
+  - load path reasoning
+  - structural idealization
+  - material selection
+  - geometric reasoning
+  - connection analysis
+  - engineering judgment
+industries:
+  - commercial access equipment
+  - building maintenance
+  - construction
+difficulty: "Introductory to intermediate"
+status: "Draft"
+problem_id: "MOS-LADDER-003"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for a complete context-rich assignment. Use the Instructor Builder to select only the system-level questions, only the bracket calculation sequence, or a custom mix.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=ladder-platform-system){.btn .btn-secondary}
+
+## Package Files
+
+- `problem.json`: catalog metadata, main problem statement, and engineering goal.
+- `variables.json`: editable symbolic quantities for the bracket analysis.
+- `questions.json`: selectable student questions and representative instructor answers.
+- `assets/`: full-system image, bracket image, and dimensioned bracket idealization.
+

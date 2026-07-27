@@ -1,0 +1,35 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - asymmetric cable support",
+  "description": "Default sequence for cable load path, joint equilibrium, axial stress, minimum diameter, and selected-diameter FOS.",
+  "selectedQuestions": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15",
+    "q16",
+    "q17",
+    "q18"
+  ],
+  "variables": {
+    "m": 60,
+    "g": 9.81,
+    "theta_AB": 60,
+    "theta_BC": 45,
+    "sigma_fail": 380,
+    "FOS_req": 2,
+    "d_AB": 1.75,
+    "d_BC": 1.5
+  }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "key": "m",
+    "symbol": "m",
+    "label": "Suspended equipment mass",
+    "value": 60,
+    "unit": "kg",
+    "min": 5,
+    "max": 500,
+    "step": 1
+  },
+  {
+    "key": "g",
+    "symbol": "g",
+    "label": "Gravitational acceleration",
+    "value": 9.81,
+    "unit": "m/s^2",
+    "min": 9.7,
+    "max": 9.9,
+    "step": 0.01
+  },
+  {
+    "key": "theta_AB",
+    "symbol": "theta_AB",
+    "label": "Left cable angle from horizontal",
+    "value": 60,
+    "unit": "deg",
+    "min": 15,
+    "max": 80,
+    "step": 1
+  },
+  {
+    "key": "theta_BC",
+    "symbol": "theta_BC",
+    "label": "Right cable angle from horizontal",
+    "value": 45,
+    "unit": "deg",
+    "min": 15,
+    "max": 80,
+    "step": 1
+  },
+  {
+    "key": "sigma_fail",
+    "symbol": "sigma_fail",
+    "label": "Cable material failure normal stress",
+    "value": 380,
+    "unit": "MPa",
+    "min": 50,
+    "max": 2000,
+    "step": 10
+  },
+  {
+    "key": "FOS_req",
+    "symbol": "FOS_req",
+    "label": "Required factor of safety",
+    "value": 2,
+    "unit": "-",
+    "min": 1,
+    "max": 10,
+    "step": 0.1
+  },
+  {
+    "key": "d_AB",
+    "symbol": "d_AB",
+    "label": "Selected diameter of cable AB",
+    "value": 1.75,
+    "unit": "mm",
+    "min": 0.5,
+    "max": 25,
+    "step": 0.05
+  },
+  {
+    "key": "d_BC",
+    "symbol": "d_BC",
+    "label": "Selected diameter of cable BC",
+    "value": 1.5,
+    "unit": "mm",
+    "min": 0.5,
+    "max": 25,
+    "step": 0.05
+  }
+]

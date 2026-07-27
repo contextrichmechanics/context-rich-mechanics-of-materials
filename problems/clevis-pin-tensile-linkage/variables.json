@@ -1,0 +1,72 @@
+[
+  {
+    "key": "P",
+    "symbol": "P",
+    "label": "Applied tensile load",
+    "value": 5,
+    "unit": "kN",
+    "min": 0.5,
+    "max": 200,
+    "step": 0.5
+  },
+  {
+    "key": "d_1",
+    "symbol": "d_1",
+    "label": "Diameter of left rod",
+    "value": 40,
+    "unit": "mm",
+    "min": 5,
+    "max": 150,
+    "step": 1
+  },
+  {
+    "key": "d_2",
+    "symbol": "d_2",
+    "label": "Diameter of right rod",
+    "value": 30,
+    "unit": "mm",
+    "min": 5,
+    "max": 150,
+    "step": 1
+  },
+  {
+    "key": "d_A",
+    "symbol": "d_A",
+    "label": "Pin diameter at A",
+    "value": 25,
+    "unit": "mm",
+    "min": 5,
+    "max": 100,
+    "step": 1
+  },
+  {
+    "key": "n_s",
+    "symbol": "n_s",
+    "label": "Number of pin shear planes",
+    "value": 2,
+    "unit": "-",
+    "min": 1,
+    "max": 2,
+    "step": 1
+  },
+  {
+    "key": "sigma_allow",
+    "symbol": "sigma_allow",
+    "label": "Optional allowable normal stress",
+    "value": 120,
+    "unit": "MPa",
+    "min": 10,
+    "max": 800,
+    "step": 5
+  },
+  {
+    "key": "tau_allow",
+    "symbol": "tau_allow",
+    "label": "Optional allowable pin shear stress",
+    "value": 80,
+    "unit": "MPa",
+    "min": 5,
+    "max": 500,
+    "step": 5
+  }
+]

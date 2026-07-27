@@ -1,0 +1,52 @@
+---
+title: "Hydraulic Press Punching Shear and Bearing Stress Check"
+description: "A context-rich mechanics problem on average bearing stress and punching shear stress in a press-loaded plate."
+image: "assets/press-industry-context.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - manufacturing
+course_topics:
+  - stress
+  - shear
+  - bearing
+  - punching shear
+  - factor of safety
+textbook_chapters:
+  - Stress and strain
+  - Shear stress
+  - Bearing stress
+  - Factor of safety
+problem_types:
+  - free-body diagram
+  - average stress
+  - calculation
+  - design evaluation
+competencies:
+  - load path reasoning
+  - stress surface identification
+  - area selection
+  - mechanics-based interpretation
+industries:
+  - manufacturing fixtures
+  - hydraulic press tooling
+  - material testing
+  - machine support plates
+difficulty: "Introductory to intermediate"
+status: "Draft"
+problem_id: "MOS-PRESS-006"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for an average bearing stress and punching shear stress assignment. The optional allowable stresses let instructors turn the final question into a factor-of-safety check.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=hydraulic-press-punching-shear){.btn .btn-secondary}
+

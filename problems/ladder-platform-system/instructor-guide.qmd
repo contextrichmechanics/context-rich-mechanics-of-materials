@@ -1,0 +1,52 @@
+---
+title: "Instructor Guide — Commercial Aluminum Ladder-Platform System"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+    number-sections: true
+  ipynb: default
+jupyter: python3
+execute:
+  enabled: false
+---
+
+# Purpose
+
+These answers are not the only acceptable responses. Award credit for physically sound reasoning, clearly stated assumptions, correct mechanics, and recognition of uncertainty.
+
+Students should begin with the complete ladder-platform system and only then move to the adjustable bracket as a critical component. A correct bracket calculation alone is not enough to approve the product.
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="ladder-platform-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "ladder-platform-system",
+    targetId: "ladder-platform-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Supplemental Evaluation Notes
+
+The strongest submissions connect the system-level hazards to the bracket-level calculations. Look for:
+
+- a complete load path from worker and tools to the platform, brackets, ladders, wall, and ground;
+- clear separation of strength, stiffness, stability, fatigue, and durability;
+- bracket equations based on equilibrium rather than memorized formulas;
+- explicit assumptions about load sharing, contact, friction, and connection idealization;
+- a final recommendation that names unresolved data before commercial approval.
+

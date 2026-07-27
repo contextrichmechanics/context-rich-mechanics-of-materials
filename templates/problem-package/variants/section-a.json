@@ -1,0 +1,9 @@
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "variables": {
+    "P": 1000,
+    "L": 1.0
+  },
+  "selectedQuestions": ["q1", "q2"]
+}

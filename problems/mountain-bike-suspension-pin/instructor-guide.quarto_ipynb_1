@@ -1,0 +1,72 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Instructor Guide — Mountain Bike Rear Suspension Linkage\"\n",
+        "subtitle: \"Representative Answers and Evaluation Guidance\"\n",
+        "author: \"Context-Rich Mechanics of Materials Library\"\n",
+        "format:\n",
+        "  html:\n",
+        "    toc: true\n",
+        "    number-sections: true\n",
+        "  pdf:\n",
+        "    documentclass: scrartcl\n",
+        "    papersize: letter\n",
+        "    toc: true\n",
+        "    number-sections: true\n",
+        "  ipynb: default\n",
+        "jupyter: python3\n",
+        "execute:\n",
+        "  enabled: false\n",
+        "---\n",
+        "\n",
+        "# Purpose\n",
+        "\n",
+        "These answers are representative, not the only acceptable responses. Award credit for correct free-body diagrams, consistent sign conventions, equilibrium reasoning, correct double-shear area use, and a recommendation that does not overclaim beyond the simplified static pin-shear model.\n",
+        "\n",
+        "# Generated Question Set and Solutions\n",
+        "\n",
+        "```{=html}\n",
+        "<div id=\"bike-suspension-instructor-questions\"></div>\n",
+        "<script src=\"../../data/problem-catalog.js\"></script>\n",
+        "<script src=\"../../scripts/packet-renderer.js\"></script>\n",
+        "<script>\n",
+        "document.addEventListener(\"DOMContentLoaded\", () => {\n",
+        "  window.renderProblemPacket({\n",
+        "    slug: \"mountain-bike-suspension-pin\",\n",
+        "    targetId: \"bike-suspension-instructor-questions\",\n",
+        "    type: \"instructor\"\n",
+        "  });\n",
+        "});\n",
+        "</script>\n",
+        "```\n",
+        "\n",
+        "# Supplemental Assessment Structure\n",
+        "\n",
+        "Suggested weighting:\n",
+        "\n",
+        "- context interpretation and load path: 15%;\n",
+        "- idealization and FBD: 20%;\n",
+        "- equilibrium and reactions: 25%;\n",
+        "- double-shear stresses and factors of safety: 30%;\n",
+        "- recommendation and limitations: 10%.\n",
+        "\n",
+        "Keep stiffness, fatigue, buckling, bearing stress, and full frame/link design checks out of the base student packet unless additional data are provided.\n"
+      ],
+      "id": "0010b4ec"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/sak/Library/CloudStorage/OneDrive-TexasA&MUniversity/Summer 2026 Dr S Textbook work/context-rich-mos-quarto-v3/.venv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

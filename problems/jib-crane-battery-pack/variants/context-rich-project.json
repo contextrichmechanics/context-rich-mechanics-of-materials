@@ -1,0 +1,30 @@
+{
+  "id": "context-rich-project",
+  "title": "Context-Rich Project Version",
+  "variables": {
+    "L": 2.4,
+    "Lb": 1.6,
+    "theta": 35,
+    "M": 450,
+    "H": 500,
+    "e_H": 0.3,
+    "gamma_d": 1.25,
+    "S_boom": 85000,
+    "I_boom": 8500000,
+    "E": 200000,
+    "A_brace": 650,
+    "d_pin": 20,
+    "t_plate": 12,
+    "sigma_y": 250,
+    "N_y": 2,
+    "delta_allow": 10,
+    "K_brace": 1,
+    "r_min": 28,
+    "I_brace": 1200000,
+    "N_b": 2,
+    "n_s": 1,
+    "tau_allow": 80,
+    "bearing_allow": 150
+  },
+  "selectedQuestions": ["q1", "q2", "q3", "q4", "q5", "q6", "idealization", "q7", "q8", "q9", "q10", "q11"]
+}

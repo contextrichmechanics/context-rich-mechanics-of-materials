@@ -1,0 +1,36 @@
+---
+title: "Student Packet — Industrial Clevis-Pin Linkage"
+subtitle: "Axial Normal Stress and Double-Shear Pin Stress"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+    number-sections: true
+  ipynb: default
+jupyter: python3
+execute:
+  enabled: false
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="clevis-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "clevis-pin-tensile-linkage",
+    targetId: "clevis-student-questions",
+    type: "student"
+  });
+});
+</script>
+```
+

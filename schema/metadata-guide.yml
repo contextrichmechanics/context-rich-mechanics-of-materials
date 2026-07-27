@@ -1,0 +1,66 @@
+# Recommended controlled vocabulary and metadata fields.
+# Extend these lists gradually; avoid creating near-duplicate tags.
+
+required_fields:
+  - problem_id
+  - title
+  - description
+  - version
+  - status
+  - course_topics
+  - problem_types
+  - competencies
+  - industries
+  - difficulty
+
+recommended_course_topics:
+  - axial loading
+  - torsion
+  - bending
+  - transverse shear
+  - stress transformation
+  - combined loading
+  - deflection
+  - buckling
+  - fatigue
+  - pressure vessels
+  - stress concentration
+  - material behavior
+
+recommended_problem_types:
+  - concept assessment
+  - estimation
+  - idealization
+  - free-body diagram
+  - calculation
+  - design evaluation
+  - failure diagnosis
+  - comparison
+  - optimization
+  - laboratory interpretation
+
+recommended_competencies:
+  - product interpretation
+  - load-path reasoning
+  - material selection
+  - geometric reasoning
+  - load estimation
+  - modeling assumptions
+  - representational competence
+  - numerical analysis
+  - reasonableness checking
+  - engineering decision making
+
+recommended_difficulty:
+  - Introductory
+  - Intermediate
+  - Advanced
+  - Graduate extension
+
+recommended_status:
+  - Draft
+  - In development
+  - Faculty reviewed
+  - Classroom tested
+  - Published
+  - Archived

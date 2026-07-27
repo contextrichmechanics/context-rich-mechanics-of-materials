@@ -1,0 +1,12 @@
+.venv/
+.quarto/
+_freeze/
+_site/
+site_libs/
+exports/
+.ipynb_checkpoints/
+.DS_Store
+__MACOSX/
+
+/.quarto/
+**/*.quarto_ipynb

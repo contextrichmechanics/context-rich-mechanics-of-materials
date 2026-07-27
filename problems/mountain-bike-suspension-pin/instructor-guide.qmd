@@ -1,0 +1,52 @@
+---
+title: "Instructor Guide — Mountain Bike Rear Suspension Linkage"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+    number-sections: true
+  ipynb: default
+jupyter: python3
+execute:
+  enabled: false
+---
+
+# Purpose
+
+These answers are representative, not the only acceptable responses. Award credit for correct free-body diagrams, consistent sign conventions, equilibrium reasoning, correct double-shear area use, and a recommendation that does not overclaim beyond the simplified static pin-shear model.
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="bike-suspension-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "mountain-bike-suspension-pin",
+    targetId: "bike-suspension-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Supplemental Assessment Structure
+
+Suggested weighting:
+
+- context interpretation and load path: 15%;
+- idealization and FBD: 20%;
+- equilibrium and reactions: 25%;
+- double-shear stresses and factors of safety: 30%;
+- recommendation and limitations: 10%.
+
+Keep stiffness, fatigue, buckling, bearing stress, and full frame/link design checks out of the base student packet unless additional data are provided.
+

@@ -1,0 +1,52 @@
+---
+title: "Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables"
+description: "A context-rich mechanics problem on 2D cable equilibrium, axial cable stress, minimum diameter, and factor of safety."
+image: "assets/cable-industry-context.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - design
+course_topics:
+  - equilibrium
+  - axial loading
+  - normal stress
+  - factor of safety
+  - cable tension
+textbook_chapters:
+  - Equilibrium of a particle
+  - Stress and strain
+  - Axial loading
+  - Factor of safety
+  - Design of tension members
+problem_types:
+  - free-body diagram
+  - particle equilibrium
+  - average stress
+  - design evaluation
+competencies:
+  - load path reasoning
+  - equilibrium modeling
+  - cable tension calculation
+  - axial stress
+  - engineering judgment
+industries:
+  - industrial facilities
+  - manufacturing-floor equipment installation
+  - suspended inspection systems
+difficulty: "Introductory to intermediate"
+status: "Draft"
+problem_id: "MOS-CABLE-008"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for joint equilibrium, cable tensile stress, minimum required cable diameter, and selected-diameter FOS checks.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=suspended-equipment-cable-system){.btn .btn-secondary}

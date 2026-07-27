@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - data/problem-catalog.json
+    - data/problem-catalog.js
+    - data/problem-health.json
+    - data/problem-health.js
+    - scripts/packet-renderer.js
+
+website:
+  title: "Context-Rich Mechanics of Materials"
+  description: "A searchable, modular database of real-world mechanics problems."
+  search: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Problem Library
+      - href: instructor-builder.qmd
+        text: Instructor Builder
+      - href: question-editor.qmd
+        text: Question Editor
+      - href: docs/authoring-guide.qmd
+        text: Authoring Guide
+      - href: docs/problem-health.qmd
+        text: Problem Health
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/
+  page-footer:
+    left: "Context-Rich Mechanics of Materials Problem Library"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    css: styles/site.css
+
+execute:
+  freeze: auto

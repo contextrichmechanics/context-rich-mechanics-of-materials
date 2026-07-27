@@ -1,0 +1,50 @@
+---
+title: "Instructor Guide — Hydraulic Press Fixture"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+    number-sections: true
+  ipynb: default
+jupyter: python3
+execute:
+  enabled: false
+---
+
+# Purpose
+
+These answers are representative, not the only acceptable responses. Award credit for correct stress-surface identification, correct area definitions, consistent N/mm units, and a recommendation that does not overclaim fixture safety without material allowables.
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="press-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "hydraulic-press-punching-shear",
+    targetId: "press-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Supplemental Assessment Structure
+
+Suggested weighting:
+
+- context interpretation, function, load, and support condition: 15%;
+- simplified model and identification of bearing/shear surfaces: 20%;
+- bearing and punching shear area identification: 25%;
+- average stress calculations: 30%;
+- recommendation and missing data: 10%.
+

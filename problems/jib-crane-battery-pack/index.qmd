@@ -1,0 +1,85 @@
+---
+title: "Wall-Mounted Swing-Jib Crane for Battery-Pack Handling"
+description: "A context-rich mechanics problem on design, materials, geometry, loading, strength, stiffness, stability, fatigue, idealization, and FBD development."
+image: "assets/jib-crane-industry.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - design
+course_topics:
+  - stress
+  - shear
+  - axial loading
+  - bending
+  - deflection
+  - buckling
+  - fatigue
+textbook_chapters:
+  - Stress and strain
+  - Axial loading
+  - Shear stress
+  - Bending stress
+  - Beam deflection
+  - Buckling
+  - Fatigue
+problem_types:
+  - open-ended
+  - estimation
+  - design evaluation
+  - idealization
+  - free-body diagram
+competencies:
+  - product interpretation
+  - material selection
+  - geometric reasoning
+  - load estimation
+  - engineering judgment
+  - representational competence
+industries:
+  - automotive manufacturing
+  - material handling
+difficulty: "Introductory to intermediate"
+status: "In development"
+problem_id: "MOS-JIB-001"
+version: "0.3.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+Use the core packet for a focused homework assignment, or open the Builder to select the longer context-rich project version.
+
+::: {.callout-note}
+## Recommended Starting Point
+
+- **Core homework:** FBD, design load, brace reactions, boom check, brace/connection check, engineering decision.
+- **Project version:** adds materials, geometry, failure-mode, and acceptance-criteria prompts before the calculation sequence.
+- **Best workflow:** open the Builder, choose a variant, adjust values, then export student and instructor packets.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=jib-crane-battery-pack){.btn .btn-secondary}
+
+## Default Given Data
+
+| Symbol | Quantity | Default value |
+|---|---|---:|
+| $L$ | Boom length | 2.4 m |
+| $L_b$ | Brace attachment distance | 1.6 m |
+| $\theta$ | Brace angle | 35 deg |
+| $M$ | Battery pack mass | 450 kg |
+| $H$ | Horizontal service load | 500 N |
+| $e_H$ | Horizontal-load vertical offset | 0.3 m |
+| $\gamma_d$ | Dynamic load factor | 1.25 |
+| $S$ | Boom section modulus | 85,000 mm^3 |
+| $I$ | Boom second moment of area | 8,500,000 mm^4 |
+| $A_b$ | Brace area | 650 mm^2 |
+| $d_p$ | Brace pin diameter | 20 mm |
+| $t$ | Connection plate thickness | 12 mm |
+| $\sigma_y$ | Steel yield strength | 250 MPa |
+
+## Package Files
+
+- [Computational notebook source](calculations.qmd)

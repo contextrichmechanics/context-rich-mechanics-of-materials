@@ -1,0 +1,202 @@
+[
+  {
+    "key": "L",
+    "symbol": "L",
+    "label": "Horizontal support-arm length",
+    "value": 1.2,
+    "unit": "m",
+    "min": 0.4,
+    "max": 2.5,
+    "step": 0.05
+  },
+  {
+    "key": "H",
+    "symbol": "H",
+    "label": "Vertical spacing between ladder contacts",
+    "value": 0.643,
+    "unit": "m",
+    "min": 0.25,
+    "max": 1.5,
+    "step": 0.001
+  },
+  {
+    "key": "Ld",
+    "symbol": "L_d",
+    "label": "Diagonal-brace length",
+    "value": 1.0,
+    "unit": "m",
+    "min": 0.3,
+    "max": 2.0,
+    "step": 0.05
+  },
+  {
+    "key": "theta",
+    "symbol": "theta",
+    "label": "Diagonal-brace angle",
+    "value": 40,
+    "unit": "deg",
+    "min": 15,
+    "max": 75,
+    "step": 1
+  },
+  {
+    "key": "w",
+    "symbol": "w",
+    "label": "Uniform platform load on one bracket arm",
+    "value": 900,
+    "unit": "N/m",
+    "min": 100,
+    "max": 5000,
+    "step": 50
+  },
+  {
+    "key": "A_d",
+    "symbol": "A_d",
+    "label": "Diagonal-brace cross-sectional area",
+    "value": 350,
+    "unit": "mm^2",
+    "min": 100,
+    "max": 2500,
+    "step": 25
+  },
+  {
+    "key": "I_d",
+    "symbol": "I_d",
+    "label": "Diagonal-brace minimum second moment of area",
+    "value": 250000,
+    "unit": "mm^4",
+    "min": 10000,
+    "max": 5000000,
+    "step": 10000
+  },
+  {
+    "key": "r_min",
+    "symbol": "r_min",
+    "label": "Brace minimum radius of gyration",
+    "value": 18,
+    "unit": "mm",
+    "min": 4,
+    "max": 80,
+    "step": 1
+  },
+  {
+    "key": "K",
+    "symbol": "K",
+    "label": "Brace effective-length factor",
+    "value": 1.0,
+    "unit": "-",
+    "min": 0.5,
+    "max": 2.0,
+    "step": 0.05
+  },
+  {
+    "key": "S_a",
+    "symbol": "S_a",
+    "label": "Horizontal-arm section modulus",
+    "value": 18000,
+    "unit": "mm^3",
+    "min": 3000,
+    "max": 120000,
+    "step": 1000
+  },
+  {
+    "key": "I_a",
+    "symbol": "I_a",
+    "label": "Horizontal-arm second moment of area",
+    "value": 850000,
+    "unit": "mm^4",
+    "min": 50000,
+    "max": 10000000,
+    "step": 50000
+  },
+  {
+    "key": "E",
+    "symbol": "E",
+    "label": "Elastic modulus",
+    "value": 69000,
+    "unit": "MPa",
+    "min": 60000,
+    "max": 210000,
+    "step": 1000
+  },
+  {
+    "key": "sigma_y",
+    "symbol": "sigma_y",
+    "label": "Yield strength",
+    "value": 240,
+    "unit": "MPa",
+    "min": 100,
+    "max": 600,
+    "step": 10
+  },
+  {
+    "key": "d_p",
+    "symbol": "d_p",
+    "label": "Connection-pin diameter",
+    "value": 12,
+    "unit": "mm",
+    "min": 4,
+    "max": 40,
+    "step": 1
+  },
+  {
+    "key": "t",
+    "symbol": "t",
+    "label": "Connection-plate thickness",
+    "value": 6,
+    "unit": "mm",
+    "min": 2,
+    "max": 25,
+    "step": 1
+  },
+  {
+    "key": "n_s",
+    "symbol": "n_s",
+    "label": "Number of effective pin shear planes",
+    "value": 1,
+    "unit": "-",
+    "min": 1,
+    "max": 2,
+    "step": 1
+  },
+  {
+    "key": "N_y",
+    "symbol": "N_y",
+    "label": "Required factor of safety against yielding",
+    "value": 2,
+    "unit": "-",
+    "min": 1,
+    "max": 5,
+    "step": 0.1
+  },
+  {
+    "key": "N_b",
+    "symbol": "N_b",
+    "label": "Required factor of safety against buckling",
+    "value": 2,
+    "unit": "-",
+    "min": 1,
+    "max": 5,
+    "step": 0.1
+  },
+  {
+    "key": "tau_allow",
+    "symbol": "tau_allow",
+    "label": "Allowable pin shear stress",
+    "value": 80,
+    "unit": "MPa",
+    "min": 20,
+    "max": 250,
+    "step": 5
+  },
+  {
+    "key": "bearing_allow",
+    "symbol": "sigma_bearing_allow",
+    "label": "Allowable bearing stress",
+    "value": 150,
+    "unit": "MPa",
+    "min": 30,
+    "max": 400,
+    "step": 5
+  }
+]

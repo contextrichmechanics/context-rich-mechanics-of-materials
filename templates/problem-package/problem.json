@@ -1,0 +1,16 @@
+{
+  "id": "MOS-NEW-001",
+  "slug": "new-problem-slug",
+  "title": "Replace With Problem Title",
+  "studentDocumentTitle": "Student Homework Questions",
+  "instructorDocumentTitle": "Instructor Answers",
+  "summary": "One-sentence problem summary.",
+  "textbookChapters": [
+    "Replace with chapter or topic"
+  ],
+  "derivedPlaceholders": [],
+  "image": "assets/problem-image.png",
+  "source": "index.html",
+  "problemStatement": "<p>Write the main scenario, engineering role, operating context, and physical system description here. This section always appears in generated student and instructor documents.</p>",
+  "engineeringGoal": "<p>Write the main engineering task and decision students must make here.</p>"
+}

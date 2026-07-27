@@ -1,0 +1,25 @@
+[
+  {
+    "id": "q1",
+    "title": "Problem Interpretation",
+    "selected": true,
+    "tags": ["interpretation", "loading"],
+    "type": "conceptual",
+    "difficulty": "introductory",
+    "learningObjectives": ["Identify the engineering context", "Describe the dominant loads and constraints"],
+    "gradingNotes": "<p>Look for reasoning connected to the scenario rather than a generic list.</p>",
+    "student": "<p>Using the given value <strong>P = {{P}} {{P_unit}}</strong>, identify the major loads, constraints, assumptions, and likely failure modes for this system.</p>",
+    "instructor": "<p>Representative answers should connect the stated load to the physical load path, relevant idealizations, missing information, and governing mechanics checks.</p>"
+  },
+  {
+    "id": "q2",
+    "title": "Model Development",
+    "selected": true,
+    "tags": ["modeling", "fbd"],
+    "type": "fbd/modeling",
+    "difficulty": "introductory to intermediate",
+    "learningObjectives": ["Create a simplified mechanics model", "State assumptions and limitations"],
+    "student": "<p>Create an appropriate simplified mechanics model using the characteristic length <strong>L = {{L}} {{L_unit}}</strong>. State what the model includes and excludes.</p>",
+    "instructor": "<p>Strong answers should justify the simplified model, define dimensions and coordinates, identify supports and applied loads, and explain limitations of the idealization.</p>"
+  }
+]
