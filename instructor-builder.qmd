@@ -870,14 +870,30 @@ function variableRows(problem) {
   }).join("");
 }
 
-function imagePath(problem, embeddedImage) {
-  if (embeddedImage) {
-    return embeddedImage;
+function packetImageUrl(problem, image) {
+  const source = String(image || "");
+  if (!source) {
+    return "";
   }
-  return new URL(problem.image, window.location.href).href;
+  if (/^(data:|blob:|https?:|\/)/.test(source)) {
+    return new URL(source, window.location.href).href;
+  }
+  if (source.startsWith(`problems/${problem.slug}/`)) {
+    return new URL(source, window.location.href).href;
+  }
+  return new URL(`problems/${problem.slug}/${source}`, window.location.href).href;
 }
 
-function renderIdealizedImage(problem) {
+function embeddedImageSource(problem, image, embeddedImages = {}) {
+  const source = packetImageUrl(problem, image);
+  return embeddedImages[source] || source;
+}
+
+function imagePath(problem, embeddedImages = {}) {
+  return embeddedImageSource(problem, problem.image, embeddedImages);
+}
+
+function renderIdealizedImage(problem, embeddedImages = {}) {
   if (!problem.idealizedImage) {
     return "";
   }
@@ -886,7 +902,7 @@ function renderIdealizedImage(problem) {
       <section>
         <h2>Instructor Reference Idealization and Input Variables</h2>
         <figure>
-          <img src="${new URL(problem.idealizedImage, window.location.href).href}" alt="${escapeHtml(alt)}">
+          <img src="${escapeHtml(embeddedImageSource(problem, problem.idealizedImage, embeddedImages))}" alt="${escapeHtml(alt)}">
         </figure>
       </section>
   `;
@@ -925,7 +941,7 @@ function renderInstructorSupport(question, problem) {
   return `${renderLearningObjectives(question)}${gradingNotes}${commonMistakes}`;
 }
 
-function renderQuestionSection(problem, questions, section, isInstructor, numberById) {
+function renderQuestionSection(problem, questions, section, isInstructor, numberById, embeddedImages = {}) {
   const sectionQuestions = questionsBySection(questions, section.id);
   if (sectionQuestions.length === 0) {
     return "";
@@ -942,7 +958,7 @@ function renderQuestionSection(problem, questions, section, isInstructor, number
               question.difficulty,
               ...(question.tags || [])
             ].filter(Boolean).map(escapeHtml).join(" · ")}</p>
-            ${renderQuestionImage(problem, question)}
+            ${renderQuestionImage(problem, question, embeddedImages)}
             ${substitute(question.student, problem)}
             ${isInstructor ? `
               <div class="answer-block">
@@ -958,17 +974,10 @@ function renderQuestionSection(problem, questions, section, isInstructor, number
 }
 
 function questionImagePath(problem, question) {
-  if (!question.image) {
-    return "";
-  }
-  const image = String(question.image);
-  if (/^(https?:|\/)/.test(image)) {
-    return image;
-  }
-  return `problems/${problem.slug}/${image}`;
+  return packetImageUrl(problem, question.image);
 }
 
-function renderQuestionImage(problem, question) {
+function renderQuestionImage(problem, question, embeddedImages = {}) {
   const src = questionImagePath(problem, question);
   if (!src) {
     return "";
@@ -976,12 +985,12 @@ function renderQuestionImage(problem, question) {
   const alt = question.imageAlt || `${question.title} supporting image`;
   return `
     <figure class="question-image">
-      <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}">
+      <img src="${escapeHtml(embeddedImages[src] || src)}" alt="${escapeHtml(alt)}">
     </figure>
   `;
 }
 
-function renderDocumentBody(type, embeddedImage = "") {
+function renderDocumentBody(type, embeddedImages = {}) {
   const problem = selectedProblem();
   const isInstructor = type === "instructor";
   const documentTitle = isInstructor ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
@@ -997,7 +1006,7 @@ function renderDocumentBody(type, embeddedImage = "") {
       </header>
 
       <figure>
-        <img src="${imagePath(problem, embeddedImage)}" alt="${escapeHtml(problem.title)} problem image">
+        <img src="${escapeHtml(imagePath(problem, embeddedImages))}" alt="${escapeHtml(problem.title)} problem image">
       </figure>
 
       <section>
@@ -1010,11 +1019,11 @@ function renderDocumentBody(type, embeddedImage = "") {
         ${substitute(problem.engineeringGoal, problem)}
       </section>
 
-      ${renderQuestionSection(problem, questions, questionSections[0], isInstructor, numberById)}
+      ${renderQuestionSection(problem, questions, questionSections[0], isInstructor, numberById, embeddedImages)}
 
-      ${renderQuestionSection(problem, questions, questionSections[1], isInstructor, numberById)}
+      ${renderQuestionSection(problem, questions, questionSections[1], isInstructor, numberById, embeddedImages)}
 
-      ${renderIdealizedImage(problem)}
+      ${renderIdealizedImage(problem, embeddedImages)}
 
       <section>
         <h2>Given Data</h2>
@@ -1030,7 +1039,7 @@ function renderDocumentBody(type, embeddedImage = "") {
         </table>
       </section>
 
-      ${renderQuestionSection(problem, questions, questionSections[2], isInstructor, numberById)}
+      ${renderQuestionSection(problem, questions, questionSections[2], isInstructor, numberById, embeddedImages)}
     </article>
   `;
 }
@@ -1068,24 +1077,71 @@ function documentStyles() {
   `;
 }
 
-async function embeddedImageData(problem) {
+function blobToDataUrl(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = () => reject(new Error("Unable to read downloaded image data."));
+    reader.readAsDataURL(blob);
+  });
+}
+
+function loadBrowserImage(source) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error("Unable to decode an image for export."));
+    image.src = source;
+  });
+}
+
+async function svgBlobToPngDataUrl(blob) {
+  const objectUrl = URL.createObjectURL(blob);
   try {
-    const response = await fetch(problem.image);
-    const blob = await response.blob();
-    return await new Promise((resolve) => {
-      const reader = new FileReader();
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = () => resolve("");
-      reader.readAsDataURL(blob);
-    });
-  } catch {
-    return "";
+    const image = await loadBrowserImage(objectUrl);
+    const width = image.naturalWidth || image.width || 1600;
+    const height = image.naturalHeight || image.height || 1000;
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const context = canvas.getContext("2d");
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, width, height);
+    context.drawImage(image, 0, 0, width, height);
+    return canvas.toDataURL("image/png");
+  } finally {
+    URL.revokeObjectURL(objectUrl);
   }
+}
+
+async function fetchEmbeddedImage(source) {
+  const response = await fetch(source);
+  if (!response.ok) {
+    throw new Error(`Unable to download image (${response.status}): ${source}`);
+  }
+  const blob = await response.blob();
+  const isSvg = blob.type.includes("svg") || new URL(source).pathname.toLowerCase().endsWith(".svg");
+  return isSvg ? svgBlobToPngDataUrl(blob) : blobToDataUrl(blob);
+}
+
+async function embeddedPacketImages(problem, questions) {
+  const sources = [
+    packetImageUrl(problem, problem.image),
+    packetImageUrl(problem, problem.idealizedImage),
+    ...questions.map((question) => questionImagePath(problem, question))
+  ].filter(Boolean);
+  const uniqueSources = [...new Set(sources)];
+  const entries = await Promise.all(uniqueSources.map(async (source) => [
+    source,
+    await fetchEmbeddedImage(source)
+  ]));
+  return Object.fromEntries(entries);
 }
 
 async function fullHtmlDocument(type) {
   const problem = selectedProblem();
-  const embeddedImage = await embeddedImageData(problem);
+  const questions = selectedQuestions(problem);
+  const embeddedImages = await embeddedPacketImages(problem, questions);
   const title = type === "instructor" ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
 
   return `<!doctype html>
@@ -1097,39 +1153,72 @@ async function fullHtmlDocument(type) {
   <style>${documentStyles()}</style>
 </head>
 <body>
-${renderDocumentBody(type, embeddedImage)}
+${renderDocumentBody(type, embeddedImages)}
 </body>
 </html>`;
 }
 
 async function downloadDoc(type) {
   const problem = selectedProblem();
-  const html = await fullHtmlDocument(type);
-  const blob = new Blob(["\ufeff", html], { type: "application/msword" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = `${problem.slug}-${type === "instructor" ? "instructor-answers" : "student-homework-questions"}.doc`;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
-  statusText.textContent = `${type === "instructor" ? "Instructor" : "Student"} DOC downloaded`;
+  statusText.textContent = "Embedding packet images";
+  try {
+    const html = await fullHtmlDocument(type);
+    const blob = new Blob(["\ufeff", html], { type: "application/msword" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `${problem.slug}-${type === "instructor" ? "instructor-answers" : "student-homework-questions"}.doc`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+    statusText.textContent = `${type === "instructor" ? "Instructor" : "Student"} DOC downloaded`;
+  } catch (error) {
+    console.error(error);
+    statusText.textContent = "Image export failed";
+  }
+}
+
+async function waitForDocumentImages(targetDocument) {
+  const pendingImages = [...targetDocument.images].map((image) => {
+    if (image.complete && image.naturalWidth > 0) {
+      return Promise.resolve();
+    }
+    return new Promise((resolve, reject) => {
+      image.addEventListener("load", resolve, { once: true });
+      image.addEventListener("error", () => reject(new Error("An embedded image failed to load before printing.")), { once: true });
+    });
+  });
+  await Promise.all(pendingImages);
+  if (targetDocument.fonts?.ready) {
+    await targetDocument.fonts.ready;
+  }
 }
 
 async function printDocument(type) {
-  const html = await fullHtmlDocument(type);
   const newWindow = window.open("", "_blank");
   if (!newWindow) {
     statusText.textContent = "Popup blocked";
     return;
   }
-  newWindow.document.open();
-  newWindow.document.write(html);
-  newWindow.document.close();
-  newWindow.focus();
-  newWindow.print();
-  statusText.textContent = `${type === "instructor" ? "Instructor" : "Student"} print opened`;
+  statusText.textContent = "Preparing images for PDF";
+  try {
+    const html = await fullHtmlDocument(type);
+    newWindow.document.open();
+    newWindow.document.write(html);
+    newWindow.document.close();
+    await waitForDocumentImages(newWindow.document);
+    await new Promise((resolve) => {
+      newWindow.requestAnimationFrame(() => newWindow.requestAnimationFrame(resolve));
+    });
+    newWindow.focus();
+    newWindow.print();
+    statusText.textContent = `${type === "instructor" ? "Instructor" : "Student"} print opened`;
+  } catch (error) {
+    console.error(error);
+    newWindow.close();
+    statusText.textContent = "Image export failed";
+  }
 }
 
 function initializeBuilder() {
