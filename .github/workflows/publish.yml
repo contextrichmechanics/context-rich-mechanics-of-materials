@@ -43,7 +43,7 @@ jobs:
         run: node scripts/build-catalog.mjs
 
       - name: Render Quarto website
-        run: quarto render
+        run: quarto render --to html
 
       - name: Disable Jekyll processing
         run: touch _site/.nojekyll
