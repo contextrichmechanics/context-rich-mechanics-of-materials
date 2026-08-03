@@ -1,0 +1,82 @@
+[
+  {
+    "key": "P",
+    "symbol": "P",
+    "label": "Applied tensile load",
+    "value": 5,
+    "unit": "kip",
+    "min": 0.1,
+    "max": 100,
+    "step": 0.1
+  },
+  {
+    "key": "d0",
+    "symbol": "d_0",
+    "label": "Initial distance between C and E",
+    "value": 10,
+    "unit": "in",
+    "min": 1,
+    "max": 100,
+    "step": 0.1
+  },
+  {
+    "key": "k",
+    "symbol": "k",
+    "label": "Compression-spring stiffness",
+    "value": 12,
+    "unit": "kip/in",
+    "min": 0.1,
+    "max": 500,
+    "step": 0.1
+  },
+  {
+    "key": "d_b",
+    "symbol": "d_b",
+    "label": "Diameter of each side bolt and active rod",
+    "value": 0.25,
+    "unit": "in",
+    "min": 0.05,
+    "max": 3,
+    "step": 0.01
+  },
+  {
+    "key": "E_s",
+    "symbol": "E_s",
+    "label": "Elastic modulus of steel members",
+    "value": 29000,
+    "unit": "ksi",
+    "min": 1000,
+    "max": 40000,
+    "step": 100
+  },
+  {
+    "key": "n_b",
+    "symbol": "n_b",
+    "label": "Number of identical side bolts",
+    "value": 2,
+    "unit": "-",
+    "min": 1,
+    "max": 12,
+    "step": 1
+  },
+  {
+    "key": "L_E",
+    "symbol": "L_E",
+    "label": "Active coupling-rod length from B to E",
+    "value": 8,
+    "unit": "in",
+    "min": 0.5,
+    "max": 60,
+    "step": 0.1
+  },
+  {
+    "key": "L_b",
+    "symbol": "L_b",
+    "label": "Active side-bolt length between A and C",
+    "value": 6,
+    "unit": "in",
+    "min": 0.5,
+    "max": 60,
+    "step": 0.1
+  }
+]

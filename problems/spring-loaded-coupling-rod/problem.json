@@ -1,0 +1,34 @@
+{
+  "id": "MOS-SPRING-010",
+  "slug": "spring-loaded-coupling-rod",
+  "title": "Spring-Loaded Coupling Rod Assembly Under Tensile Load",
+  "studentDocumentTitle": "Student Homework Questions",
+  "instructorDocumentTitle": "Instructor Answers",
+  "summary": "A context-rich mechanics problem on spring compression, axial member elongation, load sharing, and deformation compatibility.",
+  "textbookChapters": [
+    "Axial loading",
+    "Axial deformation",
+    "Mechanical springs",
+    "Displacement compatibility",
+    "Statically determinate members"
+  ],
+  "derivedPlaceholders": [
+    "spring_member_area_in2",
+    "spring_force_kip",
+    "spring_rod_force_kip",
+    "spring_bolt_force_kip",
+    "spring_compression_in",
+    "spring_rod_elongation_in",
+    "spring_bolt_elongation_in",
+    "spring_distance_increase_in",
+    "spring_final_distance_in",
+    "spring_dominant_component",
+    "spring_dominant_value_in"
+  ],
+  "image": "assets/spring-industry-context.png",
+  "idealizedImage": "assets/spring-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference idealization of the spring-loaded coupling rod assembly with rigid plates, compression spring, side bolts, dimensions, and tensile load.",
+  "source": "index.html",
+  "problemStatement": "<p>A mechanical design team is evaluating a spring-loaded coupling assembly used in an industrial machine fixture. The assembly uses a central coupling rod, three rigid plates, two side bolts, and a compression spring to transmit a tensile load while allowing a controlled change in spacing.</p><p>When the coupling rod is pulled, the spring compresses, the side bolts elongate, and the active central-rod segment elongates. The measured distance between lower plate C and upper eye E therefore changes through several deformation mechanisms and must be predicted using a compatible assembly model.</p>",
+  "engineeringGoal": "<p>Determine the final distance d between points C and E after the tensile load is applied, accounting for compression of the spring, elongation of the side bolts, and elongation of the active coupling-rod segment.</p>"
+}

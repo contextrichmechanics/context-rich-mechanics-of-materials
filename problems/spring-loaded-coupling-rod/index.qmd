@@ -1,0 +1,54 @@
+---
+title: "Spring-Loaded Coupling Rod Assembly Under Tensile Load"
+description: "A context-rich mechanics problem on spring compression, axial member elongation, load sharing, and deformation compatibility."
+image: "assets/spring-industry-context.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - design
+course_topics:
+  - axial deformation
+  - springs
+  - compatibility
+  - load sharing
+  - stiffness
+textbook_chapters:
+  - Axial loading
+  - Axial deformation
+  - Mechanical springs
+  - Displacement compatibility
+  - Statically determinate members
+problem_types:
+  - free-body diagram
+  - spring deformation
+  - axial deformation
+  - compatibility analysis
+  - engineering evaluation
+competencies:
+  - load path reasoning
+  - rigid-plate idealization
+  - parallel-member load sharing
+  - deformation compatibility
+  - engineering judgment
+industries:
+  - industrial machine fixtures
+  - tensile test systems
+  - preload mechanisms
+  - mechanical actuator assemblies
+difficulty: "Intermediate to advanced"
+status: "Draft"
+problem_id: "MOS-SPRING-010"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for load-path reasoning, parallel-bolt load sharing, spring compression, axial elongation, and displacement compatibility.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=spring-loaded-coupling-rod){.btn .btn-secondary}

@@ -1,0 +1,36 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - baseline coupling assembly",
+  "description": "Default sequence for load path, load sharing, spring compression, axial elongation, and final-distance compatibility.",
+  "selectedQuestions": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15",
+    "q16",
+    "q17",
+    "q18",
+    "q19"
+  ],
+  "variables": {
+    "P": 5,
+    "d0": 10,
+    "k": 12,
+    "d_b": 0.25,
+    "E_s": 29000,
+    "n_b": 2,
+    "L_E": 8,
+    "L_b": 6
+  }
+}

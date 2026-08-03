@@ -1,0 +1,57 @@
+---
+title: "Instructor Guide - Spring-Loaded Coupling Rod Assembly"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+    number-sections: true
+  ipynb: default
+jupyter: python3
+execute:
+  enabled: false
+---
+
+# Purpose
+
+These answers are representative. Award credit for a complete load path, correct parallel-bolt load sharing, consistent kip-inch units, correct spring and axial-deformation equations, and a compatibility argument that explains the final C-to-E distance.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="spring-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "spring-loaded-coupling-rod",
+    targetId: "spring-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+Strength factor of safety and buckling are intentionally excluded. The side bolts and central rod are in tension, while the spring is represented by its supplied stiffness. Service design would require allowable stresses, fatigue data, spring solid height and travel, thread and contact geometry, plate stiffness, tolerances, and applicable design criteria.
+
+# Supplemental Assessment Structure
+
+Suggested weighting:
+
+- context interpretation and load path: 15%;
+- idealization and assumptions: 20%;
+- component forces and load sharing: 20%;
+- spring and member deformation calculations: 30%;
+- compatibility and engineering recommendation: 15%.

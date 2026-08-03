@@ -80,6 +80,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-SPRING-010",
+    "slug": "spring-loaded-coupling-rod",
+    "title": "Spring-Loaded Coupling Rod Assembly Under Tensile Load",
+    "status": "OK",
+    "variables": 8,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-CABLE-008",
     "slug": "suspended-equipment-cable-system",
     "title": "Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables",

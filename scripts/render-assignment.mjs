@@ -684,6 +684,49 @@ function variableMap(problem, currentValues) {
     values.axial_total_displacement_mm = formatDerived(rodElongation + tubeShortening, 3);
   }
 
+  const springLoad = numericValue(values, "P");
+  const springInitialDistance = numericValue(values, "d0");
+  const springStiffness = numericValue(values, "k");
+  const springMemberDiameter = numericValue(values, "d_b");
+  const springSteelModulus = numericValue(values, "E_s");
+  const springBoltCount = numericValue(values, "n_b");
+  const springRodLength = numericValue(values, "L_E");
+  const springBoltLength = numericValue(values, "L_b");
+
+  if (
+    Number.isFinite(springLoad) && springLoad > 0 &&
+    Number.isFinite(springInitialDistance) && springInitialDistance > 0 &&
+    Number.isFinite(springStiffness) && springStiffness > 0 &&
+    Number.isFinite(springMemberDiameter) && springMemberDiameter > 0 &&
+    Number.isFinite(springSteelModulus) && springSteelModulus > 0 &&
+    Number.isFinite(springBoltCount) && springBoltCount > 0 &&
+    Number.isFinite(springRodLength) && springRodLength > 0 &&
+    Number.isFinite(springBoltLength) && springBoltLength > 0
+  ) {
+    const memberArea = Math.PI * springMemberDiameter ** 2 / 4;
+    const boltForce = springLoad / springBoltCount;
+    const springCompression = springLoad / springStiffness;
+    const rodElongation = springLoad * springRodLength / (memberArea * springSteelModulus);
+    const boltElongation = boltForce * springBoltLength / (memberArea * springSteelModulus);
+    const distanceIncrease = springCompression + rodElongation + boltElongation;
+    const dominant = [
+      ["spring compression", springCompression],
+      ["coupling-rod elongation", rodElongation],
+      ["side-bolt elongation", boltElongation]
+    ].sort((left, right) => right[1] - left[1])[0];
+    values.spring_member_area_in2 = formatDerived(memberArea, 5);
+    values.spring_force_kip = formatDerived(springLoad, 2);
+    values.spring_rod_force_kip = formatDerived(springLoad, 2);
+    values.spring_bolt_force_kip = formatDerived(boltForce, 2);
+    values.spring_compression_in = formatDerived(springCompression, 5);
+    values.spring_rod_elongation_in = formatDerived(rodElongation, 5);
+    values.spring_bolt_elongation_in = formatDerived(boltElongation, 5);
+    values.spring_distance_increase_in = formatDerived(distanceIncrease, 5);
+    values.spring_final_distance_in = formatDerived(springInitialDistance + distanceIncrease, 3);
+    values.spring_dominant_component = dominant[0];
+    values.spring_dominant_value_in = formatDerived(dominant[1], 5);
+  }
+
   const cableMass = numericValue(values, "m");
   const cableGravity = numericValue(values, "g");
   const cableThetaAB = numericValue(values, "theta_AB");
