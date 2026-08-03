@@ -1,0 +1,42 @@
+{
+  "id": "MOS-LEVER-014",
+  "slug": "lever-actuated-wire-support",
+  "title": "Lever-Actuated Wire Support Mechanism",
+  "studentDocumentTitle": "Student Homework Questions",
+  "instructorDocumentTitle": "Instructor Answers",
+  "summary": "An advanced lever-and-wire problem integrating rigid-body equilibrium, deformation compatibility, yielding, and elastic-perfectly plastic response.",
+  "textbookChapters": [
+    "Rigid-body equilibrium",
+    "Axial deformation",
+    "Displacement compatibility",
+    "Yielding",
+    "Elastic-perfectly plastic behavior"
+  ],
+  "derivedPlaceholders": [
+    "lever_wire_area_mm2",
+    "lever_applied_moment_Nmm",
+    "lever_compatibility_ratio",
+    "lever_trial_T_AB_kN",
+    "lever_trial_T_CD_kN",
+    "lever_yield_force_kN",
+    "lever_trial_assessment",
+    "lever_final_T_AB_kN",
+    "lever_final_T_CD_kN",
+    "lever_state_AB",
+    "lever_state_CD",
+    "lever_regime",
+    "lever_delta_AB_mm",
+    "lever_delta_CD_mm",
+    "lever_yield_elongation_mm",
+    "lever_plastic_AB_mm",
+    "lever_plastic_CD_mm",
+    "lever_plastic_moment_capacity_Nmm",
+    "lever_recommendation"
+  ],
+  "image": "assets/lever-industry-context.png",
+  "idealizedImage": "assets/lever-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference idealization of a rigid lever pinned at E, restrained by vertical steel wires AB and CD, and loaded perpendicular to its handle.",
+  "source": "index.html",
+  "problemStatement": "<p>A manufacturing engineering team is evaluating a hand-operated lever mechanism used in a clamping or tensioning fixture. A rigid lever is pinned at E and restrained by two vertical A-36 steel wires connected to fixed lower anchors.</p><p>An operator applies force <em>P</em> perpendicular to the handle. Lever rotation stretches both wires, but their different distances from E produce unequal elongations and forces. The wires are modeled as elastic-perfectly plastic, so an elastic trial solution must be checked and corrected if yielding occurs.</p>",
+  "engineeringGoal": "<p>Determine the final force and elongation in each wire under the applied handle load. Identify the material-response regime and assess whether either wire remains elastic, reaches yield, or exceeds the mechanism's idealized plastic moment capacity.</p>"
+}

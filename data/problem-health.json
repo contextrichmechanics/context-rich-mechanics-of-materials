@@ -60,6 +60,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-LEVER-014",
+    "slug": "lever-actuated-wire-support",
+    "title": "Lever-Actuated Wire Support Mechanism",
+    "status": "OK",
+    "variables": 9,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-BIKE-004",
     "slug": "mountain-bike-suspension-pin",
     "title": "Rear Suspension Linkage Pin Safety Check for a Mountain Bike",

@@ -655,6 +655,120 @@
       values.spring_dominant_value_in = formatDerived(dominant[1], 5);
     }
 
+    const leverLoad = numericValue(values, "P");
+    const leverArmAE = numericValue(values, "x_AE");
+    const leverArmCE = numericValue(values, "x_CE");
+    const leverHandleLength = numericValue(values, "L_h");
+    const leverWireLength = numericValue(values, "L_w");
+    const leverWireDiameter = numericValue(values, "d_w");
+    const leverModulus = numericValue(values, "E_s");
+    const leverYieldStress = numericValue(values, "sigma_y");
+
+    if (
+      Number.isFinite(leverLoad) && leverLoad > 0 &&
+      Number.isFinite(leverArmAE) && leverArmAE > 0 &&
+      Number.isFinite(leverArmCE) && leverArmCE > 0 &&
+      Number.isFinite(leverHandleLength) && leverHandleLength > 0 &&
+      Number.isFinite(leverWireLength) && leverWireLength > 0 &&
+      Number.isFinite(leverWireDiameter) && leverWireDiameter > 0 &&
+      Number.isFinite(leverModulus) && leverModulus > 0 &&
+      Number.isFinite(leverYieldStress) && leverYieldStress > 0
+    ) {
+      const area = Math.PI * leverWireDiameter ** 2 / 4;
+      const modulusMPa = leverModulus * 1000;
+      const appliedMoment = leverLoad * 1000 * leverHandleLength;
+      const compatibilityRatio = leverArmAE / leverArmCE;
+      const elasticScale = appliedMoment / (leverArmAE ** 2 + leverArmCE ** 2);
+      const trialAB = elasticScale * leverArmAE;
+      const trialCD = elasticScale * leverArmCE;
+      const yieldForce = leverYieldStress * area;
+      const yieldElongation = yieldForce * leverWireLength / (area * modulusMPa);
+      const plasticMomentCapacity = yieldForce * (leverArmAE + leverArmCE);
+      const tolerance = 1e-8 * Math.max(plasticMomentCapacity, 1);
+
+      let finalAB;
+      let finalCD;
+      let deltaAB;
+      let deltaCD;
+      let plasticAB = 0;
+      let plasticCD = 0;
+      let stateAB;
+      let stateCD;
+      let regime;
+      let recommendation;
+
+      if (trialAB <= yieldForce + tolerance && trialCD <= yieldForce + tolerance) {
+        finalAB = trialAB;
+        finalCD = trialCD;
+        deltaAB = finalAB * leverWireLength / (area * modulusMPa);
+        deltaCD = finalCD * leverWireLength / (area * modulusMPa);
+        stateAB = "elastic";
+        stateCD = "elastic";
+        regime = "Both wires remain elastic, so the elastic trial solution is the final solution.";
+        recommendation = "Neither wire yields under the assigned load in this idealized model. Preserve an appropriate design margin and complete the omitted component and connection checks before accepting the mechanism.";
+      } else if (appliedMoment <= plasticMomentCapacity + tolerance && trialAB >= trialCD) {
+        finalAB = yieldForce;
+        finalCD = (appliedMoment - yieldForce * leverArmAE) / leverArmCE;
+        deltaCD = finalCD * leverWireLength / (area * modulusMPa);
+        deltaAB = compatibilityRatio * deltaCD;
+        plasticAB = Math.max(0, deltaAB - yieldElongation);
+        stateAB = "yielded (elastic-perfectly plastic)";
+        stateCD = "elastic";
+        regime = "Wire AB reaches yield first. Its force is capped at the yield force, and wire CD supplies the remaining resisting moment.";
+        recommendation = "Wire AB yields and develops permanent elongation under the assigned load. The baseline configuration should not be accepted for service without increasing wire capacity, reducing the applied moment, or explicitly designing for controlled plastic response.";
+      } else if (appliedMoment <= plasticMomentCapacity + tolerance) {
+        finalCD = yieldForce;
+        finalAB = (appliedMoment - yieldForce * leverArmCE) / leverArmAE;
+        deltaAB = finalAB * leverWireLength / (area * modulusMPa);
+        deltaCD = deltaAB / compatibilityRatio;
+        plasticCD = Math.max(0, deltaCD - yieldElongation);
+        stateAB = "elastic";
+        stateCD = "yielded (elastic-perfectly plastic)";
+        regime = "Wire CD reaches yield first. Its force is capped at the yield force, and wire AB supplies the remaining resisting moment.";
+        recommendation = "Wire CD yields and develops permanent elongation under the assigned load. The baseline configuration should not be accepted for service without increasing wire capacity, reducing the applied moment, or explicitly designing for controlled plastic response.";
+      } else {
+        finalAB = yieldForce;
+        finalCD = yieldForce;
+        if (compatibilityRatio >= 1) {
+          deltaCD = yieldElongation;
+          deltaAB = compatibilityRatio * deltaCD;
+          plasticAB = Math.max(0, deltaAB - yieldElongation);
+        } else {
+          deltaAB = yieldElongation;
+          deltaCD = deltaAB / compatibilityRatio;
+          plasticCD = Math.max(0, deltaCD - yieldElongation);
+        }
+        stateAB = "at yield at mechanism formation";
+        stateCD = "at yield at mechanism formation";
+        regime = "The applied moment exceeds the idealized fully plastic capacity. Static equilibrium cannot be maintained by the two perfectly plastic wires; the reported elongations describe the onset of mechanism formation.";
+        recommendation = "The assigned load exceeds the idealized fully plastic moment capacity, so this configuration is unacceptable. Increase wire capacity or lever-arm effectiveness, or reduce the applied moment before completing the remaining design checks.";
+      }
+
+      values.lever_wire_area_mm2 = formatDerived(area, 3);
+      values.lever_applied_moment_Nmm = formatDerived(appliedMoment, 0);
+      values.lever_compatibility_ratio = formatDerived(compatibilityRatio, 3);
+      values.lever_trial_T_AB_kN = formatDerived(trialAB / 1000, 3);
+      values.lever_trial_T_CD_kN = formatDerived(trialCD / 1000, 3);
+      values.lever_yield_force_kN = formatDerived(yieldForce / 1000, 3);
+      values.lever_trial_assessment = trialAB <= yieldForce + tolerance && trialCD <= yieldForce + tolerance
+        ? "Both elastic trial forces are at or below the yield force, so the trial solution is valid."
+        : trialAB >= trialCD
+          ? "The AB trial force exceeds the yield force, so the all-elastic trial solution is invalid and AB must be treated as yielded."
+          : "The CD trial force exceeds the yield force, so the all-elastic trial solution is invalid and CD must be treated as yielded.";
+      values.lever_final_T_AB_kN = formatDerived(finalAB / 1000, 3);
+      values.lever_final_T_CD_kN = formatDerived(finalCD / 1000, 3);
+      values.lever_state_AB = stateAB;
+      values.lever_state_CD = stateCD;
+      values.lever_regime = regime;
+      values.lever_delta_AB_mm = formatDerived(deltaAB, 3);
+      values.lever_delta_CD_mm = formatDerived(deltaCD, 3);
+      values.lever_yield_elongation_mm = formatDerived(yieldElongation, 3);
+      values.lever_plastic_AB_mm = formatDerived(plasticAB, 3);
+      values.lever_plastic_CD_mm = formatDerived(plasticCD, 3);
+      values.lever_plastic_moment_capacity_Nmm = formatDerived(plasticMomentCapacity, 0);
+      values.lever_recommendation = recommendation;
+    }
+
     const linkAllowableStress = numericValue(values, "sigma_allow");
     const linkThickness = numericValue(values, "t");
     const linkEndWidth = numericValue(values, "w_1");
