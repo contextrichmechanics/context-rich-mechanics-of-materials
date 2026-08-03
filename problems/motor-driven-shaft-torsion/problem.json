@@ -1,0 +1,16 @@
+{
+  "id":"MOS-SHAFT-016",
+  "slug":"motor-driven-shaft-torsion",
+  "title":"Motor-Driven Shaft Design for a Belt-Transmission System",
+  "studentDocumentTitle":"Student Homework Questions",
+  "instructorDocumentTitle":"Instructor Answers",
+  "summary":"A power-transmission problem integrating power-to-torque conversion, solid-shaft torsional stress, standard-size selection, verification, and angle of twist.",
+  "textbookChapters":["Power and torque","Torsion of circular shafts","Allowable stress design","Angle of twist"],
+  "derivedPlaceholders":["shaft_omega_rad_s","shaft_torque_lb_ft","shaft_torque_lb_in","shaft_d_min_in","shaft_d_selected_in","shaft_d_selected_label","shaft_d_lower_in","shaft_tau_actual_ksi","shaft_utilization","shaft_allowable_factor","shaft_stress_assessment","shaft_J_in4","shaft_phi_rad","shaft_phi_deg","shaft_twist_assessment","shaft_recommendation"],
+  "image":"assets/shaft-industry-context.png",
+  "idealizedImage":"assets/shaft-instructor-idealization.png",
+  "idealizedImageAlt":"Instructor reference idealization of a motor-driven solid circular shaft transmitting torque to a belt pulley and supported by a bearing.",
+  "source":"index.html",
+  "problemStatement":"<p>A manufacturing facility is upgrading a belt-driven conveyor subsystem. An electric motor delivers power through a solid steel shaft to a pulley and belt set.</p><p>The shaft must transmit the operating torque without exceeding its allowable torsional shear stress. The theoretical minimum diameter must be rounded upward to an available standard size and then verified.</p>",
+  "engineeringGoal":"<p>Convert motor power and speed to torque, determine the minimum solid-shaft diameter, select and verify the next available standard size, and evaluate the angle-of-twist serviceability limit.</p>"
+}

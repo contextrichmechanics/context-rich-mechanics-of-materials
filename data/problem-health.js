@@ -80,6 +80,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-SHAFT-016",
+    "slug": "motor-driven-shaft-torsion",
+    "title": "Motor-Driven Shaft Design for a Belt-Transmission System",
+    "status": "OK",
+    "variables": 7,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-BIKE-004",
     "slug": "mountain-bike-suspension-pin",
     "title": "Rear Suspension Linkage Pin Safety Check for a Mountain Bike",

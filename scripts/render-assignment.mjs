@@ -727,6 +727,86 @@ function variableMap(problem, currentValues) {
     values.spring_dominant_value_in = formatDerived(dominant[1], 5);
   }
 
+  const shaftPower = numericValue(values, "P");
+  const shaftSpeed = numericValue(values, "n");
+  const shaftAllowableStress = numericValue(values, "tau_allow");
+  const shaftDiameterStep = numericValue(values, "d_step");
+  const shaftLength = numericValue(values, "L_AB");
+  const shaftShearModulus = numericValue(values, "G");
+  const shaftAllowableTwist = numericValue(values, "phi_allow");
+
+  if (
+    Number.isFinite(shaftPower) && shaftPower > 0 &&
+    Number.isFinite(shaftSpeed) && shaftSpeed > 0 &&
+    Number.isFinite(shaftAllowableStress) && shaftAllowableStress > 0 &&
+    Number.isFinite(shaftDiameterStep) && shaftDiameterStep > 0 &&
+    Number.isFinite(shaftLength) && shaftLength > 0 &&
+    Number.isFinite(shaftShearModulus) && shaftShearModulus > 0 &&
+    Number.isFinite(shaftAllowableTwist) && shaftAllowableTwist > 0
+  ) {
+    const omega = shaftSpeed * 2 * Math.PI / 60;
+    const torqueLbFt = shaftPower * 550 / omega;
+    const torqueLbIn = torqueLbFt * 12;
+    const allowablePsi = shaftAllowableStress * 1000;
+    const minimumDiameter = (16 * torqueLbIn / (Math.PI * allowablePsi)) ** (1 / 3);
+    const selectedDiameter = Math.ceil(minimumDiameter / shaftDiameterStep - 1e-12) * shaftDiameterStep;
+    const lowerDiameter = Math.max(0, selectedDiameter - shaftDiameterStep);
+    const actualStress = 16 * torqueLbIn / (Math.PI * selectedDiameter ** 3) / 1000;
+    const utilization = actualStress / shaftAllowableStress;
+    const allowableFactor = shaftAllowableStress / actualStress;
+    const polarMoment = Math.PI * selectedDiameter ** 4 / 32;
+    const twistRad = torqueLbIn * shaftLength / (polarMoment * shaftShearModulus * 1000);
+    const twistDeg = twistRad * 180 / Math.PI;
+    const denominator = Math.round(1 / shaftDiameterStep);
+    let selectedLabel = formatDerived(selectedDiameter, 3) + " in";
+    if (denominator > 0 && denominator <= 64 && Math.abs(shaftDiameterStep * denominator - 1) < 1e-8) {
+      let numerator = Math.round(selectedDiameter * denominator);
+      let divisorA = numerator;
+      let divisorB = denominator;
+      while (divisorB !== 0) {
+        const remainderValue = divisorA % divisorB;
+        divisorA = divisorB;
+        divisorB = remainderValue;
+      }
+      numerator /= divisorA;
+      const reducedDenominator = denominator / divisorA;
+      const whole = Math.floor(numerator / reducedDenominator);
+      const fractionalRemainder = numerator % reducedDenominator;
+      selectedLabel = fractionalRemainder === 0
+        ? whole + " in"
+        : whole > 0
+          ? whole + " " + fractionalRemainder + "/" + reducedDenominator + " in"
+          : fractionalRemainder + "/" + reducedDenominator + " in";
+    }
+    const stressPasses = actualStress <= shaftAllowableStress * (1 + 1e-10);
+    const twistPasses = twistDeg <= shaftAllowableTwist * (1 + 1e-10);
+
+    values.shaft_omega_rad_s = formatDerived(omega, 3);
+    values.shaft_torque_lb_ft = formatDerived(torqueLbFt, 3);
+    values.shaft_torque_lb_in = formatDerived(torqueLbIn, 2);
+    values.shaft_d_min_in = formatDerived(minimumDiameter, 4);
+    values.shaft_d_selected_in = formatDerived(selectedDiameter, 3);
+    values.shaft_d_selected_label = selectedLabel;
+    values.shaft_d_lower_in = formatDerived(lowerDiameter, 3);
+    values.shaft_tau_actual_ksi = formatDerived(actualStress, 4);
+    values.shaft_utilization = formatDerived(utilization, 4);
+    values.shaft_allowable_factor = formatDerived(allowableFactor, 4);
+    values.shaft_stress_assessment = stressPasses
+      ? "The selected diameter satisfies the allowable torsional shear-stress criterion."
+      : "The selected diameter does not satisfy the allowable torsional shear-stress criterion.";
+    values.shaft_J_in4 = formatDerived(polarMoment, 6);
+    values.shaft_phi_rad = formatDerived(twistRad, 5);
+    values.shaft_phi_deg = formatDerived(twistDeg, 3);
+    values.shaft_twist_assessment = twistPasses
+      ? "The calculated twist is within the assigned serviceability limit."
+      : "The calculated twist exceeds the assigned serviceability limit.";
+    values.shaft_recommendation = stressPasses && twistPasses
+      ? "The selected " + selectedLabel + " solid shaft satisfies both the pure-torsion stress limit and the assigned twist limit. Its stress utilization is " + formatDerived(100 * utilization, 1) + "%, so omitted real-system effects must still be evaluated before final approval."
+      : stressPasses
+        ? "The selected " + selectedLabel + " solid shaft satisfies the pure-torsion stress limit but exceeds the assigned twist limit. A larger diameter is required for stiffness before the omitted combined-loading and durability checks are completed."
+        : "The selected " + selectedLabel + " solid shaft does not satisfy the allowable torsional stress criterion. Increase the diameter before evaluating twist and the omitted real-system effects.";
+  }
+
   const plateLoadA = numericValue(values, "P_A");
   const plateLoadB1 = numericValue(values, "P_B1");
   const plateLoadB2 = numericValue(values, "P_B2");

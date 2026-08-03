@@ -1,0 +1,44 @@
+---
+title: "Instructor Guide - Motor-Driven Shaft Torsion"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+  pdf: {documentclass: scrartcl, papersize: letter, toc: true, number-sections: true}
+  ipynb: default
+jupyter: python3
+execute: {enabled: false}
+---
+
+# Purpose
+
+Award credit for a correct torque load path, consistent power and speed units, the solid-shaft torsion relation, upward standard-size selection, stress verification, and a bounded engineering recommendation.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="shaft-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "motor-driven-shaft-torsion", targetId: "shaft-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes steady pure torsion of a uniform solid circular shaft. Belt-induced bending, transverse bearing reactions, keyways, stress concentrations, fatigue, shock loading, critical speed, coupling details, and bearing selection require additional models and data.
+
+# Supplemental Assessment Structure
+
+- context interpretation and idealization: 20%;
+- power, speed, and torque conversion: 20%;
+- theoretical diameter and standard selection: 30%;
+- stress and twist verification: 20%;
+- engineering recommendation and limitations: 10%.
