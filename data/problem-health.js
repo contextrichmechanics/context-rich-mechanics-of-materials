@@ -10,16 +10,6 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
-    "id": "MOS-BRACKET-002",
-    "slug": "bolted-bracket-lift-arm",
-    "title": "Bolted Wall Bracket for a Small Lift Arm",
-    "status": "OK",
-    "variables": 5,
-    "questions": 6,
-    "variants": 2,
-    "warnings": []
-  },
-  {
     "id": "MOS-PLATE-015",
     "slug": "bonded-steel-plate-splice-joint",
     "title": "Bonded A992 Steel Plate Splice Joint",

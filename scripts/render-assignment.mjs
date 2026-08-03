@@ -21,7 +21,7 @@ node scripts/render-assignment.mjs --problem <slug-or-id> [--variant <id>] [--ty
 
 Examples:
 node scripts/render-assignment.mjs --problem jib-crane-battery-pack --variant section-a --type student --format html
-node scripts/render-assignment.mjs --problem bolted-bracket-lift-arm --variant heavy-load --type instructor --format docx`);
+node scripts/render-assignment.mjs --problem jib-crane-battery-pack --variant section-a --type instructor --format docx`);
   process.exit(1);
 }
 

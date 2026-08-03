@@ -23,7 +23,7 @@ problems/problem-slug/
   variants/
 ```
 
-The folder name should be stable, lowercase, and hyphenated, such as `pressure-vessel-tank` or `bolted-bracket-lift-arm`.
+The folder name should be stable, lowercase, and hyphenated, such as `pressure-vessel-tank` or `motor-driven-shaft-torsion`.
 
 # Starting A New Problem
 
