@@ -1,0 +1,42 @@
+{
+  "id": "MOS-PLATE-015",
+  "slug": "bonded-steel-plate-splice-joint",
+  "title": "Bonded A992 Steel Plate Splice Joint",
+  "studentDocumentTitle": "Student Homework Questions",
+  "instructorDocumentTitle": "Instructor Answers",
+  "summary": "A multi-region axial-deformation problem involving load transfer through bonded steel splice plates and changing effective cross-sectional area.",
+  "textbookChapters": [
+    "Axial loading",
+    "Normal stress",
+    "Axial deformation",
+    "Built-up members",
+    "Piecewise deformation"
+  ],
+  "derivedPlaceholders": [
+    "plate_load_sum_B_kN",
+    "plate_load_residual_kN",
+    "plate_equilibrium_assessment",
+    "plate_load_sharing_assessment",
+    "plate_N1_kN",
+    "plate_N2_kN",
+    "plate_N3_kN",
+    "plate_area_1_mm2",
+    "plate_area_2_mm2",
+    "plate_area_3_mm2",
+    "plate_delta_1_mm",
+    "plate_delta_2_mm",
+    "plate_delta_3_mm",
+    "plate_delta_total_mm",
+    "plate_relative_A_B_mm",
+    "plate_governing_region",
+    "plate_governing_delta_mm",
+    "plate_governing_percent",
+    "plate_recommendation"
+  ],
+  "image": "assets/plate-industry-context.png",
+  "idealizedImage": "assets/plate-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference idealization of a bonded three-plate splice divided into single-plate, three-plate overlap, and two-plate regions.",
+  "source": "index.html",
+  "problemStatement": "<p>A structural equipment manufacturer is evaluating a bonded A992 steel plate splice used to transfer axial load between portions of a machine frame. One primary plate overlaps upper and lower splice plates, and continuous bonded seams transfer load through the overlap.</p><p>The simplified model retains the changing number of active plates while neglecting local bond-edge effects. The three regions therefore have effective areas <em>wt</em>, 3<em>wt</em>, and 2<em>wt</em>.</p>",
+  "engineeringGoal": "<p>Verify the assigned load balance, determine the internal axial force and effective area in each region, calculate the piecewise axial deformations, and find the change in separation between ends A and B.</p>"
+}

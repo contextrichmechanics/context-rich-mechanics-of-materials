@@ -628,6 +628,527 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-PLATE-015",
+    "slug": "bonded-steel-plate-splice-joint",
+    "title": "Bonded A992 Steel Plate Splice Joint",
+    "studentDocumentTitle": "Student Homework Questions",
+    "instructorDocumentTitle": "Instructor Answers",
+    "summary": "A multi-region axial-deformation problem involving load transfer through bonded steel splice plates and changing effective cross-sectional area.",
+    "textbookChapters": [
+      "Axial loading",
+      "Normal stress",
+      "Axial deformation",
+      "Built-up members",
+      "Piecewise deformation"
+    ],
+    "derivedPlaceholders": [
+      "plate_load_sum_B_kN",
+      "plate_load_residual_kN",
+      "plate_equilibrium_assessment",
+      "plate_load_sharing_assessment",
+      "plate_N1_kN",
+      "plate_N2_kN",
+      "plate_N3_kN",
+      "plate_area_1_mm2",
+      "plate_area_2_mm2",
+      "plate_area_3_mm2",
+      "plate_delta_1_mm",
+      "plate_delta_2_mm",
+      "plate_delta_3_mm",
+      "plate_delta_total_mm",
+      "plate_relative_A_B_mm",
+      "plate_governing_region",
+      "plate_governing_delta_mm",
+      "plate_governing_percent",
+      "plate_recommendation"
+    ],
+    "image": "problems/bonded-steel-plate-splice-joint/assets/plate-industry-context.png",
+    "idealizedImage": "problems/bonded-steel-plate-splice-joint/assets/plate-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference idealization of a bonded three-plate splice divided into single-plate, three-plate overlap, and two-plate regions.",
+    "source": "problems/bonded-steel-plate-splice-joint/index.html",
+    "problemStatement": "<p>A structural equipment manufacturer is evaluating a bonded A992 steel plate splice used to transfer axial load between portions of a machine frame. One primary plate overlaps upper and lower splice plates, and continuous bonded seams transfer load through the overlap.</p><p>The simplified model retains the changing number of active plates while neglecting local bond-edge effects. The three regions therefore have effective areas <em>wt</em>, 3<em>wt</em>, and 2<em>wt</em>.</p>",
+    "engineeringGoal": "<p>Verify the assigned load balance, determine the internal axial force and effective area in each region, calculate the piecewise axial deformations, and find the change in separation between ends A and B.</p>",
+    "variables": [
+      {
+        "key": "P_A",
+        "symbol": "P_A",
+        "label": "Axial load at A",
+        "value": 46,
+        "unit": "kN",
+        "min": 0.1,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "key": "P_B1",
+        "symbol": "P_B1",
+        "label": "Upper-plate load at B",
+        "value": 23,
+        "unit": "kN",
+        "min": 0.1,
+        "max": 500,
+        "step": 1
+      },
+      {
+        "key": "P_B2",
+        "symbol": "P_B2",
+        "label": "Lower-plate load at B",
+        "value": 23,
+        "unit": "kN",
+        "min": 0.1,
+        "max": 500,
+        "step": 1
+      },
+      {
+        "key": "L_1",
+        "symbol": "L_1",
+        "label": "Single-plate region length",
+        "value": 600,
+        "unit": "mm",
+        "min": 1,
+        "max": 10000,
+        "step": 10
+      },
+      {
+        "key": "L_2",
+        "symbol": "L_2",
+        "label": "Three-plate overlap length",
+        "value": 200,
+        "unit": "mm",
+        "min": 1,
+        "max": 10000,
+        "step": 10
+      },
+      {
+        "key": "L_3",
+        "symbol": "L_3",
+        "label": "Two-plate region length",
+        "value": 800,
+        "unit": "mm",
+        "min": 1,
+        "max": 10000,
+        "step": 10
+      },
+      {
+        "key": "w",
+        "symbol": "w",
+        "label": "Width of each plate",
+        "value": 100,
+        "unit": "mm",
+        "min": 1,
+        "max": 2000,
+        "step": 5
+      },
+      {
+        "key": "t",
+        "symbol": "t",
+        "label": "Thickness of each plate",
+        "value": 5,
+        "unit": "mm",
+        "min": 0.1,
+        "max": 200,
+        "step": 0.5
+      },
+      {
+        "key": "E",
+        "symbol": "E",
+        "label": "Elastic modulus of A992 steel",
+        "value": 200,
+        "unit": "GPa",
+        "min": 1,
+        "max": 300,
+        "step": 1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function",
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "system function",
+          "splice joint",
+          "load transfer"
+        ],
+        "learningObjectives": [
+          "Identify the structural purpose of the bonded joint."
+        ],
+        "selected": true,
+        "student": "<p>State the primary structural function of the bonded plate joint.</p>",
+        "instructor": "<p>The joint transfers axial load from one primary plate into two overlapping splice plates while maintaining continuity and alignment of the larger structural assembly.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q2",
+        "title": "External Loads",
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "axial loads",
+          "equilibrium",
+          "load balance"
+        ],
+        "learningObjectives": [
+          "Identify the applied end loads and their directions."
+        ],
+        "selected": true,
+        "student": "<p>Identify the external axial loads and explain what condition they must satisfy for equilibrium.</p>",
+        "instructor": "<p><em>P</em><sub>A</sub> acts to the left at A. <em>P</em><sub>B1</sub> and <em>P</em><sub>B2</sub> act to the right at B. Equilibrium requires <em>P</em><sub>A</sub> = <em>P</em><sub>B1</sub> + <em>P</em><sub>B2</sub>.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q3",
+        "title": "Boundary Conditions",
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "tags": [
+          "axial model",
+          "end loads",
+          "one-dimensional member"
+        ],
+        "learningObjectives": [
+          "Describe the boundary conditions used in the simplified model."
+        ],
+        "selected": true,
+        "student": "<p>Describe the boundary conditions used in the simplified one-dimensional model.</p>",
+        "instructor": "<p>The assembly is loaded by equal and opposite axial resultants at its ends. No transverse supports, shear forces, or bending moments are included in the one-dimensional deformation model.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "bonded seams",
+          "primary plate",
+          "splice plates"
+        ],
+        "learningObjectives": [
+          "Trace axial force through the built-up joint."
+        ],
+        "selected": true,
+        "student": "<p>Trace the load path from end A through the overlap and to end B.</p>",
+        "instructor": "<p>The load enters the primary plate at A, travels through its single-plate region, transfers through the bonded overlap into the upper and lower splice plates, and exits through the two loads at B.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q5",
+        "title": "Mechanically Distinct Regions",
+        "type": "system decomposition",
+        "difficulty": "introductory",
+        "tags": [
+          "piecewise model",
+          "effective area",
+          "built-up member"
+        ],
+        "learningObjectives": [
+          "Divide the joint into constant-area regions."
+        ],
+        "selected": true,
+        "student": "<p>Identify the mechanically distinct regions needed for a piecewise axial-deformation model.</p>",
+        "instructor": "<p>Region 1 contains one active plate, Region 2 contains three bonded plates in the overlap, and Region 3 contains the two outgoing splice plates.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Response",
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "axial deformation",
+          "model scope",
+          "local effects"
+        ],
+        "learningObjectives": [
+          "Distinguish the base deformation response from excluded local behavior."
+        ],
+        "selected": true,
+        "student": "<p>What response is evaluated in the base problem, and what local joint behavior is excluded?</p>",
+        "instructor": "<p>The base problem evaluates total axial deformation. Bond-line shear and peel stress, seam-end stress concentrations, local plate bending, and bond slip are intentionally excluded.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "load",
+          "geometry",
+          "elastic modulus"
+        ],
+        "learningObjectives": [
+          "Identify the inputs controlling piecewise axial deformation."
+        ],
+        "selected": true,
+        "student": "<p>List the loading, geometric, and material parameters that control the joint deformation.</p>",
+        "instructor": "<p>The governing inputs are the three end loads, segment lengths <em>L</em><sub>1</sub> through <em>L</em><sub>3</sub>, plate width <em>w</em>, plate thickness <em>t</em>, the number of active plates in each region, and elastic modulus <em>E</em>.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "tags": [
+          "idealization",
+          "axial member",
+          "region boundaries"
+        ],
+        "learningObjectives": [
+          "Create a one-dimensional model before viewing the reference figure."
+        ],
+        "selected": true,
+        "student": "<p>Before using the reference figure, create a one-dimensional axial model with three constant-area regions. Label the end loads, region boundaries, lengths, and effective areas.</p>",
+        "instructor": "<p>A valid model shows Region 1 with area <em>wt</em>, Region 2 with area 3<em>wt</em>, Region 3 with area 2<em>wt</em>, the three segment lengths, and the applied end loads.</p>",
+        "gradingNotes": "<p>Students should attempt the load-path and region model before seeing the instructor idealization.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "tags": [
+          "perfect bond",
+          "equal strain",
+          "linear elasticity"
+        ],
+        "learningObjectives": [
+          "State assumptions supporting the effective-area model."
+        ],
+        "selected": true,
+        "student": "<p>State the assumptions required for the simplified axial-deformation analysis.</p>",
+        "instructor": "<p>Assume linear-elastic plates of uniform width and thickness, uniform average axial stress in each effective section, perfect bond and equal axial strain among overlapping plates, small deformation, and negligible local stress concentration, bond slip, and bending.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "tags": [
+          "internal force",
+          "effective area",
+          "deformation sum"
+        ],
+        "learningObjectives": [
+          "Plan a piecewise axial-deformation solution."
+        ],
+        "selected": true,
+        "student": "<p>Outline the calculation sequence before carrying out numerical work.</p>",
+        "instructor": "<p>Verify load equilibrium, determine the internal axial force, identify each effective area, compute each segment deformation from &delta;<sub>i</sub> = <em>N</em><sub>i</sub><em>L</em><sub>i</sub>/(<em>A</em><sub>i</sub><em>E</em>), and sum the signed segment deformations.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q11",
+        "title": "Load Equilibrium and Sharing",
+        "type": "equilibrium check",
+        "difficulty": "introductory",
+        "tags": [
+          "force balance",
+          "outgoing loads",
+          "validation"
+        ],
+        "learningObjectives": [
+          "Verify equilibrium and compatibility of the assigned loads."
+        ],
+        "selected": true,
+        "student": "<p>Using the assigned values, verify overall axial equilibrium and assess the load sharing between the identical outgoing plates.</p>",
+        "instructor": "<p>The outgoing resultant is <strong>{{plate_load_sum_B_kN}} kN</strong>, and the signed residual <em>P</em><sub>B1</sub> + <em>P</em><sub>B2</sub> - <em>P</em><sub>A</sub> is <strong>{{plate_load_residual_kN}} kN</strong>. {{plate_equilibrium_assessment}} {{plate_load_sharing_assessment}}</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q12",
+        "title": "Internal Axial-Force Diagram",
+        "type": "internal loading",
+        "difficulty": "intermediate",
+        "tags": [
+          "axial-force diagram",
+          "load sharing",
+          "regions"
+        ],
+        "learningObjectives": [
+          "Determine the axial resultant in each region."
+        ],
+        "selected": true,
+        "student": "<p>Determine the internal axial-force magnitude in each region and describe the force carried by each outgoing plate.</p>",
+        "instructor": "<p>The region resultants are <strong><em>N</em><sub>1</sub> = {{plate_N1_kN}} kN</strong>, <strong><em>N</em><sub>2</sub> = {{plate_N2_kN}} kN</strong>, and <strong><em>N</em><sub>3</sub> = {{plate_N3_kN}} kN</strong>. In Region 3, the upper and lower plates carry the assigned loads <em>P</em><sub>B1</sub> and <em>P</em><sub>B2</sub>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q13",
+        "title": "Effective Cross-Sectional Areas",
+        "type": "section properties",
+        "difficulty": "intermediate",
+        "tags": [
+          "cross-sectional area",
+          "active plates",
+          "built-up section"
+        ],
+        "learningObjectives": [
+          "Calculate effective area from the number of active plates."
+        ],
+        "selected": true,
+        "student": "<p>Determine the effective load-carrying area of each region.</p>",
+        "instructor": "<p><em>A</em><sub>1</sub> = <em>wt</em> = <strong>{{plate_area_1_mm2}} mm<sup>2</sup></strong>, <em>A</em><sub>2</sub> = 3<em>wt</em> = <strong>{{plate_area_2_mm2}} mm<sup>2</sup></strong>, and <em>A</em><sub>3</sub> = 2<em>wt</em> = <strong>{{plate_area_3_mm2}} mm<sup>2</sup></strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q14",
+        "title": "Segment-Deformation Equations",
+        "type": "axial deformation setup",
+        "difficulty": "intermediate",
+        "tags": [
+          "NL over AE",
+          "unit conversion",
+          "piecewise calculation"
+        ],
+        "learningObjectives": [
+          "Write a consistent deformation equation for each region."
+        ],
+        "selected": true,
+        "student": "<p>Write the axial-deformation equation for each segment and state the required unit conversion for the elastic modulus.</p>",
+        "instructor": "<p>Use &delta;<sub>i</sub> = <em>N</em><sub>i</sub><em>L</em><sub>i</sub>/(<em>A</em><sub>i</sub><em>E</em>) for each constant-area region. With force in newtons and geometry in millimeters, convert <em>E</em> from GPa to MPa, where 1 GPa = 1000 N/mm<sup>2</sup>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q15",
+        "title": "Segment Deformations",
+        "type": "axial deformation calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "elongation",
+          "segment contributions",
+          "numerical solution"
+        ],
+        "learningObjectives": [
+          "Calculate each segment's axial elongation."
+        ],
+        "selected": true,
+        "student": "<p>Calculate the axial deformation of each region.</p>",
+        "instructor": "<p>The tensile elongations are <strong>&delta;<sub>1</sub> = {{plate_delta_1_mm}} mm</strong>, <strong>&delta;<sub>2</sub> = {{plate_delta_2_mm}} mm</strong>, and <strong>&delta;<sub>3</sub> = {{plate_delta_3_mm}} mm</strong>.</p>",
+        "commonMistakes": "<p>Do not use the single-plate area in all three regions, and convert kN to N and GPa to MPa.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q16",
+        "title": "Relative Displacement of A and B",
+        "type": "total deformation",
+        "difficulty": "intermediate",
+        "tags": [
+          "relative displacement",
+          "sign convention",
+          "elongation"
+        ],
+        "learningObjectives": [
+          "Sum segment deformations and interpret the displacement sign."
+        ],
+        "selected": true,
+        "student": "<p>Determine the total change in separation between A and B. Then report <em>u</em><sub>A</sub> - <em>u</em><sub>B</sub> using rightward displacement as positive.</p>",
+        "instructor": "<p>The A-B separation increases by <strong>{{plate_delta_total_mm}} mm</strong>. With rightward displacement positive, <strong><em>u</em><sub>A</sub> - <em>u</em><sub>B</sub> = {{plate_relative_A_B_mm}} mm</strong>.</p>",
+        "gradingNotes": "<p>Accept a positive 0.491 mm if the student clearly defines that value as the increase in separation rather than uA - uB.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q17",
+        "title": "Governing Deformation Contribution",
+        "type": "result interpretation",
+        "difficulty": "intermediate",
+        "tags": [
+          "governing region",
+          "compliance",
+          "sensitivity"
+        ],
+        "learningObjectives": [
+          "Relate deformation contribution to length and effective area."
+        ],
+        "selected": true,
+        "student": "<p>Identify which region contributes most to the total displacement and explain why.</p>",
+        "instructor": "<p><strong>{{plate_governing_region}}</strong> governs with <strong>{{plate_governing_delta_mm}} mm</strong>, or approximately <strong>{{plate_governing_percent}}%</strong> of the total deformation. The dominant contribution follows from the segment ratio <em>L</em>/(<em>AE</em>).</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q18",
+        "title": "Stiffness-Based Modification",
+        "type": "design modification",
+        "difficulty": "intermediate",
+        "tags": [
+          "axial stiffness",
+          "design change",
+          "serviceability"
+        ],
+        "learningObjectives": [
+          "Recommend a modification based on the governing compliance."
+        ],
+        "selected": true,
+        "student": "<p>Recommend one modification that would reduce joint displacement without changing the applied load.</p>",
+        "instructor": "<p>Increase width or thickness in the most compliant region, particularly Region 1 for the baseline geometry. This increases <em>AE/L</em> directly. Merely lengthening the overlap is not automatically the best change unless it replaces a more compliant region with the higher-area overlap.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q19",
+        "title": "Engineering Assessment and Model Scope",
+        "type": "engineering judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "recommendation",
+          "limitations",
+          "bonded joint design"
+        ],
+        "learningObjectives": [
+          "Make a bounded recommendation and identify omitted checks."
+        ],
+        "selected": true,
+        "student": "<p>Provide a concise engineering assessment and identify the additional checks required before approving a real bonded splice.</p>",
+        "instructor": "<p>{{plate_recommendation}}</p><p>A complete design must also check bond-line shear and peel stress, seam-end stress concentration, plate yielding, bond strength and slip, fatigue, environmental durability, local bending, and manufacturing quality.</p>",
+        "gradingNotes": "<p>The assessment must not claim that the joint is safe without a displacement limit and the omitted strength checks.</p>",
+        "section": "analysis"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - baseline bonded splice",
+        "description": "Default sequence for load transfer, region areas, piecewise axial deformation, and engineering interpretation.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19"
+        ],
+        "variables": {
+          "P_A": 46,
+          "P_B1": 23,
+          "P_B2": 23,
+          "L_1": 600,
+          "L_2": 200,
+          "L_3": 800,
+          "w": 100,
+          "t": 5,
+          "E": 200
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-CLEVIS-007",
     "slug": "clevis-pin-tensile-linkage",
     "title": "Industrial Clevis-Pin Linkage Under Tensile Load",

@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - baseline bonded splice",
+  "description": "Default sequence for load transfer, region areas, piecewise axial deformation, and engineering interpretation.",
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19"],
+  "variables": {"P_A":46,"P_B1":23,"P_B2":23,"L_1":600,"L_2":200,"L_3":800,"w":100,"t":5,"E":200}
+}

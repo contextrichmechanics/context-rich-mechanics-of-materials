@@ -1,0 +1,27 @@
+---
+title: "Bonded A992 Steel Plate Splice Joint"
+description: "A context-rich axial-deformation problem for a bonded built-up steel joint with changing effective area."
+image: "assets/plate-industry-context.png"
+categories: [context-rich, mechanics-of-materials, design]
+course_topics: [axial loading, normal stress, axial deformation, built-up members, load sharing]
+textbook_chapters: [Axial loading, Normal stress, Axial deformation, Built-up members, Piecewise deformation]
+problem_types: [load-path analysis, axial-force diagram, piecewise deformation, engineering evaluation]
+competencies: [system interpretation, cross-sectional area identification, axial deformation calculation, engineering judgment]
+industries: [structural steel fabrication, machine frames, bonded repairs, reinforcement splices]
+difficulty: "Intermediate"
+status: "Draft"
+problem_id: "MOS-PLATE-015"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for load-path interpretation, a three-region axial model, effective-area identification, piecewise deformation, and engineering assessment.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=bonded-steel-plate-splice-joint){.btn .btn-secondary}

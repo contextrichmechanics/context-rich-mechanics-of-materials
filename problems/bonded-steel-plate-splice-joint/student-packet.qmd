@@ -1,0 +1,28 @@
+---
+title: "Student Packet - Bonded A992 Steel Plate Splice Joint"
+subtitle: "Load Transfer and Piecewise Axial Deformation"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+  pdf: {documentclass: scrartcl, papersize: letter, toc: true, number-sections: true}
+  ipynb: default
+jupyter: python3
+execute: {enabled: false}
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="plate-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "bonded-steel-plate-splice-joint",
+    targetId: "plate-student-questions",
+    type: "student"
+  });
+});
+</script>
+```

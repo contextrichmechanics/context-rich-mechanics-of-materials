@@ -20,6 +20,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-PLATE-015",
+    "slug": "bonded-steel-plate-splice-joint",
+    "title": "Bonded A992 Steel Plate Splice Joint",
+    "status": "OK",
+    "variables": 9,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-CLEVIS-007",
     "slug": "clevis-pin-tensile-linkage",
     "title": "Industrial Clevis-Pin Linkage Under Tensile Load",

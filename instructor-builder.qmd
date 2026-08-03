@@ -707,6 +707,74 @@ function variableMap(problem) {
     values.spring_dominant_value_in = formatDerived(dominant[1], 5);
   }
 
+  const plateLoadA = numericValue(values, "P_A");
+  const plateLoadB1 = numericValue(values, "P_B1");
+  const plateLoadB2 = numericValue(values, "P_B2");
+  const plateLength1 = numericValue(values, "L_1");
+  const plateLength2 = numericValue(values, "L_2");
+  const plateLength3 = numericValue(values, "L_3");
+  const bondedPlateWidth = numericValue(values, "w");
+  const bondedPlateThickness = numericValue(values, "t");
+  const bondedPlateModulus = numericValue(values, "E");
+
+  if (
+    Number.isFinite(plateLoadA) && plateLoadA > 0 &&
+    Number.isFinite(plateLoadB1) && plateLoadB1 > 0 &&
+    Number.isFinite(plateLoadB2) && plateLoadB2 > 0 &&
+    Number.isFinite(plateLength1) && plateLength1 > 0 &&
+    Number.isFinite(plateLength2) && plateLength2 > 0 &&
+    Number.isFinite(plateLength3) && plateLength3 > 0 &&
+    Number.isFinite(bondedPlateWidth) && bondedPlateWidth > 0 &&
+    Number.isFinite(bondedPlateThickness) && bondedPlateThickness > 0 &&
+    Number.isFinite(bondedPlateModulus) && bondedPlateModulus > 0
+  ) {
+    const loadSumB = plateLoadB1 + plateLoadB2;
+    const loadResidual = loadSumB - plateLoadA;
+    const loadTolerance = 1e-6 * Math.max(plateLoadA, loadSumB, 1);
+    const shareTolerance = 1e-6 * Math.max(plateLoadB1, plateLoadB2, 1);
+    const isBalanced = Math.abs(loadResidual) <= loadTolerance;
+    const isEqualShare = Math.abs(plateLoadB1 - plateLoadB2) <= shareTolerance;
+    const area1 = bondedPlateWidth * bondedPlateThickness;
+    const area2 = 3 * area1;
+    const area3 = 2 * area1;
+    const modulusMPa = bondedPlateModulus * 1000;
+    const force1 = plateLoadA;
+    const force2 = plateLoadA;
+    const force3 = loadSumB;
+    const delta1 = force1 * 1000 * plateLength1 / (area1 * modulusMPa);
+    const delta2 = force2 * 1000 * plateLength2 / (area2 * modulusMPa);
+    const delta3 = force3 * 1000 * plateLength3 / (area3 * modulusMPa);
+    const totalDelta = delta1 + delta2 + delta3;
+    const contributions = [["Region 1", delta1], ["Region 2", delta2], ["Region 3", delta3]];
+    const governing = contributions.sort((left, right) => right[1] - left[1])[0];
+
+    values.plate_load_sum_B_kN = formatDerived(loadSumB, 3);
+    values.plate_load_residual_kN = formatDerived(loadResidual, 3);
+    values.plate_equilibrium_assessment = isBalanced
+      ? "The applied loads satisfy overall axial equilibrium."
+      : "The applied loads do not satisfy overall axial equilibrium, so no valid static solution exists for this assignment.";
+    values.plate_load_sharing_assessment = isEqualShare
+      ? "The identical outgoing plates also carry equal loads, consistent with the perfect-bond equal-strain idealization."
+      : "The outgoing loads are unequal; this conflicts with equal strain in identical plates and invalidates the Region 3 effective-area idealization.";
+    values.plate_N1_kN = formatDerived(force1, 3);
+    values.plate_N2_kN = formatDerived(force2, 3);
+    values.plate_N3_kN = formatDerived(force3, 3);
+    values.plate_area_1_mm2 = formatDerived(area1, 1);
+    values.plate_area_2_mm2 = formatDerived(area2, 1);
+    values.plate_area_3_mm2 = formatDerived(area3, 1);
+    values.plate_delta_1_mm = formatDerived(delta1, 4);
+    values.plate_delta_2_mm = formatDerived(delta2, 4);
+    values.plate_delta_3_mm = formatDerived(delta3, 4);
+    values.plate_delta_total_mm = formatDerived(totalDelta, 4);
+    values.plate_relative_A_B_mm = formatDerived(-totalDelta, 4);
+    values.plate_governing_region = governing[0];
+    values.plate_governing_delta_mm = formatDerived(governing[1], 4);
+    values.plate_governing_percent = formatDerived(100 * governing[1] / totalDelta, 1);
+    values.plate_recommendation = isBalanced && isEqualShare
+      ? "The idealized joint increases the A-B separation by " + formatDerived(totalDelta, 4) + " mm, with " + governing[0] + " providing the largest contribution. Acceptability requires a specified serviceability limit; if less movement is required, increase effective area in the most compliant region."
+      : "The entered loading is incompatible with the simplified static, perfect-bond model. Correct the end-load balance and equal load sharing before using the reported deformation values for design.";
+  }
+
   const leverLoad = numericValue(values, "P");
   const leverArmAE = numericValue(values, "x_AE");
   const leverArmCE = numericValue(values, "x_CE");
