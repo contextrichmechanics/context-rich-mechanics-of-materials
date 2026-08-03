@@ -1,0 +1,30 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - baseline rod and tube assembly",
+  "description": "Default sequence for load path, member action, axial deformation, and displacement compatibility.",
+  "selectedQuestions": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14"
+  ],
+  "variables": {
+    "P": 80,
+    "L_AB": 400,
+    "L_BC": 600,
+    "A_AB": 400,
+    "d_BC": 10,
+    "E_al": 70,
+    "E_st": 200
+  }
+}

@@ -650,6 +650,40 @@ function variableMap(problem, currentValues) {
     }
   }
 
+  const axialLoad = numericValue(values, "P");
+  const axialTubeLength = numericValue(values, "L_AB");
+  const axialRodLength = numericValue(values, "L_BC");
+  const axialTubeArea = numericValue(values, "A_AB");
+  const axialRodDiameter = numericValue(values, "d_BC");
+  const axialAluminumModulus = numericValue(values, "E_al");
+  const axialSteelModulus = numericValue(values, "E_st");
+
+  if (
+    Number.isFinite(axialLoad) && axialLoad > 0 &&
+    Number.isFinite(axialTubeLength) && axialTubeLength > 0 &&
+    Number.isFinite(axialRodLength) && axialRodLength > 0 &&
+    Number.isFinite(axialTubeArea) && axialTubeArea > 0 &&
+    Number.isFinite(axialRodDiameter) && axialRodDiameter > 0 &&
+    Number.isFinite(axialAluminumModulus) && axialAluminumModulus > 0 &&
+    Number.isFinite(axialSteelModulus) && axialSteelModulus > 0
+  ) {
+    const loadN = axialLoad * 1000;
+    const rodArea = Math.PI * axialRodDiameter ** 2 / 4;
+    const aluminumModulusMPa = axialAluminumModulus * 1000;
+    const steelModulusMPa = axialSteelModulus * 1000;
+    const rodElongation = loadN * axialRodLength / (rodArea * steelModulusMPa);
+    const tubeShortening = loadN * axialTubeLength / (axialTubeArea * aluminumModulusMPa);
+    values.axial_load_N = formatDerived(loadN);
+    values.axial_area_BC_mm2 = formatDerived(rodArea, 2);
+    values.axial_force_BC_kN = formatDerived(axialLoad, 1);
+    values.axial_force_AB_kN = formatDerived(-axialLoad, 1);
+    values.axial_E_al_MPa = formatDerived(aluminumModulusMPa);
+    values.axial_E_st_MPa = formatDerived(steelModulusMPa);
+    values.axial_rod_elongation_mm = formatDerived(rodElongation, 3);
+    values.axial_tube_shortening_mm = formatDerived(tubeShortening, 3);
+    values.axial_total_displacement_mm = formatDerived(rodElongation + tubeShortening, 3);
+  }
+
   const cableMass = numericValue(values, "m");
   const cableGravity = numericValue(values, "g");
   const cableThetaAB = numericValue(values, "theta_AB");

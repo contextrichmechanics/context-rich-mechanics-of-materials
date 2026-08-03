@@ -1,5 +1,15 @@
 window.PROBLEM_HEALTH = [
   {
+    "id": "MOS-AXIAL-009",
+    "slug": "axial-rod-tube-assembly",
+    "title": "Axial Displacement of a Steel Tie Rod and Aluminum Spacer Tube Assembly",
+    "status": "OK",
+    "variables": 7,
+    "questions": 14,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-BRACKET-002",
     "slug": "bolted-bracket-lift-arm",
     "title": "Bolted Wall Bracket for a Small Lift Arm",

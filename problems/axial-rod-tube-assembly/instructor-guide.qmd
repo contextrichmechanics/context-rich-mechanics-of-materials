@@ -1,0 +1,57 @@
+---
+title: "Instructor Guide - Axial Rod and Spacer Tube Assembly"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+    number-sections: true
+  ipynb: default
+jupyter: python3
+execute:
+  enabled: false
+---
+
+# Purpose
+
+These answers are representative, not the only acceptable responses. Award credit for a defensible load path, correct tension/compression identification, consistent N-mm units, correct use of axial deformation, and a compatibility argument that explains why the two displacement contributions add.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="axial-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "axial-rod-tube-assembly",
+    targetId: "axial-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+Strength, buckling, local bearing, thread stress, and connector factor-of-safety checks are intentionally outside the base assignment. The supplied data support an elastic axial-displacement analysis but do not provide the strength allowables and local geometry required for those checks. They may be added later as an extension without changing the core compatibility model.
+
+# Supplemental Assessment Structure
+
+Suggested weighting:
+
+- context interpretation and load path: 15%;
+- student idealization, assumptions, and analysis plan: 20%;
+- member force and tension/compression identification: 15%;
+- rod and tube deformation calculations: 30%;
+- compatibility and engineering interpretation: 20%.

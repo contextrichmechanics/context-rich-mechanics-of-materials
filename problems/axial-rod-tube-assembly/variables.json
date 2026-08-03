@@ -1,0 +1,72 @@
+[
+  {
+    "key": "P",
+    "symbol": "P",
+    "label": "Applied tensile load",
+    "value": 80,
+    "unit": "kN",
+    "min": 1,
+    "max": 500,
+    "step": 1
+  },
+  {
+    "key": "L_AB",
+    "symbol": "L_AB",
+    "label": "Length of aluminum tube AB",
+    "value": 400,
+    "unit": "mm",
+    "min": 50,
+    "max": 3000,
+    "step": 10
+  },
+  {
+    "key": "L_BC",
+    "symbol": "L_BC",
+    "label": "Length of steel rod segment BC",
+    "value": 600,
+    "unit": "mm",
+    "min": 50,
+    "max": 5000,
+    "step": 10
+  },
+  {
+    "key": "A_AB",
+    "symbol": "A_AB",
+    "label": "Cross-sectional area of aluminum tube",
+    "value": 400,
+    "unit": "mm^2",
+    "min": 10,
+    "max": 10000,
+    "step": 10
+  },
+  {
+    "key": "d_BC",
+    "symbol": "d_BC",
+    "label": "Diameter of steel rod BC",
+    "value": 10,
+    "unit": "mm",
+    "min": 1,
+    "max": 100,
+    "step": 0.5
+  },
+  {
+    "key": "E_al",
+    "symbol": "E_al",
+    "label": "Elastic modulus of aluminum tube",
+    "value": 70,
+    "unit": "GPa",
+    "min": 1,
+    "max": 250,
+    "step": 1
+  },
+  {
+    "key": "E_st",
+    "symbol": "E_st",
+    "label": "Elastic modulus of steel rod",
+    "value": 200,
+    "unit": "GPa",
+    "min": 1,
+    "max": 300,
+    "step": 1
+  }
+]

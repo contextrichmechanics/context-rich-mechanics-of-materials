@@ -1,0 +1,51 @@
+---
+title: "Axial Displacement of a Steel Tie Rod and Aluminum Spacer Tube Assembly"
+description: "A context-rich mechanics problem on axial force, deformation of dissimilar materials, compatibility, and total end displacement."
+image: "assets/axial-industry-context.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - design
+course_topics:
+  - axial loading
+  - axial deformation
+  - compatibility
+  - dissimilar materials
+textbook_chapters:
+  - Axial loading
+  - Axial deformation
+  - Statically determinate members
+  - Displacement compatibility
+problem_types:
+  - free-body diagram
+  - axial deformation
+  - compatibility analysis
+  - engineering interpretation
+competencies:
+  - load path reasoning
+  - tension and compression recognition
+  - axial deformation calculation
+  - displacement compatibility
+  - engineering judgment
+industries:
+  - mechanical actuators
+  - machine-frame tie-rod systems
+  - preload assemblies
+  - structural spacer connections
+difficulty: "Intermediate"
+status: "Draft"
+problem_id: "MOS-AXIAL-009"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for load-path reasoning, axial member forces, rod elongation, tube shortening, and displacement compatibility.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=axial-rod-tube-assembly){.btn .btn-secondary}
