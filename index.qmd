@@ -85,88 +85,93 @@ document.addEventListener("DOMContentLoaded", () => {
   listingMetadataObserver.disconnect();
   exposeListingMetadata(document);
 
-  const cards = document.querySelectorAll(".quarto-grid-link");
+  const enhanceVisibleCards = () => {
+    const cards = document.querySelectorAll(".quarto-grid-link");
 
-  cards.forEach((cardLink) => {
-    const cardBody = cardLink.querySelector(".card-body");
-    if (!cardBody || cardBody.querySelector(".packet-actions")) {
-      return;
-    }
-
-    const problemHref = cardLink.getAttribute("href");
-    const problemBase = problemHref.replace(/index\.html$/, "");
-    const valuesTable = cardBody.querySelector(".card-other-values");
-    const metadata = {};
-
-    valuesTable?.querySelectorAll("tr").forEach((row) => {
-      const cells = row.querySelectorAll("td");
-      if (cells.length === 2) {
-        metadata[cells[0].textContent.trim()] = cells[1].textContent.trim();
-      }
-    });
-
-    const summary = document.createElement("div");
-    summary.className = "card-quick-meta";
-    [
-      ["Difficulty", metadata.difficulty],
-      ["Status", metadata.status],
-    ].forEach(([label, value]) => {
-      if (!value) {
+    cards.forEach((cardLink) => {
+      const cardBody = cardLink.querySelector(".card-body");
+      if (!cardBody || cardBody.querySelector(".packet-actions")) {
         return;
       }
-      const item = document.createElement("span");
-      item.textContent = `${label}: ${value}`;
-      summary.appendChild(item);
-    });
 
-    if (summary.children.length > 0) {
-      cardBody.appendChild(summary);
-    }
+      const problemHref = cardLink.getAttribute("href");
+      const problemBase = problemHref.replace(/index\.html$/, "");
+      const valuesTable = cardBody.querySelector(".card-other-values");
+      const metadata = {};
 
-    const conceptValue = metadata.mechanics_concepts || metadata["mechanics concepts"];
-    if (conceptValue) {
-      const concepts = conceptValue
-        .split(",")
-        .map((concept) => concept.trim())
-        .filter(Boolean)
-        .slice(0, 5);
-
-      const conceptGroup = document.createElement("div");
-      conceptGroup.className = "card-concepts";
-      conceptGroup.setAttribute("aria-label", "Mechanics concepts");
-
-      concepts.forEach((concept) => {
-        const tag = document.createElement("span");
-        tag.className = "card-concept";
-        tag.textContent = concept;
-        conceptGroup.appendChild(tag);
+      valuesTable?.querySelectorAll("tr").forEach((row) => {
+        const cells = row.querySelectorAll("td");
+        if (cells.length === 2) {
+          metadata[cells[0].textContent.trim()] = cells[1].textContent.trim();
+        }
       });
 
-      cardBody.appendChild(conceptGroup);
-    }
-
-    const actions = document.createElement("div");
-    actions.className = "packet-actions";
-
-    [
-      ["Student packet", `${problemBase}student-packet.html`],
-      ["Instructor packet", `${problemBase}instructor-guide.html`],
-      ["Customize", `./instructor-builder.html?problem=${encodeURIComponent(problemBase)}`],
-    ].forEach(([label, href]) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "packet-action";
-      button.textContent = label;
-      button.addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        window.location.href = href;
+      const summary = document.createElement("div");
+      summary.className = "card-quick-meta";
+      [
+        ["Difficulty", metadata.difficulty],
+        ["Status", metadata.status],
+      ].forEach(([label, value]) => {
+        if (!value) {
+          return;
+        }
+        const item = document.createElement("span");
+        item.textContent = `${label}: ${value}`;
+        summary.appendChild(item);
       });
-      actions.appendChild(button);
-    });
 
-    cardBody.appendChild(actions);
-  });
+      if (summary.children.length > 0) {
+        cardBody.appendChild(summary);
+      }
+
+      const conceptValue = metadata.mechanics_concepts || metadata["mechanics concepts"];
+      if (conceptValue) {
+        const concepts = conceptValue
+          .split(",")
+          .map((concept) => concept.trim())
+          .filter(Boolean)
+          .slice(0, 5);
+
+        const conceptGroup = document.createElement("div");
+        conceptGroup.className = "card-concepts";
+        conceptGroup.setAttribute("aria-label", "Mechanics concepts");
+
+        concepts.forEach((concept) => {
+          const tag = document.createElement("span");
+          tag.className = "card-concept";
+          tag.textContent = concept;
+          conceptGroup.appendChild(tag);
+        });
+
+        cardBody.appendChild(conceptGroup);
+      }
+
+      const actions = document.createElement("div");
+      actions.className = "packet-actions";
+
+      [
+        ["Student packet", `${problemBase}student-packet.html`],
+        ["Instructor packet", `${problemBase}instructor-guide.html`],
+        ["Customize", `./instructor-builder.html?problem=${encodeURIComponent(problemBase)}`],
+      ].forEach(([label, href]) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "packet-action";
+        button.textContent = label;
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          window.location.href = href;
+        });
+        actions.appendChild(button);
+      });
+
+      cardBody.appendChild(actions);
+    });
+  };
+
+  enhanceVisibleCards();
+  window["quarto-listings"]?.["listing-listing"]?.on("updated", enhanceVisibleCards);
 });
 </script>
 ```
