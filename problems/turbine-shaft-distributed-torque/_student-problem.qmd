@@ -1,0 +1,23 @@
+# Context-Rich Solid Mechanics Problem
+
+## Torsional Response of a Multi-Stage Turbine Rotor
+
+### Engineering Context
+
+A power-generation engineering team is evaluating the torsional response of a multi-stage turbine rotor during steady operation. Steam loads are transferred from successive blade rows into the rotor shaft over the active blade region, causing the cumulative internal torque to change continuously along the rotor.
+
+The rotor is modeled as a uniform solid L2 steel shaft. Journal bearings support the shaft radially but permit shaft-axis rotation. Section C is fixed in rotation and serves as the torsional reference.
+
+![Industrial turbine rotor with its casing removed.](assets/turbine-shaft-industry-context.png){fig-alt="Industrial multi-stage turbine rotor exposed inside its open casing." width=88%}
+
+### Main Engineering Goal
+
+Determine the relative angle of twist at D and the absolute maximum torsional shear stress, then identify the governing location and the geometric or material parameters that most strongly control the response.
+
+### System Components
+
+- uniform solid L2 steel rotor shaft;
+- turbine blade stages between C and D;
+- torque-free journal bearings at A and B;
+- fixed rotational restraint at section C;
+- evaluation section D.

@@ -1,0 +1,43 @@
+---
+title: "Instructor Guide - Multi-Stage Turbine Rotor"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+  pdf: {documentclass: scrartcl, papersize: letter, toc: true, number-sections: true}
+  ipynb: default
+jupyter: python3
+execute: {enabled: false}
+---
+
+# Purpose
+
+Award credit for a physically consistent interpretation of the loading, correct torsional boundary conditions, the linear internal-torque function, polar moment, twist integration, maximum stress, parameter sensitivity, and a bounded engineering recommendation.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="turbine-shaft-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "turbine-shaft-distributed-torque", targetId: "turbine-shaft-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes a uniform solid circular shaft, homogeneous isotropic linear elasticity, Saint-Venant torsion, small twist, constant shear modulus and diameter, ideal torque-free journal bearings, and a perfectly fixed section C. A complete turbine-rotor assessment also requires bending, dynamics, vibration, fatigue, stress concentrations, thermal gradients, bearings, blade attachment behavior, and project-specific limits.
+
+# Supplemental Assessment Structure
+
+- context interpretation and idealization: 25%;
+- boundary conditions and internal torque function: 25%;
+- twist integration and stress calculation: 30%;
+- sensitivity and engineering recommendation: 20%.

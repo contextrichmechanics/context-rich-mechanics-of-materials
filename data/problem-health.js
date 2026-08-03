@@ -178,6 +178,16 @@ window.PROBLEM_HEALTH = [
     "questions": 20,
     "variants": 1,
     "warnings": []
+  },
+  {
+    "id": "MOS-TURBINE-019",
+    "slug": "turbine-shaft-distributed-torque",
+    "title": "Torsional Response of a Multi-Stage Turbine Rotor",
+    "status": "OK",
+    "variables": 6,
+    "questions": 18,
+    "variants": 1,
+    "warnings": []
   }
 ]
 ;

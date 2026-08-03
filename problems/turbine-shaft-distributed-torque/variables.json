@@ -1,0 +1,8 @@
+[
+  {"key":"turbine_d","symbol":"d","label":"Solid shaft diameter","value":6,"unit":"in","min":0.1,"max":100,"step":0.25},
+  {"key":"turbine_G","symbol":"G","label":"Shear modulus of L2 steel","value":11200000,"unit":"psi","min":1000,"max":100000000,"step":100000},
+  {"key":"turbine_L","symbol":"L","label":"Loaded blade-region length C to D","value":10,"unit":"ft","min":0.1,"max":1000,"step":0.5},
+  {"key":"turbine_a","symbol":"a","label":"Distance A to C","value":2,"unit":"ft","min":0,"max":1000,"step":0.5},
+  {"key":"turbine_b","symbol":"b","label":"Distance D to B","value":2,"unit":"ft","min":0,"max":1000,"step":0.5},
+  {"key":"turbine_T_D","symbol":"T_D","label":"Internal torque at section D","value":2000,"unit":"lb*ft","min":0.1,"max":10000000,"step":100}
+]

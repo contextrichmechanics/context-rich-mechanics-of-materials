@@ -1,0 +1,27 @@
+---
+title: "Torsional Response of a Multi-Stage Turbine Rotor"
+description: "A context-rich turbine-shaft problem on a linearly varying internal torque, twist integration, and shear stress."
+image: "assets/turbine-shaft-industry-context.png"
+categories: [context-rich, mechanics-of-materials, analysis]
+course_topics: [torsion, distributed loading, internal torque functions, angle of twist, shear stress]
+textbook_chapters: [Torsion of circular shafts, Distributed torsional loading, Angle of twist, Torsional shear stress]
+problem_types: [load-path analysis, symbolic derivation, deformation calculation, stress calculation, engineering evaluation]
+competencies: [boundary conditions, internal torque functions, integration, polar moment calculation, parameter sensitivity, engineering judgment]
+industries: [power generation, steam turbines, rotating machinery, turbomachinery]
+difficulty: "Intermediate to advanced"
+status: "Draft"
+problem_id: "MOS-TURBINE-019"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Model Interpretation"}
+The base packet interprets <em>T</em>(<em>x</em>) as the linearly varying internal torque resultant. It is not a distributed torque intensity per unit length.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=turbine-shaft-distributed-torque){.btn .btn-secondary}

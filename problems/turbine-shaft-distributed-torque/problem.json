@@ -1,0 +1,16 @@
+{
+  "id":"MOS-TURBINE-019",
+  "slug":"turbine-shaft-distributed-torque",
+  "title":"Torsional Response of a Multi-Stage Turbine Rotor",
+  "studentDocumentTitle":"Student Homework Questions",
+  "instructorDocumentTitle":"Instructor Answers",
+  "summary":"A turbine-rotor torsion problem integrating a linearly varying internal-torque function, reaction torque, polar moment, angle-of-twist integration, maximum shear stress, and parameter sensitivity.",
+  "textbookChapters":["Torsion of circular shafts","Distributed torsional loading","Angle of twist","Torsional shear stress"],
+  "derivedPlaceholders":["turbine_total_length_ft","turbine_L_in","turbine_T_D_lbin","turbine_reaction_lbft","turbine_average_torque_lbft","turbine_J_in4","turbine_phi_rad","turbine_phi_deg","turbine_tau_psi","turbine_tau_ksi","turbine_recommendation"],
+  "image":"assets/turbine-shaft-industry-context.png",
+  "idealizedImage":"assets/turbine-shaft-instructor-idealization.png",
+  "idealizedImageAlt":"Instructor reference idealization of a turbine rotor with torque-free journal bearings at A and B, a fixed section at C, section D, and a linearly varying blade-region torque model.",
+  "source":"index.html",
+  "problemStatement":"<p>A power-generation engineering team is evaluating a uniform solid turbine rotor. Successive blade stages transfer torque into the shaft over the active region C-D, so the cumulative internal torque changes continuously along that region.</p><p>For this assignment, the stated linear quantity is the internal torque resultant <em>T</em>(<em>x</em>) = <em>T</em><sub>D</sub><em>x</em>/<em>L</em>, not a torque intensity per unit length. Journal bearings A and B are torque-free, while section C is fixed in rotation.</p>",
+  "engineeringGoal":"<p>Derive the internal-torque function, determine the relative angle of twist at D and the absolute maximum torsional shear stress, identify the governing location, and explain the parameters controlling strength and stiffness.</p>"
+}

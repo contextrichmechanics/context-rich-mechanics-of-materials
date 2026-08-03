@@ -783,6 +783,44 @@
           : `The selected ${selectedLabel} solid shaft does not satisfy the allowable torsional stress criterion. Increase the diameter before evaluating twist and the omitted real-system effects.`;
     }
 
+    const turbineDiameter = numericValue(values, "turbine_d");
+    const turbineShearModulus = numericValue(values, "turbine_G");
+    const turbineLoadedLength = numericValue(values, "turbine_L");
+    const turbineLengthA = numericValue(values, "turbine_a");
+    const turbineLengthB = numericValue(values, "turbine_b");
+    const turbineTorqueD = numericValue(values, "turbine_T_D");
+
+    if (
+      Number.isFinite(turbineDiameter) && turbineDiameter > 0 &&
+      Number.isFinite(turbineShearModulus) && turbineShearModulus > 0 &&
+      Number.isFinite(turbineLoadedLength) && turbineLoadedLength > 0 &&
+      Number.isFinite(turbineLengthA) && turbineLengthA >= 0 &&
+      Number.isFinite(turbineLengthB) && turbineLengthB >= 0 &&
+      Number.isFinite(turbineTorqueD) && turbineTorqueD > 0
+    ) {
+      const loadedLengthIn = turbineLoadedLength * 12;
+      const torqueDlbIn = turbineTorqueD * 12;
+      const polarMoment = Math.PI * turbineDiameter ** 4 / 32;
+      const twistRad = torqueDlbIn * loadedLengthIn /
+        (2 * polarMoment * turbineShearModulus);
+      const twistDeg = twistRad * 180 / Math.PI;
+      const maximumStressPsi = torqueDlbIn * (turbineDiameter / 2) / polarMoment;
+
+      values.turbine_total_length_ft = formatDerived(
+        turbineLengthA + turbineLoadedLength + turbineLengthB, 3
+      );
+      values.turbine_L_in = formatDerived(loadedLengthIn, 3);
+      values.turbine_T_D_lbin = formatDerived(torqueDlbIn, 1);
+      values.turbine_reaction_lbft = formatDerived(turbineTorqueD, 3);
+      values.turbine_average_torque_lbft = formatDerived(turbineTorqueD / 2, 3);
+      values.turbine_J_in4 = formatDerived(polarMoment, 3);
+      values.turbine_phi_rad = formatDerived(twistRad, 6);
+      values.turbine_phi_deg = formatDerived(twistDeg, 4);
+      values.turbine_tau_psi = formatDerived(maximumStressPsi, 1);
+      values.turbine_tau_ksi = formatDerived(maximumStressPsi / 1000, 3);
+      values.turbine_recommendation = `Use the calculated ${formatDerived(maximumStressPsi / 1000, 3)} ksi maximum shear stress and ${formatDerived(twistDeg, 4)} degree relative twist as base-model demand values. Section D at the shaft surface governs the pure-torsion stress result. Do not approve the rotor until these demands are compared with project-specific limits and the stated model omissions are evaluated.`;
+    }
+
     const gearTorqueB = numericValue(values, "gear_T_B");
     const gearTorqueC = numericValue(values, "gear_T_C");
     const gearTorqueD = numericValue(values, "gear_T_D");
