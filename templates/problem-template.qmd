@@ -5,6 +5,8 @@ image: "assets/industry-image.png"
 categories:
   - context-rich
   - mechanics-of-materials
+mechanics_concepts:
+  - replace-me
 course_topics:
   - replace-me
 problem_types:

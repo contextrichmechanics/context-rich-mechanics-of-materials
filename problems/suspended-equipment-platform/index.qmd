@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [equilibrium, axial deformation, compatibility, rigid-body rotation, eccentric loading]
 course_topics:
   - axial deformation
   - rigid-body equilibrium

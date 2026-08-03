@@ -6,6 +6,7 @@ listing:
   sort: "title"
   filter-ui:
     - title
+    - mechanics_concepts
     - textbook_chapters
     - categories
     - course_topics
@@ -17,6 +18,7 @@ listing:
     - title
     - description
     - image
+    - mechanics_concepts
     - textbook_chapters
     - categories
     - course_topics
@@ -35,7 +37,54 @@ and assessment variants.
 
 ```{=html}
 <script>
+const searchableListingFields = [
+  "mechanics_concepts",
+  "textbook_chapters",
+  "course_topics",
+  "problem_types",
+  "competencies",
+  "industries",
+  "difficulty",
+  "status",
+];
+
+const exposeListingMetadata = (root) => {
+  searchableListingFields.forEach((field) => {
+    const selector = `.${field}`;
+    const cells = [];
+
+    if (root instanceof Element && root.matches(selector)) {
+      cells.push(root);
+    }
+    if (root.querySelectorAll) {
+      cells.push(...root.querySelectorAll(selector));
+    }
+
+    cells.forEach((cell) => cell.classList.add(`listing-${field}`));
+  });
+};
+
+// Quarto's grid template omits listing-* classes on custom metadata cells.
+// Add them while the listing is parsed so List.js can index every field.
+const listingMetadataObserver = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    mutation.addedNodes.forEach((node) => {
+      if (node instanceof Element) {
+        exposeListingMetadata(node);
+      }
+    });
+  });
+});
+
+listingMetadataObserver.observe(document.documentElement, {
+  childList: true,
+  subtree: true,
+});
+
 document.addEventListener("DOMContentLoaded", () => {
+  listingMetadataObserver.disconnect();
+  exposeListingMetadata(document);
+
   const cards = document.querySelectorAll(".quarto-grid-link");
 
   cards.forEach((cardLink) => {
@@ -72,6 +121,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (summary.children.length > 0) {
       cardBody.appendChild(summary);
+    }
+
+    const conceptValue = metadata.mechanics_concepts || metadata["mechanics concepts"];
+    if (conceptValue) {
+      const concepts = conceptValue
+        .split(",")
+        .map((concept) => concept.trim())
+        .filter(Boolean)
+        .slice(0, 5);
+
+      const conceptGroup = document.createElement("div");
+      conceptGroup.className = "card-concepts";
+      conceptGroup.setAttribute("aria-label", "Mechanics concepts");
+
+      concepts.forEach((concept) => {
+        const tag = document.createElement("span");
+        tag.className = "card-concept";
+        tag.textContent = concept;
+        conceptGroup.appendChild(tag);
+      });
+
+      cardBody.appendChild(conceptGroup);
     }
 
     const actions = document.createElement("div");

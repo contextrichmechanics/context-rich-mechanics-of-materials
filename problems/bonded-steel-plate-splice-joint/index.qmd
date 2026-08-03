@@ -3,6 +3,7 @@ title: "Bonded A992 Steel Plate Splice Joint"
 description: "A context-rich axial-deformation problem for a bonded built-up steel joint with changing effective area."
 image: "assets/plate-industry-context.png"
 categories: [context-rich, mechanics-of-materials, design]
+mechanics_concepts: [axial loading, normal stress, axial deformation, load sharing, built-up members]
 course_topics: [axial loading, normal stress, axial deformation, built-up members, load sharing]
 textbook_chapters: [Axial loading, Normal stress, Axial deformation, Built-up members, Piecewise deformation]
 problem_types: [load-path analysis, axial-force diagram, piecewise deformation, engineering evaluation]

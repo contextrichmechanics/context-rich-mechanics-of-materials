@@ -3,6 +3,7 @@ title: "Motor-Driven Shaft Design for a Belt-Transmission System"
 description: "A context-rich torsion problem on motor power, torque, shaft sizing, standard selection, and twist."
 image: "assets/shaft-industry-context.png"
 categories: [context-rich, mechanics-of-materials, design]
+mechanics_concepts: [torsion, torque, shear stress, shaft design, angle of twist]
 course_topics: [power and torque, torsion, shear stress, shaft sizing, angle of twist]
 textbook_chapters: [Power and torque, Torsion of circular shafts, Allowable stress design, Angle of twist]
 problem_types: [load-path analysis, torsional stress calculation, component sizing, engineering evaluation]

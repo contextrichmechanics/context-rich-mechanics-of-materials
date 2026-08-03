@@ -4,6 +4,8 @@ description: "One-sentence problem summary."
 image: "assets/problem-image.png"
 categories:
   - context-rich
+mechanics_concepts:
+  - replace-me
 course_topics:
   - replace-me
 textbook_chapters:

@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - manufacturing
+mechanics_concepts: [bearing stress, punching shear, average stress, factor of safety]
 course_topics:
   - stress
   - shear
@@ -49,4 +50,3 @@ Use the default packet for an average bearing stress and punching shear stress a
 [Student packet](student-packet.qmd){.btn .btn-primary}
 [Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
 [Customize in Builder](../../instructor-builder.html?problem=hydraulic-press-punching-shear){.btn .btn-secondary}
-

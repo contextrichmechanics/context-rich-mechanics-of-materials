@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [axial loading, shear stress, bending, beam deflection, buckling, connections]
 course_topics:
   - stress
   - shear
@@ -64,4 +65,3 @@ Use the default packet for a complete context-rich assignment. Use the Instructo
 - `variables.json`: editable symbolic quantities for the bracket analysis.
 - `questions.json`: selectable student questions and representative instructor answers.
 - `assets/`: full-system image, bracket image, and dimensioned bracket idealization.
-

@@ -3,6 +3,7 @@ title: "Shear and Bending-Moment Analysis of a Hydraulically Supported Industria
 description: "A context-rich beam problem on two-force-member support, reactions, shear, and bending moment."
 image: "assets/robot-arm-industry-context.png"
 categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [equilibrium, two-force members, shear force, bending moment, beam diagrams]
 course_topics: [equilibrium, two-force members, shear diagrams, bending-moment diagrams, critical sections]
 textbook_chapters: [Planar rigid-body equilibrium, Two-force members, Shear-force diagrams, Bending-moment diagrams]
 problem_types: [load-path analysis, support-reaction calculation, internal-resultant calculation, diagram construction, engineering evaluation]

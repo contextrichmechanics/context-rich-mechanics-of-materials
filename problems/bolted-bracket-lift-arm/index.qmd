@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [direct shear, bending, bearing stress, beam deflection, connections]
 course_topics:
   - stress
   - shear

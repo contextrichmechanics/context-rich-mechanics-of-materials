@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [equilibrium, axial deformation, compatibility, yielding, elastic-plastic response]
 course_topics:
   - rigid-body equilibrium
   - axial deformation

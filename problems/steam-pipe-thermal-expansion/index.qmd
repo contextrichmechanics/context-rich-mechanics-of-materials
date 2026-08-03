@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [thermal strain, thermal stress, axial deformation, compatibility, support stiffness]
 course_topics:
   - thermal strain
   - axial deformation

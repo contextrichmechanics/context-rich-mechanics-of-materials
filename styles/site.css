@@ -38,6 +38,22 @@
   line-height: 1.2;
   padding: 0.25rem 0.45rem;
 }
+.card-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+}
+.card-concept {
+  border: 1px solid #b8d1c4;
+  border-radius: 0.25rem;
+  background: #edf6f1;
+  color: #285c43;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.25rem 0.4rem;
+}
 .callout {
   border-radius: 0.4rem;
 }

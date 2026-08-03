@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [axial loading, normal stress, direct shear, double shear, connections]
 course_topics:
   - axial loading
   - normal stress
@@ -52,4 +53,3 @@ Use the default packet for axial normal stress and double-shear connector stress
 [Student packet](student-packet.qmd){.btn .btn-primary}
 [Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
 [Customize in Builder](../../instructor-builder.html?problem=clevis-pin-tensile-linkage){.btn .btn-secondary}
-

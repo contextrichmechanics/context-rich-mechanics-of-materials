@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [axial deformation, springs, stiffness, compatibility, load sharing]
 course_topics:
   - axial deformation
   - springs

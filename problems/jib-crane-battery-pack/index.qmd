@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [axial loading, shear stress, bending, beam deflection, buckling, fatigue]
 course_topics:
   - stress
   - shear

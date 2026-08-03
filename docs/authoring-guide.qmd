@@ -53,9 +53,12 @@ After creating a package, open `problem.json` and confirm that the `slug` matche
 
 Use both concept tags and textbook chapters. Concept tags help instructors find problems by mechanics idea; textbook chapters help them align assignments with a course calendar.
 
-In `index.qmd`, include:
+In `index.qmd`, include a short controlled list of mechanics concepts plus the broader course topics and chapters:
 
 ```yaml
+mechanics_concepts:
+  - shear stress
+  - bending
 course_topics:
   - bending
   - shear
@@ -63,6 +66,8 @@ textbook_chapters:
   - Shear stress
   - Bending stress
 ```
+
+`mechanics_concepts` appears directly on the Problem Library card and is searched by the library filter. Use concise, familiar terms and reuse existing wording whenever possible, such as `axial loading`, `normal stress`, `shear stress`, `bending`, `torsion`, `angle of twist`, `axial deformation`, `compatibility`, `buckling`, `fatigue`, or `factor of safety`. Prefer three to five concepts; the card displays the first five.
 
 In `problem.json`, include the same chapter list for the Instructor Builder and generated catalog:
 

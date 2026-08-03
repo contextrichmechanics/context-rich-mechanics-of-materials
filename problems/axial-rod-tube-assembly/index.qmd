@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [axial loading, normal stress, axial deformation, compatibility, composite members]
 course_topics:
   - axial loading
   - axial deformation

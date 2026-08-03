@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [equilibrium, axial loading, normal stress, compatibility, load sharing]
 course_topics:
   - axial loading
   - compatibility
@@ -50,4 +51,3 @@ Use the default packet for a MEEN 305-style axial compatibility and equilibrium 
 [Student packet](student-packet.qmd){.btn .btn-primary}
 [Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
 [Customize in Builder](../../instructor-builder.html?problem=spoked-wheel-load-sharing){.btn .btn-secondary}
-

@@ -3,6 +3,7 @@ title: "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft
 description: "A context-rich torsion problem on torque diagrams, segment stresses, and tubular-shaft sizing."
 image: "assets/gear-shaft-industry-context.png"
 categories: [context-rich, mechanics-of-materials, design]
+mechanics_concepts: [torsion, internal torque, torque diagrams, shear stress, hollow shafts]
 course_topics: [torsion, internal torque, torque diagrams, shear stress, hollow shafts]
 textbook_chapters: [Torsion of circular shafts, Internal torque diagrams, Torsional shear stress, Hollow-shaft sizing]
 problem_types: [load-path analysis, internal-resultant calculation, stress calculation, component sizing, engineering evaluation]

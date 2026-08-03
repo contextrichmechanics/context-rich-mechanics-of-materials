@@ -6,6 +6,7 @@ categories:
   - context-rich
   - mechanics-of-materials
   - design
+mechanics_concepts: [equilibrium, two-force members, direct shear, double shear, factor of safety]
 course_topics:
   - equilibrium
   - shear

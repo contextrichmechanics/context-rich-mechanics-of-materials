@@ -3,6 +3,7 @@ title: "Bolt-Group Design for an Industrial Flanged Shaft Coupling"
 description: "A context-rich coupling problem comparing shaft torsion with direct shear in a circular bolt group."
 image: "assets/coupling-industry-context.png"
 categories: [context-rich, mechanics-of-materials, design]
+mechanics_concepts: [torsion, shear stress, torque equilibrium, bolt groups, shaft design]
 course_topics: [torsion, direct shear, torque equilibrium, bolt groups, connector sizing]
 textbook_chapters: [Torsion of circular shafts, Direct shear in connectors, Torque equilibrium, Connector sizing]
 problem_types: [load-path analysis, symbolic derivation, connector sizing, engineering evaluation]

@@ -3,6 +3,7 @@ title: "Torsional Response of a Multi-Stage Turbine Rotor"
 description: "A context-rich turbine-shaft problem on a linearly varying internal torque, twist integration, and shear stress."
 image: "assets/turbine-shaft-industry-context.png"
 categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [torsion, distributed torque, internal torque, shear stress, angle of twist]
 course_topics: [torsion, distributed loading, internal torque functions, angle of twist, shear stress]
 textbook_chapters: [Torsion of circular shafts, Distributed torsional loading, Angle of twist, Torsional shear stress]
 problem_types: [load-path analysis, symbolic derivation, deformation calculation, stress calculation, engineering evaluation]
