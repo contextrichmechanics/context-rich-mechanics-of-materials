@@ -1,0 +1,57 @@
+---
+title: "Instructor Guide - Suspended Industrial Equipment Platform"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+    number-sections: true
+  ipynb: default
+jupyter: python3
+execute:
+  enabled: false
+---
+
+# Purpose
+
+These answers are representative. Award credit for correct free-body diagrams, two-stage equilibrium, consistent force and modulus units, axial wire elongations, rigid-body displacement interpolation, and physically correct tilt directions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="platform-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "suspended-equipment-platform",
+    targetId: "platform-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The supplied area and elastic modulus support equilibrium and deformation analysis. Strength factor of safety, anchor and connector stress, fatigue, wire self-weight, and rigid-member bending are intentionally excluded because the required allowable stresses and connection geometry are not supplied.
+
+# Supplemental Assessment Structure
+
+Suggested weighting:
+
+- context interpretation and load path: 15%;
+- idealization and assumptions: 15%;
+- rigid-body equilibrium: 25%;
+- wire elongation and displacement compatibility: 30%;
+- tilt interpretation and engineering recommendation: 15%.

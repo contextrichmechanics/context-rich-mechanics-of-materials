@@ -1,0 +1,92 @@
+[
+  {
+    "key": "P",
+    "symbol": "P",
+    "label": "Suspended equipment load",
+    "value": 800,
+    "unit": "lb",
+    "min": 10,
+    "max": 10000,
+    "step": 10
+  },
+  {
+    "key": "A_w",
+    "symbol": "A_w",
+    "label": "Cross-sectional area of each wire",
+    "value": 0.05,
+    "unit": "in^2",
+    "min": 0.001,
+    "max": 2,
+    "step": 0.001
+  },
+  {
+    "key": "E_w",
+    "symbol": "E_w",
+    "label": "Elastic modulus of stainless-steel wire",
+    "value": 28000,
+    "unit": "ksi",
+    "min": 1000,
+    "max": 40000,
+    "step": 100
+  },
+  {
+    "key": "L_u",
+    "symbol": "L_u",
+    "label": "Length of each upper wire ED and FC",
+    "value": 4,
+    "unit": "ft",
+    "min": 0.25,
+    "max": 50,
+    "step": 0.25
+  },
+  {
+    "key": "L_l",
+    "symbol": "L_l",
+    "label": "Length of each lower wire AH and BC",
+    "value": 4.5,
+    "unit": "ft",
+    "min": 0.25,
+    "max": 50,
+    "step": 0.25
+  },
+  {
+    "key": "L_DC",
+    "symbol": "L_DC",
+    "label": "Length of upper rigid member DC",
+    "value": 7,
+    "unit": "ft",
+    "min": 0.5,
+    "max": 50,
+    "step": 0.25
+  },
+  {
+    "key": "L_AB",
+    "symbol": "L_AB",
+    "label": "Length of lower rigid member AB",
+    "value": 5,
+    "unit": "ft",
+    "min": 0.5,
+    "max": 50,
+    "step": 0.25
+  },
+  {
+    "key": "x_DH",
+    "symbol": "x_DH",
+    "label": "Distance from D to lower-wire point H",
+    "value": 2,
+    "unit": "ft",
+    "min": 0.1,
+    "max": 49,
+    "step": 0.1
+  },
+  {
+    "key": "x_P",
+    "symbol": "x_P",
+    "label": "Distance from A to the payload",
+    "value": 1,
+    "unit": "ft",
+    "min": 0.1,
+    "max": 49,
+    "step": 0.1
+  }
+]

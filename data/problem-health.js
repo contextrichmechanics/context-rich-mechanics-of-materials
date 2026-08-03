@@ -98,6 +98,16 @@ window.PROBLEM_HEALTH = [
     "questions": 18,
     "variants": 1,
     "warnings": []
+  },
+  {
+    "id": "MOS-PLATFORM-011",
+    "slug": "suspended-equipment-platform",
+    "title": "Suspended Industrial Equipment Platform Supported by Stainless-Steel Wires",
+    "status": "OK",
+    "variables": 9,
+    "questions": 20,
+    "variants": 1,
+    "warnings": []
   }
 ]
 ;

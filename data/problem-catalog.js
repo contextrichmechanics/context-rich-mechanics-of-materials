@@ -4911,6 +4911,553 @@ window.PROBLEM_CATALOG = [
         }
       }
     ]
+  },
+  {
+    "id": "MOS-PLATFORM-011",
+    "slug": "suspended-equipment-platform",
+    "title": "Suspended Industrial Equipment Platform Supported by Stainless-Steel Wires",
+    "studentDocumentTitle": "Student Homework Questions",
+    "instructorDocumentTitle": "Instructor Answers",
+    "summary": "A two-level suspended-platform problem integrating rigid-body equilibrium, axial wire deformation, displacement compatibility, and small-angle rotation.",
+    "textbookChapters": [
+      "Rigid-body equilibrium",
+      "Axial loading",
+      "Axial deformation",
+      "Displacement compatibility",
+      "Small-angle rotation"
+    ],
+    "derivedPlaceholders": [
+      "platform_x_HC_ft",
+      "platform_T_AH_lb",
+      "platform_T_BC_lb",
+      "platform_T_ED_lb",
+      "platform_T_FC_lb",
+      "platform_delta_AH_in",
+      "platform_delta_BC_in",
+      "platform_delta_ED_in",
+      "platform_delta_FC_in",
+      "platform_delta_H_in",
+      "platform_delta_A_in",
+      "platform_delta_B_in",
+      "platform_delta_load_in",
+      "platform_theta_AB_rad",
+      "platform_theta_AB_deg",
+      "platform_theta_DC_rad",
+      "platform_theta_DC_deg",
+      "platform_lower_tilt_direction",
+      "platform_upper_tilt_direction",
+      "platform_governing_wire",
+      "platform_governing_force_lb",
+      "platform_dominant_wire",
+      "platform_dominant_elongation_in"
+    ],
+    "image": "problems/suspended-equipment-platform/assets/platform-industry-context.png",
+    "idealizedImage": "problems/suspended-equipment-platform/assets/platform-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference idealization of two rigid suspended members connected to each other and the ceiling by four vertical tension wires.",
+    "source": "problems/suspended-equipment-platform/index.html",
+    "problemStatement": "<p>A manufacturing facility is installing a suspended service platform that supports a compact equipment module above the production floor. The assembly has an upper rigid member and a lower rigid member connected by stainless-steel tension wires. The upper member is suspended from fixed overhead anchors by a second pair of wires.</p><p>Because load <em>P</em> is applied eccentrically to the lower member, the four wires do not carry equal forces. Their unequal elastic elongations cause both rigid members to translate and rotate.</p>",
+    "engineeringGoal": "<p>Determine the downward displacement of the equipment load and the small-angle tilt of each rigid member. Identify the wire carrying the largest force and the deformation contribution that most strongly influences platform motion.</p>",
+    "variables": [
+      {
+        "key": "P",
+        "symbol": "P",
+        "label": "Suspended equipment load",
+        "value": 800,
+        "unit": "lb",
+        "min": 10,
+        "max": 10000,
+        "step": 10
+      },
+      {
+        "key": "A_w",
+        "symbol": "A_w",
+        "label": "Cross-sectional area of each wire",
+        "value": 0.05,
+        "unit": "in^2",
+        "min": 0.001,
+        "max": 2,
+        "step": 0.001
+      },
+      {
+        "key": "E_w",
+        "symbol": "E_w",
+        "label": "Elastic modulus of stainless-steel wire",
+        "value": 28000,
+        "unit": "ksi",
+        "min": 1000,
+        "max": 40000,
+        "step": 100
+      },
+      {
+        "key": "L_u",
+        "symbol": "L_u",
+        "label": "Length of each upper wire ED and FC",
+        "value": 4,
+        "unit": "ft",
+        "min": 0.25,
+        "max": 50,
+        "step": 0.25
+      },
+      {
+        "key": "L_l",
+        "symbol": "L_l",
+        "label": "Length of each lower wire AH and BC",
+        "value": 4.5,
+        "unit": "ft",
+        "min": 0.25,
+        "max": 50,
+        "step": 0.25
+      },
+      {
+        "key": "L_DC",
+        "symbol": "L_DC",
+        "label": "Length of upper rigid member DC",
+        "value": 7,
+        "unit": "ft",
+        "min": 0.5,
+        "max": 50,
+        "step": 0.25
+      },
+      {
+        "key": "L_AB",
+        "symbol": "L_AB",
+        "label": "Length of lower rigid member AB",
+        "value": 5,
+        "unit": "ft",
+        "min": 0.5,
+        "max": 50,
+        "step": 0.25
+      },
+      {
+        "key": "x_DH",
+        "symbol": "x_DH",
+        "label": "Distance from D to lower-wire point H",
+        "value": 2,
+        "unit": "ft",
+        "min": 0.1,
+        "max": 49,
+        "step": 0.1
+      },
+      {
+        "key": "x_P",
+        "symbol": "x_P",
+        "label": "Distance from A to the payload",
+        "value": 1,
+        "unit": "ft",
+        "min": 0.1,
+        "max": 49,
+        "step": 0.1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "function",
+          "suspended platform",
+          "load transfer"
+        ],
+        "learningObjectives": [
+          "Identify the structural purpose of the suspended platform system."
+        ],
+        "selected": true,
+        "student": "<p>What is the primary structural function of the suspended platform system?</p>",
+        "instructor": "<p>The system supports an equipment load and transfers it through lower rigid member AB, lower wires AH and BC, upper rigid member DC, upper wires ED and FC, and finally into the fixed overhead support.</p>",
+        "gradingNotes": "<p>Students should describe support and force transfer, not merely identify the assembly as a platform.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q2",
+        "title": "External Load and Eccentricity",
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "external load",
+          "eccentric loading",
+          "moment"
+        ],
+        "learningObjectives": [
+          "Explain why payload position affects support-wire forces."
+        ],
+        "selected": true,
+        "student": "<p>Where is the external load applied, and why does its position matter?</p>",
+        "instructor": "<p>Load <em>P</em> is applied to lower rigid member AB at an eccentric location. Its position controls the moment about the lower-wire attachment points, causing unequal wire forces and unequal elongations that rotate the member.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "tags": [
+          "fixed anchors",
+          "rigid members",
+          "wires"
+        ],
+        "learningObjectives": [
+          "Distinguish fixed anchors from movable rigid members."
+        ],
+        "selected": true,
+        "student": "<p>Identify the supports and boundary constraints in the system.</p>",
+        "instructor": "<p>The upper ends of wires ED and FC are attached to fixed overhead anchors E and F. Members AB and DC are rigid but are free to translate and rotate as the four tension wires elongate.</p>",
+        "commonMistakes": "<p>Do not model either horizontal member as a fixed beam.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "load path",
+          "wire tension",
+          "overhead support"
+        ],
+        "learningObjectives": [
+          "Trace load through both levels of the suspended assembly."
+        ],
+        "selected": true,
+        "student": "<p>Trace the load path from the equipment load to the building structure.</p>",
+        "instructor": "<p>Equipment load <em>P</em> &rarr; lower rigid member AB &rarr; lower wires AH and BC &rarr; upper rigid member DC &rarr; upper wires ED and FC &rarr; fixed overhead support &rarr; building structure.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Components",
+        "type": "component identification",
+        "difficulty": "introductory",
+        "tags": [
+          "deformable components",
+          "rigid members",
+          "compatibility"
+        ],
+        "learningObjectives": [
+          "Separate deformable wires from rigid load-distribution members."
+        ],
+        "selected": true,
+        "student": "<p>Which components are most important for the base mechanics analysis, and what role does each play?</p>",
+        "instructor": "<p>The four wires are deformable axial members and control vertical displacement. Rigid members AB and DC distribute forces and impose displacement compatibility but are assumed not to deform.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q6",
+        "title": "Mechanical Response and Scope",
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "axial elongation",
+          "translation",
+          "rotation"
+        ],
+        "learningObjectives": [
+          "Identify the responses supported by the supplied data."
+        ],
+        "selected": true,
+        "student": "<p>Identify the mechanical responses considered for the wires and rigid members in this problem.</p>",
+        "instructor": "<p>The wires undergo axial tension and elongation. The rigid members undergo small vertical translations and rotations produced by unequal endpoint displacements. Strength failure, fatigue, connector stress, and rigid-member bending are outside the base problem.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "wire area",
+          "elastic modulus",
+          "geometry"
+        ],
+        "learningObjectives": [
+          "Connect the input variables to equilibrium and axial deformation."
+        ],
+        "selected": true,
+        "student": "<p>Identify the loading, geometric, and material parameters that control displacement and tilt.</p>",
+        "instructor": "<p>The required inputs are <em>P</em>, <em>A</em><sub>w</sub>, <em>E</em><sub>w</sub>, <em>L</em><sub>u</sub>, <em>L</em><sub>l</sub>, <em>L</em><sub>DC</sub>, <em>L</em><sub>AB</sub>, <em>x</em><sub>DH</sub>, and <em>x</em><sub>P</sub>. The remaining upper span is <em>x</em><sub>HC</sub> = <em>L</em><sub>DC</sub> - <em>x</em><sub>DH</sub> = {{platform_x_HC_ft}} ft.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "tags": [
+          "idealization",
+          "FBD",
+          "two-level system"
+        ],
+        "learningObjectives": [
+          "Convert the real assembly into two rigid bodies connected by axial wires."
+        ],
+        "selected": true,
+        "student": "<p>Before using the reference figure, draw a simplified Mechanics of Materials model. Show the fixed anchors, four vertical wires, rigid members AB and DC, payload location, and symbolic dimensions. Include separate free-body diagrams for both rigid members.</p>",
+        "instructor": "<p>A correct model has two horizontal rigid members connected by vertical axial tension wires. The upper member is suspended from fixed anchors by ED and FC; the lower member is suspended from the upper member by AH and BC; and concentrated load <em>P</em> acts eccentrically on AB.</p>",
+        "gradingNotes": "<p>Students should attempt the model before seeing the instructor reference idealization.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "tags": [
+          "linear elasticity",
+          "small rotation",
+          "rigid body"
+        ],
+        "learningObjectives": [
+          "State assumptions supporting equilibrium and compatibility analysis."
+        ],
+        "selected": true,
+        "student": "<p>State the assumptions used to convert the physical system into the simplified mechanics model.</p>",
+        "instructor": "<p>Typical assumptions are rigid members AB and DC; straight, vertical, uniform, linearly elastic wires; axial wire force only; fixed anchors E and F; static loading; small displacement and rotation; ideal pin or eye connections; and neglected wire self-weight and local connection effects.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "tags": [
+          "equilibrium sequence",
+          "elongation",
+          "compatibility"
+        ],
+        "learningObjectives": [
+          "Plan the coupled equilibrium and displacement solution."
+        ],
+        "selected": true,
+        "student": "<p>Before calculating, describe the analysis sequence needed to determine load displacement and member tilt.</p>",
+        "instructor": "<p>Use equilibrium of AB to find lower-wire forces; use equilibrium of DC to find upper-wire forces; calculate all four wire elongations; interpolate the upper-member displacement at H; add lower-wire elongations to obtain displacements at A and B; interpolate at the load point; then calculate each member's small-angle rotation from its endpoint displacement difference.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q11",
+        "title": "Boundary Conditions and Unknown Wire Forces",
+        "type": "mechanics setup",
+        "difficulty": "introductory",
+        "tags": [
+          "reference idealization",
+          "wire tensions",
+          "rigid bodies"
+        ],
+        "learningObjectives": [
+          "Interpret the reference idealization and define unknown tensions."
+        ],
+        "selected": true,
+        "student": "<p>From the instructor reference diagram, identify the fixed points, rigid bodies, and four unknown wire forces.</p>",
+        "instructor": "<p>Ceiling anchors E and F are fixed. AB and DC are rigid bodies. The unknown axial tensions are <em>T</em><sub>ED</sub>, <em>T</em><sub>FC</sub>, <em>T</em><sub>AH</sub>, and <em>T</em><sub>BC</sub>, each acting vertically along its wire.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q12",
+        "title": "Equilibrium of Lower Member AB",
+        "type": "rigid-body equilibrium",
+        "difficulty": "intermediate",
+        "tags": [
+          "lower member",
+          "force equilibrium",
+          "moment equilibrium"
+        ],
+        "learningObjectives": [
+          "Determine lower-wire forces under eccentric loading."
+        ],
+        "selected": true,
+        "student": "<p>Draw the free-body diagram of lower member AB. For <strong><em>P</em> = {{P}} {{P_unit}}</strong>, <strong><em>L</em><sub>AB</sub> = {{L_AB}} {{L_AB_unit}}</strong>, and <strong><em>x</em><sub>P</sub> = {{x_P}} {{x_P_unit}}</strong>, determine <em>T</em><sub>AH</sub> and <em>T</em><sub>BC</sub>.</p>",
+        "instructor": "<p>For AB, &Sigma;<em>F</em><sub>y</sub> = 0 gives <em>T</em><sub>AH</sub> + <em>T</em><sub>BC</sub> = <em>P</em>. Moments about A give <em>T</em><sub>BC</sub><em>L</em><sub>AB</sub> = <em>Px</em><sub>P</sub>. Therefore <strong><em>T</em><sub>BC</sub> = {{platform_T_BC_lb}} lb</strong> and <strong><em>T</em><sub>AH</sub> = {{platform_T_AH_lb}} lb</strong>.</p>",
+        "commonMistakes": "<p>The eccentric load does not split equally between the lower wires.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q13",
+        "title": "Equilibrium of Upper Member DC",
+        "type": "rigid-body equilibrium",
+        "difficulty": "intermediate",
+        "tags": [
+          "upper member",
+          "transmitted loads",
+          "moment equilibrium"
+        ],
+        "learningObjectives": [
+          "Transfer lower-wire forces to the upper rigid member and solve support tensions."
+        ],
+        "selected": true,
+        "student": "<p>Draw the free-body diagram of upper member DC and determine <em>T</em><sub>ED</sub> and <em>T</em><sub>FC</sub>. Show where the lower-wire forces act on DC.</p>",
+        "instructor": "<p>The lower wires apply downward forces <em>T</em><sub>AH</sub> at H and <em>T</em><sub>BC</sub> at C. Thus <em>T</em><sub>ED</sub> + <em>T</em><sub>FC</sub> = <em>P</em>. Moments about D give <em>T</em><sub>FC</sub><em>L</em><sub>DC</sub> = <em>T</em><sub>AH</sub><em>x</em><sub>DH</sub> + <em>T</em><sub>BC</sub><em>L</em><sub>DC</sub>. Therefore <strong><em>T</em><sub>FC</sub> = {{platform_T_FC_lb}} lb</strong> and <strong><em>T</em><sub>ED</sub> = {{platform_T_ED_lb}} lb</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q14",
+        "title": "Wire Elongations",
+        "type": "axial deformation calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "wire elongation",
+          "FL/AE",
+          "unit conversion"
+        ],
+        "learningObjectives": [
+          "Calculate elongation of all four tension wires with consistent units."
+        ],
+        "selected": true,
+        "student": "<p>Calculate the elongation of each wire using &delta; = <em>FL</em>/(<em>AE</em>). Use <strong><em>A</em><sub>w</sub> = {{A_w}} {{A_w_unit}}</strong> and <strong><em>E</em><sub>w</sub> = {{E_w}} {{E_w_unit}}</strong>.</p>",
+        "instructor": "<p>Use <em>L</em><sub>u</sub> = {{L_u}} ft = {{L_u}}(12) in, <em>L</em><sub>l</sub> = {{L_l}} ft = {{L_l}}(12) in, and <em>E</em><sub>w</sub> = {{E_w}} ksi = {{E_w}}(1000) psi.</p><p><strong>&delta;<sub>AH</sub> = {{platform_delta_AH_in}} in</strong>, <strong>&delta;<sub>BC</sub> = {{platform_delta_BC_in}} in</strong>, <strong>&delta;<sub>ED</sub> = {{platform_delta_ED_in}} in</strong>, and <strong>&delta;<sub>FC</sub> = {{platform_delta_FC_in}} in</strong>.</p>",
+        "commonMistakes": "<p>Convert feet to inches and ksi to psi when force is in pounds and area is in square inches.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q15",
+        "title": "Displacement of Point H",
+        "type": "rigid-body compatibility",
+        "difficulty": "intermediate",
+        "tags": [
+          "upper member",
+          "linear interpolation",
+          "point displacement"
+        ],
+        "learningObjectives": [
+          "Interpolate displacement along a rigid member undergoing small rotation."
+        ],
+        "selected": true,
+        "student": "<p>Using rigid-body compatibility of upper member DC, determine the downward displacement of point H.</p>",
+        "instructor": "<p>Point D moves downward by &delta;<sub>ED</sub>, and C moves downward by &delta;<sub>FC</sub>. Since H is <em>x</em><sub>DH</sub>/<em>L</em><sub>DC</sub> of the distance from D to C,</p><p>&delta;<sub>H</sub> = &delta;<sub>D</sub> + (&delta;<sub>C</sub> - &delta;<sub>D</sub>)(<em>x</em><sub>DH</sub>/<em>L</em><sub>DC</sub>) = <strong>{{platform_delta_H_in}} in downward</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q16",
+        "title": "Endpoint Displacements of Lower Member AB",
+        "type": "displacement compatibility",
+        "difficulty": "intermediate",
+        "tags": [
+          "lower member",
+          "support motion",
+          "wire elongation"
+        ],
+        "learningObjectives": [
+          "Combine support motion and lower-wire elongation."
+        ],
+        "selected": true,
+        "student": "<p>Determine the downward displacements of endpoints A and B of lower rigid member AB.</p>",
+        "instructor": "<p>Point A is suspended from moving point H through wire AH, so &delta;<sub>A</sub> = &delta;<sub>H</sub> + &delta;<sub>AH</sub> = <strong>{{platform_delta_A_in}} in downward</strong>. Point B is suspended from moving point C through wire BC, so &delta;<sub>B</sub> = &delta;<sub>C</sub> + &delta;<sub>BC</sub> = <strong>{{platform_delta_B_in}} in downward</strong>.</p>",
+        "gradingNotes": "<p>Both upper-support motion and lower-wire elongation must be included.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q17",
+        "title": "Vertical Displacement of the Equipment Load",
+        "type": "displacement interpolation",
+        "difficulty": "intermediate to advanced",
+        "tags": [
+          "payload displacement",
+          "rigid-body motion",
+          "compatibility"
+        ],
+        "learningObjectives": [
+          "Determine load-point displacement from endpoint motions."
+        ],
+        "selected": true,
+        "student": "<p>Determine the vertical displacement of the equipment load on lower member AB.</p>",
+        "instructor": "<p>The load is <em>x</em><sub>P</sub>/<em>L</em><sub>AB</sub> of the distance from A to B. Therefore &delta;<sub>load</sub> = &delta;<sub>A</sub> + (&delta;<sub>B</sub> - &delta;<sub>A</sub>)(<em>x</em><sub>P</sub>/<em>L</em><sub>AB</sub>) = <strong>{{platform_delta_load_in}} in downward</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q18",
+        "title": "Tilt of Lower Member AB",
+        "type": "small-angle rotation",
+        "difficulty": "intermediate",
+        "tags": [
+          "lower member tilt",
+          "rotation",
+          "endpoint displacement"
+        ],
+        "learningObjectives": [
+          "Calculate and interpret the small-angle rotation of AB."
+        ],
+        "selected": true,
+        "student": "<p>Determine the small-angle tilt magnitude and physical direction of lower member AB.</p>",
+        "instructor": "<p>|&theta;<sub>AB</sub>| &asymp; |&delta;<sub>B</sub> - &delta;<sub>A</sub>|/<em>L</em><sub>AB</sub> = <strong>{{platform_theta_AB_rad}} rad = {{platform_theta_AB_deg}}&deg;</strong>. Member AB tilts <strong>{{platform_lower_tilt_direction}}</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q19",
+        "title": "Tilt of Upper Member DC",
+        "type": "small-angle rotation",
+        "difficulty": "intermediate",
+        "tags": [
+          "upper member tilt",
+          "rotation",
+          "endpoint displacement"
+        ],
+        "learningObjectives": [
+          "Calculate and interpret the small-angle rotation of DC."
+        ],
+        "selected": true,
+        "student": "<p>Determine the small-angle tilt magnitude and physical direction of upper member DC.</p>",
+        "instructor": "<p>|&theta;<sub>DC</sub>| &asymp; |&delta;<sub>C</sub> - &delta;<sub>D</sub>|/<em>L</em><sub>DC</sub> = <strong>{{platform_theta_DC_rad}} rad = {{platform_theta_DC_deg}}&deg;</strong>. Member DC tilts <strong>{{platform_upper_tilt_direction}}</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q20",
+        "title": "Engineering Assessment and Recommendation",
+        "type": "engineering judgment",
+        "difficulty": "intermediate to advanced",
+        "tags": [
+          "governing wire",
+          "design recommendation",
+          "limitations"
+        ],
+        "learningObjectives": [
+          "Interpret the mechanics results and make a limited recommendation."
+        ],
+        "selected": true,
+        "student": "<p>Identify the wire carrying the largest force and the largest elongation. Use the results to recommend one change that would reduce load displacement or tilt, and state what additional information is needed before service approval.</p>",
+        "instructor": "<p><strong>Wire {{platform_governing_wire}}</strong> carries the largest force, <strong>{{platform_governing_force_lb}} lb</strong>. <strong>Wire {{platform_dominant_wire}}</strong> has the largest elongation, <strong>{{platform_dominant_elongation_in}} in</strong>. The predicted payload displacement is <strong>{{platform_delta_load_in}} in downward</strong>. Increasing wire area or modulus reduces all wire elongations; reducing load eccentricity especially reduces unequal lower-wire elongation and lower-member tilt. Service approval also requires allowable stresses, fatigue requirements, anchor and connector geometry, rigid-member stiffness, tolerances, and applicable facility criteria.</p>",
+        "gradingNotes": "<p>The recommendation must remain within this deformation model and must not claim that strength or durability has been verified.</p>",
+        "section": "analysis"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - baseline suspended platform",
+        "description": "Default sequence for load path, two-stage equilibrium, wire elongation, displacement compatibility, and rigid-member tilt.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20"
+        ],
+        "variables": {
+          "P": 800,
+          "A_w": 0.05,
+          "E_w": 28000,
+          "L_u": 4,
+          "L_l": 4.5,
+          "L_DC": 7,
+          "L_AB": 5,
+          "x_DH": 2,
+          "x_P": 1
+        }
+      }
+    ]
   }
 ]
 ;
