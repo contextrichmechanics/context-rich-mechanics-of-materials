@@ -1,0 +1,16 @@
+{
+  "id":"MOS-GEAR-SHAFT-018",
+  "slug":"multi-gear-drive-shaft",
+  "title":"Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft",
+  "studentDocumentTitle":"Student Homework Questions",
+  "instructorDocumentTitle":"Instructor Answers",
+  "summary":"A multi-station torsion problem integrating torque equilibrium, internal torque diagrams, solid-shaft stress, governing-segment identification, and hollow-shaft sizing.",
+  "textbookChapters":["Torsion of circular shafts","Internal torque diagrams","Torsional shear stress","Hollow-shaft sizing"],
+  "derivedPlaceholders":["gear_span_AE_mm","gear_torque_sum_kNm","gear_equilibrium_assessment","gear_T_AB_kNm","gear_T_BC_kNm","gear_T_CD_kNm","gear_T_DE_kNm","gear_T_EF_kNm","gear_abs_T_AB_kNm","gear_abs_T_BC_kNm","gear_abs_T_CD_kNm","gear_abs_T_DE_kNm","gear_abs_T_EF_kNm","gear_tau_AB_MPa","gear_tau_BC_MPa","gear_tau_CD_MPa","gear_tau_DE_MPa","gear_tau_EF_MPa","gear_governing_torque_kNm","gear_governing_segments","gear_governing_verb","gear_D_i_max_mm","gear_t_min_mm","gear_t_selected_mm","gear_D_i_selected_mm","gear_tau_selected_MPa","gear_utilization","gear_thickness_assessment","gear_recommendation"],
+  "image":"assets/gear-shaft-industry-context.png",
+  "idealizedImage":"assets/gear-shaft-instructor-idealization.png",
+  "idealizedImageAlt":"Instructor reference idealization of a multi-gear circular shaft with bearings at A and E, applied gear torques at B, C, D, and F, and labeled shaft segments.",
+  "source":"index.html",
+  "problemStatement":"<p>A manufacturing line uses a common rotating shaft to distribute mechanical power among several gear-driven stations. Each gear introduces or removes torque, so the internal torque changes from segment to segment.</p><p>The design team is evaluating the existing solid shaft and a tubular replacement with the same outer diameter. The base model includes shaft-axis torque only; gear forces, bending, fatigue, local stress concentrations, and dynamic effects are excluded.</p>",
+  "engineeringGoal":"<p>Determine the signed internal torque and maximum torsional shear stress in every shaft segment, identify the governing segment, and select the minimum available tubular wall thickness that satisfies the allowable shear-stress requirement.</p>"
+}

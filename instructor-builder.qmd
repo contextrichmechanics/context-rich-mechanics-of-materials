@@ -835,6 +835,117 @@ function variableMap(problem) {
         : "The selected " + selectedLabel + " solid shaft does not satisfy the allowable torsional stress criterion. Increase the diameter before evaluating twist and the omitted real-system effects.";
   }
 
+  const gearTorqueB = numericValue(values, "gear_T_B");
+  const gearTorqueC = numericValue(values, "gear_T_C");
+  const gearTorqueD = numericValue(values, "gear_T_D");
+  const gearTorqueF = numericValue(values, "gear_T_F");
+  const gearSolidDiameter = numericValue(values, "gear_d");
+  const gearOuterDiameter = numericValue(values, "gear_D_o");
+  const gearAllowableStress = numericValue(values, "gear_tau_allow");
+  const gearWallStep = numericValue(values, "gear_t_step");
+  const gearLengthAB = numericValue(values, "gear_L_AB");
+  const gearLengthBC = numericValue(values, "gear_L_BC");
+  const gearLengthCD = numericValue(values, "gear_L_CD");
+  const gearLengthDE = numericValue(values, "gear_L_DE");
+  const gearLengthEF = numericValue(values, "gear_L_EF");
+
+  if (
+    Number.isFinite(gearTorqueB) && Number.isFinite(gearTorqueC) &&
+    Number.isFinite(gearTorqueD) && Number.isFinite(gearTorqueF) &&
+    Number.isFinite(gearSolidDiameter) && gearSolidDiameter > 0 &&
+    Number.isFinite(gearOuterDiameter) && gearOuterDiameter > 0 &&
+    Number.isFinite(gearAllowableStress) && gearAllowableStress > 0 &&
+    Number.isFinite(gearWallStep) && gearWallStep > 0 &&
+    Number.isFinite(gearLengthAB) && gearLengthAB > 0 &&
+    Number.isFinite(gearLengthBC) && gearLengthBC > 0 &&
+    Number.isFinite(gearLengthCD) && gearLengthCD > 0 &&
+    Number.isFinite(gearLengthDE) && gearLengthDE > 0 &&
+    Number.isFinite(gearLengthEF) && gearLengthEF > 0
+  ) {
+    const torqueSum = gearTorqueB + gearTorqueC + gearTorqueD + gearTorqueF;
+    const torqueTolerance = 1e-8 * Math.max(
+      Math.abs(gearTorqueB), Math.abs(gearTorqueC),
+      Math.abs(gearTorqueD), Math.abs(gearTorqueF), 1
+    );
+    const equilibriumPasses = Math.abs(torqueSum) <= torqueTolerance;
+    const segmentLabels = ["AB", "BC", "CD", "DE", "EF"];
+    const segmentTorques = [
+      0,
+      gearTorqueB,
+      gearTorqueB + gearTorqueC,
+      gearTorqueB + gearTorqueC + gearTorqueD,
+      gearTorqueB + gearTorqueC + gearTorqueD
+    ];
+    const torqueMagnitudes = segmentTorques.map((torque) => Math.abs(torque));
+    const segmentStresses = torqueMagnitudes.map(
+      (torque) => 16 * torque * 1e6 / (Math.PI * gearSolidDiameter ** 3)
+    );
+    const governingTorque = Math.max(...torqueMagnitudes);
+    const governingTolerance = 1e-10 * Math.max(governingTorque, 1);
+    const governingSegments = segmentLabels.filter(
+      (_, index) => Math.abs(torqueMagnitudes[index] - governingTorque) <= governingTolerance
+    );
+    const governingLabel = governingSegments.length === 1
+      ? `Segment ${governingSegments[0]}`
+      : `Segments ${governingSegments.slice(0, -1).join(", ")} and ${governingSegments.at(-1)}`;
+    const governingTorqueNmm = governingTorque * 1e6;
+    const hollowRadicand = gearOuterDiameter ** 4
+      - 16 * governingTorqueNmm * gearOuterDiameter / (Math.PI * gearAllowableStress);
+    const solidSectionIsFeasible = hollowRadicand >= -1e-10 * gearOuterDiameter ** 4;
+    const maximumInnerDiameter = solidSectionIsFeasible
+      ? Math.max(0, hollowRadicand) ** 0.25
+      : 0;
+    const minimumWall = (gearOuterDiameter - maximumInnerDiameter) / 2;
+    const selectedWall = Math.min(
+      gearOuterDiameter / 2,
+      Math.ceil(minimumWall / gearWallStep - 1e-12) * gearWallStep
+    );
+    const selectedInnerDiameter = Math.max(0, gearOuterDiameter - 2 * selectedWall);
+    const selectedStress = governingTorqueNmm === 0
+      ? 0
+      : 16 * governingTorqueNmm * gearOuterDiameter /
+        (Math.PI * (gearOuterDiameter ** 4 - selectedInnerDiameter ** 4));
+    const utilization = selectedStress / gearAllowableStress;
+    const stressPasses = selectedStress <= gearAllowableStress * (1 + 1e-10);
+    const formatSigned = (value) => value > torqueTolerance
+      ? `+${formatDerived(value, 3)}`
+      : formatDerived(value, 3);
+
+    values.gear_span_AE_mm = formatDerived(
+      gearLengthAB + gearLengthBC + gearLengthCD + gearLengthDE, 1
+    );
+    values.gear_torque_sum_kNm = formatSigned(torqueSum);
+    values.gear_equilibrium_assessment = equilibriumPasses
+      ? "The applied gear torques satisfy overall shaft-axis equilibrium."
+      : "The applied gear torques do not satisfy overall shaft-axis equilibrium; revise at least one torque before treating the model as a valid static assignment.";
+    segmentLabels.forEach((label, index) => {
+      values[`gear_T_${label}_kNm`] = formatSigned(segmentTorques[index]);
+      values[`gear_abs_T_${label}_kNm`] = formatDerived(torqueMagnitudes[index], 3);
+      values[`gear_tau_${label}_MPa`] = formatDerived(segmentStresses[index], 3);
+    });
+    values.gear_governing_torque_kNm = formatDerived(governingTorque, 3);
+    values.gear_governing_segments = governingLabel;
+    values.gear_governing_verb = governingSegments.length === 1 ? "governs" : "govern";
+    values.gear_D_i_max_mm = formatDerived(maximumInnerDiameter, 3);
+    values.gear_t_min_mm = formatDerived(minimumWall, 3);
+    values.gear_t_selected_mm = formatDerived(selectedWall, 3);
+    values.gear_D_i_selected_mm = formatDerived(selectedInnerDiameter, 3);
+    values.gear_tau_selected_MPa = formatDerived(selectedStress, 3);
+    values.gear_utilization = formatDerived(utilization, 4);
+    values.gear_thickness_assessment = !equilibriumPasses
+      ? "The numerical stress result is provisional because the assigned external torques are not in equilibrium."
+      : !solidSectionIsFeasible
+        ? "Even a solid shaft with the assigned outer diameter exceeds the allowable stress; a larger outer diameter or different design criterion is required."
+        : stressPasses
+          ? "The selected wall thickness satisfies the allowable torsional shear-stress criterion."
+          : "The selected wall thickness does not satisfy the allowable torsional shear-stress criterion.";
+    values.gear_recommendation = !equilibriumPasses
+      ? "Do not approve a shaft size until the applied gear torques satisfy overall shaft-axis equilibrium."
+      : solidSectionIsFeasible && stressPasses
+        ? `Use a tubular shaft with outer diameter ${formatDerived(gearOuterDiameter, 3)} mm and wall thickness of at least ${formatDerived(selectedWall, 3)} mm for the simplified pure-torsion model. Its calculated governing shear stress is ${formatDerived(selectedStress, 3)} MPa, or ${formatDerived(100 * utilization, 1)}% of the assigned allowable stress.`
+        : "Increase the tubular-shaft outer diameter or revise the allowable-stress design before completing the omitted combined-loading and durability checks.";
+  }
+
   const plateLoadA = numericValue(values, "P_A");
   const plateLoadB1 = numericValue(values, "P_B1");
   const plateLoadB2 = numericValue(values, "P_B2");

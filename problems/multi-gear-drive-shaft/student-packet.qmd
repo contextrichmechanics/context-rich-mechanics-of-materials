@@ -1,0 +1,24 @@
+---
+title: "Student Packet - Multi-Gear Drive Shaft"
+subtitle: "Torque Distribution, Torsional Shear Stress, and Hollow-Shaft Sizing"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+  pdf: {documentclass: scrartcl, papersize: letter, toc: true, number-sections: true}
+  ipynb: default
+jupyter: python3
+execute: {enabled: false}
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="gear-shaft-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "multi-gear-drive-shaft", targetId: "gear-shaft-student-questions", type: "student"});
+});
+</script>
+```

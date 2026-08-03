@@ -110,6 +110,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-GEAR-SHAFT-018",
+    "slug": "multi-gear-drive-shaft",
+    "title": "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft",
+    "status": "OK",
+    "variables": 13,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-WHEEL-005",
     "slug": "spoked-wheel-load-sharing",
     "title": "Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load",

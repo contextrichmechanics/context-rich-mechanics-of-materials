@@ -1,0 +1,27 @@
+---
+title: "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft"
+description: "A context-rich torsion problem on torque diagrams, segment stresses, and tubular-shaft sizing."
+image: "assets/gear-shaft-industry-context.png"
+categories: [context-rich, mechanics-of-materials, design]
+course_topics: [torsion, internal torque, torque diagrams, shear stress, hollow shafts]
+textbook_chapters: [Torsion of circular shafts, Internal torque diagrams, Torsional shear stress, Hollow-shaft sizing]
+problem_types: [load-path analysis, internal-resultant calculation, stress calculation, component sizing, engineering evaluation]
+competencies: [torque equilibrium, sign conventions, internal torque diagrams, section-property selection, design verification, engineering judgment]
+industries: [production machinery, conveyors, rolling equipment, industrial line shafts]
+difficulty: "Intermediate to advanced"
+status: "Draft"
+problem_id: "MOS-GEAR-SHAFT-018"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for signed torque equilibrium, segment-by-segment internal torque, a torque diagram, solid-shaft stress, governing-segment selection, and tubular wall-thickness verification.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=multi-gear-drive-shaft){.btn .btn-secondary}

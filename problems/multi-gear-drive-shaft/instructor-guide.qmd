@@ -1,0 +1,44 @@
+---
+title: "Instructor Guide - Multi-Gear Drive Shaft"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+  pdf: {documentclass: scrartcl, papersize: letter, toc: true, number-sections: true}
+  ipynb: default
+jupyter: python3
+execute: {enabled: false}
+---
+
+# Purpose
+
+Award credit for a consistent torque sign convention, correct cumulative internal torques, a labeled torque diagram, proper circular-shaft stress equations, upward wall-thickness selection, verification, and a bounded engineering recommendation.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="gear-shaft-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "multi-gear-drive-shaft", targetId: "gear-shaft-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes circular prismatic shaft segments, concentrated static torques, ideal bearings that do not resist shaft-axis torque, linear elasticity, and Saint-Venant torsion. A complete design also requires gear-force bending, combined stress, fatigue, keyways and shoulders, stress concentrations, angular twist, critical speed, bearing selection, tolerances, and applicable standards.
+
+# Supplemental Assessment Structure
+
+- context interpretation and idealization: 20%;
+- torque equilibrium and internal torque diagram: 30%;
+- solid-shaft stress and governing segment: 20%;
+- tubular-shaft sizing and verification: 20%;
+- engineering recommendation and limitations: 10%.

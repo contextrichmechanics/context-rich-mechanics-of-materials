@@ -1,0 +1,7 @@
+{
+  "id":"section-a",
+  "title":"Homework Version A - baseline multi-gear shaft",
+  "description":"Default sequence for torque equilibrium, internal torque diagrams, segment stresses, governing-segment selection, and tubular-shaft sizing.",
+  "selectedQuestions":["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19"],
+  "variables":{"gear_T_B":40,"gear_T_C":-60,"gear_T_D":-30,"gear_T_F":50,"gear_d":160,"gear_D_o":160,"gear_tau_allow":90,"gear_t_step":1,"gear_L_AB":400,"gear_L_BC":500,"gear_L_CD":450,"gear_L_DE":400,"gear_L_EF":500}
+}
