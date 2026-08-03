@@ -197,28 +197,6 @@ Each question should include:
 - `gradingNotes`: optional notes shown only in instructor output.
 - `commonMistakes`: optional common mistakes shown only in instructor output.
 
-# Editing Questions Without Writing JSON
-
-Use the Question Editor page when you want to edit questions in a form rather than editing `questions.json` directly.
-
-Workflow:
-
-1. Open **Question Editor** from the site navigation.
-2. Select the problem.
-3. Select, edit, add, duplicate, or delete questions.
-4. Check the validation messages.
-5. Click **Download questions.json**.
-6. Replace the problem package's existing `questions.json` with the downloaded file.
-7. Run:
-
-```bash
-node scripts/build-catalog.mjs
-quarto render instructor-builder.qmd
-quarto render index.qmd
-```
-
-The editor validates required fields, duplicate question IDs, and unknown placeholders such as `{{diameter}}` when no variable key named `diameter` exists.
-
 # Question Design
 
 Every problem packet follows the same teaching sequence:
@@ -233,7 +211,7 @@ Student packets show the prompts in this sequence without solutions. Instructor 
 
 The official instructor idealization must not appear before the `transition` questions. Students should first interpret the real system and create their own model. The official diagram and numerical variables are then revealed for the common mechanics analysis.
 
-In the Question Editor, choose the **Packet section** for every question. New questions should be assigned by purpose:
+In `questions.json`, set the `section` field for every question. Assign new questions by purpose:
 
 - Use `context` when the answer comes from interpreting the physical system or engineering situation.
 - Use `transition` when students create or justify an idealization, FBD, assumptions, or analysis plan.

@@ -84,9 +84,6 @@ You can also scaffold a package:
 node scripts/new-problem.mjs "Pressure Vessel Tank"
 ```
 
-Professors who prefer forms over JSON can use `question-editor.qmd` to edit,
-validate, and download a replacement `questions.json`.
-
 ## Modular problem packages for the Instructor Builder
 
 For scalable authoring, each problem should also provide a small data package:

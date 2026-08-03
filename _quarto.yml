@@ -19,8 +19,6 @@ website:
         text: Problem Library
       - href: instructor-builder.qmd
         text: Instructor Builder
-      - href: question-editor.qmd
-        text: Question Editor
       - href: docs/authoring-guide.qmd
         text: Authoring Guide
       - href: docs/problem-health.qmd

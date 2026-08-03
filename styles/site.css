@@ -405,35 +405,6 @@
   background: #fff3cd;
   color: #7a5200;
 }
-.editor-shell {
-  align-items: start;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
-}
-.editor-panel,
-.editor-form,
-.editor-preview {
-  border: 1px solid #dee2e6;
-  border-radius: 0.35rem;
-  background: #fff;
-  padding: 1rem;
-}
-.editor-panel {
-  position: sticky;
-  top: 1rem;
-}
-.editor-preview {
-  grid-column: 2;
-}
-.editor-grid {
-  display: grid;
-  gap: 0.75rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.editor-wide {
-  grid-column: 1 / -1;
-}
 .builder-field input,
 .builder-field textarea {
   border: 1px solid #ced4da;
@@ -447,45 +418,11 @@
 .builder-field textarea {
   resize: vertical;
 }
-.editor-checkbox {
-  align-items: center;
-  display: flex;
-  gap: 0.45rem;
-}
-.editor-validation {
-  border-radius: 0.3rem;
-  font-size: 0.82rem;
-  margin-top: 0.9rem;
-  padding: 0.65rem 0.75rem;
-}
-.editor-validation.ok {
-  background: #e8f5e9;
-  color: #1b5e20;
-}
-.editor-validation.review {
-  background: #fff3cd;
-  color: #7a5200;
-}
-.editor-validation ul {
-  margin-bottom: 0;
-  padding-left: 1.1rem;
-}
 @media (max-width: 900px) {
   .builder-shell {
     grid-template-columns: 1fr;
   }
   .builder-panel {
     position: static;
-  }
-  .editor-shell {
-    grid-template-columns: 1fr;
-  }
-  .editor-panel,
-  .editor-preview {
-    grid-column: auto;
-    position: static;
-  }
-  .editor-grid {
-    grid-template-columns: 1fr;
   }
 }
