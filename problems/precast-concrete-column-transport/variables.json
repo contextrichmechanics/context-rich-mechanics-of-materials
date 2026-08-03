@@ -1,0 +1,4 @@
+[
+  {"key":"column_L","symbol":"L","label":"Total column length","value":40,"unit":"ft","min":5,"max":200,"step":1},
+  {"key":"column_w","symbol":"w","label":"Uniform column self-weight","value":0.45,"unit":"kip/ft","min":0.01,"max":10,"step":0.01}
+]

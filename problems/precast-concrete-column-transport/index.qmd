@@ -1,0 +1,28 @@
+---
+title: "Optimal Support Placement for Transporting a Precast Concrete Column"
+description: "A symmetric overhanging-beam problem on reactions, shear, bending moment, diagrams, and minimax support placement."
+image: "assets/precast-column-industry-context.png"
+categories: [context-rich, mechanics-of-materials, design]
+mechanics_concepts: [equilibrium, shear force, bending moment, beam diagrams, optimization]
+course_topics: [beam equilibrium, shear diagrams, bending-moment diagrams, overhanging beams, design optimization]
+textbook_chapters: [Beam equilibrium, Shear-force diagrams, Bending-moment diagrams, Design optimization]
+problem_types: [load-path analysis, internal-resultant calculation, diagram construction, optimization, engineering evaluation]
+competencies: [free-body diagrams, symmetry, piecewise functions, critical-section identification, engineering judgment]
+industries: [precast concrete, construction logistics, structural transportation, material handling]
+difficulty: "Intermediate"
+status: "Draft"
+problem_id: "MOS-TRANSPORT-022"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Optimization Focus"}
+The support offset is a design variable. Students balance the negative support moment against the positive center moment to minimize the absolute maximum bending demand.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=precast-concrete-column-transport){.btn .btn-secondary}

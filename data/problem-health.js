@@ -120,6 +120,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-TRANSPORT-022",
+    "slug": "precast-concrete-column-transport",
+    "title": "Optimal Support Placement for Transporting a Precast Concrete Column",
+    "status": "OK",
+    "variables": 2,
+    "questions": 22,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-WHEEL-005",
     "slug": "spoked-wheel-load-sharing",
     "title": "Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load",

@@ -783,6 +783,42 @@
           : `The selected ${selectedLabel} solid shaft does not satisfy the allowable torsional stress criterion. Increase the diameter before evaluating twist and the omitted real-system effects.`;
     }
 
+    const columnLength = numericValue(values, "column_L");
+    const columnUniformLoad = numericValue(values, "column_w");
+
+    if (
+      Number.isFinite(columnLength) && columnLength > 0 &&
+      Number.isFinite(columnUniformLoad) && columnUniformLoad > 0
+    ) {
+      const optimalRatio = (Math.sqrt(2) - 1) / 2;
+      const momentCoefficient = (3 - 2 * Math.sqrt(2)) / 8;
+      const optimalOffset = optimalRatio * columnLength;
+      const supportSpacing = columnLength - 2 * optimalOffset;
+      const totalWeight = columnUniformLoad * columnLength;
+      const reaction = totalWeight / 2;
+      const maximumMoment = momentCoefficient * columnUniformLoad * columnLength ** 2;
+      const overhangShear = columnUniformLoad * optimalOffset;
+      const interiorShear = reaction - overhangShear;
+
+      values.column_optimal_ratio = formatDerived(optimalRatio, 4);
+      values.column_optimal_offset_ft = formatDerived(optimalOffset, 3);
+      values.column_support_spacing_ft = formatDerived(supportSpacing, 3);
+      values.column_total_weight_kip = formatDerived(totalWeight, 3);
+      values.column_reaction_kip = formatDerived(reaction, 3);
+      values.column_support_moment_kipft = formatDerived(-maximumMoment, 3);
+      values.column_center_moment_kipft = formatDerived(maximumMoment, 3);
+      values.column_max_abs_moment_kipft = formatDerived(maximumMoment, 3);
+      values.column_moment_coefficient = formatDerived(momentCoefficient, 5);
+      values.column_V_left_kip = formatDerived(0, 3);
+      values.column_V_left_support_minus_kip = formatDerived(-overhangShear, 3);
+      values.column_V_left_support_plus_kip = formatDerived(interiorShear, 3);
+      values.column_V_center_kip = formatDerived(0, 3);
+      values.column_V_right_support_minus_kip = formatDerived(-interiorShear, 3);
+      values.column_V_right_support_plus_kip = formatDerived(overhangShear, 3);
+      values.column_V_right_kip = formatDerived(0, 3);
+      values.column_recommendation = `Place each support ${formatDerived(optimalOffset, 3)} ft from its nearest column end, giving a support spacing of ${formatDerived(supportSpacing, 3)} ft. This minimizes the idealized static self-weight bending moment to ${formatDerived(maximumMoment, 3)} kip-ft. Before field use, also evaluate road-induced dynamics, tie-down forces, local support bearing, concrete cracking, member orientation, and support compliance.`;
+    }
+
     const robotOverhang = numericValue(values, "robot_a");
     const robotSupportSpacing = numericValue(values, "robot_b");
     const robotPayloadReach = numericValue(values, "robot_L");

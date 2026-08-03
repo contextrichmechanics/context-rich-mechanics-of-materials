@@ -1,0 +1,16 @@
+{
+  "id":"MOS-TRANSPORT-022",
+  "slug":"precast-concrete-column-transport",
+  "title":"Optimal Support Placement for Transporting a Precast Concrete Column",
+  "studentDocumentTitle":"Student Homework Questions",
+  "instructorDocumentTitle":"Instructor Answers",
+  "summary":"A symmetric overhanging-beam problem integrating load paths, support reactions, piecewise shear and moment functions, diagram construction, and minimax support-placement optimization.",
+  "textbookChapters":["Beam equilibrium","Shear-force diagrams","Bending-moment diagrams","Design optimization"],
+  "derivedPlaceholders":["column_optimal_ratio","column_optimal_offset_ft","column_support_spacing_ft","column_total_weight_kip","column_reaction_kip","column_support_moment_kipft","column_center_moment_kipft","column_max_abs_moment_kipft","column_moment_coefficient","column_V_left_kip","column_V_left_support_minus_kip","column_V_left_support_plus_kip","column_V_center_kip","column_V_right_support_minus_kip","column_V_right_support_plus_kip","column_V_right_kip","column_recommendation"],
+  "image":"assets/precast-column-industry-context.png",
+  "idealizedImage":"assets/precast-column-instructor-idealization.png",
+  "idealizedImageAlt":"Instructor reference idealization of a uniformly loaded precast column on two truck supports with equal end overhangs.",
+  "source":"index.html",
+  "problemStatement":"<p>A precast-concrete manufacturer must transport a long, uniform column from the casting yard to a construction site. Two timber or elastomeric support blocks carry the member on a flatbed trailer. The column self-weight acts continuously over its length, and poor support placement can create excessive transport-induced bending.</p><p>Model the column as a prismatic beam of total length <em>L</em> under uniform load <em>w</em>, with two simple supports placed at equal offsets <em>a</em> from the ends.</p>",
+  "engineeringGoal":"<p>Determine the equal support offset that minimizes the absolute maximum bending moment, construct the corresponding shear-force and bending-moment diagrams, and identify the governing positive and negative moment locations.</p>"
+}

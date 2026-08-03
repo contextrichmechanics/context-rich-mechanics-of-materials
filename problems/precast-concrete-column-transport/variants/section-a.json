@@ -1,0 +1,7 @@
+{
+  "id":"section-a",
+  "title":"Homework Version A - 40 ft precast column",
+  "description":"Baseline symbolic optimization with numerical diagram ordinates for a 40 ft uniformly loaded precast column.",
+  "selectedQuestions":["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19","q20","q21","q22"],
+  "variables":{"column_L":40,"column_w":0.45}
+}

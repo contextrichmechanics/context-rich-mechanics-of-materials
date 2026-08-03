@@ -1,0 +1,44 @@
+---
+title: "Instructor Guide - Precast Concrete Column Transport"
+subtitle: "Representative Solutions and Optimization Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+  pdf: {documentclass: scrartcl, papersize: letter, toc: true, number-sections: true}
+  ipynb: default
+jupyter: python3
+execute: {enabled: false}
+---
+
+# Purpose
+
+Award credit for a correct symmetric overhanging-beam idealization, reactions, piecewise shear and moment functions, diagram construction, minimax derivation, and a support-placement recommendation bounded by the model assumptions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="precast-column-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "precast-concrete-column-transport", targetId: "precast-column-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes a straight, uniform, prismatic column under static self-weight, simple point supports, continuous contact, and small deformation. A complete transport design must also evaluate road dynamics, tie-down forces, local bearing and crushing, cracking, lifting history, member orientation, support compliance, trailer flexibility, and applicable safety requirements.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 15%;
+- idealization and assumptions: 15%;
+- reactions and piecewise functions: 30%;
+- optimization and diagrams: 30%;
+- engineering recommendation and limitations: 10%.

@@ -6319,6 +6319,503 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-TRANSPORT-022",
+    "slug": "precast-concrete-column-transport",
+    "title": "Optimal Support Placement for Transporting a Precast Concrete Column",
+    "studentDocumentTitle": "Student Homework Questions",
+    "instructorDocumentTitle": "Instructor Answers",
+    "summary": "A symmetric overhanging-beam problem integrating load paths, support reactions, piecewise shear and moment functions, diagram construction, and minimax support-placement optimization.",
+    "textbookChapters": [
+      "Beam equilibrium",
+      "Shear-force diagrams",
+      "Bending-moment diagrams",
+      "Design optimization"
+    ],
+    "derivedPlaceholders": [
+      "column_optimal_ratio",
+      "column_optimal_offset_ft",
+      "column_support_spacing_ft",
+      "column_total_weight_kip",
+      "column_reaction_kip",
+      "column_support_moment_kipft",
+      "column_center_moment_kipft",
+      "column_max_abs_moment_kipft",
+      "column_moment_coefficient",
+      "column_V_left_kip",
+      "column_V_left_support_minus_kip",
+      "column_V_left_support_plus_kip",
+      "column_V_center_kip",
+      "column_V_right_support_minus_kip",
+      "column_V_right_support_plus_kip",
+      "column_V_right_kip",
+      "column_recommendation"
+    ],
+    "image": "problems/precast-concrete-column-transport/assets/precast-column-industry-context.png",
+    "idealizedImage": "problems/precast-concrete-column-transport/assets/precast-column-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference idealization of a uniformly loaded precast column on two truck supports with equal end overhangs.",
+    "source": "problems/precast-concrete-column-transport/index.html",
+    "problemStatement": "<p>A precast-concrete manufacturer must transport a long, uniform column from the casting yard to a construction site. Two timber or elastomeric support blocks carry the member on a flatbed trailer. The column self-weight acts continuously over its length, and poor support placement can create excessive transport-induced bending.</p><p>Model the column as a prismatic beam of total length <em>L</em> under uniform load <em>w</em>, with two simple supports placed at equal offsets <em>a</em> from the ends.</p>",
+    "engineeringGoal": "<p>Determine the equal support offset that minimizes the absolute maximum bending moment, construct the corresponding shear-force and bending-moment diagrams, and identify the governing positive and negative moment locations.</p>",
+    "variables": [
+      {
+        "key": "column_L",
+        "symbol": "L",
+        "label": "Total column length",
+        "value": 40,
+        "unit": "ft",
+        "min": 5,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "key": "column_w",
+        "symbol": "w",
+        "label": "Uniform column self-weight",
+        "value": 0.45,
+        "unit": "kip/ft",
+        "min": 0.01,
+        "max": 10,
+        "step": 0.01
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Role of the Transport Supports",
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "support function",
+          "transport",
+          "load transfer"
+        ],
+        "learningObjectives": [
+          "State the structural role of the transport supports."
+        ],
+        "selected": true,
+        "student": "<p>State the role of the two transport supports.</p>",
+        "instructor": "<p>The supports transfer the column self-weight to the trailer while controlling bending demand in the transported member.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q2",
+        "title": "Dominant External Loading",
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "self-weight",
+          "uniform load",
+          "beam loading"
+        ],
+        "learningObjectives": [
+          "Identify the dominant load in the simplified model."
+        ],
+        "selected": true,
+        "student": "<p>Identify the dominant external load acting on the column in the simplified transport model.</p>",
+        "instructor": "<p>The column self-weight is represented by a uniform distributed load <em>w</em> over the full length <em>L</em>.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q3",
+        "title": "Support Boundary Conditions",
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "tags": [
+          "simple supports",
+          "vertical reactions",
+          "rotation"
+        ],
+        "learningObjectives": [
+          "Describe the support idealizations and admitted reactions."
+        ],
+        "selected": true,
+        "student": "<p>How should the two transport supports be idealized, and which reactions do they provide?</p>",
+        "instructor": "<p>Model them as simple point supports that permit rotation and provide upward vertical reactions but no reaction moments.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path to the Road",
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "load path",
+          "trailer",
+          "truck axles"
+        ],
+        "learningObjectives": [
+          "Trace the column load to the road surface."
+        ],
+        "selected": true,
+        "student": "<p>Trace the load path from the column to the road.</p>",
+        "instructor": "<p>Column self-weight transfers through the transport blocks to the trailer bed and frame, then through the suspension and axles to the road surface.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q5",
+        "title": "Expected Critical Moment Locations",
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "positive moment",
+          "negative moment",
+          "symmetry"
+        ],
+        "learningObjectives": [
+          "Anticipate the locations of positive and negative moment extrema."
+        ],
+        "selected": true,
+        "student": "<p>Before calculating, where should the governing positive and negative bending moments be expected?</p>",
+        "instructor": "<p>Negative moments occur at the two supports because of the overhangs. By symmetry, the maximum positive moment occurs at the beam center.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q6",
+        "title": "Symmetric Support Arrangement",
+        "type": "symmetry reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "symmetry",
+          "support placement",
+          "uniform beam"
+        ],
+        "learningObjectives": [
+          "Justify equal offsets using geometry and loading symmetry."
+        ],
+        "selected": true,
+        "student": "<p>Why is it reasonable to place the supports at equal offsets from the two ends?</p>",
+        "instructor": "<p>The uniform column geometry and distributed loading are symmetric, so the optimal idealized static support arrangement is also symmetric.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q7",
+        "title": "Support-Placement Tradeoff",
+        "type": "engineering reasoning",
+        "difficulty": "intermediate",
+        "tags": [
+          "overhang",
+          "center moment",
+          "minimax design"
+        ],
+        "learningObjectives": [
+          "Explain the competing effects controlled by support location."
+        ],
+        "selected": true,
+        "student": "<p>Explain why placing the supports either too close to the ends or too close to the center is unfavorable.</p>",
+        "instructor": "<p>Supports near the ends leave a long interior span and produce a large positive center moment. Supports near the center create long overhangs and large negative support moments.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Beam Idealization",
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "tags": [
+          "overhanging beam",
+          "uniform load",
+          "support offset"
+        ],
+        "learningObjectives": [
+          "Translate the transport system into a beam model and FBD."
+        ],
+        "selected": true,
+        "student": "<p>Before viewing the reference figure, draw a beam of total length <em>L</em> carrying uniform load <em>w</em>. Place supports at <em>x</em> = <em>a</em> and <em>x</em> = <em>L</em> - <em>a</em>, and label the equal overhangs and reactions.</p>",
+        "instructor": "<p>A valid FBD shows a uniformly loaded beam from <em>x</em> = 0 to <em>x</em> = <em>L</em>, upward reactions <em>R</em><sub>1</sub> and <em>R</em><sub>2</sub> at the two supports, and equal end overhangs <em>a</em>.</p>",
+        "gradingNotes": "<p>Students should create their model before seeing the instructor reference idealization.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "tags": [
+          "static loading",
+          "prismatic beam",
+          "point supports"
+        ],
+        "learningObjectives": [
+          "State assumptions defining the model's scope."
+        ],
+        "selected": true,
+        "student": "<p>State the assumptions used to represent the transport condition.</p>",
+        "instructor": "<p>Assume a straight, uniform, prismatic column; uniformly distributed self-weight; static loading; point supports; continuous contact with both supports; and small deformation. Neglect road dynamics, tie-down forces, local bearing stress, and cracking.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q10",
+        "title": "Optimization Analysis Plan",
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "tags": [
+          "equilibrium",
+          "piecewise functions",
+          "minimax optimization"
+        ],
+        "learningObjectives": [
+          "Plan the mechanics and optimization sequence."
+        ],
+        "selected": true,
+        "student": "<p>List the calculation sequence needed to find the optimal support offset.</p>",
+        "instructor": "<p>Use symmetry and equilibrium to find the reactions; derive piecewise shear and moment functions; identify the negative support and positive center moments; equate their magnitudes; solve for <em>a/L</em>; and construct the optimized diagrams.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q11",
+        "title": "Support Locations and Reactions",
+        "type": "mechanics setup",
+        "difficulty": "introductory",
+        "tags": [
+          "boundary conditions",
+          "reaction directions",
+          "beam coordinate"
+        ],
+        "learningObjectives": [
+          "Identify support coordinates and reaction directions."
+        ],
+        "selected": true,
+        "student": "<p>Identify the support locations and reaction directions using coordinate <em>x</em> measured from the left end.</p>",
+        "instructor": "<p>The supports are at <em>x</em> = <em>a</em> and <em>x</em> = <em>L</em> - <em>a</em>. Each provides an upward vertical reaction.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q12",
+        "title": "Support Reactions",
+        "type": "beam equilibrium",
+        "difficulty": "introductory",
+        "tags": [
+          "symmetry",
+          "vertical equilibrium",
+          "reactions"
+        ],
+        "learningObjectives": [
+          "Determine reactions using symmetry and equilibrium."
+        ],
+        "selected": true,
+        "student": "<p>Use symmetry and vertical equilibrium to determine <em>R</em><sub>1</sub> and <em>R</em><sub>2</sub>.</p>",
+        "instructor": "<p>The total distributed load is <em>wL</em>. Therefore <em>R</em><sub>1</sub> = <em>R</em><sub>2</sub> = <em>wL</em>/2 = <strong>{{column_reaction_kip}} kip</strong>. The total column weight is <strong>{{column_total_weight_kip}} kip</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q13",
+        "title": "Piecewise Beam Regions",
+        "type": "analysis setup",
+        "difficulty": "introductory",
+        "tags": [
+          "beam regions",
+          "support discontinuities",
+          "piecewise analysis"
+        ],
+        "learningObjectives": [
+          "Partition the beam for internal-resultant equations."
+        ],
+        "selected": true,
+        "student": "<p>Divide the column into the three regions required for piecewise shear and moment analysis.</p>",
+        "instructor": "<p>Region I: 0 &le; <em>x</em> &lt; <em>a</em>; Region II: <em>a</em> &le; <em>x</em> &le; <em>L</em> - <em>a</em>; Region III: <em>L</em> - <em>a</em> &lt; <em>x</em> &le; <em>L</em>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q14",
+        "title": "Piecewise Shear Functions",
+        "type": "internal shear derivation",
+        "difficulty": "intermediate",
+        "tags": [
+          "shear force",
+          "piecewise functions",
+          "uniform load"
+        ],
+        "learningObjectives": [
+          "Derive shear force in all beam regions."
+        ],
+        "selected": true,
+        "student": "<p>Using upward force as positive, derive <em>V</em>(<em>x</em>) in each region.</p>",
+        "instructor": "<p>Region I: <em>V</em> = -<em>wx</em>. Region II: <em>V</em> = <em>wL</em>/2 - <em>wx</em>. Region III: <em>V</em> = <em>wL</em> - <em>wx</em>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q15",
+        "title": "Piecewise Bending-Moment Functions",
+        "type": "internal moment derivation",
+        "difficulty": "intermediate",
+        "tags": [
+          "bending moment",
+          "piecewise functions",
+          "free-end condition"
+        ],
+        "learningObjectives": [
+          "Derive bending moment in all beam regions."
+        ],
+        "selected": true,
+        "student": "<p>Derive <em>M</em>(<em>x</em>) in each region using <em>M</em>(0) = 0.</p>",
+        "instructor": "<p>Region I: <em>M</em> = -<em>wx</em><sup>2</sup>/2.</p><p>Region II: <em>M</em> = -<em>wx</em><sup>2</sup>/2 + (<em>wL</em>/2)(<em>x</em> - <em>a</em>).</p><p>Region III: <em>M</em> = -<em>wx</em><sup>2</sup>/2 + (<em>wL</em>/2)(<em>x</em> - <em>a</em>) + (<em>wL</em>/2)[<em>x</em> - (<em>L</em> - <em>a</em>)].</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q16",
+        "title": "Negative Support Moment",
+        "type": "critical-value calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "support moment",
+          "overhang",
+          "negative bending"
+        ],
+        "learningObjectives": [
+          "Calculate the negative moment at either support."
+        ],
+        "selected": true,
+        "student": "<p>Determine the bending moment at either support.</p>",
+        "instructor": "<p><em>M</em><sub>s</sub> = -<em>wa</em><sup>2</sup>/2. At the optimal offset, <em>M</em><sub>s</sub> = <strong>{{column_support_moment_kipft}} kip&middot;ft</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q17",
+        "title": "Positive Center Moment",
+        "type": "critical-value calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "center moment",
+          "positive bending",
+          "symmetry"
+        ],
+        "learningObjectives": [
+          "Calculate the positive moment at beam center."
+        ],
+        "selected": true,
+        "student": "<p>Determine the positive bending moment at <em>x</em> = <em>L</em>/2.</p>",
+        "instructor": "<p><em>M</em><sub>c</sub> = <em>wL</em><sup>2</sup>/8 - <em>wLa</em>/2. At the optimal offset, <em>M</em><sub>c</sub> = <strong>{{column_center_moment_kipft}} kip&middot;ft</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q18",
+        "title": "Minimax Condition",
+        "type": "optimization setup",
+        "difficulty": "intermediate",
+        "tags": [
+          "minimax",
+          "equal extrema",
+          "design equation"
+        ],
+        "learningObjectives": [
+          "Formulate the minimax support-placement condition."
+        ],
+        "selected": true,
+        "student": "<p>Apply a minimax argument by making the governing positive and negative moment magnitudes equal.</p>",
+        "instructor": "<p>Set |<em>M</em><sub>s</sub>| = <em>M</em><sub>c</sub>: <em>wa</em><sup>2</sup>/2 = <em>wL</em><sup>2</sup>/8 - <em>wLa</em>/2. Canceling <em>w</em> gives <em>a</em><sup>2</sup> + <em>La</em> - <em>L</em><sup>2</sup>/4 = 0.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q19",
+        "title": "Optimal Support Offset",
+        "type": "optimization calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "quadratic equation",
+          "optimal offset",
+          "dimensionless ratio"
+        ],
+        "learningObjectives": [
+          "Solve for the optimal dimensionless support offset."
+        ],
+        "selected": true,
+        "student": "<p>Solve the minimax equation and report <em>a</em> as a fraction of <em>L</em> and as a numerical value for the assigned column.</p>",
+        "instructor": "<p>The physically admissible root is <em>a</em> = [(&radic;2 - 1)/2]<em>L</em> = <strong>{{column_optimal_ratio}}<em>L</em></strong>. For <em>L</em> = {{column_L}} {{column_L_unit}}, <em>a</em> = <strong>{{column_optimal_offset_ft}} ft</strong>. The support spacing is <strong>{{column_support_spacing_ft}} ft</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q20",
+        "title": "Minimized Maximum Moment",
+        "type": "optimization result",
+        "difficulty": "intermediate",
+        "tags": [
+          "maximum bending moment",
+          "moment coefficient",
+          "design demand"
+        ],
+        "learningObjectives": [
+          "Calculate the minimized absolute maximum bending moment."
+        ],
+        "selected": true,
+        "student": "<p>Determine the minimized absolute maximum bending moment.</p>",
+        "instructor": "<p>|<em>M</em>|<sub>max</sub> = [ (3 - 2&radic;2)/8 ]<em>wL</em><sup>2</sup> = <strong>{{column_moment_coefficient}}<em>wL</em><sup>2</sup></strong> = <strong>{{column_max_abs_moment_kipft}} kip&middot;ft</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q21",
+        "title": "Optimized Shear and Moment Diagrams",
+        "type": "diagram construction",
+        "difficulty": "intermediate",
+        "tags": [
+          "shear diagram",
+          "moment diagram",
+          "key ordinates"
+        ],
+        "learningObjectives": [
+          "Construct and label optimized internal-resultant diagrams."
+        ],
+        "selected": true,
+        "student": "<p>Draw the optimized shear-force and bending-moment diagrams. Label the values at both ends, immediately before and after each support, and at the center.</p>",
+        "instructor": "<p>Shear values from left to right are: end <strong>{{column_V_left_kip}} kip</strong>; left support minus <strong>{{column_V_left_support_minus_kip}} kip</strong>; left support plus <strong>{{column_V_left_support_plus_kip}} kip</strong>; center <strong>{{column_V_center_kip}} kip</strong>; right support minus <strong>{{column_V_right_support_minus_kip}} kip</strong>; right support plus <strong>{{column_V_right_support_plus_kip}} kip</strong>; right end <strong>{{column_V_right_kip}} kip</strong>.</p><p>The moment diagram is quadratic and continuous: zero at both free ends, <strong>{{column_support_moment_kipft}} kip&middot;ft</strong> at each support, and <strong>{{column_center_moment_kipft}} kip&middot;ft</strong> at center.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q22",
+        "title": "Engineering Recommendation and Limits",
+        "type": "engineering judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "support recommendation",
+          "model limitations",
+          "transport design"
+        ],
+        "learningObjectives": [
+          "Communicate a support-placement recommendation with appropriate limits."
+        ],
+        "selected": true,
+        "student": "<p>Give a concise support-placement recommendation and state at least one important limitation of the model.</p>",
+        "instructor": "<p>{{column_recommendation}}</p>",
+        "gradingNotes": "<p>A complete recommendation should include the offset from each end and at least one omitted real-system effect.</p>",
+        "commonMistakes": "<p>Do not recommend the center-to-center support spacing as though it were the end offset.</p>",
+        "section": "analysis"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - 40 ft precast column",
+        "description": "Baseline symbolic optimization with numerical diagram ordinates for a 40 ft uniformly loaded precast column.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21",
+          "q22"
+        ],
+        "variables": {
+          "column_L": 40,
+          "column_w": 0.45
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-WHEEL-005",
     "slug": "spoked-wheel-load-sharing",
     "title": "Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load",
