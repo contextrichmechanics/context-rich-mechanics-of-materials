@@ -1,0 +1,22 @@
+# Context-Rich Solid Mechanics Problem
+
+## Bolt-Group Design for an Industrial Flanged Shaft Coupling
+
+### Engineering Context
+
+A reliability engineer is reviewing a rigid flanged coupling used between a rotating driver and a pump. Solid steel shafts carry torque into and out of the coupling, and identical bolts arranged on a circular pattern transfer torque between the mating flanges.
+
+The base model treats the flange plates as rigid and assumes that all bolts carry equal tangential shear force. The design compares average direct shear stress in each bolt with maximum torsional shear stress at the shaft surface.
+
+![Industrial flanged shaft coupling connecting rotating machinery.](assets/coupling-industry-context.png){fig-alt="Bolted flanged coupling joining two industrial rotating shafts." width=88%}
+
+### Main Engineering Goal
+
+Determine the theoretical number of coupling bolts, select the smallest practical integer bolt pattern, and verify that average bolt shear stress does not exceed maximum shaft torsional shear stress.
+
+### System Components
+
+- driving and driven solid circular shafts;
+- two mating rigid flanges;
+- equally spaced circular bolt group;
+- rotating driver and driven machine.

@@ -40,6 +40,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-COUPLING-017",
+    "slug": "flanged-shaft-coupling",
+    "title": "Bolt-Group Design for an Industrial Flanged Shaft Coupling",
+    "status": "OK",
+    "variables": 5,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-PRESS-006",
     "slug": "hydraulic-press-punching-shear",
     "title": "Hydraulic Press Punching Shear and Bearing Stress Check",

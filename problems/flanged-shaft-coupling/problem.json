@@ -1,0 +1,16 @@
+{
+  "id":"MOS-COUPLING-017",
+  "slug":"flanged-shaft-coupling",
+  "title":"Bolt-Group Design for an Industrial Flanged Shaft Coupling",
+  "studentDocumentTitle":"Student Homework Questions",
+  "instructorDocumentTitle":"Instructor Answers",
+  "summary":"A symbolic and numerical coupling problem comparing solid-shaft torsional stress with direct shear stress in a circular bolt group.",
+  "textbookChapters":["Torsion of circular shafts","Direct shear in connectors","Torque equilibrium","Connector sizing"],
+  "derivedPlaceholders":["coupling_torque_Nmm","coupling_shaft_J_mm4","coupling_shaft_tau_MPa","coupling_bolt_area_mm2","coupling_n_req","coupling_n_integer","coupling_n_selected","coupling_pattern_assessment","coupling_bolt_force_N","coupling_bolt_tau_MPa","coupling_stress_ratio","coupling_stress_assessment","coupling_recommendation"],
+  "image":"assets/coupling-industry-context.png",
+  "idealizedImage":"assets/coupling-instructor-idealization.png",
+  "idealizedImageAlt":"Instructor reference idealization of two flanged shafts transmitting torque through equally spaced bolts on a circular pattern.",
+  "source":"index.html",
+  "problemStatement":"<p>A reliability engineer is reviewing a rigid flanged coupling between a rotating driver and a pump. Identical bolts on a circular pattern transfer torque between the mating flanges.</p><p>The simplified model treats the flanges as rigid and assumes uniform direct shear among the bolts. Bolt preload, frictional torque transfer, bending, bearing, fatigue, and local stress concentrations are excluded.</p>",
+  "engineeringGoal":"<p>Determine the theoretical bolt count that makes average bolt shear stress no greater than maximum shaft torsional shear stress, select a practical integer bolt pattern, and verify the resulting stress inequality.</p>"
+}
