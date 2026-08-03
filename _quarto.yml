@@ -29,7 +29,7 @@ website:
         text: About
     right:
       - icon: github
-        href: https://github.com/
+        href: https://github.com/contextrichmechanics/context-rich-mechanics-of-materials
   page-footer:
     left: "Context-Rich Mechanics of Materials Problem Library"
 
