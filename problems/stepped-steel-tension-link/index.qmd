@@ -1,0 +1,53 @@
+---
+title: "Maximum Axial Load and Elongation of a Stepped Steel Tension Link"
+description: "A context-rich axial-loading problem on allowable stress, stepped-member elongation, and stiffness interpretation."
+image: "assets/link-industry-context.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - design
+course_topics:
+  - axial loading
+  - normal stress
+  - allowable load
+  - axial deformation
+  - stepped members
+textbook_chapters:
+  - Normal stress
+  - Axial loading
+  - Axial deformation
+  - Stepped members
+  - Allowable stress design
+problem_types:
+  - free-body diagram
+  - allowable stress
+  - axial deformation
+  - engineering evaluation
+competencies:
+  - load path reasoning
+  - critical-section identification
+  - allowable-load calculation
+  - segment deformation summation
+  - engineering judgment
+industries:
+  - machine frames
+  - structural bracing
+  - actuator linkages
+  - lifting fixtures
+difficulty: "Introductory to intermediate"
+status: "Draft"
+problem_id: "MOS-LINK-013"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for critical-section reasoning, allowable axial load, three-segment elongation, and stiffness interpretation.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=stepped-steel-tension-link){.btn .btn-secondary}

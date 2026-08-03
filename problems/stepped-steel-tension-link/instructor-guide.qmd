@@ -1,0 +1,57 @@
+---
+title: "Instructor Guide - Stepped Steel Tension Link"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+    number-sections: true
+  ipynb: default
+jupyter: python3
+execute:
+  enabled: false
+---
+
+# Purpose
+
+These answers are representative. Award credit for a centered axial load path, correct rectangular areas, identification of the minimum-area section, consistent N-mm-MPa units, and summation of all segment elongations.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="link-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "stepped-steel-tension-link",
+    targetId: "link-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base problem uses average axial stress and prismatic-segment elongation. Local fillet stress concentration, pin-hole net-section stress, bearing, connection strength, fatigue, fracture, residual stress, and out-of-plane effects require additional geometry and material data.
+
+# Supplemental Assessment Structure
+
+Suggested weighting:
+
+- context interpretation and load path: 15%;
+- idealization and assumptions: 15%;
+- critical section and allowable load: 30%;
+- segment and total elongation: 30%;
+- engineering recommendation and limitations: 10%.

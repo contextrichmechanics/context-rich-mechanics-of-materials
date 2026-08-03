@@ -100,6 +100,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-LINK-013",
+    "slug": "stepped-steel-tension-link",
+    "title": "Maximum Axial Load and Elongation of a Stepped Steel Tension Link",
+    "status": "OK",
+    "variables": 9,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-CABLE-008",
     "slug": "suspended-equipment-cable-system",
     "title": "Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables",

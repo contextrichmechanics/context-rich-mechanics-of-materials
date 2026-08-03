@@ -655,6 +655,67 @@
       values.spring_dominant_value_in = formatDerived(dominant[1], 5);
     }
 
+    const linkAllowableStress = numericValue(values, "sigma_allow");
+    const linkThickness = numericValue(values, "t");
+    const linkEndWidth = numericValue(values, "w_1");
+    const linkCenterWidth = numericValue(values, "w_2");
+    const linkLengthAB = numericValue(values, "L_AB");
+    const linkLengthBC = numericValue(values, "L_BC");
+    const linkLengthCD = numericValue(values, "L_CD");
+    const linkModulus = numericValue(values, "E");
+
+    if (
+      Number.isFinite(linkAllowableStress) && linkAllowableStress > 0 &&
+      Number.isFinite(linkThickness) && linkThickness > 0 &&
+      Number.isFinite(linkEndWidth) && linkEndWidth > 0 &&
+      Number.isFinite(linkCenterWidth) && linkCenterWidth > 0 &&
+      Number.isFinite(linkLengthAB) && linkLengthAB > 0 &&
+      Number.isFinite(linkLengthBC) && linkLengthBC > 0 &&
+      Number.isFinite(linkLengthCD) && linkLengthCD > 0 &&
+      Number.isFinite(linkModulus) && linkModulus > 0
+    ) {
+      const areaAB = linkEndWidth * linkThickness;
+      const areaBC = linkCenterWidth * linkThickness;
+      const areaCD = areaAB;
+      const criticalArea = Math.min(areaAB, areaBC, areaCD);
+      const pMax = linkAllowableStress * criticalArea;
+      const stressAB = pMax / areaAB;
+      const stressBC = pMax / areaBC;
+      const stressCD = pMax / areaCD;
+      const elongationAB = pMax * linkLengthAB / (areaAB * linkModulus);
+      const elongationBC = pMax * linkLengthBC / (areaBC * linkModulus);
+      const elongationCD = pMax * linkLengthCD / (areaCD * linkModulus);
+      const elongationEntries = [["AB", elongationAB], ["BC", elongationBC], ["CD", elongationCD]];
+      const dominantElongation = elongationEntries.sort((left, right) => right[1] - left[1])[0];
+      const endSegmentsGovern = Math.abs(areaAB - criticalArea) < 1e-9;
+      const centerSegmentGoverns = Math.abs(areaBC - criticalArea) < 1e-9;
+      const criticalSection = endSegmentsGovern && centerSegmentGoverns
+        ? "all three constant-area segments"
+        : endSegmentsGovern ? "end segments AB and CD" : "center segment BC";
+      values.link_area_AB_mm2 = formatDerived(areaAB, 1);
+      values.link_area_BC_mm2 = formatDerived(areaBC, 1);
+      values.link_area_CD_mm2 = formatDerived(areaCD, 1);
+      values.link_critical_area_mm2 = formatDerived(criticalArea, 1);
+      values.link_critical_section = criticalSection;
+      values.link_critical_verb = criticalSection === "center segment BC" ? "governs" : "govern";
+      values.link_pmax_N = formatDerived(pMax, 0);
+      values.link_pmax_kN = formatDerived(pMax / 1000, 2);
+      values.link_stress_AB_MPa = formatDerived(stressAB, 1);
+      values.link_stress_BC_MPa = formatDerived(stressBC, 1);
+      values.link_stress_CD_MPa = formatDerived(stressCD, 1);
+      values.link_delta_AB_mm = formatDerived(elongationAB, 3);
+      values.link_delta_BC_mm = formatDerived(elongationBC, 3);
+      values.link_delta_CD_mm = formatDerived(elongationCD, 3);
+      values.link_delta_total_mm = formatDerived(elongationAB + elongationBC + elongationCD, 3);
+      values.link_dominant_segment = dominantElongation[0];
+      values.link_dominant_elongation_mm = formatDerived(dominantElongation[1], 3);
+      values.link_strength_modification = centerSegmentGoverns && !endSegmentsGovern
+        ? "Increase center width w2 or the common thickness t to enlarge the governing center-section area."
+        : endSegmentsGovern && !centerSegmentGoverns
+          ? "Increase end width w1 or the common thickness t to enlarge the governing end-section area."
+          : "Increase the common thickness t or increase all governing segment widths so that every minimum area grows.";
+    }
+
     const thermalLength = numericValue(values, "L");
     const thermalOuterDiameter = numericValue(values, "D_o");
     const thermalThickness = numericValue(values, "t");
