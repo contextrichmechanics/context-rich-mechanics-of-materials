@@ -783,6 +783,109 @@
           : `The selected ${selectedLabel} solid shaft does not satisfy the allowable torsional stress criterion. Increase the diameter before evaluating twist and the omitted real-system effects.`;
     }
 
+    const robotOverhang = numericValue(values, "robot_a");
+    const robotSupportSpacing = numericValue(values, "robot_b");
+    const robotPayloadReach = numericValue(values, "robot_L");
+    const robotUniformLoad = numericValue(values, "robot_w");
+    const robotPayload = numericValue(values, "robot_P");
+    const robotCylinderAngleDeg = numericValue(values, "robot_theta");
+
+    if (
+      Number.isFinite(robotOverhang) && robotOverhang >= 0 &&
+      Number.isFinite(robotSupportSpacing) && robotSupportSpacing > 0 &&
+      Number.isFinite(robotPayloadReach) && robotPayloadReach > 0 &&
+      Number.isFinite(robotUniformLoad) && robotUniformLoad >= 0 &&
+      Number.isFinite(robotPayload) && robotPayload >= 0 &&
+      Number.isFinite(robotCylinderAngleDeg) &&
+      robotCylinderAngleDeg > 0 && robotCylinderAngleDeg < 180
+    ) {
+      const totalLength = robotOverhang + robotSupportSpacing + robotPayloadReach;
+      const supportBPosition = robotOverhang + robotSupportSpacing;
+      const uniformResultant = robotUniformLoad * totalLength;
+      const uniformResultantOffset = totalLength / 2 - robotOverhang;
+      const reactionBy = (
+        uniformResultant * uniformResultantOffset +
+        robotPayload * (robotSupportSpacing + robotPayloadReach)
+      ) / robotSupportSpacing;
+      const angleRad = robotCylinderAngleDeg * Math.PI / 180;
+      const cylinderSignedForce = reactionBy / Math.sin(angleRad);
+      const cylinderForce = Math.abs(cylinderSignedForce);
+      const reactionBx = cylinderSignedForce * Math.cos(angleRad);
+      const reactionAx = -reactionBx;
+      const reactionAy = uniformResultant + robotPayload - reactionBy;
+      const momentAt = (position) => {
+        let moment = -robotUniformLoad * position ** 2 / 2;
+        if (position >= robotOverhang) {
+          moment += reactionAy * (position - robotOverhang);
+        }
+        if (position >= supportBPosition) {
+          moment += reactionBy * (position - supportBPosition);
+        }
+        return moment;
+      };
+      const candidates = [
+        {position: 0, label: "the left free tip"},
+        {position: robotOverhang, label: "pin A"},
+        {position: supportBPosition, label: "cylinder attachment B"},
+        {position: totalLength, label: "end C"}
+      ];
+      if (robotUniformLoad > 0) {
+        const region2ZeroShear = reactionAy / robotUniformLoad;
+        if (region2ZeroShear > robotOverhang && region2ZeroShear < supportBPosition) {
+          candidates.push({
+            position: region2ZeroShear,
+            label: "the zero-shear point between A and B"
+          });
+        }
+        const region3ZeroShear = (reactionAy + reactionBy) / robotUniformLoad;
+        if (region3ZeroShear > supportBPosition && region3ZeroShear < totalLength) {
+          candidates.push({
+            position: region3ZeroShear,
+            label: "the zero-shear point between B and C"
+          });
+        }
+      }
+      const governingCandidate = candidates
+        .map((candidate) => ({...candidate, moment: momentAt(candidate.position)}))
+        .sort((left, right) => Math.abs(right.moment) - Math.abs(left.moment))[0];
+      const direction = (value, positive, negative) => value >= 0 ? positive : negative;
+      const shearAMinus = -robotUniformLoad * robotOverhang;
+      const shearAPlus = shearAMinus + reactionAy;
+      const shearBMinus = -robotUniformLoad * supportBPosition + reactionAy;
+      const shearBPlus = shearBMinus + reactionBy;
+      const shearCMinus = -robotUniformLoad * totalLength + reactionAy + reactionBy;
+      const shearCPlus = shearCMinus - robotPayload;
+
+      values.robot_total_length_in = formatDerived(totalLength, 3);
+      values.robot_W_lb = formatDerived(uniformResultant, 3);
+      values.robot_xW_in = formatDerived(uniformResultantOffset, 3);
+      values.robot_By_lb = formatDerived(reactionBy, 3);
+      values.robot_F_BD_lb = formatDerived(cylinderForce, 3);
+      values.robot_Bx_lb = formatDerived(reactionBx, 3);
+      values.robot_cylinder_state = cylinderSignedForce >= 0 ? "compression" : "tension";
+      values.robot_Ax_signed_lb = formatDerived(reactionAx, 3);
+      values.robot_Ax_abs_lb = formatDerived(Math.abs(reactionAx), 3);
+      values.robot_Ax_direction = direction(reactionAx, "to the right", "to the left");
+      values.robot_Ay_signed_lb = formatDerived(reactionAy, 3);
+      values.robot_Ay_abs_lb = formatDerived(Math.abs(reactionAy), 3);
+      values.robot_Ay_direction = direction(reactionAy, "upward", "downward");
+      values.robot_V_left_lb = formatDerived(0, 3);
+      values.robot_V_A_minus_lb = formatDerived(shearAMinus, 3);
+      values.robot_V_A_plus_lb = formatDerived(shearAPlus, 3);
+      values.robot_V_B_minus_lb = formatDerived(shearBMinus, 3);
+      values.robot_V_B_plus_lb = formatDerived(shearBPlus, 3);
+      values.robot_V_C_minus_lb = formatDerived(shearCMinus, 3);
+      values.robot_V_C_plus_lb = formatDerived(shearCPlus, 3);
+      values.robot_M_A_lbin = formatDerived(momentAt(robotOverhang), 3);
+      values.robot_M_B_lbin = formatDerived(momentAt(supportBPosition), 3);
+      values.robot_M_C_lbin = formatDerived(momentAt(totalLength), 3);
+      values.robot_M_abs_max_lbin = formatDerived(Math.abs(governingCandidate.moment), 3);
+      values.robot_M_abs_max_lbft = formatDerived(Math.abs(governingCandidate.moment) / 12, 3);
+      values.robot_M_signed_max_lbin = formatDerived(governingCandidate.moment, 3);
+      values.robot_M_location = `${governingCandidate.label} (s = ${formatDerived(governingCandidate.position, 3)} in)`;
+      values.robot_recommendation = `Check the arm section at or immediately adjacent to ${governingCandidate.label} first in the subsequent bending-stress analysis. The simplified absolute maximum moment is ${formatDerived(Math.abs(governingCandidate.moment), 3)} lb-in. Demand can be reduced by lowering payload or uniform weight, shortening the relevant reach, or relocating the cylinder attachment to improve vertical-force leverage.`;
+    }
+
     const taperedTorque = numericValue(values, "taper_T");
     const taperedLength = numericValue(values, "taper_L");
     const taperedMinimumRadius = numericValue(values, "taper_r0");

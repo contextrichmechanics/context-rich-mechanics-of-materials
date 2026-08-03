@@ -1,0 +1,23 @@
+# Context-Rich Solid Mechanics Problem
+
+## Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm
+
+### Engineering Context
+
+A manufacturing facility uses a hydraulically actuated manipulator to lift and position heavy ring-shaped components. During inspection or assembly, the arm may remain stationary while carrying a payload. The horizontal arm is then subjected to its distributed self-weight and gripper weight plus a concentrated payload at the end.
+
+The structural-analysis team needs the internal shear-force and bending-moment demands along the arm before detailed stress or section-sizing checks are performed.
+
+![Industrial hydraulic manipulator holding a metal ring component.](assets/robot-arm-industry-context.png){fig-alt="Hydraulic industrial manipulator with a horizontal arm holding a heavy circular metal component." width=88%}
+
+### Main Engineering Goal
+
+Determine the hydraulic-cylinder force and pin reactions required for equilibrium, construct the shear-force and bending-moment diagrams, and identify the location and magnitude of the absolute maximum bending moment.
+
+### System Components
+
+- horizontal robot arm and gripper ABC;
+- pin connection at A;
+- hydraulic cylinder BD;
+- gripper and payload at C;
+- robot body, base, and floor support.

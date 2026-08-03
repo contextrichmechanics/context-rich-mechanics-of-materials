@@ -2639,6 +2639,518 @@
     ]
   },
   {
+    "id": "MOS-ROBOT-021",
+    "slug": "industrial-robot-arm-shear-moment",
+    "title": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
+    "studentDocumentTitle": "Student Homework Questions",
+    "instructorDocumentTitle": "Instructor Answers",
+    "summary": "A robot-arm beam problem integrating two-force-member modeling, whole-arm equilibrium, hydraulic-cylinder force, pin reactions, piecewise shear and moment functions, diagrams, and critical-section identification.",
+    "textbookChapters": [
+      "Planar rigid-body equilibrium",
+      "Two-force members",
+      "Shear-force diagrams",
+      "Bending-moment diagrams"
+    ],
+    "derivedPlaceholders": [
+      "robot_total_length_in",
+      "robot_W_lb",
+      "robot_xW_in",
+      "robot_By_lb",
+      "robot_F_BD_lb",
+      "robot_Bx_lb",
+      "robot_cylinder_state",
+      "robot_Ax_signed_lb",
+      "robot_Ax_abs_lb",
+      "robot_Ax_direction",
+      "robot_Ay_signed_lb",
+      "robot_Ay_abs_lb",
+      "robot_Ay_direction",
+      "robot_V_left_lb",
+      "robot_V_A_minus_lb",
+      "robot_V_A_plus_lb",
+      "robot_V_B_minus_lb",
+      "robot_V_B_plus_lb",
+      "robot_V_C_minus_lb",
+      "robot_V_C_plus_lb",
+      "robot_M_A_lbin",
+      "robot_M_B_lbin",
+      "robot_M_C_lbin",
+      "robot_M_abs_max_lbin",
+      "robot_M_abs_max_lbft",
+      "robot_M_signed_max_lbin",
+      "robot_M_location",
+      "robot_recommendation"
+    ],
+    "image": "problems/industrial-robot-arm-shear-moment/assets/robot-arm-industry-context.png",
+    "idealizedImage": "problems/industrial-robot-arm-shear-moment/assets/robot-arm-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference idealization of a horizontal robot arm with a left free overhang, pin A, hydraulic cylinder at B, end load at C, uniform load, and symbolic geometry.",
+    "source": "problems/industrial-robot-arm-shear-moment/index.html",
+    "problemStatement": "<p>A hydraulically actuated industrial manipulator holds a payload while stationary. Its horizontal arm carries a uniform downward load representing arm and gripper weight, plus a concentrated payload at C.</p><p>For the beam model, coordinate <em>s</em> is measured from the left free tip. Pin A is at <em>s</em> = <em>a</em>, cylinder attachment B is at <em>s</em> = <em>a</em> + <em>b</em>, and C is at <em>s</em> = <em>a</em> + <em>b</em> + <em>L</em>. Cylinder BD is an ideal two-force member.</p>",
+    "engineeringGoal": "<p>Determine the hydraulic-cylinder force and pin reactions, derive and construct the arm's shear-force and bending-moment diagrams, and identify the location and magnitude of the absolute maximum bending moment.</p>",
+    "variables": [
+      {
+        "key": "robot_a",
+        "symbol": "a",
+        "label": "Left free-overhang length",
+        "value": 4,
+        "unit": "in",
+        "min": 0,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "key": "robot_b",
+        "symbol": "b",
+        "label": "Distance from pin A to cylinder point B",
+        "value": 10,
+        "unit": "in",
+        "min": 0.1,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "key": "robot_L",
+        "symbol": "L",
+        "label": "Distance from B to payload point C",
+        "value": 50,
+        "unit": "in",
+        "min": 0.1,
+        "max": 5000,
+        "step": 1
+      },
+      {
+        "key": "robot_w",
+        "symbol": "w",
+        "label": "Uniform arm-and-gripper weight",
+        "value": 1.5,
+        "unit": "lb/in",
+        "min": 0,
+        "max": 10000,
+        "step": 0.1
+      },
+      {
+        "key": "robot_P",
+        "symbol": "P",
+        "label": "Concentrated payload at C",
+        "value": 40,
+        "unit": "lb",
+        "min": 0,
+        "max": 1000000,
+        "step": 5
+      },
+      {
+        "key": "robot_theta",
+        "symbol": "theta",
+        "label": "Cylinder-force direction from positive x",
+        "value": 120,
+        "unit": "deg",
+        "min": 90.1,
+        "max": 179,
+        "step": 1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the Robot Arm",
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "robot arm function",
+          "payload positioning",
+          "load transfer"
+        ],
+        "learningObjectives": [
+          "Identify the arm's structural role in the manipulator."
+        ],
+        "selected": true,
+        "student": "<p>State the primary structural function of the robot arm.</p>",
+        "instructor": "<p>The arm positions the gripper and transfers payload and self-weight loads to the robot body through pin A and hydraulic cylinder BD.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q2",
+        "title": "External Loads on Arm ABC",
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "uniform load",
+          "payload",
+          "support forces"
+        ],
+        "learningObjectives": [
+          "Identify all external actions on the isolated arm."
+        ],
+        "selected": true,
+        "student": "<p>Identify all external loads acting directly on arm ABC.</p>",
+        "instructor": "<p>The arm carries uniform downward load <em>w</em>, concentrated downward payload <em>P</em> at C, pin reactions <em>A</em><sub>x</sub> and <em>A</em><sub>y</sub>, and the force exerted by cylinder BD at B.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q3",
+        "title": "Support Idealizations at A and B",
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "tags": [
+          "pin support",
+          "two-force member",
+          "reaction components"
+        ],
+        "learningObjectives": [
+          "Describe the support forces admitted by each idealization."
+        ],
+        "selected": true,
+        "student": "<p>Describe the idealizations at pin A and cylinder attachment B.</p>",
+        "instructor": "<p>A is a frictionless pin with unknown reactions <em>A</em><sub>x</sub> and <em>A</em><sub>y</sub> and no reaction moment. BD is a two-force member, so its force at B acts along the cylinder axis.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path to the Floor",
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "payload",
+          "hydraulic cylinder",
+          "robot base"
+        ],
+        "learningObjectives": [
+          "Trace load transfer through the manipulator."
+        ],
+        "selected": true,
+        "student": "<p>Trace the load path from the payload and arm weight to the floor.</p>",
+        "instructor": "<p>Payload, gripper, and arm weight transfer through arm ABC to pin A and cylinder BD, then through the robot body and base to the floor.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q5",
+        "title": "Central Structural Response",
+        "type": "scope identification",
+        "difficulty": "introductory",
+        "tags": [
+          "internal shear",
+          "bending moment",
+          "transverse loading"
+        ],
+        "learningObjectives": [
+          "Identify the internal resultants central to the assignment."
+        ],
+        "selected": true,
+        "student": "<p>Which structural responses are the central focus of this problem, and why?</p>",
+        "instructor": "<p>Internal vertical shear and bending moment are central because the transverse distributed and concentrated loads create bending demand along the arm.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q6",
+        "title": "Parameters Controlling the Diagrams",
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "geometry",
+          "distributed load",
+          "cylinder angle"
+        ],
+        "learningObjectives": [
+          "Identify inputs controlling shear and moment."
+        ],
+        "selected": true,
+        "student": "<p>Identify the variables that control the shear-force and bending-moment diagrams.</p>",
+        "instructor": "<p>The governing inputs are overhang <em>a</em>, distance A-to-B <em>b</em>, distance B-to-C <em>L</em>, uniform weight <em>w</em>, payload <em>P</em>, and cylinder-force direction &theta;.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q7",
+        "title": "Two-Force-Member Interpretation",
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "hydraulic cylinder",
+          "axial force",
+          "known direction"
+        ],
+        "learningObjectives": [
+          "Explain why the cylinder has one force unknown."
+        ],
+        "selected": true,
+        "student": "<p>Explain why only one unknown magnitude is required for the force in cylinder BD.</p>",
+        "instructor": "<p>An ideal two-force member carries only an axial force along the line joining its end pins. Its direction is known, so only the magnitude is unknown.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Beam Idealization",
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "tags": [
+          "beam model",
+          "free overhang",
+          "cylinder force"
+        ],
+        "learningObjectives": [
+          "Translate the manipulator into a beam and free-body diagram."
+        ],
+        "selected": true,
+        "student": "<p>Before using the reference figure, replace the manipulator with a horizontal beam model. Show the left free tip, pin A, cylinder attachment B, end C, uniform load <em>w</em>, payload <em>P</em>, and cylinder force along BD.</p>",
+        "instructor": "<p>A valid idealization places pin A a distance <em>a</em> from the left free tip, B another distance <em>b</em> to the right, and C a distance <em>L</em> beyond B. It includes <em>A</em><sub>x</sub>, <em>A</em><sub>y</sub>, the inclined cylinder force, full-length uniform load, and end payload.</p>",
+        "gradingNotes": "<p>Students should attempt the beam FBD before seeing the instructor reference figure.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "tags": [
+          "static loading",
+          "small deformation",
+          "ideal joints"
+        ],
+        "learningObjectives": [
+          "State assumptions supporting the beam analysis."
+        ],
+        "selected": true,
+        "student": "<p>State the assumptions used in the simplified analysis.</p>",
+        "instructor": "<p>Assume a straight initially horizontal arm, static loading, small deformation, uniform <em>w</em> over the full arm-and-gripper length, a frictionless pin at A, an ideal two-force cylinder, and negligible joint and gripper dimensions. Exclude dynamics, fatigue, and local connection effects.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "tags": [
+          "equilibrium",
+          "piecewise functions",
+          "diagrams"
+        ],
+        "learningObjectives": [
+          "Plan the equilibrium and internal-loading analysis."
+        ],
+        "selected": true,
+        "student": "<p>List the mechanics steps needed before drawing the diagrams.</p>",
+        "instructor": "<p>Replace the distributed load by its resultant for whole-arm equilibrium; solve the cylinder force and pin reactions; define beam coordinate <em>s</em>; derive piecewise <em>V</em>(<em>s</em>) and <em>M</em>(<em>s</em>); plot jumps and slopes; and compare all region boundaries and zero-shear locations for the absolute maximum moment.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q11",
+        "title": "Beam Boundary Conditions",
+        "type": "mechanics setup",
+        "difficulty": "introductory",
+        "tags": [
+          "pin A",
+          "cylinder B",
+          "kinematic restrictions"
+        ],
+        "learningObjectives": [
+          "Identify support restrictions and reaction components."
+        ],
+        "selected": true,
+        "student": "<p>Identify the kinematic restrictions and reaction components at A and B.</p>",
+        "instructor": "<p>Pin A prevents horizontal and vertical translation but permits arm rotation, producing <em>A</em><sub>x</sub> and <em>A</em><sub>y</sub>. Cylinder BD applies one axial force at B along its assigned direction.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q12",
+        "title": "Equivalent Uniform-Load Resultant",
+        "type": "load reduction",
+        "difficulty": "introductory",
+        "tags": [
+          "distributed load",
+          "resultant force",
+          "centroid"
+        ],
+        "learningObjectives": [
+          "Replace a uniform load with an equivalent resultant."
+        ],
+        "selected": true,
+        "student": "<p>Replace the uniform load by an equivalent resultant for whole-arm equilibrium. Give its magnitude and location relative to pin A.</p>",
+        "instructor": "<p>The loaded length is <strong>{{robot_total_length_in}} in</strong>. The resultant is <em>W</em> = <em>w</em>(<em>a</em> + <em>b</em> + <em>L</em>) = <strong>{{robot_W_lb}} lb</strong> and acts <strong>{{robot_xW_in}} in</strong> to the right of A.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q13",
+        "title": "Hydraulic-Cylinder Force",
+        "type": "rigid-body equilibrium",
+        "difficulty": "intermediate",
+        "tags": [
+          "moment equilibrium",
+          "vertical component",
+          "compression"
+        ],
+        "learningObjectives": [
+          "Solve the two-force-member load from moment equilibrium."
+        ],
+        "selected": true,
+        "student": "<p>Use moment equilibrium about A to determine the hydraulic-cylinder force. State whether BD is in tension or compression.</p>",
+        "instructor": "<p>&Sigma;<em>M</em><sub>A</sub> = 0 gives <em>B</em><sub>y</sub><em>b</em> - <em>W x</em><sub>W</sub> - <em>P</em>(<em>b</em> + <em>L</em>) = 0, so <em>B</em><sub>y</sub> = <strong>{{robot_By_lb}} lb</strong>.</p><p><em>F</em><sub>BD</sub> = <em>B</em><sub>y</sub>/sin&theta; = <strong>{{robot_F_BD_lb}} lb</strong>. The assigned force direction makes the cylinder a <strong>{{robot_cylinder_state}}</strong> member.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q14",
+        "title": "Pin Reactions at A",
+        "type": "force equilibrium",
+        "difficulty": "intermediate",
+        "tags": [
+          "horizontal equilibrium",
+          "vertical equilibrium",
+          "signed reactions"
+        ],
+        "learningObjectives": [
+          "Calculate pin reaction components and directions."
+        ],
+        "selected": true,
+        "student": "<p>Use force equilibrium to determine <em>A</em><sub>x</sub> and <em>A</em><sub>y</sub>. Report magnitudes and directions.</p>",
+        "instructor": "<p>The cylinder horizontal component is <em>B</em><sub>x</sub> = <strong>{{robot_Bx_lb}} lb</strong>. Therefore <em>A</em><sub>x</sub> = <strong>{{robot_Ax_signed_lb}} lb</strong>, or <strong>{{robot_Ax_abs_lb}} lb {{robot_Ax_direction}}</strong>.</p><p><em>A</em><sub>y</sub> = <em>W</em> + <em>P</em> - <em>B</em><sub>y</sub> = <strong>{{robot_Ay_signed_lb}} lb</strong>, or <strong>{{robot_Ay_abs_lb}} lb {{robot_Ay_direction}}</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q15",
+        "title": "Beam Coordinate and Piecewise Regions",
+        "type": "analysis setup",
+        "difficulty": "introductory",
+        "tags": [
+          "coordinate s",
+          "beam regions",
+          "concentrated-force jumps"
+        ],
+        "learningObjectives": [
+          "Partition the beam for internal-resultant equations."
+        ],
+        "selected": true,
+        "student": "<p>Let <em>s</em> be measured from the left free tip. Identify the regions needed for piecewise shear and moment equations.</p>",
+        "instructor": "<p>Region 1 is 0 &le; <em>s</em> &le; <em>a</em>; Region 2 is <em>a</em> &le; <em>s</em> &le; <em>a</em> + <em>b</em>; and Region 3 is <em>a</em> + <em>b</em> &le; <em>s</em> &le; <em>a</em> + <em>b</em> + <em>L</em>. Concentrated-force jumps occur at A, B, and C.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q16",
+        "title": "Piecewise Shear-Force Functions",
+        "type": "internal shear derivation",
+        "difficulty": "intermediate",
+        "tags": [
+          "shear functions",
+          "signed reactions",
+          "uniform-load slope"
+        ],
+        "learningObjectives": [
+          "Derive vertical shear in each beam region."
+        ],
+        "selected": true,
+        "student": "<p>Using upward force as positive, derive <em>V</em>(<em>s</em>) in each region.</p>",
+        "instructor": "<p>Using signed reactions, <em>V</em><sub>1</sub> = -<em>ws</em>; <em>V</em><sub>2</sub> = -<em>ws</em> + <em>A</em><sub>y</sub>; and <em>V</em><sub>3</sub> = -<em>ws</em> + <em>A</em><sub>y</sub> + <em>B</em><sub>y</sub>. At C, downward payload <em>P</em> causes the final jump to zero.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q17",
+        "title": "Piecewise Bending-Moment Functions",
+        "type": "internal moment derivation",
+        "difficulty": "intermediate",
+        "tags": [
+          "moment functions",
+          "continuity",
+          "M at free end"
+        ],
+        "learningObjectives": [
+          "Derive bending moment in each beam region."
+        ],
+        "selected": true,
+        "student": "<p>Derive <em>M</em>(<em>s</em>) in each region using <em>M</em>(0) = 0.</p>",
+        "instructor": "<p><em>M</em><sub>1</sub> = -<em>ws</em><sup>2</sup>/2; <em>M</em><sub>2</sub> = -<em>ws</em><sup>2</sup>/2 + <em>A</em><sub>y</sub>(<em>s</em> - <em>a</em>); and <em>M</em><sub>3</sub> = -<em>ws</em><sup>2</sup>/2 + <em>A</em><sub>y</sub>(<em>s</em> - <em>a</em>) + <em>B</em><sub>y</sub>[<em>s</em> - (<em>a</em> + <em>b</em>)].</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q18",
+        "title": "Shear and Moment Diagram Ordinates",
+        "type": "diagram construction",
+        "difficulty": "intermediate",
+        "tags": [
+          "shear jumps",
+          "moment continuity",
+          "key ordinates"
+        ],
+        "learningObjectives": [
+          "Construct and label shear and moment diagrams."
+        ],
+        "selected": true,
+        "student": "<p>Draw the shear-force and bending-moment diagrams and label the key ordinates at the free tip, A, B, and C.</p>",
+        "instructor": "<p>Shear values are: left tip <strong>{{robot_V_left_lb}} lb</strong>; A<sup>-</sup> <strong>{{robot_V_A_minus_lb}} lb</strong>; A<sup>+</sup> <strong>{{robot_V_A_plus_lb}} lb</strong>; B<sup>-</sup> <strong>{{robot_V_B_minus_lb}} lb</strong>; B<sup>+</sup> <strong>{{robot_V_B_plus_lb}} lb</strong>; C<sup>-</sup> <strong>{{robot_V_C_minus_lb}} lb</strong>; and C<sup>+</sup> <strong>{{robot_V_C_plus_lb}} lb</strong>.</p><p>The moment diagram is continuous, with <em>M</em><sub>A</sub> = <strong>{{robot_M_A_lbin}} lb&middot;in</strong>, <em>M</em><sub>B</sub> = <strong>{{robot_M_B_lbin}} lb&middot;in</strong>, and <em>M</em><sub>C</sub> = <strong>{{robot_M_C_lbin}} lb&middot;in</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q19",
+        "title": "Absolute Maximum Bending Moment",
+        "type": "critical-section calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "zero shear",
+          "region boundaries",
+          "maximum moment"
+        ],
+        "learningObjectives": [
+          "Locate and quantify the absolute maximum bending moment."
+        ],
+        "selected": true,
+        "student": "<p>Determine the absolute maximum bending moment and its location. Check all beam-region boundaries and any interior locations where shear is zero.</p>",
+        "instructor": "<p>The governing signed moment is <strong>{{robot_M_signed_max_lbin}} lb&middot;in</strong> at <strong>{{robot_M_location}}</strong>. Therefore |<em>M</em>|<sub>max</sub> = <strong>{{robot_M_abs_max_lbin}} lb&middot;in</strong> = <strong>{{robot_M_abs_max_lbft}} lb&middot;ft</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q20",
+        "title": "Engineering Assessment",
+        "type": "engineering judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "critical section",
+          "geometry modification",
+          "model limits"
+        ],
+        "learningObjectives": [
+          "Recommend the first stress-check location and a demand-reduction strategy."
+        ],
+        "selected": true,
+        "student": "<p>Identify the arm section that should be checked first in a subsequent bending-stress analysis and recommend one change that would reduce demand.</p>",
+        "instructor": "<p>{{robot_recommendation}}</p><p>Detailed design must also evaluate axial force, bending stress and deflection, actuator capacity, pins and connections, local stress concentrations, fatigue, dynamics, stability, controls, manufacturing constraints, and safety factors.</p>",
+        "section": "analysis"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - baseline hydraulic robot arm",
+        "description": "Default sequence for two-force-member modeling, support reactions, piecewise shear and moment, diagrams, and critical-section assessment.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20"
+        ],
+        "variables": {
+          "robot_a": 4,
+          "robot_b": 10,
+          "robot_L": 50,
+          "robot_w": 1.5,
+          "robot_P": 40,
+          "robot_theta": 120
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-JIB-001",
     "slug": "jib-crane-battery-pack",
     "title": "Wall-Mounted Swing-Jib Crane for Battery-Pack Handling",

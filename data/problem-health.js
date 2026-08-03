@@ -60,6 +60,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-ROBOT-021",
+    "slug": "industrial-robot-arm-shear-moment",
+    "title": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
+    "status": "OK",
+    "variables": 6,
+    "questions": 20,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-JIB-001",
     "slug": "jib-crane-battery-pack",
     "title": "Wall-Mounted Swing-Jib Crane for Battery-Pack Handling",

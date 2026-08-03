@@ -1,0 +1,44 @@
+---
+title: "Instructor Guide - Industrial Robot Arm"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+  pdf: {documentclass: scrartcl, papersize: letter, toc: true, number-sections: true}
+  ipynb: default
+jupyter: python3
+execute: {enabled: false}
+---
+
+# Purpose
+
+Award credit for a correct beam idealization, two-force-member direction, whole-arm equilibrium, signed reactions, piecewise shear and moment functions, diagram jumps and slopes, critical-section identification, and a bounded engineering recommendation.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="robot-arm-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "industrial-robot-arm-shear-moment", targetId: "robot-arm-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes a straight horizontal arm, static loading, small deformation, uniform weight over the full modeled length, a frictionless pin at A, and an ideal two-force hydraulic cylinder. A complete design also requires axial force, bending stress and deflection, actuator capacity, pin and connection stresses, local geometry, fatigue, dynamics, stability, controls, and applicable safety factors.
+
+# Supplemental Assessment Structure
+
+- context interpretation and idealization: 20%;
+- whole-arm equilibrium and reactions: 25%;
+- piecewise shear and moment derivation: 30%;
+- diagram interpretation and critical section: 15%;
+- engineering recommendation and limitations: 10%.

@@ -1,0 +1,7 @@
+{
+  "id":"section-a",
+  "title":"Homework Version A - baseline hydraulic robot arm",
+  "description":"Default sequence for two-force-member modeling, support reactions, piecewise shear and moment, diagrams, and critical-section assessment.",
+  "selectedQuestions":["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19","q20"],
+  "variables":{"robot_a":4,"robot_b":10,"robot_L":50,"robot_w":1.5,"robot_P":40,"robot_theta":120}
+}

@@ -1,0 +1,27 @@
+---
+title: "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm"
+description: "A context-rich beam problem on two-force-member support, reactions, shear, and bending moment."
+image: "assets/robot-arm-industry-context.png"
+categories: [context-rich, mechanics-of-materials, analysis]
+course_topics: [equilibrium, two-force members, shear diagrams, bending-moment diagrams, critical sections]
+textbook_chapters: [Planar rigid-body equilibrium, Two-force members, Shear-force diagrams, Bending-moment diagrams]
+problem_types: [load-path analysis, support-reaction calculation, internal-resultant calculation, diagram construction, engineering evaluation]
+competencies: [free-body diagrams, two-force-member modeling, rigid-body equilibrium, piecewise functions, critical-section identification, engineering judgment]
+industries: [industrial robotics, material handling, hydraulic equipment, manufacturing automation]
+difficulty: "Intermediate"
+status: "Draft"
+problem_id: "MOS-ROBOT-021"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Coordinate Convention"}
+Measure beam coordinate <em>s</em> from the left free tip. Pin A is at <em>s</em> = <em>a</em>, cylinder point B at <em>s</em> = <em>a</em> + <em>b</em>, and payload point C at <em>s</em> = <em>a</em> + <em>b</em> + <em>L</em>.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=industrial-robot-arm-shear-moment){.btn .btn-secondary}
