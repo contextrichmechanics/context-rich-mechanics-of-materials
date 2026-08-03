@@ -4420,6 +4420,533 @@
     ]
   },
   {
+    "id": "MOS-THERMAL-012",
+    "slug": "steam-pipe-thermal-expansion",
+    "title": "Thermal Expansion Force in a Steam Pipe Between Turbine Housings",
+    "studentDocumentTitle": "Student Homework Questions",
+    "instructorDocumentTitle": "Instructor Answers",
+    "summary": "A thermal-deformation problem integrating hollow-pipe geometry, support flexibility, compatibility, axial force, stress, and engineering assessment.",
+    "textbookChapters": [
+      "Thermal stress",
+      "Axial deformation",
+      "Statically indeterminate members",
+      "Displacement compatibility",
+      "Normal stress"
+    ],
+    "derivedPlaceholders": [
+      "thermal_inner_diameter_in",
+      "thermal_pipe_area_in2",
+      "thermal_delta_T_F",
+      "thermal_action",
+      "thermal_force_state",
+      "thermal_stress_state",
+      "thermal_free_expansion_in",
+      "thermal_free_expansion_magnitude_in",
+      "thermal_pipe_compliance_in_per_kip",
+      "thermal_support_compliance_in_per_kip",
+      "thermal_total_compliance_in_per_kip",
+      "thermal_pipe_force_kip",
+      "thermal_pipe_force_magnitude_kip",
+      "thermal_pipe_elastic_deformation_in",
+      "thermal_support_displacement_each_in",
+      "thermal_support_displacement_total_in",
+      "thermal_pipe_stress_ksi",
+      "thermal_pipe_stress_magnitude_ksi",
+      "thermal_yield_ratio",
+      "thermal_yield_assessment",
+      "thermal_dominant_compliance"
+    ],
+    "image": "problems/steam-pipe-thermal-expansion/assets/steam-industry-context.png",
+    "idealizedImage": "problems/steam-pipe-thermal-expansion/assets/steam-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference idealization of a hollow steam pipe connected between two turbine attachment points represented by equal axial springs.",
+    "source": "problems/steam-pipe-thermal-expansion/index.html",
+    "problemStatement": "<p>A power-plant engineering team is reviewing a short steel steam pipe connecting two turbine housings. The pipe is assembled at installation temperature <em>T</em><sub>1</sub> and later reaches operating temperature <em>T</em><sub>2</sub>. If free, the pipe would change length by <em>&alpha;L&Delta;T</em>.</p><p>The turbine attachment points provide finite axial restraint. They are modeled as identical linear springs, so the pipe's thermal deformation is shared between elastic deformation of the pipe and movement of both turbine attachments.</p>",
+    "engineeringGoal": "<p>Determine the thermally induced axial force exerted on each turbine housing and the corresponding axial stress in the pipe. Compare the stress with yield and make a limited recommendation about attachment flexibility and further design checks.</p>",
+    "variables": [
+      {
+        "key": "L",
+        "symbol": "L",
+        "label": "Pipe length",
+        "value": 72,
+        "unit": "in",
+        "min": 1,
+        "max": 1200,
+        "step": 1
+      },
+      {
+        "key": "D_o",
+        "symbol": "D_o",
+        "label": "Pipe outer diameter",
+        "value": 4,
+        "unit": "in",
+        "min": 0.25,
+        "max": 60,
+        "step": 0.05
+      },
+      {
+        "key": "t",
+        "symbol": "t",
+        "label": "Pipe wall thickness",
+        "value": 0.25,
+        "unit": "in",
+        "min": 0.01,
+        "max": 10,
+        "step": 0.01
+      },
+      {
+        "key": "T_1",
+        "symbol": "T_1",
+        "label": "Installation temperature",
+        "value": 70,
+        "unit": "deg F",
+        "min": -100,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "key": "T_2",
+        "symbol": "T_2",
+        "label": "Operating temperature",
+        "value": 275,
+        "unit": "deg F",
+        "min": -100,
+        "max": 1500,
+        "step": 1
+      },
+      {
+        "key": "k",
+        "symbol": "k",
+        "label": "Axial stiffness of each turbine attachment",
+        "value": 80000,
+        "unit": "kip/in",
+        "min": 1,
+        "max": 1000000,
+        "step": 100
+      },
+      {
+        "key": "E",
+        "symbol": "E",
+        "label": "Elastic modulus of pipe steel",
+        "value": 29000,
+        "unit": "ksi",
+        "min": 1000,
+        "max": 40000,
+        "step": 100
+      },
+      {
+        "key": "alpha",
+        "symbol": "alpha",
+        "label": "Coefficient of thermal expansion",
+        "value": 0.0000065,
+        "unit": "1/deg F",
+        "min": 0.000001,
+        "max": 0.00002,
+        "step": 1e-7
+      },
+      {
+        "key": "sigma_y",
+        "symbol": "sigma_y",
+        "label": "Pipe material yield stress",
+        "value": 40,
+        "unit": "ksi",
+        "min": 1,
+        "max": 300,
+        "step": 1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "system function",
+          "steam transport",
+          "load transfer"
+        ],
+        "learningObjectives": [
+          "Connect the pipe's process function to its structural load-transfer role."
+        ],
+        "selected": true,
+        "student": "<p>What are the primary process and structural functions of the pipe-turbine assembly?</p>",
+        "instructor": "<p>The pipe transfers steam between turbine housings while maintaining a sealed connection. Structurally, it transfers thermally induced axial loads into the turbine attachments when free thermal deformation is restrained.</p>",
+        "gradingNotes": "<p>Good answers should mention both fluid transport and mechanical load transfer.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q2",
+        "title": "Source of Mechanical Loading",
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "thermal loading",
+          "temperature change",
+          "restraint"
+        ],
+        "learningObjectives": [
+          "Distinguish thermal loading from a directly applied force."
+        ],
+        "selected": true,
+        "student": "<p>What creates the mechanical loading in this problem? Is an independent external axial force applied to the pipe?</p>",
+        "instructor": "<p>The temperature change causes the pipe to seek a free length change <em>&alpha;L&Delta;T</em>. Finite restraint at the turbine attachments opposes that change and creates axial force. No independent external axial load is applied in the base model.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "tags": [
+          "support stiffness",
+          "linear springs",
+          "partial restraint"
+        ],
+        "learningObjectives": [
+          "Interpret finite attachment stiffness as partial axial restraint."
+        ],
+        "selected": true,
+        "student": "<p>Identify the support idealization used for turbine attachments A and B.</p>",
+        "instructor": "<p>Each turbine attachment is modeled as an axial linear spring of stiffness <em>k</em>. The pipe ends are therefore partially restrained and can move as the attachments deform under the thermally induced force.</p>",
+        "commonMistakes": "<p>The attachment points are not perfectly fixed in this model.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q4",
+        "title": "Thermal Load Path",
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "load path",
+          "flanges",
+          "turbine housings"
+        ],
+        "learningObjectives": [
+          "Trace thermally induced force from the pipe into the foundation."
+        ],
+        "selected": true,
+        "student": "<p>Trace the load path created when thermal deformation of the pipe is restrained.</p>",
+        "instructor": "<p>The pipe attempts to change length; the turbine attachments resist that motion; axial force develops in the pipe; equal and opposite forces pass through the flanged connections into the turbine housings, machine supports, and foundation.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Components",
+        "type": "component identification",
+        "difficulty": "introductory",
+        "tags": [
+          "pipe stress",
+          "attachment flexibility",
+          "scope"
+        ],
+        "learningObjectives": [
+          "Identify components controlling the one-dimensional response."
+        ],
+        "selected": true,
+        "student": "<p>Which components are most important for this simplified Mechanics of Materials analysis?</p>",
+        "instructor": "<p>The hollow steel pipe is critical because it develops axial stress, and the two turbine attachments are critical because their stiffness controls the degree of restraint. Detailed flange, bolt, gasket, casing, and foundation stresses are not evaluated.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Response",
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "axial force",
+          "normal stress",
+          "yield"
+        ],
+        "learningObjectives": [
+          "Select force and stress responses supported by the provided data."
+        ],
+        "selected": true,
+        "student": "<p>What mechanical responses should be evaluated in the base problem?</p>",
+        "instructor": "<p>Evaluate thermally induced axial force and average axial pipe stress. Comparing stress with yield provides a limited strength interpretation. Pressure stress, creep, fatigue, local flange response, bending, and stability require additional models and data.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "pipe geometry",
+          "thermal properties",
+          "stiffness"
+        ],
+        "learningObjectives": [
+          "Connect each input to thermal deformation, axial compliance, or strength."
+        ],
+        "selected": true,
+        "student": "<p>Identify the geometric, thermal, material, and support parameters that control the pipe force and stress.</p>",
+        "instructor": "<p>The required inputs are pipe length <em>L</em>, outer diameter <em>D</em><sub>o</sub>, wall thickness <em>t</em>, temperatures <em>T</em><sub>1</sub> and <em>T</em><sub>2</sub>, attachment stiffness <em>k</em>, elastic modulus <em>E</em>, thermal-expansion coefficient <em>&alpha;</em>, and yield stress <em>&sigma;</em><sub>y</sub>. Inner diameter and area follow from the pipe geometry.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "tags": [
+          "idealization",
+          "pipe",
+          "spring supports"
+        ],
+        "learningObjectives": [
+          "Convert the plant assembly into a one-dimensional thermal compatibility model."
+        ],
+        "selected": true,
+        "student": "<p>Before using the reference figure, develop a simplified mechanics model showing the hollow pipe, turbine attachment points, axial support stiffness, pipe length, temperature change, and unknown thermally induced axial force.</p>",
+        "instructor": "<p>A correct idealization shows a uniform hollow pipe of length <em>L</em> connected between two axial springs, each of stiffness <em>k</em>. The pipe has free thermal deformation <em>&alpha;L&Delta;T</em>, but attachment restraint creates axial force.</p>",
+        "gradingNotes": "<p>Students should attempt the model before the instructor reference idealization is revealed.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "tags": [
+          "uniform temperature",
+          "linear elasticity",
+          "one-dimensional model"
+        ],
+        "learningObjectives": [
+          "State assumptions supporting the thermal compatibility solution."
+        ],
+        "selected": true,
+        "student": "<p>State the assumptions used to convert the real pipe-turbine assembly into the simplified model.</p>",
+        "instructor": "<p>Typical assumptions are uniform pipe temperature; a uniform hollow cross section; one-dimensional axial behavior; linear-elastic pipe material and supports; identical attachment stiffness at A and B; small deformation; rigid flange load transfer; and neglected pressure, bending, thermal gradients, creep, fatigue, routing flexibility, and local connection effects.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "tags": [
+          "thermal strain",
+          "compatibility",
+          "stress"
+        ],
+        "learningObjectives": [
+          "Plan the calculation from geometry through engineering interpretation."
+        ],
+        "selected": true,
+        "student": "<p>Before calculating, describe the sequence needed to determine the force exerted on the turbine housings.</p>",
+        "instructor": "<p>Compute inner diameter and pipe area; determine <em>&Delta;T</em> and free thermal deformation; write compatibility among free deformation, pipe elastic deformation, and both support displacements; solve for axial force; compute average pipe stress; compare with yield; then state a limited recommendation.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q11",
+        "title": "Boundary Conditions from the Reference Diagram",
+        "type": "mechanics setup",
+        "difficulty": "introductory",
+        "tags": [
+          "reference idealization",
+          "partial restraint",
+          "springs"
+        ],
+        "learningObjectives": [
+          "Interpret the pipe-and-springs reference model."
+        ],
+        "selected": true,
+        "student": "<p>From the instructor reference diagram, identify the pipe boundary conditions and support idealizations.</p>",
+        "instructor": "<p>Pipe AB is connected at each end to a turbine attachment modeled as an axial spring of stiffness <em>k</em>. Both attachment points can move under force, so the pipe is partially rather than fully restrained.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q12",
+        "title": "Unknown Thermally Induced Force",
+        "type": "constraint-force identification",
+        "difficulty": "introductory",
+        "tags": [
+          "thermal force",
+          "pipe action",
+          "turbine loads"
+        ],
+        "learningObjectives": [
+          "Define the unknown interaction force and its action on each component."
+        ],
+        "selected": true,
+        "student": "<p>Identify the unknown axial force produced by restrained thermal deformation and describe its action on the pipe and turbine housings.</p>",
+        "instructor": "<p>The unknown is the thermally induced axial pipe force. For the assigned temperatures, the pipe is in <strong>{{thermal_force_state}}</strong> and exerts equal-magnitude, opposite-direction forces on the two turbine attachments.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q13",
+        "title": "Hollow-Pipe Cross-Sectional Area",
+        "type": "section-property calculation",
+        "difficulty": "introductory",
+        "tags": [
+          "inner diameter",
+          "annular area",
+          "pipe geometry"
+        ],
+        "learningObjectives": [
+          "Calculate the material area of a hollow circular section."
+        ],
+        "selected": true,
+        "student": "<p>For <strong><em>D</em><sub>o</sub> = {{D_o}} {{D_o_unit}}</strong> and <strong><em>t</em> = {{t}} {{t_unit}}</strong>, determine the inner diameter and cross-sectional area of the steel pipe.</p>",
+        "instructor": "<p><em>D</em><sub>i</sub> = <em>D</em><sub>o</sub> - 2<em>t</em> = <strong>{{thermal_inner_diameter_in}} in</strong>.</p><p><em>A</em> = &pi;[<em>D</em><sub>o</sub><sup>2</sup> - <em>D</em><sub>i</sub><sup>2</sup>]/4 = <strong>{{thermal_pipe_area_in2}} in<sup>2</sup></strong>.</p>",
+        "commonMistakes": "<p>Use the annular material area, not the area of a solid bar with diameter <em>D</em><sub>o</sub>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q14",
+        "title": "Free Thermal Deformation",
+        "type": "thermal deformation calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "temperature change",
+          "thermal strain",
+          "free expansion"
+        ],
+        "learningObjectives": [
+          "Calculate signed free thermal deformation."
+        ],
+        "selected": true,
+        "student": "<p>Calculate the temperature change and the pipe deformation that would occur if the pipe were unrestrained.</p>",
+        "instructor": "<p>&Delta;<em>T</em> = <em>T</em><sub>2</sub> - <em>T</em><sub>1</sub> = {{T_2}} - {{T_1}} = <strong>{{thermal_delta_T_F}}&deg;F</strong>. The pipe experiences <strong>{{thermal_action}}</strong>.</p><p>&delta;<sub>T</sub> = <em>&alpha;L&Delta;T</em> = <strong>{{thermal_free_expansion_in}} in</strong>, with magnitude <strong>{{thermal_free_expansion_magnitude_in}} in</strong>.</p>",
+        "gradingNotes": "<p>A positive value denotes free expansion; a negative value denotes free contraction.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q15",
+        "title": "Compatibility Equation",
+        "type": "compatibility formulation",
+        "difficulty": "intermediate",
+        "tags": [
+          "pipe compliance",
+          "support displacement",
+          "factor of two"
+        ],
+        "learningObjectives": [
+          "Formulate compatibility for a member between two flexible supports."
+        ],
+        "selected": true,
+        "student": "<p>Write the signed compatibility equation relating free thermal deformation, elastic deformation of the pipe, and movement of both turbine attachments.</p>",
+        "instructor": "<p>Using a compression-positive sign convention for <em>F</em>,</p><p><em>&alpha;L&Delta;T</em> = <em>FL</em>/(<em>AE</em>) + 2<em>F</em>/<em>k</em>.</p><p>The pipe compliance is <strong>{{thermal_pipe_compliance_in_per_kip}} in/kip</strong>, the combined support compliance is <strong>{{thermal_support_compliance_in_per_kip}} in/kip</strong>, and total compliance is <strong>{{thermal_total_compliance_in_per_kip}} in/kip</strong>. The factor 2 accounts for movement at both turbine attachments.</p>",
+        "commonMistakes": "<p>Do not omit one attachment displacement or treat the two end springs as a single spring of stiffness <em>k</em>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q16",
+        "title": "Thermally Induced Pipe Force",
+        "type": "thermal force calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "constraint force",
+          "compliance",
+          "turbine reaction"
+        ],
+        "learningObjectives": [
+          "Solve compatibility for the pipe-support interaction force."
+        ],
+        "selected": true,
+        "student": "<p>Solve for the thermally induced axial force in the pipe and the force magnitude exerted on each turbine housing.</p>",
+        "instructor": "<p><em>F</em> = &delta;<sub>T</sub>/[<em>L</em>/(<em>AE</em>) + 2/<em>k</em>] = <strong>{{thermal_pipe_force_kip}} kip</strong> using compression-positive thermal-force convention. Thus the pipe carries <strong>{{thermal_pipe_force_magnitude_kip}} kip in {{thermal_force_state}}</strong> and exerts that force magnitude on each turbine attachment.</p><p>The pipe elastic contribution has magnitude <strong>{{thermal_pipe_elastic_deformation_in}} in</strong>. Each support moves <strong>{{thermal_support_displacement_each_in}} in</strong>, for a combined support movement of <strong>{{thermal_support_displacement_total_in}} in</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q17",
+        "title": "Pipe Stress and Yield Comparison",
+        "type": "normal stress calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "compressive stress",
+          "yield ratio",
+          "strength interpretation"
+        ],
+        "learningObjectives": [
+          "Calculate average axial stress and make a limited yield comparison."
+        ],
+        "selected": true,
+        "student": "<p>Determine the average axial stress in the pipe and compare its magnitude with <strong><em>&sigma;</em><sub>y</sub> = {{sigma_y}} {{sigma_y_unit}}</strong>.</p>",
+        "instructor": "<p>&sigma; = <em>F</em>/<em>A</em> = <strong>{{thermal_pipe_stress_ksi}} ksi</strong>; its magnitude is <strong>{{thermal_pipe_stress_magnitude_ksi}} ksi</strong> in {{thermal_stress_state}}. The yield-to-stress ratio is <strong>{{thermal_yield_ratio}}</strong>. {{thermal_yield_assessment}}</p>",
+        "gradingNotes": "<p>This is an average axial-stress comparison, not a pressure-piping code assessment or a full factor of safety evaluation.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q18",
+        "title": "Stiffness Interpretation",
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "tags": [
+          "attachment stiffness",
+          "restraint",
+          "compliance"
+        ],
+        "learningObjectives": [
+          "Predict how support stiffness changes thermal force."
+        ],
+        "selected": true,
+        "student": "<p>Explain how attachment stiffness <em>k</em> affects the thermal force. Which compliance contribution dominates for the assigned values?</p>",
+        "instructor": "<p>Larger <em>k</em> permits less attachment movement, restrains more thermal deformation, and increases pipe force toward the fully restrained limit. Smaller <em>k</em> reduces force by allowing more movement. For the assigned values, <strong>{{thermal_dominant_compliance}}</strong> is the larger compliance contribution.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q19",
+        "title": "Engineering Assessment and Recommendation",
+        "type": "engineering judgment",
+        "difficulty": "intermediate to advanced",
+        "tags": [
+          "design recommendation",
+          "flexibility",
+          "model limitations"
+        ],
+        "learningObjectives": [
+          "Make a mechanics-based recommendation without overclaiming safety."
+        ],
+        "selected": true,
+        "student": "<p>Use the force and stress results to make a limited engineering recommendation. Identify additional checks required before accepting the installation.</p>",
+        "instructor": "<p>The pipe develops <strong>{{thermal_pipe_force_magnitude_kip}} kip in {{thermal_force_state}}</strong> and an average stress magnitude of <strong>{{thermal_pipe_stress_magnitude_ksi}} ksi</strong>. {{thermal_yield_assessment}} The turbine allowable nozzle loads should be compared with the computed attachment force. If more flexibility is needed, consider pipe-routing flexibility, engineered expansion provisions, or less rigid attachments. Final acceptance also requires pressure, flange, bolt, gasket, weld, creep, fatigue, thermal-gradient, stability, and code checks.</p>",
+        "gradingNotes": "<p>The response should not claim full design safety from the average axial-stress calculation alone.</p>",
+        "section": "analysis"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - baseline steam pipe",
+        "description": "Default sequence for thermal expansion, flexible-support compatibility, pipe force, stress, and engineering assessment.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19"
+        ],
+        "variables": {
+          "L": 72,
+          "D_o": 4,
+          "t": 0.25,
+          "T_1": 70,
+          "T_2": 275,
+          "k": 80000,
+          "E": 29000,
+          "alpha": 0.0000065,
+          "sigma_y": 40
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-CABLE-008",
     "slug": "suspended-equipment-cable-system",
     "title": "Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables",

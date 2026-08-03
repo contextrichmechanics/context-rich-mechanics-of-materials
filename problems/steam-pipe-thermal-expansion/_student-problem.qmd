@@ -1,0 +1,23 @@
+# Context-Rich Solid Mechanics Problem
+
+## Thermal Expansion Force in a Steam Pipe Between Turbine Housings
+
+### Engineering Context
+
+A power-plant engineering team is reviewing a short steel steam pipe connecting two turbine housings. The pipe is assembled at room temperature and later heats during operation as high-temperature steam flows through it.
+
+If free, the pipe would expand without axial thermal stress. In the actual assembly, the turbine attachment points provide finite axial restraint, so thermal deformation is shared between elastic deformation of the pipe and movement of both attachments.
+
+![Industrial steam pipe connected between two rotating-machine housings.](assets/steam-industry-context.png){fig-alt="Industrial steel steam pipe connected by flanges between two turbine housings." width=92%}
+
+### Main Engineering Goal
+
+Determine the thermally induced axial force exerted on each turbine housing and the corresponding axial stress in the pipe. Compare the stress with yield and make a limited engineering recommendation.
+
+### System Components
+
+- uniform hollow steel steam pipe AB;
+- turbine housings and attachment points A and B;
+- flanged and bolted pipe connections;
+- machine supports and foundation;
+- finite axial attachment flexibility at both ends.

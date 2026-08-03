@@ -1,0 +1,53 @@
+---
+title: "Thermal Expansion Force in a Steam Pipe Between Turbine Housings"
+description: "A thermal-deformation problem on support flexibility, compatibility, axial pipe force, and stress."
+image: "assets/steam-industry-context.png"
+categories:
+  - context-rich
+  - mechanics-of-materials
+  - design
+course_topics:
+  - thermal strain
+  - axial deformation
+  - compatibility
+  - normal stress
+  - support stiffness
+textbook_chapters:
+  - Thermal stress
+  - Axial deformation
+  - Statically indeterminate members
+  - Displacement compatibility
+  - Normal stress
+problem_types:
+  - thermal deformation
+  - compatibility analysis
+  - axial stress
+  - engineering evaluation
+competencies:
+  - load path reasoning
+  - thermal expansion calculation
+  - spring-support idealization
+  - compatibility modeling
+  - engineering judgment
+industries:
+  - power generation
+  - process plants
+  - rotating machinery
+  - high-temperature piping
+difficulty: "Intermediate"
+status: "Draft"
+problem_id: "MOS-THERMAL-012"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for free thermal expansion, flexible-support compatibility, thermally induced force, pipe stress, and engineering assessment.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=steam-pipe-thermal-expansion){.btn .btn-secondary}

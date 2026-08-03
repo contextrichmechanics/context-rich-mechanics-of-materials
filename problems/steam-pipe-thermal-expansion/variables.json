@@ -1,0 +1,92 @@
+[
+  {
+    "key": "L",
+    "symbol": "L",
+    "label": "Pipe length",
+    "value": 72,
+    "unit": "in",
+    "min": 1,
+    "max": 1200,
+    "step": 1
+  },
+  {
+    "key": "D_o",
+    "symbol": "D_o",
+    "label": "Pipe outer diameter",
+    "value": 4,
+    "unit": "in",
+    "min": 0.25,
+    "max": 60,
+    "step": 0.05
+  },
+  {
+    "key": "t",
+    "symbol": "t",
+    "label": "Pipe wall thickness",
+    "value": 0.25,
+    "unit": "in",
+    "min": 0.01,
+    "max": 10,
+    "step": 0.01
+  },
+  {
+    "key": "T_1",
+    "symbol": "T_1",
+    "label": "Installation temperature",
+    "value": 70,
+    "unit": "deg F",
+    "min": -100,
+    "max": 1000,
+    "step": 1
+  },
+  {
+    "key": "T_2",
+    "symbol": "T_2",
+    "label": "Operating temperature",
+    "value": 275,
+    "unit": "deg F",
+    "min": -100,
+    "max": 1500,
+    "step": 1
+  },
+  {
+    "key": "k",
+    "symbol": "k",
+    "label": "Axial stiffness of each turbine attachment",
+    "value": 80000,
+    "unit": "kip/in",
+    "min": 1,
+    "max": 1000000,
+    "step": 100
+  },
+  {
+    "key": "E",
+    "symbol": "E",
+    "label": "Elastic modulus of pipe steel",
+    "value": 29000,
+    "unit": "ksi",
+    "min": 1000,
+    "max": 40000,
+    "step": 100
+  },
+  {
+    "key": "alpha",
+    "symbol": "alpha",
+    "label": "Coefficient of thermal expansion",
+    "value": 0.0000065,
+    "unit": "1/deg F",
+    "min": 0.000001,
+    "max": 0.00002,
+    "step": 0.0000001
+  },
+  {
+    "key": "sigma_y",
+    "symbol": "sigma_y",
+    "label": "Pipe material yield stress",
+    "value": 40,
+    "unit": "ksi",
+    "min": 1,
+    "max": 300,
+    "step": 1
+  }
+]

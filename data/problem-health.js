@@ -90,6 +90,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-THERMAL-012",
+    "slug": "steam-pipe-thermal-expansion",
+    "title": "Thermal Expansion Force in a Steam Pipe Between Turbine Housings",
+    "status": "OK",
+    "variables": 9,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-CABLE-008",
     "slug": "suspended-equipment-cable-system",
     "title": "Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables",

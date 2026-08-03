@@ -1,0 +1,57 @@
+---
+title: "Instructor Guide - Steam Pipe Thermal Expansion"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    toc: true
+    number-sections: true
+  ipynb: default
+jupyter: python3
+execute:
+  enabled: false
+---
+
+# Purpose
+
+These answers are representative. Award credit for a correct thermal load path, hollow-pipe area, consistent kip-inch units, a compatibility equation containing both support displacements, and an engineering recommendation that stays within the model's limits.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="thermal-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "steam-pipe-thermal-expansion",
+    targetId: "thermal-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model evaluates one-dimensional thermal deformation and average axial stress. A real piping assessment also requires internal-pressure stress, flange and bolt loads, gasket behavior, thermal gradients, creep, fatigue, pipe-routing flexibility, nozzle-load limits, stability, and applicable piping codes.
+
+# Supplemental Assessment Structure
+
+Suggested weighting:
+
+- context interpretation and load path: 15%;
+- idealization and assumptions: 15%;
+- thermal expansion and compatibility: 30%;
+- force and stress calculations: 25%;
+- engineering recommendation and limitations: 15%.

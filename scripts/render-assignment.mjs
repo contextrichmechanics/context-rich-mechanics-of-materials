@@ -727,6 +727,63 @@ function variableMap(problem, currentValues) {
     values.spring_dominant_value_in = formatDerived(dominant[1], 5);
   }
 
+  const thermalLength = numericValue(values, "L");
+  const thermalOuterDiameter = numericValue(values, "D_o");
+  const thermalThickness = numericValue(values, "t");
+  const thermalT1 = numericValue(values, "T_1");
+  const thermalT2 = numericValue(values, "T_2");
+  const thermalSupportStiffness = numericValue(values, "k");
+  const thermalModulus = numericValue(values, "E");
+  const thermalCoefficient = numericValue(values, "alpha");
+  const thermalYieldStress = numericValue(values, "sigma_y");
+
+  if (
+    Number.isFinite(thermalLength) && thermalLength > 0 &&
+    Number.isFinite(thermalOuterDiameter) && thermalOuterDiameter > 0 &&
+    Number.isFinite(thermalThickness) && thermalThickness > 0 && thermalThickness < thermalOuterDiameter / 2 &&
+    Number.isFinite(thermalT1) && Number.isFinite(thermalT2) &&
+    Number.isFinite(thermalSupportStiffness) && thermalSupportStiffness > 0 &&
+    Number.isFinite(thermalModulus) && thermalModulus > 0 &&
+    Number.isFinite(thermalCoefficient) && thermalCoefficient > 0 &&
+    Number.isFinite(thermalYieldStress) && thermalYieldStress > 0
+  ) {
+    const innerDiameter = thermalOuterDiameter - 2 * thermalThickness;
+    const pipeArea = Math.PI * (thermalOuterDiameter ** 2 - innerDiameter ** 2) / 4;
+    const temperatureChange = thermalT2 - thermalT1;
+    const freeDeformation = thermalCoefficient * thermalLength * temperatureChange;
+    const pipeCompliance = thermalLength / (pipeArea * thermalModulus);
+    const supportCompliance = 2 / thermalSupportStiffness;
+    const totalCompliance = pipeCompliance + supportCompliance;
+    const pipeForce = freeDeformation / totalCompliance;
+    const forceMagnitude = Math.abs(pipeForce);
+    const pipeStress = pipeForce / pipeArea;
+    const stressMagnitude = Math.abs(pipeStress);
+    const yieldRatio = stressMagnitude > 0 ? thermalYieldStress / stressMagnitude : Infinity;
+    values.thermal_inner_diameter_in = formatDerived(innerDiameter, 3);
+    values.thermal_pipe_area_in2 = formatDerived(pipeArea, 5);
+    values.thermal_delta_T_F = formatDerived(temperatureChange, 1);
+    values.thermal_action = temperatureChange > 0 ? "free thermal expansion" : temperatureChange < 0 ? "free thermal contraction" : "no free thermal deformation";
+    values.thermal_force_state = temperatureChange > 0 ? "compression" : temperatureChange < 0 ? "tension" : "no axial load";
+    values.thermal_stress_state = temperatureChange > 0 ? "compression" : temperatureChange < 0 ? "tension" : "no axial stress";
+    values.thermal_free_expansion_in = formatDerived(freeDeformation, 5);
+    values.thermal_free_expansion_magnitude_in = formatDerived(Math.abs(freeDeformation), 5);
+    values.thermal_pipe_compliance_in_per_kip = formatDerived(pipeCompliance, 7);
+    values.thermal_support_compliance_in_per_kip = formatDerived(supportCompliance, 7);
+    values.thermal_total_compliance_in_per_kip = formatDerived(totalCompliance, 7);
+    values.thermal_pipe_force_kip = formatDerived(pipeForce, 2);
+    values.thermal_pipe_force_magnitude_kip = formatDerived(forceMagnitude, 2);
+    values.thermal_pipe_elastic_deformation_in = formatDerived(forceMagnitude * pipeCompliance, 5);
+    values.thermal_support_displacement_each_in = formatDerived(forceMagnitude / thermalSupportStiffness, 5);
+    values.thermal_support_displacement_total_in = formatDerived(forceMagnitude * supportCompliance, 5);
+    values.thermal_pipe_stress_ksi = formatDerived(pipeStress, 2);
+    values.thermal_pipe_stress_magnitude_ksi = formatDerived(stressMagnitude, 2);
+    values.thermal_yield_ratio = Number.isFinite(yieldRatio) ? formatDerived(yieldRatio, 2) : "not applicable";
+    values.thermal_yield_assessment = stressMagnitude < thermalYieldStress
+      ? `The average axial stress remains below the ${formatDerived(thermalYieldStress, 1)} ksi yield stress, but the limited margin requires further design review.`
+      : `The average axial stress reaches or exceeds the ${formatDerived(thermalYieldStress, 1)} ksi yield stress, so this baseline configuration is not acceptable under the elastic model.`;
+    values.thermal_dominant_compliance = pipeCompliance >= supportCompliance ? "pipe axial compliance" : "combined turbine-attachment compliance";
+  }
+
   const platformLoad = numericValue(values, "P");
   const platformWireArea = numericValue(values, "A_w");
   const platformWireModulus = numericValue(values, "E_w");
