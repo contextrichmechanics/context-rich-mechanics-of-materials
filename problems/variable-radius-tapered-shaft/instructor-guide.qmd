@@ -1,0 +1,43 @@
+---
+title: "Instructor Guide - Variable-Radius Aluminum Drive Shaft"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+  pdf: {documentclass: scrartcl, papersize: letter, toc: true, number-sections: true}
+  ipynb: default
+jupyter: python3
+execute: {enabled: false}
+---
+
+# Purpose
+
+Award credit for a correct torque load path, constant internal torque, the variable polar moment, a dimensionally consistent radius profile, correct twist integration, stress localization, sensitivity reasoning, and a bounded stiffness recommendation.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="tapered-shaft-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "variable-radius-tapered-shaft", targetId: "tapered-shaft-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes Saint-Venant torsion of a solid circular shaft, homogeneous isotropic linear elasticity, constant shear modulus, small rotation, shaft-axis torque, and a perfectly rigid fixed interface. A complete design also requires bending, axial loading, local attachment flexibility, stress concentrations, fatigue, dynamics, manufacturing constraints, and applicable allowables.
+
+# Supplemental Assessment Structure
+
+- context interpretation and idealization: 20%;
+- variable section property and twist formulation: 30%;
+- numerical twist and stress evaluation: 30%;
+- compliance interpretation and recommendation: 20%.

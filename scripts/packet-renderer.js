@@ -783,6 +783,65 @@
           : `The selected ${selectedLabel} solid shaft does not satisfy the allowable torsional stress criterion. Increase the diameter before evaluating twist and the omitted real-system effects.`;
     }
 
+    const taperedTorque = numericValue(values, "taper_T");
+    const taperedLength = numericValue(values, "taper_L");
+    const taperedMinimumRadius = numericValue(values, "taper_r0");
+    const taperedShearModulusGPa = numericValue(values, "taper_G");
+    const taperedAllowableTwist = numericValue(values, "taper_phi_allow");
+
+    if (
+      Number.isFinite(taperedTorque) && taperedTorque > 0 &&
+      Number.isFinite(taperedLength) && taperedLength > 0 &&
+      Number.isFinite(taperedMinimumRadius) && taperedMinimumRadius > 0 &&
+      Number.isFinite(taperedShearModulusGPa) && taperedShearModulusGPa > 0 &&
+      Number.isFinite(taperedAllowableTwist) && taperedAllowableTwist > 0
+    ) {
+      const radiusAt = (x) => taperedMinimumRadius *
+        (1 + x ** 1.5 + x ** 2.5);
+      const integrateCompliance = (end, intervals = 4000) => {
+        const count = intervals % 2 === 0 ? intervals : intervals + 1;
+        const step = end / count;
+        const integrand = (x) => 1 / radiusAt(x) ** 4;
+        let sum = integrand(0) + integrand(end);
+        for (let index = 1; index < count; index += 1) {
+          sum += (index % 2 === 0 ? 2 : 4) * integrand(index * step);
+        }
+        return sum * step / 3;
+      };
+      const shearModulusPa = taperedShearModulusGPa * 1e9;
+      const complianceIntegral = integrateCompliance(taperedLength);
+      const firstQuarterIntegral = integrateCompliance(taperedLength / 4);
+      const twistRad = 2 * taperedTorque * complianceIntegral /
+        (Math.PI * shearModulusPa);
+      const twistDeg = twistRad * 180 / Math.PI;
+      const twistUtilization = twistDeg / taperedAllowableTwist;
+      const twistPasses = twistDeg <= taperedAllowableTwist * (1 + 1e-10);
+      const maximumStressMPa = 2 * taperedTorque /
+        (Math.PI * taperedMinimumRadius ** 3) / 1e6;
+
+      values.taper_reaction_Nm = formatDerived(taperedTorque, 3);
+      values.taper_G_Pa = formatDerived(shearModulusPa, 0);
+      values.taper_r_A_m = formatDerived(taperedMinimumRadius, 4);
+      values.taper_r_L_m = formatDerived(radiusAt(taperedLength), 4);
+      values.taper_J_A_m4 = formatDerived(
+        Math.PI * taperedMinimumRadius ** 4 / 2, 10
+      );
+      values.taper_integral_m_neg3 = formatDerived(complianceIntegral, 3);
+      values.taper_phi_rad = formatDerived(twistRad, 6);
+      values.taper_phi_deg = formatDerived(twistDeg, 4);
+      values.taper_twist_utilization = formatDerived(twistUtilization, 4);
+      values.taper_twist_assessment = twistPasses
+        ? "The calculated rotation satisfies the assigned torsional-stiffness limit."
+        : "The calculated rotation exceeds the assigned torsional-stiffness limit.";
+      values.taper_tau_max_MPa = formatDerived(maximumStressMPa, 3);
+      values.taper_first_quarter_pct = formatDerived(
+        100 * firstQuarterIntegral / complianceIntegral, 2
+      );
+      values.taper_recommendation = twistPasses
+        ? `The assigned profile meets the ${formatDerived(taperedAllowableTwist, 3)} degree twist limit in the simplified model. Preserve the minimum radius unless omitted strength, fatigue, dynamic, or manufacturing checks require a larger section.`
+        : `Increase the minimum radius near end A or revise the taper profile before approval. Increasing the small-end radius directly reduces both the local stress and the dominant 1/r^4 contribution to total twist; a higher-modulus material can reduce twist but not stress under prescribed torque.`;
+    }
+
     const turbineDiameter = numericValue(values, "turbine_d");
     const turbineShearModulus = numericValue(values, "turbine_G");
     const turbineLoadedLength = numericValue(values, "turbine_L");

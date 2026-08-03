@@ -1,0 +1,27 @@
+---
+title: "Torsional Stiffness of a Variable-Radius Aluminum Drive Shaft"
+description: "A context-rich torsion problem on variable section properties, twist integration, and compliance localization."
+image: "assets/tapered-shaft-industry-context.png"
+categories: [context-rich, mechanics-of-materials, analysis]
+course_topics: [torsion, nonprismatic shafts, polar moment, angle of twist, shear stress]
+textbook_chapters: [Torsion of circular shafts, Nonprismatic shaft deformation, Polar moment of inertia, Angle of twist]
+problem_types: [load-path analysis, symbolic derivation, numerical integration, stress calculation, engineering evaluation]
+competencies: [boundary conditions, internal torque, variable section properties, numerical integration, sensitivity analysis, engineering judgment]
+industries: [aerospace drives, robotics, turbomachinery, precision test systems]
+difficulty: "Intermediate to advanced"
+status: "Draft"
+problem_id: "MOS-TAPER-020"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Radius Profile"}
+Use &xi; = <em>x</em>/(1 m) and <em>r</em>(<em>x</em>) = <em>r</em><sub>0</sub>[1 + &xi;<sup>3/2</sup> + &xi;<sup>5/2</sup>] so the fractional powers act on a nondimensional coordinate.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=variable-radius-tapered-shaft){.btn .btn-secondary}

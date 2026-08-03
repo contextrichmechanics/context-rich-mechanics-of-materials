@@ -1,0 +1,22 @@
+# Context-Rich Solid Mechanics Problem
+
+## Torsional Stiffness of a Variable-Radius Aluminum Drive Shaft
+
+### Engineering Context
+
+A mechanical engineering team is evaluating a lightweight aluminum torque-transmission shaft for a precision industrial drive or torsion-test system. The shaft radius increases continuously from the torque-input end toward a rigid mounting interface. This geometry reduces material near the small end while providing much greater torsional stiffness near the support.
+
+Excessive input-end rotation can create positioning error, misalignment, or poor control response. The shaft is modeled as a solid circular member made from 2014-T6 aluminum alloy with constant shear modulus and a prescribed radius profile.
+
+![Variable-radius aluminum shaft installed in an industrial drivetrain or torsion-test assembly.](assets/tapered-shaft-industry-context.png){fig-alt="Long tapered metallic shaft connected between industrial drive and support equipment." width=88%}
+
+### Main Engineering Goal
+
+Determine the angular rotation of end A relative to the fixed mounting interface, locate the maximum torsional shear stress, identify the region dominating compliance, and assess the shaft against its twist limit.
+
+### System Components
+
+- variable-radius solid 2014-T6 aluminum shaft;
+- torque-input coupling at end A;
+- rigid fixed mounting interface at the large end;
+- connected drive or test equipment.

@@ -1,0 +1,7 @@
+{
+  "id":"section-a",
+  "title":"Homework Version A - baseline tapered aluminum shaft",
+  "description":"Default sequence for variable section properties, twist integration, stress, compliance localization, sensitivity, and stiffness assessment.",
+  "selectedQuestions":["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19"],
+  "variables":{"taper_T":450,"taper_L":4,"taper_r0":0.02,"taper_G":28,"taper_phi_allow":1}
+}

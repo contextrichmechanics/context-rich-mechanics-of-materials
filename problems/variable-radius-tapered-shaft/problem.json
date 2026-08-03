@@ -1,0 +1,16 @@
+{
+  "id":"MOS-TAPER-020",
+  "slug":"variable-radius-tapered-shaft",
+  "title":"Torsional Stiffness of a Variable-Radius Aluminum Drive Shaft",
+  "studentDocumentTitle":"Student Homework Questions",
+  "instructorDocumentTitle":"Instructor Answers",
+  "summary":"A nonprismatic-shaft torsion problem integrating a variable polar moment, numerical angle-of-twist integration, maximum shear stress, compliance localization, and stiffness assessment.",
+  "textbookChapters":["Torsion of circular shafts","Nonprismatic shaft deformation","Polar moment of inertia","Angle of twist"],
+  "derivedPlaceholders":["taper_reaction_Nm","taper_G_Pa","taper_r_A_m","taper_r_L_m","taper_J_A_m4","taper_integral_m_neg3","taper_phi_rad","taper_phi_deg","taper_twist_utilization","taper_twist_assessment","taper_tau_max_MPa","taper_first_quarter_pct","taper_recommendation"],
+  "image":"assets/tapered-shaft-industry-context.png",
+  "idealizedImage":"assets/tapered-shaft-instructor-idealization.png",
+  "idealizedImageAlt":"Instructor reference idealization of a solid tapered shaft with applied torque at end A, fixed support at the large end, coordinate x, length L, and variable radius r of x.",
+  "source":"index.html",
+  "problemStatement":"<p>A mechanical engineering team is evaluating a lightweight 2014-T6 aluminum torque-transmission shaft for a precision industrial drive or test system. The solid shaft radius increases continuously from the torque-input end A toward a rigid mounting interface.</p><p>To keep the radius law dimensionally consistent, define &xi; = <em>x</em>/(1 m) and use <em>r</em>(<em>x</em>) = <em>r</em><sub>0</sub>[1 + &xi;<sup>3/2</sup> + &xi;<sup>5/2</sup>]. The shaft carries constant internal torque but has a position-dependent polar moment.</p>",
+  "engineeringGoal":"<p>Determine the angular rotation of end A relative to the fixed interface, locate the maximum torsional shear stress, quantify where torsional compliance accumulates, and assess the shaft against the assigned twist limit.</p>"
+}

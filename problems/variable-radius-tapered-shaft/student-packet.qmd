@@ -1,0 +1,24 @@
+---
+title: "Student Packet - Variable-Radius Aluminum Drive Shaft"
+subtitle: "Nonprismatic Torsion, Twist Integration, and Compliance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+  pdf: {documentclass: scrartcl, papersize: letter, toc: true, number-sections: true}
+  ipynb: default
+jupyter: python3
+execute: {enabled: false}
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="tapered-shaft-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "variable-radius-tapered-shaft", targetId: "tapered-shaft-student-questions", type: "student"});
+});
+</script>
+```
