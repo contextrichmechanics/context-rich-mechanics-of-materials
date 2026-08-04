@@ -239,19 +239,6 @@
   font-size: 0.82rem;
   line-height: 1.25;
 }
-.question-option small {
-  color: #6c757d;
-  display: block;
-  font-size: 0.7rem;
-  margin-top: 0.1rem;
-}
-.question-option em {
-  color: #6c757d;
-  display: block;
-  font-size: 0.72rem;
-  font-style: normal;
-  margin-top: 0.2rem;
-}
 .preview-toggle {
   border: 1px solid #dee2e6;
   border-radius: 0.3rem;
@@ -331,11 +318,6 @@
 .generated-question {
   border-bottom: 1px solid #f1f3f5;
   padding-bottom: 0.6rem;
-}
-.question-meta {
-  color: #6c757d;
-  font-size: 0.84rem;
-  margin-top: -0.25rem;
 }
 .answer-block {
   background: #f8f9fa;

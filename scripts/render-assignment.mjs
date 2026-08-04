@@ -1727,7 +1727,6 @@ table { border-collapse: collapse; margin-top: 0.75rem; width: 100%; }
 th, td { border: 1px solid #dee2e6; padding: 0.55rem; text-align: left; vertical-align: top; }
 th { background: #f8f9fa; }
 .packet-kicker { color: #1f5fb8; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
-.question-meta { color: #6c757d; font-size: 0.86rem; margin-top: -0.25rem; }
 .answer-block { background: #f8f9fa; border-left: 4px solid #2780e3; margin-top: 0.75rem; padding: 0.75rem 0.9rem; }
 .learning-objectives, .support-block { border: 1px solid #dee2e6; margin-top: 0.75rem; padding: 0.75rem 0.9rem; }
 @media print { body { margin: 0.5in auto; } }`;
@@ -1758,7 +1757,6 @@ function renderQuestionSectionHtml(problem, questions, section, isInstructor, va
     ${sectionQuestions.map((question) => `
       <section class="generated-question">
         <h3>${numberById.get(question.id)}. ${escapeHtml(question.title)}</h3>
-        <p class="question-meta">${[question.type, question.difficulty, ...(question.tags || [])].filter(Boolean).map(escapeHtml).join(" · ")}</p>
         ${renderQuestionImageHtml(problem, question)}
         ${substitute(question.student, problem, values)}
         ${isInstructor ? `<div class="answer-block"><h4>Representative Instructor Answer</h4>${substitute(question.instructor, problem, values)}</div>${renderInstructorSupport(question, problem, values)}` : ""}
@@ -1834,7 +1832,6 @@ function qmdDocument(problem, variant, type, outDir) {
     return `| ${tableCell(symbolHtml(variable.symbol))} | ${tableCell(variable.label)} | ${tableCell(valueWithUnitHtml(value, variable.unit))} |`;
   }).join("\n");
   const renderQuestion = (question) => {
-    const meta = [question.type, question.difficulty, ...(question.tags || [])].filter(Boolean).join(" · ");
     const support = isInstructor
       ? [
           `**Representative Instructor Answer**\n\n${htmlToMarkdown(substitute(question.instructor, problem, values))}`,
@@ -1847,8 +1844,6 @@ function qmdDocument(problem, variant, type, outDir) {
       : "";
 
     return `### ${numberById.get(question.id)}. ${question.title}
-
-*${meta}*
 
 ${renderQuestionImageMarkdown(problem, question, outDir)}
 ${htmlToMarkdown(substitute(question.student, problem, values))}

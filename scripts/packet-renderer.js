@@ -1702,7 +1702,6 @@
         ${sectionQuestions.map((question) => `
           <section class="generated-question">
             <h3>${numberById.get(question.id)}. ${escapeHtml(question.title)}</h3>
-            <p class="question-meta">${[question.type, question.difficulty, ...(question.tags || [])].filter(Boolean).map(escapeHtml).join(" · ")}</p>
             ${renderQuestionImage(problem, question)}
             ${substitute(question.student, values)}
             ${isInstructor ? `<div class="answer-block"><h4>Representative Instructor Answer</h4>${substitute(question.instructor, values)}</div>${renderInstructorSupport(question, values)}` : ""}

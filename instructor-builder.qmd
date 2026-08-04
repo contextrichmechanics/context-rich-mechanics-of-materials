@@ -1714,12 +1714,6 @@ function renderQuestionList() {
       <input data-question="${escapeHtml(question.id)}" type="checkbox" ${questionIsSelected(question) ? "checked" : ""}>
       <span>
         <strong>${escapeHtml(question.title)}</strong>
-        <small>${[
-          question.id.toUpperCase(),
-          question.type,
-          question.difficulty
-        ].filter(Boolean).map(escapeHtml).join(" · ")}</small>
-        ${(question.tags || []).length > 0 ? `<em>${question.tags.map(escapeHtml).join(" · ")}</em>` : ""}
       </span>
     </label>
   `).join("");
@@ -1825,11 +1819,6 @@ function renderQuestionSection(problem, questions, section, isInstructor, number
         ${sectionQuestions.map((question) => `
           <section class="generated-question">
             <h3>${numberById.get(question.id)}. ${escapeHtml(question.title)}</h3>
-            <p class="question-meta">${[
-              question.type,
-              question.difficulty,
-              ...(question.tags || [])
-            ].filter(Boolean).map(escapeHtml).join(" · ")}</p>
             ${renderQuestionImage(problem, question, embeddedImages)}
             ${substitute(question.student, problem)}
             ${isInstructor ? `
@@ -1942,7 +1931,6 @@ function documentStyles() {
     th, td { border: 1px solid #dee2e6; padding: 0.55rem; text-align: left; vertical-align: top; }
     th { background: #f8f9fa; }
     .packet-kicker { color: #1f5fb8; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
-    .question-meta { color: #6c757d; font-size: 0.86rem; margin-top: -0.25rem; }
     .answer-block { background: #f8f9fa; border-left: 4px solid #2780e3; margin-top: 0.75rem; padding: 0.75rem 0.9rem; }
     .learning-objectives, .support-block { border: 1px solid #dee2e6; margin-top: 0.75rem; padding: 0.75rem 0.9rem; }
     @media print { body { margin: 0.5in auto; } }
