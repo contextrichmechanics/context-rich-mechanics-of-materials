@@ -34,7 +34,7 @@ industries:
   - material testing
   - machine support plates
 difficulty: "Introductory to intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-PRESS-006"
 version: "0.1.0"
 ---

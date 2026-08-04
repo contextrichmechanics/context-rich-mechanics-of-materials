@@ -34,7 +34,7 @@ industries:
   - preload assemblies
   - structural spacer connections
 difficulty: "Intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-AXIAL-009"
 version: "0.1.0"
 ---

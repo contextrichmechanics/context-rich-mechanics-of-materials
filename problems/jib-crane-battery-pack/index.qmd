@@ -40,7 +40,7 @@ industries:
   - automotive manufacturing
   - material handling
 difficulty: "Introductory to intermediate"
-status: "In development"
+status: "Published"
 problem_id: "MOS-JIB-001"
 version: "0.3.0"
 ---

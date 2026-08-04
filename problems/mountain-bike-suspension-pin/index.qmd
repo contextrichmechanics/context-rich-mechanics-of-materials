@@ -33,7 +33,7 @@ industries:
   - e-bike design
   - lightweight mobility systems
 difficulty: "Intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-BIKE-004"
 version: "0.1.0"
 ---

@@ -10,7 +10,7 @@ problem_types: [load-path analysis, symbolic derivation, deformation calculation
 competencies: [boundary conditions, internal torque functions, integration, polar moment calculation, parameter sensitivity, engineering judgment]
 industries: [power generation, steam turbines, rotating machinery, turbomachinery]
 difficulty: "Intermediate to advanced"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-TURBINE-019"
 version: "0.1.0"
 ---

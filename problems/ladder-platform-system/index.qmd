@@ -42,7 +42,7 @@ industries:
   - building maintenance
   - construction
 difficulty: "Introductory to intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-LADDER-003"
 version: "0.1.0"
 ---

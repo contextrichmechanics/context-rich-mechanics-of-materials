@@ -36,7 +36,7 @@ industries:
   - rotating machinery
   - high-temperature piping
 difficulty: "Intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-THERMAL-012"
 version: "0.1.0"
 ---

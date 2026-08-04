@@ -37,7 +37,7 @@ industries:
   - preload mechanisms
   - mechanical actuator assemblies
 difficulty: "Intermediate to advanced"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-SPRING-010"
 version: "0.1.0"
 ---

@@ -35,7 +35,7 @@ industries:
   - robotic platforms
   - ground-support equipment
 difficulty: "Intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-WHEEL-005"
 version: "0.1.0"
 ---

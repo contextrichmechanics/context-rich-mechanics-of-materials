@@ -10,7 +10,7 @@ problem_types: [load-path analysis, support-reaction calculation, internal-resul
 competencies: [free-body diagrams, two-force-member modeling, rigid-body equilibrium, piecewise functions, critical-section identification, engineering judgment]
 industries: [industrial robotics, material handling, hydraulic equipment, manufacturing automation]
 difficulty: "Intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-ROBOT-021"
 version: "0.1.0"
 ---

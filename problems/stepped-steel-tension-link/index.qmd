@@ -36,7 +36,7 @@ industries:
   - actuator linkages
   - lifting fixtures
 difficulty: "Introductory to intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-LINK-013"
 version: "0.1.0"
 ---

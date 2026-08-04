@@ -10,7 +10,7 @@ problem_types: [load-path analysis, symbolic derivation, numerical integration, 
 competencies: [boundary conditions, internal torque, variable section properties, numerical integration, sensitivity analysis, engineering judgment]
 industries: [aerospace drives, robotics, turbomachinery, precision test systems]
 difficulty: "Intermediate to advanced"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-TAPER-020"
 version: "0.1.0"
 ---

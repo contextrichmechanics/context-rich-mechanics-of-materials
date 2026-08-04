@@ -10,7 +10,7 @@ problem_types: [load-path analysis, axial-force diagram, piecewise deformation, 
 competencies: [system interpretation, cross-sectional area identification, axial deformation calculation, engineering judgment]
 industries: [structural steel fabrication, machine frames, bonded repairs, reinforcement splices]
 difficulty: "Intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-PLATE-015"
 version: "0.1.0"
 ---

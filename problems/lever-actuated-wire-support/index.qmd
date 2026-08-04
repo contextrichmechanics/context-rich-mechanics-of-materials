@@ -37,7 +37,7 @@ industries:
   - cable tensioners
   - mechanical test rigs
 difficulty: "Advanced"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-LEVER-014"
 version: "0.1.0"
 ---

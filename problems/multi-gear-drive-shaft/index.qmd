@@ -10,7 +10,7 @@ problem_types: [load-path analysis, internal-resultant calculation, stress calcu
 competencies: [torque equilibrium, sign conventions, internal torque diagrams, section-property selection, design verification, engineering judgment]
 industries: [production machinery, conveyors, rolling equipment, industrial line shafts]
 difficulty: "Intermediate to advanced"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-GEAR-SHAFT-018"
 version: "0.1.0"
 ---

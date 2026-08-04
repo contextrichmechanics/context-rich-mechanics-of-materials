@@ -10,7 +10,7 @@ problem_types: [load-path analysis, torsional stress calculation, component sizi
 competencies: [power conversion, internal torque, standard-size selection, design verification, engineering judgment]
 industries: [conveyor drives, pump drives, fan drives, production machinery]
 difficulty: "Introductory to intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-SHAFT-016"
 version: "0.1.0"
 ---

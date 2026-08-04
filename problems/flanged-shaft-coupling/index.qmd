@@ -10,7 +10,7 @@ problem_types: [load-path analysis, symbolic derivation, connector sizing, engin
 competencies: [torque equilibrium, shaft stress calculation, bolt shear calculation, integer design selection, engineering judgment]
 industries: [pump drives, compressors, mixers, conveyors, rotating machinery]
 difficulty: "Intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-COUPLING-017"
 version: "0.1.0"
 ---

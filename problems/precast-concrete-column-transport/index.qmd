@@ -10,7 +10,7 @@ problem_types: [load-path analysis, internal-resultant calculation, diagram cons
 competencies: [free-body diagrams, symmetry, piecewise functions, critical-section identification, engineering judgment]
 industries: [precast concrete, construction logistics, structural transportation, material handling]
 difficulty: "Intermediate"
-status: "Draft"
+status: "Published"
 problem_id: "MOS-TRANSPORT-022"
 version: "0.1.0"
 ---
