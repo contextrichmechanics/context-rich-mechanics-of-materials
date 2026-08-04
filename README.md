@@ -62,7 +62,7 @@ The reference idealization appears in both packet types, but only after students
 |   `-- render-assignment.mjs    # Repeatable HTML/PDF/Word exports
 |-- schema/                      # Metadata guidance
 |-- styles/                      # Shared website styles
-|-- templates/                   # Authoring templates
+|-- templates/                   # Faculty Word template and package scaffolds
 |-- _quarto.yml                  # Quarto website configuration
 `-- .github/workflows/           # GitHub Pages publishing workflow
 ```
@@ -127,6 +127,18 @@ The generated site is written to `_site/`.
 7. Export the student assignment and instructor solution as PDF or Word files.
 
 The Builder performs the value substitution and uses the same problem images and question sequence in both outputs.
+
+## Faculty Authoring Template
+
+Faculty creating a new problem should begin with the [MEEN 305 Context-Rich Solid Mechanics Faculty Template](templates/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected.docx). Download the Word document, select the question modules appropriate to the intended mechanics topic, and complete the problem context, variables, questions, and instructor solutions.
+
+The document contains placeholders for:
+
+- the real or realistic industry-context image;
+- the student-generated mechanics model or free-body diagram; and
+- the approved instructor-reference idealization used for the numerical analysis.
+
+When submitting a completed problem for addition to this repository, provide the completed Word file, the industry-context image, and the instructor-reference image. The Word template is the faculty authoring format; it is converted into the modular Quarto/JSON package and its mechanics solutions are independently checked before publication.
 
 ## Add A New Problem
 

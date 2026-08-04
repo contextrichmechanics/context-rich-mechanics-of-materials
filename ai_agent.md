@@ -15,11 +15,13 @@ Maintain a modular university-level library of context-rich Mechanics of Materia
 - reliable in HTML, PDF, and Word outputs; and
 - safe for future maintainers to extend.
 
-The normal incoming submission contains:
+The preferred faculty source is `templates/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected.docx`. The normal incoming submission contains:
 
 1. a completed instructor Word template with the scenario, questions, values, and solutions;
 2. an industry-context image; and
 3. an instructor-reference or idealized mechanics image.
+
+If a faculty member supplies a different document format, map its content to the same progression defined in the repository template. Do not require every optional question module; retain only the modules that support the intended mechanics topic.
 
 The final result must be a self-contained folder under `problems/` and must work in the Problem Library, direct packet webpages, Instructor Builder, and command-line exports.
 
