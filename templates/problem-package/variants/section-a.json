@@ -1,9 +1,10 @@
 {
   "id": "section-a",
   "title": "Section A baseline",
+  "description": "Starter assignment using the default variable values and all three scaffold questions.",
   "variables": {
     "P": 1000,
     "L": 1.0
   },
-  "selectedQuestions": ["q1", "q2"]
+  "selectedQuestions": ["q1", "q2", "q3"]
 }

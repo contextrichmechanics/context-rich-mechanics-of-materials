@@ -1,0 +1,45 @@
+---
+title: __INSTRUCTOR_GUIDE_TITLE_YAML__
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+These answers are representative, not the only acceptable responses. Award credit for physically defensible reasoning, a complete idealization, correct mechanics, consistent units, and an engineering conclusion supported by the analysis.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="__PROBLEM_SLUG__-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "__PROBLEM_SLUG__",
+    targetId: "__PROBLEM_SLUG__-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope Of The Base Problem
+
+Replace this paragraph with the model assumptions, excluded failure modes, and limitations that bound the conclusions students may draw.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization and assumptions: 20%;
+- mechanics calculations: 40%;
+- engineering interpretation and limitations: 20%.

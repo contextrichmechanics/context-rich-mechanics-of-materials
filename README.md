@@ -157,9 +157,11 @@ Then complete the generated folder under `problems/`:
 3. Define editable values in `variables.json`.
 4. Add context, transition, and analysis questions in `questions.json`.
 5. Complete `index.qmd`, including three to five familiar `mechanics_concepts` for library search.
-6. Add or adapt the standard `_student-problem.qmd`, `student-packet.qmd`, and `instructor-guide.qmd` files.
+6. Review and customize the generated `_student-problem.qmd`, `student-packet.qmd`, and `instructor-guide.qmd` files.
 7. Add optional variants under `variants/`.
 8. Rebuild and validate the catalog.
+
+The generator creates a complete Draft package with context, Student packet, Instructor guide, replaceable context/reference image placeholders, metadata, variables, all three question sections, and a valid starter variant. Replace the scaffold content and independently verify the mechanics before changing its status.
 
 ```bash
 node scripts/build-catalog.mjs

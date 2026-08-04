@@ -17,6 +17,7 @@ problems/problem-slug/
   variables.json
   questions.json
   index.qmd
+  _student-problem.qmd
   student-packet.qmd
   instructor-guide.qmd
   assets/
@@ -33,11 +34,13 @@ Use the generator:
 node scripts/new-problem.mjs "Pressure Vessel Tank"
 ```
 
-Or copy the package template manually:
+An optional second argument supplies a custom lowercase, hyphenated slug:
 
 ```bash
-cp -R templates/problem-package problems/new-problem-slug
+node scripts/new-problem.mjs "Pressure Vessel Tank" pressure-vessel-tank
 ```
+
+The generator assigns a unique problem ID and creates a complete Draft package: shared context content, Student and Instructor HTML packet pages, replaceable context and instructor-reference image placeholders, starter metadata and variables, one question in each packet section, and a valid Section A variant. Use the generator rather than copying `templates/problem-package/` directly because the generator safely replaces package tokens.
 
 Then edit these files:
 
@@ -45,6 +48,8 @@ Then edit these files:
 - `variables.json`: instructor-editable values.
 - `questions.json`: selectable student questions and instructor answers.
 - `index.qmd`: library-card metadata.
+- `_student-problem.qmd`: shared engineering context shown in both packet types.
+- `student-packet.qmd` and `instructor-guide.qmd`: generated packet wrappers; normally only their titles, purpose, scope, and assessment guidance need editing.
 - `assets/`: images owned by the problem.
 
 After creating a package, open `problem.json` and confirm that the `slug` matches the folder name.
@@ -80,16 +85,19 @@ In `problem.json`, include the same chapter list for the Instructor Builder and 
 
 # Images
 
-Each problem folder should include its own images:
+Each generated package begins with two SVG placeholders:
 
 ```text
-problems/new-problem-slug/assets/problem-image.png
+problems/new-problem-slug/assets/context-placeholder.svg
+problems/new-problem-slug/assets/instructor-idealization-placeholder.svg
 ```
 
-Then reference the main industry/context image in `problem.json`:
+Replace both with the supplied problem images, give the files clear stable names, and update `problem.json`. For example:
 
 ```json
-"image": "assets/problem-image.png"
+"image": "assets/industry-context.png",
+"idealizedImage": "assets/instructor-idealization.png",
+"idealizedImageAlt": "Instructor reference idealization with dimensions and loads."
 ```
 
 The context image appears in the library card, builder preview, student document, instructor document, and exported DOC/PDF.
@@ -97,8 +105,8 @@ The context image appears in the library card, builder preview, student document
 If the problem has an instructor/reference idealized diagram with dimensions, labels, geometry, or the model students need for numerical analysis, store it as a problem-level image:
 
 ```json
-"image": "assets/problem-image.png",
-"idealizedImage": "assets/instructor-idealized-model.png",
+"image": "assets/industry-context.png",
+"idealizedImage": "assets/instructor-idealization.png",
 "idealizedImageAlt": "Instructor reference idealization with dimensions and loads."
 ```
 

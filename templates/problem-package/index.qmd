@@ -1,38 +1,37 @@
 ---
-title: "Replace With Problem Title"
-description: "One-sentence problem summary."
-image: "assets/problem-image.png"
-categories:
-  - context-rich
+title: __PROBLEM_TITLE_YAML__
+description: "Replace with a one-sentence context-rich mechanics problem summary."
+image: "assets/context-placeholder.svg"
+categories: [context-rich, mechanics-of-materials]
 mechanics_concepts:
-  - replace-me
+  - replace with primary concept
+  - replace with secondary concept
 course_topics:
-  - replace-me
+  - replace with course topic
 textbook_chapters:
   - Replace with chapter or topic
 problem_types:
-  - replace-me
+  - context interpretation
+  - mechanics analysis
 competencies:
-  - replace-me
+  - engineering idealization
+  - engineering judgment
 industries:
-  - replace-me
+  - replace with industry
 difficulty: "Introductory"
 status: "Draft"
-problem_id: "MOS-NEW-001"
+problem_id: "__PROBLEM_ID__"
 version: "0.1.0"
 ---
 
-This page is the public problem-library entry. Keep the problem-specific builder data in:
+{{< include _student-problem.qmd >}}
 
-- `problem.json`
-- `variables.json`
-- `questions.json`
-- `assets/`
+## Assignment Options
 
-After editing those files, run:
+::: {.callout-warning title="Authoring Scaffold"}
+Replace the placeholder images and authoring text, complete the metadata and mechanics solutions, and independently verify all calculations before changing this problem from Draft.
+:::
 
-```bash
-node scripts/build-catalog.mjs
-quarto render instructor-builder.qmd
-quarto render index.qmd
-```
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=__PROBLEM_SLUG__){.btn .btn-secondary}

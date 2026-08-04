@@ -1,0 +1,26 @@
+---
+title: __STUDENT_PACKET_TITLE_YAML__
+subtitle: "Context, Idealization, and Mechanics Analysis"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="__PROBLEM_SLUG__-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "__PROBLEM_SLUG__",
+    targetId: "__PROBLEM_SLUG__-student-questions",
+    type: "student"
+  });
+});
+</script>
+```

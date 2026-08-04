@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">Instructor reference idealization placeholder</title>
+  <desc id="description">Replace this placeholder with the approved mechanics model, dimensions, supports, and loads.</desc>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect x="32" y="32" width="1136" height="611" fill="none" stroke="#3b6f91" stroke-width="4" stroke-dasharray="16 12"/>
+  <line x1="250" y1="390" x2="950" y2="390" stroke="#263746" stroke-width="18"/>
+  <polygon points="300,390 255,485 345,485" fill="none" stroke="#263746" stroke-width="6"/>
+  <line x1="820" y1="180" x2="820" y2="350" stroke="#b33a3a" stroke-width="8"/>
+  <polygon points="820,390 795,345 845,345" fill="#b33a3a"/>
+  <text x="850" y="270" font-family="Georgia, serif" font-size="40" font-style="italic" fill="#b33a3a">P</text>
+  <text x="600" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#35404a">Replace with the approved instructor reference model</text>
+</svg>

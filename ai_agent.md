@@ -210,7 +210,9 @@ Create a scaffold:
 node scripts/new-problem.mjs "Descriptive Problem Title"
 ```
 
-The scaffold is a starting point. Confirm that the final package includes all files required by the catalog validator, especially `_student-problem.qmd`, `student-packet.qmd`, and `instructor-guide.qmd`.
+The scaffold creates a complete working Draft package, including `_student-problem.qmd`, `student-packet.qmd`, `instructor-guide.qmd`, two replaceable SVG image placeholders, starter metadata and variables, one question in each packet section, and a Section A variant. Use the generator rather than copying the tokenized template directory directly.
+
+Replace both placeholder images and all scaffold prose before publication. The generated packet wrappers already contain the correct problem slug, renderer calls, and HTML-only output configuration; preserve that structure while customizing their titles, purpose, scope, and assessment guidance.
 
 ### `problem.json`
 
