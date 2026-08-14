@@ -1,0 +1,40 @@
+---
+title: "Instructor Guide - Cantilevered Operator-Seat Support"
+subtitle: "Representative Solutions and Bending-Stress Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+# Purpose
+
+Award credit for a defensible cantilever idealization, complete free-body diagram, consistent sign convention, correct internal resultants, accurate hollow-section properties, correct use of the flexure formula, and a conclusion bounded by the stated assumptions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="operator-seat-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "cantilevered-operator-seat-bending", targetId: "operator-seat-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes static loading, a straight prismatic arm, a concentrated load through the seat-post centerline, linear-elastic material response, small deformation, plane sections, and concentric inner and outer rectangles. It neglects arm and hardware self-weight unless included in P, connection flexibility, local attachment stresses, weld and bolt failure, stress concentrations, fatigue, impact, dynamics, and applicable seating or machinery safety requirements.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization and assumptions: 20%;
+- internal loading and section properties: 30%;
+- bending stress and stress sense: 20%;
+- engineering assessment and limitations: 10%.

@@ -1,0 +1,33 @@
+{
+  "id": "MOS-SEAT-023",
+  "slug": "cantilevered-operator-seat-bending",
+  "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",
+  "studentDocumentTitle": "Student Homework Questions - Cantilevered Operator-Seat Support",
+  "instructorDocumentTitle": "Instructor Answers - Cantilevered Operator-Seat Support",
+  "summary": "A cantilever-beam problem integrating load paths, internal shear and moment, hollow rectangular section properties, maximum flexural stress, stress sense, and engineering assessment.",
+  "textbookChapters": [
+    "Internal loadings in structural members",
+    "Centroids and moments of inertia",
+    "Flexural deformation of a straight member",
+    "The flexure formula"
+  ],
+  "derivedPlaceholders": [
+    "seat_V_lb",
+    "seat_M_lbin",
+    "seat_area_in2",
+    "seat_I_in4",
+    "seat_c_in",
+    "seat_S_in3",
+    "seat_sigma_max_psi",
+    "seat_sigma_max_ksi",
+    "seat_tension_fiber",
+    "seat_compression_fiber",
+    "seat_assessment"
+  ],
+  "image": "assets/seat-industry-context.png",
+  "idealizedImage": "assets/seat-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference idealization of a cantilevered operator seat with downward load P, offset x, fixed support A, section a-a, and hollow rectangular cross-section dimensions B, H, b, and h.",
+  "source": "index.html",
+  "problemStatement": "<p>An industrial machine uses a side-mounted operator seat so that a technician can remain near a control or inspection station without a support column beneath the seat. A hollow rectangular steel-tube arm projects from the machine frame and carries the downward seat-and-occupant load <em>P</em>.</p><p>Evaluate section a-a, located a horizontal distance <em>x</em> from the load line. Model the machine-frame attachment at A as fixed and limit the base analysis to static, linear-elastic beam bending.</p>",
+  "engineeringGoal": "<p>Determine the maximum normal bending stress at section a-a, identify the extreme fibers in tension and compression, and explain how geometry or load offset could be changed to reduce bending demand.</p>"
+}

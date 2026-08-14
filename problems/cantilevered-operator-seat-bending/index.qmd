@@ -1,0 +1,28 @@
+---
+title: "Bending Stress in a Cantilevered Industrial Operator-Seat Support"
+description: "A cantilever-beam problem on internal shear and moment, hollow rectangular section properties, and maximum flexural stress."
+image: "assets/seat-industry-context.png"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [cantilever beam, equilibrium, internal shear, bending moment, second moment of area, flexure formula, bending stress, neutral axis, section modulus]
+course_topics: [internal loadings, area moments of inertia, flexural stress, hollow sections, engineering design]
+textbook_chapters: [Internal loadings in structural members, Centroids and moments of inertia, Flexural deformation of a straight member, The flexure formula]
+problem_types: [load-path analysis, free-body diagram, internal-resultant calculation, section-property calculation, stress calculation, engineering evaluation]
+competencies: [engineering idealization, equilibrium, section properties, flexure formula, stress interpretation, engineering judgment]
+industries: [industrial machinery, operator stations, maintenance equipment, manufacturing]
+difficulty: "Introductory to intermediate"
+status: "Published"
+problem_id: "MOS-SEAT-023"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+The base assignment connects a real cantilevered seat support to internal loading, hollow-section properties, and the flexure formula. Connection stresses, fatigue, dynamics, and local stress concentrations are intentionally excluded.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=cantilevered-operator-seat-bending){.btn .btn-secondary}

@@ -919,6 +919,505 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-SEAT-023",
+    "slug": "cantilevered-operator-seat-bending",
+    "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",
+    "studentDocumentTitle": "Student Homework Questions - Cantilevered Operator-Seat Support",
+    "instructorDocumentTitle": "Instructor Answers - Cantilevered Operator-Seat Support",
+    "summary": "A cantilever-beam problem integrating load paths, internal shear and moment, hollow rectangular section properties, maximum flexural stress, stress sense, and engineering assessment.",
+    "textbookChapters": [
+      "Internal loadings in structural members",
+      "Centroids and moments of inertia",
+      "Flexural deformation of a straight member",
+      "The flexure formula"
+    ],
+    "derivedPlaceholders": [
+      "seat_V_lb",
+      "seat_M_lbin",
+      "seat_area_in2",
+      "seat_I_in4",
+      "seat_c_in",
+      "seat_S_in3",
+      "seat_sigma_max_psi",
+      "seat_sigma_max_ksi",
+      "seat_tension_fiber",
+      "seat_compression_fiber",
+      "seat_assessment"
+    ],
+    "image": "problems/cantilevered-operator-seat-bending/assets/seat-industry-context.png",
+    "idealizedImage": "problems/cantilevered-operator-seat-bending/assets/seat-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference idealization of a cantilevered operator seat with downward load P, offset x, fixed support A, section a-a, and hollow rectangular cross-section dimensions B, H, b, and h.",
+    "source": "problems/cantilevered-operator-seat-bending/index.html",
+    "problemStatement": "<p>An industrial machine uses a side-mounted operator seat so that a technician can remain near a control or inspection station without a support column beneath the seat. A hollow rectangular steel-tube arm projects from the machine frame and carries the downward seat-and-occupant load <em>P</em>.</p><p>Evaluate section a-a, located a horizontal distance <em>x</em> from the load line. Model the machine-frame attachment at A as fixed and limit the base analysis to static, linear-elastic beam bending.</p>",
+    "engineeringGoal": "<p>Determine the maximum normal bending stress at section a-a, identify the extreme fibers in tension and compression, and explain how geometry or load offset could be changed to reduce bending demand.</p>",
+    "variables": [
+      {
+        "key": "seat_P",
+        "symbol": "P",
+        "label": "Seat and occupant load",
+        "value": 180,
+        "unit": "lb",
+        "min": 50,
+        "max": 1000,
+        "step": 10
+      },
+      {
+        "key": "seat_x",
+        "symbol": "x",
+        "label": "Distance from load line to section a-a",
+        "value": 8,
+        "unit": "in",
+        "min": 1,
+        "max": 60,
+        "step": 0.5
+      },
+      {
+        "key": "seat_B",
+        "symbol": "B",
+        "label": "Outer tube width",
+        "value": 1,
+        "unit": "in",
+        "min": 0.2,
+        "max": 12,
+        "step": 0.1
+      },
+      {
+        "key": "seat_H",
+        "symbol": "H",
+        "label": "Outer tube height",
+        "value": 3,
+        "unit": "in",
+        "min": 0.2,
+        "max": 18,
+        "step": 0.1
+      },
+      {
+        "key": "seat_b",
+        "symbol": "b",
+        "label": "Inner tube width",
+        "value": 0.5,
+        "unit": "in",
+        "min": 0,
+        "max": 11.9,
+        "step": 0.1
+      },
+      {
+        "key": "seat_h",
+        "symbol": "h",
+        "label": "Inner tube height",
+        "value": 2.5,
+        "unit": "in",
+        "min": 0,
+        "max": 17.9,
+        "step": 0.1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the Support Arm",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "structural function",
+          "cantilever arm",
+          "load transfer"
+        ],
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the primary structural role of the support arm."
+        ],
+        "student": "<p>What is the primary structural function of the hollow rectangular support arm?</p>",
+        "instructor": "<p>The arm carries the seat and occupant load and transfers that load to the machine frame.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "Principal External Load",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "concentrated load",
+          "occupant load",
+          "load idealization"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify and idealize the dominant applied load."
+        ],
+        "student": "<p>Where is the principal external load applied, and how should it be idealized?</p>",
+        "instructor": "<p>The seat and occupant load is represented by a concentrated vertical force <em>P</em> acting downward through the seat-post centerline.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Machine-Frame Support Condition",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "fixed support",
+          "boundary condition",
+          "reaction moment"
+        ],
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Describe the fixed-support idealization and its reactions."
+        ],
+        "student": "<p>How should the machine-frame attachment at A be idealized?</p>",
+        "instructor": "<p>Idealize A as a fixed support that prevents horizontal translation, vertical translation, and rotation. It can therefore supply horizontal and vertical reaction forces and a reaction moment.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Dominant Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path",
+          "seat post",
+          "machine frame"
+        ],
+        "type": "load path",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Trace the occupant load to the supporting machine frame."
+        ],
+        "student": "<p>Trace the dominant load path from the occupant to the machine frame.</p>",
+        "instructor": "<p>Occupant &rarr; seat &rarr; seat post and mounting bracket &rarr; cantilever tube arm &rarr; fixed attachment at A &rarr; machine frame.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Why Evaluate Section a-a?",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "critical section",
+          "bending moment",
+          "cantilever"
+        ],
+        "type": "critical-section identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Explain why the designated section carries bending demand."
+        ],
+        "student": "<p>Why is section a-a an appropriate location for a bending-stress evaluation?</p>",
+        "instructor": "<p>Section a-a lies in the load path and carries the bending moment produced by the offset load. In a tip-loaded cantilever, the bending-moment magnitude increases toward the fixed support.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Governing Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "flexural stress",
+          "linear stress distribution",
+          "neutral axis"
+        ],
+        "type": "scope identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Recognize the expected flexural normal-stress distribution."
+        ],
+        "student": "<p>What mechanical response is the focus of this problem, and what stress distribution should be expected through the tube depth?</p>",
+        "instructor": "<p>Flexural normal stress is the focus. For elastic bending, normal stress varies linearly through the depth, is zero at the neutral axis, and reaches its largest tensile and compressive magnitudes at the outer fibers.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Geometry Governing Bending Resistance",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "section geometry",
+          "second moment of area",
+          "section depth"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Relate hollow-section dimensions to bending resistance."
+        ],
+        "student": "<p>Which cross-sectional dimensions most strongly affect bending stress at section a-a?</p>",
+        "instructor": "<p>The outer height <em>H</em>, outer width <em>B</em>, inner height <em>h</em>, and inner width <em>b</em> determine the second moment of area. Section height is especially influential because the rectangular inertia expression contains a cubic height term.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Cantilever Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "free-body diagram",
+          "cantilever beam",
+          "hollow section"
+        ],
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Translate the seat assembly into a mechanics model."
+        ],
+        "gradingNotes": "<p>Students should attempt the cantilever model before consulting the instructor reference figure.</p>",
+        "commonMistakes": "<p>Common omissions are the fixed-end moment, the distance from the load line to section a-a, or the inner tube dimensions.</p>",
+        "student": "<p>Before using the instructor reference figure, replace the seat assembly with a cantilever-beam model. Show fixed support A, downward load <em>P</em>, distance <em>x</em> from the load line to section a-a, and the hollow rectangular section dimensions.</p>",
+        "instructor": "<p>A valid model shows a horizontal cantilever fixed at the machine frame, a downward point load <em>P</em> through the seat-post centerline, section a-a located <em>x</em> from that load line, and concentric outer dimensions <em>B</em> by <em>H</em> with inner dimensions <em>b</em> by <em>h</em>.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "static loading",
+          "prismatic beam",
+          "linear elasticity"
+        ],
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "State assumptions supporting the beam-bending model."
+        ],
+        "student": "<p>State the assumptions used in the simplified mechanics model.</p>",
+        "instructor": "<p>Assume static loading, a straight prismatic arm, a concentrated load <em>P</em>, linear-elastic material response, small deformation, plane sections, and concentric inner and outer rectangles. Neglect arm and hardware self-weight unless included in <em>P</em>, connection flexibility, local attachment effects, stress concentrations, fatigue, impact, and dynamics.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan",
+          "internal moment",
+          "flexure formula"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Sequence the equilibrium, section-property, and stress calculations."
+        ],
+        "student": "<p>List the mechanics calculation sequence before substituting numerical values.</p>",
+        "instructor": "<p>Cut the arm at section a-a and determine internal shear and bending moment; calculate net area and locate the centroidal neutral axis; calculate the second moment of area; set <em>c</em> = <em>H</em>/2; apply |&sigma;<sub>max</sub>| = |<em>M</em>|<em>c</em>/<em>I</em>; and identify the tensile and compressive extreme fibers.</p>"
+      },
+      {
+        "id": "q11",
+        "title": "Boundary Condition and Reactions at A",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "fixed support",
+          "reaction force",
+          "reaction moment"
+        ],
+        "type": "mechanics setup",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify all reaction resultants admitted at the fixed support."
+        ],
+        "student": "<p>State the boundary condition at A and list the associated reaction resultants.</p>",
+        "instructor": "<p>A is fixed and can provide horizontal reaction <em>A</em><sub>x</sub>, vertical reaction <em>A</em><sub>y</sub>, and reaction moment <em>M</em><sub>A</sub>. For the assigned vertical load, <em>A</em><sub>y</sub> and <em>M</em><sub>A</sub> are the nonzero reactions.</p>"
+      },
+      {
+        "id": "q12",
+        "title": "Internal Shear and Bending Moment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "section cut",
+          "internal shear",
+          "internal moment"
+        ],
+        "type": "internal-resultant calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Use section equilibrium to determine internal resultants."
+        ],
+        "commonMistakes": "<p>Do not use the full distance to fixed support A when the requested cut is section a-a; use the assigned distance <em>x</em> from the load line to the cut.</p>",
+        "student": "<p>Cut the arm at section a-a and determine the internal shear force <em>V</em> and bending moment <em>M</em>. State your sign convention.</p>",
+        "instructor": "<p>From equilibrium of the free-end segment, |<em>V</em>| = <em>P</em> = <strong>{{seat_V_lb}} lb</strong> and |<em>M</em>| = <em>Px</em> = <strong>{{seat_M_lbin}} lb&middot;in</strong>. Under the common sagging-positive convention, this loading produces a negative or hogging bending moment at the cut.</p>"
+      },
+      {
+        "id": "q13",
+        "title": "Net Cross-Sectional Area",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "hollow rectangle",
+          "net area",
+          "section geometry"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Calculate the material area of a hollow rectangular tube."
+        ],
+        "student": "<p>Determine the net cross-sectional area of the hollow rectangular tube.</p>",
+        "instructor": "<p><em>A</em> = <em>BH</em> - <em>bh</em> = <strong>{{seat_area_in2}} in<sup>2</sup></strong>.</p>"
+      },
+      {
+        "id": "q14",
+        "title": "Centroidal Neutral Axis",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "centroid",
+          "neutral axis",
+          "symmetry"
+        ],
+        "type": "section-property reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Locate the neutral axis using section symmetry."
+        ],
+        "student": "<p>Locate the centroidal neutral axis for bending about the horizontal centroidal axis.</p>",
+        "instructor": "<p>Because the outer and inner rectangles are concentric and symmetric, the centroid and horizontal neutral axis lie at the section center, halfway through the outer height.</p>"
+      },
+      {
+        "id": "q15",
+        "title": "Second Moment of Area",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "area moment of inertia",
+          "hollow rectangle",
+          "centroidal axis"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the second moment of area about the bending axis."
+        ],
+        "commonMistakes": "<p>Use the outer width with the outer height and the inner width with the inner height. The height dimension is cubed.</p>",
+        "student": "<p>Determine the second moment of area <em>I</em> of section a-a about its horizontal centroidal axis.</p>",
+        "instructor": "<p><em>I</em> = (<em>BH</em><sup>3</sup> - <em>bh</em><sup>3</sup>)/12 = <strong>{{seat_I_in4}} in<sup>4</sup></strong>.</p>"
+      },
+      {
+        "id": "q16",
+        "title": "Extreme-Fiber Distance and Section Modulus",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "extreme fiber",
+          "section modulus",
+          "bending resistance"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Determine extreme-fiber distance and elastic section modulus."
+        ],
+        "student": "<p>Determine the extreme-fiber distance <em>c</em> and the elastic section modulus <em>S</em> = <em>I</em>/<em>c</em>.</p>",
+        "instructor": "<p><em>c</em> = <em>H</em>/2 = <strong>{{seat_c_in}} in</strong>. Therefore <em>S</em> = <em>I</em>/<em>c</em> = <strong>{{seat_S_in3}} in<sup>3</sup></strong>.</p>"
+      },
+      {
+        "id": "q17",
+        "title": "Maximum Normal Bending Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "flexure formula",
+          "maximum stress",
+          "bending stress"
+        ],
+        "type": "stress calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Apply the flexure formula with consistent units."
+        ],
+        "commonMistakes": "<p>Use the moment at section a-a, not simply the force. Keep lb, in, and in<sup>4</sup> units consistent.</p>",
+        "student": "<p>Determine the maximum normal bending-stress magnitude at section a-a.</p>",
+        "instructor": "<p>|&sigma;<sub>max</sub>| = |<em>M</em>|<em>c</em>/<em>I</em> = <strong>{{seat_sigma_max_psi}} psi</strong> = <strong>{{seat_sigma_max_ksi}} ksi</strong>.</p>"
+      },
+      {
+        "id": "q18",
+        "title": "Tension and Compression Fibers",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "stress sense",
+          "hogging moment",
+          "extreme fibers"
+        ],
+        "type": "stress interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Relate bending-moment sense to tensile and compressive stress locations."
+        ],
+        "student": "<p>For the downward seat load, identify the extreme fiber in tension and the extreme fiber in compression. State the bending sign convention used.</p>",
+        "instructor": "<p>Using sagging moment as positive, the section moment is negative or hogging. The <strong>{{seat_tension_fiber}}</strong> is in tension and the <strong>{{seat_compression_fiber}}</strong> is in compression. Their stress magnitudes are equal because the section is symmetric about the neutral axis.</p>"
+      },
+      {
+        "id": "q19",
+        "title": "Sensitivity to Geometry and Offset",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "design sensitivity",
+          "section height",
+          "load offset"
+        ],
+        "type": "engineering comparison",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Compare how geometry and load offset affect bending stress."
+        ],
+        "student": "<p>Which change would most effectively reduce bending stress: increasing outer height <em>H</em>, increasing outer width <em>B</em>, or reducing offset <em>x</em>? Explain the governing trends.</p>",
+        "instructor": "<p>Increasing section height is generally very effective because the rectangular inertia contains a cubic height term, although the inner dimensions and packaging constraints also matter. Reducing <em>x</em> lowers moment and stress linearly. Increasing <em>B</em> generally increases inertia approximately linearly when the remaining geometry is held comparable.</p>"
+      },
+      {
+        "id": "q20",
+        "title": "Engineering Assessment and Model Limits",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "allowable stress",
+          "factor of safety",
+          "design limitations"
+        ],
+        "type": "engineering judgment",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Explain how to judge acceptability and identify excluded checks."
+        ],
+        "student": "<p>If an allowable normal stress were supplied, explain how you would assess the arm and recommend one modification if it were inadequate. Identify important checks omitted from the base model.</p>",
+        "instructor": "<p>{{seat_assessment}}</p><p>A complete design must also evaluate attachment and weld stresses, local tube-wall behavior, stress concentrations, fatigue, impact and dynamic occupant loads, stiffness and deflection, connection flexibility, manufacturing quality, and applicable machinery and seating safety requirements.</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - 180 lb operator load",
+        "description": "Baseline cantilever idealization, internal loading, hollow-section properties, bending stress, and engineering assessment.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20"
+        ],
+        "variables": {
+          "seat_P": 180,
+          "seat_x": 8,
+          "seat_B": 1,
+          "seat_H": 3,
+          "seat_b": 0.5,
+          "seat_h": 2.5
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-CLEVIS-007",
     "slug": "clevis-pin-tensile-linkage",
     "title": "Industrial Clevis-Pin Linkage Under Tensile Load",

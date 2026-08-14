@@ -1,0 +1,8 @@
+[
+  {"key":"seat_P","symbol":"P","label":"Seat and occupant load","value":180,"unit":"lb","min":50,"max":1000,"step":10},
+  {"key":"seat_x","symbol":"x","label":"Distance from load line to section a-a","value":8,"unit":"in","min":1,"max":60,"step":0.5},
+  {"key":"seat_B","symbol":"B","label":"Outer tube width","value":1.0,"unit":"in","min":0.2,"max":12,"step":0.1},
+  {"key":"seat_H","symbol":"H","label":"Outer tube height","value":3.0,"unit":"in","min":0.2,"max":18,"step":0.1},
+  {"key":"seat_b","symbol":"b","label":"Inner tube width","value":0.5,"unit":"in","min":0,"max":11.9,"step":0.1},
+  {"key":"seat_h","symbol":"h","label":"Inner tube height","value":2.5,"unit":"in","min":0,"max":17.9,"step":0.1}
+]

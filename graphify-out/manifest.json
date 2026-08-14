@@ -1,0 +1,857 @@
+{
+  "data/problem-catalog.js": {
+    "mtime": 1786688912.1711812,
+    "ast_hash": "4087f26900a59c9e7b6ab3b198fdaa47",
+    "semantic_hash": ""
+  },
+  "data/problem-health.js": {
+    "mtime": 1786688912.1724489,
+    "ast_hash": "5568a30666da1f6358076606d9010f81",
+    "semantic_hash": ""
+  },
+  "scripts/build-catalog.mjs": {
+    "mtime": 1785193098.0221236,
+    "ast_hash": "694b778648f36db3557bafd4123d1258",
+    "semantic_hash": ""
+  },
+  "scripts/new-problem.mjs": {
+    "mtime": 1785855449.4987292,
+    "ast_hash": "7811d9712c64383408f0a8f14129777b",
+    "semantic_hash": ""
+  },
+  "scripts/packet-renderer.js": {
+    "mtime": 1786688889.2587752,
+    "ast_hash": "08d944b60ce00466a76be14159a87ed8",
+    "semantic_hash": ""
+  },
+  "scripts/render-assignment.mjs": {
+    "mtime": 1786688889.3460932,
+    "ast_hash": "b8e958645add6bb5c3cfde03b7dd0a77",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/SKILL.md": {
+    "mtime": 1786458832.1356137,
+    "ast_hash": "212b55d95333d84e14262f8ec83faa2b",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/add-watch.md": {
+    "mtime": 1786458771.9529324,
+    "ast_hash": "d59d027fe449f06aa03905a01184e779",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/exports.md": {
+    "mtime": 1786458771.9530623,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1786458771.9532073,
+    "ast_hash": "bf895ec4d4e40f5f66f7d31c2a9bd4a7",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1786458771.9533362,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/hooks.md": {
+    "mtime": 1786458771.9534943,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/query.md": {
+    "mtime": 1786458771.9780293,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/transcribe.md": {
+    "mtime": 1786458771.9786603,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/update.md": {
+    "mtime": 1786458771.9788718,
+    "ast_hash": "9378bd03d56baaf78bd738ab3848f142",
+    "semantic_hash": ""
+  },
+  ".github/workflows/publish.yml": {
+    "mtime": 1785190812.139386,
+    "ast_hash": "36661293ece24b294fb78a68870ade89",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1786458832.1364946,
+    "ast_hash": "6a47d64fcc136324ca395065a707ef76",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785855195.465936,
+    "ast_hash": "88863a9e3b4fd84497d5ede18f6d559e",
+    "semantic_hash": ""
+  },
+  "_quarto.yml": {
+    "mtime": 1785794199.804454,
+    "ast_hash": "45ffd7a75b4142bfbd2f3dabbea693e5",
+    "semantic_hash": ""
+  },
+  "about.qmd": {
+    "mtime": 1780971714.0,
+    "ast_hash": "aff963ed683a1d865f2104537d518335",
+    "semantic_hash": ""
+  },
+  "ai_agent.md": {
+    "mtime": 1785855195.9388132,
+    "ast_hash": "7b9d7dea89d02999ee7fef527af54b96",
+    "semantic_hash": ""
+  },
+  "docs/authoring-guide.qmd": {
+    "mtime": 1785855449.7158172,
+    "ast_hash": "4ef0b78ac92addbea59d2c80a1f262ce",
+    "semantic_hash": ""
+  },
+  "docs/problem-health.qmd": {
+    "mtime": 1781491682.6959355,
+    "ast_hash": "7339a6172c5840089a00b5ef6b594770",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md": {
+    "mtime": 1786459092.3598995,
+    "ast_hash": "272889e2e73a3d99762f82f3a1b950de",
+    "semantic_hash": ""
+  },
+  "index.qmd": {
+    "mtime": 1785792556.6973796,
+    "ast_hash": "bbaa2257538c0c32b02cc3c26d614cad",
+    "semantic_hash": ""
+  },
+  "instructor-builder.qmd": {
+    "mtime": 1786689057.3008995,
+    "ast_hash": "8e712a71873cd04ca9a9f438318375f2",
+    "semantic_hash": ""
+  },
+  "problems/axial-rod-tube-assembly/_student-problem.qmd": {
+    "mtime": 1785774387.3478374,
+    "ast_hash": "557334d9070c1b47e25035f0c86b9f36",
+    "semantic_hash": ""
+  },
+  "problems/axial-rod-tube-assembly/index.qmd": {
+    "mtime": 1785854453.6864984,
+    "ast_hash": "c54cae55fa0e7750f7a016b1c959739d",
+    "semantic_hash": ""
+  },
+  "problems/axial-rod-tube-assembly/instructor-guide.qmd": {
+    "mtime": 1785818550.2103848,
+    "ast_hash": "fa8123d8025af5aaf7bfd446e820ccdb",
+    "semantic_hash": ""
+  },
+  "problems/axial-rod-tube-assembly/student-packet.qmd": {
+    "mtime": 1785818550.2018135,
+    "ast_hash": "7d690386677b8e9ecf1a8212cf577d0c",
+    "semantic_hash": ""
+  },
+  "problems/bonded-steel-plate-splice-joint/_student-problem.qmd": {
+    "mtime": 1785781824.1871662,
+    "ast_hash": "4712205eabf3a23ff69ee7ce37f81803",
+    "semantic_hash": ""
+  },
+  "problems/bonded-steel-plate-splice-joint/index.qmd": {
+    "mtime": 1785854453.9048872,
+    "ast_hash": "a45ceb361d8d9cf5915db158bfa62ee2",
+    "semantic_hash": ""
+  },
+  "problems/bonded-steel-plate-splice-joint/instructor-guide.qmd": {
+    "mtime": 1785818550.2108264,
+    "ast_hash": "4531e7c064bba4c0ff1fb3c39925c0f5",
+    "semantic_hash": ""
+  },
+  "problems/bonded-steel-plate-splice-joint/student-packet.qmd": {
+    "mtime": 1785818550.2022252,
+    "ast_hash": "dc44e89efd36e7b74c3ab39428dd2a70",
+    "semantic_hash": ""
+  },
+  "problems/cantilevered-operator-seat-bending/_student-problem.qmd": {
+    "mtime": 1786688611.662842,
+    "ast_hash": "63f0fe5b2bd9f53e3edf0f14803a4823",
+    "semantic_hash": ""
+  },
+  "problems/cantilevered-operator-seat-bending/index.qmd": {
+    "mtime": 1786688611.744137,
+    "ast_hash": "88f08aaddecb87d839c1a8b138af3d27",
+    "semantic_hash": ""
+  },
+  "problems/cantilevered-operator-seat-bending/instructor-guide.qmd": {
+    "mtime": 1786688611.903848,
+    "ast_hash": "eaa7e76dacf322c3ff1df6a833857493",
+    "semantic_hash": ""
+  },
+  "problems/cantilevered-operator-seat-bending/student-packet.qmd": {
+    "mtime": 1786688611.8253276,
+    "ast_hash": "55f026bceaa888a089095542cad91638",
+    "semantic_hash": ""
+  },
+  "problems/clevis-pin-tensile-linkage/_student-problem.qmd": {
+    "mtime": 1785183458.282014,
+    "ast_hash": "f6ceee01b58dd506f0513d2b127c0126",
+    "semantic_hash": ""
+  },
+  "problems/clevis-pin-tensile-linkage/index.qmd": {
+    "mtime": 1785854454.1196535,
+    "ast_hash": "dd671b083da6e7c8398a06fa83a7520b",
+    "semantic_hash": ""
+  },
+  "problems/clevis-pin-tensile-linkage/instructor-guide.qmd": {
+    "mtime": 1785818550.2111712,
+    "ast_hash": "ef801add6bdbf7c8ed2b48193bfb458a",
+    "semantic_hash": ""
+  },
+  "problems/clevis-pin-tensile-linkage/student-packet.qmd": {
+    "mtime": 1785818550.2027051,
+    "ast_hash": "ce8862caf74f4a8ea69f2853b1121eae",
+    "semantic_hash": ""
+  },
+  "problems/flanged-shaft-coupling/_student-problem.qmd": {
+    "mtime": 1785783422.0408328,
+    "ast_hash": "bad19c1f3507ffef447917752e65d385",
+    "semantic_hash": ""
+  },
+  "problems/flanged-shaft-coupling/index.qmd": {
+    "mtime": 1785854454.3354952,
+    "ast_hash": "6a4e9c11c2a0a768bdab58c3d11ff7e0",
+    "semantic_hash": ""
+  },
+  "problems/flanged-shaft-coupling/instructor-guide.qmd": {
+    "mtime": 1785818550.2114894,
+    "ast_hash": "c9039a46bedfcd93bd4b89473da681ea",
+    "semantic_hash": ""
+  },
+  "problems/flanged-shaft-coupling/student-packet.qmd": {
+    "mtime": 1785818550.2031107,
+    "ast_hash": "db5c9c5ab35c9f5e70292b4e943ab847",
+    "semantic_hash": ""
+  },
+  "problems/hydraulic-press-punching-shear/_student-problem.qmd": {
+    "mtime": 1785182678.901707,
+    "ast_hash": "1a1da9f3622808bd7c0e9f24b26a73bc",
+    "semantic_hash": ""
+  },
+  "problems/hydraulic-press-punching-shear/index.qmd": {
+    "mtime": 1785854454.5499232,
+    "ast_hash": "7f37f75c4469b85443285af228ba8654",
+    "semantic_hash": ""
+  },
+  "problems/hydraulic-press-punching-shear/instructor-guide.qmd": {
+    "mtime": 1785818550.2118285,
+    "ast_hash": "4bf8135b04fbc9575427fa3f17716063",
+    "semantic_hash": ""
+  },
+  "problems/hydraulic-press-punching-shear/student-packet.qmd": {
+    "mtime": 1785818550.2034853,
+    "ast_hash": "0820b286286f7a00a9fd4bc1386ff285",
+    "semantic_hash": ""
+  },
+  "problems/industrial-robot-arm-shear-moment/_student-problem.qmd": {
+    "mtime": 1785788000.5642228,
+    "ast_hash": "d77191b12b528923a9a81ca131e91f54",
+    "semantic_hash": ""
+  },
+  "problems/industrial-robot-arm-shear-moment/index.qmd": {
+    "mtime": 1785854454.7774673,
+    "ast_hash": "8d3a07d6ddd79ca97902baad59cde460",
+    "semantic_hash": ""
+  },
+  "problems/industrial-robot-arm-shear-moment/instructor-guide.qmd": {
+    "mtime": 1785818550.2121763,
+    "ast_hash": "34441afe9070f96dd8119ebf1e8802a7",
+    "semantic_hash": ""
+  },
+  "problems/industrial-robot-arm-shear-moment/student-packet.qmd": {
+    "mtime": 1785818550.2040024,
+    "ast_hash": "e11fd016bf027b057162e89d0429f938",
+    "semantic_hash": ""
+  },
+  "problems/jib-crane-battery-pack/_scenario-and-q1.qmd": {
+    "mtime": 1780966839.2248359,
+    "ast_hash": "1d3d67ad412178cfd678756282a3da99",
+    "semantic_hash": ""
+  },
+  "problems/jib-crane-battery-pack/_student-problem.qmd": {
+    "mtime": 1780969370.1110783,
+    "ast_hash": "c2ddeabf9d52ddf8a6307e8b8e0441f7",
+    "semantic_hash": ""
+  },
+  "problems/jib-crane-battery-pack/calculations.qmd": {
+    "mtime": 1780967585.3480196,
+    "ast_hash": "7be6d8b3c8d86a1967678410287bc17a",
+    "semantic_hash": ""
+  },
+  "problems/jib-crane-battery-pack/index.qmd": {
+    "mtime": 1785854455.0010877,
+    "ast_hash": "e19666a16db8c49a97e0067bb0955867",
+    "semantic_hash": ""
+  },
+  "problems/jib-crane-battery-pack/instructor-guide.qmd": {
+    "mtime": 1785818550.2125504,
+    "ast_hash": "e979ce6259cca9542ec14af3783831fd",
+    "semantic_hash": ""
+  },
+  "problems/jib-crane-battery-pack/instructor-notes.qmd": {
+    "mtime": 1780971714.0,
+    "ast_hash": "5e156ae26d90a17aea61b091df4c1edf",
+    "semantic_hash": ""
+  },
+  "problems/jib-crane-battery-pack/student-packet.qmd": {
+    "mtime": 1785818550.2046103,
+    "ast_hash": "4c70ecc22301b6757713e02b64377234",
+    "semantic_hash": ""
+  },
+  "problems/ladder-platform-system/_student-problem.qmd": {
+    "mtime": 1782859980.4927647,
+    "ast_hash": "2d5de801e511459bf5159001864b4138",
+    "semantic_hash": ""
+  },
+  "problems/ladder-platform-system/index.qmd": {
+    "mtime": 1785854455.2154455,
+    "ast_hash": "f91c3be3849a1bb8f98d2ca2a8a152b5",
+    "semantic_hash": ""
+  },
+  "problems/ladder-platform-system/instructor-guide.qmd": {
+    "mtime": 1785818550.212973,
+    "ast_hash": "18c8afbf86e6ec4031778638e3c65ed1",
+    "semantic_hash": ""
+  },
+  "problems/ladder-platform-system/student-packet.qmd": {
+    "mtime": 1785818550.2050014,
+    "ast_hash": "c9a236ceba81be4d6e9a77584a04f7df",
+    "semantic_hash": ""
+  },
+  "problems/lever-actuated-wire-support/_student-problem.qmd": {
+    "mtime": 1785779563.3023033,
+    "ast_hash": "0e28829f2b8a8419fcf3d29a6678d391",
+    "semantic_hash": ""
+  },
+  "problems/lever-actuated-wire-support/index.qmd": {
+    "mtime": 1785854455.4314585,
+    "ast_hash": "ede7746b4c5fd80c8e4e0db260ddf0f1",
+    "semantic_hash": ""
+  },
+  "problems/lever-actuated-wire-support/instructor-guide.qmd": {
+    "mtime": 1785818550.213449,
+    "ast_hash": "78eb2675e97e5d24a5b51099f55bfad0",
+    "semantic_hash": ""
+  },
+  "problems/lever-actuated-wire-support/student-packet.qmd": {
+    "mtime": 1785818550.2053986,
+    "ast_hash": "11ade9544a32f6be3812d438e1e0598f",
+    "semantic_hash": ""
+  },
+  "problems/motor-driven-shaft-torsion/_student-problem.qmd": {
+    "mtime": 1785782322.802325,
+    "ast_hash": "67f0802b57cfcb5753daa7f2f8f41d78",
+    "semantic_hash": ""
+  },
+  "problems/motor-driven-shaft-torsion/index.qmd": {
+    "mtime": 1785854455.6487916,
+    "ast_hash": "29955fbe1b5dfef6c5183aba49fd9e19",
+    "semantic_hash": ""
+  },
+  "problems/motor-driven-shaft-torsion/instructor-guide.qmd": {
+    "mtime": 1785818550.2138193,
+    "ast_hash": "6cb289ca76dc445035bd13da54d2a224",
+    "semantic_hash": ""
+  },
+  "problems/motor-driven-shaft-torsion/student-packet.qmd": {
+    "mtime": 1785818550.2057927,
+    "ast_hash": "4391ca6ec5ba37bfed2eda10680afdff",
+    "semantic_hash": ""
+  },
+  "problems/mountain-bike-suspension-pin/_student-problem.qmd": {
+    "mtime": 1785181706.9481926,
+    "ast_hash": "5274bcef3322a708953b30c2e915d361",
+    "semantic_hash": ""
+  },
+  "problems/mountain-bike-suspension-pin/index.qmd": {
+    "mtime": 1785854455.8652294,
+    "ast_hash": "1af092386d99633acf73424003069ae1",
+    "semantic_hash": ""
+  },
+  "problems/mountain-bike-suspension-pin/instructor-guide.qmd": {
+    "mtime": 1785818550.2141771,
+    "ast_hash": "d6cf6b3acaf8f363bbdde6558b62c4be",
+    "semantic_hash": ""
+  },
+  "problems/mountain-bike-suspension-pin/student-packet.qmd": {
+    "mtime": 1785818550.2062135,
+    "ast_hash": "5e46cb14e9fc56a4e9a012969f70f66d",
+    "semantic_hash": ""
+  },
+  "problems/multi-gear-drive-shaft/_student-problem.qmd": {
+    "mtime": 1785784724.8809872,
+    "ast_hash": "60e8efc2a31f01f74c5325ca57234204",
+    "semantic_hash": ""
+  },
+  "problems/multi-gear-drive-shaft/index.qmd": {
+    "mtime": 1785854456.0824223,
+    "ast_hash": "e48813c6054e9b87d5b15fc562765063",
+    "semantic_hash": ""
+  },
+  "problems/multi-gear-drive-shaft/instructor-guide.qmd": {
+    "mtime": 1785818550.21454,
+    "ast_hash": "44bc8cb29e347dc937f6623aeb72f586",
+    "semantic_hash": ""
+  },
+  "problems/multi-gear-drive-shaft/student-packet.qmd": {
+    "mtime": 1785818550.206759,
+    "ast_hash": "bfce250da8d545be5198f8ffd9fb6240",
+    "semantic_hash": ""
+  },
+  "problems/precast-concrete-column-transport/_student-problem.qmd": {
+    "mtime": 1785794881.9781287,
+    "ast_hash": "38872899f1e29d08bda39e9fb0a5edca",
+    "semantic_hash": ""
+  },
+  "problems/precast-concrete-column-transport/index.qmd": {
+    "mtime": 1785854456.2998288,
+    "ast_hash": "b8b4e68cfb6b095afad99164c6c982e8",
+    "semantic_hash": ""
+  },
+  "problems/precast-concrete-column-transport/instructor-guide.qmd": {
+    "mtime": 1785818550.2148886,
+    "ast_hash": "348ed4b6b445cb9a517a662d30de0e68",
+    "semantic_hash": ""
+  },
+  "problems/precast-concrete-column-transport/student-packet.qmd": {
+    "mtime": 1785818550.2071235,
+    "ast_hash": "7f06c1f1c2951ff520235ea89876a294",
+    "semantic_hash": ""
+  },
+  "problems/spoked-wheel-load-sharing/_student-problem.qmd": {
+    "mtime": 1785182054.5845678,
+    "ast_hash": "cc258056b88941d7da72307f032d21c2",
+    "semantic_hash": ""
+  },
+  "problems/spoked-wheel-load-sharing/index.qmd": {
+    "mtime": 1785854456.515232,
+    "ast_hash": "8ac52cb3bc6e03a9a6687ef7c09b7544",
+    "semantic_hash": ""
+  },
+  "problems/spoked-wheel-load-sharing/instructor-guide.qmd": {
+    "mtime": 1785818550.2152207,
+    "ast_hash": "08c4944020caca8ab656788515b1e62c",
+    "semantic_hash": ""
+  },
+  "problems/spoked-wheel-load-sharing/student-packet.qmd": {
+    "mtime": 1785818550.20749,
+    "ast_hash": "f9466489df12233350e695185537903b",
+    "semantic_hash": ""
+  },
+  "problems/spring-loaded-coupling-rod/_student-problem.qmd": {
+    "mtime": 1785775638.4831212,
+    "ast_hash": "0853b2e3e8627798a419e57ff1e5fc47",
+    "semantic_hash": ""
+  },
+  "problems/spring-loaded-coupling-rod/index.qmd": {
+    "mtime": 1785854456.7316983,
+    "ast_hash": "6af9933832e98df0afa521f3181f20cd",
+    "semantic_hash": ""
+  },
+  "problems/spring-loaded-coupling-rod/instructor-guide.qmd": {
+    "mtime": 1785818550.2157135,
+    "ast_hash": "434d5fb2ecfb800427e717c6efe463ab",
+    "semantic_hash": ""
+  },
+  "problems/spring-loaded-coupling-rod/student-packet.qmd": {
+    "mtime": 1785818550.2078707,
+    "ast_hash": "6743a6795f72332f985f613ba816fd39",
+    "semantic_hash": ""
+  },
+  "problems/steam-pipe-thermal-expansion/_student-problem.qmd": {
+    "mtime": 1785777620.0849488,
+    "ast_hash": "1e7065fde719b0eec5e43732ae99bde7",
+    "semantic_hash": ""
+  },
+  "problems/steam-pipe-thermal-expansion/index.qmd": {
+    "mtime": 1785854456.9468231,
+    "ast_hash": "260c6e3c0aa0b4a2ebeef7afa122825d",
+    "semantic_hash": ""
+  },
+  "problems/steam-pipe-thermal-expansion/instructor-guide.qmd": {
+    "mtime": 1785818550.2160845,
+    "ast_hash": "925ec69ddc2cdb130724bb5efed8f51d",
+    "semantic_hash": ""
+  },
+  "problems/steam-pipe-thermal-expansion/student-packet.qmd": {
+    "mtime": 1785818550.2082136,
+    "ast_hash": "53ef6bca3661d2ebb469d3ef76311894",
+    "semantic_hash": ""
+  },
+  "problems/stepped-steel-tension-link/_student-problem.qmd": {
+    "mtime": 1785778577.9935768,
+    "ast_hash": "68ceab8e825e73400f545550114bda26",
+    "semantic_hash": ""
+  },
+  "problems/stepped-steel-tension-link/index.qmd": {
+    "mtime": 1785854457.161208,
+    "ast_hash": "90652ec048b7dd0335e1c3468b77aa24",
+    "semantic_hash": ""
+  },
+  "problems/stepped-steel-tension-link/instructor-guide.qmd": {
+    "mtime": 1785818550.2165084,
+    "ast_hash": "b5d85592d6115a3ec785ccda1d0b9b2b",
+    "semantic_hash": ""
+  },
+  "problems/stepped-steel-tension-link/student-packet.qmd": {
+    "mtime": 1785818550.2085292,
+    "ast_hash": "6887d7c149a406c0dd5bf5f798c07402",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-cable-system/_student-problem.qmd": {
+    "mtime": 1785184264.4809277,
+    "ast_hash": "fc6c45f8454efb2ee5b6e50228c57b3c",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-cable-system/index.qmd": {
+    "mtime": 1785854457.377736,
+    "ast_hash": "3dd8fc0f19d7c5169852158504bb6f8c",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-cable-system/instructor-guide.qmd": {
+    "mtime": 1785818550.2168808,
+    "ast_hash": "60eaa0769d869c1c5e9bc37b63dce18e",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-cable-system/student-packet.qmd": {
+    "mtime": 1785818550.2089496,
+    "ast_hash": "f351f645f81d775a3526c52730959fae",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-platform/_student-problem.qmd": {
+    "mtime": 1785776636.0463076,
+    "ast_hash": "9909ef6c7256b1d902c7753c0303b675",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-platform/index.qmd": {
+    "mtime": 1785854457.5975122,
+    "ast_hash": "a5daf9d3c08d8be6cae4b540d08ead1f",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-platform/instructor-guide.qmd": {
+    "mtime": 1785818550.2173645,
+    "ast_hash": "c3e0b7819092ec7c23b4941544402ec8",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-platform/student-packet.qmd": {
+    "mtime": 1785818550.2093081,
+    "ast_hash": "dfbaf884f4b99b0b75edf08cc25458c5",
+    "semantic_hash": ""
+  },
+  "problems/turbine-shaft-distributed-torque/_student-problem.qmd": {
+    "mtime": 1785786009.9265866,
+    "ast_hash": "e1796f5fcc62baba49218b6da382f381",
+    "semantic_hash": ""
+  },
+  "problems/turbine-shaft-distributed-torque/index.qmd": {
+    "mtime": 1785854457.8150523,
+    "ast_hash": "facb1434d39d3491d9993fbcde0eccb2",
+    "semantic_hash": ""
+  },
+  "problems/turbine-shaft-distributed-torque/instructor-guide.qmd": {
+    "mtime": 1785818550.2177625,
+    "ast_hash": "9a25c098e0c9e6b6d932c65e1d2270c3",
+    "semantic_hash": ""
+  },
+  "problems/turbine-shaft-distributed-torque/student-packet.qmd": {
+    "mtime": 1785818550.209661,
+    "ast_hash": "2e56df4eec327cffb5195d146dcdf726",
+    "semantic_hash": ""
+  },
+  "problems/variable-radius-tapered-shaft/_student-problem.qmd": {
+    "mtime": 1785786903.070177,
+    "ast_hash": "91f26f6e7752cc129d539012ffdd3673",
+    "semantic_hash": ""
+  },
+  "problems/variable-radius-tapered-shaft/index.qmd": {
+    "mtime": 1785854458.0328856,
+    "ast_hash": "ad7db99496d858591ee4849ee860cb36",
+    "semantic_hash": ""
+  },
+  "problems/variable-radius-tapered-shaft/instructor-guide.qmd": {
+    "mtime": 1785818550.2184608,
+    "ast_hash": "2140d4670e13673735b964e9a30aa440",
+    "semantic_hash": ""
+  },
+  "problems/variable-radius-tapered-shaft/student-packet.qmd": {
+    "mtime": 1785818550.2099783,
+    "ast_hash": "ec9e720a28487d0113d93d2f513c793a",
+    "semantic_hash": ""
+  },
+  "schema/metadata-guide.yml": {
+    "mtime": 1780971714.0,
+    "ast_hash": "a0f3d005c1a6227d3e54fa3f121da47d",
+    "semantic_hash": ""
+  },
+  "templates/problem-package/_student-problem.qmd": {
+    "mtime": 1785855153.7426414,
+    "ast_hash": "05b5b8a6bc0a84094f3270d503c4384f",
+    "semantic_hash": ""
+  },
+  "templates/problem-package/index.qmd": {
+    "mtime": 1785855152.5814595,
+    "ast_hash": "1dad90f554a49cacc3cecdc086d7f0ba",
+    "semantic_hash": ""
+  },
+  "templates/problem-package/instructor-guide.qmd": {
+    "mtime": 1785855291.4062514,
+    "ast_hash": "82c54678d0e71c4bd7ba6152f4643048",
+    "semantic_hash": ""
+  },
+  "templates/problem-package/student-packet.qmd": {
+    "mtime": 1785855291.1891632,
+    "ast_hash": "727d06361f238acdaef29f89f2898606",
+    "semantic_hash": ""
+  },
+  "templates/problem-template.qmd": {
+    "mtime": 1785789378.2914915,
+    "ast_hash": "471c7e0f6b3a0917b92c435d40bd77f1",
+    "semantic_hash": ""
+  },
+  "problems/axial-rod-tube-assembly/assets/axial-industry-context.png": {
+    "mtime": 1785774252.7795565,
+    "ast_hash": "c216d93f5094f6b076a4331992a87ae5",
+    "semantic_hash": ""
+  },
+  "problems/axial-rod-tube-assembly/assets/axial-instructor-idealization.png": {
+    "mtime": 1785774252.7835288,
+    "ast_hash": "2dec10aeab28c7a878d04c5145b16711",
+    "semantic_hash": ""
+  },
+  "problems/bonded-steel-plate-splice-joint/assets/plate-industry-context.png": {
+    "mtime": 1785780890.2517314,
+    "ast_hash": "160a00dbc9b16854c3da6901cf71f6b6",
+    "semantic_hash": ""
+  },
+  "problems/bonded-steel-plate-splice-joint/assets/plate-instructor-idealization.png": {
+    "mtime": 1785780890.2562673,
+    "ast_hash": "f408704e9430f8f1dad8003c98b4f795",
+    "semantic_hash": ""
+  },
+  "problems/cantilevered-operator-seat-bending/assets/seat-industry-context.png": {
+    "mtime": 1786688433.4640625,
+    "ast_hash": "381e51faa91a560438b7072feec48f32",
+    "semantic_hash": ""
+  },
+  "problems/cantilevered-operator-seat-bending/assets/seat-instructor-idealization.png": {
+    "mtime": 1786688433.4692113,
+    "ast_hash": "ac950021e8c6c3ce2e583f5926b2c1f9",
+    "semantic_hash": ""
+  },
+  "problems/clevis-pin-tensile-linkage/assets/clevis-industry-context.png": {
+    "mtime": 1785183394.6349053,
+    "ast_hash": "368a521d28672a5401f4aed30f552ca8",
+    "semantic_hash": ""
+  },
+  "problems/clevis-pin-tensile-linkage/assets/clevis-instructor-idealization.png": {
+    "mtime": 1785183394.7268705,
+    "ast_hash": "905340304570043e2e76789010cf1f61",
+    "semantic_hash": ""
+  },
+  "problems/flanged-shaft-coupling/assets/coupling-industry-context.png": {
+    "mtime": 1785783346.2481875,
+    "ast_hash": "f9489f2dc4645899fe973c941aaa66a1",
+    "semantic_hash": ""
+  },
+  "problems/flanged-shaft-coupling/assets/coupling-instructor-idealization.png": {
+    "mtime": 1785783346.2525282,
+    "ast_hash": "a312637b9702d972ced1e040de08a5e6",
+    "semantic_hash": ""
+  },
+  "problems/hydraulic-press-punching-shear/assets/press-industry-context.png": {
+    "mtime": 1785182618.7731972,
+    "ast_hash": "d907c29ebbfce01b2de1a63ceb75e89e",
+    "semantic_hash": ""
+  },
+  "problems/hydraulic-press-punching-shear/assets/press-instructor-idealization.png": {
+    "mtime": 1785182618.8994246,
+    "ast_hash": "9b51ee7fa962875b840d44e4f44187c9",
+    "semantic_hash": ""
+  },
+  "problems/industrial-robot-arm-shear-moment/assets/robot-arm-industry-context.png": {
+    "mtime": 1785787933.8760383,
+    "ast_hash": "e472d2b94bb5c119e07974c841c918f6",
+    "semantic_hash": ""
+  },
+  "problems/industrial-robot-arm-shear-moment/assets/robot-arm-instructor-idealization.png": {
+    "mtime": 1785787933.8803,
+    "ast_hash": "f52422951ac0656e1622278579739adc",
+    "semantic_hash": ""
+  },
+  "problems/jib-crane-battery-pack/assets/jib-crane-industry-2d.png": {
+    "mtime": 1780966715.8842185,
+    "ast_hash": "3241c1fc61ae7aecdb8f4e5ed7a4f7fe",
+    "semantic_hash": ""
+  },
+  "problems/jib-crane-battery-pack/assets/jib-crane-industry.png": {
+    "mtime": 1780966627.6526775,
+    "ast_hash": "bdbe1c2dcd9db10c2e7bc0102948e660",
+    "semantic_hash": ""
+  },
+  "problems/ladder-platform-system/assets/adjustable-bracket.png": {
+    "mtime": 1782859804.2669382,
+    "ast_hash": "a42aff052087e5622b3460389a29ee60",
+    "semantic_hash": ""
+  },
+  "problems/ladder-platform-system/assets/bracket-idealization-2d.png": {
+    "mtime": 1782859804.2781672,
+    "ast_hash": "0fefb04bf37f0099312ee01f1ce9d177",
+    "semantic_hash": ""
+  },
+  "problems/ladder-platform-system/assets/ladder-platform-system.png": {
+    "mtime": 1782859804.2694085,
+    "ast_hash": "c7ac51b2ca504c9c8845127e20a33e6e",
+    "semantic_hash": ""
+  },
+  "problems/lever-actuated-wire-support/assets/lever-industry-context.png": {
+    "mtime": 1785779490.5028603,
+    "ast_hash": "2030accbc3cae8721f4bdfa93f9e6963",
+    "semantic_hash": ""
+  },
+  "problems/lever-actuated-wire-support/assets/lever-instructor-idealization.png": {
+    "mtime": 1785779490.5068285,
+    "ast_hash": "51e7e95b3f51047b6652fae8f22ec626",
+    "semantic_hash": ""
+  },
+  "problems/motor-driven-shaft-torsion/assets/shaft-industry-context.png": {
+    "mtime": 1785782193.1385968,
+    "ast_hash": "74c2897541455a6861d7db4032afb42d",
+    "semantic_hash": ""
+  },
+  "problems/motor-driven-shaft-torsion/assets/shaft-instructor-idealization.png": {
+    "mtime": 1785782193.14414,
+    "ast_hash": "798c986da723afddd5cfd53dcfe86f91",
+    "semantic_hash": ""
+  },
+  "problems/mountain-bike-suspension-pin/assets/mountain-bike-industry-context.png": {
+    "mtime": 1785181667.9835715,
+    "ast_hash": "fb25810b6b0d3b369753efb2488fc1b3",
+    "semantic_hash": ""
+  },
+  "problems/mountain-bike-suspension-pin/assets/mountain-bike-instructor-idealization.png": {
+    "mtime": 1785181668.0323799,
+    "ast_hash": "0c0175103b05f96d9f55911a622d6024",
+    "semantic_hash": ""
+  },
+  "problems/mountain-bike-suspension-pin/assets/suspension-pin-idealization.svg": {
+    "mtime": 1785180907.6227102,
+    "ast_hash": "77bf3ae2c602404172299bd2d71e0399",
+    "semantic_hash": ""
+  },
+  "problems/multi-gear-drive-shaft/assets/gear-shaft-industry-context.png": {
+    "mtime": 1785784649.4227512,
+    "ast_hash": "e8f9e10935fb707c21ee1ba5e8b2ce00",
+    "semantic_hash": ""
+  },
+  "problems/multi-gear-drive-shaft/assets/gear-shaft-instructor-idealization.png": {
+    "mtime": 1785784649.4272623,
+    "ast_hash": "458b23b8d071d584bf2c860f0d01c3ae",
+    "semantic_hash": ""
+  },
+  "problems/precast-concrete-column-transport/assets/precast-column-industry-context.png": {
+    "mtime": 1785794751.785761,
+    "ast_hash": "0071108a0509112e8f1b92d7e5114920",
+    "semantic_hash": ""
+  },
+  "problems/precast-concrete-column-transport/assets/precast-column-instructor-idealization.png": {
+    "mtime": 1785794751.7897496,
+    "ast_hash": "f1ebc6f3fed54758fc67cdb0fa93ebf9",
+    "semantic_hash": ""
+  },
+  "problems/spoked-wheel-load-sharing/assets/spoked-wheel-industry-context.png": {
+    "mtime": 1785182002.1159267,
+    "ast_hash": "2abf81c9d16cfb0abbc70d37178978c0",
+    "semantic_hash": ""
+  },
+  "problems/spoked-wheel-load-sharing/assets/spoked-wheel-instructor-idealization.png": {
+    "mtime": 1785182002.2413702,
+    "ast_hash": "73a3518970cf44bc6fc80545bfd9d140",
+    "semantic_hash": ""
+  },
+  "problems/spring-loaded-coupling-rod/assets/spring-industry-context.png": {
+    "mtime": 1785775475.0185232,
+    "ast_hash": "3d003ebda659af670779064d7d79a09c",
+    "semantic_hash": ""
+  },
+  "problems/spring-loaded-coupling-rod/assets/spring-instructor-idealization.png": {
+    "mtime": 1785775475.0228078,
+    "ast_hash": "3a2de4e8650e858fa038766a43e52d39",
+    "semantic_hash": ""
+  },
+  "problems/steam-pipe-thermal-expansion/assets/steam-industry-context.png": {
+    "mtime": 1785777544.814314,
+    "ast_hash": "f757410fb1a49e04eb126b972384fc0d",
+    "semantic_hash": ""
+  },
+  "problems/steam-pipe-thermal-expansion/assets/steam-instructor-idealization.png": {
+    "mtime": 1785777544.818278,
+    "ast_hash": "4d0d7cf90d197606976b6a05b5953d98",
+    "semantic_hash": ""
+  },
+  "problems/stepped-steel-tension-link/assets/link-industry-context.png": {
+    "mtime": 1785778505.434434,
+    "ast_hash": "072d74ff5d41f74ea6e6c3617dd092f0",
+    "semantic_hash": ""
+  },
+  "problems/stepped-steel-tension-link/assets/link-instructor-idealization.png": {
+    "mtime": 1785778505.438574,
+    "ast_hash": "06cb00507779d831dfe9cbfebc0b73fa",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-cable-system/assets/cable-industry-context.png": {
+    "mtime": 1785184192.5239465,
+    "ast_hash": "b98091be46d1e638c37a79dcbefe3b65",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-cable-system/assets/cable-instructor-idealization.png": {
+    "mtime": 1785184192.7132444,
+    "ast_hash": "083229792ccf4ef39671fc0877a069dc",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-platform/assets/platform-industry-context.png": {
+    "mtime": 1785776561.816484,
+    "ast_hash": "7aa9f032ae9128ba65d9c7f1aed017ac",
+    "semantic_hash": ""
+  },
+  "problems/suspended-equipment-platform/assets/platform-instructor-idealization.png": {
+    "mtime": 1785776561.8209398,
+    "ast_hash": "973bf87d903d673e6fbaf169ebc571bc",
+    "semantic_hash": ""
+  },
+  "problems/turbine-shaft-distributed-torque/assets/turbine-shaft-industry-context.png": {
+    "mtime": 1785785948.7052286,
+    "ast_hash": "520cadfd105e880892bcfd411f1a6358",
+    "semantic_hash": ""
+  },
+  "problems/turbine-shaft-distributed-torque/assets/turbine-shaft-instructor-idealization.png": {
+    "mtime": 1785785948.7107444,
+    "ast_hash": "c68ad2535b63db032db5ca8a1af75643",
+    "semantic_hash": ""
+  },
+  "problems/variable-radius-tapered-shaft/assets/tapered-shaft-industry-context.png": {
+    "mtime": 1785786843.8011901,
+    "ast_hash": "8da9083b788665b01588d1bd4181e23b",
+    "semantic_hash": ""
+  },
+  "problems/variable-radius-tapered-shaft/assets/tapered-shaft-instructor-idealization.png": {
+    "mtime": 1785786843.8045592,
+    "ast_hash": "011a1c48cd8a580229147fcb6e5775b5",
+    "semantic_hash": ""
+  },
+  "templates/problem-package/assets/context-placeholder.svg": {
+    "mtime": 1785855154.5253708,
+    "ast_hash": "be304cbd9bbfcb560ca26b30ba9b6055",
+    "semantic_hash": ""
+  },
+  "templates/problem-package/assets/instructor-idealization-placeholder.svg": {
+    "mtime": 1785855154.7835584,
+    "ast_hash": "1e12c75f6a0ab1048aea1f4bd9017c1a",
+    "semantic_hash": ""
+  }
+}

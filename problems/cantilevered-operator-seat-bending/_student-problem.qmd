@@ -1,0 +1,23 @@
+# Context-Rich Solid Mechanics Problem
+
+## Bending Stress in a Cantilevered Industrial Operator-Seat Support
+
+### Engineering Context
+
+An industrial machine uses a side-mounted operator seat so that a technician can remain near a control or inspection station without placing a support column beneath the seat. The seat is carried by a hollow rectangular steel-tube arm projecting from the machine frame. The seat and occupant produce a downward load at an offset from the frame, creating shear and bending in the arm.
+
+The structural review focuses on whether the selected tube geometry produces an acceptable bending stress at a designated section near the machine attachment. Local weld and bolt stresses, fatigue, impact, and dynamic seat loads are outside the base problem.
+
+![Cantilevered industrial operator seat attached to a machine frame by a hollow rectangular support arm.](assets/seat-industry-context.png){fig-alt="Side-mounted industrial operator seat supported by a cantilever arm attached to a machine frame." width=88%}
+
+### Main Engineering Goal
+
+Determine the maximum normal bending stress at section a-a of the hollow rectangular support arm, identify the extreme fibers in tension and compression, and explain how the design could be modified to reduce bending demand.
+
+### System Components
+
+- operator seat and occupant load;
+- vertical seat post and mounting bracket;
+- hollow rectangular steel-tube cantilever arm;
+- fixed machine-frame attachment at A; and
+- machine frame carrying the reactions.

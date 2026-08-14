@@ -1573,6 +1573,40 @@ function variableMap(problem) {
     }
   }
 
+  const seatLoad = numericValue(values, "seat_P");
+  const seatOffset = numericValue(values, "seat_x");
+  const seatOuterWidth = numericValue(values, "seat_B");
+  const seatOuterHeight = numericValue(values, "seat_H");
+  const seatInnerWidth = numericValue(values, "seat_b");
+  const seatInnerHeight = numericValue(values, "seat_h");
+
+  if (
+    Number.isFinite(seatLoad) && seatLoad >= 0 &&
+    Number.isFinite(seatOffset) && seatOffset >= 0 &&
+    Number.isFinite(seatOuterWidth) && seatOuterWidth > 0 &&
+    Number.isFinite(seatOuterHeight) && seatOuterHeight > 0 &&
+    Number.isFinite(seatInnerWidth) && seatInnerWidth >= 0 && seatInnerWidth < seatOuterWidth &&
+    Number.isFinite(seatInnerHeight) && seatInnerHeight >= 0 && seatInnerHeight < seatOuterHeight
+  ) {
+    const area = seatOuterWidth * seatOuterHeight - seatInnerWidth * seatInnerHeight;
+    const inertia = (seatOuterWidth * seatOuterHeight ** 3 - seatInnerWidth * seatInnerHeight ** 3) / 12;
+    const extremeFiber = seatOuterHeight / 2;
+    const moment = seatLoad * seatOffset;
+    const sectionModulus = inertia / extremeFiber;
+    const maximumStress = moment / sectionModulus;
+    values.seat_V_lb = formatDerived(seatLoad, 1);
+    values.seat_M_lbin = formatDerived(moment, 1);
+    values.seat_area_in2 = formatDerived(area, 4);
+    values.seat_I_in4 = formatDerived(inertia, 4);
+    values.seat_c_in = formatDerived(extremeFiber, 3);
+    values.seat_S_in3 = formatDerived(sectionModulus, 4);
+    values.seat_sigma_max_psi = formatDerived(maximumStress, 1);
+    values.seat_sigma_max_ksi = formatDerived(maximumStress / 1000, 3);
+    values.seat_tension_fiber = "upper outer fiber";
+    values.seat_compression_fiber = "lower outer fiber";
+    values.seat_assessment = `The simplified static bending-stress magnitude is ${formatDerived(maximumStress / 1000, 3)} ksi. Compare this value with the specified allowable normal stress, or compute FOS = sigma_allow/|sigma_max|. If the criterion is not met, increase effective section depth or wall thickness, reduce the load offset, reduce the design load, or select an appropriate stronger section and material.`;
+  }
+
   return values;
 }
 

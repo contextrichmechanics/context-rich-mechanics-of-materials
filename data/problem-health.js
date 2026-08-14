@@ -20,6 +20,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-SEAT-023",
+    "slug": "cantilevered-operator-seat-bending",
+    "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",
+    "status": "OK",
+    "variables": 6,
+    "questions": 20,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-CLEVIS-007",
     "slug": "clevis-pin-tensile-linkage",
     "title": "Industrial Clevis-Pin Linkage Under Tensile Load",
