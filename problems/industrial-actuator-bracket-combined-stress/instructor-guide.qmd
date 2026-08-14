@@ -1,0 +1,40 @@
+---
+title: "Instructor Guide - Offset Industrial Actuator Support Bracket"
+subtitle: "Representative Combined-Stress Solutions"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+# Purpose
+
+Award credit for a defensible lower-segment section cut, correct internal resultants, explicit moment and stress sign conventions, correct rectangular-section properties, valid axial-plus-bending superposition, recognition that transverse shear vanishes at the side surfaces, and an appropriately limited engineering assessment.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="actuator-bracket-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "industrial-actuator-bracket-combined-stress", targetId: "actuator-bracket-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes static concentrated forces, a prismatic rectangular section at a-a, small deformation, and linear-elastic nominal-stress formulas. It excludes local bend stress concentration, lower-pin contact and hole stresses, upper bolt-group behavior, connector deformation, self-weight, fatigue, impact, and nonlinear contact. The upper offset e describes the complete bracket geometry but does not enter equilibrium of the isolated lower segment.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student section-cut idealization and assumptions: 20%;
+- internal resultants and sign convention: 20%;
+- section properties and stress calculations: 30%;
+- stress elements, critical point, and limitations: 10%.

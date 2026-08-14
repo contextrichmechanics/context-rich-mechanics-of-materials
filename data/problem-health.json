@@ -60,6 +60,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-ACTUATOR-BRACKET-026",
+    "slug": "industrial-actuator-bracket-combined-stress",
+    "title": "Combined Stress Analysis of an Offset Industrial Actuator Support Bracket",
+    "status": "OK",
+    "variables": 7,
+    "questions": 20,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-LINE-SHAFT-025",
     "slug": "industrial-line-shaft-shear-moment",
     "title": "Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft",

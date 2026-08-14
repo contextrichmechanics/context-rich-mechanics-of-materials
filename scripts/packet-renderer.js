@@ -1737,6 +1737,72 @@
       values.line_assessment = `The first static bending check should be made at the ${lineCritical.name}, ${formatDerived(lineCritical.x, 1)} mm from bearing A, where |M| = ${formatDerived(Math.abs(lineCritical.moment), 2)} N·m. Bending demand can be reduced by moving a bearing or pulley to shorten a governing moment arm, or by reducing the associated belt resultant. A complete shaft design must also evaluate torsion, combined stress, fatigue, stress concentrations, bearing reactions in the perpendicular plane, shaft and pulley weight, alignment, and dynamic belt loading.`;
     }
 
+
+    const actF = numericValue(values, "act_F");
+    const actP = numericValue(values, "act_P");
+    const actE = numericValue(values, "act_e");
+    const actH = numericValue(values, "act_h");
+    const actC = numericValue(values, "act_c");
+    const actB = numericValue(values, "act_b");
+    const actT = numericValue(values, "act_t");
+
+    if (
+      Number.isFinite(actF) && actF >= 0 &&
+      Number.isFinite(actP) && actP >= 0 &&
+      Number.isFinite(actE) && actE >= 0 &&
+      Number.isFinite(actH) && actH > 0 &&
+      Number.isFinite(actC) && actC >= 0 &&
+      Number.isFinite(actB) && actB > 0 &&
+      Number.isFinite(actT) && actT > 0
+    ) {
+      const actAxialForce = actP;
+      const actShearForce = actF;
+      const actHorizontalMoment = actF * actH;
+      const actVerticalMoment = actP * actC;
+      const actMoment = actHorizontalMoment - actVerticalMoment;
+      const actArea = actB * actT;
+      const actInertia = actT * actB ** 3 / 12;
+      const actExtremeFiber = actB / 2;
+      const actAxialStress = actAxialForce / actArea;
+      const actSignedBendingStress = actMoment * actExtremeFiber / actInertia;
+      const actStressA = actAxialStress - actSignedBendingStress;
+      const actStressB = actAxialStress + actSignedBendingStress;
+      const actMaximumShear = 1.5 * Math.abs(actShearForce) / actArea;
+      const actStressType = (stress) => stress > 1e-9 ? "tension" : stress < -1e-9 ? "compression" : "zero normal stress";
+      const actMomentDirection = actMoment > 1e-9 ? "counterclockwise" : actMoment < -1e-9 ? "clockwise" : "with zero net moment";
+      const actCriticalIsA = Math.abs(actStressA) >= Math.abs(actStressB);
+      const actCriticalPoint = actCriticalIsA ? "Point A" : "Point B";
+      const actCriticalStress = actCriticalIsA ? actStressA : actStressB;
+
+      values.act_N_lb = formatDerived(actAxialForce, 1);
+      values.act_V_lb = formatDerived(actShearForce, 1);
+      values.act_MF_lbin = formatDerived(actHorizontalMoment, 1);
+      values.act_MP_lbin = formatDerived(actVerticalMoment, 1);
+      values.act_M_lbin = formatDerived(actMoment, 1);
+      values.act_M_abs_lbin = formatDerived(Math.abs(actMoment), 1);
+      values.act_M_direction = actMomentDirection;
+      values.act_area_in2 = formatDerived(actArea, 4);
+      values.act_I_in4 = formatDerived(actInertia, 5);
+      values.act_x_extreme_in = formatDerived(actExtremeFiber, 3);
+      values.act_sigma_N_psi = formatDerived(actAxialStress, 1);
+      values.act_sigma_N_ksi = formatDerived(actAxialStress / 1000, 3);
+      values.act_sigma_b_psi = formatDerived(Math.abs(actSignedBendingStress), 1);
+      values.act_sigma_b_ksi = formatDerived(Math.abs(actSignedBendingStress) / 1000, 3);
+      values.act_sigma_A_psi = formatDerived(actStressA, 1);
+      values.act_sigma_A_ksi = formatDerived(actStressA / 1000, 3);
+      values.act_sigma_A_type = actStressType(actStressA);
+      values.act_sigma_B_psi = formatDerived(actStressB, 1);
+      values.act_sigma_B_ksi = formatDerived(actStressB / 1000, 3);
+      values.act_sigma_B_type = actStressType(actStressB);
+      values.act_tau_A_psi = formatDerived(0, 1);
+      values.act_tau_B_psi = formatDerived(0, 1);
+      values.act_tau_max_psi = formatDerived(actMaximumShear, 1);
+      values.act_tau_max_ksi = formatDerived(actMaximumShear / 1000, 3);
+      values.act_critical_point = actCriticalPoint;
+      values.act_critical_stress_ksi = formatDerived(Math.abs(actCriticalStress) / 1000, 3);
+      values.act_assessment = `${actCriticalPoint} is more critical for nominal normal-stress magnitude, with |σ| = ${formatDerived(Math.abs(actCriticalStress) / 1000, 3)} ksi in ${actStressType(actCriticalStress)}. Increase section width b in the bending direction to reduce flexure stress efficiently because I_z is proportional to b cubed, or adjust h and c so the absolute net moment |Fh - Pc| is smaller over every required load case. The upper offset e does not enter this lower-segment cut. Final design must also check bend and hole stress concentrations, lower-pin bearing and contact, upper bolt-group forces, connector deformation, fatigue, impact or dynamic loading, material allowables, and manufacturing details.`;
+    }
+
     return values;
   }
 

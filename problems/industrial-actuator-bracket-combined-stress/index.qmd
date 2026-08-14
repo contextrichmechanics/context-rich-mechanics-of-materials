@@ -1,0 +1,28 @@
+---
+title: "Combined Stress Analysis of an Offset Industrial Actuator Support Bracket"
+description: "An eccentric-loading problem on section cuts, internal resultants, combined axial and bending normal stress, transverse shear, and stress elements."
+image: "assets/actuator-bracket-industry-context.png"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [combined loading, eccentric loading, section cut, internal resultants, axial normal stress, bending stress, flexure formula, combined normal stress, transverse shear stress, rectangular cross section, stress distribution, stress element, critical point]
+course_topics: [internal loadings, axial stress, bending stress, transverse shear, combined stress, stress elements]
+textbook_chapters: [Internal loadings in structural members, Axial load, Bending, Transverse shear, Stress transformation precursor]
+problem_types: [load-path analysis, free-body diagram, section-cut equilibrium, section-property calculation, combined-stress calculation, stress-element construction, engineering evaluation]
+competencies: [engineering idealization, section-cut equilibrium, sign conventions, section properties, stress superposition, stress-state interpretation, engineering judgment]
+industries: [industrial machinery, hydraulic linkages, material handling, heavy-duty fixtures, manufacturing]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-ACTUATOR-BRACKET-026"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+The base assignment evaluates nominal stress at a prismatic rectangular section using a lower-segment cut. Local bend, pin-contact, bolt, fatigue, and stress-concentration effects are intentionally reserved for later analysis.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=industrial-actuator-bracket-combined-stress){.btn .btn-secondary}

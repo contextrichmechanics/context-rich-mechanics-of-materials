@@ -1,0 +1,16 @@
+{
+  "id": "MOS-ACTUATOR-BRACKET-026",
+  "slug": "industrial-actuator-bracket-combined-stress",
+  "title": "Combined Stress Analysis of an Offset Industrial Actuator Support Bracket",
+  "studentDocumentTitle": "Student Homework Questions - Offset Industrial Actuator Support Bracket",
+  "instructorDocumentTitle": "Instructor Answers - Offset Industrial Actuator Support Bracket",
+  "summary": "An eccentric-loading problem integrating section-cut equilibrium, rectangular-section properties, axial and bending stress superposition, transverse shear, stress elements, and critical-point assessment.",
+  "textbookChapters": ["Internal loadings in structural members", "Axial load", "Bending", "Transverse shear", "Stress transformation precursor"],
+  "derivedPlaceholders": ["act_N_lb", "act_V_lb", "act_MF_lbin", "act_MP_lbin", "act_M_lbin", "act_M_abs_lbin", "act_M_direction", "act_area_in2", "act_I_in4", "act_x_extreme_in", "act_sigma_N_psi", "act_sigma_N_ksi", "act_sigma_b_psi", "act_sigma_b_ksi", "act_sigma_A_psi", "act_sigma_A_ksi", "act_sigma_A_type", "act_sigma_B_psi", "act_sigma_B_ksi", "act_sigma_B_type", "act_tau_A_psi", "act_tau_B_psi", "act_tau_max_psi", "act_tau_max_ksi", "act_critical_point", "act_critical_stress_ksi", "act_assessment"],
+  "image": "assets/actuator-bracket-industry-context.png",
+  "idealizedImage": "assets/actuator-bracket-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference idealization of an offset actuator bracket with horizontal force F, vertical force P, offsets e, h, and c, rectangular section dimensions b and t, and surface points A and B.",
+  "source": "index.html",
+  "problemStatement": "<p>An offset steel bracket connects a horizontal actuator or linkage to an overhead machine frame and also supports a vertical tooling or restraint load. At the lower joint, horizontal force <em>F</em> and vertical force <em>P</em> act eccentrically relative to the centroidal axis of the vertical leg.</p><p>Use the portion below section a-a to determine the internal resultants and nominal stress state at surface points A and B. Then identify the point with the larger absolute normal stress and state the limitations of the simplified model.</p>",
+  "engineeringGoal": "<p>Combine section-cut equilibrium, rectangular-section properties, axial stress, flexure stress, and transverse-shear behavior to characterize the local nominal stress state at section a-a.</p>"
+}
