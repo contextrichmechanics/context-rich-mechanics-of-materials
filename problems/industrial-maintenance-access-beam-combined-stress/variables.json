@@ -1,0 +1,11 @@
+[
+  {"key":"beam_m","symbol":"m","label":"Technician mass","value":75,"unit":"kg","min":1,"max":250,"step":1},
+  {"key":"beam_g","symbol":"g","label":"Gravitational acceleration","value":9.81,"unit":"m/s^2","min":1,"max":20,"step":0.01},
+  {"key":"beam_theta","symbol":"theta","label":"Access-member inclination","value":30,"unit":"deg","min":1,"max":89,"step":1},
+  {"key":"beam_BC","symbol":"BC","label":"Total distance B to C along member","value":1.50,"unit":"m","min":0.1,"max":20,"step":0.05},
+  {"key":"beam_x","symbol":"x","label":"Distance B to section a-a","value":0.600,"unit":"m","min":0.01,"max":20,"step":0.01},
+  {"key":"beam_s","symbol":"s","label":"Distance section a-a to technician at G","value":0.300,"unit":"m","min":0,"max":20,"step":0.01},
+  {"key":"beam_b","symbol":"b","label":"Rectangular section width","value":600,"unit":"mm","min":1,"max":3000,"step":1},
+  {"key":"beam_t","symbol":"t","label":"Rectangular section thickness","value":50,"unit":"mm","min":1,"max":1000,"step":1},
+  {"key":"beam_yA","symbol":"y_A","label":"Point A coordinate above neutral axis","value":12.5,"unit":"mm","min":0,"max":500,"step":0.5}
+]

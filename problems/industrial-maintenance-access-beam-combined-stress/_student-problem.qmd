@@ -1,0 +1,23 @@
+# Context-Rich Solid Mechanics Problem
+
+## Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam
+
+### Engineering Context
+
+During a scheduled shutdown at a processing facility, a maintenance technician must cross an open service pit to reach equipment on the opposite side. A removable inclined access member is positioned between a lower support and a smooth contact against a vertical structure. The access member must transfer the technician's weight to the surrounding structure while maintaining a clear route across the pit.
+
+Because the member is inclined, its support reactions produce axial force, transverse shear, and bending moment at an interior section. The plant engineering team needs a first-order stress assessment before considering local contact, connections, impact, vibration, fatigue, or workplace-access requirements.
+
+![Temporary inclined maintenance-access member spanning an industrial service pit.](assets/access-beam-industry-context.png){fig-alt="Industrial maintenance technician using an inclined access member across a service pit." width=88%}
+
+### Main Engineering Goal
+
+Determine the support reactions and local internal resultants at section a-a; calculate the combined normal and transverse shear stress at point A; sketch the local stress element; and identify the mechanical response that dominates at the specified location.
+
+### System Components
+
+- inclined maintenance access beam or plank;
+- maintenance technician represented by a concentrated gravitational load;
+- lower support at B;
+- smooth vertical-wall contact at C; and
+- selected section a-a and stress-evaluation point A.

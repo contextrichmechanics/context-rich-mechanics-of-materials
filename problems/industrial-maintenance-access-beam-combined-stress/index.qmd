@@ -1,0 +1,28 @@
+---
+title: "Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam"
+description: "An inclined-beam problem on support reactions, local internal resultants, combined normal stress, transverse shear, and stress elements."
+image: "assets/access-beam-industry-context.png"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [inclined beam, oblique member, support reactions, smooth contact, free-body diagram, equilibrium, local coordinate axes, section cut, internal axial force, transverse shear force, bending moment, combined loading, axial normal stress, flexure formula, bending stress, beam shear formula, first moment of area, combined stress, stress element, engineering judgment]
+course_topics: [equilibrium, internal loadings, axial stress, bending stress, transverse shear, combined stress, stress elements]
+textbook_chapters: [Equilibrium of a rigid body, Internal loadings in structural members, Axial load, Bending, Transverse shear, Combined loading]
+problem_types: [load-path analysis, free-body diagram, reaction calculation, section-cut equilibrium, section-property calculation, combined-stress calculation, stress-element construction, engineering evaluation]
+competencies: [engineering idealization, global equilibrium, force resolution, local sign conventions, section properties, stress superposition, stress-state interpretation, engineering judgment]
+industries: [industrial maintenance, process plants, service pits, equipment inspection, temporary access systems]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-ACCESS-BEAM-027"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+The base assignment evaluates a straight prismatic member under static loading. Local support contact, connections, member self-weight, technician motion, impact, vibration, fatigue, instability, and regulatory access-system design are intentionally reserved for later analysis.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=industrial-maintenance-access-beam-combined-stress){.btn .btn-secondary}

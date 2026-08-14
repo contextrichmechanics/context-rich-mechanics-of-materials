@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - baseline inclined access beam",
+  "description": "Baseline reactions, local internal resultants, combined normal stress, beam shear, stress element, and engineering assessment.",
+  "variables": {"beam_m":75,"beam_g":9.81,"beam_theta":30,"beam_BC":1.50,"beam_x":0.600,"beam_s":0.300,"beam_b":600,"beam_t":50,"beam_yA":12.5},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19","q20"]
+}

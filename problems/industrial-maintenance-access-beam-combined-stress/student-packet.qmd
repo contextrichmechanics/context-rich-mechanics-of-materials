@@ -1,0 +1,20 @@
+---
+title: "Student Packet - Industrial Maintenance Access Beam"
+subtitle: "Inclined-Member Equilibrium and Combined Stress"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="access-beam-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "industrial-maintenance-access-beam-combined-stress", targetId: "access-beam-student-questions", type: "student"});
+});
+</script>
+```

@@ -1,0 +1,42 @@
+---
+title: "Instructor Guide - Industrial Maintenance Access Beam"
+subtitle: "Representative Inclined-Member and Combined-Stress Solutions"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+# Purpose
+
+Award credit for a defensible global free-body diagram, correct smooth-contact boundary condition, explicit global and local sign conventions, correct local internal resultants, valid rectangular-section properties, axial-plus-bending stress superposition, a correct beam-shear calculation at point A, and an appropriately limited engineering assessment.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="access-beam-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "industrial-maintenance-access-beam-combined-stress", targetId: "access-beam-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes static loading, a straight prismatic rectangular member, a concentrated technician load at G, small deformation, and linear-elastic nominal-stress formulas. Support B supplies horizontal and vertical reactions; C is smooth against a vertical wall and therefore supplies only a horizontal reaction. The model excludes member self-weight, local bearing and contact stress, connection behavior, lateral instability, technician motion, impact, vibration, fatigue, material nonlinearity, and regulatory access-system design.
+
+Point A is assigned the coordinate y_A above the centroidal neutral axis. Instructors may change y_A in the Builder while keeping |y_A| <= t/2.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization, boundary conditions, and assumptions: 20%;
+- reactions and local internal resultants: 25%;
+- section properties and stress calculations: 25%;
+- stress element, assessment, and limitations: 10%.

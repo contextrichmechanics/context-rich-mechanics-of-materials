@@ -80,6 +80,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-ACCESS-BEAM-027",
+    "slug": "industrial-maintenance-access-beam-combined-stress",
+    "title": "Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam",
+    "status": "OK",
+    "variables": 9,
+    "questions": 20,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-ROBOT-021",
     "slug": "industrial-robot-arm-shear-moment",
     "title": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",

@@ -1,0 +1,16 @@
+{
+  "id": "MOS-ACCESS-BEAM-027",
+  "slug": "industrial-maintenance-access-beam-combined-stress",
+  "title": "Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam",
+  "studentDocumentTitle": "Student Homework Questions - Industrial Maintenance Access Beam",
+  "instructorDocumentTitle": "Instructor Answers - Industrial Maintenance Access Beam",
+  "summary": "An inclined-beam problem integrating support reactions, local internal resultants, axial and bending stress superposition, transverse shear, stress elements, and engineering assessment.",
+  "textbookChapters": ["Equilibrium of a rigid body", "Internal loadings in structural members", "Axial load", "Bending", "Transverse shear", "Combined loading"],
+  "derivedPlaceholders": ["beam_W_N", "beam_L_m", "beam_worker_distance_m", "beam_C_N", "beam_C_direction", "beam_Bx_N", "beam_Bx_direction", "beam_By_N", "beam_By_direction", "beam_N_N", "beam_N_type", "beam_V_N", "beam_M_Nm", "beam_area_mm2", "beam_I_mm4", "beam_QA_mm3", "beam_sigma_axial_MPa", "beam_sigma_bending_MPa", "beam_sigma_A_MPa", "beam_sigma_A_type", "beam_tau_A_MPa", "beam_tau_A_abs_MPa", "beam_tau_max_MPa", "beam_sigma_y_MPa", "beam_bending_ratio", "beam_dominant_response", "beam_assessment"],
+  "image": "assets/access-beam-industry-context.png",
+  "idealizedImage": "assets/access-beam-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference idealization of an inclined maintenance access beam spanning a pit, with supports B and C, worker load W at G, section a-a, point A, and rectangular section dimensions b and t.",
+  "source": "index.html",
+  "problemStatement": "<p>During a scheduled shutdown, a maintenance technician crosses a removable inclined access member spanning an industrial service pit. The lower support at <em>B</em> supplies horizontal and vertical reactions, while the smooth vertical-wall contact at <em>C</em> supplies only a horizontal reaction.</p><p>Determine the support reactions and the local internal resultants at section a-a. Then calculate the combined normal and transverse shear stress at point <em>A</em>, draw the local stress element, and identify the dominant mechanical response.</p>",
+  "engineeringGoal": "<p>Connect global equilibrium to a local inclined-member section cut, resolve the internal force into member axes, and combine axial, flexural, and beam-shear stress contributions in a limited mechanics-based assessment.</p>"
+}

@@ -1862,6 +1862,86 @@ function variableMap(problem, currentValues) {
     values.act_assessment = `${actCriticalPoint} is more critical for nominal normal-stress magnitude, with |σ| = ${formatDerived(Math.abs(actCriticalStress) / 1000, 3)} ksi in ${actStressType(actCriticalStress)}. Increase section width b in the bending direction to reduce flexure stress efficiently because I_z is proportional to b cubed, or adjust h and c so the absolute net moment |Fh - Pc| is smaller over every required load case. The upper offset e does not enter this lower-segment cut. Final design must also check bend and hole stress concentrations, lower-pin bearing and contact, upper bolt-group forces, connector deformation, fatigue, impact or dynamic loading, material allowables, and manufacturing details.`;
   }
 
+  const beamMass = numericValue(values, "beam_m");
+  const beamGravity = numericValue(values, "beam_g");
+  const beamTheta = numericValue(values, "beam_theta");
+  const beamBC = numericValue(values, "beam_BC");
+  const beamX = numericValue(values, "beam_x");
+  const beamS = numericValue(values, "beam_s");
+  const beamB = numericValue(values, "beam_b");
+  const beamT = numericValue(values, "beam_t");
+  const beamYA = numericValue(values, "beam_yA");
+
+  if (
+    Number.isFinite(beamMass) && beamMass > 0 &&
+    Number.isFinite(beamGravity) && beamGravity > 0 &&
+    Number.isFinite(beamTheta) && beamTheta > 0 && beamTheta < 90 &&
+    Number.isFinite(beamBC) && beamBC > 0 &&
+    Number.isFinite(beamX) && beamX > 0 && beamX < beamBC &&
+    Number.isFinite(beamS) && beamS >= 0 && beamX + beamS <= beamBC &&
+    Number.isFinite(beamB) && beamB > 0 &&
+    Number.isFinite(beamT) && beamT > 0 &&
+    Number.isFinite(beamYA) && beamYA >= 0 && beamYA <= beamT / 2
+  ) {
+    const beamThetaRad = beamTheta * Math.PI / 180;
+    const beamWeight = beamMass * beamGravity;
+    const beamLengthToC = beamBC - beamX;
+    const beamWorkerDistance = beamX + beamS;
+    const beamWallReaction = beamWeight * beamWorkerDistance * Math.cos(beamThetaRad) /
+      (beamBC * Math.sin(beamThetaRad));
+    const beamReactionX = beamWallReaction;
+    const beamReactionY = beamWeight;
+    const beamExternalAlong = beamReactionX * Math.cos(beamThetaRad) +
+      beamReactionY * Math.sin(beamThetaRad);
+    const beamExternalNormal = -beamReactionX * Math.sin(beamThetaRad) +
+      beamReactionY * Math.cos(beamThetaRad);
+    const beamAxialForce = -beamExternalAlong;
+    const beamShearForce = -beamExternalNormal;
+    const beamMoment = beamX * beamExternalNormal;
+    const beamArea = beamB * beamT;
+    const beamInertia = beamB * beamT ** 3 / 12;
+    const beamFirstMoment = beamB / 2 * ((beamT / 2) ** 2 - beamYA ** 2);
+    const beamAxialStress = beamAxialForce / beamArea;
+    const beamBendingStress = -beamMoment * 1000 * beamYA / beamInertia;
+    const beamCombinedStress = beamAxialStress + beamBendingStress;
+    const beamShearStress = beamShearForce * beamFirstMoment / (beamInertia * beamB);
+    const beamMaximumShear = 1.5 * beamShearForce / beamArea;
+    const beamBendingRatio = Math.abs(beamBendingStress) /
+      Math.max(Math.abs(beamAxialStress), Number.EPSILON);
+    const beamStressType = (stress) => stress > 1e-9 ? "tension" : stress < -1e-9 ? "compression" : "zero normal stress";
+    const beamDominantResponse = Math.abs(beamBendingStress) >= Math.max(Math.abs(beamAxialStress), Math.abs(beamShearStress))
+      ? "bending normal stress"
+      : Math.abs(beamAxialStress) >= Math.abs(beamShearStress) ? "direct axial stress" : "transverse shear stress";
+
+    values.beam_W_N = formatDerived(beamWeight, 1);
+    values.beam_L_m = formatDerived(beamLengthToC, 3);
+    values.beam_worker_distance_m = formatDerived(beamWorkerDistance, 3);
+    values.beam_C_N = formatDerived(Math.abs(beamWallReaction), 1);
+    values.beam_C_direction = beamWallReaction >= 0 ? "to the left" : "to the right";
+    values.beam_Bx_N = formatDerived(Math.abs(beamReactionX), 1);
+    values.beam_Bx_direction = beamReactionX >= 0 ? "to the right" : "to the left";
+    values.beam_By_N = formatDerived(Math.abs(beamReactionY), 1);
+    values.beam_By_direction = beamReactionY >= 0 ? "upward" : "downward";
+    values.beam_N_N = formatDerived(beamAxialForce, 1);
+    values.beam_N_type = beamStressType(beamAxialForce);
+    values.beam_V_N = formatDerived(beamShearForce, 1);
+    values.beam_M_Nm = formatDerived(beamMoment, 2);
+    values.beam_area_mm2 = formatDerived(beamArea, 0);
+    values.beam_I_mm4 = formatDerived(beamInertia, 0);
+    values.beam_QA_mm3 = formatDerived(beamFirstMoment, 0);
+    values.beam_sigma_axial_MPa = formatDerived(beamAxialStress, 4);
+    values.beam_sigma_bending_MPa = formatDerived(beamBendingStress, 4);
+    values.beam_sigma_A_MPa = formatDerived(beamCombinedStress, 4);
+    values.beam_sigma_A_type = beamStressType(beamCombinedStress);
+    values.beam_tau_A_MPa = formatDerived(beamShearStress, 5);
+    values.beam_tau_A_abs_MPa = formatDerived(Math.abs(beamShearStress), 5);
+    values.beam_tau_max_MPa = formatDerived(beamMaximumShear, 5);
+    values.beam_sigma_y_MPa = formatDerived(0, 1);
+    values.beam_bending_ratio = formatDerived(beamBendingRatio, 1);
+    values.beam_dominant_response = beamDominantResponse;
+    values.beam_assessment = `At point A, ${beamDominantResponse} governs the nominal stress state. The bending contribution is ${formatDerived(beamBendingRatio, 1)} times the direct axial contribution, while the transverse shear magnitude is ${formatDerived(Math.abs(beamShearStress), 5)} MPa. Increasing thickness t is especially effective because I is proportional to t cubed for the shown orientation; reducing the technician's perpendicular moment arm would also reduce bending. This result is not a complete access-system safety determination. Final evaluation must also address local support and connection stresses, member self-weight, lateral stability, technician motion, impact, vibration, fatigue, material allowables, deflection, and applicable workplace-access requirements.`;
+  }
+
   return values;
 }
 
