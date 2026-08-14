@@ -1670,6 +1670,76 @@ function variableMap(problem) {
     values.hanger_assessment = `Under the stated static straight-beam model, limit the suspended load to ${formatDerived(allowableLoad / 1000, 3)} kN so the governing ${values.hanger_governing_fiber} does not exceed ${formatDerived(hangerAllowableStress, 1)} MPa. If additional capacity is required, increase effective section depth or flange area, move material farther from the neutral axis, or reduce the ${formatDerived(hangerOffset, 1)} mm offset. The ${formatDerived(hangerRadius, 1)} mm bend radius defines the physical geometry but does not replace the perpendicular moment arm in M = PL.`;
   }
 
+
+  const lineF1 = numericValue(values, "line_F1");
+  const lineF2 = numericValue(values, "line_F2");
+  const lineF3 = numericValue(values, "line_F3");
+  const lineL1 = numericValue(values, "line_L1");
+  const lineL2 = numericValue(values, "line_L2");
+  const lineL3 = numericValue(values, "line_L3");
+  const lineL4 = numericValue(values, "line_L4");
+
+  if (
+    Number.isFinite(lineF1) && lineF1 >= 0 &&
+    Number.isFinite(lineF2) && lineF2 >= 0 &&
+    Number.isFinite(lineF3) && lineF3 >= 0 &&
+    Number.isFinite(lineL1) && lineL1 > 0 &&
+    Number.isFinite(lineL2) && lineL2 > 0 &&
+    Number.isFinite(lineL3) && lineL3 > 0 &&
+    Number.isFinite(lineL4) && lineL4 > 0
+  ) {
+    const lineX1 = lineL1;
+    const lineX2 = lineL1 + lineL2;
+    const lineXB = lineX2 + lineL3;
+    const lineX3 = lineXB + lineL4;
+    const lineBy = (lineF1 * lineX1 - lineF2 * lineX2 + lineF3 * lineX3) / lineXB;
+    const lineAy = lineF1 + lineF3 - lineF2 - lineBy;
+    const lineShears = [
+      lineAy,
+      lineAy - lineF1,
+      lineAy - lineF1 + lineF2,
+      lineAy - lineF1 + lineF2 + lineBy,
+      lineAy - lineF1 + lineF2 + lineBy - lineF3
+    ];
+    const lineMoments = [
+      0,
+      lineShears[0] * lineL1 / 1000,
+      (lineShears[0] * lineL1 + lineShears[1] * lineL2) / 1000,
+      (lineShears[0] * lineL1 + lineShears[1] * lineL2 + lineShears[2] * lineL3) / 1000,
+      (lineShears[0] * lineL1 + lineShears[1] * lineL2 + lineShears[2] * lineL3 + lineShears[3] * lineL4) / 1000
+    ];
+    const lineStations = [
+      { name: "bearing A", x: 0, moment: lineMoments[0] },
+      { name: "pulley 1", x: lineX1, moment: lineMoments[1] },
+      { name: "center pulley 2", x: lineX2, moment: lineMoments[2] },
+      { name: "bearing B", x: lineXB, moment: lineMoments[3] },
+      { name: "overhung pulley 3", x: lineX3, moment: lineMoments[4] }
+    ];
+    const lineCritical = lineStations.reduce((current, station) =>
+      Math.abs(station.moment) > Math.abs(current.moment) ? station : current
+    );
+    const lineDirection = (reaction) => reaction > 0 ? "upward" : reaction < 0 ? "downward" : "zero";
+
+    values.line_Ay_N = formatDerived(Math.abs(lineAy), 2);
+    values.line_Ay_direction = lineDirection(lineAy);
+    values.line_By_N = formatDerived(Math.abs(lineBy), 2);
+    values.line_By_direction = lineDirection(lineBy);
+    lineShears.forEach((shear, index) => {
+      values[`line_V${index + 1}_N`] = formatDerived(shear, 2);
+    });
+    values.line_MA_Nm = formatDerived(lineMoments[0], 2);
+    values.line_M1_Nm = formatDerived(lineMoments[1], 2);
+    values.line_M2_Nm = formatDerived(lineMoments[2], 2);
+    values.line_MB_Nm = formatDerived(lineMoments[3], 2);
+    values.line_M3_Nm = formatDerived(lineMoments[4], 2);
+    values.line_Mmax_abs_Nm = formatDerived(Math.abs(lineCritical.moment), 2);
+    values.line_Mmax_signed_Nm = formatDerived(lineCritical.moment, 2);
+    values.line_Mmax_x_mm = formatDerived(lineCritical.x, 1);
+    values.line_Mmax_station = lineCritical.name;
+    values.line_force_check_N = formatDerived(lineShears[4], 3);
+    values.line_assessment = `The first static bending check should be made at the ${lineCritical.name}, ${formatDerived(lineCritical.x, 1)} mm from bearing A, where |M| = ${formatDerived(Math.abs(lineCritical.moment), 2)} N·m. Bending demand can be reduced by moving a bearing or pulley to shorten a governing moment arm, or by reducing the associated belt resultant. A complete shaft design must also evaluate torsion, combined stress, fatigue, stress concentrations, bearing reactions in the perpendicular plane, shaft and pulley weight, alignment, and dynamic belt loading.`;
+  }
+
   return values;
 }
 

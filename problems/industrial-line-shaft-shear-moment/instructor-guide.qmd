@@ -1,0 +1,40 @@
+---
+title: "Instructor Guide - Multi-Pulley Industrial Line Shaft"
+subtitle: "Representative Solutions and Shear-Moment Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+# Purpose
+
+Award credit for a correct shaft idealization, complete free-body diagram, explicit sign convention, correct bearing reactions, internally consistent piecewise shear and moment functions, accurately labeled diagrams, and a limited recommendation tied to the absolute maximum bending moment.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="line-shaft-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "industrial-line-shaft-shear-moment", targetId: "line-shaft-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes static transverse loading, a slender shaft represented as a beam, concentrated pulley resultants at pulley centerlines, vertical bearing reactions only, small deformation, and negligible shaft self-weight. It excludes torsion, axial loading, shaft diameter and stress, fatigue, dynamic belt effects, bearing compliance, and local hub, shoulder, or keyway stresses.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization and assumptions: 20%;
+- equilibrium and bearing reactions: 20%;
+- shear and bending-moment analysis: 30%;
+- critical-station assessment and limitations: 10%.

@@ -2908,6 +2908,524 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-LINE-SHAFT-025",
+    "slug": "industrial-line-shaft-shear-moment",
+    "title": "Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft",
+    "studentDocumentTitle": "Student Homework Questions - Multi-Pulley Industrial Line Shaft",
+    "instructorDocumentTitle": "Instructor Answers - Multi-Pulley Industrial Line Shaft",
+    "summary": "An overhanging-beam problem integrating pulley load paths, bearing reactions, piecewise internal shear and moment, shear-force and bending-moment diagrams, and critical-station identification.",
+    "textbookChapters": [
+      "Equilibrium of a rigid body",
+      "Internal loadings in structural members",
+      "Shear and moment diagrams for a beam"
+    ],
+    "derivedPlaceholders": [
+      "line_Ay_N",
+      "line_Ay_direction",
+      "line_By_N",
+      "line_By_direction",
+      "line_V1_N",
+      "line_V2_N",
+      "line_V3_N",
+      "line_V4_N",
+      "line_V5_N",
+      "line_MA_Nm",
+      "line_M1_Nm",
+      "line_M2_Nm",
+      "line_MB_Nm",
+      "line_M3_Nm",
+      "line_Mmax_abs_Nm",
+      "line_Mmax_signed_Nm",
+      "line_Mmax_x_mm",
+      "line_Mmax_station",
+      "line_force_check_N",
+      "line_assessment"
+    ],
+    "image": "problems/industrial-line-shaft-shear-moment/assets/line-shaft-industry-context.png",
+    "idealizedImage": "problems/industrial-line-shaft-shear-moment/assets/line-shaft-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference beam idealization of a line shaft supported by bearings A and B, with downward pulley forces F1 and F3, upward pulley force F2, and segment lengths L1 through L4.",
+    "source": "problems/industrial-line-shaft-shear-moment/index.html",
+    "problemStatement": "<p>A production line uses a horizontal shaft to transmit motion among belt-driven conveyor and processing stations. Pillow-block bearings A and B support the shaft. The belt resultants are modeled as a downward force <em>F</em><sub>1</sub>, an upward force <em>F</em><sub>2</sub>, and a downward overhung force <em>F</em><sub>3</sub>.</p><p>Model the bearings as vertical-force supports in the selected plane. Determine their reactions, construct the complete shear-force and bending-moment diagrams, and identify the shaft station carrying the largest absolute bending moment.</p>",
+    "engineeringGoal": "<p>Use whole-shaft equilibrium and piecewise internal-resultant analysis to locate and quantify the absolute maximum bending moment before a later shaft stress or fatigue evaluation.</p>",
+    "variables": [
+      {
+        "key": "line_F1",
+        "symbol": "F_1",
+        "label": "Downward resultant at pulley 1",
+        "value": 450,
+        "unit": "N",
+        "min": 0,
+        "max": 10000,
+        "step": 10
+      },
+      {
+        "key": "line_F2",
+        "symbol": "F_2",
+        "label": "Upward resultant at pulley 2",
+        "value": 300,
+        "unit": "N",
+        "min": 0,
+        "max": 10000,
+        "step": 10
+      },
+      {
+        "key": "line_F3",
+        "symbol": "F_3",
+        "label": "Downward resultant at overhung pulley 3",
+        "value": 150,
+        "unit": "N",
+        "min": 0,
+        "max": 10000,
+        "step": 10
+      },
+      {
+        "key": "line_L1",
+        "symbol": "L_1",
+        "label": "Distance from A to pulley 1",
+        "value": 200,
+        "unit": "mm",
+        "min": 10,
+        "max": 5000,
+        "step": 10
+      },
+      {
+        "key": "line_L2",
+        "symbol": "L_2",
+        "label": "Distance from pulley 1 to pulley 2",
+        "value": 400,
+        "unit": "mm",
+        "min": 10,
+        "max": 5000,
+        "step": 10
+      },
+      {
+        "key": "line_L3",
+        "symbol": "L_3",
+        "label": "Distance from pulley 2 to bearing B",
+        "value": 300,
+        "unit": "mm",
+        "min": 10,
+        "max": 5000,
+        "step": 10
+      },
+      {
+        "key": "line_L4",
+        "symbol": "L_4",
+        "label": "Distance from B to overhung pulley 3",
+        "value": 200,
+        "unit": "mm",
+        "min": 10,
+        "max": 5000,
+        "step": 10
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "System Function",
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "line shaft",
+          "power transmission",
+          "pulley system"
+        ],
+        "learningObjectives": [
+          "Describe the shaft's role in the production line."
+        ],
+        "selected": true,
+        "student": "<p>Identify the primary mechanical function of the line shaft and its pulleys in the production system.</p>",
+        "instructor": "<p>The shaft transmits rotation and torque among belt-driven stations. The pulleys introduce transverse belt resultants, while bearings A and B support the shaft and transfer those forces into the machine frame.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q2",
+        "title": "External Pulley Loads",
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "concentrated loads",
+          "belt resultants",
+          "force direction"
+        ],
+        "learningObjectives": [
+          "Identify the transverse forces and their directions."
+        ],
+        "selected": true,
+        "student": "<p>List the three idealized pulley forces and state the direction of each force.</p>",
+        "instructor": "<p><em>F</em><sub>1</sub> acts downward at pulley 1, <em>F</em><sub>2</sub> acts upward at pulley 2, and <em>F</em><sub>3</sub> acts downward at the overhung pulley 3.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q3",
+        "title": "Bearing Boundary Conditions",
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "tags": [
+          "pillow-block bearings",
+          "vertical reactions",
+          "beam support"
+        ],
+        "learningObjectives": [
+          "State the reactions admitted by the bearing model."
+        ],
+        "selected": true,
+        "student": "<p>How are bearings A and B idealized in the selected loading plane, and which reactions do they provide?</p>",
+        "instructor": "<p>Each bearing is modeled as a simple support that supplies a vertical reaction but no reaction couple. Axial and out-of-plane reactions are outside this two-dimensional model.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "load transfer",
+          "bearings",
+          "machine frame"
+        ],
+        "learningObjectives": [
+          "Trace transverse pulley loads to the supporting structure."
+        ],
+        "selected": true,
+        "student": "<p>Trace the load path from the belts and pulleys to the machine foundation.</p>",
+        "instructor": "<p>Belt tensions create resultant forces on the pulleys; the pulleys load the shaft; the shaft transfers transverse force through bearings A and B; and the bearing housings and machine frame carry the reactions to the foundation.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q5",
+        "title": "Likely Critical Stations",
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "critical section",
+          "concentrated load",
+          "overhang"
+        ],
+        "learningObjectives": [
+          "Anticipate where moment extrema can occur."
+        ],
+        "selected": true,
+        "student": "<p>Before calculating, identify the stations that must be checked for a maximum or minimum bending moment.</p>",
+        "instructor": "<p>Check the two bearings and all three pulley stations. With only concentrated forces, shear is constant between stations, so moment is linear and an extremum occurs where shear changes sign or at a boundary station.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Internal Resultants",
+        "type": "mechanics selection",
+        "difficulty": "introductory",
+        "tags": [
+          "internal shear",
+          "bending moment",
+          "beam response"
+        ],
+        "learningObjectives": [
+          "Select the internal resultants required for the stated analysis."
+        ],
+        "selected": true,
+        "student": "<p>Which internal resultants are required to evaluate the shaft as a beam in the selected plane?</p>",
+        "instructor": "<p>The required resultants are transverse shear <em>V</em> and bending moment <em>M</em>. Torsion, axial force, and loading in the perpendicular plane require separate models if present.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q7",
+        "title": "Governing Input Parameters",
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "forces",
+          "segment lengths",
+          "beam geometry"
+        ],
+        "learningObjectives": [
+          "Identify the inputs controlling reactions and diagrams."
+        ],
+        "selected": true,
+        "student": "<p>Identify the force and geometry parameters needed for the two-dimensional shear-and-moment analysis.</p>",
+        "instructor": "<p>The inputs are <em>F</em><sub>1</sub>, <em>F</em><sub>2</sub>, <em>F</em><sub>3</sub> and segment lengths <em>L</em><sub>1</sub> through <em>L</em><sub>4</sub>, together with the stated force directions and bearing locations.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Shaft Idealization",
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "tags": [
+          "free-body diagram",
+          "overhanging beam",
+          "bearing reactions"
+        ],
+        "learningObjectives": [
+          "Translate the physical shaft into a beam FBD."
+        ],
+        "selected": true,
+        "student": "<p>Before viewing the reference idealization, draw the complete shaft FBD. Show bearings A and B, reactions <em>A</em><sub>y</sub> and <em>B</em><sub>y</sub>, forces <em>F</em><sub>1</sub> through <em>F</em><sub>3</sub>, lengths <em>L</em><sub>1</sub> through <em>L</em><sub>4</sub>, and coordinate <em>x</em> measured rightward from A.</p>",
+        "instructor": "<p>A valid FBD shows A at <em>x</em> = 0; pulley 1 at <em>L</em><sub>1</sub>; pulley 2 at <em>L</em><sub>1</sub> + <em>L</em><sub>2</sub>; B at <em>L</em><sub>1</sub> + <em>L</em><sub>2</sub> + <em>L</em><sub>3</sub>; and pulley 3 one <em>L</em><sub>4</sub> beyond B. The assumed bearing reactions are shown upward, with <em>F</em><sub>1</sub> and <em>F</em><sub>3</sub> downward and <em>F</em><sub>2</sub> upward.</p>",
+        "gradingNotes": "<p>Require all forces, stations, dimensions, and a coordinate direction before equations are written.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "tags": [
+          "static loading",
+          "slender beam",
+          "ideal bearings"
+        ],
+        "learningObjectives": [
+          "State assumptions defining the model's scope."
+        ],
+        "selected": true,
+        "student": "<p>State the assumptions used to reduce the line shaft to a planar beam model.</p>",
+        "instructor": "<p>Assume static concentrated pulley resultants, a straight slender shaft, small deformation, ideal point supports, and forces acting in one plane. Neglect shaft and pulley self-weight unless included in the resultants, bearing width, stress concentrations, torsion, fatigue, dynamics, and loading in the perpendicular plane.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q10",
+        "title": "Analysis Plan",
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "tags": [
+          "equilibrium",
+          "piecewise analysis",
+          "diagram construction"
+        ],
+        "learningObjectives": [
+          "Plan a complete reaction and internal-loading solution."
+        ],
+        "selected": true,
+        "student": "<p>List the calculation sequence for finding the reactions, shear diagram, moment diagram, and governing station.</p>",
+        "instructor": "<p>Define the sign convention and station coordinates; apply whole-shaft equilibrium for <em>A</em><sub>y</sub> and <em>B</em><sub>y</sub>; step through the concentrated forces to obtain piecewise shear; integrate shear or use moment equilibrium to obtain moment; enforce the free-end boundary condition; and compare the absolute moment at every candidate station.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q11",
+        "title": "Station Coordinates",
+        "type": "mechanics setup",
+        "difficulty": "introductory",
+        "tags": [
+          "beam coordinate",
+          "load locations",
+          "support location"
+        ],
+        "learningObjectives": [
+          "Express every station using the assigned segment lengths."
+        ],
+        "selected": true,
+        "student": "<p>Using <em>x</em> measured from A, write the coordinates of pulley 1, pulley 2, bearing B, and pulley 3.</p>",
+        "instructor": "<p>Pulley 1: <em>x</em> = <em>L</em><sub>1</sub>. Pulley 2: <em>x</em> = <em>L</em><sub>1</sub> + <em>L</em><sub>2</sub>. Bearing B: <em>x</em> = <em>L</em><sub>1</sub> + <em>L</em><sub>2</sub> + <em>L</em><sub>3</sub>. Pulley 3: <em>x</em> = <em>L</em><sub>1</sub> + <em>L</em><sub>2</sub> + <em>L</em><sub>3</sub> + <em>L</em><sub>4</sub>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q12",
+        "title": "Equilibrium Equations",
+        "type": "beam equilibrium",
+        "difficulty": "introductory",
+        "tags": [
+          "force equilibrium",
+          "moment equilibrium",
+          "bearing reactions"
+        ],
+        "learningObjectives": [
+          "Formulate independent whole-shaft equilibrium equations."
+        ],
+        "selected": true,
+        "student": "<p>Take upward force as positive. Write independent equilibrium equations for the two bearing reactions.</p>",
+        "instructor": "<p>Vertical equilibrium gives <em>A</em><sub>y</sub> + <em>B</em><sub>y</sub> + <em>F</em><sub>2</sub> - <em>F</em><sub>1</sub> - <em>F</em><sub>3</sub> = 0.</p><p>Taking counterclockwise moment about A as positive gives <em>B</em><sub>y</sub>(<em>L</em><sub>1</sub> + <em>L</em><sub>2</sub> + <em>L</em><sub>3</sub>) + <em>F</em><sub>2</sub>(<em>L</em><sub>1</sub> + <em>L</em><sub>2</sub>) - <em>F</em><sub>1</sub><em>L</em><sub>1</sub> - <em>F</em><sub>3</sub>(<em>L</em><sub>1</sub> + <em>L</em><sub>2</sub> + <em>L</em><sub>3</sub> + <em>L</em><sub>4</sub>) = 0.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q13",
+        "title": "Bearing Reactions",
+        "type": "reaction calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "bearing reactions",
+          "equilibrium",
+          "overhanging beam"
+        ],
+        "learningObjectives": [
+          "Calculate both bearing reactions with correct directions."
+        ],
+        "selected": true,
+        "student": "<p>Determine <em>A</em><sub>y</sub> and <em>B</em><sub>y</sub>. Report each magnitude and direction, and verify vertical-force equilibrium.</p>",
+        "instructor": "<p><em>A</em><sub>y</sub> = <strong>{{line_Ay_N}} N {{line_Ay_direction}}</strong> and <em>B</em><sub>y</sub> = <strong>{{line_By_N}} N {{line_By_direction}}</strong>.</p><p>The final running shear after all forces is <strong>{{line_force_check_N}} N</strong>; its zero value verifies vertical-force equilibrium apart from rounding.</p>",
+        "gradingNotes": "<p>Give full credit only when the overhung <em>F</em><sub>3</sub> moment arm includes <em>L</em><sub>4</sub>.</p>",
+        "commonMistakes": "<p>A frequent error is placing <em>F</em><sub>3</sub> at bearing B or assigning the upward <em>F</em><sub>2</sub> the wrong sign.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q14",
+        "title": "Shear-Force Diagram Ordinates",
+        "type": "shear diagram calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "shear force diagram",
+          "concentrated loads",
+          "piecewise constant shear"
+        ],
+        "learningObjectives": [
+          "Calculate the shear in every shaft segment."
+        ],
+        "selected": true,
+        "student": "<p>Construct the shear-force diagram. Report the constant shear in segments A-to-pulley 1, pulley 1-to-pulley 2, pulley 2-to-B, B-to-pulley 3, and immediately beyond pulley 3.</p>",
+        "instructor": "<p>Using the stated sign convention, the segment shears are:</p><ul><li>A to pulley 1: <strong>{{line_V1_N}} N</strong></li><li>Pulley 1 to pulley 2: <strong>{{line_V2_N}} N</strong></li><li>Pulley 2 to B: <strong>{{line_V3_N}} N</strong></li><li>B to pulley 3: <strong>{{line_V4_N}} N</strong></li><li>Beyond pulley 3: <strong>{{line_V5_N}} N</strong></li></ul>",
+        "section": "analysis"
+      },
+      {
+        "id": "q15",
+        "title": "Bending-Moment Diagram Ordinates",
+        "type": "moment diagram calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "bending moment diagram",
+          "area under shear",
+          "continuity"
+        ],
+        "learningObjectives": [
+          "Calculate moment at all load and support stations."
+        ],
+        "selected": true,
+        "student": "<p>Construct the bending-moment diagram by accumulating the signed area under the shear diagram. Report the moment at A, pulley 1, pulley 2, bearing B, and pulley 3.</p>",
+        "instructor": "<p>The bending moments are:</p><ul><li>A: <strong>{{line_MA_Nm}} N&middot;m</strong></li><li>Pulley 1: <strong>{{line_M1_Nm}} N&middot;m</strong></li><li>Pulley 2: <strong>{{line_M2_Nm}} N&middot;m</strong></li><li>Bearing B: <strong>{{line_MB_Nm}} N&middot;m</strong></li><li>Pulley 3/free end: <strong>{{line_M3_Nm}} N&middot;m</strong></li></ul><p>The diagram is continuous and linear between concentrated-force stations.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q16",
+        "title": "Piecewise Shear Function",
+        "type": "internal shear derivation",
+        "difficulty": "intermediate",
+        "tags": [
+          "piecewise functions",
+          "internal shear",
+          "singularity stations"
+        ],
+        "learningObjectives": [
+          "Express the shear force as a piecewise function."
+        ],
+        "selected": true,
+        "student": "<p>Write <em>V</em>(<em>x</em>) as a piecewise function for the four physical shaft segments, using <em>x</em> measured from A.</p>",
+        "instructor": "<p>Let <em>x</em><sub>1</sub> = <em>L</em><sub>1</sub>, <em>x</em><sub>2</sub> = <em>L</em><sub>1</sub> + <em>L</em><sub>2</sub>, <em>x</em><sub>B</sub> = <em>L</em><sub>1</sub> + <em>L</em><sub>2</sub> + <em>L</em><sub>3</sub>, and <em>x</em><sub>3</sub> = <em>x</em><sub>B</sub> + <em>L</em><sub>4</sub>.</p><p><em>V</em> = <em>A</em><sub>y</sub> for 0 &lt; <em>x</em> &lt; <em>x</em><sub>1</sub>; <em>V</em> = <em>A</em><sub>y</sub> - <em>F</em><sub>1</sub> for <em>x</em><sub>1</sub> &lt; <em>x</em> &lt; <em>x</em><sub>2</sub>; <em>V</em> = <em>A</em><sub>y</sub> - <em>F</em><sub>1</sub> + <em>F</em><sub>2</sub> for <em>x</em><sub>2</sub> &lt; <em>x</em> &lt; <em>x</em><sub>B</sub>; and <em>V</em> = <em>A</em><sub>y</sub> - <em>F</em><sub>1</sub> + <em>F</em><sub>2</sub> + <em>B</em><sub>y</sub> for <em>x</em><sub>B</sub> &lt; <em>x</em> &lt; <em>x</em><sub>3</sub>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q17",
+        "title": "Piecewise Bending-Moment Function",
+        "type": "internal moment derivation",
+        "difficulty": "intermediate",
+        "tags": [
+          "piecewise functions",
+          "bending moment",
+          "Macaulay formulation"
+        ],
+        "learningObjectives": [
+          "Express bending moment over the full shaft."
+        ],
+        "selected": true,
+        "student": "<p>Write a compact expression for <em>M</em>(<em>x</em>) over the shaft using bracket terms or provide an equivalent piecewise function.</p>",
+        "instructor": "<p>With &lang;<em>z</em>&rang; = 0 for <em>z</em> &lt; 0 and &lang;<em>z</em>&rang; = <em>z</em> otherwise,</p><p><em>M</em>(<em>x</em>) = <em>A</em><sub>y</sub><em>x</em> - <em>F</em><sub>1</sub>&lang;<em>x</em> - <em>x</em><sub>1</sub>&rang; + <em>F</em><sub>2</sub>&lang;<em>x</em> - <em>x</em><sub>2</sub>&rang; + <em>B</em><sub>y</sub>&lang;<em>x</em> - <em>x</em><sub>B</sub>&rang; - <em>F</em><sub>3</sub>&lang;<em>x</em> - <em>x</em><sub>3</sub>&rang;.</p><p>Use N and m, or divide N&middot;mm results by 1000 to obtain N&middot;m.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q18",
+        "title": "Absolute Maximum Bending Moment",
+        "type": "critical-value calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "maximum bending moment",
+          "critical station",
+          "absolute value"
+        ],
+        "learningObjectives": [
+          "Locate and quantify the governing bending moment."
+        ],
+        "selected": true,
+        "student": "<p>Determine the largest absolute bending moment, its signed value, and its location along the shaft.</p>",
+        "instructor": "<p>The largest absolute bending moment is <strong>{{line_Mmax_abs_Nm}} N&middot;m</strong>. Its signed value is <strong>{{line_Mmax_signed_Nm}} N&middot;m</strong> at the <strong>{{line_Mmax_station}}</strong>, located <strong>{{line_Mmax_x_mm}} mm</strong> from A.</p>",
+        "gradingNotes": "<p>Students must compare positive and negative ordinates by absolute value.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q19",
+        "title": "Diagram and Overhang Interpretation",
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "tags": [
+          "sign convention",
+          "overhang effect",
+          "diagram interpretation"
+        ],
+        "learningObjectives": [
+          "Interpret sign changes and the influence of the overhung load."
+        ],
+        "selected": true,
+        "student": "<p>Explain why the moment becomes negative before bearing B and how the overhung pulley force affects the diagram.</p>",
+        "instructor": "<p>The shear becomes negative after pulley 1, so the moment decreases and crosses zero before reaching pulley 2. The overhung downward force <em>F</em><sub>3</sub> requires the B-to-pulley-3 segment to carry positive shear toward the free-end zero-moment condition; equivalently, it creates a negative moment of magnitude <em>F</em><sub>3</sub><em>L</em><sub>4</sub> at bearing B.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q20",
+        "title": "Engineering Assessment and Model Limits",
+        "type": "engineering judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "shaft design",
+          "critical section",
+          "model limitations"
+        ],
+        "learningObjectives": [
+          "Communicate the governing result and next design checks."
+        ],
+        "selected": true,
+        "student": "<p>Give a concise engineering assessment: identify the station to check first, suggest one way to reduce bending demand, and state at least two important limitations of this model.</p>",
+        "instructor": "<p>{{line_assessment}}</p>",
+        "commonMistakes": "<p>Do not treat this planar static bending result as a complete shaft design; torsion, fatigue, stress concentrations, and loading in the perpendicular plane may govern.</p>",
+        "section": "analysis"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - baseline pulley loading",
+        "description": "Baseline line-shaft idealization, bearing reactions, shear-force and bending-moment diagrams, and critical-station assessment.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20"
+        ],
+        "variables": {
+          "line_F1": 450,
+          "line_F2": 300,
+          "line_F3": 150,
+          "line_L1": 200,
+          "line_L2": 400,
+          "line_L3": 300,
+          "line_L4": 200
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-ROBOT-021",
     "slug": "industrial-robot-arm-shear-moment",
     "title": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",

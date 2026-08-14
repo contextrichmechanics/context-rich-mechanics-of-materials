@@ -60,6 +60,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-LINE-SHAFT-025",
+    "slug": "industrial-line-shaft-shear-moment",
+    "title": "Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft",
+    "status": "OK",
+    "variables": 7,
+    "questions": 20,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-ROBOT-021",
     "slug": "industrial-robot-arm-shear-moment",
     "title": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",

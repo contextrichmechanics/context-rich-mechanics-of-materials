@@ -1,0 +1,9 @@
+[
+  {"key":"line_F1","symbol":"F_1","label":"Downward resultant at pulley 1","value":450,"unit":"N","min":0,"max":10000,"step":10},
+  {"key":"line_F2","symbol":"F_2","label":"Upward resultant at pulley 2","value":300,"unit":"N","min":0,"max":10000,"step":10},
+  {"key":"line_F3","symbol":"F_3","label":"Downward resultant at overhung pulley 3","value":150,"unit":"N","min":0,"max":10000,"step":10},
+  {"key":"line_L1","symbol":"L_1","label":"Distance from A to pulley 1","value":200,"unit":"mm","min":10,"max":5000,"step":10},
+  {"key":"line_L2","symbol":"L_2","label":"Distance from pulley 1 to pulley 2","value":400,"unit":"mm","min":10,"max":5000,"step":10},
+  {"key":"line_L3","symbol":"L_3","label":"Distance from pulley 2 to bearing B","value":300,"unit":"mm","min":10,"max":5000,"step":10},
+  {"key":"line_L4","symbol":"L_4","label":"Distance from B to overhung pulley 3","value":200,"unit":"mm","min":10,"max":5000,"step":10}
+]

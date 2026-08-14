@@ -1,0 +1,16 @@
+{
+  "id": "MOS-LINE-SHAFT-025",
+  "slug": "industrial-line-shaft-shear-moment",
+  "title": "Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft",
+  "studentDocumentTitle": "Student Homework Questions - Multi-Pulley Industrial Line Shaft",
+  "instructorDocumentTitle": "Instructor Answers - Multi-Pulley Industrial Line Shaft",
+  "summary": "An overhanging-beam problem integrating pulley load paths, bearing reactions, piecewise internal shear and moment, shear-force and bending-moment diagrams, and critical-station identification.",
+  "textbookChapters": ["Equilibrium of a rigid body", "Internal loadings in structural members", "Shear and moment diagrams for a beam"],
+  "derivedPlaceholders": ["line_Ay_N", "line_Ay_direction", "line_By_N", "line_By_direction", "line_V1_N", "line_V2_N", "line_V3_N", "line_V4_N", "line_V5_N", "line_MA_Nm", "line_M1_Nm", "line_M2_Nm", "line_MB_Nm", "line_M3_Nm", "line_Mmax_abs_Nm", "line_Mmax_signed_Nm", "line_Mmax_x_mm", "line_Mmax_station", "line_force_check_N", "line_assessment"],
+  "image": "assets/line-shaft-industry-context.png",
+  "idealizedImage": "assets/line-shaft-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference beam idealization of a line shaft supported by bearings A and B, with downward pulley forces F1 and F3, upward pulley force F2, and segment lengths L1 through L4.",
+  "source": "index.html",
+  "problemStatement": "<p>A production line uses a horizontal shaft to transmit motion among belt-driven conveyor and processing stations. Pillow-block bearings A and B support the shaft. The belt resultants are modeled as a downward force <em>F</em><sub>1</sub>, an upward force <em>F</em><sub>2</sub>, and a downward overhung force <em>F</em><sub>3</sub>.</p><p>Model the bearings as vertical-force supports in the selected plane. Determine their reactions, construct the complete shear-force and bending-moment diagrams, and identify the shaft station carrying the largest absolute bending moment.</p>",
+  "engineeringGoal": "<p>Use whole-shaft equilibrium and piecewise internal-resultant analysis to locate and quantify the absolute maximum bending moment before a later shaft stress or fatigue evaluation.</p>"
+}
