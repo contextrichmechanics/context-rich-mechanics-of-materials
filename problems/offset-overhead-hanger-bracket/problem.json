@@ -1,0 +1,16 @@
+{
+  "id": "MOS-HANGER-024",
+  "slug": "offset-overhead-hanger-bracket",
+  "title": "Allowable Load for an Offset Overhead Process-Equipment Hanger",
+  "studentDocumentTitle": "Student Homework Questions - Offset Overhead Process-Equipment Hanger",
+  "instructorDocumentTitle": "Instructor Answers - Offset Overhead Process-Equipment Hanger",
+  "summary": "An allowable-load bending problem integrating load paths, internal resultants, unsymmetric composite-section properties, the parallel-axis theorem, section modulus, and engineering assessment.",
+  "textbookChapters": ["Internal loadings in structural members", "Centroids and centers of gravity", "Moments of inertia for an area", "The flexure formula"],
+  "derivedPlaceholders": ["hanger_V_N", "hanger_M_Nmm", "hanger_A_top_mm2", "hanger_A_web_mm2", "hanger_A_bottom_mm2", "hanger_A_total_mm2", "hanger_ybar_mm", "hanger_I_mm4", "hanger_c_top_mm", "hanger_c_bottom_mm", "hanger_c_crit_mm", "hanger_governing_fiber", "hanger_S_mm3", "hanger_Pmax_N", "hanger_Pmax_kN", "hanger_sigma_top_MPa", "hanger_sigma_bottom_MPa", "hanger_tension_fiber", "hanger_compression_fiber", "hanger_assessment"],
+  "image": "assets/hanger-industry-context.png",
+  "idealizedImage": "assets/hanger-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference idealization of an offset overhead hanger with fixed support D, suspended load P at E, horizontal offset L, bend radius R, critical section a-a, and an unsymmetric flanged section defined by B, H, t1, and t2.",
+  "source": "index.html",
+  "problemStatement": "<p>A process plant uses an offset steel hanger to support a suspended valve or maintenance fixture while clearing nearby piping and equipment. The chain applies a vertical load <em>P</em> at E, and the hanger transfers that load to the overhead structure through the fixed connection at D.</p><p>Evaluate the hanger at section a-a. For the assigned section, model the top flange as <em>B</em> by <em>t</em><sub>2</sub>, the web as <em>t</em><sub>1</sub> by (<em>H</em> - 2<em>t</em><sub>2</sub>), and the bottom flange as (<em>t</em><sub>1</sub> + 2<em>t</em><sub>2</sub>) by <em>t</em><sub>2</sub>. These are three nonoverlapping rectangles.</p>",
+  "engineeringGoal": "<p>Determine the maximum allowable suspended load such that the largest flexural normal-stress magnitude at section a-a does not exceed the specified allowable bending stress. Identify the governing extreme fiber and explain which geometry changes most directly increase capacity.</p>"
+}

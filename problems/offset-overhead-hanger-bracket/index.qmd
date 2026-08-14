@@ -1,0 +1,28 @@
+---
+title: "Allowable Load for an Offset Overhead Process-Equipment Hanger"
+description: "An allowable-load bending problem using unsymmetric composite-section properties and the flexure formula."
+image: "assets/hanger-industry-context.png"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [eccentric loading, equilibrium, internal shear, bending moment, composite area, centroid, parallel-axis theorem, second moment of area, flexure formula, bending stress, allowable stress, section modulus]
+course_topics: [internal loadings, centroids, area moments of inertia, flexural stress, allowable-load design, unsymmetric sections]
+textbook_chapters: [Internal loadings in structural members, Centroids and centers of gravity, Moments of inertia for an area, The flexure formula]
+problem_types: [load-path analysis, free-body diagram, internal-resultant calculation, composite-section calculation, allowable-load calculation, engineering evaluation]
+competencies: [engineering idealization, equilibrium, composite-area method, parallel-axis theorem, flexure formula, stress interpretation, engineering judgment]
+industries: [process plants, maintenance lifting, overhead supports, industrial equipment, manufacturing]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-HANGER-024"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+The base assignment connects a real offset hanger to internal loading, centroid and inertia calculations for an unsymmetric section, and allowable-load design using the flexure formula. Local connection design, curved-beam corrections, fatigue, and dynamics are intentionally excluded.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=offset-overhead-hanger-bracket){.btn .btn-secondary}

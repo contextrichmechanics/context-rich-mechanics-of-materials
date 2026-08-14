@@ -1607,6 +1607,69 @@ function variableMap(problem) {
     values.seat_assessment = `The simplified static bending-stress magnitude is ${formatDerived(maximumStress / 1000, 3)} ksi. Compare this value with the specified allowable normal stress, or compute FOS = sigma_allow/|sigma_max|. If the criterion is not met, increase effective section depth or wall thickness, reduce the load offset, reduce the design load, or select an appropriate stronger section and material.`;
   }
 
+  const hangerAllowableStress = numericValue(values, "hanger_sigma_allow");
+  const hangerOffset = numericValue(values, "hanger_L");
+  const hangerRadius = numericValue(values, "hanger_R");
+  const hangerTopWidth = numericValue(values, "hanger_B");
+  const hangerHeight = numericValue(values, "hanger_H");
+  const hangerWebThickness = numericValue(values, "hanger_t1");
+  const hangerFlangeThickness = numericValue(values, "hanger_t2");
+
+  if (
+    Number.isFinite(hangerAllowableStress) && hangerAllowableStress > 0 &&
+    Number.isFinite(hangerOffset) && hangerOffset > 0 &&
+    Number.isFinite(hangerRadius) && hangerRadius > 0 &&
+    Number.isFinite(hangerTopWidth) && hangerTopWidth > 0 &&
+    Number.isFinite(hangerHeight) && hangerHeight > 0 &&
+    Number.isFinite(hangerWebThickness) && hangerWebThickness > 0 &&
+    Number.isFinite(hangerFlangeThickness) && hangerFlangeThickness > 0 &&
+    2 * hangerFlangeThickness < hangerHeight &&
+    hangerWebThickness + 2 * hangerFlangeThickness <= hangerTopWidth
+  ) {
+    const bottomWidth = hangerWebThickness + 2 * hangerFlangeThickness;
+    const webHeight = hangerHeight - 2 * hangerFlangeThickness;
+    const bottomArea = bottomWidth * hangerFlangeThickness;
+    const webArea = hangerWebThickness * webHeight;
+    const topArea = hangerTopWidth * hangerFlangeThickness;
+    const totalArea = bottomArea + webArea + topArea;
+    const bottomY = hangerFlangeThickness / 2;
+    const webY = hangerHeight / 2;
+    const topY = hangerHeight - hangerFlangeThickness / 2;
+    const centroid = (bottomArea * bottomY + webArea * webY + topArea * topY) / totalArea;
+    const inertia =
+      bottomWidth * hangerFlangeThickness ** 3 / 12 + bottomArea * (bottomY - centroid) ** 2 +
+      hangerWebThickness * webHeight ** 3 / 12 + webArea * (webY - centroid) ** 2 +
+      hangerTopWidth * hangerFlangeThickness ** 3 / 12 + topArea * (topY - centroid) ** 2;
+    const bottomFiber = centroid;
+    const topFiber = hangerHeight - centroid;
+    const criticalFiber = Math.max(bottomFiber, topFiber);
+    const sectionModulus = inertia / criticalFiber;
+    const allowableLoad = hangerAllowableStress * sectionModulus / hangerOffset;
+    const allowableMoment = allowableLoad * hangerOffset;
+    const topStress = allowableMoment * topFiber / inertia;
+    const bottomStress = allowableMoment * bottomFiber / inertia;
+    values.hanger_V_N = formatDerived(allowableLoad, 1);
+    values.hanger_M_Nmm = formatDerived(allowableMoment, 1);
+    values.hanger_A_top_mm2 = formatDerived(topArea, 1);
+    values.hanger_A_web_mm2 = formatDerived(webArea, 1);
+    values.hanger_A_bottom_mm2 = formatDerived(bottomArea, 1);
+    values.hanger_A_total_mm2 = formatDerived(totalArea, 1);
+    values.hanger_ybar_mm = formatDerived(centroid, 3);
+    values.hanger_I_mm4 = formatDerived(inertia, 1);
+    values.hanger_c_top_mm = formatDerived(topFiber, 3);
+    values.hanger_c_bottom_mm = formatDerived(bottomFiber, 3);
+    values.hanger_c_crit_mm = formatDerived(criticalFiber, 3);
+    values.hanger_governing_fiber = bottomFiber >= topFiber ? "bottom extreme fiber" : "top extreme fiber";
+    values.hanger_S_mm3 = formatDerived(sectionModulus, 1);
+    values.hanger_Pmax_N = formatDerived(allowableLoad, 1);
+    values.hanger_Pmax_kN = formatDerived(allowableLoad / 1000, 3);
+    values.hanger_sigma_top_MPa = formatDerived(topStress, 1);
+    values.hanger_sigma_bottom_MPa = formatDerived(bottomStress, 1);
+    values.hanger_tension_fiber = "top extreme fiber";
+    values.hanger_compression_fiber = "bottom extreme fiber";
+    values.hanger_assessment = `Under the stated static straight-beam model, limit the suspended load to ${formatDerived(allowableLoad / 1000, 3)} kN so the governing ${values.hanger_governing_fiber} does not exceed ${formatDerived(hangerAllowableStress, 1)} MPa. If additional capacity is required, increase effective section depth or flange area, move material farther from the neutral axis, or reduce the ${formatDerived(hangerOffset, 1)} mm offset. The ${formatDerived(hangerRadius, 1)} mm bend radius defines the physical geometry but does not replace the perpendicular moment arm in M = PL.`;
+  }
+
   return values;
 }
 

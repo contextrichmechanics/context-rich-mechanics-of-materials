@@ -6818,6 +6818,526 @@
     ]
   },
   {
+    "id": "MOS-HANGER-024",
+    "slug": "offset-overhead-hanger-bracket",
+    "title": "Allowable Load for an Offset Overhead Process-Equipment Hanger",
+    "studentDocumentTitle": "Student Homework Questions - Offset Overhead Process-Equipment Hanger",
+    "instructorDocumentTitle": "Instructor Answers - Offset Overhead Process-Equipment Hanger",
+    "summary": "An allowable-load bending problem integrating load paths, internal resultants, unsymmetric composite-section properties, the parallel-axis theorem, section modulus, and engineering assessment.",
+    "textbookChapters": [
+      "Internal loadings in structural members",
+      "Centroids and centers of gravity",
+      "Moments of inertia for an area",
+      "The flexure formula"
+    ],
+    "derivedPlaceholders": [
+      "hanger_V_N",
+      "hanger_M_Nmm",
+      "hanger_A_top_mm2",
+      "hanger_A_web_mm2",
+      "hanger_A_bottom_mm2",
+      "hanger_A_total_mm2",
+      "hanger_ybar_mm",
+      "hanger_I_mm4",
+      "hanger_c_top_mm",
+      "hanger_c_bottom_mm",
+      "hanger_c_crit_mm",
+      "hanger_governing_fiber",
+      "hanger_S_mm3",
+      "hanger_Pmax_N",
+      "hanger_Pmax_kN",
+      "hanger_sigma_top_MPa",
+      "hanger_sigma_bottom_MPa",
+      "hanger_tension_fiber",
+      "hanger_compression_fiber",
+      "hanger_assessment"
+    ],
+    "image": "problems/offset-overhead-hanger-bracket/assets/hanger-industry-context.png",
+    "idealizedImage": "problems/offset-overhead-hanger-bracket/assets/hanger-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference idealization of an offset overhead hanger with fixed support D, suspended load P at E, horizontal offset L, bend radius R, critical section a-a, and an unsymmetric flanged section defined by B, H, t1, and t2.",
+    "source": "problems/offset-overhead-hanger-bracket/index.html",
+    "problemStatement": "<p>A process plant uses an offset steel hanger to support a suspended valve or maintenance fixture while clearing nearby piping and equipment. The chain applies a vertical load <em>P</em> at E, and the hanger transfers that load to the overhead structure through the fixed connection at D.</p><p>Evaluate the hanger at section a-a. For the assigned section, model the top flange as <em>B</em> by <em>t</em><sub>2</sub>, the web as <em>t</em><sub>1</sub> by (<em>H</em> - 2<em>t</em><sub>2</sub>), and the bottom flange as (<em>t</em><sub>1</sub> + 2<em>t</em><sub>2</sub>) by <em>t</em><sub>2</sub>. These are three nonoverlapping rectangles.</p>",
+    "engineeringGoal": "<p>Determine the maximum allowable suspended load such that the largest flexural normal-stress magnitude at section a-a does not exceed the specified allowable bending stress. Identify the governing extreme fiber and explain which geometry changes most directly increase capacity.</p>",
+    "variables": [
+      {
+        "key": "hanger_sigma_allow",
+        "symbol": "sigma_allow",
+        "label": "Allowable bending stress",
+        "value": 150,
+        "unit": "MPa",
+        "min": 10,
+        "max": 1000,
+        "step": 5
+      },
+      {
+        "key": "hanger_L",
+        "symbol": "L",
+        "label": "Horizontal load offset to section a-a",
+        "value": 600,
+        "unit": "mm",
+        "min": 50,
+        "max": 3000,
+        "step": 10
+      },
+      {
+        "key": "hanger_R",
+        "symbol": "R",
+        "label": "Nominal bend radius",
+        "value": 300,
+        "unit": "mm",
+        "min": 25,
+        "max": 2000,
+        "step": 10
+      },
+      {
+        "key": "hanger_B",
+        "symbol": "B",
+        "label": "Top-flange width",
+        "value": 80,
+        "unit": "mm",
+        "min": 10,
+        "max": 500,
+        "step": 1
+      },
+      {
+        "key": "hanger_H",
+        "symbol": "H",
+        "label": "Overall section depth",
+        "value": 120,
+        "unit": "mm",
+        "min": 20,
+        "max": 800,
+        "step": 1
+      },
+      {
+        "key": "hanger_t1",
+        "symbol": "t_1",
+        "label": "Web thickness",
+        "value": 12,
+        "unit": "mm",
+        "min": 1,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "key": "hanger_t2",
+        "symbol": "t_2",
+        "label": "Flange thickness and bottom projection",
+        "value": 16,
+        "unit": "mm",
+        "min": 1,
+        "max": 100,
+        "step": 1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Purpose of the Offset Geometry",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "system function",
+          "clearance",
+          "offset hanger"
+        ],
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Explain why an offset hanger is used in a process plant."
+        ],
+        "student": "<p>Why is an offset hanger used instead of suspending the equipment directly below the overhead beam?</p>",
+        "instructor": "<p>The offset geometry provides clearance from nearby piping, vessels, access space, and structural members while still transferring the suspended load to the overhead support.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Load Application",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "concentrated load",
+          "chain attachment",
+          "load idealization"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify where the external load enters the hanger."
+        ],
+        "student": "<p>Where does the principal external load enter the hanger, and how should it be idealized?</p>",
+        "instructor": "<p>The suspended component applies a downward concentrated load <em>P</em> through the chain at attachment point E.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Overhead Support Condition",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "fixed support",
+          "boundary condition",
+          "reaction moment"
+        ],
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Describe the fixed-support idealization at D."
+        ],
+        "student": "<p>How should the overhead connection at D be idealized in the simplified mechanics model?</p>",
+        "instructor": "<p>Idealize D as a fixed support that prevents horizontal translation, vertical translation, and rotation. It can therefore supply two reaction-force components and a reaction moment.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Dominant Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path",
+          "force transfer",
+          "overhead beam"
+        ],
+        "type": "load path",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Trace the suspended load to the building structure."
+        ],
+        "student": "<p>Trace the dominant load path from the suspended component to the overhead structural beam.</p>",
+        "instructor": "<p>Suspended component &rarr; chain &rarr; attachment E &rarr; curved hanger &rarr; fixed connection D &rarr; overhead structural beam.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Selection of Section a-a",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "critical section",
+          "load offset",
+          "bending moment"
+        ],
+        "type": "critical-section identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Explain why the designated section carries substantial bending demand."
+        ],
+        "student": "<p>Why is section a-a a reasonable location for the assigned strength check?</p>",
+        "instructor": "<p>Section a-a lies in the main load path and carries the bending moment produced by the horizontal offset between the vertical load line at E and the section.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Governing Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "flexural stress",
+          "normal stress",
+          "design criterion"
+        ],
+        "type": "scope identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Recognize flexural normal stress as the assigned criterion."
+        ],
+        "student": "<p>What mechanical response is expected to govern the base problem?</p>",
+        "instructor": "<p>The assigned criterion is maximum elastic normal stress from bending at section a-a. Internal shear is present, but shear stress is not the governing check specified for this exercise.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Parameters Governing Capacity",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "allowable stress",
+          "section modulus",
+          "eccentricity"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Relate allowable load to material, offset, and section properties."
+        ],
+        "student": "<p>Which variables most directly control the maximum allowable suspended load?</p>",
+        "instructor": "<p>The allowable bending stress, horizontal offset <em>L</em>, and section modulus govern capacity directly. The section modulus depends on the centroid, second moment of area, and governing extreme-fiber distance established by <em>B</em>, <em>H</em>, <em>t</em><sub>1</sub>, and <em>t</em><sub>2</sub>.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Hanger Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "free-body diagram",
+          "fixed support",
+          "section geometry"
+        ],
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Translate the hanger assembly into a mechanics model."
+        ],
+        "gradingNotes": "<p>Students should attempt the structural idealization before consulting the instructor reference figure.</p>",
+        "commonMistakes": "<p>Common omissions are the fixed-end moment, the perpendicular offset <em>L</em>, the critical cut, or an explicit definition of the three nonoverlapping section rectangles.</p>",
+        "student": "<p>Before using the instructor reference figure, replace the real hanger with a simplified mechanics model. Show fixed support D, downward load <em>P</em> at E, section a-a, horizontal offset <em>L</em>, and the assigned three-rectangle cross-section.</p>",
+        "instructor": "<p>A valid model shows the hanger fixed at D, a downward point load <em>P</em> at E, a vertical cut at section a-a, and perpendicular horizontal distance <em>L</em> from the load line to the cut. The section consists of a <em>B</em> by <em>t</em><sub>2</sub> top flange, a <em>t</em><sub>1</sub> by (<em>H</em> - 2<em>t</em><sub>2</sub>) web, and a (<em>t</em><sub>1</sub> + 2<em>t</em><sub>2</sub>) by <em>t</em><sub>2</sub> bottom flange.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "static loading",
+          "linear elasticity",
+          "straight-beam flexure"
+        ],
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "State assumptions supporting the allowable-stress model."
+        ],
+        "student": "<p>State the assumptions used to convert the real hanger into the simplified model.</p>",
+        "instructor": "<p>Assume static loading, a concentrated vertical load, a fixed support at D, linear-elastic material response, small deformation, and standard straight-beam flexure at section a-a. Neglect hanger self-weight, chain dynamics, local connection behavior, fatigue, impact, out-of-plane effects, contact, stress concentrations, and curved-beam corrections.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan",
+          "parallel-axis theorem",
+          "allowable load"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Sequence equilibrium, composite-section, and allowable-load calculations."
+        ],
+        "student": "<p>List the mechanics calculation sequence required to determine the allowable load.</p>",
+        "instructor": "<p>Determine the internal shear and moment at section a-a; divide the section into three nonoverlapping rectangles; calculate total area and centroid; apply the parallel-axis theorem to obtain the centroidal second moment of area; calculate both extreme-fiber distances; use the larger stress magnitude to define the governing section modulus; set the governing bending stress equal to the allowable stress; and solve for <em>P</em><sub>max</sub>.</p>"
+      },
+      {
+        "id": "q11",
+        "title": "Boundary Condition and Reactions at D",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "fixed support",
+          "reaction force",
+          "reaction moment"
+        ],
+        "type": "mechanics setup",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify all reaction resultants admitted at D."
+        ],
+        "student": "<p>State the boundary condition at D and list the reaction resultants it can supply.</p>",
+        "instructor": "<p>D is fixed and can supply horizontal reaction <em>D</em><sub>x</sub>, vertical reaction <em>D</em><sub>y</sub>, and reaction moment <em>M</em><sub>D</sub>. Under the assigned vertical loading, <em>D</em><sub>y</sub> and <em>M</em><sub>D</sub> are nonzero.</p>"
+      },
+      {
+        "id": "q12",
+        "title": "Internal Shear and Bending Moment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "section cut",
+          "internal shear",
+          "internal moment"
+        ],
+        "type": "internal-resultant calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Use section equilibrium to determine resultants in terms of the unknown load."
+        ],
+        "commonMistakes": "<p>The bend radius <em>R</em> does not replace the perpendicular moment arm <em>L</em>. Use the horizontal distance from the vertical load line to section a-a.</p>",
+        "student": "<p>Cut the hanger at section a-a and determine the internal shear force and bending moment in terms of <em>P</em> and <em>L</em>.</p>",
+        "instructor": "<p>The internal shear magnitude is |<em>V</em>| = <em>P</em>, and the bending-moment magnitude is |<em>M</em>| = <em>PL</em>. At the allowable load, |<em>V</em>| = <strong>{{hanger_V_N}} N</strong> and |<em>M</em>| = <strong>{{hanger_M_Nmm}} N&middot;mm</strong>.</p>"
+      },
+      {
+        "id": "q13",
+        "title": "Composite Areas and Centroid Locations",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "composite area",
+          "rectangle decomposition",
+          "centroid locations"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Define nonoverlapping component areas and their centroid coordinates."
+        ],
+        "student": "<p>Using the bottom of the section as the reference, calculate the area and centroid coordinate of each nonoverlapping rectangle and the total area.</p>",
+        "instructor": "<p>Bottom flange: <em>A</em><sub>b</sub> = (<em>t</em><sub>1</sub> + 2<em>t</em><sub>2</sub>)<em>t</em><sub>2</sub> = <strong>{{hanger_A_bottom_mm2}} mm<sup>2</sup></strong>, with <em>y</em><sub>b</sub> = <em>t</em><sub>2</sub>/2. Web: <em>A</em><sub>w</sub> = <em>t</em><sub>1</sub>(<em>H</em> - 2<em>t</em><sub>2</sub>) = <strong>{{hanger_A_web_mm2}} mm<sup>2</sup></strong>, with <em>y</em><sub>w</sub> = <em>H</em>/2. Top flange: <em>A</em><sub>t</sub> = <em>Bt</em><sub>2</sub> = <strong>{{hanger_A_top_mm2}} mm<sup>2</sup></strong>, with <em>y</em><sub>t</sub> = <em>H</em> - <em>t</em><sub>2</sub>/2. Total area = <strong>{{hanger_A_total_mm2}} mm<sup>2</sup></strong>.</p>"
+      },
+      {
+        "id": "q14",
+        "title": "Centroid of the Unsymmetric Section",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "centroid",
+          "first moment of area",
+          "unsymmetric section"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Locate the neutral axis using the composite-area relation."
+        ],
+        "commonMistakes": "<p>The section is not symmetric about its horizontal mid-depth because the top and bottom flange widths differ.</p>",
+        "student": "<p>Determine the centroid coordinate measured upward from the bottom of section a-a.</p>",
+        "instructor": "<p>Using <span style=\"white-space:nowrap\">y&#772; = &Sigma;<em>A</em><sub>i</sub><em>y</em><sub>i</sub>/&Sigma;<em>A</em><sub>i</sub></span>, the centroid is <strong>{{hanger_ybar_mm}} mm</strong> above the bottom surface.</p>"
+      },
+      {
+        "id": "q15",
+        "title": "Centroidal Second Moment of Area",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "parallel-axis theorem",
+          "second moment of area",
+          "composite section"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Apply the parallel-axis theorem to an unsymmetric section."
+        ],
+        "commonMistakes": "<p>Use each rectangle's own centroidal inertia and add <em>A</em><sub>i</sub><em>d</em><sub>i</sub><sup>2</sup>. Do not overlap the web and flanges.</p>",
+        "student": "<p>Determine the centroidal second moment of area of section a-a about the horizontal neutral axis.</p>",
+        "instructor": "<p>Apply <em>I</em> = &Sigma;[<em>I</em><sub>c,i</sub> + <em>A</em><sub>i</sub>(<em>y</em><sub>i</sub> - y&#772;)<sup>2</sup>] to the bottom flange, web, and top flange. The result is <strong>{{hanger_I_mm4}} mm<sup>4</sup></strong>.</p>"
+      },
+      {
+        "id": "q16",
+        "title": "Extreme-Fiber Distances and Governing Fiber",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "extreme fiber",
+          "neutral axis",
+          "governing stress"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Compare top and bottom extreme-fiber distances."
+        ],
+        "student": "<p>Calculate the distances from the neutral axis to the top and bottom surfaces. Which extreme fiber governs the allowable-stress calculation?</p>",
+        "instructor": "<p><em>c</em><sub>top</sub> = <em>H</em> - y&#772; = <strong>{{hanger_c_top_mm}} mm</strong>, and <em>c</em><sub>bottom</sub> = y&#772; = <strong>{{hanger_c_bottom_mm}} mm</strong>. Therefore <em>c</em><sub>crit</sub> = <strong>{{hanger_c_crit_mm}} mm</strong>, and the <strong>{{hanger_governing_fiber}}</strong> governs.</p>"
+      },
+      {
+        "id": "q17",
+        "title": "Governing Section Modulus",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "section modulus",
+          "bending resistance",
+          "unsymmetric section"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the section modulus associated with the governing fiber."
+        ],
+        "student": "<p>Determine the governing elastic section modulus for the allowable-load calculation.</p>",
+        "instructor": "<p><em>S</em><sub>crit</sub> = <em>I</em>/<em>c</em><sub>crit</sub> = <strong>{{hanger_S_mm3}} mm<sup>3</sup></strong>.</p>"
+      },
+      {
+        "id": "q18",
+        "title": "Maximum Allowable Suspended Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "allowable stress",
+          "flexure formula",
+          "allowable load"
+        ],
+        "type": "allowable-load calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Solve the flexure criterion for the maximum load."
+        ],
+        "commonMistakes": "<p>Because 1 MPa = 1 N/mm<sup>2</sup>, retain N and mm consistently. Use the governing extreme-fiber distance, not <em>H</em>/2.</p>",
+        "student": "<p>Use the allowable bending stress to determine the maximum allowable suspended load. Then calculate the top- and bottom-fiber stresses at that load.</p>",
+        "instructor": "<p>Set &sigma;<sub>allow</sub> = <em>P</em><sub>max</sub><em>Lc</em><sub>crit</sub>/<em>I</em>. Thus <em>P</em><sub>max</sub> = &sigma;<sub>allow</sub><em>I</em>/(<em>Lc</em><sub>crit</sub>) = <strong>{{hanger_Pmax_N}} N</strong> = <strong>{{hanger_Pmax_kN}} kN</strong>. At this load, the top-fiber stress magnitude is <strong>{{hanger_sigma_top_MPa}} MPa</strong> and the bottom-fiber stress magnitude is <strong>{{hanger_sigma_bottom_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "q19",
+        "title": "Stress Sense and Geometry Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "stress sense",
+          "section depth",
+          "load offset"
+        ],
+        "type": "engineering comparison",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Interpret stress sense and compare capacity improvements."
+        ],
+        "student": "<p>For the downward load shown, identify the extreme fibers in tension and compression. Then explain how increasing section depth, moving material away from the neutral axis, or reducing <em>L</em> affects allowable load.</p>",
+        "instructor": "<p>For the shown load and fixed support to the right, the <strong>{{hanger_tension_fiber}}</strong> is in tension and the <strong>{{hanger_compression_fiber}}</strong> is in compression. Increasing section depth or moving material away from the neutral axis increases <em>I</em> and section modulus, often strongly. Reducing <em>L</em> increases allowable load inversely because the moment is <em>PL</em>.</p>"
+      },
+      {
+        "id": "q20",
+        "title": "Engineering Assessment and Model Limits",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "design recommendation",
+          "model limitations",
+          "engineering judgment"
+        ],
+        "type": "engineering judgment",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "State a bounded allowable-load recommendation and omitted checks."
+        ],
+        "student": "<p>State the allowable suspended load and recommend one mechanics-based modification if more capacity is required. Identify important checks omitted from the base analysis.</p>",
+        "instructor": "<p>{{hanger_assessment}}</p><p>A complete design must also evaluate local connection and weld stresses, chain and attachment capacity, curved-beam effects, out-of-plane loading, stress concentrations, fatigue, impact and dynamics, deflection, manufacturing tolerances, inspection requirements, and applicable lifting-support standards.</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - 150 MPa allowable stress",
+        "description": "Baseline offset-hanger idealization, unsymmetric composite-section properties, allowable bending load, and engineering assessment.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20"
+        ],
+        "variables": {
+          "hanger_sigma_allow": 150,
+          "hanger_L": 600,
+          "hanger_R": 300,
+          "hanger_B": 80,
+          "hanger_H": 120,
+          "hanger_t1": 12,
+          "hanger_t2": 16
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-TRANSPORT-022",
     "slug": "precast-concrete-column-transport",
     "title": "Optimal Support Placement for Transporting a Precast Concrete Column",

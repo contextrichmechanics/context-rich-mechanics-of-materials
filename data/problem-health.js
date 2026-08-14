@@ -130,6 +130,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-HANGER-024",
+    "slug": "offset-overhead-hanger-bracket",
+    "title": "Allowable Load for an Offset Overhead Process-Equipment Hanger",
+    "status": "OK",
+    "variables": 7,
+    "questions": 20,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-TRANSPORT-022",
     "slug": "precast-concrete-column-transport",
     "title": "Optimal Support Placement for Transporting a Precast Concrete Column",

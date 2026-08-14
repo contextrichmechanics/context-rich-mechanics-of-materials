@@ -1,0 +1,40 @@
+---
+title: "Instructor Guide - Offset Overhead Process-Equipment Hanger"
+subtitle: "Representative Solutions and Allowable-Load Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+# Purpose
+
+Award credit for a defensible hanger idealization, complete free-body diagram, correct internal resultants, explicit decomposition of the unsymmetric section, accurate centroid and second-moment calculations, correct selection of the governing extreme fiber, and a recommendation bounded by the stated assumptions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="offset-hanger-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "offset-overhead-hanger-bracket", targetId: "offset-hanger-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model assumes static loading, a fixed support at D, a concentrated vertical load at E, linear-elastic material response, small deformation, and straight-beam flexure at section a-a. It neglects self-weight, local weld and bolt behavior, chain dynamics, fatigue, impact, out-of-plane loading, contact, stress concentrations, curved-beam corrections, and applicable lifting-support standards.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization and assumptions: 20%;
+- internal loading and composite-section properties: 35%;
+- allowable-load result and stress interpretation: 15%;
+- engineering assessment and limitations: 10%.
