@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1786994382.128159,
-    "ast_hash": "aefdb7ce354c3f60c18052dc5b4b0903",
+    "mtime": 1786998967.449524,
+    "ast_hash": "0aca67af63c133bbc13b4707abf579ce",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1786994382.129488,
-    "ast_hash": "9680a635a066b76d5792ff777e056b26",
+    "mtime": 1786998967.4501622,
+    "ast_hash": "07ac68e956b2bf4beeb83f777652baa8",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1786993215.1343963,
-    "ast_hash": "d75094ec048c9bf66c75c61631047bbd",
+    "mtime": 1786998945.2759154,
+    "ast_hash": "9ae1b2a6d7526d6e23b1223ff10207d8",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1786993215.2132556,
-    "ast_hash": "318b420d86fd2bf8bf75de1782f1a69e",
+    "mtime": 1786998945.3544214,
+    "ast_hash": "e34dc0bf1f3ad4d82031fbe67bdf7bcd",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1786993215.2918854,
-    "ast_hash": "19a79316a75e2350a8d7d91746452134",
+    "mtime": 1786998945.4338305,
+    "ast_hash": "49241c2e812e36115ecdef16d57a2b0e",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -465,23 +465,23 @@
     "semantic_hash": ""
   },
   "problems/suspended-equipment-platform/_student-problem.qmd": {
-    "mtime": 1785776636.0463076,
-    "ast_hash": "9909ef6c7256b1d902c7753c0303b675",
+    "mtime": 1786997219.7996821,
+    "ast_hash": "35674a011ab8fd14b447791ba5ea03e3",
     "semantic_hash": ""
   },
   "problems/suspended-equipment-platform/index.qmd": {
-    "mtime": 1785854457.5975122,
-    "ast_hash": "a5daf9d3c08d8be6cae4b540d08ead1f",
+    "mtime": 1786997220.0204792,
+    "ast_hash": "276b37eb647cbd053de3fa4c48241fe3",
     "semantic_hash": ""
   },
   "problems/suspended-equipment-platform/instructor-guide.qmd": {
-    "mtime": 1785818550.2173645,
-    "ast_hash": "c3e0b7819092ec7c23b4941544402ec8",
+    "mtime": 1786997220.2761538,
+    "ast_hash": "2b31d1df0b0d0f82fe08be70c1b24d53",
     "semantic_hash": ""
   },
   "problems/suspended-equipment-platform/student-packet.qmd": {
-    "mtime": 1785818550.2093081,
-    "ast_hash": "dfbaf884f4b99b0b75edf08cc25458c5",
+    "mtime": 1786997220.1960983,
+    "ast_hash": "826ce636686beecd09af03dc758a6291",
     "semantic_hash": ""
   },
   "problems/turbine-shaft-distributed-torque/_student-problem.qmd": {
@@ -715,12 +715,12 @@
     "semantic_hash": ""
   },
   "problems/suspended-equipment-platform/assets/platform-industry-context.png": {
-    "mtime": 1785776561.816484,
-    "ast_hash": "7aa9f032ae9128ba65d9c7f1aed017ac",
+    "mtime": 1786997410.2589905,
+    "ast_hash": "7947a0c94b9a849baf744a9c071e8616",
     "semantic_hash": ""
   },
   "problems/suspended-equipment-platform/assets/platform-instructor-idealization.png": {
-    "mtime": 1785776561.8209398,
+    "mtime": 1786997410.2634022,
     "ast_hash": "973bf87d903d673e6fbaf169ebc571bc",
     "semantic_hash": ""
   },

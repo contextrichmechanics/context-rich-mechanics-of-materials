@@ -1,44 +1,48 @@
 ---
-title: "Suspended Industrial Equipment Platform Supported by Stainless-Steel Wires"
-description: "A two-level suspended-platform problem integrating equilibrium, axial wire deformation, displacement compatibility, and rigid-body rotation."
+title: "Suspended Platform Assembly - Wire Elongation, Vertical Displacement, and Tilt"
+description: "A suspended-platform problem on axial deformation, rigid-body equilibrium, compatibility, vertical displacement, and small-angle tilt."
 image: "assets/platform-industry-context.png"
 categories:
   - context-rich
   - mechanics-of-materials
-  - design
-mechanics_concepts: [equilibrium, axial deformation, compatibility, rigid-body rotation, eccentric loading]
+  - analysis
+mechanics_concepts: [axial deformation, rigid-body equilibrium, compatibility, vertical displacement, displacement compatibility, small-angle rotation, eccentric loading, wire elongation]
 course_topics:
   - axial deformation
   - rigid-body equilibrium
   - compatibility
+  - vertical displacement
+  - displacement compatibility
   - small-angle rotation
-  - eccentric loading
 textbook_chapters:
-  - Rigid-body equilibrium
-  - Axial loading
   - Axial deformation
+  - Rigid-body equilibrium
   - Displacement compatibility
+  - Vertical displacement
   - Small-angle rotation
 problem_types:
   - free-body diagram
   - equilibrium
   - axial deformation
   - compatibility analysis
-  - engineering evaluation
+  - engineering assessment
 competencies:
-  - load path reasoning
-  - rigid-body idealization
-  - wire-force calculation
-  - displacement interpolation
+  - load-path reasoning
+  - rigid-body equilibrium
+  - axial tension forces
+  - axial deformation
+  - displacement compatibility
+  - tilt interpretation
   - engineering judgment
 industries:
-  - industrial facilities
-  - suspended service platforms
-  - production-line equipment
+  - construction lifting
+  - suspended work platforms
+  - maintenance platforms
+  - temporary elevated access systems
 difficulty: "Intermediate to advanced"
-status: "Published"
+status: "Faculty review"
 problem_id: "MOS-PLATFORM-011"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
@@ -46,7 +50,7 @@ version: "0.1.0"
 ## Assignment Options
 
 ::: {.callout-note title="Recommended Starting Point"}
-Use the default packet for two-stage rigid-body equilibrium, axial wire elongation, displacement compatibility, and member tilt.
+Use the default packet for rigid-body equilibrium, axial wire elongation, displacement compatibility, vertical displacement, and tilt.
 :::
 
 [Student packet](student-packet.qmd){.btn .btn-primary}

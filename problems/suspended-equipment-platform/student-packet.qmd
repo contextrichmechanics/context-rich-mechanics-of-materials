@@ -1,6 +1,6 @@
 ---
-title: "Student Packet - Suspended Industrial Equipment Platform"
-subtitle: "Equilibrium, Axial Wire Deformation, Compatibility, and Tilt"
+title: "Student Packet - Suspended Platform Assembly"
+subtitle: "Wire Elongation, Vertical Displacement, and Tilt"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html:

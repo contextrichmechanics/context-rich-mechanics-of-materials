@@ -1244,6 +1244,11 @@ function variableMap(problem) {
     const governingForce = forceEntries.sort((left, right) => right[1] - left[1])[0];
     const governingElongation = elongationEntries.sort((left, right) => right[1] - left[1])[0];
     values.platform_x_HC_ft = formatDerived(platformUpperSpan - platformHLocation, 2);
+    values.platform_E_w_psi = formatDerived(modulusPsi, 0);
+    values.platform_L_u_in = formatDerived(upperLengthIn, 2);
+    values.platform_L_l_in = formatDerived(lowerLengthIn, 2);
+    values.platform_L_DC_in = formatDerived(upperSpanIn, 2);
+    values.platform_L_AB_in = formatDerived(lowerSpanIn, 2);
     values.platform_T_AH_lb = formatDerived(forceAH, 1);
     values.platform_T_BC_lb = formatDerived(forceBC, 1);
     values.platform_T_ED_lb = formatDerived(forceED, 1);
@@ -1265,6 +1270,8 @@ function variableMap(problem) {
     values.platform_governing_wire = governingForce[0];
     values.platform_governing_force_lb = formatDerived(governingForce[1], 1);
     values.platform_dominant_wire = governingElongation[0];
+    values.platform_dominant_force_lb = formatDerived(forceEntries.find(([wire]) => wire === governingElongation[0])[1], 1);
+    values.platform_dominant_length_ft = formatDerived(["AH", "BC"].includes(governingElongation[0]) ? platformLowerWireLength : platformUpperWireLength, 2);
     values.platform_dominant_elongation_in = formatDerived(governingElongation[1], 5);
   }
 

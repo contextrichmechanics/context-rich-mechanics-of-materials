@@ -1,19 +1,46 @@
 {
   "id": "MOS-PLATFORM-011",
   "slug": "suspended-equipment-platform",
-  "title": "Suspended Industrial Equipment Platform Supported by Stainless-Steel Wires",
+  "title": "Suspended Platform Assembly - Wire Elongation, Vertical Displacement, and Tilt",
   "studentDocumentTitle": "Student Homework Questions",
   "instructorDocumentTitle": "Instructor Answers",
-  "summary": "A two-level suspended-platform problem integrating rigid-body equilibrium, axial wire deformation, displacement compatibility, and small-angle rotation.",
-  "textbookChapters": [
+  "summary": "A suspended-platform problem integrating axial deformation, rigid-body equilibrium, displacement compatibility, vertical displacement, and small-angle tilt.",
+  "primaryTopics": [
+    "Axial Deformation",
+    "Rigid-Body Equilibrium",
+    "Compatibility",
+    "Vertical Displacement"
+  ],
+  "courseTopic": "Axial deformation, equilibrium of rigid members, displacement compatibility, and small-angle rotation",
+  "targetLevel": "Intermediate to advanced MEEN 305",
+  "primaryMechanicsCompetencies": [
+    "Load-path reasoning",
     "Rigid-body equilibrium",
-    "Axial loading",
+    "Axial tension forces",
     "Axial deformation",
+    "Compatibility",
+    "Displacement",
+    "Tilt",
+    "Engineering interpretation"
+  ],
+  "expectedStudentDeliverable": "Physical-system interpretation, student-generated idealization, free-body diagrams, wire-force calculations, elongations, vertical displacement, tilt angles, and a concise engineering assessment.",
+  "difficultyLevel": 4,
+  "geometryComplexity": "Two-level suspended rigid-body system with four deformable axial wires and eccentric loading.",
+  "problemDeliverableType": "Annotated free-body diagrams, wire-force calculations, elongations, displacement and tilt calculations, and concise engineering interpretation.",
+  "textbookChapters": [
+    "Axial deformation",
+    "Rigid-body equilibrium",
     "Displacement compatibility",
+    "Vertical displacement",
     "Small-angle rotation"
   ],
   "derivedPlaceholders": [
     "platform_x_HC_ft",
+    "platform_E_w_psi",
+    "platform_L_u_in",
+    "platform_L_l_in",
+    "platform_L_DC_in",
+    "platform_L_AB_in",
     "platform_T_AH_lb",
     "platform_T_BC_lb",
     "platform_T_ED_lb",
@@ -35,12 +62,14 @@
     "platform_governing_wire",
     "platform_governing_force_lb",
     "platform_dominant_wire",
+    "platform_dominant_force_lb",
+    "platform_dominant_length_ft",
     "platform_dominant_elongation_in"
   ],
   "image": "assets/platform-industry-context.png",
   "idealizedImage": "assets/platform-instructor-idealization.png",
-  "idealizedImageAlt": "Instructor reference idealization of two rigid suspended members connected to each other and the ceiling by four vertical tension wires.",
+  "idealizedImageAlt": "Instructor reference model of two rigid suspended members connected to each other and the ceiling by four vertical axial tension wires.",
   "source": "index.html",
-  "problemStatement": "<p>A manufacturing facility is installing a suspended service platform that supports a compact equipment module above the production floor. The assembly has an upper rigid member and a lower rigid member connected by stainless-steel tension wires. The upper member is suspended from fixed overhead anchors by a second pair of wires.</p><p>Because load <em>P</em> is applied eccentrically to the lower member, the four wires do not carry equal forces. Their unequal elastic elongations cause both rigid members to translate and rotate.</p>",
-  "engineeringGoal": "<p>Determine the downward displacement of the equipment load and the small-angle tilt of each rigid member. Identify the wire carrying the largest force and the deformation contribution that most strongly influences platform motion.</p>"
+  "problemStatement": "<p>Suspended work platforms are used in construction and maintenance operations to provide temporary elevated access or to position workers, tools, and equipment. During lifting or suspension, the platform load is transferred through cables, slings, or similar tensile members to an overhead lifting or supporting system.</p><p>If the supported load is not centered, the suspension members may carry different tensile forces. Because these members deform elastically, unequal elongation can cause the platform to move vertically and tilt. Engineers therefore need to estimate how load position and suspension-member stiffness affect the position and orientation of the suspended platform.</p>",
+  "engineeringGoal": "<p>Determine how elastic elongation of the suspension members affects the vertical displacement and tilt of the suspended platform under an eccentric load, and identify which suspension member has the greatest influence on the motion.</p>"
 }

@@ -1,24 +1,22 @@
 # Context-Rich Solid Mechanics Problem
 
-## Suspended Industrial Equipment Platform Supported by Stainless-Steel Wires
+## Suspended Platform Assembly - Wire Elongation, Vertical Displacement, and Tilt
 
 ### Engineering Context
 
-A manufacturing facility is installing a suspended service platform that supports a compact equipment module above the production floor. The assembly has an upper rigid member and a lower rigid member connected by stainless-steel tension wires. The upper member is suspended from fixed overhead anchors by a second pair of wires.
+Suspended work platforms are used in construction and maintenance operations to provide temporary elevated access or to position workers, tools, and equipment. During lifting or suspension, the platform load is transferred through cables, slings, or similar tensile members to an overhead lifting or supporting system.
 
-Because the equipment load is placed off-center, the wires carry unequal forces. Their elastic elongations cause the rigid members to translate and rotate.
+If the supported load is not centered, the suspension members may carry different tensile forces. Because these members deform elastically, unequal elongation can cause the platform to move vertically and tilt. Engineers therefore need to estimate how load position and suspension-member stiffness affect the position and orientation of the suspended platform.
 
-![Industrial equipment platform suspended from an overhead support using vertical wire hangers.](assets/platform-industry-context.png){fig-alt="Suspended industrial equipment platform supported by two levels of vertical wire hangers." width=72%}
+![Suspended work platforms supported by lifting slings during construction or maintenance operations.](assets/platform-industry-context.png){fig-alt="Suspended work platforms supported by lifting slings during construction or maintenance operations." width=72%}
 
 ### Main Engineering Goal
 
-Determine the downward displacement of the equipment load and the small-angle tilt of each rigid member. Identify the wire carrying the largest force and the deformation contribution that most strongly influences platform motion.
+Determine how elastic elongation of the suspension members affects the vertical displacement and tilt of the suspended platform under an eccentric load, and identify which suspension member has the greatest influence on the motion.
 
 ### System Components
 
-- fixed overhead support and anchors E and F;
-- upper wires ED and FC;
-- upper rigid member DC;
-- lower wires AH and BC;
-- lower rigid member AB;
-- suspended equipment load P.
+- suspended platform;
+- lifting slings or suspension cables;
+- overhead lifting or support system;
+- supported load or payload.

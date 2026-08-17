@@ -1,5 +1,5 @@
 ---
-title: "Instructor Guide - Suspended Industrial Equipment Platform"
+title: "Instructor Guide - Suspended Platform Assembly"
 subtitle: "Representative Answers and Evaluation Guidance"
 author: "Context-Rich Mechanics of Materials Library"
 format:
@@ -10,7 +10,7 @@ format:
 
 # Purpose
 
-These answers are representative. Award credit for correct free-body diagrams, two-stage equilibrium, consistent force and modulus units, axial wire elongations, rigid-body displacement interpolation, and physically correct tilt directions.
+These answers are representative. Award credit for physical-system interpretation, student-generated idealization, correct free-body diagrams, wire-force calculations, axial elongations, displacement compatibility, vertical displacement, tilt angles, and a concise engineering assessment.
 
 # Problem Context
 
@@ -35,14 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-The supplied area and elastic modulus support equilibrium and deformation analysis. Strength factor of safety, anchor and connector stress, fatigue, wire self-weight, and rigid-member bending are intentionally excluded because the required allowable stresses and connection geometry are not supplied.
+The industry image establishes the general context of a suspended work platform supported by tensile lifting members. The instructor reference image is a specific equivalent model for equilibrium, axial-deformation, displacement-compatibility, and tilt analysis. Rigid members are assumed not to deform; suspension members are modeled as straight, vertical, linearly elastic axial members. Self-weight, connector flexibility, local contact effects, cable sag, large rotation, dynamics, fatigue, and strength checks are outside the base problem.
 
 # Supplemental Assessment Structure
 
 Suggested weighting:
 
-- context interpretation and load path: 15%;
-- idealization and assumptions: 15%;
-- rigid-body equilibrium: 25%;
-- wire elongation and displacement compatibility: 30%;
-- tilt interpretation and engineering recommendation: 15%.
+- context interpretation: 15%;
+- idealization: 15%;
+- equilibrium: 25%;
+- deformation: 25%;
+- compatibility and tilt: 15%;
+- engineering decision: 5%.

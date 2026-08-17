@@ -1,10 +1,10 @@
 {
   "id": "section-a",
-  "title": "Homework Version A - baseline suspended platform",
-  "description": "Default sequence for load path, two-stage equilibrium, wire elongation, displacement compatibility, and rigid-member tilt.",
+  "title": "Homework Version A - baseline suspended platform assembly",
+  "description": "Default sequence from physical interpretation through equilibrium, wire elongation, displacement compatibility, vertical displacement, tilt, and engineering assessment.",
   "selectedQuestions": [
     "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10",
-    "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q20"
+    "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q20", "q21"
   ],
   "variables": {
     "P": 800,
@@ -15,6 +15,7 @@
     "L_DC": 7,
     "L_AB": 5,
     "x_DH": 2,
+    "x_HC": 5,
     "x_P": 1
   }
 }
