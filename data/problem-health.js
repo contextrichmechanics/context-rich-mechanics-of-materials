@@ -104,7 +104,7 @@ window.PROBLEM_HEALTH = [
     "slug": "motor-driven-shaft-torsion",
     "title": "Motor-Driven Shaft Design for a Belt-Transmission System",
     "status": "OK",
-    "variables": 7,
+    "variables": 4,
     "questions": 19,
     "variants": 1,
     "warnings": []

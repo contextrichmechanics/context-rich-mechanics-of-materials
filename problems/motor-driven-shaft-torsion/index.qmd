@@ -1,18 +1,18 @@
 ---
 title: "Motor-Driven Shaft Design for a Belt-Transmission System"
-description: "A context-rich torsion problem on motor power, torque, shaft sizing, standard selection, and twist."
+description: "An industrial belt-drive problem on power transmission, torque, torsional shear stress, shaft sizing, and standard-size selection."
 image: "assets/shaft-industry-context.png"
 categories: [context-rich, mechanics-of-materials, design]
-mechanics_concepts: [torsion, torque, shear stress, shaft design, angle of twist]
-course_topics: [power and torque, torsion, shear stress, shaft sizing, angle of twist]
-textbook_chapters: [Power and torque, Torsion of circular shafts, Allowable stress design, Angle of twist]
+mechanics_concepts: [power transmission, torque, torsional shear stress, torsion of circular shafts, shaft sizing, allowable shear stress, standard-size selection]
+course_topics: [power transmission, torque, torsional shear stress, mechanical power and torque, allowable shear stress, standard-size selection]
+textbook_chapters: [Power and torque, Torsion of circular shafts, Allowable stress design, Standard-size selection]
 problem_types: [load-path analysis, torsional stress calculation, component sizing, engineering evaluation]
-competencies: [power conversion, internal torque, standard-size selection, design verification, engineering judgment]
-industries: [conveyor drives, pump drives, fan drives, production machinery]
+competencies: [load-path reasoning, power-to-torque conversion, internal torque, torsional shear stress, shaft sizing, standard-size selection, engineering judgment]
+industries: [industrial belt-driven power-transmission systems, conveyor drives, pump drives, fan drives, mixer drives, process equipment, production machinery]
 difficulty: "Introductory to intermediate"
-status: "Published"
+status: "Faculty-ready draft"
 problem_id: "MOS-SHAFT-016"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
@@ -20,7 +20,7 @@ version: "0.1.0"
 ## Assignment Options
 
 ::: {.callout-note title="Recommended Starting Point"}
-Use the default packet for power-to-torque conversion, solid-shaft sizing, standard increment selection, stress verification, and an angle-of-twist extension.
+Use the default packet for load-path reasoning, power-to-torque conversion, internal torque, solid-shaft sizing, 1/8-in standard-size selection, stress verification, and engineering judgment.
 :::
 
 [Student packet](student-packet.qmd){.btn .btn-primary}

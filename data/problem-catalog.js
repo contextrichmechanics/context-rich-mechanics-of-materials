@@ -5370,12 +5370,31 @@ window.PROBLEM_CATALOG = [
     "title": "Motor-Driven Shaft Design for a Belt-Transmission System",
     "studentDocumentTitle": "Student Homework Questions",
     "instructorDocumentTitle": "Instructor Answers",
-    "summary": "A power-transmission problem integrating power-to-torque conversion, solid-shaft torsional stress, standard-size selection, verification, and angle of twist.",
+    "summary": "An industrial belt-drive problem integrating mechanical power, torque, torsional shear stress, solid-shaft sizing, standard-size selection, and engineering judgment.",
+    "primaryTopics": [
+      "Power Transmission",
+      "Torque",
+      "Torsional Shear Stress"
+    ],
+    "courseTopic": "Torsion of circular shafts; mechanical power and torque; allowable shear stress; standard-size selection",
+    "targetLevel": "Introductory to intermediate MEEN 305",
+    "primaryMechanicsCompetencies": [
+      "Load-path reasoning",
+      "Power-to-torque conversion",
+      "Internal torque",
+      "Torsional shear stress",
+      "Shaft sizing",
+      "Engineering judgment"
+    ],
+    "expectedStudentDeliverable": "Annotated load path, simplified torsion model, torque calculation, required shaft diameter, standard-size selection, and short engineering recommendation.",
+    "difficultyLevel": 2,
+    "geometryComplexity": "One-dimensional solid circular shaft with a motor, pulley, and bearing.",
+    "problemDeliverableType": "Annotated model, mathematical derivation, numerical calculation, standard component selection, and short engineering recommendation.",
     "textbookChapters": [
       "Power and torque",
       "Torsion of circular shafts",
       "Allowable stress design",
-      "Angle of twist"
+      "Standard-size selection"
     ],
     "derivedPlaceholders": [
       "shaft_omega_rad_s",
@@ -5389,18 +5408,14 @@ window.PROBLEM_CATALOG = [
       "shaft_utilization",
       "shaft_allowable_factor",
       "shaft_stress_assessment",
-      "shaft_J_in4",
-      "shaft_phi_rad",
-      "shaft_phi_deg",
-      "shaft_twist_assessment",
       "shaft_recommendation"
     ],
     "image": "problems/motor-driven-shaft-torsion/assets/shaft-industry-context.png",
     "idealizedImage": "problems/motor-driven-shaft-torsion/assets/shaft-instructor-idealization.png",
     "idealizedImageAlt": "Instructor reference idealization of a motor-driven solid circular shaft transmitting torque to a belt pulley and supported by a bearing.",
     "source": "problems/motor-driven-shaft-torsion/index.html",
-    "problemStatement": "<p>A manufacturing facility is upgrading a belt-driven conveyor subsystem. An electric motor delivers power through a solid steel shaft to a pulley and belt set.</p><p>The shaft must transmit the operating torque without exceeding its allowable torsional shear stress. The theoretical minimum diameter must be rounded upward to an available standard size and then verified.</p>",
-    "engineeringGoal": "<p>Convert motor power and speed to torque, determine the minimum solid-shaft diameter, select and verify the next available standard size, and evaluate the angle-of-twist serviceability limit.</p>",
+    "problemStatement": "<p>Industrial facilities commonly use electric motors and belt-drive systems to transmit mechanical power to rotating equipment such as conveyors, pumps, fans, mixers, and production machinery. In a typical installation, the motor rotates a steel drive shaft carrying a pulley. The pulley transfers power through one or more belts to the driven machine. Bearings support the rotating shaft and maintain alignment while allowing the shaft to rotate freely.</p><p>The shaft is a critical load-carrying component because all mechanical power delivered from the motor to the pulley must pass through it as torque. For a given transmitted power, the required torque depends on rotational speed: lower-speed drives must transmit more torque than higher-speed drives carrying the same power. The shaft diameter therefore has a direct influence on the torsional shear stress and on whether the drive can safely transmit the required power.</p><p>In industrial design, shafts are commonly selected from available standard stock sizes rather than manufactured to an arbitrary theoretical diameter. The engineering task is therefore to determine the minimum diameter required by the allowable torsional shear stress and then select and verify an appropriate standard shaft size.</p><p>The base MEEN 305 analysis isolates steady torsion in the solid circular shaft. Belt-induced bending, stress concentrations, startup and shock torque, and fatigue are intentionally excluded so that power, speed, torque, torsional shear stress, and shaft diameter remain the primary mechanics objective.</p>",
+    "engineeringGoal": "<p>Determine the minimum safe diameter of the solid steel drive shaft for the specified motor power and operating speed, select the next appropriate standard shaft size, and verify that the selected shaft does not exceed the specified allowable torsional shear stress.</p>",
     "variables": [
       {
         "key": "P",
@@ -5433,103 +5448,77 @@ window.PROBLEM_CATALOG = [
         "step": 0.5
       },
       {
-        "key": "d_step",
-        "symbol": "Delta_d",
-        "label": "Available shaft-diameter increment",
-        "value": 0.125,
-        "unit": "in",
-        "min": 0.015625,
-        "max": 1,
-        "step": 0.015625
-      },
-      {
         "key": "L_AB",
         "symbol": "L_AB",
-        "label": "Shaft length for twist check",
+        "label": "Overall shaft span shown in the reference model",
         "value": 48,
         "unit": "in",
         "min": 1,
         "max": 1000,
         "step": 1
-      },
-      {
-        "key": "G",
-        "symbol": "G",
-        "label": "Steel shear modulus",
-        "value": 11200,
-        "unit": "ksi",
-        "min": 100,
-        "max": 30000,
-        "step": 100
-      },
-      {
-        "key": "phi_allow",
-        "symbol": "phi_allow",
-        "label": "Allowable angle of twist",
-        "value": 1,
-        "unit": "deg",
-        "min": 0.01,
-        "max": 30,
-        "step": 0.1
       }
     ],
     "questions": [
       {
         "id": "q1",
+        "displayNumber": "Q1",
         "title": "Primary Function of the Shaft",
         "type": "context interpretation",
         "difficulty": "introductory",
         "tags": [
-          "shaft function",
           "power transmission",
+          "shaft function",
           "torque"
         ],
         "learningObjectives": [
           "Identify the shaft's role in the drive system."
         ],
         "selected": true,
-        "student": "<p>State the primary structural function of shaft AB.</p>",
-        "instructor": "<p>The shaft transmits mechanical power and torque from the motor to the pulley and downstream driven equipment.</p>",
+        "student": "<p>What is the primary mechanical function of the shaft in the belt-drive system?</p>",
+        "instructor": "<p>The shaft transfers rotational mechanical power from the motor to the pulley, which transfers the power through the belts to the driven equipment.</p>",
         "section": "context"
       },
       {
         "id": "q2",
+        "displayNumber": "Q2",
         "title": "Power Input and Mechanical Loading",
         "type": "load identification",
         "difficulty": "introductory",
         "tags": [
           "power",
-          "angular speed",
+          "rotational speed",
           "torque"
         ],
         "learningObjectives": [
-          "Relate operating power and speed to torque."
+          "Relate operating power and speed to torque demand."
         ],
         "selected": true,
-        "student": "<p>Identify the operating quantities that create the shaft loading.</p>",
-        "instructor": "<p>Motor power <em>P</em> and angular speed &omega; determine the transmitted torque through <em>P</em> = <em>T</em>&omega;.</p>",
+        "student": "<p>What operating quantities determine how heavily the shaft is loaded in torsion?</p>",
+        "instructor": "<p>The transmitted power and rotational speed determine the torsional loading. Greater power increases the torque demand, while lower rotational speed increases torque for the same transmitted power.</p>",
         "section": "context"
       },
       {
         "id": "q3",
+        "displayNumber": "Q3",
         "title": "Supports and Boundary Conditions",
         "type": "boundary conditions",
         "difficulty": "introductory",
         "tags": [
-          "motor coupling",
-          "bearing",
-          "rotation"
+          "motor connection",
+          "pulley",
+          "bearing support"
         ],
         "learningObjectives": [
-          "Distinguish radial support from torsional restraint."
+          "Interpret the functions of the drive-system components."
         ],
         "selected": true,
-        "student": "<p>Identify the role of the motor connection at A and the bearing at B.</p>",
-        "instructor": "<p>The motor-side coupling applies torque at A. The bearing supports the shaft radially while permitting rotation and is not treated as a torsional restraint in the base model.</p>",
+        "student": "<p>What are the functions of the motor connection, pulley, and bearing in the physical drive system?</p>",
+        "instructor": "<p>The motor connection supplies mechanical power and torque to the shaft. The pulley removes torque from the shaft and transfers it to the belts. The bearing supports and aligns the shaft while allowing it to rotate.</p>",
         "section": "context"
       },
       {
         "id": "q4",
+        "displayNumber": "Q4",
         "title": "Torque Load Path",
         "type": "load path",
         "difficulty": "introductory",
@@ -5537,287 +5526,305 @@ window.PROBLEM_CATALOG = [
           "motor",
           "shaft",
           "pulley",
-          "belt"
+          "belt drive"
         ],
         "learningObjectives": [
-          "Trace torque through the drive components."
+          "Trace mechanical power through the drive system."
         ],
         "selected": true,
-        "student": "<p>Trace the torque path from the motor to the driven equipment.</p>",
-        "instructor": "<p>The path is motor rotor, coupling at A, shaft AB, pulley, belts, and downstream machine.</p>",
+        "student": "<p>Trace the mechanical power-transfer path from the motor to the driven equipment.</p>",
+        "instructor": "<p>The load path is motor &rarr; drive shaft &rarr; pulley &rarr; belts &rarr; driven equipment.</p>",
         "section": "context"
       },
       {
         "id": "q5",
+        "displayNumber": "Q5",
         "title": "Critical Component and Response",
         "type": "mechanics reasoning",
         "difficulty": "introductory",
         "tags": [
-          "solid shaft",
+          "torsion",
           "torsional shear stress",
-          "outer surface"
+          "shaft sizing"
         ],
         "learningObjectives": [
-          "Identify the governing base-model response."
+          "Identify the response governing the base shaft-sizing model."
         ],
         "selected": true,
-        "student": "<p>Identify the critical component and mechanical response in the base problem.</p>",
-        "instructor": "<p>The solid steel shaft is the critical component, and its maximum torsional shear stress occurs at the outer surface.</p>",
+        "student": "<p>What mechanical response of the shaft is important when determining whether its diameter is adequate?</p>",
+        "instructor": "<p>The important response is torsion and the resulting shear stress. For a solid circular shaft, the maximum torsional shear stress occurs at the outer surface, and the diameter must keep that stress below the allowable value.</p>",
         "section": "context"
       },
       {
         "id": "q6",
+        "displayNumber": "Q6",
         "title": "Relevant Parameters",
         "type": "parameter identification",
         "difficulty": "introductory",
         "tags": [
+          "power",
+          "speed",
           "diameter",
-          "allowable stress",
-          "speed"
+          "allowable stress"
         ],
         "learningObjectives": [
-          "Identify inputs controlling torque and stress."
+          "Identify the operating, geometric, and material inputs controlling shaft size."
         ],
         "selected": true,
-        "student": "<p>List the parameters controlling shaft stress and explain their roles.</p>",
-        "instructor": "<p>Power and speed determine torque; torque and diameter determine shear stress; allowable stress sets the design limit. For a solid shaft, &tau;<sub>max</sub> varies with <em>T</em>/<em>d</em><sup>3</sup>.</p>",
+        "student": "<p>What operating, geometric, and material characteristics would you expect to influence the required shaft size?</p>",
+        "instructor": "<p>The important characteristics are transmitted power, rotational speed, shaft diameter, and allowable torsional shear stress. Power and speed establish torque, diameter controls the resulting stress, and allowable stress sets the design limit.</p>",
         "section": "context"
       },
       {
         "id": "q7",
+        "displayNumber": "Q7",
         "title": "Speed Sensitivity",
         "type": "qualitative reasoning",
         "difficulty": "introductory",
         "tags": [
           "fixed power",
-          "speed",
-          "diameter scaling"
+          "rotational speed",
+          "shaft diameter"
         ],
         "learningObjectives": [
-          "Predict how lower speed affects torque and shaft size."
+          "Predict how operating speed affects torque and required diameter."
         ],
         "selected": true,
-        "student": "<p>For fixed motor power, predict what happens to torque and required diameter if shaft speed decreases.</p>",
-        "instructor": "<p>Torque increases because <em>T</em> = <em>P</em>/&omega;. Required diameter also increases, with <em>d</em><sub>min</sub> proportional to <em>T</em><sup>1/3</sup>.</p>",
+        "student": "<p>For the same transmitted power, would operating the shaft at a lower rotational speed generally require a larger or smaller shaft? Explain qualitatively.</p>",
+        "instructor": "<p>A lower rotational speed produces greater torque for the same power. The greater torque produces greater torsional shear stress, so a larger shaft is generally required.</p>",
         "section": "context"
       },
       {
         "id": "q8",
-        "title": "Student-Generated Torsion Idealization",
+        "displayNumber": "Q8",
+        "title": "Student-Generated Structural Idealization",
         "type": "free-body diagram",
         "difficulty": "intermediate",
         "tags": [
           "idealization",
-          "internal torque",
-          "bearing"
+          "torsion model",
+          "internal torque"
         ],
         "learningObjectives": [
-          "Create a torsion model before viewing the reference figure."
+          "Convert the physical system into a simplified torsion model."
         ],
         "selected": true,
-        "student": "<p>Before using the reference figure, draw a simplified torsion model of the motor, shaft, pulley, and bearing. Show applied torque, diameter, and rotational direction.</p>",
-        "instructor": "<p>A valid model treats AB as a uniform solid circular shaft carrying constant internal torque between the motor and pulley, with B shown as a rotation-permitting bearing.</p>",
-        "gradingNotes": "<p>Students should attempt the torsion model before seeing the instructor idealization.</p>",
+        "student": "<p>Convert the real belt-drive system into a simplified torsion model. Show the motor, shaft, pulley, bearing, transmitted torque, shaft diameter, and direction of rotation.</p>",
+        "instructor": "<p>A valid idealization shows the motor as the torque source, the solid shaft as the torque-carrying member, the pulley as the torque output to the belts, and the bearing as a radial support that permits rotation. The shaft segment between the motor and pulley carries the transmitted internal torque.</p>",
+        "gradingNotes": "<p>Students should create their own model before viewing the supplied idealized figure.</p>",
         "section": "transition"
       },
       {
         "id": "q9",
+        "displayNumber": "Q9",
         "title": "Modeling Assumptions",
         "type": "assumptions",
         "difficulty": "intermediate",
         "tags": [
-          "pure torsion",
           "steady operation",
-          "solid shaft"
+          "pure torsion",
+          "solid circular shaft"
         ],
         "learningObjectives": [
-          "State assumptions supporting the torsion equations."
+          "State the assumptions supporting the base torsion analysis."
         ],
         "selected": true,
-        "student": "<p>State the assumptions used in the base analysis.</p>",
-        "instructor": "<p>Assume steady operation, a uniform solid circular shaft, linear elasticity, pure torsion, constant transmitted power, negligible bearing friction, and no belt bending, keyway, stress concentration, shock, or fatigue effects.</p>",
+        "student": "<p>State the modeling assumptions used for the base shaft analysis.</p>",
+        "instructor": "<p>Assume steady operation, a solid circular shaft, linear-elastic material behavior, uniform shaft diameter, pure torsion, negligible shaft self-weight, negligible bearing friction, and constant transmitted power. Belt-induced bending, keyways, stress concentrations, shock, and fatigue are excluded from the base model.</p>",
         "section": "transition"
       },
       {
         "id": "q10",
+        "displayNumber": "Q10",
         "title": "Mechanics Analysis Plan",
         "type": "analysis planning",
         "difficulty": "intermediate",
         "tags": [
-          "unit conversion",
-          "diameter sizing",
-          "verification"
+          "power-to-torque conversion",
+          "torsional stress",
+          "standard-size selection"
         ],
         "learningObjectives": [
-          "Plan a complete stress-based shaft selection."
+          "Plan the complete stress-based shaft selection."
         ],
         "selected": true,
-        "student": "<p>Outline the calculation sequence before substituting numbers.</p>",
-        "instructor": "<p>Convert rpm to rad/s; compute torque from power; solve the solid-shaft stress equation for minimum diameter; round upward to the available increment; verify selected-size stress; then evaluate twist if required.</p>",
+        "student": "<p>Outline the mechanics-analysis procedure before substituting numerical values.</p>",
+        "instructor": "<p>Convert rotational speed from rpm to rad/s, calculate torque from power and angular speed, identify the maximum internal torque, apply the solid-shaft torsional shear-stress equation, solve for the minimum diameter, round upward to the next standard size, and verify the stress in the selected shaft.</p>",
         "section": "transition"
       },
       {
-        "id": "q11",
-        "title": "Torsion Boundary Conditions",
+        "id": "m1",
+        "displayNumber": "M1",
+        "title": "Boundary Conditions",
         "type": "mechanics setup",
         "difficulty": "introductory",
         "tags": [
-          "reference figure",
           "torque input",
-          "pulley"
+          "pulley",
+          "bearing"
         ],
         "learningObjectives": [
-          "Interpret the reference idealization."
+          "Interpret the torsional boundary conditions from the idealized model."
         ],
         "selected": true,
-        "student": "<p>From the reference diagram, identify the torsion-related boundary conditions and idealizations.</p>",
-        "instructor": "<p>Torque enters at A from the motor and is removed at the pulley. Bearing B supports the shaft radially but permits rotation and does not remove transmitted torque in this idealization.</p>",
+        "student": "<p>Using the idealized model, identify where torque enters and leaves the shaft and explain the role of bearing B.</p>",
+        "instructor": "<p>Torque enters the shaft at A from the motor and is removed at the pulley by the belt drive. Bearing B provides radial support and permits rotation; it is not modeled as a torsional restraint.</p>",
         "section": "analysis"
       },
       {
-        "id": "q12",
+        "id": "m2",
+        "displayNumber": "M2",
         "title": "Angular Speed",
         "type": "unit conversion",
         "difficulty": "introductory",
         "tags": [
           "rpm",
-          "rad per second",
-          "angular velocity"
+          "angular velocity",
+          "radians per second"
         ],
         "learningObjectives": [
           "Convert rotational speed to angular speed."
         ],
         "selected": true,
         "student": "<p>Convert the assigned shaft speed from rpm to rad/s.</p>",
-        "instructor": "<p>&omega; = <em>n</em>(2&pi;/60) = <strong>{{shaft_omega_rad_s}} rad/s</strong>.</p>",
+        "instructor": "<p>&omega; = <em>n</em>(2&pi;/60) = ({{n}} rpm)(2&pi;/60) = <strong>{{shaft_omega_rad_s}} rad/s</strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q13",
+        "id": "m3",
+        "displayNumber": "M3",
         "title": "Transmitted Torque",
         "type": "power and torque calculation",
         "difficulty": "intermediate",
         "tags": [
           "horsepower",
-          "P equals T omega",
-          "unit conversion"
+          "power equation",
+          "torque"
         ],
         "learningObjectives": [
-          "Calculate torque from motor power and speed."
+          "Calculate shaft torque from power and speed."
         ],
         "selected": true,
-        "student": "<p>Determine the torque carried by the shaft from the specified motor power and speed.</p>",
-        "instructor": "<p>Using 1 hp = 550 ft&middot;lb/s, <em>T</em> = <em>P</em>/&omega; = <strong>{{shaft_torque_lb_ft}} lb&middot;ft</strong> = <strong>{{shaft_torque_lb_in}} lb&middot;in</strong>.</p>",
-        "commonMistakes": "<p>Do not mix lb-ft torque with a diameter measured in inches.</p>",
+        "student": "<p>Determine the torque carried by the shaft from the specified motor power and operating speed.</p>",
+        "instructor": "<p>Convert the motor power using 1 hp = 550 ft&middot;lb/s: <em>P</em> = ({{P}} hp)(550 ft&middot;lb/s per hp). Then <em>T</em> = <em>P</em>/&omega; = <strong>{{shaft_torque_lb_ft}} lb&middot;ft</strong> = <strong>{{shaft_torque_lb_in}} lb&middot;in</strong>.</p>",
+        "commonMistakes": "<p>Use lb&middot;in when combining torque with a shaft diameter measured in inches.</p>",
         "section": "analysis"
       },
       {
-        "id": "q14",
+        "id": "m4",
+        "displayNumber": "M4",
         "title": "Internal Torque Diagram",
         "type": "internal loading",
-        "difficulty": "introductory",
+        "difficulty": "intermediate",
         "tags": [
+          "internal torque",
           "torque diagram",
-          "constant torque",
           "shaft segment"
         ],
         "learningObjectives": [
-          "Determine the shaft's internal torque distribution."
+          "Determine the internal-torque distribution."
         ],
         "selected": true,
-        "student": "<p>Draw and label the internal torque diagram for shaft AB.</p>",
-        "instructor": "<p>The internal torque is constant over the power-transmitting shaft segment and has magnitude <strong>{{shaft_torque_lb_ft}} lb&middot;ft</strong>.</p>",
+        "student": "<p>Draw and label the internal torque diagram for the idealized drive shaft.</p>",
+        "instructor": "<p>The shaft segment between the motor and pulley carries a constant internal torque of <strong>{{shaft_torque_lb_ft}} lb&middot;ft</strong>. The segment between the pulley and bearing carries approximately zero internal torque because the bearing does not provide a torsional reaction.</p>",
         "section": "analysis"
       },
       {
-        "id": "q15",
+        "id": "m5",
+        "displayNumber": "M5",
         "title": "Minimum Theoretical Diameter",
         "type": "torsional stress sizing",
         "difficulty": "intermediate",
         "tags": [
-          "solid shaft",
-          "allowable stress",
+          "solid circular shaft",
+          "allowable shear stress",
           "diameter"
         ],
         "learningObjectives": [
-          "Solve the solid-shaft torsion equation for diameter."
+          "Solve the torsion relation for minimum shaft diameter."
         ],
         "selected": true,
-        "student": "<p>Using the allowable shear stress, determine the minimum theoretical diameter of the solid circular shaft.</p>",
-        "instructor": "<p>For a solid shaft, &tau;<sub>max</sub> = 16<em>T</em>/(&pi;<em>d</em><sup>3</sup>). Therefore <em>d</em><sub>min</sub> = [16<em>T</em>/(&pi;&tau;<sub>allow</sub>)]<sup>1/3</sup> = <strong>{{shaft_d_min_in}} in</strong>.</p>",
+        "student": "<p>Using the allowable torsional shear stress, determine the minimum theoretical diameter of the solid circular shaft.</p>",
+        "instructor": "<p>For a solid circular shaft, &tau;<sub>max</sub> = 16<em>T</em>/(&pi;<em>d</em><sup>3</sup>). Therefore, <em>d</em><sub>min</sub> = [16<em>T</em>/(&pi;&tau;<sub>allow</sub>)]<sup>1/3</sup> = <strong>{{shaft_d_min_in}} in</strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q16",
+        "id": "m6",
+        "displayNumber": "M6",
         "title": "Standard Shaft Selection",
         "type": "component selection",
         "difficulty": "intermediate",
         "tags": [
-          "standard size",
+          "standard shaft size",
           "round upward",
-          "diameter increment"
+          "engineering selection"
         ],
         "learningObjectives": [
-          "Select a manufacturable diameter without violating stress."
+          "Select the next appropriate standard shaft diameter."
         ],
         "selected": true,
-        "student": "<p>Select the smallest available shaft diameter using the assigned standard-size increment. Explain the rounding direction.</p>",
-        "instructor": "<p>Round upward to <strong>{{shaft_d_selected_label}}</strong>. The selected decimal diameter is <strong>{{shaft_d_selected_in}} in</strong>; the next lower available size is <strong>{{shaft_d_lower_in}} in</strong> and does not meet the theoretical minimum.</p>",
+        "student": "<p>Select the smallest appropriate standard shaft diameter in 1/8-in increments and explain why the size must be rounded upward.</p>",
+        "instructor": "<p>The minimum theoretical diameter is {{shaft_d_min_in}} in, so select the next larger 1/8-in size: <strong>{{shaft_d_selected_label}}</strong> (<strong>{{shaft_d_selected_in}} in</strong>). The next lower standard size, <strong>{{shaft_d_lower_in}} in</strong>, is below the theoretical minimum and is not acceptable.</p>",
         "section": "analysis"
       },
       {
-        "id": "q17",
+        "id": "m7",
+        "displayNumber": "M7",
         "title": "Selected-Diameter Verification",
         "type": "design verification",
         "difficulty": "intermediate",
         "tags": [
-          "actual stress",
-          "utilization",
-          "allowable factor"
+          "actual shear stress",
+          "allowable stress",
+          "verification"
         ],
         "learningObjectives": [
-          "Verify stress and quantify design margin."
+          "Verify the torsional stress in the selected shaft."
         ],
         "selected": true,
-        "student": "<p>Calculate the actual maximum shear stress, utilization ratio, and allowable-stress factor for the selected shaft.</p>",
-        "instructor": "<p>&tau;<sub>actual</sub> = <strong>{{shaft_tau_actual_ksi}} ksi</strong>. Utilization is <strong>{{shaft_utilization}}</strong>, and the allowable-stress factor is <strong>{{shaft_allowable_factor}}</strong>. {{shaft_stress_assessment}}</p>",
+        "student": "<p>Calculate the actual maximum torsional shear stress in the selected shaft and compare it with the allowable stress.</p>",
+        "instructor": "<p>&tau;<sub>actual</sub> = 16<em>T</em>/(&pi;<em>d</em><sup>3</sup>) = <strong>{{shaft_tau_actual_ksi}} ksi</strong>. {{shaft_stress_assessment}}</p>",
+        "gradingNotes": "<p>The cleaned faculty solution reports approximately 13.70 ksi; small differences reflect rounding of intermediate torque values.</p>",
         "section": "analysis"
       },
       {
-        "id": "q18",
-        "title": "Angle-of-Twist Check",
-        "type": "torsional deformation",
+        "id": "m8",
+        "displayNumber": "M8",
+        "title": "Utilization and Margin",
+        "type": "design margin",
         "difficulty": "intermediate",
         "tags": [
-          "polar moment",
-          "angle of twist",
-          "serviceability"
+          "utilization ratio",
+          "allowable-stress factor",
+          "design margin"
         ],
         "learningObjectives": [
-          "Calculate polar moment and shaft twist."
+          "Quantify how closely the selected shaft approaches the stress limit."
         ],
         "selected": true,
-        "student": "<p>For the assigned shaft length and shear modulus, calculate the polar moment and angle of twist, then compare the result with the twist limit.</p>",
-        "instructor": "<p><em>J</em> = &pi;<em>d</em><sup>4</sup>/32 = <strong>{{shaft_J_in4}} in<sup>4</sup></strong>. Using &phi; = <em>TL</em>/(<em>JG</em>), &phi; = <strong>{{shaft_phi_rad}} rad</strong> = <strong>{{shaft_phi_deg}}&deg;</strong>. {{shaft_twist_assessment}}</p>",
+        "student": "<p>Determine the stress-utilization ratio and allowable-stress factor for the selected shaft.</p>",
+        "instructor": "<p>Utilization = &tau;<sub>actual</sub>/&tau;<sub>allow</sub> = <strong>{{shaft_utilization}}</strong>. The allowable-stress factor is &tau;<sub>allow</sub>/&tau;<sub>actual</sub> = <strong>{{shaft_allowable_factor}}</strong>. The selected size passes, but the margin is modest.</p>",
+        "gradingNotes": "<p>The cleaned faculty solution gives approximately 0.945 utilization and 1.058 allowable-stress factor; results based on unrounded intermediate values are approximately 0.944 and 1.059.</p>",
         "section": "analysis"
       },
       {
-        "id": "q19",
+        "id": "m9",
+        "displayNumber": "M9",
         "title": "Engineering Assessment",
         "type": "engineering judgment",
-        "difficulty": "advanced",
+        "difficulty": "intermediate",
         "tags": [
-          "acceptance",
-          "limitations",
-          "combined loading"
+          "recommendation",
+          "model limitations",
+          "detailed design"
         ],
         "learningObjectives": [
-          "Make a bounded shaft recommendation."
+          "Make a bounded recommendation and identify omitted effects."
         ],
         "selected": true,
-        "student": "<p>State whether the selected shaft is acceptable in the base model and identify omitted checks required for detailed design.</p>",
-        "instructor": "<p>{{shaft_recommendation}}</p><p>Detailed design must also consider belt-induced bending, bearing reactions, keyways and stress concentrations, fatigue, shock loading, critical speed, coupling details, and manufacturing tolerances.</p>",
-        "gradingNotes": "<p>Students should not claim full system safety from the pure-torsion calculation alone.</p>",
+        "student": "<p>State whether the selected shaft is acceptable for the base model and identify additional effects that should be checked in a detailed design.</p>",
+        "instructor": "<p>{{shaft_recommendation}}</p><p>Detailed design should also consider belt-induced bending, bearing reactions, keyways and stress concentrations, shock loading, fatigue, critical speed, coupling details, and manufacturing tolerances.</p>",
+        "gradingNotes": "<p>Students should not claim complete system safety from the simplified steady pure-torsion calculation alone.</p>",
         "section": "analysis"
       }
     ],
@@ -5825,7 +5832,7 @@ window.PROBLEM_CATALOG = [
       {
         "id": "section-a",
         "title": "Homework Version A - baseline motor-driven shaft",
-        "description": "Default sequence for power-to-torque conversion, torsional sizing, standard selection, verification, and twist.",
+        "description": "Faculty-ready sequence for physical interpretation, torsion idealization, power-to-torque conversion, shaft sizing, standard selection, verification, and engineering assessment.",
         "selectedQuestions": [
           "q1",
           "q2",
@@ -5837,24 +5844,21 @@ window.PROBLEM_CATALOG = [
           "q8",
           "q9",
           "q10",
-          "q11",
-          "q12",
-          "q13",
-          "q14",
-          "q15",
-          "q16",
-          "q17",
-          "q18",
-          "q19"
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9"
         ],
         "variables": {
           "P": 5,
           "n": 175,
           "tau_allow": 14.5,
-          "d_step": 0.125,
-          "L_AB": 48,
-          "G": 11200,
-          "phi_allow": 1
+          "L_AB": 48
         }
       }
     ]

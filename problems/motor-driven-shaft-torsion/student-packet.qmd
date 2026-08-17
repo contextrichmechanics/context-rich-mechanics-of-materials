@@ -1,6 +1,6 @@
 ---
 title: "Student Packet - Motor-Driven Shaft Torsion"
-subtitle: "Power, Torque, Torsional Stress, Shaft Sizing, and Twist"
+subtitle: "Power Transmission, Torque, Torsional Shear Stress, and Shaft Sizing"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html: {toc: true, number-sections: true}

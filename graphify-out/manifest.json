@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1787000540.7478795,
-    "ast_hash": "818edf425ac5fd5de013f63221bff8bf",
+    "mtime": 1787002026.5761683,
+    "ast_hash": "1c859db676c8e237c945f34e56491384",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1787000540.74894,
-    "ast_hash": "07ac68e956b2bf4beeb83f777652baa8",
+    "mtime": 1787002026.5777957,
+    "ast_hash": "3a5480644f03f1588a90c713c367a6b6",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1787000487.2119699,
-    "ast_hash": "35a04c5d2a5a719f5ec87bcb86f14636",
+    "mtime": 1787001861.1058466,
+    "ast_hash": "9e426922de6f5ba98de79dbd5a627cd8",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1787000487.2905874,
-    "ast_hash": "f0f150d0c598437a6c7da713abb6d6c1",
+    "mtime": 1787001861.1863976,
+    "ast_hash": "1a5a3602e4c8a805a0262b1122c09fb9",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1787000487.3702834,
-    "ast_hash": "cbb38703850e509579583297d7aa07c7",
+    "mtime": 1787001861.2656982,
+    "ast_hash": "bb0560043a975e2f420ae9bbe48fd296",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -305,23 +305,23 @@
     "semantic_hash": ""
   },
   "problems/motor-driven-shaft-torsion/_student-problem.qmd": {
-    "mtime": 1785782322.802325,
-    "ast_hash": "67f0802b57cfcb5753daa7f2f8f41d78",
+    "mtime": 1787001483.7374167,
+    "ast_hash": "f368ba4317cdc961d10bd20c8e9c0dda",
     "semantic_hash": ""
   },
   "problems/motor-driven-shaft-torsion/index.qmd": {
-    "mtime": 1785854455.6487916,
-    "ast_hash": "29955fbe1b5dfef6c5183aba49fd9e19",
+    "mtime": 1787001483.8151062,
+    "ast_hash": "9a848c1aef9f86dd46d2532ac618ffb0",
     "semantic_hash": ""
   },
   "problems/motor-driven-shaft-torsion/instructor-guide.qmd": {
-    "mtime": 1785818550.2138193,
-    "ast_hash": "6cb289ca76dc445035bd13da54d2a224",
+    "mtime": 1787001790.0302029,
+    "ast_hash": "699513c6d804d1a16ef0177e73aa7eed",
     "semantic_hash": ""
   },
   "problems/motor-driven-shaft-torsion/student-packet.qmd": {
-    "mtime": 1785818550.2057927,
-    "ast_hash": "4391ca6ec5ba37bfed2eda10680afdff",
+    "mtime": 1787001483.8917818,
+    "ast_hash": "b1b8f8f7d003b1524f51bfb27e7ac09e",
     "semantic_hash": ""
   },
   "problems/mountain-bike-suspension-pin/_student-problem.qmd": {

@@ -4,20 +4,24 @@
 
 ### Engineering Context
 
-A manufacturing facility is upgrading a belt-driven conveyor subsystem. An electric motor delivers power to a solid steel shaft, and the shaft transmits torque to a pulley that drives downstream equipment.
+Industrial facilities commonly use electric motors and belt-drive systems to transmit mechanical power to rotating equipment such as conveyors, pumps, fans, mixers, and production machinery. In a typical installation, the motor rotates a steel drive shaft carrying a pulley. The pulley transfers power through one or more belts to the driven machine. Bearings support the rotating shaft and maintain alignment while allowing the shaft to rotate freely.
 
-The shaft must carry the operating torque without exceeding the allowable torsional shear stress. Because shafts are purchased in standard fractional-inch sizes, the design must determine the theoretical minimum diameter, round upward to an available size, and verify the selected shaft.
+The shaft is a critical load-carrying component because all mechanical power delivered from the motor to the pulley must pass through it as torque. For a given transmitted power, the required torque depends on rotational speed: lower-speed drives must transmit more torque than higher-speed drives carrying the same power. The shaft diameter therefore has a direct influence on the torsional shear stress and on whether the drive can safely transmit the required power.
+
+In industrial design, shafts are commonly selected from available standard stock sizes rather than manufactured to an arbitrary theoretical diameter. The engineering task is therefore to determine the minimum diameter required by the allowable torsional shear stress and then select and verify an appropriate standard shaft size.
+
+The base MEEN 305 analysis isolates steady torsion in the solid circular shaft. The real belt drive can also produce radial bearing reactions, shaft bending from belt tension, stress concentrations at keyways or shoulders, startup and shock torque, and fatigue under repeated service. Those effects are intentionally excluded here so that power, speed, torque, torsional shear stress, and shaft diameter remain the primary mechanics objective.
 
 ![Industrial motor, steel shaft, pulley, belts, and bearing support.](assets/shaft-industry-context.png){fig-alt="Industrial electric motor driving a belt pulley through a supported steel shaft." width=88%}
 
 ### Main Engineering Goal
 
-Determine the minimum safe diameter of the solid steel shaft, select the next available standard size, verify its torsional stress, and check its angle of twist.
+Determine the minimum safe diameter of the solid steel drive shaft for the specified motor power and operating speed, select the next appropriate standard shaft size, and verify that the selected shaft does not exceed the specified allowable torsional shear stress.
 
 ### System Components
 
-- electric motor and motor-side coupling at A;
-- solid circular steel shaft AB;
-- pulley and belt set;
-- rotation-permitting bearing support at B;
-- downstream driven equipment.
+- electric motor;
+- solid steel drive shaft;
+- pulley and belt drive;
+- bearing support;
+- driven equipment.

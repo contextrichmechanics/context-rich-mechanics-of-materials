@@ -2,8 +2,5 @@
   {"key":"P","symbol":"P","label":"Motor power","value":5,"unit":"hp","min":0.1,"max":1000,"step":0.5},
   {"key":"n","symbol":"n","label":"Shaft rotational speed","value":175,"unit":"rpm","min":1,"max":10000,"step":5},
   {"key":"tau_allow","symbol":"tau_allow","label":"Allowable torsional shear stress","value":14.5,"unit":"ksi","min":0.1,"max":200,"step":0.5},
-  {"key":"d_step","symbol":"Delta_d","label":"Available shaft-diameter increment","value":0.125,"unit":"in","min":0.015625,"max":1,"step":0.015625},
-  {"key":"L_AB","symbol":"L_AB","label":"Shaft length for twist check","value":48,"unit":"in","min":1,"max":1000,"step":1},
-  {"key":"G","symbol":"G","label":"Steel shear modulus","value":11200,"unit":"ksi","min":100,"max":30000,"step":100},
-  {"key":"phi_allow","symbol":"phi_allow","label":"Allowable angle of twist","value":1,"unit":"deg","min":0.01,"max":30,"step":0.1}
+  {"key":"L_AB","symbol":"L_AB","label":"Overall shaft span shown in the reference model","value":48,"unit":"in","min":1,"max":1000,"step":1}
 ]

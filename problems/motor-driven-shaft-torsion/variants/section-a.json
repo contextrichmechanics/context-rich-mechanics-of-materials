@@ -1,7 +1,7 @@
 {
   "id":"section-a",
   "title":"Homework Version A - baseline motor-driven shaft",
-  "description":"Default sequence for power-to-torque conversion, torsional sizing, standard selection, verification, and twist.",
-  "selectedQuestions":["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19"],
-  "variables":{"P":5,"n":175,"tau_allow":14.5,"d_step":0.125,"L_AB":48,"G":11200,"phi_allow":1}
+  "description":"Faculty-ready sequence for physical interpretation, torsion idealization, power-to-torque conversion, shaft sizing, standard selection, verification, and engineering assessment.",
+  "selectedQuestions":["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","m1","m2","m3","m4","m5","m6","m7","m8","m9"],
+  "variables":{"P":5,"n":175,"tau_allow":14.5,"L_AB":48}
 }

@@ -1,5 +1,5 @@
 ---
-title: "Instructor Guide - Motor-Driven Shaft Torsion"
+title: "Instructor Guide - Motor-Driven Shaft Design for a Belt-Transmission System"
 subtitle: "Representative Answers and Evaluation Guidance"
 author: "Context-Rich Mechanics of Materials Library"
 format:
@@ -8,7 +8,7 @@ format:
 
 # Purpose
 
-Award credit for a correct torque load path, consistent power and speed units, the solid-shaft torsion relation, upward standard-size selection, stress verification, and a bounded engineering recommendation.
+This problem develops load-path reasoning, power-to-torque conversion, internal torque, torsional shear stress, shaft sizing, standard-size selection, and engineering judgment. Award credit for a correct torque load path, consistent power and speed units, the solid-shaft torsion relation, upward standard-size selection, stress verification, and a recommendation bounded by the assumptions of the model.
 
 # Problem Context
 
@@ -29,12 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-The base model assumes steady pure torsion of a uniform solid circular shaft. Belt-induced bending, transverse bearing reactions, keyways, stress concentrations, fatigue, shock loading, critical speed, coupling details, and bearing selection require additional models and data.
+The base model assumes steady operation, a uniform solid circular shaft, linear-elastic material behavior, pure torsion, negligible shaft self-weight, negligible bearing friction, and constant transmitted power. Belt-induced bending, transverse bearing reactions, keyways, stress concentrations, shock loading, fatigue, critical speed, coupling details, and manufacturing tolerances require additional models and data.
 
 # Supplemental Assessment Structure
 
-- context interpretation and idealization: 20%;
-- power, speed, and torque conversion: 20%;
-- theoretical diameter and standard selection: 30%;
-- stress and twist verification: 20%;
+- context interpretation: 10%;
+- structural idealization and assumptions: 15%;
+- power, speed, and torque calculation: 20%;
+- torsional-stress sizing: 30%;
+- standard-size selection and verification: 15%;
 - engineering recommendation and limitations: 10%.
