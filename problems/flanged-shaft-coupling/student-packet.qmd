@@ -1,6 +1,6 @@
 ---
-title: "Student Packet - Industrial Flanged Shaft Coupling"
-subtitle: "Shaft Torsion, Bolt Direct Shear, and Connector Sizing"
+title: "Student Packet - Bolt-Group Design for an Industrial Flanged Shaft Coupling"
+subtitle: "Torsion, Shear, Torque Equilibrium, and Bolt-Group Sizing"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html: {toc: true, number-sections: true}

@@ -733,24 +733,20 @@ function variableMap(problem, currentValues) {
   const couplingShaftRadius = numericValue(values, "r");
   const couplingBoltCircleRadius = numericValue(values, "R");
   const couplingBoltDiameter = numericValue(values, "d_b");
-  const couplingPatternStep = numericValue(values, "n_step");
 
   if (
     Number.isFinite(couplingTorque) && couplingTorque > 0 &&
     Number.isFinite(couplingShaftRadius) && couplingShaftRadius > 0 &&
     Number.isFinite(couplingBoltCircleRadius) && couplingBoltCircleRadius > 0 &&
-    Number.isFinite(couplingBoltDiameter) && couplingBoltDiameter > 0 &&
-    Number.isFinite(couplingPatternStep) && couplingPatternStep >= 1
+    Number.isFinite(couplingBoltDiameter) && couplingBoltDiameter > 0
   ) {
     const torqueNmm = couplingTorque * 1000;
-    const patternStep = Math.max(1, Math.round(couplingPatternStep));
     const shaftPolarMoment = Math.PI * couplingShaftRadius ** 4 / 2;
     const shaftStress = torqueNmm * couplingShaftRadius / shaftPolarMoment;
     const boltArea = Math.PI * couplingBoltDiameter ** 2 / 4;
     const requiredCount = 2 * couplingShaftRadius ** 3 /
       (couplingBoltCircleRadius * couplingBoltDiameter ** 2);
-    const integerCount = Math.max(1, Math.ceil(requiredCount - 1e-12));
-    const selectedCount = Math.max(patternStep, Math.ceil(requiredCount / patternStep - 1e-12) * patternStep);
+    const selectedCount = Math.max(1, Math.ceil(requiredCount - 1e-12));
     const boltForce = torqueNmm / (selectedCount * couplingBoltCircleRadius);
     const boltStress = boltForce / boltArea;
     const stressRatio = boltStress / shaftStress;
@@ -761,11 +757,7 @@ function variableMap(problem, currentValues) {
     values.coupling_shaft_tau_MPa = formatDerived(shaftStress, 3);
     values.coupling_bolt_area_mm2 = formatDerived(boltArea, 3);
     values.coupling_n_req = formatDerived(requiredCount, 3);
-    values.coupling_n_integer = formatDerived(integerCount, 0);
     values.coupling_n_selected = formatDerived(selectedCount, 0);
-    values.coupling_pattern_assessment = selectedCount === integerCount
-      ? "The unrestricted minimum integer is compatible with the assigned pattern increment."
-      : "The assigned pattern increment requires rounding above the unrestricted minimum integer.";
     values.coupling_bolt_force_N = formatDerived(boltForce, 1);
     values.coupling_bolt_tau_MPa = formatDerived(boltStress, 3);
     values.coupling_stress_ratio = formatDerived(stressRatio, 3);
@@ -773,7 +765,7 @@ function variableMap(problem, currentValues) {
       ? "The selected bolt pattern satisfies the specified stress-matching criterion."
       : "The selected bolt pattern does not satisfy the specified stress-matching criterion.";
     values.coupling_recommendation = stressPasses
-      ? "Use at least " + selectedCount + " equally spaced bolts for the assigned pattern convention. The calculated average bolt shear stress is " + formatDerived(boltStress, 3) + " MPa, which does not exceed the " + formatDerived(shaftStress, 3) + " MPa maximum shaft shear stress under the simplified model."
+      ? "Use at least " + selectedCount + " equally spaced bolts under the prescribed stress-comparison criterion. The calculated average bolt shear stress is " + formatDerived(boltStress, 3) + " MPa, which does not exceed the " + formatDerived(shaftStress, 3) + " MPa maximum shaft shear stress. If symmetry or manufacturing practice requires a larger count, select the next acceptable pattern."
       : "Increase the bolt count, bolt diameter, or bolt-circle radius before completing the omitted coupling checks.";
   }
 

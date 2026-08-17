@@ -34,8 +34,8 @@
     "slug": "flanged-shaft-coupling",
     "title": "Bolt-Group Design for an Industrial Flanged Shaft Coupling",
     "status": "OK",
-    "variables": 5,
-    "questions": 19,
+    "variables": 4,
+    "questions": 17,
     "variants": 1,
     "warnings": []
   },

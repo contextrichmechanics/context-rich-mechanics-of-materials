@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1787002026.5761683,
-    "ast_hash": "1c859db676c8e237c945f34e56491384",
+    "mtime": 1787004466.7275262,
+    "ast_hash": "653514795712aba417236e97411a0060",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1787002026.5777957,
-    "ast_hash": "3a5480644f03f1588a90c713c367a6b6",
+    "mtime": 1787004466.7284994,
+    "ast_hash": "46d5aaf5bd64bfda04bdcc4dca2b5ae9",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1787001861.1058466,
-    "ast_hash": "9e426922de6f5ba98de79dbd5a627cd8",
+    "mtime": 1787004350.2715652,
+    "ast_hash": "bc5b5e95b1e2685a28742019f6b2aeaf",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1787001861.1863976,
-    "ast_hash": "1a5a3602e4c8a805a0262b1122c09fb9",
+    "mtime": 1787004350.3507876,
+    "ast_hash": "5dc76e8506252397ed865ce05a745716",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1787001861.2656982,
-    "ast_hash": "bb0560043a975e2f420ae9bbe48fd296",
+    "mtime": 1787004350.4303098,
+    "ast_hash": "903e9096d7c795e36b2f32f4d469d167",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -190,23 +190,23 @@
     "semantic_hash": ""
   },
   "problems/flanged-shaft-coupling/_student-problem.qmd": {
-    "mtime": 1785783422.0408328,
-    "ast_hash": "bad19c1f3507ffef447917752e65d385",
+    "mtime": 1787004215.8414848,
+    "ast_hash": "0bbb7843b64528d070bad6adf8ea3c73",
     "semantic_hash": ""
   },
   "problems/flanged-shaft-coupling/index.qmd": {
-    "mtime": 1785854454.3354952,
-    "ast_hash": "6a4e9c11c2a0a768bdab58c3d11ff7e0",
+    "mtime": 1787004215.918877,
+    "ast_hash": "f9e2812d2d0e84fde09aa8fcc6a2403a",
     "semantic_hash": ""
   },
   "problems/flanged-shaft-coupling/instructor-guide.qmd": {
-    "mtime": 1785818550.2114894,
-    "ast_hash": "c9039a46bedfcd93bd4b89473da681ea",
+    "mtime": 1787004216.083351,
+    "ast_hash": "bf8da4e6cf8f8a5a9a62b19f30a49f46",
     "semantic_hash": ""
   },
   "problems/flanged-shaft-coupling/student-packet.qmd": {
-    "mtime": 1785818550.2031107,
-    "ast_hash": "db5c9c5ab35c9f5e70292b4e943ab847",
+    "mtime": 1787005676.8848288,
+    "ast_hash": "8c712fd7900185706242e762ec468c53",
     "semantic_hash": ""
   },
   "problems/hydraulic-press-punching-shear/_student-problem.qmd": {

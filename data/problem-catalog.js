@@ -1584,7 +1584,28 @@ window.PROBLEM_CATALOG = [
     "title": "Bolt-Group Design for an Industrial Flanged Shaft Coupling",
     "studentDocumentTitle": "Student Homework Questions",
     "instructorDocumentTitle": "Instructor Answers",
-    "summary": "A symbolic and numerical coupling problem comparing solid-shaft torsional stress with direct shear stress in a circular bolt group.",
+    "summary": "An industrial flanged-coupling problem integrating torsion, shear, torque equilibrium, bolt-group sizing, sensitivity interpretation, and engineering judgment.",
+    "primaryTopics": [
+      "Torsion",
+      "Shear",
+      "Torque",
+      "Bolt"
+    ],
+    "courseTopic": "Torsion of circular shafts; direct shear in connectors; torque equilibrium; connector sizing",
+    "targetLevel": "Intermediate MEEN 305",
+    "primaryMechanicsCompetencies": [
+      "Load-path reasoning",
+      "Shaft torsional stress",
+      "Torque equilibrium",
+      "Direct shear in bolts",
+      "Symbolic design",
+      "Sensitivity interpretation",
+      "Engineering judgment"
+    ],
+    "expectedStudentDeliverable": "Physical-system interpretation, student-generated idealization, symbolic derivation, minimum practical bolt count, verification, and concise engineering recommendation.",
+    "difficultyLevel": 3,
+    "geometryComplexity": "Axisymmetric shaft with a circular bolt group.",
+    "problemDeliverableType": "Annotated model, symbolic derivation, practical integer selection, verification, and mechanics-based recommendation.",
     "textbookChapters": [
       "Torsion of circular shafts",
       "Direct shear in connectors",
@@ -1597,9 +1618,7 @@ window.PROBLEM_CATALOG = [
       "coupling_shaft_tau_MPa",
       "coupling_bolt_area_mm2",
       "coupling_n_req",
-      "coupling_n_integer",
       "coupling_n_selected",
-      "coupling_pattern_assessment",
       "coupling_bolt_force_N",
       "coupling_bolt_tau_MPa",
       "coupling_stress_ratio",
@@ -1610,8 +1629,8 @@ window.PROBLEM_CATALOG = [
     "idealizedImage": "problems/flanged-shaft-coupling/assets/coupling-instructor-idealization.png",
     "idealizedImageAlt": "Instructor reference idealization of two flanged shafts transmitting torque through equally spaced bolts on a circular pattern.",
     "source": "problems/flanged-shaft-coupling/index.html",
-    "problemStatement": "<p>A reliability engineer is reviewing a rigid flanged coupling between a rotating driver and a pump. Identical bolts on a circular pattern transfer torque between the mating flanges.</p><p>The simplified model treats the flanges as rigid and assumes uniform direct shear among the bolts. Bolt preload, frictional torque transfer, bending, bearing, fatigue, and local stress concentrations are excluded.</p>",
-    "engineeringGoal": "<p>Determine the theoretical bolt count that makes average bolt shear stress no greater than maximum shaft torsional shear stress, select a practical integer bolt pattern, and verify the resulting stress inequality.</p>",
+    "problemStatement": "<p>Flanged shaft couplings are widely used in industrial power-transmission systems to connect rotating equipment such as electric motors, gearboxes, pumps, compressors, mixers, conveyors, and process machinery. The coupling allows torque produced by the driving machine to pass from one shaft to the other while maintaining rotational continuity between the connected machines.</p><p>In a rigid flanged coupling, each shaft is connected to a flange and the two flanges are joined by a circular group of bolts. As torque is transmitted through the connection, the shaft is subjected to torsional shear stress. At the same time, the bolts develop tangential shear forces that collectively provide the resisting moment required to transfer torque from one flange to the other.</p><p>The engineering question is intentionally limited to the mechanics of torque transfer. Students compare the torsional shear stress in the solid shaft with the average direct shear stress in the coupling bolts and use that prescribed comparison to determine a suitable bolt count. Detailed effects such as bolt preload, frictional torque transfer, bearing stress, flange flexibility, fatigue, fit, and coupling standards are outside the base analysis.</p>",
+    "engineeringGoal": "<p>Determine the minimum practical bolt-group configuration required to transmit the shaft torque under the prescribed stress-comparison criterion, and explain how shaft size, bolt size, and bolt-circle radius influence the required number of bolts.</p>",
     "variables": [
       {
         "key": "T",
@@ -1652,361 +1671,337 @@ window.PROBLEM_CATALOG = [
         "min": 0.5,
         "max": 200,
         "step": 0.5
-      },
-      {
-        "key": "n_step",
-        "symbol": "Delta_n",
-        "label": "Allowed bolt-count increment",
-        "value": 1,
-        "unit": "bolts",
-        "min": 1,
-        "max": 12,
-        "step": 1
       }
     ],
     "questions": [
       {
         "id": "q1",
-        "title": "Primary Function",
+        "displayNumber": "Q1",
+        "title": "Primary Function of the System",
         "type": "context interpretation",
         "difficulty": "introductory",
         "tags": [
           "coupling function",
-          "coaxial shafts",
+          "rotational continuity",
           "torque transfer"
         ],
         "learningObjectives": [
-          "Identify the coupling's primary mechanical role."
+          "Identify the coupling's primary mechanical function."
         ],
         "selected": true,
-        "student": "<p>State the primary mechanical function of the flanged coupling.</p>",
-        "instructor": "<p>The coupling joins two coaxial shafts and transfers torque from the driving shaft to the driven shaft while maintaining rotational continuity.</p>",
+        "student": "<p>What is the primary mechanical function of the flanged coupling in the rotating equipment system?</p>",
+        "instructor": "<p>The coupling joins two rotating shafts and transfers torque from the driving machine to the driven machine while maintaining rotational continuity between them.</p>",
         "section": "context"
       },
       {
         "id": "q2",
-        "title": "External Loading",
+        "displayNumber": "Q2",
+        "title": "Source of Loading",
         "type": "load identification",
         "difficulty": "introductory",
         "tags": [
-          "applied torque",
-          "equal and opposite",
-          "steady transmission"
+          "torque",
+          "torsional loading",
+          "bolt shear"
         ],
         "learningObjectives": [
-          "Identify the applied torque pair."
+          "Identify the mechanical loading transmitted by the coupling."
         ],
         "selected": true,
-        "student": "<p>Identify the external loading represented in the simplified model.</p>",
-        "instructor": "<p>Equal and opposite torques of magnitude <em>T</em> act on the two shafts, representing driver input and driven-machine resistance.</p>",
+        "student": "<p>What type of mechanical loading must the coupling transmit during normal operation?</p>",
+        "instructor": "<p>The coupling must transmit torque generated by the driving machine to the driven equipment. This produces torsional loading in the shafts and shear loading in the coupling connection.</p>",
         "section": "context"
       },
       {
         "id": "q3",
+        "displayNumber": "Q3",
         "title": "Torque Load Path",
         "type": "load path",
         "difficulty": "introductory",
         "tags": [
-          "shaft",
-          "flange",
-          "bolt group"
+          "driving shaft",
+          "flanges",
+          "bolt group",
+          "driven shaft"
         ],
         "learningObjectives": [
-          "Trace torque through the coupling."
+          "Trace torque through the physical coupling."
         ],
         "selected": true,
-        "student": "<p>Trace the torque load path from the driving machine to the driven machine.</p>",
-        "instructor": "<p>The path is driving shaft, first flange, bolt group in shear, second flange, driven shaft, and driven machine.</p>",
+        "student": "<p>Trace the mechanical torque-transfer path from the driving machine to the driven machine.</p>",
+        "instructor": "<p>Torque passes from the driving machine into the driving shaft, then into the first flange, through the coupling bolts to the mating flange, and finally into the driven shaft and driven machine.</p>",
         "section": "context"
       },
       {
         "id": "q4",
-        "title": "Compared Mechanical Responses",
+        "displayNumber": "Q4",
+        "title": "Critical Mechanical Responses",
         "type": "mechanics reasoning",
         "difficulty": "introductory",
         "tags": [
-          "shaft stress",
-          "bolt stress",
-          "stress matching"
+          "shaft torsion",
+          "direct shear",
+          "coupling bolts"
         ],
         "learningObjectives": [
-          "Identify the two stresses compared by the design criterion."
+          "Identify components that experience significant shear stress."
         ],
         "selected": true,
-        "student": "<p>Identify the two mechanical responses compared in this problem.</p>",
-        "instructor": "<p>The design compares maximum torsional shear stress at the shaft surface with average direct shear stress in each coupling bolt.</p>",
+        "student": "<p>Which components are expected to experience significant shear stress while torque is being transmitted?</p>",
+        "instructor": "<p>The shafts experience torsional shear stress. The coupling bolts experience direct shear as they transfer torque between the two flanges.</p>",
         "section": "context"
       },
       {
         "id": "q5",
-        "title": "Relevant Parameters",
-        "type": "parameter identification",
+        "displayNumber": "Q5",
+        "title": "Effect of Bolt Arrangement",
+        "type": "qualitative reasoning",
         "difficulty": "introductory",
         "tags": [
-          "shaft radius",
-          "bolt circle",
-          "bolt diameter"
+          "bolt count",
+          "bolt-circle radius",
+          "load sharing"
         ],
         "learningObjectives": [
-          "Identify variables governing shaft and bolt stress."
+          "Explain how bolt count and radius affect force per bolt."
         ],
         "selected": true,
-        "student": "<p>Identify the geometric and loading variables that govern the two stresses.</p>",
-        "instructor": "<p>The variables are torque <em>T</em>, shaft radius <em>r</em>, bolt-circle radius <em>R</em>, bolt diameter <em>d</em><sub>b</sub>, and bolt count <em>n</em>.</p>",
+        "student": "<p>How would increasing the number of bolts or placing the bolts farther from the shaft centerline affect the force carried by each bolt?</p>",
+        "instructor": "<p>More bolts distribute the transmitted torque among more connectors and reduce the force carried by each bolt. Moving the bolts farther from the shaft centerline increases their moment arm, so a smaller tangential force per bolt is required to transmit the same torque.</p>",
         "section": "context"
       },
       {
         "id": "q6",
-        "title": "Load-Sharing Interpretation",
-        "type": "qualitative reasoning",
+        "displayNumber": "Q6",
+        "title": "Relevant Geometric Parameters",
+        "type": "parameter identification",
         "difficulty": "introductory",
         "tags": [
-          "uniform load sharing",
-          "tangential force",
-          "bolt pattern"
+          "shaft size",
+          "bolt diameter",
+          "bolt-circle radius",
+          "bolt count"
         ],
         "learningObjectives": [
-          "Explain the uniform bolt-force assumption."
+          "Identify geometry controlling shaft and bolt stresses."
         ],
         "selected": true,
-        "student": "<p>Under the base idealization, why does each bolt carry the same tangential force?</p>",
-        "instructor": "<p>The bolts are identical, equally spaced at the same radius, and connected by rigid flanges, so symmetry gives equal tangential force in every bolt.</p>",
+        "student": "<p>What geometric characteristics of the shaft and bolt group would you expect to influence shaft stress and bolt shear stress?</p>",
+        "instructor": "<p>Relevant characteristics include shaft size, number of bolts, bolt diameter, and radial location of the bolts relative to the shaft axis. These determine the shaft torsional resistance and the bolt-group torque capacity.</p>",
         "section": "context"
       },
       {
         "id": "q7",
-        "title": "Scope of the Base Problem",
-        "type": "model scope",
-        "difficulty": "introductory",
-        "tags": [
-          "excluded checks",
-          "pure torque",
-          "connector model"
-        ],
-        "learningObjectives": [
-          "Distinguish the base comparison from full coupling design."
-        ],
-        "selected": true,
-        "student": "<p>Identify important real coupling behaviors excluded from the base model.</p>",
-        "instructor": "<p>The model excludes preload and frictional torque transfer, bolt bearing, flange flexure, shaft bending, fatigue, fit, alignment, and local stress concentrations.</p>",
-        "section": "context"
-      },
-      {
-        "id": "q8",
-        "title": "Student-Generated Coupling Idealization",
+        "displayNumber": "Q7",
+        "title": "Student-Generated Structural Idealization",
         "type": "free-body diagram",
         "difficulty": "intermediate",
         "tags": [
           "idealization",
-          "circular bolt group",
-          "torque"
+          "coaxial shafts",
+          "circular bolt group"
         ],
         "learningObjectives": [
-          "Create a coupling model before viewing the reference figure."
+          "Convert the physical coupling into a simplified mechanics model."
         ],
         "selected": true,
-        "student": "<p>Before using the reference figure, draw two coaxial shafts, mating rigid flanges, <em>n</em> equally spaced bolts at radius <em>R</em>, shaft radius <em>r</em>, bolt diameter <em>d</em><sub>b</sub>, and applied torques.</p>",
-        "instructor": "<p>A valid model preserves the coaxial shafts, circular bolt pattern, equal torque magnitude on each side, and all symbolic dimensions needed for shaft and bolt stress.</p>",
-        "gradingNotes": "<p>A clear 2D or isometric model is acceptable.</p>",
+        "student": "<p>Convert the real flanged coupling into a simplified Mechanics of Materials model that preserves the torque-transfer path. Show the two shafts, mating flanges, circular bolt group, transmitted torque, shaft size, bolt size, and bolt-pattern radius.</p>",
+        "instructor": "<p>A suitable model contains two coaxial solid shafts connected by rigid flanges. Identical bolts are equally spaced on a circular bolt pattern. Torque enters through one shaft, is transferred through the bolt group, and exits through the other shaft.</p>",
+        "gradingNotes": "<p>Students should create their own idealization before using the instructor reference figure.</p>",
         "section": "transition"
       },
       {
-        "id": "q9",
+        "id": "q8",
+        "displayNumber": "Q8",
         "title": "Modeling Assumptions",
         "type": "assumptions",
         "difficulty": "intermediate",
         "tags": [
-          "rigid flange",
-          "direct shear",
-          "static torque"
+          "rigid flanges",
+          "equal load sharing",
+          "average direct shear"
         ],
         "learningObjectives": [
-          "State assumptions supporting uniform bolt-group analysis."
+          "State the assumptions used in the simplified coupling model."
         ],
         "selected": true,
-        "student": "<p>State the assumptions used in the base mechanics model.</p>",
-        "instructor": "<p>Assume solid circular shafts, rigid flanges, identical equally spaced bolts, uniform tangential bolt force, single direct-shear area per bolt, static torque, and neglected preload friction, bending, bearing, fatigue, and stress concentration.</p>",
+        "student": "<p>State the assumptions used to simplify the real coupling into the mechanics model.</p>",
+        "instructor": "<p>Assume solid circular shafts, rigid flanges, identical equally spaced bolts, equal tangential load sharing among bolts, average direct shear for bolt stress, and static torque transmission. Neglect bolt preload and frictional torque transfer, bearing stress, flange flexure, fatigue, fit, and stress concentrations.</p>",
+        "gradingNotes": "<p>The stress comparison used later is a prescribed MEEN 305 design criterion, not a complete industrial coupling-design standard.</p>",
         "section": "transition"
       },
       {
-        "id": "q10",
-        "title": "Analysis Plan",
+        "id": "q9",
+        "displayNumber": "Q9",
+        "title": "Mechanics Analysis Plan",
         "type": "analysis planning",
         "difficulty": "intermediate",
         "tags": [
-          "shaft torsion",
+          "shaft stress",
           "bolt equilibrium",
           "integer selection"
         ],
         "learningObjectives": [
-          "Plan the symbolic and numerical design sequence."
+          "Plan the symbolic bolt-group design procedure."
         ],
         "selected": true,
-        "student": "<p>List the calculation sequence needed to determine and verify the bolt count.</p>",
-        "instructor": "<p>Derive shaft stress; write bolt-group torque equilibrium; derive bolt stress; equate the two stresses; solve for theoretical <em>n</em>; round upward to an allowed pattern; and verify the selected bolt stress.</p>",
+        "student": "<p>Before performing the derivation, describe the sequence needed to determine the required bolt count.</p>",
+        "instructor": "<p>Determine the maximum torsional shear stress in the shaft; use torque equilibrium of the bolt group to determine the force in each bolt; calculate average bolt shear stress; apply the prescribed stress-comparison criterion; solve symbolically for the required number of bolts; round up to a practical integer count; and verify the selected configuration.</p>",
         "section": "transition"
       },
       {
-        "id": "q11",
+        "id": "m1",
+        "displayNumber": "M1",
         "title": "Boundary Conditions and Torque Equilibrium",
         "type": "mechanics setup",
-        "difficulty": "introductory",
+        "difficulty": "intermediate",
         "tags": [
-          "global equilibrium",
-          "internal torque",
-          "reference model"
+          "equal and opposite torque",
+          "steady transmission",
+          "global equilibrium"
         ],
         "learningObjectives": [
-          "Describe steady torque transmission."
+          "Describe the loading representation and torque equilibrium."
         ],
         "selected": true,
-        "student": "<p>Describe the boundary/load representation and write the global torque-equilibrium condition.</p>",
-        "instructor": "<p>The machine sides apply equal and opposite torques. For steady transmission, the shaft and coupling carry constant internal torque magnitude <strong>{{coupling_torque_Nmm}} N&middot;mm</strong>.</p>",
+        "student": "<p>From the instructor reference diagram, describe the loading representation and state the global torque equilibrium condition.</p>",
+        "instructor": "<p>The two machine sides apply equal and opposite torques of magnitude <em>T</em>. Under steady torque transmission, the coupling transfers torque of magnitude <em>T</em> from one shaft to the other. For the assigned input, <em>T</em> = <strong>{{coupling_torque_Nmm}} N&middot;mm</strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q12",
-        "title": "Maximum Shaft Shear Stress",
+        "id": "m2",
+        "displayNumber": "M2",
+        "title": "Maximum Shear Stress in the Shaft",
         "type": "torsional stress",
         "difficulty": "intermediate",
         "tags": [
           "polar moment",
-          "solid shaft",
+          "solid circular shaft",
           "outer surface"
         ],
         "learningObjectives": [
-          "Derive and evaluate maximum shaft shear stress."
+          "Derive maximum torsional shear stress in a solid shaft."
         ],
         "selected": true,
-        "student": "<p>Derive the maximum torsional shear stress in the solid shaft and evaluate it for the assigned values.</p>",
-        "instructor": "<p><em>J</em> = &pi;<em>r</em><sup>4</sup>/2 = <strong>{{coupling_shaft_J_mm4}} mm<sup>4</sup></strong>, so &tau;<sub>shaft,max</sub> = <em>Tr/J</em> = 2<em>T</em>/(&pi;<em>r</em><sup>3</sup>) = <strong>{{coupling_shaft_tau_MPa}} MPa</strong>.</p>",
+        "student": "<p>Derive the maximum torsional shear stress in the solid circular shaft.</p>",
+        "instructor": "<p>For a solid circular shaft, <em>J</em> = &pi;<em>r</em><sup>4</sup>/2. Therefore, &tau;<sub>shaft,max</sub> = <em>Tr/J</em> = 2<em>T</em>/(&pi;<em>r</em><sup>3</sup>). The maximum occurs at the outer surface. For the assigned inputs, <em>J</em> = <strong>{{coupling_shaft_J_mm4}} mm<sup>4</sup></strong> and &tau;<sub>shaft,max</sub> = <strong>{{coupling_shaft_tau_MPa}} MPa</strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q13",
+        "id": "m3",
+        "displayNumber": "M3",
         "title": "Tangential Force in Each Bolt",
         "type": "bolt-group equilibrium",
         "difficulty": "intermediate",
         "tags": [
           "torque equilibrium",
-          "bolt force",
-          "uniform sharing"
+          "tangential bolt force",
+          "equal sharing"
         ],
         "learningObjectives": [
-          "Relate total torque to individual bolt force."
+          "Relate transmitted torque to force in each bolt."
         ],
         "selected": true,
-        "student": "<p>Assuming uniform load sharing among <em>n</em> bolts at radius <em>R</em>, determine the tangential force carried by each bolt.</p>",
-        "instructor": "<p>Torque equilibrium gives <em>T</em> = <em>nF</em><sub>b</sub><em>R</em>, so <em>F</em><sub>b</sub> = <em>T</em>/(<em>nR</em>). For the selected pattern, <strong><em>F</em><sub>b</sub> = {{coupling_bolt_force_N}} N</strong>.</p>",
+        "student": "<p>Assuming equal load sharing among <em>n</em> bolts located at bolt-circle radius <em>R</em>, determine the tangential shear force carried by each bolt.</p>",
+        "instructor": "<p>Torque equilibrium gives <em>T</em> = <em>nF</em><sub>b</sub><em>R</em>. Therefore, <em>F</em><sub>b</sub> = <em>T</em>/(<em>nR</em>). For the selected integer pattern, <em>F</em><sub>b</sub> = <strong>{{coupling_bolt_force_N}} N</strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q14",
+        "id": "m4",
+        "displayNumber": "M4",
         "title": "Average Shear Stress in Each Bolt",
         "type": "direct shear",
         "difficulty": "intermediate",
         "tags": [
           "bolt area",
-          "average shear",
+          "average shear stress",
           "connector stress"
         ],
         "learningObjectives": [
-          "Derive average bolt shear stress."
+          "Derive the average direct shear stress in a coupling bolt."
         ],
         "selected": true,
-        "student": "<p>Derive the average direct shear stress in each bolt.</p>",
-        "instructor": "<p><em>A</em><sub>b</sub> = &pi;<em>d</em><sub>b</sub><sup>2</sup>/4 = <strong>{{coupling_bolt_area_mm2}} mm<sup>2</sup></strong>. Therefore &tau;<sub>b</sub> = 4<em>T</em>/(<em>n</em>&pi;<em>R d</em><sub>b</sub><sup>2</sup>).</p>",
+        "student": "<p>Determine the average direct shear stress in one coupling bolt.</p>",
+        "instructor": "<p>The bolt shear area is <em>A</em><sub>b</sub> = &pi;<em>d</em><sub>b</sub><sup>2</sup>/4 = <strong>{{coupling_bolt_area_mm2}} mm<sup>2</sup></strong>. Thus, &tau;<sub>b</sub> = <em>F</em><sub>b</sub>/<em>A</em><sub>b</sub> = 4<em>T</em>/(<em>n</em>&pi;<em>R d</em><sub>b</sub><sup>2</sup>). For the selected pattern, &tau;<sub>b</sub> = <strong>{{coupling_bolt_tau_MPa}} MPa</strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q15",
-        "title": "Required Theoretical Bolt Count",
+        "id": "m5",
+        "displayNumber": "M5",
+        "title": "Required Number of Bolts",
         "type": "symbolic design",
         "difficulty": "intermediate",
         "tags": [
-          "stress matching",
-          "torque cancellation",
-          "bolt count"
+          "stress comparison",
+          "symbolic bolt count",
+          "torque cancellation"
         ],
         "learningObjectives": [
-          "Derive the symbolic minimum bolt count."
+          "Derive the theoretical required bolt count."
         ],
         "selected": true,
-        "student": "<p>Set average bolt shear stress equal to maximum shaft shear stress and solve for theoretical bolt count.</p>",
-        "instructor": "<p>Equating 4<em>T</em>/(<em>n</em>&pi;<em>R d</em><sub>b</sub><sup>2</sup>) and 2<em>T</em>/(&pi;<em>r</em><sup>3</sup>) gives <em>n</em><sub>req</sub> = 2<em>r</em><sup>3</sup>/(<em>R d</em><sub>b</sub><sup>2</sup>) = <strong>{{coupling_n_req}}</strong>. Torque and &pi; cancel because both stresses scale linearly with torque.</p>",
+        "student": "<p>Apply the prescribed stress-comparison criterion and solve symbolically for the required number of bolts.</p>",
+        "instructor": "<p>Using the limiting condition &tau;<sub>b</sub> = &tau;<sub>shaft,max</sub>, set 4<em>T</em>/(<em>n</em>&pi;<em>R d</em><sub>b</sub><sup>2</sup>) = 2<em>T</em>/(&pi;<em>r</em><sup>3</sup>). Solving gives <em>n</em><sub>req</sub> = 2<em>r</em><sup>3</sup>/(<em>R d</em><sub>b</sub><sup>2</sup>) = <strong>{{coupling_n_req}}</strong>. The transmitted torque and &pi; cancel because both stresses scale linearly with torque.</p>",
+        "gradingNotes": "<p>The equality is the limiting condition for this exercise. A selected integer configuration should satisfy &tau;<sub>b</sub> &le; &tau;<sub>shaft,max</sub>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q16",
+        "id": "m6",
+        "displayNumber": "M6",
         "title": "Practical Integer Selection",
         "type": "component selection",
         "difficulty": "intermediate",
         "tags": [
-          "ceiling",
-          "bolt pattern",
-          "integer design"
+          "ceiling function",
+          "integer bolt count",
+          "verification"
         ],
         "learningObjectives": [
-          "Convert theoretical count into an allowed bolt pattern."
+          "Convert the theoretical result into an implementable bolt count."
         ],
         "selected": true,
-        "student": "<p>Select the smallest allowed bolt pattern not less than the theoretical requirement.</p>",
-        "instructor": "<p>The smallest unrestricted integer is <strong>{{coupling_n_integer}} bolts</strong>. Applying the assigned pattern increment gives <strong>{{coupling_n_selected}} bolts</strong>. {{coupling_pattern_assessment}}</p>",
+        "student": "<p>Convert the theoretical bolt count into an implementable bolt-group configuration.</p>",
+        "instructor": "<p>Select <em>n</em><sub>selected</sub> = ceil[2<em>r</em><sup>3</sup>/(<em>R d</em><sub>b</sub><sup>2</sup>)] = <strong>{{coupling_n_selected}} bolts</strong>. If a symmetric bolt pattern or manufacturing convention requires a larger count, choose the next acceptable pattern. Then verify that &tau;<sub>b</sub> &le; &tau;<sub>shaft,max</sub>. {{coupling_stress_assessment}}</p>",
         "section": "analysis"
       },
       {
-        "id": "q17",
-        "title": "Selected-Pattern Verification",
-        "type": "design verification",
-        "difficulty": "intermediate",
-        "tags": [
-          "bolt stress",
-          "shaft stress",
-          "stress ratio"
-        ],
-        "learningObjectives": [
-          "Verify the selected bolt pattern against the criterion."
-        ],
-        "selected": true,
-        "student": "<p>Calculate bolt force and bolt shear stress for the selected pattern, then verify the stress inequality.</p>",
-        "instructor": "<p>Each selected bolt carries <strong>{{coupling_bolt_force_N}} N</strong>, producing <strong>&tau;<sub>b</sub> = {{coupling_bolt_tau_MPa}} MPa</strong>. The ratio &tau;<sub>b</sub>/&tau;<sub>shaft,max</sub> is <strong>{{coupling_stress_ratio}}</strong>. {{coupling_stress_assessment}}</p>",
-        "section": "analysis"
-      },
-      {
-        "id": "q18",
-        "title": "Sensitivity and Design Modification",
+        "id": "m7",
+        "displayNumber": "M7",
+        "title": "Sensitivity and Design Interpretation",
         "type": "design reasoning",
         "difficulty": "intermediate",
         "tags": [
           "scaling",
           "shaft radius",
-          "bolt geometry"
+          "bolt-circle radius",
+          "bolt diameter"
         ],
         "learningObjectives": [
-          "Interpret parameter sensitivity from the symbolic result."
+          "Interpret sensitivity using the symbolic bolt-count relation."
         ],
         "selected": true,
-        "student": "<p>Explain how changing <em>r</em>, <em>R</em>, or <em>d</em><sub>b</sub> affects required bolt count.</p>",
-        "instructor": "<p>The requirement scales as <em>n</em> proportional to <em>r</em><sup>3</sup>, 1/<em>R</em>, and 1/<em>d</em><sub>b</sub><sup>2</sup>. Increasing bolt-circle radius or bolt diameter reduces required count, while increasing shaft radius raises it strongly under this stress-matching criterion.</p>",
+        "student": "<p>Explain how shaft radius, bolt-circle radius, and bolt diameter affect the required bolt count.</p>",
+        "instructor": "<p>From <em>n</em><sub>req</sub> = 2<em>r</em><sup>3</sup>/(<em>R d</em><sub>b</sub><sup>2</sup>), the required bolt count scales with <em>r</em><sup>3</sup>, inversely with <em>R</em>, and inversely with <em>d</em><sub>b</sub><sup>2</sup>. A larger shaft radius increases the required count strongly under the prescribed criterion, while a larger bolt-circle radius or larger bolt diameter reduces it.</p>",
         "section": "analysis"
       },
       {
-        "id": "q19",
-        "title": "Engineering Assessment",
+        "id": "m8",
+        "displayNumber": "M8",
+        "title": "Engineering Assessment and Recommendation",
         "type": "engineering judgment",
-        "difficulty": "advanced",
+        "difficulty": "intermediate",
         "tags": [
           "recommendation",
-          "limitations",
-          "coupling design"
+          "verification",
+          "model limitations"
         ],
         "learningObjectives": [
-          "Make a bounded bolt-pattern recommendation."
+          "Make a bounded coupling recommendation."
         ],
         "selected": true,
-        "student": "<p>Provide a concise mechanics-based recommendation for the bolt pattern and identify omitted design checks.</p>",
-        "instructor": "<p>{{coupling_recommendation}}</p><p>A complete design must also check bolt bearing and fatigue, flange strength and flexure, preload and friction, shaft-hub details, fit, alignment, stress concentrations, and applicable coupling standards.</p>",
-        "gradingNotes": "<p>The recommendation must be limited to the stated stress-matching model.</p>",
+        "student": "<p>Using the derived relation, state how the final bolt pattern should be selected and identify one limitation of the simplified model.</p>",
+        "instructor": "<p>{{coupling_recommendation}}</p><p>The simplified result does not constitute a complete coupling design because bolt preload, friction, fatigue, bearing, flange deformation, fit, keys or splines, and applicable coupling standards are not evaluated.</p>",
+        "gradingNotes": "<p>The final recommendation should remain a limited mechanics-based selection rather than a claim of complete industrial design acceptance.</p>",
         "section": "analysis"
       }
     ],
@@ -2014,7 +2009,7 @@ window.PROBLEM_CATALOG = [
       {
         "id": "section-a",
         "title": "Homework Version A - baseline flanged coupling",
-        "description": "Default sequence for shaft stress, bolt-group equilibrium, symbolic bolt count, practical selection, and verification.",
+        "description": "Faculty-reviewed sequence for physical interpretation, student idealization, shaft torsion, bolt-group equilibrium, symbolic bolt count, practical integer selection, and verification.",
         "selectedQuestions": [
           "q1",
           "q2",
@@ -2025,23 +2020,20 @@ window.PROBLEM_CATALOG = [
           "q7",
           "q8",
           "q9",
-          "q10",
-          "q11",
-          "q12",
-          "q13",
-          "q14",
-          "q15",
-          "q16",
-          "q17",
-          "q18",
-          "q19"
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8"
         ],
         "variables": {
           "T": 2000,
           "r": 30,
           "R": 100,
-          "d_b": 10,
-          "n_step": 1
+          "d_b": 10
         }
       }
     ]

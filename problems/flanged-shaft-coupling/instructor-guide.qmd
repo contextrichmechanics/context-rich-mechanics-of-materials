@@ -1,5 +1,5 @@
 ---
-title: "Instructor Guide - Industrial Flanged Shaft Coupling"
+title: "Instructor Guide - Bolt-Group Design for an Industrial Flanged Shaft Coupling"
 subtitle: "Representative Answers and Evaluation Guidance"
 author: "Context-Rich Mechanics of Materials Library"
 format:
@@ -8,7 +8,7 @@ format:
 
 # Purpose
 
-Award credit for a correct torque load path, solid-shaft torsion derivation, bolt-group equilibrium, average bolt shear stress, symbolic stress matching, practical integer selection, and bounded engineering recommendation.
+This problem develops load-path reasoning, shaft torsional stress, torque equilibrium, direct shear in bolts, symbolic design, sensitivity interpretation, and engineering judgment. Award credit for a correct torque load path, solid-shaft torsion derivation, bolt-group equilibrium, average bolt shear stress, symbolic stress matching, practical integer selection, and a recommendation bounded by the model assumptions.
 
 # Problem Context
 
@@ -29,12 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-The base model assumes rigid flanges, identical equally spaced bolts, uniform direct shear, static torque, and no frictional transfer from bolt preload. A complete coupling design also requires bolt bearing, fatigue, flange strength and flexure, shaft and hub details, preload, fit, alignment, stress concentrations, and applicable standards.
+The base model assumes solid circular shafts, rigid flanges, identical equally spaced bolts, equal tangential load sharing, average direct shear in each bolt, static torque transmission, and no frictional torque transfer from bolt preload. Bearing stress, flange flexure, fatigue, fit, stress concentrations, keys or splines, installation preload, and applicable coupling standards are excluded. The prescribed stress-equality criterion is a MEEN 305 mechanics comparison, not a universal coupling-design standard.
 
 # Supplemental Assessment Structure
 
-- context interpretation and idealization: 20%;
-- shaft and bolt stress derivations: 30%;
-- symbolic bolt-count derivation: 20%;
-- integer selection and numerical verification: 20%;
+- context interpretation: 15%;
+- student idealization: 15%;
+- shaft analysis: 20%;
+- connector analysis: 25%;
+- design selection: 15%;
 - engineering recommendation and limitations: 10%.

@@ -1,18 +1,18 @@
 ---
 title: "Bolt-Group Design for an Industrial Flanged Shaft Coupling"
-description: "A context-rich coupling problem comparing shaft torsion with direct shear in a circular bolt group."
+description: "An industrial coupling problem on torsion, shear, torque equilibrium, bolt groups, and connector sizing."
 image: "assets/coupling-industry-context.png"
 categories: [context-rich, mechanics-of-materials, design]
-mechanics_concepts: [torsion, shear stress, torque equilibrium, bolt groups, shaft design]
-course_topics: [torsion, direct shear, torque equilibrium, bolt groups, connector sizing]
+mechanics_concepts: [torsion, shear, torque, bolt, torsional shear stress, direct shear, torque equilibrium, bolt groups, shaft design]
+course_topics: [torsion, shear, torque, bolt, torsion of circular shafts, direct shear in connectors, torque equilibrium, connector sizing]
 textbook_chapters: [Torsion of circular shafts, Direct shear in connectors, Torque equilibrium, Connector sizing]
 problem_types: [load-path analysis, symbolic derivation, connector sizing, engineering evaluation]
-competencies: [torque equilibrium, shaft stress calculation, bolt shear calculation, integer design selection, engineering judgment]
-industries: [pump drives, compressors, mixers, conveyors, rotating machinery]
+competencies: [load-path reasoning, shaft torsional stress, torque equilibrium, direct shear in bolts, symbolic design, sensitivity interpretation, engineering judgment]
+industries: [industrial power-transmission systems, motors, gearboxes, pump drives, compressors, mixers, conveyors, process machinery, rotating machinery]
 difficulty: "Intermediate"
-status: "Published"
+status: "Faculty-reviewed draft"
 problem_id: "MOS-COUPLING-017"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
