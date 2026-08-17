@@ -1,7 +1,7 @@
-# Graph Report - context-rich-mos-quarto-v3  (2026-08-14)
+# Graph Report - context-rich-mos-quarto-v3  (2026-08-16)
 
 ## Corpus Check
-- 217 files · ~2,712,457 words
+- 217 files · ~2,738,083 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3ad17ea6`
+- Built from commit: `03e2d4cc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,13 +35,13 @@
 - cantilevered-operator-seat-bending/instructor-guide.qmd
 - flanged-shaft-coupling/instructor-guide.qmd
 - industrial-robot-arm-shear-moment/instructor-guide.qmd
-- lever-actuated-wire-support/instructor-guide.qmd
+- industrial-line-shaft-shear-moment/instructor-guide.qmd
 - motor-driven-shaft-torsion/instructor-guide.qmd
 - multi-gear-drive-shaft/instructor-guide.qmd
 - precast-concrete-column-transport/instructor-guide.qmd
 - spring-loaded-coupling-rod/instructor-guide.qmd
 - steam-pipe-thermal-expansion/instructor-guide.qmd
-- stepped-steel-tension-link/instructor-guide.qmd
+- industrial-maintenance-access-beam-combined-stress/instructor-guide.qmd
 - suspended-equipment-platform/instructor-guide.qmd
 - turbine-shaft-distributed-torque/instructor-guide.qmd
 - variable-radius-tapered-shaft/instructor-guide.qmd
@@ -61,7 +61,7 @@
 - Bolt-Group Design for an Industrial Flanged Shaft Coupling
 - Hydraulic Press Punching Shear and Bearing Stress Check
 - Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm
-- Lever-Actuated Wire Support Mechanism
+- Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft
 - Motor-Driven Shaft Design for a Belt-Transmission System
 - Mountain Bike Rear Suspension Linkage: Pin Shear and Factor of Safety
 - Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft
@@ -69,7 +69,7 @@
 - Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load
 - Spring-Loaded Coupling Rod Assembly Under Tensile Load
 - Thermal Expansion Force in a Steam Pipe Between Turbine Housings
-- Maximum Axial Load and Elongation of a Stepped Steel Tension Link
+- Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam
 - Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables
 - Suspended Industrial Equipment Platform Supported by Stainless-Steel Wires
 - Torsional Response of a Multi-Stage Turbine Rotor
@@ -191,7 +191,7 @@ Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Con
 Cohesion: 0.22
 Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
 
-### Community 20 - "lever-actuated-wire-support/instructor-guide.qmd"
+### Community 20 - "industrial-line-shaft-shear-moment/instructor-guide.qmd"
 Cohesion: 0.22
 Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
 
@@ -215,7 +215,7 @@ Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Con
 Cohesion: 0.22
 Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
 
-### Community 26 - "stepped-steel-tension-link/instructor-guide.qmd"
+### Community 26 - "industrial-maintenance-access-beam-combined-stress/instructor-guide.qmd"
 Cohesion: 0.22
 Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
 
@@ -295,9 +295,9 @@ Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Hydraulic 
 Cohesion: 0.33
 Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm, System Components
 
-### Community 46 - "Lever-Actuated Wire Support Mechanism"
+### Community 46 - "Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft"
 Cohesion: 0.33
-Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Lever-Actuated Wire Support Mechanism, Main Engineering Goal, System Components
+Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft, System Components
 
 ### Community 47 - "Motor-Driven Shaft Design for a Belt-Transmission System"
 Cohesion: 0.33
@@ -327,9 +327,9 @@ Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engin
 Cohesion: 0.33
 Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components, Thermal Expansion Force in a Steam Pipe Between Turbine Housings
 
-### Community 54 - "Maximum Axial Load and Elongation of a Stepped Steel Tension Link"
+### Community 54 - "Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam"
 Cohesion: 0.33
-Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Maximum Axial Load and Elongation of a Stepped Steel Tension Link, System Components
+Nodes (5): Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components
 
 ### Community 55 - "Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables"
 Cohesion: 0.33

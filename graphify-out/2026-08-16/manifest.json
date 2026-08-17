@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1786688912.1711812,
-    "ast_hash": "4087f26900a59c9e7b6ab3b198fdaa47",
+    "mtime": 1786927898.3001037,
+    "ast_hash": "cc754fa8c188bf8fdf70865cbd801f0d",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1786688912.1724489,
-    "ast_hash": "5568a30666da1f6358076606d9010f81",
+    "mtime": 1786927898.3010373,
+    "ast_hash": "5e961ed44f3b699e971df88ccdbd413b",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1786688889.2587752,
-    "ast_hash": "08d944b60ce00466a76be14159a87ed8",
+    "mtime": 1786927740.9592364,
+    "ast_hash": "d8a8a5f8bef4b6a8de6fa3b35178dc4e",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1786688889.3460932,
-    "ast_hash": "b8e958645add6bb5c3cfde03b7dd0a77",
+    "mtime": 1786927740.9627304,
+    "ast_hash": "d0ea78990d6257f6779d386f14b408fb",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1786689057.3008995,
-    "ast_hash": "8e712a71873cd04ca9a9f438318375f2",
+    "mtime": 1786927740.96716,
+    "ast_hash": "72fcede7685b31e4c2c449ce2760d400",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -324,26 +324,6 @@
     "ast_hash": "c9a236ceba81be4d6e9a77584a04f7df",
     "semantic_hash": ""
   },
-  "problems/lever-actuated-wire-support/_student-problem.qmd": {
-    "mtime": 1785779563.3023033,
-    "ast_hash": "0e28829f2b8a8419fcf3d29a6678d391",
-    "semantic_hash": ""
-  },
-  "problems/lever-actuated-wire-support/index.qmd": {
-    "mtime": 1785854455.4314585,
-    "ast_hash": "ede7746b4c5fd80c8e4e0db260ddf0f1",
-    "semantic_hash": ""
-  },
-  "problems/lever-actuated-wire-support/instructor-guide.qmd": {
-    "mtime": 1785818550.213449,
-    "ast_hash": "78eb2675e97e5d24a5b51099f55bfad0",
-    "semantic_hash": ""
-  },
-  "problems/lever-actuated-wire-support/student-packet.qmd": {
-    "mtime": 1785818550.2053986,
-    "ast_hash": "11ade9544a32f6be3812d438e1e0598f",
-    "semantic_hash": ""
-  },
   "problems/motor-driven-shaft-torsion/_student-problem.qmd": {
     "mtime": 1785782322.802325,
     "ast_hash": "67f0802b57cfcb5753daa7f2f8f41d78",
@@ -482,26 +462,6 @@
   "problems/steam-pipe-thermal-expansion/student-packet.qmd": {
     "mtime": 1785818550.2082136,
     "ast_hash": "53ef6bca3661d2ebb469d3ef76311894",
-    "semantic_hash": ""
-  },
-  "problems/stepped-steel-tension-link/_student-problem.qmd": {
-    "mtime": 1785778577.9935768,
-    "ast_hash": "68ceab8e825e73400f545550114bda26",
-    "semantic_hash": ""
-  },
-  "problems/stepped-steel-tension-link/index.qmd": {
-    "mtime": 1785854457.161208,
-    "ast_hash": "90652ec048b7dd0335e1c3468b77aa24",
-    "semantic_hash": ""
-  },
-  "problems/stepped-steel-tension-link/instructor-guide.qmd": {
-    "mtime": 1785818550.2165084,
-    "ast_hash": "b5d85592d6115a3ec785ccda1d0b9b2b",
-    "semantic_hash": ""
-  },
-  "problems/stepped-steel-tension-link/student-packet.qmd": {
-    "mtime": 1785818550.2085292,
-    "ast_hash": "6887d7c149a406c0dd5bf5f798c07402",
     "semantic_hash": ""
   },
   "problems/suspended-equipment-cable-system/_student-problem.qmd": {
@@ -709,16 +669,6 @@
     "ast_hash": "c7ac51b2ca504c9c8845127e20a33e6e",
     "semantic_hash": ""
   },
-  "problems/lever-actuated-wire-support/assets/lever-industry-context.png": {
-    "mtime": 1785779490.5028603,
-    "ast_hash": "2030accbc3cae8721f4bdfa93f9e6963",
-    "semantic_hash": ""
-  },
-  "problems/lever-actuated-wire-support/assets/lever-instructor-idealization.png": {
-    "mtime": 1785779490.5068285,
-    "ast_hash": "51e7e95b3f51047b6652fae8f22ec626",
-    "semantic_hash": ""
-  },
   "problems/motor-driven-shaft-torsion/assets/shaft-industry-context.png": {
     "mtime": 1785782193.1385968,
     "ast_hash": "74c2897541455a6861d7db4032afb42d",
@@ -794,16 +744,6 @@
     "ast_hash": "4d0d7cf90d197606976b6a05b5953d98",
     "semantic_hash": ""
   },
-  "problems/stepped-steel-tension-link/assets/link-industry-context.png": {
-    "mtime": 1785778505.434434,
-    "ast_hash": "072d74ff5d41f74ea6e6c3617dd092f0",
-    "semantic_hash": ""
-  },
-  "problems/stepped-steel-tension-link/assets/link-instructor-idealization.png": {
-    "mtime": 1785778505.438574,
-    "ast_hash": "06cb00507779d831dfe9cbfebc0b73fa",
-    "semantic_hash": ""
-  },
   "problems/suspended-equipment-cable-system/assets/cable-industry-context.png": {
     "mtime": 1785184192.5239465,
     "ast_hash": "b98091be46d1e638c37a79dcbefe3b65",
@@ -852,6 +792,66 @@
   "templates/problem-package/assets/instructor-idealization-placeholder.svg": {
     "mtime": 1785855154.7835584,
     "ast_hash": "1e12c75f6a0ab1048aea1f4bd9017c1a",
+    "semantic_hash": ""
+  },
+  "problems/industrial-line-shaft-shear-moment/_student-problem.qmd": {
+    "mtime": 1786693806.218398,
+    "ast_hash": "a0f24d53eeacd3fb97c540aa8d73aa34",
+    "semantic_hash": ""
+  },
+  "problems/industrial-line-shaft-shear-moment/index.qmd": {
+    "mtime": 1786693806.296543,
+    "ast_hash": "b8ac820338b2af7d4a240122aa0f3008",
+    "semantic_hash": ""
+  },
+  "problems/industrial-line-shaft-shear-moment/instructor-guide.qmd": {
+    "mtime": 1786693806.4500663,
+    "ast_hash": "4ff2b6724390c3bd0f927aeb5c7becd7",
+    "semantic_hash": ""
+  },
+  "problems/industrial-line-shaft-shear-moment/student-packet.qmd": {
+    "mtime": 1786693806.37302,
+    "ast_hash": "b98bd40b308cc923ecd0983660e6903d",
+    "semantic_hash": ""
+  },
+  "problems/industrial-maintenance-access-beam-combined-stress/_student-problem.qmd": {
+    "mtime": 1786700263.6167433,
+    "ast_hash": "3332303188d0e56a8226b8c731a863d1",
+    "semantic_hash": ""
+  },
+  "problems/industrial-maintenance-access-beam-combined-stress/index.qmd": {
+    "mtime": 1786700263.6938357,
+    "ast_hash": "ac31da21f9d396106f7f1db77ee13248",
+    "semantic_hash": ""
+  },
+  "problems/industrial-maintenance-access-beam-combined-stress/instructor-guide.qmd": {
+    "mtime": 1786700263.849451,
+    "ast_hash": "c5dab9998f93bae261572cef87aca347",
+    "semantic_hash": ""
+  },
+  "problems/industrial-maintenance-access-beam-combined-stress/student-packet.qmd": {
+    "mtime": 1786700263.7711415,
+    "ast_hash": "ddfb5cf0ff962a9a17125f24dc8d617a",
+    "semantic_hash": ""
+  },
+  "problems/industrial-line-shaft-shear-moment/assets/line-shaft-industry-context.png": {
+    "mtime": 1786693631.9625168,
+    "ast_hash": "f00311fe88bbbe7072ebbb6edd18dc80",
+    "semantic_hash": ""
+  },
+  "problems/industrial-line-shaft-shear-moment/assets/line-shaft-instructor-idealization.png": {
+    "mtime": 1786693631.967192,
+    "ast_hash": "e05c9331d943836bdae6aa2e547818df",
+    "semantic_hash": ""
+  },
+  "problems/industrial-maintenance-access-beam-combined-stress/assets/access-beam-industry-context.png": {
+    "mtime": 1786700070.9994013,
+    "ast_hash": "99d104fd318ee1f7d487ef38e6e4ba8c",
+    "semantic_hash": ""
+  },
+  "problems/industrial-maintenance-access-beam-combined-stress/assets/access-beam-instructor-idealization.png": {
+    "mtime": 1786700071.0044796,
+    "ast_hash": "2eea3c551257032a8fd9729b77eaa97f",
     "semantic_hash": ""
   }
 }

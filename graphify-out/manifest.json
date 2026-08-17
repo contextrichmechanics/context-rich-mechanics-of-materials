@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1786927898.3001037,
-    "ast_hash": "cc754fa8c188bf8fdf70865cbd801f0d",
+    "mtime": 1786939173.255526,
+    "ast_hash": "14a01bf90ce66cf88fe1abe14096d9b0",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1786927898.3010373,
-    "ast_hash": "5e961ed44f3b699e971df88ccdbd413b",
+    "mtime": 1786939173.2586052,
+    "ast_hash": "157a3b25a56a59def3ed121ce2b5f435",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1786927740.9592364,
-    "ast_hash": "d8a8a5f8bef4b6a8de6fa3b35178dc4e",
+    "mtime": 1786939083.8085856,
+    "ast_hash": "f6b9775e1ebe40b19c52e88424d177f9",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1786927740.9627304,
-    "ast_hash": "d0ea78990d6257f6779d386f14b408fb",
+    "mtime": 1786939083.8098354,
+    "ast_hash": "6e77fd282d0a7a78366a774360a11f4c",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1786927740.96716,
-    "ast_hash": "72fcede7685b31e4c2c449ce2760d400",
+    "mtime": 1786939083.810859,
+    "ast_hash": "fcc96a13c4ed5c187d27a10739dea8da",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -147,26 +147,6 @@
   "problems/axial-rod-tube-assembly/student-packet.qmd": {
     "mtime": 1785818550.2018135,
     "ast_hash": "7d690386677b8e9ecf1a8212cf577d0c",
-    "semantic_hash": ""
-  },
-  "problems/bonded-steel-plate-splice-joint/_student-problem.qmd": {
-    "mtime": 1785781824.1871662,
-    "ast_hash": "4712205eabf3a23ff69ee7ce37f81803",
-    "semantic_hash": ""
-  },
-  "problems/bonded-steel-plate-splice-joint/index.qmd": {
-    "mtime": 1785854453.9048872,
-    "ast_hash": "a45ceb361d8d9cf5915db158bfa62ee2",
-    "semantic_hash": ""
-  },
-  "problems/bonded-steel-plate-splice-joint/instructor-guide.qmd": {
-    "mtime": 1785818550.2108264,
-    "ast_hash": "4531e7c064bba4c0ff1fb3c39925c0f5",
-    "semantic_hash": ""
-  },
-  "problems/bonded-steel-plate-splice-joint/student-packet.qmd": {
-    "mtime": 1785818550.2022252,
-    "ast_hash": "dc44e89efd36e7b74c3ab39428dd2a70",
     "semantic_hash": ""
   },
   "problems/cantilevered-operator-seat-bending/_student-problem.qmd": {
@@ -582,16 +562,6 @@
   "problems/axial-rod-tube-assembly/assets/axial-instructor-idealization.png": {
     "mtime": 1785774252.7835288,
     "ast_hash": "2dec10aeab28c7a878d04c5145b16711",
-    "semantic_hash": ""
-  },
-  "problems/bonded-steel-plate-splice-joint/assets/plate-industry-context.png": {
-    "mtime": 1785780890.2517314,
-    "ast_hash": "160a00dbc9b16854c3da6901cf71f6b6",
-    "semantic_hash": ""
-  },
-  "problems/bonded-steel-plate-splice-joint/assets/plate-instructor-idealization.png": {
-    "mtime": 1785780890.2562673,
-    "ast_hash": "f408704e9430f8f1dad8003c98b4f795",
     "semantic_hash": ""
   },
   "problems/cantilevered-operator-seat-bending/assets/seat-industry-context.png": {

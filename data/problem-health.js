@@ -10,16 +10,6 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
-    "id": "MOS-PLATE-015",
-    "slug": "bonded-steel-plate-splice-joint",
-    "title": "Bonded A992 Steel Plate Splice Joint",
-    "status": "OK",
-    "variables": 9,
-    "questions": 19,
-    "variants": 1,
-    "warnings": []
-  },
-  {
     "id": "MOS-SEAT-023",
     "slug": "cantilevered-operator-seat-bending",
     "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",
