@@ -52,7 +52,7 @@
   {
     "key": "k",
     "symbol": "k",
-    "label": "Axial stiffness of each turbine attachment",
+    "label": "Attachment stiffness at each turbine",
     "value": 80000,
     "unit": "kip/in",
     "min": 1,
@@ -62,7 +62,7 @@
   {
     "key": "E",
     "symbol": "E",
-    "label": "Elastic modulus of pipe steel",
+    "label": "Elastic modulus of A-36 steel",
     "value": 29000,
     "unit": "ksi",
     "min": 1000,
@@ -82,7 +82,7 @@
   {
     "key": "sigma_y",
     "symbol": "sigma_y",
-    "label": "Pipe material yield stress",
+    "label": "Yield stress of A-36 steel",
     "value": 40,
     "unit": "ksi",
     "min": 1,

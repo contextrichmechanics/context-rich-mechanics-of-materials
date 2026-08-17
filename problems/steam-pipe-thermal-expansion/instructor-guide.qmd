@@ -10,7 +10,7 @@ format:
 
 # Purpose
 
-These answers are representative. Award credit for a correct thermal load path, hollow-pipe area, consistent kip-inch units, a compatibility equation containing both support displacements, and an engineering recommendation that stays within the model's limits.
+These answers are representative. Award credit for correct physical-system interpretation, a defensible one-dimensional idealization, a complete thermal load path, consistent kip-inch units, a compatibility equation containing both attachment movements, and an engineering assessment that stays within the model's limits.
 
 # Problem Context
 
@@ -35,14 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-The base model evaluates one-dimensional thermal deformation and average axial stress. A real piping assessment also requires internal-pressure stress, flange and bolt loads, gasket behavior, thermal gradients, creep, fatigue, pipe-routing flexibility, nozzle-load limits, stability, and applicable piping codes.
+The base model treats the pipe as a uniform hollow A-36 steel member at a uniform temperature and represents the flexibility of the two connected machines with equal linear axial springs. It evaluates one-dimensional thermal expansion, axial compatibility, thermally induced force, and average axial stress.
+
+The model excludes internal-pressure stress, bending, thermal gradients, creep, fatigue, detailed flange, bolt, gasket, and weld behavior, actual pipe-routing flexibility, nozzle-load limits, piping-code compliance, and finite-element analysis. Buckling is also excluded. The resulting stress comparison is a limited mechanics assessment, not acceptance of the installation for service.
 
 # Supplemental Assessment Structure
 
 Suggested weighting:
 
-- context interpretation and load path: 15%;
-- idealization and assumptions: 15%;
-- thermal expansion and compatibility: 30%;
-- force and stress calculations: 25%;
-- engineering recommendation and limitations: 15%.
+- context interpretation: 15%;
+- load path: 15%;
+- idealization: 15%;
+- compatibility: 25%;
+- force and stress calculations: 20%;
+- engineering decision: 10%.

@@ -4,20 +4,21 @@
 
 ### Engineering Context
 
-A power-plant engineering team is reviewing a short steel steam pipe connecting two turbine housings. The pipe is assembled at room temperature and later heats during operation as high-temperature steam flows through it.
+High-temperature steam piping is commonly connected to turbines, compressors, pumps, and other process equipment in power-generation and industrial facilities. During startup, the pipe temperature can rise substantially above the installation temperature, causing the pipe to expand.
 
-If free, the pipe would expand without axial thermal stress. In the actual assembly, the turbine attachment points provide finite axial restraint, so thermal deformation is shared between elastic deformation of the pipe and movement of both attachments.
+If the connected equipment and its supports were perfectly rigid, this thermal expansion would be strongly restrained and could generate large axial forces. In practice, the connected machinery and its mounting system have some flexibility, so part of the thermal expansion can be accommodated by movement of the equipment attachment locations.
+
+Engineers must estimate the resulting thermal force because excessive piping loads can increase pipe stress and transmit large loads into equipment connections. The present analysis focuses on one-dimensional thermal expansion and axial restraint rather than a complete piping-code or flange-design assessment.
 
 ![Industrial steam pipe connected between two rotating-machine housings.](assets/steam-industry-context.png){fig-alt="Industrial steel steam pipe connected by flanges between two turbine housings." width=92%}
 
 ### Main Engineering Goal
 
-Determine the thermally induced axial force exerted on each turbine housing and the corresponding axial stress in the pipe. Compare the stress with yield and make a limited engineering recommendation.
+Determine the axial force developed in the heated pipe due to restrained thermal expansion, determine the resulting pipe stress, and evaluate how flexibility of the connected equipment affects the thermal load.
 
 ### System Components
 
-- uniform hollow steel steam pipe AB;
-- turbine housings and attachment points A and B;
-- flanged and bolted pipe connections;
-- machine supports and foundation;
-- finite axial attachment flexibility at both ends.
+- steel steam pipe;
+- turbine / rotating-machine housings;
+- flanged pipe connections;
+- machine support structure / foundation.

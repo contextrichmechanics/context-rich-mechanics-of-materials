@@ -1,6 +1,6 @@
 ---
 title: "Student Packet - Steam Pipe Thermal Expansion"
-subtitle: "Thermal Strain, Support Flexibility, Compatibility, and Axial Stress"
+subtitle: "Thermal Strain, Axial Deformation, Support Flexibility, and Thermal Stress"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html:

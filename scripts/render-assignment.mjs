@@ -1230,9 +1230,9 @@ function variableMap(problem, currentValues) {
     const pipeStress = pipeForce / pipeArea;
     const stressMagnitude = Math.abs(pipeStress);
     const yieldRatio = stressMagnitude > 0 ? thermalYieldStress / stressMagnitude : Infinity;
-    values.thermal_inner_diameter_in = formatDerived(innerDiameter, 3);
-    values.thermal_pipe_area_in2 = formatDerived(pipeArea, 5);
-    values.thermal_delta_T_F = formatDerived(temperatureChange, 1);
+    values.thermal_inner_diameter_in = formatDerived(innerDiameter, 2);
+    values.thermal_pipe_area_in2 = formatDerived(pipeArea, 3);
+    values.thermal_delta_T_F = formatDerived(temperatureChange, 0);
     values.thermal_action = temperatureChange > 0 ? "free thermal expansion" : temperatureChange < 0 ? "free thermal contraction" : "no free thermal deformation";
     values.thermal_force_state = temperatureChange > 0 ? "compression" : temperatureChange < 0 ? "tension" : "no axial load";
     values.thermal_stress_state = temperatureChange > 0 ? "compression" : temperatureChange < 0 ? "tension" : "no axial stress";
@@ -1241,13 +1241,13 @@ function variableMap(problem, currentValues) {
     values.thermal_pipe_compliance_in_per_kip = formatDerived(pipeCompliance, 7);
     values.thermal_support_compliance_in_per_kip = formatDerived(supportCompliance, 7);
     values.thermal_total_compliance_in_per_kip = formatDerived(totalCompliance, 7);
-    values.thermal_pipe_force_kip = formatDerived(pipeForce, 2);
-    values.thermal_pipe_force_magnitude_kip = formatDerived(forceMagnitude, 2);
+    values.thermal_pipe_force_kip = formatDerived(pipeForce, 1);
+    values.thermal_pipe_force_magnitude_kip = formatDerived(forceMagnitude, 1);
     values.thermal_pipe_elastic_deformation_in = formatDerived(forceMagnitude * pipeCompliance, 5);
     values.thermal_support_displacement_each_in = formatDerived(forceMagnitude / thermalSupportStiffness, 5);
     values.thermal_support_displacement_total_in = formatDerived(forceMagnitude * supportCompliance, 5);
-    values.thermal_pipe_stress_ksi = formatDerived(pipeStress, 2);
-    values.thermal_pipe_stress_magnitude_ksi = formatDerived(stressMagnitude, 2);
+    values.thermal_pipe_stress_ksi = formatDerived(pipeStress, 1);
+    values.thermal_pipe_stress_magnitude_ksi = formatDerived(stressMagnitude, 1);
     values.thermal_yield_ratio = Number.isFinite(yieldRatio) ? formatDerived(yieldRatio, 2) : "not applicable";
     values.thermal_yield_assessment = stressMagnitude < thermalYieldStress
       ? `The average axial stress remains below the ${formatDerived(thermalYieldStress, 1)} ksi yield stress, but the limited margin requires further design review.`

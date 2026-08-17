@@ -1,18 +1,18 @@
 ---
 title: "Thermal Expansion Force in a Steam Pipe Between Turbine Housings"
-description: "A thermal-deformation problem on support flexibility, compatibility, axial pipe force, and stress."
+description: "A high-temperature steam-pipe problem on thermal strain, axial deformation, support flexibility, compatibility, thermal force, and thermal stress."
 image: "assets/steam-industry-context.png"
 categories:
   - context-rich
   - mechanics-of-materials
-  - design
-mechanics_concepts: [thermal strain, thermal stress, axial deformation, compatibility, support stiffness]
+  - analysis
+mechanics_concepts: [thermal strain, axial deformation, support flexibility, thermal stress, support stiffness, compatibility, axial force]
 course_topics:
   - thermal strain
   - axial deformation
-  - compatibility
-  - normal stress
   - support stiffness
+  - compatibility
+  - thermal stress
 textbook_chapters:
   - Thermal stress
   - Axial deformation
@@ -25,20 +25,23 @@ problem_types:
   - axial stress
   - engineering evaluation
 competencies:
-  - load path reasoning
-  - thermal expansion calculation
-  - spring-support idealization
-  - compatibility modeling
+  - thermal expansion
+  - load-path reasoning
+  - axial deformation
+  - support flexibility
+  - compatibility
+  - pipe force and stress
   - engineering judgment
 industries:
   - power generation
   - process plants
   - rotating machinery
   - high-temperature piping
+  - turbine connections
 difficulty: "Intermediate"
-status: "Published"
+status: "Faculty review"
 problem_id: "MOS-THERMAL-012"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
@@ -46,7 +49,7 @@ version: "0.1.0"
 ## Assignment Options
 
 ::: {.callout-note title="Recommended Starting Point"}
-Use the default packet for free thermal expansion, flexible-support compatibility, thermally induced force, pipe stress, and engineering assessment.
+Use the default packet for physical-system interpretation, student-generated idealization, thermal expansion, flexible-support compatibility, thermally induced pipe force and stress, and engineering assessment.
 :::
 
 [Student packet](student-packet.qmd){.btn .btn-primary}

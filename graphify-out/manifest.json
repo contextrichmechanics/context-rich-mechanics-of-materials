@@ -1,11 +1,11 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1786998967.449524,
-    "ast_hash": "0aca67af63c133bbc13b4707abf579ce",
+    "mtime": 1787000540.7478795,
+    "ast_hash": "818edf425ac5fd5de013f63221bff8bf",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1786998967.4501622,
+    "mtime": 1787000540.74894,
     "ast_hash": "07ac68e956b2bf4beeb83f777652baa8",
     "semantic_hash": ""
   },
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1786998945.2759154,
-    "ast_hash": "9ae1b2a6d7526d6e23b1223ff10207d8",
+    "mtime": 1787000487.2119699,
+    "ast_hash": "35a04c5d2a5a719f5ec87bcb86f14636",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1786998945.3544214,
-    "ast_hash": "e34dc0bf1f3ad4d82031fbe67bdf7bcd",
+    "mtime": 1787000487.2905874,
+    "ast_hash": "f0f150d0c598437a6c7da713abb6d6c1",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1786998945.4338305,
-    "ast_hash": "49241c2e812e36115ecdef16d57a2b0e",
+    "mtime": 1787000487.3702834,
+    "ast_hash": "cbb38703850e509579583297d7aa07c7",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -425,23 +425,23 @@
     "semantic_hash": ""
   },
   "problems/steam-pipe-thermal-expansion/_student-problem.qmd": {
-    "mtime": 1785777620.0849488,
-    "ast_hash": "1e7065fde719b0eec5e43732ae99bde7",
+    "mtime": 1787000151.490985,
+    "ast_hash": "75f4e1586a54cf15ef9f5297f6b28a08",
     "semantic_hash": ""
   },
   "problems/steam-pipe-thermal-expansion/index.qmd": {
-    "mtime": 1785854456.9468231,
-    "ast_hash": "260c6e3c0aa0b4a2ebeef7afa122825d",
+    "mtime": 1787000151.5705647,
+    "ast_hash": "8695479dc009d14d9f881820dc901b63",
     "semantic_hash": ""
   },
   "problems/steam-pipe-thermal-expansion/instructor-guide.qmd": {
-    "mtime": 1785818550.2160845,
-    "ast_hash": "925ec69ddc2cdb130724bb5efed8f51d",
+    "mtime": 1787000173.3889267,
+    "ast_hash": "86cfa538289ffd8f640233d780e77035",
     "semantic_hash": ""
   },
   "problems/steam-pipe-thermal-expansion/student-packet.qmd": {
-    "mtime": 1785818550.2082136,
-    "ast_hash": "53ef6bca3661d2ebb469d3ef76311894",
+    "mtime": 1787000151.650246,
+    "ast_hash": "77f44f390c8c346a7bf827d3f4e753cb",
     "semantic_hash": ""
   },
   "problems/suspended-equipment-cable-system/_student-problem.qmd": {

@@ -1,7 +1,7 @@
 {
   "id": "section-a",
-  "title": "Homework Version A - baseline steam pipe",
-  "description": "Default sequence for thermal expansion, flexible-support compatibility, pipe force, stress, and engineering assessment.",
+  "title": "Homework Version A - flexible turbine attachments",
+  "description": "Faculty-reviewed sequence for physical interpretation, idealization, thermal expansion, compatibility, pipe force, stress, and engineering assessment.",
   "selectedQuestions": [
     "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10",
     "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19"

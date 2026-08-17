@@ -4,7 +4,28 @@
   "title": "Thermal Expansion Force in a Steam Pipe Between Turbine Housings",
   "studentDocumentTitle": "Student Homework Questions",
   "instructorDocumentTitle": "Instructor Answers",
-  "summary": "A thermal-deformation problem integrating hollow-pipe geometry, support flexibility, compatibility, axial force, stress, and engineering assessment.",
+  "summary": "A high-temperature steam-pipe problem integrating thermal strain, axial deformation, support flexibility, compatibility, thermal force, and thermal stress.",
+  "primaryTopics": [
+    "Thermal Strain",
+    "Axial Deformation",
+    "Support Flexibility",
+    "Thermal Stress"
+  ],
+  "courseTopic": "Axial loading, thermal strain, axial deformation, support stiffness, compatibility, and thermal stress",
+  "targetLevel": "Intermediate MEEN 305",
+  "primaryMechanicsCompetencies": [
+    "Thermal expansion",
+    "Load-path reasoning",
+    "Axial deformation",
+    "Support flexibility",
+    "Compatibility",
+    "Pipe force and stress",
+    "Engineering judgment"
+  ],
+  "expectedStudentDeliverable": "Physical-system interpretation, student-generated idealization, compatibility equation, thermal force and stress calculation, and concise engineering assessment.",
+  "difficultyLevel": 3,
+  "geometryComplexity": "One-dimensional hollow pipe with two spring-supported equipment attachments.",
+  "problemDeliverableType": "Annotated model, compatibility equation, numerical force and stress calculation, and limited engineering recommendation.",
   "textbookChapters": [
     "Thermal stress",
     "Axial deformation",
@@ -39,6 +60,6 @@
   "idealizedImage": "assets/steam-instructor-idealization.png",
   "idealizedImageAlt": "Instructor reference idealization of a hollow steam pipe connected between two turbine attachment points represented by equal axial springs.",
   "source": "index.html",
-  "problemStatement": "<p>A power-plant engineering team is reviewing a short steel steam pipe connecting two turbine housings. The pipe is assembled at installation temperature <em>T</em><sub>1</sub> and later reaches operating temperature <em>T</em><sub>2</sub>. If free, the pipe would change length by <em>&alpha;L&Delta;T</em>.</p><p>The turbine attachment points provide finite axial restraint. They are modeled as identical linear springs, so the pipe's thermal deformation is shared between elastic deformation of the pipe and movement of both turbine attachments.</p>",
-  "engineeringGoal": "<p>Determine the thermally induced axial force exerted on each turbine housing and the corresponding axial stress in the pipe. Compare the stress with yield and make a limited recommendation about attachment flexibility and further design checks.</p>"
+  "problemStatement": "<p>High-temperature steam piping is commonly connected to turbines, compressors, pumps, and other process equipment in power-generation and industrial facilities. During startup, the pipe temperature can rise substantially above the installation temperature, causing the pipe to expand.</p><p>If the connected equipment and its supports were perfectly rigid, this thermal expansion would be strongly restrained and could generate large axial forces. In practice, the connected machinery and its mounting system have some flexibility, so part of the thermal expansion can be accommodated by movement of the equipment attachment locations.</p><p>Engineers must estimate the resulting thermal force because excessive piping loads can increase pipe stress and transmit large loads into equipment connections. The present analysis focuses on one-dimensional thermal expansion and axial restraint rather than a complete piping-code or flange-design assessment.</p>",
+  "engineeringGoal": "<p>Determine the axial force developed in the heated pipe due to restrained thermal expansion, determine the resulting pipe stress, and evaluate how flexibility of the connected equipment affects the thermal load.</p>"
 }

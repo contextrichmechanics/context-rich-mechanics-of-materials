@@ -1,7 +1,7 @@
 # Graph Report - context-rich-mos-quarto-v3  (2026-08-17)
 
 ## Corpus Check
-- 209 files · ~2,497,003 words
+- 209 files · ~2,435,663 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `63d48dcf`
+- Built from commit: `6c82fb9b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -69,7 +69,7 @@
 - Thermal Expansion Force in a Steam Pipe Between Turbine Housings
 - Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam
 - Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables
-- Suspended Industrial Equipment Platform Supported by Stainless-Steel Wires
+- Suspended Platform Assembly - Wire Elongation, Vertical Displacement, and Tilt
 - Torsional Response of a Multi-Stage Turbine Rotor
 - Torsional Stiffness of a Variable-Radius Aluminum Drive Shaft
 - __PROBLEM_TITLE__
@@ -325,9 +325,9 @@ Nodes (5): Combined-Stress Analysis of an Inclined Industrial Maintenance Access
 Cohesion: 0.33
 Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables, System Components
 
-### Community 56 - "Suspended Industrial Equipment Platform Supported by Stainless-Steel Wires"
+### Community 56 - "Suspended Platform Assembly - Wire Elongation, Vertical Displacement, and Tilt"
 Cohesion: 0.33
-Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Suspended Industrial Equipment Platform Supported by Stainless-Steel Wires, System Components
+Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Suspended Platform Assembly - Wire Elongation, Vertical Displacement, and Tilt, System Components
 
 ### Community 57 - "Torsional Response of a Multi-Stage Turbine Rotor"
 Cohesion: 0.33
