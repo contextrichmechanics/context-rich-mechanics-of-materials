@@ -1,6 +1,6 @@
 ---
-title: "Student Packet - Spring-Loaded Coupling Rod Assembly"
-subtitle: "Spring Compression, Axial Elongation, and Compatibility"
+title: "Student Packet - Automotive Suspension Compliance"
+subtitle: "Equivalent Spring-Loaded Axial Model"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html:

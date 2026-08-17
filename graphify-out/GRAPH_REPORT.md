@@ -1,7 +1,7 @@
 # Graph Report - context-rich-mos-quarto-v3  (2026-08-17)
 
 ## Corpus Check
-- 209 files · ~2,553,898 words
+- 209 files · ~2,497,003 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `eb8775cb`
+- Built from commit: `63d48dcf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -65,7 +65,7 @@
 - Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft
 - Optimal Support Placement for Transporting a Precast Concrete Column
 - Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load
-- Spring-Loaded Coupling Rod Assembly Under Tensile Load
+- Automotive Suspension Compliance Using an Equivalent Spring-Loaded Axial Model
 - Thermal Expansion Force in a Steam Pipe Between Turbine Housings
 - Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam
 - Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables
@@ -309,9 +309,9 @@ Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engin
 Cohesion: 0.33
 Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load, Main Engineering Goal, System Components
 
-### Community 52 - "Spring-Loaded Coupling Rod Assembly Under Tensile Load"
+### Community 52 - "Automotive Suspension Compliance Using an Equivalent Spring-Loaded Axial Model"
 Cohesion: 0.33
-Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Spring-Loaded Coupling Rod Assembly Under Tensile Load, System Components
+Nodes (5): Automotive Suspension Compliance Using an Equivalent Spring-Loaded Axial Model, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components
 
 ### Community 53 - "Thermal Expansion Force in a Steam Pipe Between Turbine Housings"
 Cohesion: 0.33

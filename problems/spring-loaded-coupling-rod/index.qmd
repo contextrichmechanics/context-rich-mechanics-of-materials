@@ -1,45 +1,47 @@
 ---
-title: "Spring-Loaded Coupling Rod Assembly Under Tensile Load"
-description: "A context-rich mechanics problem on spring compression, axial member elongation, load sharing, and deformation compatibility."
-image: "assets/spring-industry-context.png"
+title: "Automotive Suspension Compliance Using an Equivalent Spring-Loaded Axial Model"
+description: "An automotive suspension compliance problem using spring compression, axial-member elongation, load sharing, and deformation compatibility in an equivalent axial model."
+image: "assets/spring-industry-context.jpg"
 categories:
   - context-rich
   - mechanics-of-materials
   - design
-mechanics_concepts: [axial deformation, springs, stiffness, compatibility, load sharing]
+mechanics_concepts: [axial deformation, spring compression, deformation compatibility, spring stiffness, member elongation, rigid-body idealization, load sharing]
 course_topics:
   - axial deformation
-  - springs
-  - compatibility
-  - load sharing
-  - stiffness
+  - spring compression
+  - deformation compatibility
+  - spring stiffness
+  - member elongation
+  - rigid-body idealization
 textbook_chapters:
-  - Axial loading
   - Axial deformation
   - Mechanical springs
   - Displacement compatibility
+  - Axial loading
   - Statically determinate members
 problem_types:
-  - free-body diagram
+  - student-generated idealization
   - spring deformation
   - axial deformation
   - compatibility analysis
-  - engineering evaluation
+  - engineering interpretation
 competencies:
-  - load path reasoning
-  - rigid-plate idealization
-  - parallel-member load sharing
-  - deformation compatibility
+  - physical load-path interpretation
+  - student-generated idealization
+  - spring compression
+  - axial deformation of rods and bolts
+  - displacement compatibility
+  - stiffness-based displacement prediction
   - engineering judgment
 industries:
-  - industrial machine fixtures
-  - tensile test systems
-  - preload mechanisms
-  - mechanical actuator assemblies
+  - automotive suspension systems
+  - spring-damper assemblies
+  - suspension compliance evaluation
 difficulty: "Intermediate to advanced"
-status: "Published"
+status: "Faculty review"
 problem_id: "MOS-SPRING-010"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
@@ -47,7 +49,7 @@ version: "0.1.0"
 ## Assignment Options
 
 ::: {.callout-note title="Recommended Starting Point"}
-Use the default packet for load-path reasoning, parallel-bolt load sharing, spring compression, axial elongation, and displacement compatibility.
+Use the default packet for suspension-system interpretation, student-generated idealization, spring compression, axial-member deformation, load sharing, compatibility, and engineering interpretation.
 :::
 
 [Student packet](student-packet.qmd){.btn .btn-primary}

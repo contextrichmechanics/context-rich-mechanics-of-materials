@@ -1,15 +1,34 @@
 {
   "id": "MOS-SPRING-010",
   "slug": "spring-loaded-coupling-rod",
-  "title": "Spring-Loaded Coupling Rod Assembly Under Tensile Load",
+  "title": "Automotive Suspension Compliance Using an Equivalent Spring-Loaded Axial Model",
   "studentDocumentTitle": "Student Homework Questions",
   "instructorDocumentTitle": "Instructor Answers",
-  "summary": "A context-rich mechanics problem on spring compression, axial member elongation, load sharing, and deformation compatibility.",
+  "summary": "An automotive suspension compliance problem using spring compression, axial-member elongation, load sharing, and deformation compatibility in an equivalent axial model.",
+  "primaryTopics": [
+    "Axial Deformation",
+    "Spring Compression"
+  ],
+  "courseTopic": "Axial deformation, deformation compatibility, spring stiffness, member elongation, and rigid-body idealization",
+  "targetLevel": "Intermediate to advanced MEEN 305",
+  "primaryMechanicsCompetencies": [
+    "Physical load-path interpretation",
+    "Student-generated idealization",
+    "Spring compression",
+    "Axial deformation of rods and bolts",
+    "Compatibility",
+    "Stiffness-based displacement prediction",
+    "Engineering judgment"
+  ],
+  "expectedStudentDeliverable": "Context interpretation, simplified model, deformation calculations using the instructor reference model, final distance calculation, and a short mechanics-based interpretation.",
+  "difficultyLevel": 4,
+  "geometryComplexity": "Real automotive suspension context reduced to a 1D axial-member, rigid-plate, and spring idealization for analysis.",
+  "problemDeliverableType": "Context interpretation, annotated idealization, deformation calculations, final distance, and mechanics-based interpretation.",
   "textbookChapters": [
-    "Axial loading",
     "Axial deformation",
     "Mechanical springs",
     "Displacement compatibility",
+    "Axial loading",
     "Statically determinate members"
   ],
   "derivedPlaceholders": [
@@ -21,14 +40,12 @@
     "spring_rod_elongation_in",
     "spring_bolt_elongation_in",
     "spring_distance_increase_in",
-    "spring_final_distance_in",
-    "spring_dominant_component",
-    "spring_dominant_value_in"
+    "spring_final_distance_in"
   ],
-  "image": "assets/spring-industry-context.png",
+  "image": "assets/spring-industry-context.jpg",
   "idealizedImage": "assets/spring-instructor-idealization.png",
-  "idealizedImageAlt": "Instructor reference idealization of the spring-loaded coupling rod assembly with rigid plates, compression spring, side bolts, dimensions, and tensile load.",
+  "idealizedImageAlt": "Instructor reference equivalent axial model with rigid plates, a linear spring, a central coupling rod, two side bolts, dimensions, and equal and opposite tensile loads.",
   "source": "index.html",
-  "problemStatement": "<p>A mechanical design team is evaluating a spring-loaded coupling assembly used in an industrial machine fixture. The assembly uses a central coupling rod, three rigid plates, two side bolts, and a compression spring to transmit a tensile load while allowing a controlled change in spacing.</p><p>When the coupling rod is pulled, the spring compresses, the side bolts elongate, and the active central-rod segment elongates. The measured distance between lower plate C and upper eye E therefore changes through several deformation mechanisms and must be predicted using a compatible assembly model.</p>",
-  "engineeringGoal": "<p>Determine the final distance d between points C and E after the tensile load is applied, accounting for compression of the spring, elongation of the side bolts, and elongation of the active coupling-rod segment.</p>"
+  "problemStatement": "<p>Automotive suspension systems support the vehicle body while allowing controlled relative motion between the wheel-side suspension and the chassis as the vehicle travels over road irregularities. The coil spring provides elastic support and compliance, while the shock absorber or damper controls oscillatory motion. Suspension links and mounting structures transfer the resulting forces between the wheel assembly and the vehicle body.</p><p>For this MEEN 305 problem, the complete suspension geometry is not analyzed directly. Instead, the real suspension is used to motivate a simplified equivalent axial model that isolates spring compression and elastic deformation of load-carrying members. This allows the deformation compatibility of a compliant mechanical assembly to be studied using standard Mechanics of Materials concepts.</p>",
+  "engineeringGoal": "<p>Use a simplified equivalent mechanics model to determine how an applied load changes the separation between two reference locations, identify the dominant deformation contribution, and interpret what the result means for the compliance of the modeled suspension system.</p>"
 }

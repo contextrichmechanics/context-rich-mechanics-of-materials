@@ -1,6 +1,6 @@
 ---
-title: "Instructor Guide - Spring-Loaded Coupling Rod Assembly"
-subtitle: "Representative Answers and Evaluation Guidance"
+title: "Instructor Guide - Automotive Suspension Compliance"
+subtitle: "Equivalent Spring-Loaded Axial Model"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html:
@@ -10,7 +10,7 @@ format:
 
 # Purpose
 
-These answers are representative. Award credit for a complete load path, correct parallel-bolt load sharing, consistent kip-inch units, correct spring and axial-deformation equations, and a compatibility argument that explains the final C-to-E distance.
+This problem uses an automotive suspension spring-damper assembly as the industry context and then transitions to a deliberately simplified spring-loaded axial model for Mechanics of Materials analysis. The real system motivates load-path and compliance reasoning, while the instructor reference model supplies the geometry, variables, and loading needed for the numerical solution.
 
 # Problem Context
 
@@ -35,14 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-Strength factor of safety and buckling are intentionally excluded. The side bolts and central rod are in tension, while the spring is represented by its supplied stiffness. Service design would require allowable stresses, fatigue data, spring solid height and travel, thread and contact geometry, plate stiffness, tolerances, and applicable design criteria.
+Strength factor of safety and buckling are not part of the base problem. The base problem asks for displacement, not strength safety. The side bolts and central rod are in tension; the spring compresses but is represented only by its supplied stiffness. The equivalent quasi-static model does not include complete suspension geometry, velocity-dependent damping, bushing compliance, fatigue, or detailed connector behavior.
 
 # Supplemental Assessment Structure
 
 Suggested weighting:
 
-- context interpretation and load path: 15%;
-- idealization and assumptions: 20%;
-- component forces and load sharing: 20%;
-- spring and member deformation calculations: 30%;
-- compatibility and engineering recommendation: 15%.
+- context interpretation: 15%;
+- idealization: 20%;
+- load sharing: 20%;
+- deformation analysis: 30%;
+- engineering interpretation: 15%.

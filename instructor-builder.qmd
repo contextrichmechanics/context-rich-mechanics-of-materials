@@ -1536,10 +1536,12 @@ function substitute(template, problem) {
   });
 }
 
-function selectedQuestions(problem) {
+function selectedQuestions(problem, type) {
+  const audienceKey = type === "instructor" ? "includeInInstructorPacket" : "includeInStudentPacket";
   return problem.questions.filter((question) => {
     const checkbox = document.querySelector(`[data-question="${question.id}"]`);
-    return checkbox ? checkbox.checked : question.selected;
+    const selected = checkbox ? checkbox.checked : question.selected;
+    return selected && question[audienceKey] !== false;
   });
 }
 
@@ -1805,7 +1807,7 @@ function renderDocumentBody(type, embeddedImages = {}) {
   const problem = selectedProblem();
   const isInstructor = type === "instructor";
   const documentTitle = isInstructor ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
-  const questions = selectedQuestions(problem);
+  const questions = selectedQuestions(problem, type);
   const numberById = new Map(questions.map((question, index) => [question.id, index + 1]));
 
   return `
@@ -1950,7 +1952,7 @@ async function embeddedPacketImages(problem, questions) {
 
 async function fullHtmlDocument(type) {
   const problem = selectedProblem();
-  const questions = selectedQuestions(problem);
+  const questions = selectedQuestions(problem, type);
   const embeddedImages = await embeddedPacketImages(problem, questions);
   const title = type === "instructor" ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
 

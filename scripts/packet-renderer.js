@@ -1525,11 +1525,12 @@
     });
   }
 
-  function selectedQuestions(problem, variant) {
-    if (variant && Array.isArray(variant.selectedQuestions)) {
-      return (problem.questions || []).filter((question) => variant.selectedQuestions.includes(question.id));
-    }
-    return (problem.questions || []).filter((question) => question.selected);
+  function selectedQuestions(problem, variant, type) {
+    const configured = variant && Array.isArray(variant.selectedQuestions)
+      ? (problem.questions || []).filter((question) => variant.selectedQuestions.includes(question.id))
+      : (problem.questions || []).filter((question) => question.selected);
+    const audienceKey = type === "instructor" ? "includeInInstructorPacket" : "includeInStudentPacket";
+    return configured.filter((question) => question[audienceKey] !== false);
   }
 
   const questionSections = [
@@ -1667,7 +1668,7 @@
       : null;
     const values = variableMap(problem, variant?.variables || {});
     const isInstructor = options.type === "instructor";
-    const questions = selectedQuestions(problem, variant);
+    const questions = selectedQuestions(problem, variant, options.type);
     const numberById = new Map(questions.map((question, index) => [question.id, index + 1]));
     const title = isInstructor ? "Selected Questions and Answers" : "Selected Homework Questions";
 

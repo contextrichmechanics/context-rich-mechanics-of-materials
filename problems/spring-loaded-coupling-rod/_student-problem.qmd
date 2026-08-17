@@ -1,23 +1,22 @@
 # Context-Rich Solid Mechanics Problem
 
-## Spring-Loaded Coupling Rod Assembly Under Tensile Load
+## Automotive Suspension Compliance Using an Equivalent Spring-Loaded Axial Model
 
 ### Engineering Context
 
-A mechanical design team is evaluating a spring-loaded coupling assembly used in an industrial machine fixture. The assembly uses a central coupling rod, rigid plates, side bolts, and a compression spring to transmit tensile load while allowing a controlled change in spacing. Similar arrangements appear in test fixtures, spring-return mechanisms, vibration-isolation hardware, and preload devices.
+Automotive suspension systems support the vehicle body while allowing controlled relative motion between the wheel-side suspension and the chassis as the vehicle travels over road irregularities. The coil spring provides elastic support and compliance, while the shock absorber or damper controls oscillatory motion. Suspension links and mounting structures transfer the resulting forces between the wheel assembly and the vehicle body.
 
-When the coupling rod is pulled, the spring compresses, the side bolts elongate, and the active coupling-rod segment elongates. The distance between lower plate C and upper eye E therefore changes through several deformation mechanisms.
+For this MEEN 305 problem, the complete suspension geometry is not analyzed directly. Instead, the real suspension is used to motivate a simplified equivalent axial model that isolates spring compression and elastic deformation of load-carrying members. This allows the deformation compatibility of a compliant mechanical assembly to be studied using standard Mechanics of Materials concepts.
 
-![Industrial spring-loaded coupling assembly installed in a test fixture.](assets/spring-industry-context.png){fig-alt="Industrial spring-loaded coupling rod assembly with rigid plates, side bolts, and compression spring." width=80%}
+![Automotive suspension spring-damper assembly used as the real-system context image.](assets/spring-industry-context.jpg){fig-alt="Automotive suspension spring-damper assembly viewed from beneath a vehicle." width=80%}
 
 ### Main Engineering Goal
 
-Determine the final distance d between points C and E after loading by accounting for spring compression, side-bolt elongation, and active coupling-rod elongation.
+Use a simplified equivalent mechanics model to determine how an applied load changes the separation between two reference locations, identify the dominant deformation contribution, and interpret what the result means for the compliance of the modeled suspension system.
 
 ### System Components
 
-- central coupling rod and eye E;
-- rigid plates A, B, and C;
-- compression spring between A and B;
-- identical side bolts connecting A and C;
-- nuts and collars that transfer load.
+- coil spring;
+- shock absorber / damper;
+- lower suspension control arm;
+- vehicle body / chassis mounting structure.

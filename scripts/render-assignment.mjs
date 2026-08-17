@@ -1592,11 +1592,12 @@ function substitute(template, problem, currentValues) {
   });
 }
 
-function selectedQuestions(problem, variant) {
-  if (variant?.selectedQuestions) {
-    return problem.questions.filter((question) => variant.selectedQuestions.includes(question.id));
-  }
-  return problem.questions.filter((question) => question.selected);
+function selectedQuestions(problem, variant, type) {
+  const configured = variant?.selectedQuestions
+    ? problem.questions.filter((question) => variant.selectedQuestions.includes(question.id))
+    : problem.questions.filter((question) => question.selected);
+  const audienceKey = type === "instructor" ? "includeInInstructorPacket" : "includeInStudentPacket";
+  return configured.filter((question) => question[audienceKey] !== false);
 }
 
 const questionSections = [
@@ -1718,7 +1719,7 @@ function renderBody(problem, variant, type) {
   const isInstructor = type === "instructor";
   const documentTitle = isInstructor ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
   const values = { ...(variant?.variables || {}) };
-  const questions = selectedQuestions(problem, variant);
+  const questions = selectedQuestions(problem, variant, type);
   const numberById = new Map(questions.map((question, index) => [question.id, index + 1]));
   const imagePath = path.join(root, problem.image);
 
@@ -1765,7 +1766,7 @@ function qmdDocument(problem, variant, type, outDir) {
   const title = type === "instructor" ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
   const isInstructor = type === "instructor";
   const values = { ...(variant?.variables || {}) };
-  const questions = selectedQuestions(problem, variant);
+  const questions = selectedQuestions(problem, variant, type);
   const numberById = new Map(questions.map((question, index) => [question.id, index + 1]));
   const imagePath = path
     .relative(outDir, path.join(root, problem.image))

@@ -7956,15 +7956,34 @@
   {
     "id": "MOS-SPRING-010",
     "slug": "spring-loaded-coupling-rod",
-    "title": "Spring-Loaded Coupling Rod Assembly Under Tensile Load",
+    "title": "Automotive Suspension Compliance Using an Equivalent Spring-Loaded Axial Model",
     "studentDocumentTitle": "Student Homework Questions",
     "instructorDocumentTitle": "Instructor Answers",
-    "summary": "A context-rich mechanics problem on spring compression, axial member elongation, load sharing, and deformation compatibility.",
+    "summary": "An automotive suspension compliance problem using spring compression, axial-member elongation, load sharing, and deformation compatibility in an equivalent axial model.",
+    "primaryTopics": [
+      "Axial Deformation",
+      "Spring Compression"
+    ],
+    "courseTopic": "Axial deformation, deformation compatibility, spring stiffness, member elongation, and rigid-body idealization",
+    "targetLevel": "Intermediate to advanced MEEN 305",
+    "primaryMechanicsCompetencies": [
+      "Physical load-path interpretation",
+      "Student-generated idealization",
+      "Spring compression",
+      "Axial deformation of rods and bolts",
+      "Compatibility",
+      "Stiffness-based displacement prediction",
+      "Engineering judgment"
+    ],
+    "expectedStudentDeliverable": "Context interpretation, simplified model, deformation calculations using the instructor reference model, final distance calculation, and a short mechanics-based interpretation.",
+    "difficultyLevel": 4,
+    "geometryComplexity": "Real automotive suspension context reduced to a 1D axial-member, rigid-plate, and spring idealization for analysis.",
+    "problemDeliverableType": "Context interpretation, annotated idealization, deformation calculations, final distance, and mechanics-based interpretation.",
     "textbookChapters": [
-      "Axial loading",
       "Axial deformation",
       "Mechanical springs",
       "Displacement compatibility",
+      "Axial loading",
       "Statically determinate members"
     ],
     "derivedPlaceholders": [
@@ -7976,16 +7995,14 @@
       "spring_rod_elongation_in",
       "spring_bolt_elongation_in",
       "spring_distance_increase_in",
-      "spring_final_distance_in",
-      "spring_dominant_component",
-      "spring_dominant_value_in"
+      "spring_final_distance_in"
     ],
-    "image": "problems/spring-loaded-coupling-rod/assets/spring-industry-context.png",
+    "image": "problems/spring-loaded-coupling-rod/assets/spring-industry-context.jpg",
     "idealizedImage": "problems/spring-loaded-coupling-rod/assets/spring-instructor-idealization.png",
-    "idealizedImageAlt": "Instructor reference idealization of the spring-loaded coupling rod assembly with rigid plates, compression spring, side bolts, dimensions, and tensile load.",
+    "idealizedImageAlt": "Instructor reference equivalent axial model with rigid plates, a linear spring, a central coupling rod, two side bolts, dimensions, and equal and opposite tensile loads.",
     "source": "problems/spring-loaded-coupling-rod/index.html",
-    "problemStatement": "<p>A mechanical design team is evaluating a spring-loaded coupling assembly used in an industrial machine fixture. The assembly uses a central coupling rod, three rigid plates, two side bolts, and a compression spring to transmit a tensile load while allowing a controlled change in spacing.</p><p>When the coupling rod is pulled, the spring compresses, the side bolts elongate, and the active central-rod segment elongates. The measured distance between lower plate C and upper eye E therefore changes through several deformation mechanisms and must be predicted using a compatible assembly model.</p>",
-    "engineeringGoal": "<p>Determine the final distance d between points C and E after the tensile load is applied, accounting for compression of the spring, elongation of the side bolts, and elongation of the active coupling-rod segment.</p>",
+    "problemStatement": "<p>Automotive suspension systems support the vehicle body while allowing controlled relative motion between the wheel-side suspension and the chassis as the vehicle travels over road irregularities. The coil spring provides elastic support and compliance, while the shock absorber or damper controls oscillatory motion. Suspension links and mounting structures transfer the resulting forces between the wheel assembly and the vehicle body.</p><p>For this MEEN 305 problem, the complete suspension geometry is not analyzed directly. Instead, the real suspension is used to motivate a simplified equivalent axial model that isolates spring compression and elastic deformation of load-carrying members. This allows the deformation compatibility of a compliant mechanical assembly to be studied using standard Mechanics of Materials concepts.</p>",
+    "engineeringGoal": "<p>Use a simplified equivalent mechanics model to determine how an applied load changes the separation between two reference locations, identify the dominant deformation contribution, and interpret what the result means for the compliance of the modeled suspension system.</p>",
     "variables": [
       {
         "key": "P",
@@ -8071,361 +8088,472 @@
     "questions": [
       {
         "id": "q1",
+        "displayNumber": "Q1",
         "title": "Primary Function of the System",
         "type": "context interpretation",
         "difficulty": "introductory",
         "tags": [
-          "function",
-          "compliance",
-          "load transfer"
+          "automotive suspension",
+          "system function",
+          "compliance"
         ],
         "learningObjectives": [
-          "Identify the structural purpose of a compliant coupling assembly."
+          "Explain the load-support and controlled-motion functions of a suspension spring-damper assembly."
         ],
         "selected": true,
-        "student": "<p>What is the primary structural function of the spring-loaded coupling assembly?</p>",
-        "instructor": "<p>The assembly transfers tensile load while allowing controlled displacement through spring compression and elastic deformation of the steel members. It provides a compliant load path rather than a fully rigid connection.</p>",
-        "gradingNotes": "<p>Good answers should connect load transfer and controlled compliance to the mechanics of the assembly.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Based on the automotive application shown, explain the primary mechanical function of the suspension spring-damper assembly.</p>",
+        "instructor": "<p>The suspension supports vertical vehicle load while allowing controlled relative motion between the wheel-side suspension and the vehicle body. The coil spring provides elastic compliance and stores/releases energy, while the damper controls oscillatory motion.</p>",
+        "gradingNotes": "<p>Students should focus on load support and controlled suspension motion. Detailed vehicle-dynamics discussion is not required for this Solid Mechanics problem.</p>",
         "section": "context"
       },
       {
         "id": "q2",
-        "title": "External Loads",
+        "displayNumber": "Q2",
+        "title": "External Loading",
         "type": "load identification",
         "difficulty": "introductory",
         "tags": [
-          "tensile load",
-          "loading pair",
-          "coupling rod"
+          "external loading",
+          "vertical load",
+          "axial model"
         ],
         "learningObjectives": [
-          "Identify the external force pair producing tension in the central rod."
+          "Identify the dominant external loading represented in the simplified suspension model."
         ],
         "selected": true,
-        "student": "<p>Where are the external loads applied, and what are their directions?</p>",
-        "instructor": "<p>Equal and opposite tensile loads <em>P</em> are applied at upper eye E and the lower end of the coupling rod. The loading pair places the central rod in tension.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>What type of external loading acts on the suspension during vehicle operation, and what loading direction is most relevant to the simplified problem?</p>",
+        "instructor": "<p>The suspension carries forces transmitted between the wheel-side assembly and the vehicle body due to vehicle weight and road input. For the simplified problem, the dominant response is represented by a vertical or axial load acting through the compliant suspension system.</p>",
+        "gradingNotes": "<p>Students should identify the dominant vertical load transfer without introducing notation from the later instructor model.</p>",
         "section": "context"
       },
       {
         "id": "q3",
-        "title": "Constraints and Idealized Connections",
+        "displayNumber": "Q3",
+        "title": "Supports and Restraints",
         "type": "boundary conditions",
         "difficulty": "introductory",
         "tags": [
-          "rigid plates",
-          "spring",
-          "bolts"
+          "supports",
+          "restraints",
+          "suspension travel"
         ],
         "learningObjectives": [
-          "Identify the assembly constraints needed for a compatibility model."
+          "Describe how suspension connections transfer load while permitting working travel."
         ],
         "selected": true,
-        "student": "<p>Identify the effective constraints and connections in the system.</p>",
-        "instructor": "<p>Plates A, B, and C are treated as rigid. The spring connects A and B and compresses under load. Identical side bolts connect A and C and elongate in tension. The central rod transfers load through the assembly and elongates over its active length.</p>",
-        "gradingNotes": "<p>This is an assembly-compatibility problem rather than a conventional fixed-support reaction problem.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Identify where the suspension spring-damper assembly is connected to the vehicle and explain, in general terms, what relative motion those connections allow or restrain.</p>",
+        "instructor": "<p>The spring-damper assembly is connected between the vehicle body or chassis and the wheel-side suspension structure. The connections transfer load between these parts while allowing the suspension to move vertically over its working travel.</p>",
+        "gradingNotes": "<p>The goal is physical interpretation of the real suspension. Do not require students to identify the rigid plates or point labels that appear only in the later equivalent model.</p>",
         "section": "context"
       },
       {
         "id": "q4",
+        "displayNumber": "Q4",
         "title": "Load Path",
         "type": "load path",
         "difficulty": "introductory",
         "tags": [
           "load path",
-          "spring compression",
-          "bolt tension"
+          "control arm",
+          "vehicle chassis"
         ],
         "learningObjectives": [
-          "Trace load through all deformable and rigid components."
+          "Trace the dominant vertical load path through the real suspension system."
         ],
         "selected": true,
-        "student": "<p>Using the component list, trace the load path through the coupling rod, plates, bolts, and spring.</p>",
-        "instructor": "<p>A suitable path is applied tensile load &rarr; central coupling rod &rarr; rigid plate or collar contact &rarr; compression spring and rigid plates &rarr; side bolts &rarr; lower plate C and the opposite load application. The spring compresses while the bolts and rod elongate.</p>",
-        "commonMistakes": "<p>The load path must include both the compression spring and the tension-loaded side bolts.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Trace the dominant vertical load path through the suspension from the wheel-side suspension structure to the vehicle body.</p>",
+        "instructor": "<p>A suitable load path is from the wheel-side suspension and control arm into the spring-damper mounting region, through the compliant spring-damper assembly, and into the vehicle body or chassis. The same path transfers load in the opposite direction depending on the chosen free body.</p>",
+        "gradingNotes": "<p>Students should describe the real load path in physical terms before any equivalent-model notation is introduced.</p>",
         "section": "context"
       },
       {
         "id": "q5",
-        "title": "Components Controlling the Final Distance",
+        "displayNumber": "Q5",
+        "title": "Components Controlling Compliance",
         "type": "component identification",
         "difficulty": "introductory",
         "tags": [
-          "critical components",
-          "displacement",
-          "stiffness"
+          "compliance",
+          "coil spring",
+          "structural deformation"
         ],
         "learningObjectives": [
-          "Distinguish deformable components from rigid transfer components."
+          "Identify the components that control suspension compliance in a simplified model."
         ],
         "selected": true,
-        "student": "<p>Which components are most important for determining the final distance <em>d</em>?</p>",
-        "instructor": "<p>The compression spring, active central-rod segment, and side bolts control <em>d</em>. The rigid plates establish the load path and compatibility relationships, but their deformation is neglected.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Which parts of the suspension system are most important when considering vertical compliance or relative displacement under load?</p>",
+        "instructor": "<p>The coil spring is the primary compliant component. Elastic deformation of load-carrying structural members and attachments can also contribute to the total relative displacement, although many surrounding components may be treated as comparatively rigid in a simplified model.</p>",
+        "gradingNotes": "<p>The emphasis is deformation and stiffness. Students do not need to identify every visible suspension component.</p>",
         "section": "context"
       },
       {
         "id": "q6",
-        "title": "Relevant Mechanical Responses",
+        "displayNumber": "Q6",
+        "title": "Relevant Mechanical Response",
         "type": "mechanics reasoning",
         "difficulty": "introductory",
         "tags": [
-          "compression",
-          "elongation",
-          "scope"
+          "spring compression",
+          "axial deformation",
+          "compatibility"
         ],
         "learningObjectives": [
-          "Select the relevant response for each component and reject unsupported checks."
+          "Select the deformation mechanisms needed to predict a quasi-static spacing change."
         ],
         "selected": true,
-        "student": "<p>For each critical component, identify the mechanical response considered in this problem.</p>",
-        "instructor": "<p>The spring undergoes compression. The side bolts and central coupling rod undergo axial elongation. Plates are assumed rigid. Failure, fatigue, local contact, and buckling are outside the base problem because the necessary strength and detail data are not supplied.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>What deformation mechanisms should be considered if the engineering concern is the change in spacing between two suspension reference locations under a slowly applied load?</p>",
+        "instructor": "<p>The main deformation mechanisms are spring compression and elastic deformation of the load-carrying members. Their relative motions must be combined through compatibility to determine the overall change in spacing. Velocity-dependent damping is not part of the quasi-static base model.</p>",
+        "gradingNotes": "<p>This question introduces the mechanics needed later without giving students the instructor-model labels or equations.</p>",
         "section": "context"
       },
       {
         "id": "q7",
-        "title": "Relevant Geometry and Material Parameters",
+        "displayNumber": "Q7",
+        "title": "Relevant Geometric and Material Parameters",
         "type": "parameter identification",
         "difficulty": "introductory",
         "tags": [
           "spring stiffness",
-          "bolt area",
+          "member geometry",
           "elastic modulus"
         ],
         "learningObjectives": [
-          "Identify the inputs controlling spring and axial-member deformation."
+          "Identify the loading, geometry, material, and member-count inputs controlling compliance."
         ],
         "selected": true,
-        "student": "<p>Identify the loading, geometric, and material parameters needed to determine the final distance <em>d</em>.</p>",
-        "instructor": "<p>The required inputs are <em>P</em>, <em>d</em><sub>0</sub>, <em>k</em>, <em>d</em><sub>b</sub>, <em>E</em><sub>s</sub>, <em>n</em><sub>b</sub>, <em>L</em><sub>E</sub>, and <em>L</em><sub>b</sub>. Bolt/rod area is <em>A</em><sub>b</sub> = &pi;<em>d</em><sub>b</sub><sup>2</sup>/4. The rigid-plate and equal-load-sharing assumptions are also required.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>What loading, geometric, and material characteristics would you expect to control the compliance of the simplified suspension model?</p>",
+        "instructor": "<p>Relevant characteristics include the applied load magnitude, spring stiffness, member lengths, cross-sectional dimensions, elastic modulus of the load-carrying members, and the number of parallel members sharing the load.</p>",
+        "gradingNotes": "<p>Students should identify physical dependencies conceptually. Specific symbols, formulas, and numerical values are introduced only with the instructor reference model.</p>",
         "section": "context"
       },
       {
         "id": "q8",
+        "displayNumber": "Q8",
         "title": "Student-Generated Structural Idealization",
-        "type": "free-body diagram",
+        "type": "structural idealization",
         "difficulty": "intermediate",
         "tags": [
-          "idealization",
-          "FBD",
-          "compatibility"
+          "student idealization",
+          "linear spring",
+          "axial members"
         ],
         "learningObjectives": [
-          "Convert the real assembly into a rigid-plate, spring, and axial-member model."
+          "Create a one-dimensional equivalent model that preserves the dominant compliant load path."
         ],
         "selected": true,
-        "student": "<p>Before using the reference figure, draw a simplified Mechanics of Materials model. Show rigid plates A, B, and C; coupling rod and eye E; side bolts; spring; applied tensile load <em>P</em>; and distance <em>d</em>. Include force and deformation directions.</p>",
-        "instructor": "<p>A correct model treats A, B, and C as rigid plates; the spring as a linear compression spring; the side bolts as identical axial tension members; and the coupling rod as an axial tension member. Distance <em>d</em> is formed from compatible plate and rod motions.</p>",
-        "gradingNotes": "<p>Provide students with drawing space before revealing the instructor reference idealization.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Convert the real suspension system into a simplified one-dimensional Mechanics of Materials model that preserves the dominant compliant load path. Represent the spring as a linear spring, represent selected load-carrying members as axial members, treat the main attachment structures as rigid, and show the applied load and the reference separation whose change is to be evaluated.</p><p><strong>Student model:</strong> Insert or draw the simplified model and free-body / deformation diagram here.</p>",
+        "instructor": "<p>A suitable student model replaces the detailed automotive geometry with an equivalent spring-and-axial-member assembly. The model should capture spring compression, elastic elongation of the load-carrying members, and the compatibility needed to determine the change in separation between two reference locations.</p>",
+        "gradingNotes": "<p>Students are not expected to reproduce the instructor reference geometry exactly. The goal is to demonstrate the transition from the real automotive system to an analyzable compliance model.</p>",
         "section": "transition"
       },
       {
         "id": "q9",
+        "displayNumber": "Q9",
         "title": "Modeling Assumptions",
         "type": "assumptions",
         "difficulty": "intermediate",
         "tags": [
-          "linear spring",
-          "equal sharing",
-          "small deformation"
+          "quasi-static",
+          "linear elasticity",
+          "equal load sharing"
         ],
         "learningObjectives": [
-          "State assumptions supporting the simplified compatibility analysis."
+          "State the assumptions supporting the spring-and-axial-member idealization."
         ],
         "selected": true,
-        "student": "<p>State the assumptions used to convert the physical assembly into the simplified mechanics model.</p>",
-        "instructor": "<p>Typical assumptions are rigid plates A, B, and C; a linear spring of stiffness <em>k</em>; identical side bolts sharing load equally; linear-elastic steel; small deformation; concentric loading; and neglected nut, thread, contact, bending, shear, and friction effects.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>State the assumptions needed to convert the automotive suspension into a simplified quasi-static spring-and-axial-member model.</p>",
+        "instructor": "<p>Typical assumptions include: the applied loading is quasi-static and predominantly vertical; the spring is linear; the main attachment structures are rigid; the axial members are linearly elastic; deformations are small; loading is concentric; identical parallel members share load equally; and bending, shear deformation, friction, thread/contact compliance, and velocity-dependent damper forces are neglected in the base model.</p>",
+        "gradingNotes": "<p>The essential assumptions are quasi-static loading, linear spring behavior, rigid attachment structures, axial member deformation, and equal load sharing for identical parallel members.</p>",
         "section": "transition"
       },
       {
         "id": "q10",
+        "displayNumber": "Q10",
         "title": "Mechanics Analysis Plan",
         "type": "analysis planning",
         "difficulty": "intermediate",
         "tags": [
+          "analysis plan",
           "load sharing",
-          "deformation",
-          "compatibility"
+          "deformation compatibility"
         ],
         "learningObjectives": [
-          "Plan a multi-contribution displacement calculation."
+          "Plan the equilibrium, deformation, and compatibility steps needed to determine reference separation."
         ],
         "selected": true,
-        "student": "<p>Before calculating, describe the sequence of analysis needed to determine final distance <em>d</em>.</p>",
-        "instructor": "<p>Determine spring, rod, and bolt forces; compute spring compression; compute active-rod elongation; compute side-bolt elongation; establish how each changes C-to-E spacing; sum the compatible contributions; and add the increase to initial distance <em>d</em><sub>0</sub>.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Before performing numerical calculations, describe the sequence required to determine the change in reference separation using an equivalent spring-and-axial-member model.</p>",
+        "instructor": "<p>A complete plan is to determine internal load sharing from equilibrium, calculate spring compression, calculate axial elongation of the load-carrying members, combine the compatible deformation contributions, determine the resulting reference separation, and identify which contribution dominates the response.</p>",
+        "gradingNotes": "<p>The detailed point labels, member dimensions, and numerical data needed for this sequence are introduced in the instructor reference model that follows.</p>",
         "section": "transition"
       },
       {
         "id": "q11",
-        "title": "Loading Conditions from the Instructor Diagram",
+        "displayNumber": "M1",
+        "title": "Boundary / Loading Conditions from Instructor Diagram",
         "type": "mechanics setup",
         "difficulty": "introductory",
         "tags": [
-          "tension",
-          "rigid plates",
-          "deformation tracking"
+          "boundary conditions",
+          "tensile loading",
+          "rigid plates"
         ],
         "learningObjectives": [
-          "Interpret the instructor reference model and its response quantity."
+          "Interpret the loading and mechanical idealizations in the instructor reference model."
         ],
         "selected": true,
-        "student": "<p>From the instructor reference diagram, identify the loading condition and principal mechanical idealizations.</p>",
-        "instructor": "<p>The assembly is subjected to equal and opposite tensile loads <em>P</em>. Plates A, B, and C are rigid; the spring is linear; side bolts and central rod deform axially; and response is evaluated by tracking the change in distance between C and E.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>From the instructor diagram, identify the loading condition and the main mechanical idealizations.</p>",
+        "instructor": "<p>The assembly is subjected to equal and opposite tensile loads <em>P</em>. The plates A, B, and C are rigid. The spring is linear with stiffness <em>k</em>. The side bolts and central rod deform axially. The system response is evaluated by tracking how deformation changes the distance <em>d</em> between C and E.</p>",
+        "gradingNotes": "<p>This question replaces a standard support-reaction question because the problem is an axial assembly rather than a beam/frame.</p>",
         "section": "analysis"
       },
       {
         "id": "q12",
-        "title": "Internal Forces and Load Sharing",
+        "displayNumber": "M2",
+        "title": "Unknown Internal Loads and Load Sharing",
         "type": "equilibrium and load sharing",
         "difficulty": "intermediate",
         "tags": [
-          "spring force",
-          "rod force",
-          "bolt force"
+          "internal force",
+          "load sharing",
+          "symmetry"
         ],
         "learningObjectives": [
-          "Determine component forces using equilibrium, symmetry, and identical-member behavior."
+          "Determine spring, coupling-rod, and side-bolt forces using equilibrium and symmetry."
         ],
         "selected": true,
-        "student": "<p>For <strong><em>P</em> = {{P}} {{P_unit}}</strong> and <strong><em>n</em><sub>b</sub> = {{n_b}}</strong> identical side bolts, determine the force in the spring, active coupling-rod segment, and each side bolt.</p>",
-        "instructor": "<p>The spring carries <strong>{{spring_force_kip}} kip</strong> in compression. The active coupling rod carries <strong>{{spring_rod_force_kip}} kip</strong> in tension. Symmetry and identical bolt stiffness give <strong>{{spring_bolt_force_kip}} kip</strong> in tension in each of the {{n_b}} side bolts.</p>",
-        "commonMistakes": "<p>Divide the total bolt load by the number of identical bolts; do not assign the full load to every bolt.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Identify the force in the spring, the force in the coupling rod segment, and the force in each side bolt.</p>",
+        "instructor": "<p>The spring force is <em>P</em> = <strong>{{spring_force_kip}} kip</strong>. The coupling rod segment carries <em>P</em> = <strong>{{spring_rod_force_kip}} kip</strong> in tension. The two side bolts share the load equally, so each side bolt carries <em>P</em>/2 = <strong>{{spring_bolt_force_kip}} kip</strong> in tension.</p>",
+        "gradingNotes": "<p>The equal sharing of load in the two side bolts follows from symmetry and identical bolt geometry.</p>",
         "section": "analysis"
       },
       {
         "id": "q13",
+        "displayNumber": "M3",
         "title": "Spring Compression",
         "type": "spring deformation calculation",
         "difficulty": "intermediate",
         "tags": [
-          "spring",
-          "stiffness",
-          "compression"
+          "spring compression",
+          "spring stiffness",
+          "force-displacement"
         ],
         "learningObjectives": [
-          "Apply the linear spring force-displacement relationship."
+          "Calculate compression using the linear spring force-displacement relation."
         ],
         "selected": true,
-        "student": "<p>Calculate the spring compression using <strong><em>k</em> = {{k}} {{k_unit}}</strong>.</p>",
-        "instructor": "<p>&delta;<sub>s</sub> = <em>P</em>/<em>k</em> = {{P}}/{{k}} = <strong>{{spring_compression_in}} in</strong>. This compression increases the C-to-E distance for the modeled geometry.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Calculate the compression of the spring.</p>",
+        "instructor": "<p>&delta;<sub>s</sub> = <em>P</em>/<em>k</em> = {{P}}/{{k}} = <strong>{{spring_compression_in}} in</strong>. This compression increases the distance between points C and E in the final configuration.</p>",
+        "gradingNotes": "<p>Students should use kip and kip/in consistently.</p>",
         "section": "analysis"
       },
       {
         "id": "q14",
-        "title": "Coupling-Rod Elongation",
+        "displayNumber": "M4",
+        "title": "Coupling Rod Elongation",
         "type": "axial deformation calculation",
         "difficulty": "intermediate",
         "tags": [
-          "rod area",
-          "elongation",
+          "coupling rod",
+          "axial elongation",
           "PL/AE"
         ],
         "learningObjectives": [
-          "Calculate axial elongation of the active coupling-rod segment."
+          "Calculate the axial elongation of the active coupling-rod segment."
         ],
         "selected": true,
-        "student": "<p>Calculate the elongation of the active coupling-rod segment. First determine member area from <strong><em>d</em><sub>b</sub> = {{d_b}} {{d_b_unit}}</strong>.</p>",
-        "instructor": "<p><em>A</em><sub>b</sub> = &pi;({{d_b}} in)<sup>2</sup>/4 = <strong>{{spring_member_area_in2}} in<sup>2</sup></strong>. Then</p><p>&delta;<sub>rod</sub> = <em>PL</em><sub>E</sub>/(<em>A</em><sub>b</sub><em>E</em><sub>s</sub>) = <strong>{{spring_rod_elongation_in}} in</strong>.</p>",
-        "commonMistakes": "<p>With load in kip and area in in<sup>2</sup>, use <em>E</em><sub>s</sub> in ksi = kip/in<sup>2</sup>.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Calculate the elongation of the active coupling rod segment.</p>",
+        "instructor": "<p><em>A</em><sub>b</sub> = &pi;({{d_b}} in)<sup>2</sup>/4 = <strong>{{spring_member_area_in2}} in<sup>2</sup></strong>. The rod elongation is</p><p>&delta;<sub>rod</sub> = <em>PL</em><sub>E</sub>/(<em>A</em><sub>b</sub><em>E</em><sub>s</sub>) = ({{P}} kip)({{L_E}} in)/[{{spring_member_area_in2}} in<sup>2</sup>({{E_s}} kip/in<sup>2</sup>)] = <strong>{{spring_rod_elongation_in}} in</strong>.</p>",
+        "gradingNotes": "<p>This deformation contributes to increasing <em>d</em> because the loaded eye E moves away from C.</p>",
         "section": "analysis"
       },
       {
         "id": "q15",
+        "displayNumber": "M5",
         "title": "Side-Bolt Elongation",
         "type": "axial deformation calculation",
         "difficulty": "intermediate",
         "tags": [
-          "bolt elongation",
-          "load sharing",
-          "PL/AE"
+          "side bolts",
+          "axial elongation",
+          "parallel members"
         ],
         "learningObjectives": [
-          "Calculate elongation of parallel, equally loaded axial members."
+          "Calculate the elongation of identical side bolts that share load in parallel."
         ],
         "selected": true,
-        "student": "<p>Calculate the elongation of each side bolt. Clearly use the force carried by one bolt rather than the total applied load.</p>",
-        "instructor": "<p>Each bolt carries <em>P</em>/<em>n</em><sub>b</sub> = <strong>{{spring_bolt_force_kip}} kip</strong>. Therefore</p><p>&delta;<sub>bolt</sub> = (<em>P</em>/<em>n</em><sub>b</sub>)<em>L</em><sub>b</sub>/(<em>A</em><sub>b</sub><em>E</em><sub>s</sub>) = <strong>{{spring_bolt_elongation_in}} in</strong>.</p><p>All identical bolts have the same elongation and act in parallel; their elongations are not added to one another.</p>",
-        "commonMistakes": "<p>The load divides among parallel bolts, but their common plate-to-plate elongation does not divide or sum.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Calculate the elongation of each side bolt.</p>",
+        "instructor": "<p>Each side bolt carries <em>P</em>/2 = <strong>{{spring_bolt_force_kip}} kip</strong>. The side-bolt elongation is</p><p>&delta;<sub>bolt</sub> = (<em>P</em>/2)<em>L</em><sub>b</sub>/(<em>A</em><sub>b</sub><em>E</em><sub>s</sub>) = ({{spring_bolt_force_kip}} kip)({{L_b}} in)/[{{spring_member_area_in2}} in<sup>2</sup>({{E_s}} kip/in<sup>2</sup>)] = <strong>{{spring_bolt_elongation_in}} in</strong>.</p>",
+        "gradingNotes": "<p>The two bolts have the same elongation because they are identical and loaded symmetrically.</p>",
         "section": "analysis"
       },
       {
         "id": "q16",
-        "title": "Final Distance Between C and E",
+        "displayNumber": "M6",
+        "title": "Final Distance d",
         "type": "compatibility calculation",
         "difficulty": "intermediate to advanced",
         "tags": [
           "final distance",
-          "compatibility",
-          "deformation accumulation"
+          "deformation compatibility",
+          "displacement accumulation"
         ],
         "learningObjectives": [
-          "Combine compatible deformation contributions into an assembly dimension."
+          "Combine compatible deformation contributions to determine the final C-to-E distance."
         ],
         "selected": true,
-        "student": "<p>Determine the final distance <em>d</em> between C and E after loading. Show why each deformation contribution increases or decreases the measured distance.</p>",
-        "instructor": "<p>Spring compression increases E-to-A spacing, rod elongation increases E-to-B spacing, and side-bolt elongation increases A-to-C spacing. Thus</p><p>&Delta;<em>d</em> = &delta;<sub>s</sub> + &delta;<sub>rod</sub> + &delta;<sub>bolt</sub> = {{spring_compression_in}} + {{spring_rod_elongation_in}} + {{spring_bolt_elongation_in}} = <strong>{{spring_distance_increase_in}} in</strong>.</p><p><em>d</em> = <em>d</em><sub>0</sub> + &Delta;<em>d</em> = {{d0}} + {{spring_distance_increase_in}} = <strong>{{spring_final_distance_in}} in</strong>.</p>",
-        "gradingNotes": "<p>Require a compatibility argument, not only arithmetic addition of three values.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Determine the final distance <em>d</em> between C and E after loading.</p>",
+        "instructor": "<p>The increase in distance is &Delta;<em>d</em> = &delta;<sub>s</sub> + &delta;<sub>rod</sub> + &delta;<sub>bolt</sub> = {{spring_compression_in}} + {{spring_rod_elongation_in}} + {{spring_bolt_elongation_in}} = <strong>{{spring_distance_increase_in}} in</strong>. Therefore, <em>d</em> = <em>d</em><sub>0</sub> + &Delta;<em>d</em> = {{d0}} + {{spring_distance_increase_in}} = <strong>{{spring_final_distance_in}} in</strong>.</p>",
+        "gradingNotes": "<p>This is the main numerical result. Students should explain why the deformation contributions are added.</p>",
         "section": "analysis"
       },
       {
         "id": "q17",
+        "displayNumber": "M7",
         "title": "Stiffness-Based Interpretation",
         "type": "engineering interpretation",
         "difficulty": "intermediate",
         "tags": [
           "dominant deformation",
           "relative stiffness",
-          "interpretation"
+          "compliance"
         ],
         "learningObjectives": [
-          "Relate the largest deformation contribution to component stiffness."
+          "Relate the dominant displacement contribution to relative component stiffness."
         ],
         "selected": true,
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
         "student": "<p>Which deformation contribution dominates the change in distance <em>d</em>, and why?</p>",
-        "instructor": "<p>The dominant contribution is <strong>{{spring_dominant_component}}</strong>, with magnitude <strong>{{spring_dominant_value_in}} in</strong>. For the baseline values, spring compression is much larger than either steel-member elongation because the spring is intentionally much more compliant.</p>",
+        "instructor": "<p>The spring compression dominates because &delta;<sub>s</sub> = <strong>{{spring_compression_in}} in</strong> is much larger than the steel-member elongations, which are approximately <strong>{{spring_rod_elongation_in}} in</strong> and <strong>{{spring_bolt_elongation_in}} in</strong>. The spring has much lower stiffness than the steel members.</p>",
+        "gradingNotes": "<p>This helps students connect stiffness values to physical deformation.</p>",
         "section": "analysis"
       },
       {
         "id": "q18",
+        "displayNumber": "M8",
         "title": "Stiffness-Based Modification",
         "type": "design evaluation",
         "difficulty": "intermediate",
         "tags": [
-          "design modification",
-          "stiffness",
-          "displacement control"
+          "stiffness modification",
+          "displacement control",
+          "design evaluation"
         ],
         "learningObjectives": [
-          "Propose a mechanics-based change that reduces final displacement."
+          "Recommend a mechanics-based modification that reduces final displacement."
         ],
         "selected": true,
-        "student": "<p>If final distance <em>d</em> must be reduced, identify and justify a mechanics-based design modification.</p>",
-        "instructor": "<p>Possible changes include increasing spring stiffness <em>k</em>, increasing bolt/rod diameter, reducing active member lengths, reducing applied load, or changing assembly geometry. For the baseline case, increasing <em>k</em> is usually the most effective single change because spring compression dominates.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>If the final distance <em>d</em> must be reduced, identify a mechanics-based design modification.</p>",
+        "instructor": "<p>Possible modifications include increasing spring stiffness <em>k</em>, increasing bolt/rod diameter, reducing the active member lengths, reducing the applied load, or changing the assembly geometry. The most effective single change is usually increasing <em>k</em> because the spring compression dominates the displacement.</p>",
+        "gradingNotes": "<p>Keep this as a limited mechanics recommendation, not a full redesign.</p>",
         "section": "analysis"
       },
       {
         "id": "q19",
+        "displayNumber": "M9",
+        "title": "Strength Factor of Safety",
+        "type": "scope check",
+        "difficulty": "intermediate",
+        "tags": [
+          "factor of safety",
+          "strength data",
+          "model scope"
+        ],
+        "learningObjectives": [
+          "Recognize when the supplied data do not support a strength factor-of-safety calculation."
+        ],
+        "selected": true,
+        "includeInStudentPacket": false,
+        "includeInInstructorPacket": true,
+        "student": "<p>Do not compute strength factor of safety unless allowable stresses or material strengths are provided.</p>",
+        "instructor": "<p>The base problem asks for displacement, not strength safety. If allowable stress data are added, axial stresses in the coupling rod and side bolts could be checked.</p>",
+        "gradingNotes": "<p>Instructor-only extension.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q20",
+        "displayNumber": "M10",
+        "title": "Stability or Buckling Check",
+        "type": "scope check",
+        "difficulty": "intermediate",
+        "tags": [
+          "buckling",
+          "tension members",
+          "model scope"
+        ],
+        "learningObjectives": [
+          "Explain why buckling is not part of the base tension-member analysis."
+        ],
+        "selected": true,
+        "includeInStudentPacket": false,
+        "includeInInstructorPacket": true,
+        "student": "<p>Evaluate buckling only if a slender compression member is identified and relevant geometry/end conditions are provided.</p>",
+        "instructor": "<p>Buckling is not part of the base problem. The side bolts and central rod are in tension; the spring compresses but is modeled only by its stiffness <em>k</em>.</p>",
+        "gradingNotes": "<p>Do not include as a student-facing question unless the learning objective is explicitly about why stability is not relevant.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q21",
+        "displayNumber": "M11",
         "title": "Engineering Assessment and Recommendation",
         "type": "engineering judgment",
         "difficulty": "intermediate to advanced",
         "tags": [
-          "recommendation",
-          "limitations",
-          "service acceptance"
+          "engineering assessment",
+          "suspension compliance",
+          "model limitations"
         ],
         "learningObjectives": [
-          "Make a limited recommendation without exceeding the model's evidence."
+          "Summarize the equivalent-model response and relate it cautiously to suspension compliance."
         ],
         "selected": true,
-        "student": "<p>Use the mechanics results to make a limited engineering recommendation about the assembly response. State what additional information would be required before service approval.</p>",
-        "instructor": "<p>For <em>P</em> = {{P}} kip, the predicted final distance is <strong>{{spring_final_distance_in}} in</strong>, and <strong>{{spring_dominant_component}}</strong> governs displacement. This model is suitable for preliminary displacement prediction. Service approval additionally requires allowable stresses, fatigue requirements, spring travel and solid-height checks, local contact and thread details, plate stiffness, tolerances, and manufacturing or inspection information.</p>",
-        "gradingNotes": "<p>The recommendation should answer the displacement question without claiming that strength or durability has been verified.</p>",
+        "includeInStudentPacket": true,
+        "includeInInstructorPacket": true,
+        "student": "<p>Use the mechanics results to summarize the response of the equivalent model and relate the dominant deformation contribution to suspension compliance.</p>",
+        "instructor": "<p>Under the specified {{P}}-kip tensile load, the equivalent model gives a final distance <em>d</em> = <strong>{{spring_final_distance_in}} in</strong>. Spring compression is the dominant deformation contribution, so the modeled compliance is governed primarily by spring stiffness. This conclusion applies to the simplified quasi-static model; the full vehicle suspension also contains geometric, damping, bushing, and other effects that are outside the scope of the present MEEN 305 analysis.</p>",
+        "gradingNotes": "<p>The recommendation should return to the automotive suspension context while clearly distinguishing the equivalent mechanics model from the full vehicle system.</p>",
         "section": "analysis"
       }
     ],
     "variants": [
       {
         "id": "section-a",
-        "title": "Homework Version A - baseline coupling assembly",
-        "description": "Default sequence for load path, load sharing, spring compression, axial elongation, and final-distance compatibility.",
+        "title": "Homework Version A - automotive suspension compliance",
+        "description": "Default sequence for suspension context interpretation, equivalent-model idealization, load sharing, spring compression, axial elongation, compatibility, and engineering interpretation.",
         "selectedQuestions": [
           "q1",
           "q2",
@@ -8445,7 +8573,9 @@
           "q16",
           "q17",
           "q18",
-          "q19"
+          "q19",
+          "q20",
+          "q21"
         ],
         "variables": {
           "P": 5,

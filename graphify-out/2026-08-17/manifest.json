@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1786939173.255526,
-    "ast_hash": "14a01bf90ce66cf88fe1abe14096d9b0",
+    "mtime": 1786991263.0610359,
+    "ast_hash": "72cfe36ea5e5a6e8bf98612df5b3b2b1",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1786939173.2586052,
-    "ast_hash": "157a3b25a56a59def3ed121ce2b5f435",
+    "mtime": 1786991263.0625732,
+    "ast_hash": "54e5278302efb262cbbb450ddf74726c",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1786939083.8085856,
-    "ast_hash": "f6b9775e1ebe40b19c52e88424d177f9",
+    "mtime": 1786991087.5278018,
+    "ast_hash": "059dda88c9959ca579cc84c03d820794",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1786939083.8098354,
-    "ast_hash": "6e77fd282d0a7a78366a774360a11f4c",
+    "mtime": 1786991087.6072538,
+    "ast_hash": "30930aabe69bc5ecb21eb7aaf7cb9c3e",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -125,23 +125,23 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1786939083.810859,
-    "ast_hash": "fcc96a13c4ed5c187d27a10739dea8da",
+    "mtime": 1786991164.6243742,
+    "ast_hash": "cbe774e5d273edf76135a70848d2ab9d",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
-    "mtime": 1785774387.3478374,
-    "ast_hash": "557334d9070c1b47e25035f0c86b9f36",
+    "mtime": 1786990746.9619744,
+    "ast_hash": "009636575126c741975cdedf39cedce7",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/index.qmd": {
-    "mtime": 1785854453.6864984,
-    "ast_hash": "c54cae55fa0e7750f7a016b1c959739d",
+    "mtime": 1786990747.042623,
+    "ast_hash": "54e4d32382297eb43e72f99ffd0e0b5f",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/instructor-guide.qmd": {
-    "mtime": 1785818550.2103848,
-    "ast_hash": "fa8123d8025af5aaf7bfd446e820ccdb",
+    "mtime": 1786991061.1308289,
+    "ast_hash": "f6ea193f6370c146ff3cf9e21f634d9a",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/student-packet.qmd": {
@@ -554,13 +554,8 @@
     "ast_hash": "471c7e0f6b3a0917b92c435d40bd77f1",
     "semantic_hash": ""
   },
-  "problems/axial-rod-tube-assembly/assets/axial-industry-context.png": {
-    "mtime": 1785774252.7795565,
-    "ast_hash": "c216d93f5094f6b076a4331992a87ae5",
-    "semantic_hash": ""
-  },
   "problems/axial-rod-tube-assembly/assets/axial-instructor-idealization.png": {
-    "mtime": 1785774252.7835288,
+    "mtime": 1786991105.3962233,
     "ast_hash": "2dec10aeab28c7a878d04c5145b16711",
     "semantic_hash": ""
   },
@@ -822,6 +817,11 @@
   "problems/industrial-maintenance-access-beam-combined-stress/assets/access-beam-instructor-idealization.png": {
     "mtime": 1786700071.0044796,
     "ast_hash": "2eea3c551257032a8fd9729b77eaa97f",
+    "semantic_hash": ""
+  },
+  "problems/axial-rod-tube-assembly/assets/axial-industry-context.jpg": {
+    "mtime": 1786991105.3300924,
+    "ast_hash": "8dedd76c1e1fcfae56baea8353c537aa",
     "semantic_hash": ""
   }
 }

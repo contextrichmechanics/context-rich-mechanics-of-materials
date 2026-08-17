@@ -1,7 +1,7 @@
 {
   "id": "section-a",
-  "title": "Homework Version A - baseline coupling assembly",
-  "description": "Default sequence for load path, load sharing, spring compression, axial elongation, and final-distance compatibility.",
+  "title": "Homework Version A - automotive suspension compliance",
+  "description": "Default sequence for suspension context interpretation, equivalent-model idealization, load sharing, spring compression, axial elongation, compatibility, and engineering interpretation.",
   "selectedQuestions": [
     "q1",
     "q2",
@@ -21,7 +21,9 @@
     "q16",
     "q17",
     "q18",
-    "q19"
+    "q19",
+    "q20",
+    "q21"
   ],
   "variables": {
     "P": 5,
