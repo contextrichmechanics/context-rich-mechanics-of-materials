@@ -1,23 +1,25 @@
 # Context-Rich Solid Mechanics Problem
 
-## Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft
+## Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Industrial Drive Shaft
 
 ### Engineering Context
 
-A manufacturing line uses a common rotating shaft to distribute mechanical power among several processing stations. Each gear either introduces torque into the shaft or removes torque to drive a station, so the internal torque is not uniform along the shaft.
+Multi-gear shafts are used in industrial gearboxes and transmission systems to distribute rotational power between different stages of machinery. Typical applications include speed reducers, conveyor drives, rolling and processing equipment, mixers, machine tools, and other systems in which several gears are mounted along a common shaft. A gear may receive torque from another shaft or deliver torque to a downstream stage, so the torque carried by the common shaft can change as the load path passes from one gear location to the next.
 
-The maintenance and design team is evaluating the existing solid shaft and considering a tubular replacement with the same outer diameter. The replacement should reduce rotating mass while satisfying the assigned allowable torsional shear stress.
+Because the applied torques can act in different directions and at different positions, the internal torque is not necessarily uniform along the shaft. Even when the shaft diameter is constant, some portions of the shaft may therefore experience much higher torsional shear stress than others. Identifying the governing shaft region requires a segment-by-segment torque analysis rather than assuming that the entire shaft carries one torque value.
 
-![Industrial multi-gear shaft assembly supported by bearings and connected to a drive unit.](assets/gear-shaft-industry-context.png){fig-alt="Industrial line shaft carrying several gears between bearing supports and a drive unit." width=88%}
+The engineering team is also considering whether an existing solid shaft can be replaced by a hollow shaft having the same outer diameter. A hollow shaft can reduce material usage, rotating mass, and rotational inertia while retaining substantial torsional capacity because material near the shaft center contributes relatively little to the polar moment of inertia. The design decision is therefore to determine the torque distribution first, identify the governing torque, and then select the minimum practical wall thickness that satisfies the specified allowable shear-stress requirement.
+
+![Multi-gear shaft assembly representative of an industrial gearbox or multi-stage power-transmission system.](assets/gear-shaft-industry-context.png){fig-alt="Close view of several gears mounted on a common industrial transmission shaft." width=88%}
 
 ### Main Engineering Goal
 
-Determine the signed internal torque and maximum torsional shear stress in each shaft segment, identify the governing segment, and select and verify the minimum available tubular wall thickness.
+Determine how torque is distributed along the multi-gear shaft, identify the shaft region with the largest torsional demand, evaluate the corresponding shear stress in the existing solid shaft, and select the minimum whole-millimeter wall thickness for a hollow replacement shaft with the same outer diameter that satisfies the allowable shear-stress criterion.
 
 ### System Components
 
-- common circular steel drive shaft;
-- gears at B, C, D, and F;
-- rotation-permitting bearings at A and E;
-- driver and driven production machinery;
-- supporting machine frame and bedplate.
+- steel drive shaft;
+- mounted gears;
+- shaft bearings;
+- driving and driven machinery;
+- supporting gearbox or machine structure.

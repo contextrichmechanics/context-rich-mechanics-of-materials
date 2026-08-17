@@ -6422,10 +6422,30 @@ window.PROBLEM_CATALOG = [
   {
     "id": "MOS-GEAR-SHAFT-018",
     "slug": "multi-gear-drive-shaft",
-    "title": "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft",
+    "title": "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Industrial Drive Shaft",
     "studentDocumentTitle": "Student Homework Questions",
     "instructorDocumentTitle": "Instructor Answers",
-    "summary": "A multi-station torsion problem integrating torque equilibrium, internal torque diagrams, solid-shaft stress, governing-segment identification, and hollow-shaft sizing.",
+    "summary": "An industrial multi-gear shaft problem integrating torque distribution, internal torque diagrams, maximum torsional shear stress, and hollow-shaft sizing.",
+    "primaryTopics": [
+      "Torsion of circular shafts",
+      "Internal torque diagrams",
+      "Maximum shear stress",
+      "Hollow-shaft sizing"
+    ],
+    "courseTopic": "Torsion of circular shafts; internal torque diagrams; maximum shear stress; hollow-shaft sizing",
+    "targetLevel": "Intermediate to advanced MEEN 305",
+    "primaryMechanicsCompetencies": [
+      "Load path",
+      "Torque equilibrium",
+      "Internal resultants",
+      "Torsional shear stress",
+      "Section-property selection",
+      "Engineering judgment"
+    ],
+    "expectedStudentDeliverable": "System interpretation, student-generated shaft idealization, torque diagram, segment stress calculations, hollow-shaft sizing, verification, and concise engineering recommendation.",
+    "difficultyLevel": 4,
+    "geometryComplexity": "One-dimensional shaft with multiple torque application points and circular cross sections.",
+    "problemDeliverableType": "Annotated idealization, torque diagram, segment stress calculations, hollow-shaft sizing verification, and engineering recommendation.",
     "textbookChapters": [
       "Torsion of circular shafts",
       "Internal torque diagrams",
@@ -6467,8 +6487,8 @@ window.PROBLEM_CATALOG = [
     "idealizedImage": "problems/multi-gear-drive-shaft/assets/gear-shaft-instructor-idealization.png",
     "idealizedImageAlt": "Instructor reference idealization of a multi-gear circular shaft with bearings at A and E, applied gear torques at B, C, D, and F, and labeled shaft segments.",
     "source": "problems/multi-gear-drive-shaft/index.html",
-    "problemStatement": "<p>A manufacturing line uses a common rotating shaft to distribute mechanical power among several gear-driven stations. Each gear introduces or removes torque, so the internal torque changes from segment to segment.</p><p>The design team is evaluating the existing solid shaft and a tubular replacement with the same outer diameter. The base model includes shaft-axis torque only; gear forces, bending, fatigue, local stress concentrations, and dynamic effects are excluded.</p>",
-    "engineeringGoal": "<p>Determine the signed internal torque and maximum torsional shear stress in every shaft segment, identify the governing segment, and select the minimum available tubular wall thickness that satisfies the allowable shear-stress requirement.</p>",
+    "problemStatement": "<p>Multi-gear shafts are used in industrial gearboxes and transmission systems to distribute rotational power between different stages of machinery. Typical applications include speed reducers, conveyor drives, rolling and processing equipment, mixers, machine tools, and other systems in which several gears are mounted along a common shaft. A gear may receive torque from another shaft or deliver torque to a downstream stage, so the torque carried by the common shaft can change as the load path passes from one gear location to the next.</p><p>Because the applied torques can act in different directions and at different positions, the internal torque is not necessarily uniform along the shaft. Even when the shaft diameter is constant, some portions of the shaft may therefore experience much higher torsional shear stress than others. Identifying the governing shaft region requires a segment-by-segment torque analysis rather than assuming that the entire shaft carries one torque value.</p><p>The engineering team is also considering whether an existing solid shaft can be replaced by a hollow shaft having the same outer diameter. A hollow shaft can reduce material usage, rotating mass, and rotational inertia while retaining substantial torsional capacity because material near the shaft center contributes relatively little to the polar moment of inertia.</p>",
+    "engineeringGoal": "<p>Determine how torque is distributed along the multi-gear shaft, identify the shaft region with the largest torsional demand, evaluate the corresponding shear stress in the existing solid shaft, and select the minimum whole-millimeter wall thickness for a hollow replacement shaft with the same outer diameter that satisfies the allowable shear-stress criterion.</p>",
     "variables": [
       {
         "key": "gear_T_B",
@@ -6533,22 +6553,12 @@ window.PROBLEM_CATALOG = [
       {
         "key": "gear_tau_allow",
         "symbol": "tau_allow",
-        "label": "Allowable tubular-shaft shear stress",
+        "label": "Allowable hollow-shaft shear stress",
         "value": 90,
         "unit": "MPa",
         "min": 1,
         "max": 1000,
         "step": 5
-      },
-      {
-        "key": "gear_t_step",
-        "symbol": "Delta_t",
-        "label": "Available wall-thickness increment",
-        "value": 1,
-        "unit": "mm",
-        "min": 0.1,
-        "max": 25,
-        "step": 0.1
       },
       {
         "key": "gear_L_AB",
@@ -6604,188 +6614,202 @@ window.PROBLEM_CATALOG = [
     "questions": [
       {
         "id": "q1",
-        "title": "Primary Function of the Shaft Assembly",
+        "displayNumber": "Q1",
+        "title": "Primary Function of the System",
         "type": "context interpretation",
         "difficulty": "introductory",
         "tags": [
           "shaft function",
           "power transmission",
-          "torque distribution"
+          "torque transfer"
         ],
         "learningObjectives": [
-          "Identify the shaft assembly's role in the production system."
+          "Identify the multi-gear shaft assembly's primary function."
         ],
         "selected": true,
-        "student": "<p>State the primary structural and mechanical function of the shaft assembly.</p>",
-        "instructor": "<p>The shaft distributes torque and mechanical power among multiple gear-driven stations while the bearings support and align the rotating shaft.</p>",
+        "student": "<p>What is the primary mechanical function of the multi-gear shaft assembly?</p>",
+        "instructor": "<p>The shaft supports the mounted gears and transfers rotational power and torque between different stages of the drive system. The bearings support and align the rotating shaft.</p>",
+        "gradingNotes": "<p>Students should describe the physical power-transmission role before using the analytical labels from the instructor model.</p>",
         "section": "context"
       },
       {
         "id": "q2",
-        "title": "Applied Torsional Loads",
+        "displayNumber": "Q2",
+        "title": "External Mechanical Loading",
         "type": "load identification",
         "difficulty": "introductory",
         "tags": [
           "gear torque",
-          "external loading",
-          "model scope"
+          "power flow",
+          "torsional loading"
         ],
         "learningObjectives": [
-          "Identify the external actions included in the torsion model."
+          "Identify the mechanical loading applied by the mounted gears."
         ],
         "selected": true,
-        "student": "<p>Identify the external mechanical loads relevant to the base torsion analysis.</p>",
-        "instructor": "<p>The relevant loads are the applied torques <em>T</em><sub>B</sub>, <em>T</em><sub>C</sub>, <em>T</em><sub>D</sub>, and <em>T</em><sub>F</sub> at the four gear locations. Gear weights and transverse gear forces are excluded from the base torsion model.</p>",
-        "gradingNotes": "<p>Students should distinguish torque from force and power.</p>",
+        "student": "<p>What type of mechanical loading do the mounted gears apply to the shaft during power transmission?</p>",
+        "instructor": "<p>The gears apply torques to the shaft. Depending on the direction of power flow at a gear location, a gear may introduce torque into the shaft or remove torque from it.</p>",
+        "gradingNotes": "<p>The base problem considers torsion only; transverse gear forces and gear weights are excluded.</p>",
         "section": "context"
       },
       {
         "id": "q3",
-        "title": "Bearing Roles and Boundary Conditions",
+        "displayNumber": "Q3",
+        "title": "Supports and Bearings",
         "type": "boundary conditions",
         "difficulty": "introductory",
         "tags": [
           "bearings",
-          "rotation",
-          "reaction torque"
+          "shaft support",
+          "torsional restraint"
         ],
         "learningObjectives": [
-          "Distinguish radial support from torsional restraint."
+          "Explain the bearing role in the physical and idealized systems."
         ],
         "selected": true,
-        "student": "<p>Describe the mechanical role of bearings A and E in the simplified model.</p>",
-        "instructor": "<p>The bearings restrain transverse motion and support the shaft while permitting rotation. Ideal frictionless bearings do not supply reaction torque about the shaft axis.</p>",
+        "student": "<p>What is the mechanical role of the shaft bearings in the real assembly?</p>",
+        "instructor": "<p>The bearings support and align the rotating shaft while permitting rotation. In the simplified torsion model, ideal frictionless bearings do not resist torque about the shaft axis.</p>",
         "section": "context"
       },
       {
         "id": "q4",
-        "title": "Torque Load Path",
+        "displayNumber": "Q4",
+        "title": "Torque Transfer Through the Shaft",
         "type": "load path",
         "difficulty": "introductory",
         "tags": [
-          "cumulative torque",
-          "gear stations",
-          "cut section"
+          "internal torque",
+          "gear locations",
+          "torque signs"
         ],
         "learningObjectives": [
-          "Trace torque transfer through a multi-station shaft."
+          "Predict how internal torque varies along a multi-gear shaft."
         ],
         "selected": true,
-        "student": "<p>Trace how torque is transmitted through the shaft from one gear station to another.</p>",
-        "instructor": "<p>Each gear adds or removes torque. The internal torque in any segment equals the algebraic sum of the external torques on one side of a cut through that segment.</p>",
+        "student": "<p>How would you expect the torque carried by the shaft to change as power is introduced or removed at different gear locations?</p>",
+        "instructor": "<p>The internal torque changes when a gear applies or removes torque. Different portions of the shaft can therefore carry different torque magnitudes and even different torque signs.</p>",
         "section": "context"
       },
       {
         "id": "q5",
-        "title": "Predicting the Governing Segment",
+        "displayNumber": "Q5",
+        "title": "Critical Shaft Region",
         "type": "mechanics reasoning",
         "difficulty": "introductory",
         "tags": [
-          "critical segment",
-          "absolute torque",
-          "uniform diameter"
+          "governing segment",
+          "internal torque magnitude",
+          "constant diameter"
         ],
         "learningObjectives": [
-          "Predict how the governing segment will be identified."
+          "Identify the condition governing torsional shear stress in a constant-diameter shaft."
         ],
         "selected": true,
-        "student": "<p>Before calculating, explain how the governing solid-shaft segment will be identified.</p>",
-        "instructor": "<p>Because every solid-shaft segment has the same diameter, the segment with the largest absolute internal torque has the largest maximum torsional shear stress and governs.</p>",
+        "student": "<p>For a constant-diameter shaft, what determines which portion of the shaft experiences the largest torsional shear stress?</p>",
+        "instructor": "<p>The portion carrying the largest magnitude of internal torque experiences the largest torsional shear stress, provided the shaft diameter is the same throughout.</p>",
         "section": "context"
       },
       {
         "id": "q6",
-        "title": "Parameters Controlling the Design",
+        "displayNumber": "Q6",
+        "title": "Relevant Design Parameters",
         "type": "parameter identification",
         "difficulty": "introductory",
         "tags": [
-          "polar moment",
-          "diameter",
+          "applied torque",
+          "outer diameter",
+          "inner diameter",
           "allowable stress"
         ],
         "learningObjectives": [
-          "Identify the inputs controlling shaft stress and wall thickness."
+          "Identify the parameters governing shaft stress and hollow-shaft design."
         ],
         "selected": true,
-        "student": "<p>Identify the parameters that control solid-shaft shear stress and tubular wall thickness. Explain whether the segment lengths affect the base stress calculation.</p>",
-        "instructor": "<p>Applied torques, shaft outer diameter, inner diameter or wall thickness, polar moment of inertia, and allowable shear stress control the design. Segment lengths describe the geometry and support optional angle-of-twist work, but they do not affect shear stress under Saint-Venant torsion.</p>",
+        "student": "<p>What geometric and mechanical characteristics would influence torsional stress and the design of a hollow replacement shaft?</p>",
+        "instructor": "<p>Relevant characteristics include the magnitudes and directions of the applied torques, shaft outer diameter, wall thickness or inner diameter, and allowable shear stress. Material shear modulus would also be relevant if angle of twist were evaluated.</p>",
         "section": "context"
       },
       {
         "id": "q7",
-        "title": "Student-Generated Shaft Idealization",
+        "displayNumber": "Q7",
+        "title": "Student-Generated Structural Idealization",
         "type": "free-body diagram",
         "difficulty": "intermediate",
         "tags": [
-          "idealization",
-          "torque directions",
-          "shaft segments"
+          "shaft idealization",
+          "gear torques",
+          "sign convention"
         ],
         "learningObjectives": [
-          "Create a multi-torque shaft model before viewing the reference figure."
+          "Create a simplified multi-gear shaft model."
         ],
         "selected": true,
-        "student": "<p>Before using the reference figure, draw a simplified shaft model showing points A through F, gear torques and directions, bearing locations, shaft segments, and shaft diameter. Establish a positive torque sign convention.</p>",
-        "instructor": "<p>A correct model idealizes the assembly as a circular shaft with concentrated torques at B, C, D, and F and ideal rotation-permitting bearings at A and E. Torque arrows and the positive sign convention must be unambiguous.</p>",
-        "gradingNotes": "<p>Students should attempt the model before seeing the instructor idealization.</p>",
+        "student": "<p>Convert the real multi-gear shaft assembly into a simplified Mechanics of Materials model. Show the shaft axis, gear locations, bearing locations, applied torque directions, shaft segments, and shaft diameter. Establish a positive torque sign convention.</p>",
+        "instructor": "<p>A correct idealization represents the system as a circular shaft with concentrated torques applied at the gear locations and ideal bearings that support the shaft but do not resist shaft-axis torque.</p>",
+        "gradingNotes": "<p>Detailed gear-tooth geometry and transverse loading are not required in the torsion model. Students should attempt their own idealization before using the instructor reference figure.</p>",
         "section": "transition"
       },
       {
         "id": "q8",
+        "displayNumber": "Q8",
         "title": "Modeling Assumptions",
         "type": "assumptions",
         "difficulty": "intermediate",
         "tags": [
-          "Saint-Venant torsion",
+          "prismatic shaft",
           "linear elasticity",
-          "concentrated torque"
+          "concentrated torques"
         ],
         "learningObjectives": [
-          "State assumptions supporting the torsion model."
+          "State the assumptions used in the simplified torsion model."
         ],
         "selected": true,
-        "student": "<p>State the assumptions used in the base torsion model.</p>",
-        "instructor": "<p>Assume a circular prismatic shaft, homogeneous linearly elastic material, concentrated static torques, ideal bearings that do not resist shaft-axis torque, small deformation, and Saint-Venant torsion. Neglect transverse gear forces, bending, warping restraint, and local stress concentrations.</p>",
+        "student": "<p>State the assumptions used to convert the physical drive system into the simplified torsion model.</p>",
+        "instructor": "<p>The shaft is circular and prismatic; the material is homogeneous and linearly elastic; gear torques are represented as concentrated torques; bearings do not resist shaft-axis torque; deformation is small; warping and local stress concentrations are neglected; and transverse gear forces, bending, fatigue, and dynamic effects are excluded from the base model.</p>",
         "section": "transition"
       },
       {
         "id": "q9",
+        "displayNumber": "Q9",
         "title": "Mechanics Analysis Plan",
         "type": "analysis planning",
         "difficulty": "intermediate",
         "tags": [
           "torque diagram",
-          "stress calculation",
-          "hollow shaft"
+          "segment stress",
+          "hollow-shaft sizing"
         ],
         "learningObjectives": [
-          "Plan a complete segment-stress and sizing analysis."
+          "Plan the complete shaft evaluation and redesign procedure."
         ],
         "selected": true,
-        "student": "<p>Outline the calculation sequence before substituting numbers.</p>",
-        "instructor": "<p>Choose a torque sign convention; verify overall torque equilibrium; cut each shaft segment and determine internal torque; construct the torque diagram; calculate solid-shaft shear stress; identify the governing torque; size the tubular shaft; round wall thickness upward to the available increment; and verify the selected thickness.</p>",
+        "student": "<p>Before performing numerical work, describe the analysis sequence needed to evaluate the existing shaft and size the hollow replacement.</p>",
+        "instructor": "<p>Choose a torque sign convention; verify overall torque equilibrium; determine the internal torque in each shaft segment; construct the torque diagram; calculate torsional shear stress in each solid-shaft segment; identify the governing torque; derive the hollow-shaft sizing relation; select a practical wall thickness by rounding upward; and verify the selected design.</p>",
         "section": "transition"
       },
       {
-        "id": "q10",
+        "id": "m1",
+        "displayNumber": "M1",
         "title": "Torque Sign Convention and Overall Equilibrium",
         "type": "equilibrium",
-        "difficulty": "introductory",
+        "difficulty": "intermediate",
         "tags": [
           "signed torque",
           "overall equilibrium",
           "gear torques"
         ],
         "learningObjectives": [
-          "Verify shaft-axis torque equilibrium."
+          "Verify overall shaft-axis torque equilibrium."
         ],
         "selected": true,
-        "student": "<p>Select a positive torque direction and verify overall torque equilibrium for the assigned gear torques.</p>",
-        "instructor": "<p>Using the signs supplied with the assignment, &Sigma;<em>T</em> = <em>T</em><sub>B</sub> + <em>T</em><sub>C</sub> + <em>T</em><sub>D</sub> + <em>T</em><sub>F</sub> = <strong>{{gear_torque_sum_kNm}} kN&middot;m</strong>. {{gear_equilibrium_assessment}}</p>",
+        "student": "<p>Using the instructor reference diagram, select a positive torque direction and verify overall torque equilibrium.</p>",
+        "instructor": "<p>Using the assigned convention: <em>T</em><sub>B</sub> = +40, <em>T</em><sub>C</sub> = -60, <em>T</em><sub>D</sub> = -30, and <em>T</em><sub>F</sub> = +50 kN&middot;m. Therefore, &Sigma;<em>T</em> = <strong>{{gear_torque_sum_kNm}} kN&middot;m</strong>. {{gear_equilibrium_assessment}}</p>",
+        "gradingNotes": "<p>Any consistent sign convention is acceptable if all subsequent segment torques are treated consistently.</p>",
         "section": "analysis"
       },
       {
-        "id": "q11",
+        "id": "m2",
+        "displayNumber": "M2",
         "title": "Internal Torque in Each Segment",
         "type": "internal loading",
         "difficulty": "intermediate",
@@ -6795,158 +6819,166 @@ window.PROBLEM_CATALOG = [
           "cumulative loading"
         ],
         "learningObjectives": [
-          "Calculate internal torque throughout a multi-load shaft."
+          "Determine the internal torque in every shaft segment."
         ],
         "selected": true,
-        "student": "<p>Determine the signed internal torque in segments AB, BC, CD, DE, and EF. Also report each magnitude.</p>",
-        "instructor": "<p>Using cuts and the assigned sign convention: <em>T</em><sub>AB</sub> = <strong>{{gear_T_AB_kNm}} kN&middot;m</strong>, <em>T</em><sub>BC</sub> = <strong>{{gear_T_BC_kNm}} kN&middot;m</strong>, <em>T</em><sub>CD</sub> = <strong>{{gear_T_CD_kNm}} kN&middot;m</strong>, <em>T</em><sub>DE</sub> = <strong>{{gear_T_DE_kNm}} kN&middot;m</strong>, and <em>T</em><sub>EF</sub> = <strong>{{gear_T_EF_kNm}} kN&middot;m</strong>.</p><p>The corresponding magnitudes are <strong>{{gear_abs_T_AB_kNm}}, {{gear_abs_T_BC_kNm}}, {{gear_abs_T_CD_kNm}}, {{gear_abs_T_DE_kNm}}, and {{gear_abs_T_EF_kNm}} kN&middot;m</strong>.</p>",
-        "commonMistakes": "<p>Do not replace the cumulative algebraic sum with the nearest applied gear torque.</p>",
+        "student": "<p>Determine the signed internal torque and magnitude in shaft segments AB, BC, CD, DE, and EF.</p>",
+        "instructor": "<p><em>T</em><sub>AB</sub> = <strong>{{gear_T_AB_kNm}} kN&middot;m</strong>, <em>T</em><sub>BC</sub> = <strong>{{gear_T_BC_kNm}} kN&middot;m</strong>, <em>T</em><sub>CD</sub> = <strong>{{gear_T_CD_kNm}} kN&middot;m</strong>, <em>T</em><sub>DE</sub> = <strong>{{gear_T_DE_kNm}} kN&middot;m</strong>, and <em>T</em><sub>EF</sub> = <strong>{{gear_T_EF_kNm}} kN&middot;m</strong>. The magnitudes are <strong>{{gear_abs_T_AB_kNm}}, {{gear_abs_T_BC_kNm}}, {{gear_abs_T_CD_kNm}}, {{gear_abs_T_DE_kNm}}, and {{gear_abs_T_EF_kNm}} kN&middot;m</strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q12",
+        "id": "m3",
+        "displayNumber": "M3",
         "title": "Internal Torque Diagram",
         "type": "internal-resultant diagram",
         "difficulty": "intermediate",
         "tags": [
           "torque diagram",
-          "jumps",
+          "torque jumps",
           "bearing E"
         ],
         "learningObjectives": [
-          "Construct and interpret an internal torque diagram."
+          "Construct and interpret the internal torque diagram."
         ],
         "selected": true,
-        "student": "<p>Construct the internal torque diagram along A-F and label the torque jump at every gear.</p>",
-        "instructor": "<p>The diagram is <strong>{{gear_T_AB_kNm}} kN&middot;m</strong> on AB, then changes to <strong>{{gear_T_BC_kNm}}</strong> on BC, <strong>{{gear_T_CD_kNm}}</strong> on CD, <strong>{{gear_T_DE_kNm}}</strong> on DE, and <strong>{{gear_T_EF_kNm}} kN&middot;m</strong> on EF. Each jump equals the signed applied torque at that gear. Bearing E creates no jump.</p>",
+        "student": "<p>Construct the internal torque diagram along the shaft and identify each jump.</p>",
+        "instructor": "<p>The diagram is zero on AB, jumps by +40 kN&middot;m at B, changes by -60 kN&middot;m at C, changes by -30 kN&middot;m at D, remains unchanged through bearing E, and changes by +50 kN&middot;m at F to return to zero.</p>",
+        "gradingNotes": "<p>An ideal bearing does not introduce a torque jump.</p>",
         "section": "analysis"
       },
       {
-        "id": "q13",
-        "title": "Maximum Shear Stress in the Solid Shaft",
+        "id": "m4",
+        "displayNumber": "M4",
+        "title": "Maximum Shear Stress in the Existing Solid Shaft",
         "type": "torsional stress calculation",
         "difficulty": "intermediate",
         "tags": [
-          "solid shaft",
-          "maximum shear stress",
-          "segment comparison"
+          "solid circular shaft",
+          "segment stress",
+          "maximum shear stress"
         ],
         "learningObjectives": [
-          "Calculate maximum torsional shear stress in every segment."
+          "Calculate maximum torsional shear stress in every shaft segment."
         ],
         "selected": true,
-        "student": "<p>For the assigned solid-shaft diameter, calculate the maximum torsional shear stress in every segment using &tau;<sub>max</sub> = 16|<em>T</em>|/(&pi;<em>d</em><sup>3</sup>).</p>",
-        "instructor": "<p>The segment stresses are &tau;<sub>AB</sub> = <strong>{{gear_tau_AB_MPa}} MPa</strong>, &tau;<sub>BC</sub> = <strong>{{gear_tau_BC_MPa}} MPa</strong>, &tau;<sub>CD</sub> = <strong>{{gear_tau_CD_MPa}} MPa</strong>, &tau;<sub>DE</sub> = <strong>{{gear_tau_DE_MPa}} MPa</strong>, and &tau;<sub>EF</sub> = <strong>{{gear_tau_EF_MPa}} MPa</strong>.</p>",
-        "commonMistakes": "<p>Convert kN&middot;m to N&middot;mm before using millimeter section dimensions.</p>",
+        "student": "<p>For <em>d</em> = 160 mm, calculate the maximum torsional shear stress in every shaft segment.</p>",
+        "instructor": "<p>For a solid circular shaft, &tau;<sub>max</sub> = 16|<em>T</em>|/(&pi;<em>d</em><sup>3</sup>). The segment stresses are: AB = <strong>{{gear_tau_AB_MPa}} MPa</strong>; BC = <strong>{{gear_tau_BC_MPa}} MPa</strong>; CD = <strong>{{gear_tau_CD_MPa}} MPa</strong>; DE = <strong>{{gear_tau_DE_MPa}} MPa</strong>; and EF = <strong>{{gear_tau_EF_MPa}} MPa</strong>.</p>",
+        "gradingNotes": "<p>Use torque in N&middot;mm and diameter in mm.</p>",
         "section": "analysis"
       },
       {
-        "id": "q14",
-        "title": "Governing Shaft Segment",
+        "id": "m5",
+        "displayNumber": "M5",
+        "title": "Governing Segment",
         "type": "design interpretation",
-        "difficulty": "introductory",
+        "difficulty": "intermediate",
         "tags": [
           "governing torque",
           "critical segment",
           "uniform diameter"
         ],
         "learningObjectives": [
-          "Identify the segment controlling the tubular-shaft design."
+          "Identify the shaft segment controlling the hollow-shaft sizing."
         ],
         "selected": true,
-        "student": "<p>Identify the governing segment or segments and explain why they control the tubular-shaft design.</p>",
-        "instructor": "<p><strong>{{gear_governing_segments}}</strong> {{gear_governing_verb}} with an internal torque magnitude of <strong>{{gear_governing_torque_kNm}} kN&middot;m</strong>. The governing location carries the largest absolute internal torque, and the solid-shaft diameter is uniform.</p>",
+        "student": "<p>Identify the governing shaft segment or segments and explain why they control the hollow-shaft sizing.</p>",
+        "instructor": "<p><strong>{{gear_governing_segments}}</strong> {{gear_governing_verb}} because each carries |<em>T</em>| = <strong>{{gear_governing_torque_kNm}} kN&middot;m</strong>, the largest internal torque magnitude. Since the solid shaft has uniform diameter, these locations also have the largest torsional shear stress.</p>",
         "section": "analysis"
       },
       {
-        "id": "q15",
-        "title": "Tubular-Shaft Sizing Equation",
+        "id": "m6",
+        "displayNumber": "M6",
+        "title": "Hollow-Shaft Sizing Equation",
         "type": "symbolic derivation",
-        "difficulty": "intermediate",
+        "difficulty": "advanced",
         "tags": [
           "hollow shaft",
           "polar moment",
           "inner diameter"
         ],
         "learningObjectives": [
-          "Derive the allowable-stress equation for a hollow circular shaft."
+          "Derive the hollow-shaft allowable-stress sizing equation."
         ],
         "selected": true,
-        "student": "<p>Starting from &tau; = <em>Tc</em>/<em>J</em>, derive the equation for the maximum permissible tubular-shaft inner diameter.</p>",
-        "instructor": "<p>For <em>J</em> = &pi;(<em>D</em><sub>o</sub><sup>4</sup> - <em>D</em><sub>i</sub><sup>4</sup>)/32 and <em>c</em> = <em>D</em><sub>o</sub>/2,</p><p>&tau;<sub>allow</sub> = 16<em>T</em><sub>max</sub><em>D</em><sub>o</sub>/[&pi;(<em>D</em><sub>o</sub><sup>4</sup> - <em>D</em><sub>i</sub><sup>4</sup>)],</p><p>so <em>D</em><sub>i,max</sub> = [<em>D</em><sub>o</sub><sup>4</sup> - 16<em>T</em><sub>max</sub><em>D</em><sub>o</sub>/(&pi;&tau;<sub>allow</sub>)]<sup>1/4</sup> = <strong>{{gear_D_i_max_mm}} mm</strong>.</p>",
+        "student": "<p>For a hollow shaft with outer diameter <em>D</em><sub>o</sub> = 160 mm and allowable shear stress of 90 MPa, derive the equation used to determine the largest permissible inner diameter.</p>",
+        "instructor": "<p>Using &tau; = <em>Tc/J</em> with <em>c</em> = <em>D</em><sub>o</sub>/2 and <em>J</em> = &pi;(<em>D</em><sub>o</sub><sup>4</sup> - <em>D</em><sub>i</sub><sup>4</sup>)/32 gives &tau;<sub>allow</sub> = 16<em>T</em><sub>max</sub><em>D</em><sub>o</sub>/[&pi;(<em>D</em><sub>o</sub><sup>4</sup> - <em>D</em><sub>i</sub><sup>4</sup>)]. Therefore, <em>D</em><sub>i</sub> = [<em>D</em><sub>o</sub><sup>4</sup> - 16<em>T</em><sub>max</sub><em>D</em><sub>o</sub>/(&pi;&tau;<sub>allow</sub>)]<sup>1/4</sup>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q16",
-        "title": "Minimum Tubular Wall Thickness",
+        "id": "m7",
+        "displayNumber": "M7",
+        "title": "Minimum Wall Thickness",
         "type": "component sizing",
-        "difficulty": "intermediate",
+        "difficulty": "advanced",
         "tags": [
+          "inner diameter",
           "wall thickness",
-          "round upward",
-          "available increment"
+          "whole-millimeter selection"
         ],
         "learningObjectives": [
-          "Select a manufacturable wall thickness from a theoretical minimum."
+          "Calculate and select the minimum practical wall thickness."
         ],
         "selected": true,
-        "student": "<p>Determine the theoretical minimum tubular wall thickness and select the smallest thickness available in the assigned increment. Explain the rounding direction.</p>",
-        "instructor": "<p><em>t</em><sub>min</sub> = (<em>D</em><sub>o</sub> - <em>D</em><sub>i,max</sub>)/2 = <strong>{{gear_t_min_mm}} mm</strong>. Round upward to the assigned increment, giving <strong>{{gear_t_selected_mm}} mm</strong>. The corresponding selected inner diameter is <strong>{{gear_D_i_selected_mm}} mm</strong>.</p>",
+        "student": "<p>Determine the theoretical minimum wall thickness and select a practical whole-millimeter thickness.</p>",
+        "instructor": "<p><em>D</em><sub>i,max</sub> = <strong>{{gear_D_i_max_mm}} mm</strong>. Therefore, <em>t</em><sub>min</sub> = (160 - <em>D</em><sub>i,max</sub>)/2 = <strong>{{gear_t_min_mm}} mm</strong>. Because a minimum thickness cannot be rounded downward, select <em>t</em> = <strong>{{gear_t_selected_mm}} mm</strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q17",
-        "title": "Selected-Thickness Verification",
+        "id": "m8",
+        "displayNumber": "M8",
+        "title": "Verification of Selected Thickness",
         "type": "design verification",
-        "difficulty": "intermediate",
+        "difficulty": "advanced",
         "tags": [
-          "hollow shaft",
-          "actual stress",
+          "selected wall thickness",
+          "verified stress",
           "utilization"
         ],
         "learningObjectives": [
-          "Verify a practical wall-thickness selection."
+          "Verify the selected hollow-shaft wall thickness."
         ],
         "selected": true,
-        "student": "<p>Recalculate the maximum shear stress using the selected wall thickness and determine the allowable-stress utilization.</p>",
-        "instructor": "<p>The selected wall gives &tau;<sub>max</sub> = <strong>{{gear_tau_selected_MPa}} MPa</strong> and utilization &tau;<sub>max</sub>/&tau;<sub>allow</sub> = <strong>{{gear_utilization}}</strong>. {{gear_thickness_assessment}}</p>",
+        "student": "<p>Recalculate the maximum shear stress using the selected wall thickness of 21 mm.</p>",
+        "instructor": "<p>The inner diameter is <em>D</em><sub>i</sub> = 160 - 2(21) = <strong>{{gear_D_i_selected_mm}} mm</strong>. Using the governing torque of 50 kN&middot;m gives &tau;<sub>max</sub> = <strong>{{gear_tau_selected_MPa}} MPa</strong>, which is below the 90 MPa allowable stress. The utilization is <strong>{{gear_utilization}}</strong>. {{gear_thickness_assessment}}</p>",
         "section": "analysis"
       },
       {
-        "id": "q18",
-        "title": "Bearing E and Equal Adjacent Torques",
+        "id": "m9",
+        "displayNumber": "M9",
+        "title": "Engineering Interpretation",
         "type": "conceptual interpretation",
         "difficulty": "intermediate",
         "tags": [
-          "bearing torque",
-          "diagram continuity",
-          "DE and EF"
+          "ideal bearing",
+          "torque continuity",
+          "segments DE and EF"
         ],
         "learningObjectives": [
-          "Explain why an ideal bearing does not change internal torque."
+          "Explain torque-diagram continuity across an ideal bearing."
         ],
         "selected": true,
-        "student": "<p>Explain why bearing E does not create a jump in the torque diagram and why segments DE and EF carry the same torque.</p>",
-        "instructor": "<p>An ideal bearing does not apply torque about the shaft axis. Internal torque is therefore unchanged across E, so DE and EF carry the same signed internal torque until the external torque at F is applied.</p>",
+        "student": "<p>Explain why the bearing at E does not create a jump in the torque diagram and why segments DE and EF carry the same torque.</p>",
+        "instructor": "<p>An ideal bearing supports the shaft transversely but does not apply torque about the shaft axis. The internal torque therefore remains unchanged across E until the external torque at gear F is encountered.</p>",
         "section": "analysis"
       },
       {
-        "id": "q19",
+        "id": "m10",
+        "displayNumber": "M10",
         "title": "Engineering Assessment and Recommendation",
         "type": "engineering judgment",
         "difficulty": "advanced",
         "tags": [
           "recommendation",
-          "model limitations",
-          "combined loading"
+          "pure torsion",
+          "model limitations"
         ],
         "learningObjectives": [
-          "Make a bounded shaft recommendation."
+          "Make a bounded hollow-shaft recommendation."
         ],
         "selected": true,
-        "student": "<p>Provide a concise recommendation for the tubular shaft and identify important limitations of the base model.</p>",
-        "instructor": "<p>{{gear_recommendation}}</p><p>Detailed design must additionally evaluate bending from gear forces, combined stress, fatigue, keyways and shoulders, stress concentrations, angular twist, critical speed, bearing loads, manufacturing tolerances, and applicable standards.</p>",
-        "gradingNotes": "<p>Students should not claim full machine safety from the pure-torsion calculation alone.</p>",
+        "student": "<p>Using the preceding mechanics results, provide a concise recommendation for the hollow-shaft replacement and identify the main limitations of the simplified analysis.</p>",
+        "instructor": "<p>{{gear_recommendation}}</p><p>The hollow design reduces material and rotating mass while retaining adequate torsional strength under the stated model. A detailed industrial design would additionally consider transverse gear forces and bending, combined stress, fatigue, keyways and shoulders, deflection, bearing loads, critical speed, manufacturing tolerances, and dynamic torque fluctuations.</p>",
+        "gradingNotes": "<p>The final recommendation should remain limited to the pure-torsion model rather than claiming complete gearbox design acceptance.</p>",
         "section": "analysis"
       }
     ],
@@ -6954,7 +6986,7 @@ window.PROBLEM_CATALOG = [
       {
         "id": "section-a",
         "title": "Homework Version A - baseline multi-gear shaft",
-        "description": "Default sequence for torque equilibrium, internal torque diagrams, segment stresses, governing-segment selection, and tubular-shaft sizing.",
+        "description": "Faculty-ready sequence for system interpretation, student idealization, torque equilibrium, internal torque diagrams, segment stresses, governing-segment selection, and whole-millimeter hollow-shaft sizing.",
         "selectedQuestions": [
           "q1",
           "q2",
@@ -6965,16 +6997,16 @@ window.PROBLEM_CATALOG = [
           "q7",
           "q8",
           "q9",
-          "q10",
-          "q11",
-          "q12",
-          "q13",
-          "q14",
-          "q15",
-          "q16",
-          "q17",
-          "q18",
-          "q19"
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10"
         ],
         "variables": {
           "gear_T_B": 40,
@@ -6984,7 +7016,6 @@ window.PROBLEM_CATALOG = [
           "gear_d": 160,
           "gear_D_o": 160,
           "gear_tau_allow": 90,
-          "gear_t_step": 1,
           "gear_L_AB": 400,
           "gear_L_BC": 500,
           "gear_L_CD": 450,

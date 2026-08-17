@@ -122,9 +122,9 @@ window.PROBLEM_HEALTH = [
   {
     "id": "MOS-GEAR-SHAFT-018",
     "slug": "multi-gear-drive-shaft",
-    "title": "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft",
+    "title": "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Industrial Drive Shaft",
     "status": "OK",
-    "variables": 13,
+    "variables": 12,
     "questions": 19,
     "variants": 1,
     "warnings": []

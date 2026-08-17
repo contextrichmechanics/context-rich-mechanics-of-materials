@@ -1,5 +1,5 @@
 ---
-title: "Instructor Guide - Multi-Gear Drive Shaft"
+title: "Instructor Guide - Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Industrial Drive Shaft"
 subtitle: "Representative Answers and Evaluation Guidance"
 author: "Context-Rich Mechanics of Materials Library"
 format:
@@ -8,7 +8,7 @@ format:
 
 # Purpose
 
-Award credit for a consistent torque sign convention, correct cumulative internal torques, a labeled torque diagram, proper circular-shaft stress equations, upward wall-thickness selection, verification, and a bounded engineering recommendation.
+This problem develops load-path reasoning, torque equilibrium, internal resultants, torsional shear stress, section-property selection, and engineering judgment. Award credit for a consistent torque sign convention, correct cumulative internal torques, a labeled torque diagram, proper circular-shaft stress equations, whole-millimeter upward wall-thickness selection, verification, and a bounded engineering recommendation.
 
 # Problem Context
 
@@ -33,8 +33,9 @@ The base model assumes circular prismatic shaft segments, concentrated static to
 
 # Supplemental Assessment Structure
 
-- context interpretation and idealization: 20%;
-- torque equilibrium and internal torque diagram: 30%;
-- solid-shaft stress and governing segment: 20%;
-- tubular-shaft sizing and verification: 20%;
+- context interpretation: 15%;
+- idealization: 15%;
+- internal resultants: 20%;
+- stress analysis: 15%;
+- sizing and verification: 25%;
 - engineering recommendation and limitations: 10%.

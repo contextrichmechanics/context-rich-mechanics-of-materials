@@ -1010,7 +1010,6 @@ function variableMap(problem) {
   const gearSolidDiameter = numericValue(values, "gear_d");
   const gearOuterDiameter = numericValue(values, "gear_D_o");
   const gearAllowableStress = numericValue(values, "gear_tau_allow");
-  const gearWallStep = numericValue(values, "gear_t_step");
   const gearLengthAB = numericValue(values, "gear_L_AB");
   const gearLengthBC = numericValue(values, "gear_L_BC");
   const gearLengthCD = numericValue(values, "gear_L_CD");
@@ -1023,7 +1022,6 @@ function variableMap(problem) {
     Number.isFinite(gearSolidDiameter) && gearSolidDiameter > 0 &&
     Number.isFinite(gearOuterDiameter) && gearOuterDiameter > 0 &&
     Number.isFinite(gearAllowableStress) && gearAllowableStress > 0 &&
-    Number.isFinite(gearWallStep) && gearWallStep > 0 &&
     Number.isFinite(gearLengthAB) && gearLengthAB > 0 &&
     Number.isFinite(gearLengthBC) && gearLengthBC > 0 &&
     Number.isFinite(gearLengthCD) && gearLengthCD > 0 &&
@@ -1066,7 +1064,7 @@ function variableMap(problem) {
     const minimumWall = (gearOuterDiameter - maximumInnerDiameter) / 2;
     const selectedWall = Math.min(
       gearOuterDiameter / 2,
-      Math.ceil(minimumWall / gearWallStep - 1e-12) * gearWallStep
+      Math.ceil(minimumWall - 1e-12)
     );
     const selectedInnerDiameter = Math.max(0, gearOuterDiameter - 2 * selectedWall);
     const selectedStress = governingTorqueNmm === 0
@@ -1110,8 +1108,8 @@ function variableMap(problem) {
     values.gear_recommendation = !equilibriumPasses
       ? "Do not approve a shaft size until the applied gear torques satisfy overall shaft-axis equilibrium."
       : solidSectionIsFeasible && stressPasses
-        ? `Use a tubular shaft with outer diameter ${formatDerived(gearOuterDiameter, 3)} mm and wall thickness of at least ${formatDerived(selectedWall, 3)} mm for the simplified pure-torsion model. Its calculated governing shear stress is ${formatDerived(selectedStress, 3)} MPa, or ${formatDerived(100 * utilization, 1)}% of the assigned allowable stress.`
-        : "Increase the tubular-shaft outer diameter or revise the allowable-stress design before completing the omitted combined-loading and durability checks.";
+        ? `Use a hollow shaft with outer diameter ${formatDerived(gearOuterDiameter, 3)} mm and wall thickness of at least ${formatDerived(selectedWall, 3)} mm for the simplified pure-torsion model. Its calculated governing shear stress is ${formatDerived(selectedStress, 3)} MPa, or ${formatDerived(100 * utilization, 1)}% of the assigned allowable stress.`
+        : "Increase the hollow-shaft outer diameter or revise the allowable-stress design before completing the omitted combined-loading and durability checks.";
   }
 
   const thermalLength = numericValue(values, "L");

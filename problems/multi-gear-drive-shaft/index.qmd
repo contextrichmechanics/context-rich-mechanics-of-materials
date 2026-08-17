@@ -1,18 +1,18 @@
 ---
-title: "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft"
-description: "A context-rich torsion problem on torque diagrams, segment stresses, and tubular-shaft sizing."
+title: "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Industrial Drive Shaft"
+description: "An industrial shaft problem on torsion, internal torque diagrams, maximum shear stress, and hollow-shaft sizing."
 image: "assets/gear-shaft-industry-context.png"
 categories: [context-rich, mechanics-of-materials, design]
-mechanics_concepts: [torsion, internal torque, torque diagrams, shear stress, hollow shafts]
-course_topics: [torsion, internal torque, torque diagrams, shear stress, hollow shafts]
+mechanics_concepts: [torsion of circular shafts, internal torque diagrams, maximum shear stress, hollow-shaft sizing, torque equilibrium, internal resultants]
+course_topics: [torsion of circular shafts, internal torque diagrams, maximum shear stress, hollow-shaft sizing]
 textbook_chapters: [Torsion of circular shafts, Internal torque diagrams, Torsional shear stress, Hollow-shaft sizing]
 problem_types: [load-path analysis, internal-resultant calculation, stress calculation, component sizing, engineering evaluation]
-competencies: [torque equilibrium, sign conventions, internal torque diagrams, section-property selection, design verification, engineering judgment]
-industries: [production machinery, conveyors, rolling equipment, industrial line shafts]
+competencies: [load path, torque equilibrium, internal resultants, torsional shear stress, section-property selection, engineering judgment]
+industries: [industrial gearboxes, speed reducers, conveyor drives, rolling equipment, mixers, machine tools, multi-stage rotating machinery]
 difficulty: "Intermediate to advanced"
-status: "Published"
+status: "Faculty-ready draft"
 problem_id: "MOS-GEAR-SHAFT-018"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
