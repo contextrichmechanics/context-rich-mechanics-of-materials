@@ -8,7 +8,7 @@ format:
 
 # Purpose
 
-Award credit for a physically consistent interpretation of the loading, correct torsional boundary conditions, the linear internal-torque function, polar moment, twist integration, maximum stress, parameter sensitivity, and a bounded engineering recommendation.
+This problem develops load-path reasoning, boundary conditions, distributed loading, internal torque resultants, torsional stress, deformation, and engineering judgment. Award credit for interpreting <em>w</em>(<em>x</em>) as torque intensity, deriving the parabolic internal-torque function, evaluating stress and twist, and providing a bounded engineering recommendation.
 
 # Problem Context
 
@@ -34,6 +34,6 @@ The base model assumes a uniform solid circular shaft, homogeneous isotropic lin
 # Supplemental Assessment Structure
 
 - context interpretation and idealization: 25%;
-- boundary conditions and internal torque function: 25%;
-- twist integration and stress calculation: 30%;
+- distributed loading and internal torque function: 25%;
+- stress and twist calculation: 30%;
 - sensitivity and engineering recommendation: 20%.

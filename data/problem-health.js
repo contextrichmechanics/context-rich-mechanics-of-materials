@@ -195,7 +195,7 @@ window.PROBLEM_HEALTH = [
     "title": "Torsional Response of a Multi-Stage Turbine Rotor",
     "status": "OK",
     "variables": 6,
-    "questions": 18,
+    "questions": 19,
     "variants": 1,
     "warnings": []
   },

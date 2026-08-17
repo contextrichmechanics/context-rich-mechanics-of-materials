@@ -960,7 +960,7 @@
     const turbineLoadedLength = numericValue(values, "turbine_L");
     const turbineLengthA = numericValue(values, "turbine_a");
     const turbineLengthB = numericValue(values, "turbine_b");
-    const turbineTorqueD = numericValue(values, "turbine_T_D");
+    const turbineMaxTorqueIntensity = numericValue(values, "turbine_w_max");
 
     if (
       Number.isFinite(turbineDiameter) && turbineDiameter > 0 &&
@@ -968,29 +968,31 @@
       Number.isFinite(turbineLoadedLength) && turbineLoadedLength > 0 &&
       Number.isFinite(turbineLengthA) && turbineLengthA >= 0 &&
       Number.isFinite(turbineLengthB) && turbineLengthB >= 0 &&
-      Number.isFinite(turbineTorqueD) && turbineTorqueD > 0
+      Number.isFinite(turbineMaxTorqueIntensity) && turbineMaxTorqueIntensity > 0
     ) {
       const loadedLengthIn = turbineLoadedLength * 12;
-      const torqueDlbIn = turbineTorqueD * 12;
+      const distributedIntensityLbInPerIn = turbineMaxTorqueIntensity;
+      const totalTorqueLbIn = distributedIntensityLbInPerIn * loadedLengthIn / 2;
+      const totalTorqueLbFt = totalTorqueLbIn / 12;
       const polarMoment = Math.PI * turbineDiameter ** 4 / 32;
-      const twistRad = torqueDlbIn * loadedLengthIn /
-        (2 * polarMoment * turbineShearModulus);
+      const twistRad = distributedIntensityLbInPerIn * loadedLengthIn ** 2 /
+        (3 * polarMoment * turbineShearModulus);
       const twistDeg = twistRad * 180 / Math.PI;
-      const maximumStressPsi = torqueDlbIn * (turbineDiameter / 2) / polarMoment;
+      const maximumStressPsi = totalTorqueLbIn * (turbineDiameter / 2) / polarMoment;
 
       values.turbine_total_length_ft = formatDerived(
         turbineLengthA + turbineLoadedLength + turbineLengthB, 3
       );
       values.turbine_L_in = formatDerived(loadedLengthIn, 3);
-      values.turbine_T_D_lbin = formatDerived(torqueDlbIn, 1);
-      values.turbine_reaction_lbft = formatDerived(turbineTorqueD, 3);
-      values.turbine_average_torque_lbft = formatDerived(turbineTorqueD / 2, 3);
+      values.turbine_total_torque_lbft = formatDerived(totalTorqueLbFt, 3);
+      values.turbine_total_torque_lbin = formatDerived(totalTorqueLbIn, 1);
+      values.turbine_reaction_lbft = formatDerived(totalTorqueLbFt, 3);
       values.turbine_J_in4 = formatDerived(polarMoment, 3);
       values.turbine_phi_rad = formatDerived(twistRad, 6);
       values.turbine_phi_deg = formatDerived(twistDeg, 4);
       values.turbine_tau_psi = formatDerived(maximumStressPsi, 1);
       values.turbine_tau_ksi = formatDerived(maximumStressPsi / 1000, 3);
-      values.turbine_recommendation = `Use the calculated ${formatDerived(maximumStressPsi / 1000, 3)} ksi maximum shear stress and ${formatDerived(twistDeg, 4)} degree relative twist as base-model demand values. Section D at the shaft surface governs the pure-torsion stress result. Do not approve the rotor until these demands are compared with project-specific limits and the stated model omissions are evaluated.`;
+      values.turbine_recommendation = `The corrected distributed-torque model produces a ${formatDerived(totalTorqueLbFt, 3)} lb-ft torsional reaction at C, a parabolic internal-torque distribution that decreases to zero at D, a maximum shaft shear stress of ${formatDerived(maximumStressPsi / 1000, 3)} ksi at the outer surface of section C, and a C-to-D twist of ${formatDerived(twistDeg, 4)} degrees. Under this simplified static torsion model, both values are modest. A detailed turbine-rotor assessment still requires project-specific stress and twist limits and consideration of bending, dynamic torsional vibration, thermal effects, local rotor geometry, and fatigue.`;
     }
 
     const gearTorqueB = numericValue(values, "gear_T_B");

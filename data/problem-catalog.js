@@ -10396,7 +10396,26 @@ window.PROBLEM_CATALOG = [
     "title": "Torsional Response of a Multi-Stage Turbine Rotor",
     "studentDocumentTitle": "Student Homework Questions",
     "instructorDocumentTitle": "Instructor Answers",
-    "summary": "A turbine-rotor torsion problem integrating a linearly varying internal-torque function, reaction torque, polar moment, angle-of-twist integration, maximum shear stress, and parameter sensitivity.",
+    "summary": "A multi-stage turbine-rotor problem integrating distributed torque loading, internal torque functions, torsional shear stress, angle of twist, and engineering judgment.",
+    "primaryTopics": [
+      "Torsion",
+      "Angle of Twist"
+    ],
+    "courseTopic": "Torsion; distributed torque loading; internal torque functions; shear stress; angle of twist",
+    "targetLevel": "Intermediate to advanced MEEN 305",
+    "primaryMechanicsCompetencies": [
+      "Load-path reasoning",
+      "Boundary conditions",
+      "Distributed loading",
+      "Internal torque resultants",
+      "Torsional stress",
+      "Deformation",
+      "Engineering judgment"
+    ],
+    "expectedStudentDeliverable": "Context interpretation, student-generated idealization, distributed-load and internal-torque diagrams, symbolic derivation, numerical calculations, and a short engineering assessment.",
+    "difficultyLevel": 4,
+    "geometryComplexity": "One-dimensional prismatic circular shaft with distributed torque loading.",
+    "problemDeliverableType": "Annotated idealization, distributed-load and internal-torque diagrams, symbolic derivation, numerical calculations, and engineering assessment.",
     "textbookChapters": [
       "Torsion of circular shafts",
       "Distributed torsional loading",
@@ -10406,9 +10425,9 @@ window.PROBLEM_CATALOG = [
     "derivedPlaceholders": [
       "turbine_total_length_ft",
       "turbine_L_in",
-      "turbine_T_D_lbin",
+      "turbine_total_torque_lbft",
+      "turbine_total_torque_lbin",
       "turbine_reaction_lbft",
-      "turbine_average_torque_lbft",
       "turbine_J_in4",
       "turbine_phi_rad",
       "turbine_phi_deg",
@@ -10420,8 +10439,8 @@ window.PROBLEM_CATALOG = [
     "idealizedImage": "problems/turbine-shaft-distributed-torque/assets/turbine-shaft-instructor-idealization.png",
     "idealizedImageAlt": "Instructor reference idealization of a turbine rotor with torque-free journal bearings at A and B, a fixed section at C, section D, and a linearly varying blade-region torque model.",
     "source": "problems/turbine-shaft-distributed-torque/index.html",
-    "problemStatement": "<p>A power-generation engineering team is evaluating a uniform solid turbine rotor. Successive blade stages transfer torque into the shaft over the active region C-D, so the cumulative internal torque changes continuously along that region.</p><p>For this assignment, the stated linear quantity is the internal torque resultant <em>T</em>(<em>x</em>) = <em>T</em><sub>D</sub><em>x</em>/<em>L</em>, not a torque intensity per unit length. Journal bearings A and B are torque-free, while section C is fixed in rotation.</p>",
-    "engineeringGoal": "<p>Derive the internal-torque function, determine the relative angle of twist at D and the absolute maximum torsional shear stress, identify the governing location, and explain the parameters controlling strength and stiffness.</p>",
+    "problemStatement": "<p>Multi-stage steam turbines and gas turbines convert fluid energy into rotating shaft power through several rows of blades mounted along a common rotor. Fluid forces on successive turbine stages transfer torque through the blade roots and rotor disks into the central shaft and ultimately to connected drivetrain equipment such as a generator.</p><p>For this assessment, the detailed blade-by-blade loading is replaced by an equivalent distributed torque intensity acting over the active turbine-stage region. The intensity varies linearly from zero at the restrained section to its maximum value at the end of the loaded region, producing a nonuniform internal-torque field.</p>",
+    "engineeringGoal": "<p>Determine the torsional reaction required to balance the distributed turbine-stage loading, construct the internal torque distribution, calculate the maximum torsional shear stress and relative angle of twist, identify the governing shaft section, and explain which geometric or material changes would most effectively reduce the torsional response.</p>",
     "variables": [
       {
         "key": "turbine_d",
@@ -10474,255 +10493,290 @@ window.PROBLEM_CATALOG = [
         "step": 0.5
       },
       {
-        "key": "turbine_T_D",
-        "symbol": "T_D",
-        "label": "Internal torque at section D",
-        "value": 2000,
-        "unit": "lb*ft",
+        "key": "turbine_w_max",
+        "symbol": "w_max",
+        "label": "Maximum distributed torque intensity at D",
+        "value": 400,
+        "unit": "lb*ft/ft",
         "min": 0.1,
-        "max": 10000000,
-        "step": 100
+        "max": 1000000,
+        "step": 10
       }
     ],
     "questions": [
       {
         "id": "q1",
-        "title": "Primary Function of the Rotor Shaft",
+        "displayNumber": "Q1",
+        "title": "Primary Function of the System",
         "type": "context interpretation",
         "difficulty": "introductory",
         "tags": [
-          "rotor function",
+          "turbine rotor",
           "torque transmission",
-          "torsional stiffness"
+          "power generation"
         ],
         "learningObjectives": [
-          "Identify the rotor shaft's role in the turbine system."
+          "Identify the turbine rotor shaft's primary mechanical function."
         ],
         "selected": true,
-        "student": "<p>State the primary structural and mechanical function of the rotor shaft.</p>",
-        "instructor": "<p>The rotor shaft transmits torque from the turbine stages to the connected drivetrain while maintaining acceptable torsional strength and stiffness.</p>",
+        "student": "<p>What is the primary mechanical function of the turbine rotor shaft?</p>",
+        "instructor": "<p>The rotor shaft supports the turbine stages and transmits torque and mechanical power generated by the fluid-driven blades to the connected drivetrain or generator.</p>",
         "section": "context"
       },
       {
         "id": "q2",
-        "title": "Blade-Generated Torsional Loading",
+        "displayNumber": "Q2",
+        "title": "Source of Torsional Loading",
         "type": "load identification",
         "difficulty": "introductory",
         "tags": [
-          "turbine blades",
-          "shaft-axis torque",
-          "continuous loading"
+          "fluid forces",
+          "blade stages",
+          "shaft torque"
         ],
         "learningObjectives": [
-          "Connect blade loading to a varying internal torque."
+          "Explain how turbine stages create shaft torsion."
         ],
         "selected": true,
-        "student": "<p>Explain how the turbine blade stages load the shaft in the base model.</p>",
-        "instructor": "<p>The blade stages apply torque about the shaft axis. Their cumulative effect makes the internal torque resultant vary continuously along C-D rather than remain constant between isolated point loads.</p>",
+        "student": "<p>How do the turbine blade stages create torsional loading in the rotor shaft?</p>",
+        "instructor": "<p>Fluid forces acting on the blades create moments about the rotor axis. These moments are transferred through the blade roots and rotor disks into the shaft as torque.</p>",
         "section": "context"
       },
       {
         "id": "q3",
-        "title": "Supports and Rotational Boundary Conditions",
+        "displayNumber": "Q3",
+        "title": "Supports and Restraints",
         "type": "boundary conditions",
         "difficulty": "introductory",
         "tags": [
           "journal bearings",
-          "fixed section",
-          "reaction torque"
+          "radial support",
+          "rotation"
         ],
         "learningObjectives": [
-          "Distinguish radial support from rotational restraint."
+          "Describe the journal bearings' physical role."
         ],
         "selected": true,
-        "student": "<p>Identify supports A, B, and C and state what each prevents.</p>",
-        "instructor": "<p>Journal bearings A and B prevent radial translation but allow shaft-axis rotation, so they provide no torsional reaction in the ideal model. Section C is fixed against rotation, so &theta;(C) = 0 and a reaction torque develops there.</p>",
+        "student": "<p>What is the mechanical role of the rotor bearings, and what motion do they permit?</p>",
+        "instructor": "<p>The journal bearings support and align the shaft radially while permitting rotation about the shaft axis. In the torsion-only model they do not resist torque about that axis.</p>",
         "section": "context"
       },
       {
         "id": "q4",
-        "title": "Torsional Load Path",
+        "displayNumber": "Q4",
+        "title": "Torque Load Path",
         "type": "load path",
         "difficulty": "introductory",
         "tags": [
-          "steam forces",
-          "blade hubs",
-          "fixed section"
+          "working fluid",
+          "rotor disks",
+          "drivetrain"
         ],
         "learningObjectives": [
-          "Trace torque transfer from the blades to the restraint."
+          "Trace torque transfer through the turbine rotor."
         ],
         "selected": true,
-        "student": "<p>Trace the torsional load path through the turbine rotor.</p>",
-        "instructor": "<p>Steam forces act on the blades; blade hubs transfer torque into the rotor; the shaft carries cumulative internal torque toward restrained section C; and the fixed connection supplies the balancing reaction torque.</p>",
+        "student": "<p>Trace the torsional load path from the working fluid to the drivetrain.</p>",
+        "instructor": "<p>Working-fluid forces act on the blades; the blade rows transfer torque into the rotor disks; the disks transfer torque into the shaft; and the shaft carries the accumulated torque toward the restrained or connected drivetrain location.</p>",
         "section": "context"
       },
       {
         "id": "q5",
-        "title": "Expected Critical Location",
-        "type": "mechanics reasoning",
+        "displayNumber": "Q5",
+        "title": "Relevant Mechanical Responses",
+        "type": "scope identification",
         "difficulty": "introductory",
         "tags": [
-          "maximum torque",
-          "section D",
-          "outer surface"
+          "torsional strength",
+          "torsional stiffness",
+          "angular twist"
         ],
         "learningObjectives": [
-          "Predict the location of maximum torsional stress."
+          "Identify the principal shaft responses in torsion."
         ],
         "selected": true,
-        "student": "<p>Before calculating, predict where the maximum torsional shear stress will occur and explain why.</p>",
-        "instructor": "<p>Maximum stress occurs where the magnitude of internal torque is largest and at the shaft's outer surface. For the stated linear internal-torque model, the critical cross section is D.</p>",
+        "student": "<p>What shaft responses are important when evaluating the torsional behavior of the rotor?</p>",
+        "instructor": "<p>The central responses are torsional shear stress for strength and angular twist for torsional stiffness and relative rotational alignment.</p>",
         "section": "context"
       },
       {
         "id": "q6",
-        "title": "Governing Mechanical Responses",
-        "type": "scope identification",
+        "displayNumber": "Q6",
+        "title": "Effect of Distributed Loading",
+        "type": "mechanics reasoning",
         "difficulty": "introductory",
         "tags": [
-          "strength",
-          "stiffness",
-          "model scope"
+          "distributed torque",
+          "successive stages",
+          "internal torque variation"
         ],
         "learningObjectives": [
-          "Identify the responses included in the base problem."
+          "Explain why internal torque varies through the active stage region."
         ],
         "selected": true,
-        "student": "<p>Identify the mechanical responses central to this problem and list important responses outside the base model.</p>",
-        "instructor": "<p>The base responses are torsional strength, represented by maximum shear stress, and torsional stiffness, represented by relative angle of twist. Bearing stresses, blade stresses, bending, fatigue, vibration, and thermal behavior are outside the base model.</p>",
+        "student": "<p>Why can the torque carried by the shaft vary along the turbine-stage region rather than remain constant?</p>",
+        "instructor": "<p>Torque is introduced over many axial locations by successive blade stages. As torque is accumulated along the rotor, the internal torque changes continuously through the loaded region.</p>",
         "section": "context"
       },
       {
         "id": "q7",
-        "title": "Key Geometry and Material Parameters",
+        "displayNumber": "Q7",
+        "title": "Relevant Parameters",
         "type": "parameter identification",
         "difficulty": "introductory",
         "tags": [
-          "diameter scaling",
+          "shaft diameter",
           "loaded length",
-          "shear modulus"
+          "shear modulus",
+          "torque distribution"
         ],
         "learningObjectives": [
-          "Explain how diameter, length, and modulus affect torsional response."
+          "Identify geometric, material, and loading parameters controlling stress and twist."
         ],
         "selected": true,
-        "student": "<p>Identify the key geometric and material parameters and describe how they affect stress or twist.</p>",
-        "instructor": "<p>Shaft diameter <em>d</em> controls <em>J</em> proportional to <em>d</em><sup>4</sup>, twist proportional to 1/<em>d</em><sup>4</sup>, and stress proportional to 1/<em>d</em><sup>3</sup>. Loaded length <em>L</em> affects twist linearly. Shear modulus <em>G</em> affects twist but not elastic stress for prescribed torque.</p>",
+        "student": "<p>What geometric, material, and loading characteristics would influence shaft stress and twist?</p>",
+        "instructor": "<p>Relevant characteristics include shaft diameter, length of the torque-producing region, magnitude and spatial distribution of the applied torque, and the shaft material shear modulus.</p>",
+        "gradingNotes": "<p>At this stage, students should identify physical dependencies without relying on analytical point labels or equations.</p>",
         "section": "context"
       },
       {
         "id": "q8",
-        "title": "Student-Generated Turbine-Shaft Idealization",
+        "displayNumber": "Q8",
+        "title": "Student-Generated Structural Idealization",
         "type": "free-body diagram",
         "difficulty": "intermediate",
         "tags": [
-          "idealization",
-          "coordinate x",
-          "torque diagram"
+          "one-dimensional shaft",
+          "distributed torque",
+          "student idealization"
         ],
         "learningObjectives": [
-          "Create a varying-torque shaft model before viewing the reference figure."
+          "Convert the turbine rotor into a distributed-torque shaft model."
         ],
         "selected": true,
-        "student": "<p>Before using the reference figure, create a simplified shaft model showing A, B, fixed section C, section D, coordinate <em>x</em> measured from C, and the linearly varying internal torque <em>T</em>(<em>x</em>). Include a circular cross section with diameter <em>d</em>.</p>",
-        "instructor": "<p>A valid model shows a prismatic circular shaft with &theta;(C) = 0, ideal torque-free journal bearings at A and B, and <em>T</em>(<em>x</em>) = <em>T</em><sub>D</sub><em>x</em>/<em>L</em> for 0 &le; <em>x</em> &le; <em>L</em>.</p>",
-        "gradingNotes": "<p>Students should attempt the model before seeing the instructor idealization.</p>",
+        "student": "<p>Convert the real turbine rotor into a simplified one-dimensional Mechanics of Materials model. Show the rotor shaft, journal-bearing support locations, the region over which turbine stages apply torque, the restrained torsional reference location, and a coordinate along the loaded region. Represent the blade-stage loading as a distributed torque rather than as individual blades.</p>",
+        "instructor": "<p>A suitable model is a prismatic circular shaft supported radially by ideal journal bearings, with one torsionally restrained reference section and an equivalent distributed torque applied over the turbine-stage region. The applied distributed torque intensity must be distinguished from the internal torque resultant.</p>",
+        "gradingNotes": "<p>Students should attempt their own model before viewing the instructor reference idealization.</p>",
         "section": "transition"
       },
       {
         "id": "q9",
+        "displayNumber": "Q9",
         "title": "Modeling Assumptions",
         "type": "assumptions",
         "difficulty": "intermediate",
         "tags": [
           "Saint-Venant torsion",
           "linear elasticity",
-          "small twist"
+          "ideal bearings"
         ],
         "learningObjectives": [
-          "State assumptions supporting the turbine-shaft model."
+          "State assumptions supporting the simplified rotor model."
         ],
         "selected": true,
-        "student": "<p>State the assumptions required for the base mechanics model.</p>",
-        "instructor": "<p>Assume a uniform solid circular shaft, homogeneous isotropic linear-elastic material, Saint-Venant torsion, small twist, constant <em>G</em> and <em>d</em>, ideal bearings that transmit no shaft-axis torque, and a perfectly fixed section C. Neglect blade size, local stress concentrations, bending, dynamics, thermal effects, and fatigue.</p>",
+        "student": "<p>State the assumptions used to convert the turbine rotor into the simplified torsion model.</p>",
+        "instructor": "<p>Assume a uniform solid circular shaft; homogeneous isotropic linear-elastic material; Saint-Venant torsion; small twist; constant diameter and shear modulus; ideal journal bearings that carry radial loads but no shaft-axis torque; one section perfectly restrained in rotation; blade size neglected; and distributed torque acting only over the modeled turbine-stage region. Bending, dynamics, thermal gradients, stress concentrations, and fatigue are excluded.</p>",
         "section": "transition"
       },
       {
         "id": "q10",
+        "displayNumber": "Q10",
         "title": "Mechanics Analysis Plan",
         "type": "analysis planning",
         "difficulty": "intermediate",
         "tags": [
-          "internal torque function",
-          "integration",
-          "stress"
+          "distributed load",
+          "internal torque",
+          "stress and twist"
         ],
         "learningObjectives": [
-          "Plan a complete varying-torque analysis."
+          "Plan the distributed-torque stress and deformation analysis."
         ],
         "selected": true,
-        "student": "<p>Outline the calculation sequence before substituting numbers.</p>",
-        "instructor": "<p>Define <em>T</em>(<em>x</em>); determine the reaction torque at C; construct the internal-torque diagram; compute <em>J</em>; integrate <em>T</em>(<em>x</em>)/(<em>JG</em>) for twist; evaluate <em>Tc</em>/<em>J</em> for stress; and interpret the governing section and parameter sensitivity.</p>",
+        "student": "<p>Before calculating, describe the sequence required to determine stress and twist from the distributed turbine-stage loading.</p>",
+        "instructor": "<p>Define the distributed torque intensity; integrate it to obtain the total applied torque and restraining reaction; derive the internal torque function from equilibrium of a cut section; construct the internal torque diagram; compute the shaft polar moment of inertia; integrate internal torque divided by <em>JG</em> to obtain twist; evaluate maximum shear stress; then interpret the governing section and parameter sensitivity.</p>",
         "section": "transition"
       },
       {
-        "id": "q11",
-        "title": "Torsional Boundary Conditions",
+        "id": "m1",
+        "displayNumber": "M1",
+        "title": "Boundary Conditions",
         "type": "mechanics setup",
         "difficulty": "introductory",
         "tags": [
-          "theta at C",
           "journal bearings",
-          "rotation"
+          "fixed section C",
+          "torsional reaction"
         ],
         "learningObjectives": [
-          "State the boundary conditions used in the torsion solution."
+          "State the torsional boundary conditions in the instructor model."
         ],
         "selected": true,
-        "student": "<p>State the torsional boundary conditions at A, B, and C.</p>",
-        "instructor": "<p>At fixed section C, &theta;(C) = 0. Ideal journal bearings A and B permit rotation and supply no reaction torque about the shaft axis. Their radial reactions are outside the torsion-only model.</p>",
+        "student": "<p>Using the instructor reference model, state the torsional boundary conditions at the journal bearings and at the restrained section.</p>",
+        "instructor": "<p>The journal bearings support the shaft radially but permit rotation and provide no reaction torque about the shaft axis. Section C is fixed against rotation, so &theta;(C) = 0 and a torsional reaction develops at C.</p>",
         "section": "analysis"
       },
       {
-        "id": "q12",
-        "title": "Fixed-Section Reaction Torque",
-        "type": "equilibrium",
-        "difficulty": "introductory",
-        "tags": [
-          "constraint reaction",
-          "overall torque equilibrium",
-          "section C"
-        ],
-        "learningObjectives": [
-          "Determine the balancing torsional reaction."
-        ],
-        "selected": true,
-        "student": "<p>Identify the unknown torsional reaction at C and determine its magnitude and sense.</p>",
-        "instructor": "<p>The fixed section supplies a reaction torque of magnitude <strong>{{turbine_reaction_lbft}} lb&middot;ft</strong>, opposite the sense of the blade-region torque. Bearings A and B supply no shaft-axis reaction torque.</p>",
-        "section": "analysis"
-      },
-      {
-        "id": "q13",
-        "title": "Internal Torque Function and Diagram",
-        "type": "internal loading",
+        "id": "m2",
+        "displayNumber": "M2",
+        "title": "Distributed Torque Intensity",
+        "type": "distributed loading",
         "difficulty": "intermediate",
         "tags": [
-          "linear function",
-          "triangular diagram",
-          "model interpretation"
+          "linear intensity",
+          "w of x",
+          "torque per length"
         ],
         "learningObjectives": [
-          "Define and graph a linearly varying internal torque resultant."
+          "Write the linearly varying distributed torque intensity."
         ],
         "selected": true,
-        "student": "<p>Define the internal torque along C-D and construct its diagram. Clearly distinguish an internal torque resultant from a torque intensity per unit length.</p>",
-        "instructor": "<p>With <em>x</em> measured from C, <em>T</em>(<em>x</em>) = <em>T</em><sub>D</sub><em>x</em>/<em>L</em> for 0 &le; <em>x</em> &le; <em>L</em>. The diagram is triangular, increasing from zero at C to <em>T</em><sub>D</sub> at D. The area-average internal torque is <strong>{{turbine_average_torque_lbft}} lb&middot;ft</strong>.</p><p>Here <em>T</em>(<em>x</em>) has torque units; it is not a distributed intensity <em>w</em>(<em>x</em>) with torque-per-length units.</p>",
-        "commonMistakes": "<p>Do not integrate the stated <em>T</em>(<em>x</em>) once more as though it were a torque intensity.</p>",
+        "student": "<p>Write the distributed torque intensity acting over the turbine-stage region.</p>",
+        "instructor": "<p>With <em>x</em> measured from C toward D, the linearly varying distributed torque intensity is <em>w</em>(<em>x</em>) = <em>w</em><sub>max</sub><em>x</em>/<em>L</em>, for 0 &le; <em>x</em> &le; <em>L</em>.</p>",
+        "gradingNotes": "<p>The quantity <em>w</em>(<em>x</em>) has torque-per-length units; it is not an internal torque resultant.</p>",
         "section": "analysis"
       },
       {
-        "id": "q14",
+        "id": "m3",
+        "displayNumber": "M3",
+        "title": "Total Applied Torque and Reaction at C",
+        "type": "equilibrium",
+        "difficulty": "intermediate",
+        "tags": [
+          "triangular load resultant",
+          "reaction torque",
+          "integration"
+        ],
+        "learningObjectives": [
+          "Calculate the distributed-load resultant and balancing reaction."
+        ],
+        "selected": true,
+        "student": "<p>Determine the total torque applied by the distributed loading and the corresponding reaction torque at the restrained section.</p>",
+        "instructor": "<p>The total applied torque is the area under the triangular distribution: <em>T</em><sub>total</sub> = &int;<sub>0</sub><sup><em>L</em></sup><em>w</em>(<em>x</em>)d<em>x</em> = <em>w</em><sub>max</sub><em>L</em>/2 = <strong>{{turbine_total_torque_lbft}} lb&middot;ft</strong>. The reaction at C therefore has magnitude <strong>{{turbine_reaction_lbft}} lb&middot;ft</strong> and acts opposite the distributed turbine-stage torque.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "m4",
+        "displayNumber": "M4",
+        "title": "Internal Torque Function and Diagram",
+        "type": "internal loading",
+        "difficulty": "advanced",
+        "tags": [
+          "cut section",
+          "parabolic torque diagram",
+          "governing section C"
+        ],
+        "learningObjectives": [
+          "Derive and interpret the internal torque function."
+        ],
+        "selected": true,
+        "student": "<p>Derive the internal torque <em>T</em>(<em>x</em>) in the loaded region and identify the shape and endpoint values of its diagram.</p>",
+        "instructor": "<p>Equilibrium of the portion from <em>x</em> to D gives <em>T</em>(<em>x</em>) = &int;<sub><em>x</em></sub><sup><em>L</em></sup><em>w</em>(&xi;)d&xi; = (<em>w</em><sub>max</sub>/(2<em>L</em>))(<em>L</em><sup>2</sup> - <em>x</em><sup>2</sup>). The diagram is parabolic: <em>T</em>(0) = <em>w</em><sub>max</sub><em>L</em>/2 at C and <em>T</em>(<em>L</em>) = 0 at D. The maximum internal torque therefore occurs at C.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "m5",
+        "displayNumber": "M5",
         "title": "Polar Moment of Inertia",
         "type": "section-property calculation",
         "difficulty": "introductory",
@@ -10732,84 +10786,89 @@ window.PROBLEM_CATALOG = [
           "diameter"
         ],
         "learningObjectives": [
-          "Calculate the polar moment for a solid circular shaft."
+          "Calculate the shaft polar moment of inertia."
         ],
         "selected": true,
-        "student": "<p>Determine the polar moment of inertia <em>J</em> for the assigned solid shaft.</p>",
-        "instructor": "<p><em>J</em> = &pi;<em>d</em><sup>4</sup>/32 = <strong>{{turbine_J_in4}} in<sup>4</sup></strong>.</p>",
+        "student": "<p>Determine the polar moment of inertia of the solid circular shaft.</p>",
+        "instructor": "<p>For a solid circular shaft, <em>J</em> = &pi;<em>d</em><sup>4</sup>/32 = <strong>{{turbine_J_in4}} in<sup>4</sup></strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q15",
-        "title": "Relative Angle of Twist at D",
-        "type": "torsional deformation",
-        "difficulty": "intermediate",
-        "tags": [
-          "twist integration",
-          "linear torque",
-          "unit conversion"
-        ],
-        "learningObjectives": [
-          "Integrate a varying internal torque to determine twist."
-        ],
-        "selected": true,
-        "student": "<p>Determine the angle of twist at D relative to C. Show the integral and use consistent inch-pound units.</p>",
-        "instructor": "<p>&phi;<sub>D/C</sub> = &int;<sub>0</sub><sup><em>L</em></sup> <em>T</em>(<em>x</em>)/(<em>JG</em>) d<em>x</em> = <em>T</em><sub>D</sub><em>L</em>/(2<em>JG</em>).</p><p>Using <em>L</em> = <strong>{{turbine_L_in}} in</strong> and <em>T</em><sub>D</sub> = <strong>{{turbine_T_D_lbin}} lb&middot;in</strong>, &phi;<sub>D/C</sub> = <strong>{{turbine_phi_rad}} rad</strong> = <strong>{{turbine_phi_deg}}&deg;</strong>.</p>",
-        "section": "analysis"
-      },
-      {
-        "id": "q16",
-        "title": "Absolute Maximum Torsional Shear Stress",
+        "id": "m6",
+        "displayNumber": "M6",
+        "title": "Maximum Torsional Shear Stress",
         "type": "torsional stress calculation",
         "difficulty": "intermediate",
         "tags": [
-          "maximum torque",
+          "maximum internal torque",
           "outer surface",
-          "section D"
+          "section C"
         ],
         "learningObjectives": [
-          "Calculate maximum shaft stress and locate it physically."
+          "Calculate the maximum torsional shear stress and locate it."
         ],
         "selected": true,
-        "student": "<p>Determine the absolute maximum torsional shear stress and identify its location.</p>",
-        "instructor": "<p>The largest |<em>T</em>| occurs at D. Therefore &tau;<sub>max</sub> = <em>T</em><sub>D</sub>(<em>d</em>/2)/<em>J</em> = <strong>{{turbine_tau_psi}} psi</strong> = <strong>{{turbine_tau_ksi}} ksi</strong>. It occurs at the outer surface of section D.</p>",
+        "student": "<p>Determine the absolute maximum torsional shear stress and its location.</p>",
+        "instructor": "<p>The maximum internal torque is <strong>{{turbine_total_torque_lbft}} lb&middot;ft</strong> = <strong>{{turbine_total_torque_lbin}} lb&middot;in</strong> at C. Therefore, &tau;<sub>max</sub> = <em>T</em><sub>max</sub>(<em>d</em>/2)/<em>J</em> = <strong>{{turbine_tau_psi}} psi</strong> = <strong>{{turbine_tau_ksi}} ksi</strong>. The critical location is the outer surface of the shaft at section C.</p>",
         "section": "analysis"
       },
       {
-        "id": "q17",
+        "id": "m7",
+        "displayNumber": "M7",
+        "title": "Angle of Twist from C to D",
+        "type": "torsional deformation",
+        "difficulty": "advanced",
+        "tags": [
+          "nonuniform torque",
+          "twist integration",
+          "relative rotation"
+        ],
+        "learningObjectives": [
+          "Integrate a parabolic internal torque to determine relative twist."
+        ],
+        "selected": true,
+        "student": "<p>Determine the rotation of section D relative to the fixed section C.</p>",
+        "instructor": "<p>&phi;<sub>D/C</sub> = &int;<sub>0</sub><sup><em>L</em></sup><em>T</em>(<em>x</em>)/(<em>JG</em>)d<em>x</em> = <em>w</em><sub>max</sub><em>L</em><sup>2</sup>/(3<em>JG</em>). With <em>L</em> = <strong>{{turbine_L_in}} in</strong>, &phi;<sub>D/C</sub> = <strong>{{turbine_phi_rad}} rad</strong> = <strong>{{turbine_phi_deg}}&deg;</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "m8",
+        "displayNumber": "M8",
         "title": "Torsional Sensitivity",
         "type": "qualitative reasoning",
         "difficulty": "intermediate",
         "tags": [
           "diameter scaling",
           "shear modulus",
-          "loaded length"
+          "loaded-region length"
         ],
         "learningObjectives": [
-          "Compare how design variables affect stress and twist."
+          "Compare design changes that reduce shaft stress and twist."
         ],
         "selected": true,
-        "student": "<p>Explain which design variable most effectively reduces both twist and stress. Compare the effects of increasing diameter, increasing shear modulus, and reducing loaded length.</p>",
-        "instructor": "<p>Increasing diameter is most effective because <em>J</em> scales with <em>d</em><sup>4</sup>, twist scales with 1/<em>d</em><sup>4</sup>, and maximum stress scales with 1/<em>d</em><sup>3</sup>. Increasing <em>G</em> reduces twist but not stress for prescribed torque. Reducing <em>L</em> reduces twist but not maximum stress at D.</p>",
+        "student": "<p>Which changes most effectively reduce the shaft stress and twist?</p>",
+        "instructor": "<p>Increasing shaft diameter is especially effective: maximum stress scales approximately as 1/<em>d</em><sup>3</sup> and twist as 1/<em>d</em><sup>4</sup>. Increasing shear modulus <em>G</em> reduces twist but does not reduce elastic stress for a prescribed torque distribution. Reducing the loaded-region length reduces both accumulated torque and twist for a fixed distributed-torque intensity.</p>",
+        "gradingNotes": "<p>Students should distinguish between changing the total applied torque and changing shaft stiffness.</p>",
         "section": "analysis"
       },
       {
-        "id": "q18",
-        "title": "Engineering Assessment",
+        "id": "m9",
+        "displayNumber": "M9",
+        "title": "Engineering Assessment and Recommendation",
         "type": "engineering judgment",
         "difficulty": "advanced",
         "tags": [
+          "turbine rotor",
           "recommendation",
-          "limitations",
-          "turbine rotor"
+          "model limitations"
         ],
         "learningObjectives": [
-          "Make a bounded recommendation from the torsion results."
+          "Summarize the rotor response and provide a bounded recommendation."
         ],
         "selected": true,
-        "student": "<p>Provide a limited engineering recommendation based on the torsion model and identify the checks needed before final turbine-shaft approval.</p>",
-        "instructor": "<p>{{turbine_recommendation}}</p><p>Final design must verify the intended loading interpretation and include bending, combined stress, fatigue, stress concentrations, blade and rotor dynamics, vibration, thermal gradients, bearings, and project-specific stress and twist limits.</p>",
-        "gradingNotes": "<p>Students should not claim full rotor safety without allowable limits and the omitted coupled analyses.</p>",
+        "student": "<p>Use the mechanics results to summarize the torsional response of the rotor and state one appropriate design recommendation or limitation.</p>",
+        "instructor": "<p>{{turbine_recommendation}}</p>",
+        "gradingNotes": "<p>The recommendation must remain a limited static-torsion assessment and identify important omitted behavior.</p>",
         "section": "analysis"
       }
     ],
@@ -10817,7 +10876,7 @@ window.PROBLEM_CATALOG = [
       {
         "id": "section-a",
         "title": "Homework Version A - baseline turbine rotor",
-        "description": "Default sequence for a linear internal-torque function, reaction torque, torque diagram, twist integration, stress, sensitivity, and engineering assessment.",
+        "description": "Faculty-reviewed sequence for context interpretation, distributed-torque idealization, reaction and internal-torque derivation, stress, twist, sensitivity, and engineering assessment.",
         "selectedQuestions": [
           "q1",
           "q2",
@@ -10829,14 +10888,15 @@ window.PROBLEM_CATALOG = [
           "q8",
           "q9",
           "q10",
-          "q11",
-          "q12",
-          "q13",
-          "q14",
-          "q15",
-          "q16",
-          "q17",
-          "q18"
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9"
         ],
         "variables": {
           "turbine_d": 6,
@@ -10844,7 +10904,7 @@ window.PROBLEM_CATALOG = [
           "turbine_L": 10,
           "turbine_a": 2,
           "turbine_b": 2,
-          "turbine_T_D": 2000
+          "turbine_w_max": 400
         }
       }
     ]

@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1787006735.3615057,
-    "ast_hash": "fdb00544698c5012d45dec278fd4d371",
+    "mtime": 1787009144.4565787,
+    "ast_hash": "b81b25a0a28fe6b49dc26283ee934119",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1787006735.3624759,
-    "ast_hash": "512b62833e0ca84352d37f205e2f9de5",
+    "mtime": 1787009144.457672,
+    "ast_hash": "0cf9205cadc1ae43f69993dccaee64e2",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1787006648.1944094,
-    "ast_hash": "902e7a7ce97d8b97518bdd6ca35e16df",
+    "mtime": 1787008073.8848143,
+    "ast_hash": "fcc2bd02851a456ccebb89bd10791f3d",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1787006648.2737248,
-    "ast_hash": "457ecef2317b2b2c5e53a85242c27530",
+    "mtime": 1787008073.963613,
+    "ast_hash": "fa499fce12efb5f1ff0c061d559d53f7",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1787006648.353955,
-    "ast_hash": "8cfd6814ea818ee4f4d2def024422294",
+    "mtime": 1787008074.0431623,
+    "ast_hash": "e3981cc8d1af6e325131ecb2122453e1",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -485,23 +485,23 @@
     "semantic_hash": ""
   },
   "problems/turbine-shaft-distributed-torque/_student-problem.qmd": {
-    "mtime": 1785786009.9265866,
-    "ast_hash": "e1796f5fcc62baba49218b6da382f381",
+    "mtime": 1787007827.626083,
+    "ast_hash": "82f9e8f0d26678499f4e553ffef49501",
     "semantic_hash": ""
   },
   "problems/turbine-shaft-distributed-torque/index.qmd": {
-    "mtime": 1785854457.8150523,
-    "ast_hash": "facb1434d39d3491d9993fbcde0eccb2",
+    "mtime": 1787007827.7039645,
+    "ast_hash": "2fd640a49fce5d56a73ff7a46f2f8efa",
     "semantic_hash": ""
   },
   "problems/turbine-shaft-distributed-torque/instructor-guide.qmd": {
-    "mtime": 1785818550.2177625,
-    "ast_hash": "9a25c098e0c9e6b6d932c65e1d2270c3",
+    "mtime": 1787007827.8589334,
+    "ast_hash": "6ceb16c49acea6be887c0437c05c7a28",
     "semantic_hash": ""
   },
   "problems/turbine-shaft-distributed-torque/student-packet.qmd": {
-    "mtime": 1785818550.209661,
-    "ast_hash": "2e56df4eec327cffb5195d146dcdf726",
+    "mtime": 1787007827.7817564,
+    "ast_hash": "a7c9ddfdd43e663fe6f406129165c858",
     "semantic_hash": ""
   },
   "problems/variable-radius-tapered-shaft/_student-problem.qmd": {
@@ -725,8 +725,8 @@
     "semantic_hash": ""
   },
   "problems/turbine-shaft-distributed-torque/assets/turbine-shaft-industry-context.png": {
-    "mtime": 1785785948.7052286,
-    "ast_hash": "520cadfd105e880892bcfd411f1a6358",
+    "mtime": 1787008092.9327118,
+    "ast_hash": "8ba53090203aeb3647d59220f1613947",
     "semantic_hash": ""
   },
   "problems/turbine-shaft-distributed-torque/assets/turbine-shaft-instructor-idealization.png": {

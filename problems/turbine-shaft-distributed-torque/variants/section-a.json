@@ -1,7 +1,7 @@
 {
   "id":"section-a",
   "title":"Homework Version A - baseline turbine rotor",
-  "description":"Default sequence for a linear internal-torque function, reaction torque, torque diagram, twist integration, stress, sensitivity, and engineering assessment.",
-  "selectedQuestions":["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18"],
-  "variables":{"turbine_d":6,"turbine_G":11200000,"turbine_L":10,"turbine_a":2,"turbine_b":2,"turbine_T_D":2000}
+  "description":"Faculty-reviewed sequence for context interpretation, distributed-torque idealization, reaction and internal-torque derivation, stress, twist, sensitivity, and engineering assessment.",
+  "selectedQuestions":["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","m1","m2","m3","m4","m5","m6","m7","m8","m9"],
+  "variables":{"turbine_d":6,"turbine_G":11200000,"turbine_L":10,"turbine_a":2,"turbine_b":2,"turbine_w_max":400}
 }

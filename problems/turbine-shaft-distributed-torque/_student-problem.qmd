@@ -4,20 +4,22 @@
 
 ### Engineering Context
 
-A power-generation engineering team is evaluating the torsional response of a multi-stage turbine rotor during steady operation. Steam loads are transferred from successive blade rows into the rotor shaft over the active blade region, causing the cumulative internal torque to change continuously along the rotor.
+Multi-stage steam turbines and gas turbines convert fluid energy into rotating shaft power through several rows of blades mounted along a common rotor. In power-generation equipment, steam or hot gas acts on successive turbine stages and produces torque at each stage. That torque is transferred through the blade roots and rotor disks into the central shaft and ultimately to connected drivetrain equipment such as a generator.
 
-The rotor is modeled as a uniform solid L2 steel shaft. Journal bearings support the shaft radially but permit shaft-axis rotation. Section C is fixed in rotation and serves as the torsional reference.
+Unlike a shaft loaded by a single concentrated torque, a turbine rotor can receive torque continuously over a substantial axial region containing many blade stages. The cumulative torque carried by the shaft therefore changes along the rotor. Understanding that variation is important because both torsional shear stress and angular twist depend on the internal torque distribution, not only on the total power produced by the machine.
 
-![Industrial turbine rotor with its casing removed.](assets/turbine-shaft-industry-context.png){fig-alt="Industrial multi-stage turbine rotor exposed inside its open casing." width=88%}
+For this assessment, the detailed blade-by-blade loading is replaced by an equivalent distributed torque acting over the active turbine-stage region. The objective is to connect the physical turbine system to a one-dimensional torsion model and determine how a spatially varying applied torque produces a nonuniform internal-torque field, shaft stress, and twist.
+
+![Multi-stage turbine rotor with several blade rows mounted along a common shaft.](assets/turbine-shaft-industry-context.png){fig-alt="Industrial multi-stage turbine rotor suspended during assembly or maintenance." width=88%}
 
 ### Main Engineering Goal
 
-Determine the relative angle of twist at D and the absolute maximum torsional shear stress, then identify the governing location and the geometric or material parameters that most strongly control the response.
+Determine the torsional reaction required to balance the distributed turbine-stage loading, construct the internal torque distribution, calculate the maximum torsional shear stress and relative angle of twist, identify the governing shaft section, and explain which geometric or material changes would most effectively reduce the torsional response.
 
 ### System Components
 
-- uniform solid L2 steel rotor shaft;
-- turbine blade stages between C and D;
-- torque-free journal bearings at A and B;
-- fixed rotational restraint at section C;
-- evaluation section D.
+- turbine rotor shaft;
+- turbine blade stages and rotor disks;
+- journal bearings;
+- turbine support structure;
+- drivetrain connection.

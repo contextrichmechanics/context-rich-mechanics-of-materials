@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1787004466.7275262,
-    "ast_hash": "653514795712aba417236e97411a0060",
+    "mtime": 1787006735.3615057,
+    "ast_hash": "fdb00544698c5012d45dec278fd4d371",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1787004466.7284994,
-    "ast_hash": "46d5aaf5bd64bfda04bdcc4dca2b5ae9",
+    "mtime": 1787006735.3624759,
+    "ast_hash": "512b62833e0ca84352d37f205e2f9de5",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1787004350.2715652,
-    "ast_hash": "bc5b5e95b1e2685a28742019f6b2aeaf",
+    "mtime": 1787006648.1944094,
+    "ast_hash": "902e7a7ce97d8b97518bdd6ca35e16df",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1787004350.3507876,
-    "ast_hash": "5dc76e8506252397ed865ce05a745716",
+    "mtime": 1787006648.2737248,
+    "ast_hash": "457ecef2317b2b2c5e53a85242c27530",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1787004350.4303098,
-    "ast_hash": "903e9096d7c795e36b2f32f4d469d167",
+    "mtime": 1787006648.353955,
+    "ast_hash": "8cfd6814ea818ee4f4d2def024422294",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -345,23 +345,23 @@
     "semantic_hash": ""
   },
   "problems/multi-gear-drive-shaft/_student-problem.qmd": {
-    "mtime": 1785784724.8809872,
-    "ast_hash": "60e8efc2a31f01f74c5325ca57234204",
+    "mtime": 1787006335.1936219,
+    "ast_hash": "b175dfb3804b858dee9cce84314a0ed8",
     "semantic_hash": ""
   },
   "problems/multi-gear-drive-shaft/index.qmd": {
-    "mtime": 1785854456.0824223,
-    "ast_hash": "e48813c6054e9b87d5b15fc562765063",
+    "mtime": 1787006306.776133,
+    "ast_hash": "d13379bbf783186c8dccac84fef6ca0c",
     "semantic_hash": ""
   },
   "problems/multi-gear-drive-shaft/instructor-guide.qmd": {
-    "mtime": 1785818550.21454,
-    "ast_hash": "44bc8cb29e347dc937f6623aeb72f586",
+    "mtime": 1787006306.9328327,
+    "ast_hash": "1dd971ce560169e33854943aeaa24e84",
     "semantic_hash": ""
   },
   "problems/multi-gear-drive-shaft/student-packet.qmd": {
-    "mtime": 1785818550.206759,
-    "ast_hash": "bfce250da8d545be5198f8ffd9fb6240",
+    "mtime": 1787006306.8550146,
+    "ast_hash": "e479db34415d22d52d4e0fa5c5885f03",
     "semantic_hash": ""
   },
   "problems/precast-concrete-column-transport/_student-problem.qmd": {
@@ -660,8 +660,8 @@
     "semantic_hash": ""
   },
   "problems/multi-gear-drive-shaft/assets/gear-shaft-industry-context.png": {
-    "mtime": 1785784649.4227512,
-    "ast_hash": "e8f9e10935fb707c21ee1ba5e8b2ce00",
+    "mtime": 1787006668.8547125,
+    "ast_hash": "dde47b04d826e833568e95b45e447263",
     "semantic_hash": ""
   },
   "problems/multi-gear-drive-shaft/assets/gear-shaft-instructor-idealization.png": {

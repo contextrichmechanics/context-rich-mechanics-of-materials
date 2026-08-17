@@ -1,6 +1,6 @@
 ---
 title: "Student Packet - Multi-Stage Turbine Rotor"
-subtitle: "Varying Internal Torque, Angle of Twist, and Shear Stress"
+subtitle: "Distributed Torque, Internal Torque, Angle of Twist, and Shear Stress"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html: {toc: true, number-sections: true}

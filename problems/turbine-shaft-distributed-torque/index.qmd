@@ -1,18 +1,18 @@
 ---
 title: "Torsional Response of a Multi-Stage Turbine Rotor"
-description: "A context-rich turbine-shaft problem on a linearly varying internal torque, twist integration, and shear stress."
+description: "A turbine-rotor problem on torsion, angle of twist, distributed torque loading, internal torque functions, and shear stress."
 image: "assets/turbine-shaft-industry-context.png"
 categories: [context-rich, mechanics-of-materials, analysis]
-mechanics_concepts: [torsion, distributed torque, internal torque, shear stress, angle of twist]
-course_topics: [torsion, distributed loading, internal torque functions, angle of twist, shear stress]
+mechanics_concepts: [torsion, angle of twist, distributed torque loading, internal torque functions, torsional shear stress, torque equilibrium]
+course_topics: [torsion, angle of twist, distributed torque loading, internal torque functions, shear stress]
 textbook_chapters: [Torsion of circular shafts, Distributed torsional loading, Angle of twist, Torsional shear stress]
 problem_types: [load-path analysis, symbolic derivation, deformation calculation, stress calculation, engineering evaluation]
-competencies: [boundary conditions, internal torque functions, integration, polar moment calculation, parameter sensitivity, engineering judgment]
-industries: [power generation, steam turbines, rotating machinery, turbomachinery]
+competencies: [load-path reasoning, boundary conditions, distributed loading, internal torque resultants, torsional stress, deformation, engineering judgment]
+industries: [power generation, steam-turbine rotor shafting, gas-turbine rotor shafting, multi-stage turbomachinery]
 difficulty: "Intermediate to advanced"
-status: "Published"
+status: "Faculty-reviewed cleaned draft"
 problem_id: "MOS-TURBINE-019"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
@@ -20,7 +20,7 @@ version: "0.1.0"
 ## Assignment Options
 
 ::: {.callout-note title="Model Interpretation"}
-The base packet interprets <em>T</em>(<em>x</em>) as the linearly varying internal torque resultant. It is not a distributed torque intensity per unit length.
+The quantity <em>w</em>(<em>x</em>) is a distributed torque intensity with torque-per-length units. The internal torque <em>T</em>(<em>x</em>) is obtained by integrating the distributed loading.
 :::
 
 [Student packet](student-packet.qmd){.btn .btn-primary}

@@ -1,7 +1,7 @@
 # Graph Report - context-rich-mos-quarto-v3  (2026-08-17)
 
 ## Corpus Check
-- 209 files · ~2,439,611 words
+- 209 files · ~2,363,657 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `83f6943a`
+- Built from commit: `75f1777a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -62,7 +62,7 @@
 - Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft
 - Motor-Driven Shaft Design for a Belt-Transmission System
 - Mountain Bike Rear Suspension Linkage: Pin Shear and Factor of Safety
-- Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft
+- Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Industrial Drive Shaft
 - Optimal Support Placement for Transporting a Precast Concrete Column
 - Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load
 - Automotive Suspension Compliance Using an Equivalent Spring-Loaded Axial Model
@@ -297,9 +297,9 @@ Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engin
 Cohesion: 0.33
 Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Mountain Bike Rear Suspension Linkage: Pin Shear and Factor of Safety, System Components
 
-### Community 49 - "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft"
+### Community 49 - "Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Industrial Drive Shaft"
 Cohesion: 0.33
-Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components, Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Drive Shaft
+Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components, Torque Distribution and Hollow-Shaft Sizing for a Multi-Gear Industrial Drive Shaft
 
 ### Community 50 - "Optimal Support Placement for Transporting a Precast Concrete Column"
 Cohesion: 0.33
