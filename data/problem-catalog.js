@@ -2,10 +2,30 @@ window.PROBLEM_CATALOG = [
   {
     "id": "MOS-AXIAL-009",
     "slug": "axial-rod-tube-assembly",
-    "title": "Axial Displacement of a Steel Tie Rod and Aluminum Spacer Tube Assembly",
+    "title": "Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly",
     "studentDocumentTitle": "Student Homework Questions",
     "instructorDocumentTitle": "Instructor Answers",
-    "summary": "A context-rich mechanics problem on axial force, deformation of dissimilar materials, compatibility, and total end displacement.",
+    "summary": "A context-rich axial-deformation problem on a steel tie rod in tension, an aluminum spacer tube in compression, and displacement compatibility.",
+    "primaryTopics": [
+      "Axial Deformation",
+      "Compression"
+    ],
+    "courseTopic": "Axial loading, axial deformation, and displacement compatibility",
+    "targetLevel": "Intermediate MEEN 305 context-rich problem",
+    "primaryMechanicsCompetencies": [
+      "Interpretation of a real mechanical assembly",
+      "Load-path identification",
+      "Tension and compression recognition",
+      "Free-body diagrams",
+      "Internal axial force",
+      "Axial deformation",
+      "Displacement compatibility",
+      "Engineering interpretation"
+    ],
+    "expectedStudentDeliverable": "Interpretation of the physical assembly, load-path description, student-generated simplified model, free-body diagrams, internal-force calculations, deformation calculations, total displacement of the loaded end, and a concise engineering assessment.",
+    "difficultyLevel": 3,
+    "geometryComplexity": "1D multi-member axial assembly",
+    "problemDeliverableType": "Simplified model, free-body diagram, internal-force calculations, deformation calculations, displacement compatibility, and engineering interpretation.",
     "textbookChapters": [
       "Axial loading",
       "Axial deformation",
@@ -21,14 +41,15 @@ window.PROBLEM_CATALOG = [
       "axial_E_st_MPa",
       "axial_rod_elongation_mm",
       "axial_tube_shortening_mm",
-      "axial_total_displacement_mm"
+      "axial_total_displacement_mm",
+      "axial_total_displacement_rounded_mm"
     ],
-    "image": "problems/axial-rod-tube-assembly/assets/axial-industry-context.png",
+    "image": "problems/axial-rod-tube-assembly/assets/axial-industry-context.jpg",
     "idealizedImage": "problems/axial-rod-tube-assembly/assets/axial-instructor-idealization.png",
     "idealizedImageAlt": "Instructor reference idealization of a steel tie rod passing through an aluminum spacer tube, with a rigid collar, fixed support, dimensions, and applied tensile load.",
     "source": "problems/axial-rod-tube-assembly/index.html",
-    "problemStatement": "<p>A mechanical engineering team is evaluating a compact tie-rod assembly used in a machine-frame or actuator support system. A steel rod passes through an aluminum spacer tube. A rigid collar attached to the rod bears against the left end of the tube, and the right end of the tube reacts against a fixed support plate.</p><p>When a tensile load is applied to the exposed end of the steel rod, the rod elongates while the aluminum tube shortens. Because the free rod end positions or preloads a connected component, the team must determine its net displacement relative to the fixed support.</p>",
-    "engineeringGoal": "<p>Determine the displacement of the free end C of the steel rod relative to the fixed support at A by accounting for both the elongation of the steel rod and the shortening of the aluminum tube.</p>",
+    "problemStatement": "<p>Tie-rod assemblies are widely used in mechanical systems to transfer axial force while controlling the relative position of connected parts. Familiar applications include vehicle steering linkages, machine frames, actuator supports, clamping assemblies, and structural fixtures. The industrial image provides a real example of a tie-rod assembly; the mechanics model used in this problem isolates the axial load-transfer behavior needed for a Solid Mechanics analysis.</p><p>In the assembly considered for analysis, a steel tie rod passes through an aluminum spacer tube. A rigid collar attached to the rod bears against one end of the tube, while the opposite end of the tube bears against a rigid support. When the exposed end of the rod is pulled, the steel rod elongates and the aluminum tube shortens. The final movement of the loaded end therefore depends on the deformation of both members rather than on the elongation of the steel rod alone.</p>",
+    "engineeringGoal": "<p>Determine the displacement of the loaded end of the tie rod relative to the fixed supporting structure by accounting for both the elongation of the steel rod and the shortening of the aluminum tube.</p>",
     "variables": [
       {
         "key": "P",
@@ -43,7 +64,7 @@ window.PROBLEM_CATALOG = [
       {
         "key": "L_AB",
         "symbol": "L_AB",
-        "label": "Length of aluminum tube AB",
+        "label": "Length of aluminum tube",
         "value": 400,
         "unit": "mm",
         "min": 50,
@@ -53,7 +74,7 @@ window.PROBLEM_CATALOG = [
       {
         "key": "L_BC",
         "symbol": "L_BC",
-        "label": "Length of steel rod segment BC",
+        "label": "Length from collar B to loaded end C",
         "value": 600,
         "unit": "mm",
         "min": 50,
@@ -73,7 +94,7 @@ window.PROBLEM_CATALOG = [
       {
         "key": "d_BC",
         "symbol": "d_BC",
-        "label": "Diameter of steel rod BC",
+        "label": "Diameter of steel rod",
         "value": 10,
         "unit": "mm",
         "min": 1,
@@ -83,7 +104,7 @@ window.PROBLEM_CATALOG = [
       {
         "key": "E_al",
         "symbol": "E_al",
-        "label": "Elastic modulus of aluminum tube",
+        "label": "Elastic modulus of aluminum",
         "value": 70,
         "unit": "GPa",
         "min": 1,
@@ -93,7 +114,7 @@ window.PROBLEM_CATALOG = [
       {
         "key": "E_st",
         "symbol": "E_st",
-        "label": "Elastic modulus of steel rod",
+        "label": "Elastic modulus of steel",
         "value": 200,
         "unit": "GPa",
         "min": 1,
@@ -104,118 +125,165 @@ window.PROBLEM_CATALOG = [
     "questions": [
       {
         "id": "q1",
-        "title": "System Function",
+        "displayNumber": "Q1",
+        "title": "Primary Function of the System",
         "type": "context interpretation",
         "difficulty": "introductory",
         "tags": [
           "function",
-          "assembly",
-          "axial loading"
+          "tie-rod assembly",
+          "axial load transfer"
         ],
         "learningObjectives": [
-          "Identify the structural roles of the rod and spacer tube."
+          "Explain the structural function of the physical assembly."
         ],
         "selected": true,
-        "student": "<p>Identify the primary structural function of the steel rod and aluminum tube assembly.</p>",
-        "instructor": "<p>The steel rod carries the applied tensile load, while the aluminum tube acts as a compression spacer between the rigid collar and the fixed support. Together, they transfer load into the support and control the displacement of the free rod end.</p>",
-        "gradingNotes": "<p>Students should recognize that this is a multi-member assembly and that both member deformations affect point C.</p>",
+        "student": "<p>Based on the industrial application and the components shown, explain the primary structural function of the tie-rod assembly.</p>",
+        "instructor": "<p>The assembly transfers axial load between connected parts while maintaining their relative spacing. The tie rod provides the tensile load path, while the surrounding tube provides a compressive load path to the supporting structure.</p>",
         "section": "context"
       },
       {
         "id": "q2",
-        "title": "External Load and Supports",
-        "type": "load and support identification",
+        "displayNumber": "Q2",
+        "title": "External Loading",
+        "type": "load identification",
         "difficulty": "introductory",
         "tags": [
           "external load",
-          "support",
-          "collar"
+          "axial loading",
+          "tie rod"
         ],
         "learningObjectives": [
-          "Locate the applied load, restraint, and load-transfer interface."
+          "Identify how load enters the physical assembly."
         ],
         "selected": true,
-        "student": "<p>Where is the external load applied, and where is the assembly supported or restrained?</p>",
-        "instructor": "<p>The tensile load <em>P</em> is applied at the free rod end C. The assembly is supported at A by a rigid plate or wall. The rigid collar at B transfers load from the steel rod into the aluminum tube.</p>",
+        "student": "<p>Identify where the external load enters the assembly and describe its general direction relative to the tie rod.</p>",
+        "instructor": "<p>The external load acts through the exposed end of the tie rod and is directed primarily along the longitudinal axis of the assembly.</p>",
+        "gradingNotes": "<p>Students should describe the physical loading of the real system rather than use point labels from the later mechanics diagram.</p>",
         "section": "context"
       },
       {
         "id": "q3",
+        "displayNumber": "Q3",
+        "title": "Supports and Restraints",
+        "type": "support identification",
+        "difficulty": "introductory",
+        "tags": [
+          "support",
+          "restraint",
+          "reaction"
+        ],
+        "learningObjectives": [
+          "Identify the physical restraint and the motion it prevents."
+        ],
+        "selected": true,
+        "student": "<p>Identify where the assembly is restrained by the surrounding structure. What motion is prevented by this restraint?</p>",
+        "instructor": "<p>The spacer tube bears against a rigid supporting structure. This support prevents axial motion at that end of the assembly and provides the reaction required to balance the applied axial load.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q4",
+        "displayNumber": "Q4",
         "title": "Load Path",
         "type": "load path",
         "difficulty": "introductory",
         "tags": [
           "load path",
-          "tension",
-          "compression"
+          "collar",
+          "support"
         ],
         "learningObjectives": [
-          "Trace the axial load through the rod, collar, tube, and support."
+          "Trace force transfer through the rod, collar, tube, and support."
         ],
         "selected": true,
-        "student": "<p>Trace the load path from the applied load to the fixed support.</p>",
-        "instructor": "<p>The load acts on the steel rod at C. The rod carries it toward the rigid collar at B. The collar bears against the aluminum tube and places the tube in compression. The tube transfers the load to the fixed support at A.</p>",
-        "commonMistakes": "<p>Do not treat the tube as unloaded merely because the applied force is placed on the rod.</p>",
-        "section": "context"
-      },
-      {
-        "id": "q4",
-        "title": "Critical Mechanical Response",
-        "type": "mechanics reasoning",
-        "difficulty": "introductory",
-        "tags": [
-          "displacement",
-          "deformation",
-          "compatibility"
-        ],
-        "learningObjectives": [
-          "Identify displacement as the governing response for the supplied data."
-        ],
-        "selected": true,
-        "student": "<p>What is the critical mechanical response to be evaluated in this problem?</p>",
-        "instructor": "<p>The critical response is the axial displacement of point C relative to the fixed support at A. It depends on the elongation of the steel rod and the shortening of the aluminum tube.</p>",
-        "gradingNotes": "<p>The base problem is deformation-focused because no material strength allowables are supplied.</p>",
+        "student": "<p>Trace the load path through the tie-rod assembly from the location where the external load is applied to the supporting structure.</p>",
+        "instructor": "<p>The load enters through the steel tie rod, travels through the rod to the rigid collar, is transferred from the collar into the aluminum tube, and is then transferred from the tube into the supporting structure.</p>",
         "section": "context"
       },
       {
         "id": "q5",
-        "title": "Relevant Geometry and Material Properties",
-        "type": "parameter identification",
+        "displayNumber": "Q5",
+        "title": "Member Mechanical Response",
+        "type": "mechanics reasoning",
         "difficulty": "introductory",
         "tags": [
-          "geometry",
-          "elastic modulus",
-          "area"
+          "tension",
+          "compression",
+          "member response"
         ],
         "learningObjectives": [
-          "Connect the controlling inputs to the axial-deformation equation."
+          "Recognize tension and compression from the physical load path."
         ],
         "selected": true,
-        "student": "<p>Identify the geometric, material, and loading parameters that control the displacement response.</p>",
-        "instructor": "<p>The controlling inputs are <em>P</em>, <em>L</em><sub>AB</sub>, <em>L</em><sub>BC</sub>, <em>A</em><sub>AB</sub>, <em>d</em><sub>BC</sub> or <em>A</em><sub>BC</sub>, <em>E</em><sub>al</sub>, and <em>E</em><sub>st</sub>. These enter the relation &delta; = <em>NL</em>/(<em>AE</em>).</p>",
+        "student": "<p>Based on the load path, determine which major member is expected to experience tension and which is expected to experience compression. Explain physically why.</p>",
+        "instructor": "<p>The steel rod is in tension because it is being pulled by the external load. The aluminum tube is in compression because the collar pushes the tube against the rigid support.</p>",
         "section": "context"
       },
       {
         "id": "q6",
+        "displayNumber": "Q6",
+        "title": "Relevant Mechanical Response",
+        "type": "deformation reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "axial deformation",
+          "elongation",
+          "shortening",
+          "compatibility"
+        ],
+        "learningObjectives": [
+          "Recognize that both member deformations affect loaded-end movement."
+        ],
+        "selected": true,
+        "student": "<p>If the engineering concern is the movement of the loaded end of the assembly, what deformation behavior of the individual members must be considered?</p>",
+        "instructor": "<p>Both members must be considered. The steel rod elongates under tension, while the aluminum tube shortens under compression. Both changes influence the final position of the loaded end.</p>",
+        "gradingNotes": "<p>This question introduces displacement compatibility conceptually without giving students the final displacement relationship.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q7",
+        "displayNumber": "Q7",
+        "title": "Relevant Geometric and Material Parameters",
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "load",
+          "length",
+          "area",
+          "elastic modulus"
+        ],
+        "learningObjectives": [
+          "Identify the physical parameters governing axial deformation."
+        ],
+        "selected": true,
+        "student": "<p>Identify the geometric, loading, and material characteristics that you expect to influence the axial deformation of the assembly.</p>",
+        "instructor": "<ul><li>Magnitude of the axial load.</li><li>Length of each deformable member.</li><li>Cross-sectional size of each member.</li><li>Stiffness of the steel material.</li><li>Stiffness of the aluminum material.</li></ul>",
+        "gradingNotes": "<p>At this stage students identify physical dependencies. Do not introduce the final deformation equation or instructor notation yet.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q8",
+        "displayNumber": "Q8",
         "title": "Student-Generated Structural Idealization",
         "type": "free-body diagram",
         "difficulty": "introductory",
         "tags": [
           "idealization",
-          "FBD",
+          "free-body diagram",
           "axial members"
         ],
         "learningObjectives": [
-          "Convert the physical assembly into a one-dimensional axial model."
+          "Convert the physical assembly into a one-dimensional mechanics model."
         ],
         "selected": true,
-        "student": "<p>Before using the reference figure, develop a simplified axial model of the assembly. Clearly identify the aluminum tube, steel rod, rigid collar, fixed support, and applied load.</p>",
-        "instructor": "<p>A correct model represents two coaxial axial members: aluminum tube AB in compression and steel rod BC in tension, connected through a rigid collar at B, with a fixed support at A and load <em>P</em> at C.</p>",
-        "gradingNotes": "<p>A clear one-dimensional model is sufficient; students do not need to reproduce the industrial geometry.</p>",
+        "student": "<p>Convert the physical tie-rod assembly into a simplified one-dimensional Mechanics of Materials model that preserves the dominant axial load path. The model should show the steel rod, aluminum tube, rigid collar, supporting structure, externally applied axial load, and the geometric dimensions needed for axial-deformation analysis.</p><p><strong>STUDENT MODEL / FREE-BODY DIAGRAM SPACE</strong></p><div style=\"height: 12rem; border-bottom: 1px solid #b8bec5;\"></div>",
+        "instructor": "<p>A suitable idealization represents the system as coaxial axial members. The steel rod carries tensile force, the aluminum tube carries compressive force, the collar transfers load from the rod to the tube, and the tube transfers the load into the fixed support.</p>",
+        "gradingNotes": "<p>Students do not need to reproduce the detailed industrial geometry. A clear one-dimensional idealization and free-body diagram are sufficient.</p>",
         "section": "transition"
       },
       {
-        "id": "q7",
+        "id": "q9",
+        "displayNumber": "Q9",
         "title": "Modeling Assumptions",
         "type": "assumptions",
         "difficulty": "introductory",
@@ -225,72 +293,93 @@ window.PROBLEM_CATALOG = [
           "coaxial loading"
         ],
         "learningObjectives": [
-          "State assumptions supporting the axial deformation model."
+          "State the assumptions supporting the axial-deformation model."
         ],
         "selected": true,
-        "student": "<p>State the assumptions used to convert the real assembly into the simplified mechanics model.</p>",
-        "instructor": "<p>Typical assumptions are axial loading, a rigid collar, a fixed support at A, linear-elastic materials, small deformations, coaxial rod and tube, uniform member properties, and neglected local effects at threads, contacts, and the support opening.</p>",
+        "student": "<p>State the assumptions used to convert the real assembly into the simplified Mechanics of Materials model.</p>",
+        "instructor": "<ul><li>Loading is purely axial.</li><li>The steel rod and aluminum tube remain coaxial.</li><li>Materials behave linearly elastically.</li><li>Deformations are small.</li><li>The collar is rigid.</li><li>The supporting structure is rigid.</li><li>Axial stress is represented by its average value over each cross-section.</li><li>Local contact effects near the collar and support are neglected.</li><li>Local thread or attachment effects are neglected.</li></ul>",
         "section": "transition"
       },
       {
-        "id": "q8",
+        "id": "q10",
+        "displayNumber": "Q10",
         "title": "Mechanics Analysis Plan",
         "type": "analysis planning",
         "difficulty": "introductory",
         "tags": [
           "internal force",
-          "deformation",
-          "compatibility"
+          "axial deformation",
+          "displacement compatibility"
         ],
         "learningObjectives": [
-          "Plan the equilibrium and compatibility steps before calculation."
+          "Plan the mechanics steps needed to determine loaded-end displacement."
         ],
         "selected": true,
-        "student": "<p>Explain how the displacement of C will be determined from the simplified model.</p>",
-        "instructor": "<p>Determine the internal axial force in each member; compute rod elongation &delta;<sub>C/B</sub>; compute tube shortening and interpret it as the displacement of B relative to A; then use &delta;<sub>C/A</sub> = &delta;<sub>B/A</sub> + &delta;<sub>C/B</sub>.</p>",
+        "student": "<p>Before performing numerical calculations, describe the sequence of mechanics steps required to determine the displacement of the loaded end relative to the support.</p>",
+        "instructor": "<ol><li>Determine the axial force carried by the steel rod.</li><li>Determine the axial force carried by the aluminum tube.</li><li>Determine the deformation of the aluminum tube.</li><li>Determine how the tube deformation moves the collar relative to the fixed support.</li><li>Determine the elongation of the steel rod.</li><li>Combine the relative member displacements to determine the final displacement of the loaded end.</li></ol>",
         "section": "transition"
       },
       {
-        "id": "q9",
-        "title": "Boundary Conditions and Member Action",
+        "id": "q11",
+        "displayNumber": "M1",
+        "title": "Boundary Condition and Member Action",
         "type": "mechanics setup",
         "difficulty": "introductory",
         "tags": [
-          "boundary conditions",
+          "boundary condition",
           "tension",
           "compression"
         ],
         "learningObjectives": [
-          "Interpret member action from the instructor reference idealization."
+          "Identify the support condition and member actions in the reference model."
         ],
         "selected": true,
-        "student": "<p>Using the instructor reference idealization, identify the boundary conditions and state which member is in tension and which member is in compression.</p>",
-        "instructor": "<p>The support at A is fixed and load <em>P</em> is applied at C. Steel rod BC is in axial tension. Aluminum tube AB is in axial compression because collar B pushes against the tube as the rod is pulled.</p>",
-        "commonMistakes": "<p>Assign tension or compression from the physical load path, not only from the visual direction of the applied arrow.</p>",
+        "student": "<p>Using the instructor reference model, identify the boundary condition at A. State whether the steel rod and aluminum tube are in tension or compression.</p>",
+        "instructor": "<p>The support at A prevents axial translation. The steel rod is in tension and the aluminum tube is in compression.</p>",
         "section": "analysis"
       },
       {
-        "id": "q10",
+        "id": "q12",
+        "displayNumber": "M2",
         "title": "Internal Axial Forces",
         "type": "equilibrium",
         "difficulty": "introductory",
         "tags": [
-          "internal force",
-          "equilibrium",
-          "sign convention"
+          "free-body diagram",
+          "internal axial force",
+          "equilibrium"
         ],
         "learningObjectives": [
-          "Determine member axial forces and classify their signs."
+          "Determine the internal axial force in each member."
         ],
         "selected": true,
-        "student": "<p>For <strong><em>P</em> = {{P}} {{P_unit}}</strong>, determine the internal axial force in steel rod BC and aluminum tube AB. Use tension as positive.</p>",
-        "instructor": "<p>Equilibrium and the load path give <strong><em>N</em><sub>BC</sub> = +{{axial_force_BC_kN}} kN</strong> in tension and <strong><em>N</em><sub>AB</sub> = {{axial_force_AB_kN}} kN</strong> in compression.</p>",
-        "gradingNotes": "<p>Equivalent sign conventions are acceptable when the physical tension/compression classifications and magnitudes are correct.</p>",
+        "student": "<p>Draw the required free-body diagrams and determine the internal axial force carried by the steel rod and the aluminum tube.</p>",
+        "instructor": "<p>The steel rod carries <strong><em>N</em><sub>st</sub> = +<em>P</em> = +{{axial_force_BC_kN}} kN</strong> in tension. The aluminum tube carries <strong><em>N</em><sub>al</sub> = -<em>P</em> = {{axial_force_AB_kN}} kN</strong> in compression. The sign convention may vary if the physical tension/compression states are identified correctly.</p>",
         "section": "analysis"
       },
       {
-        "id": "q11",
-        "title": "Steel Rod Elongation",
+        "id": "q13",
+        "displayNumber": "M3",
+        "title": "Cross-Sectional Area of the Steel Rod",
+        "type": "section property calculation",
+        "difficulty": "introductory",
+        "tags": [
+          "circular area",
+          "steel rod",
+          "diameter"
+        ],
+        "learningObjectives": [
+          "Determine steel-rod area from its diameter."
+        ],
+        "selected": true,
+        "student": "<p>Determine the cross-sectional area of the steel rod.</p>",
+        "instructor": "<p>For a circular rod, <em>A</em><sub>BC</sub> = &pi;<em>d</em><sub>BC</sub><sup>2</sup>/4. Using <em>d</em><sub>BC</sub> = {{d_BC}} {{d_BC_unit}} gives</p><p><strong><em>A</em><sub>BC</sub> = &pi;({{d_BC}} mm)<sup>2</sup>/4 = {{axial_area_BC_mm2}} mm<sup>2</sup>.</strong></p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q14",
+        "displayNumber": "M4",
+        "title": "Steel-Rod Elongation",
         "type": "axial deformation calculation",
         "difficulty": "intermediate",
         "tags": [
@@ -299,76 +388,135 @@ window.PROBLEM_CATALOG = [
           "NL/AE"
         ],
         "learningObjectives": [
-          "Calculate rod area and axial elongation with consistent units."
+          "Calculate the elongation of the steel rod."
         ],
         "selected": true,
-        "student": "<p>Calculate the elongation of steel rod segment BC. First determine its area from <strong><em>d</em><sub>BC</sub> = {{d_BC}} {{d_BC_unit}}</strong>.</p>",
-        "instructor": "<p><em>A</em><sub>BC</sub> = &pi;({{d_BC}} mm)<sup>2</sup>/4 = <strong>{{axial_area_BC_mm2}} mm<sup>2</sup></strong>. With <em>E</em><sub>st</sub> = {{E_st}} GPa = {{axial_E_st_MPa}} N/mm<sup>2</sup>,</p><p>&delta;<sub>C/B</sub> = <em>N</em><sub>BC</sub><em>L</em><sub>BC</sub>/(<em>A</em><sub>BC</sub><em>E</em><sub>st</sub>) = <strong>{{axial_rod_elongation_mm}} mm to the right</strong>.</p>",
-        "commonMistakes": "<p>Convert kN to N and GPa to N/mm<sup>2</sup> when lengths and areas are in millimeters.</p>",
+        "student": "<p>Determine the axial elongation of the steel rod between the collar at B and the loaded end C.</p>",
+        "instructor": "<p>Using &delta; = <em>NL</em>/(<em>AE</em>),</p><p>&delta;<sub>C/B</sub> = ({{axial_load_N}} N)({{L_BC}} mm) / [({{axial_area_BC_mm2}} mm<sup>2</sup>)({{axial_E_st_MPa}} N/mm<sup>2</sup>)]</p><p><strong>&delta;<sub>C/B</sub> = {{axial_rod_elongation_mm}} mm to the right.</strong></p>",
         "section": "analysis"
       },
       {
-        "id": "q12",
-        "title": "Aluminum Tube Shortening and Displacement of B",
+        "id": "q15",
+        "displayNumber": "M5",
+        "title": "Aluminum-Tube Deformation",
         "type": "axial deformation calculation",
         "difficulty": "intermediate",
         "tags": [
           "aluminum tube",
+          "compression",
           "shortening",
-          "displacement direction"
+          "NL/AE"
         ],
         "learningObjectives": [
-          "Calculate compressive shortening and interpret point displacement."
+          "Calculate the compressive deformation of the aluminum tube."
         ],
         "selected": true,
-        "student": "<p>Calculate the axial shortening of aluminum tube AB and interpret it as the displacement of point B relative to fixed point A.</p>",
-        "instructor": "<p>The tube carries {{P}} kN in compression. Its shortening magnitude is</p><p>|&delta;<sub>B/A</sub>| = |<em>N</em><sub>AB</sub>|<em>L</em><sub>AB</sub>/(<em>A</em><sub>AB</sub><em>E</em><sub>al</sub>) = <strong>{{axial_tube_shortening_mm}} mm</strong>.</p><p>Because the tube shortens while A remains fixed, collar point B moves <strong>{{axial_tube_shortening_mm}} mm to the right</strong> relative to A.</p>",
-        "commonMistakes": "<p>A negative compressive strain does not mean B moves left. Relate the shortening to the fixed end A and the actual member geometry.</p>",
+        "student": "<p>Determine the axial deformation of aluminum tube AB.</p>",
+        "instructor": "<p>Using compression as negative,</p><p>&delta;<sub>AB</sub> = (-{{axial_load_N}} N)({{L_AB}} mm) / [({{A_AB}} mm<sup>2</sup>)({{axial_E_al_MPa}} N/mm<sup>2</sup>)]</p><p><strong>&delta;<sub>AB</sub> = -{{axial_tube_shortening_mm}} mm.</strong></p><p>The tube therefore shortens by {{axial_tube_shortening_mm}} mm.</p>",
         "section": "analysis"
       },
       {
-        "id": "q13",
-        "title": "Total Displacement of C",
+        "id": "q16",
+        "displayNumber": "M6",
+        "title": "Displacement of the Collar",
+        "type": "displacement interpretation",
+        "difficulty": "intermediate",
+        "tags": [
+          "collar displacement",
+          "compression",
+          "direction"
+        ],
+        "learningObjectives": [
+          "Relate tube shortening to the global displacement of the collar."
+        ],
+        "selected": true,
+        "student": "<p>Use the shortening of the aluminum tube to determine the magnitude and direction of the displacement of collar B relative to the fixed support at A.</p>",
+        "instructor": "<p>Because A is fixed and the tube shortens, collar B moves toward the support. For the orientation shown, B moves {{axial_tube_shortening_mm}} mm to the right.</p><p><strong>&delta;<sub>B/A</sub> = {{axial_tube_shortening_mm}} mm to the right.</strong></p>",
+        "gradingNotes": "<p>This question separates member-deformation sign from global displacement direction.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q17",
+        "displayNumber": "M7",
+        "title": "Total Displacement of the Loaded End",
         "type": "compatibility calculation",
         "difficulty": "intermediate",
         "tags": [
           "total displacement",
           "compatibility",
-          "superposition"
+          "relative motion"
         ],
         "learningObjectives": [
-          "Combine relative member deformations into the displacement of a point."
+          "Combine member deformations to determine loaded-end displacement."
         ],
         "selected": true,
-        "student": "<p>Determine the total displacement of end C relative to fixed support A. Show the displacement-compatibility relation and state the direction.</p>",
-        "instructor": "<p>Both contributions move C to the right:</p><p>&delta;<sub>C/A</sub> = &delta;<sub>B/A</sub> + &delta;<sub>C/B</sub> = {{axial_tube_shortening_mm}} mm + {{axial_rod_elongation_mm}} mm = <strong>{{axial_total_displacement_mm}} mm to the right</strong>.</p>",
-        "gradingNotes": "<p>Require students to show why the deformation magnitudes add instead of relying only on a memorized sign rule.</p>",
+        "student": "<p>Determine the displacement of point C relative to the fixed support at A.</p>",
+        "instructor": "<p>The collar moves to the right because the aluminum tube shortens, and point C moves farther to the right relative to B because the steel rod elongates. The two contributions therefore add.</p><p>&delta;<sub>C/A</sub> = &delta;<sub>B/A</sub> + &delta;<sub>C/B</sub></p><p><strong>&delta;<sub>C/A</sub> = {{axial_tube_shortening_mm}} mm + {{axial_rod_elongation_mm}} mm = {{axial_total_displacement_mm}} mm &asymp; {{axial_total_displacement_rounded_mm}} mm to the right.</strong></p>",
         "section": "analysis"
       },
       {
-        "id": "q14",
-        "title": "Engineering Interpretation",
+        "id": "q18",
+        "displayNumber": "M8",
+        "title": "Relative Contribution of the Two Members",
         "type": "engineering interpretation",
         "difficulty": "intermediate",
         "tags": [
-          "physical interpretation",
-          "direction",
-          "assembly displacement"
+          "deformation contribution",
+          "axial stiffness",
+          "comparison"
         ],
         "learningObjectives": [
-          "Explain the physical meaning and direction of the combined displacement."
+          "Compare the deformation contributions of the two members."
         ],
         "selected": true,
-        "student": "<p>Explain why the rod elongation and tube shortening contribute to the displacement of C in the same direction. Briefly state what the result means for a component positioned or preloaded by end C.</p>",
-        "instructor": "<p>The steel rod elongates under tension, moving C to the right relative to B. Simultaneously, the aluminum tube shortens and allows collar B to move right relative to fixed support A. The motions therefore add. For the assigned data, C moves <strong>{{axial_total_displacement_mm}} mm to the right</strong>, which is the position or preload-setting displacement that the connected component would experience in this idealized elastic model.</p>",
+        "student": "<p>Compare the deformation contribution of the steel rod with that of the aluminum tube. Which member contributes more to the total displacement of the loaded end?</p>",
+        "instructor": "<p>The steel rod contributes {{axial_rod_elongation_mm}} mm, while the aluminum tube contributes {{axial_tube_shortening_mm}} mm. The steel rod therefore contributes more. Although steel has a higher elastic modulus, the rod has a much smaller cross-sectional area and a greater effective length, producing the larger deformation contribution.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q19",
+        "displayNumber": "M9",
+        "title": "Stiffness-Based Modification",
+        "type": "design modification",
+        "difficulty": "intermediate",
+        "tags": [
+          "axial stiffness",
+          "geometry",
+          "design"
+        ],
+        "learningObjectives": [
+          "Recommend geometric changes using axial stiffness."
+        ],
+        "selected": true,
+        "student": "<p>Suppose the movement of the loaded end is larger than desired. Identify one geometric change to the steel rod and one geometric change to the aluminum tube that would reduce the total displacement. Explain your choices using axial stiffness.</p>",
+        "instructor": "<p>Axial stiffness is proportional to <em>AE/L</em>. Increasing the steel-rod diameter increases its area and reduces elongation. Increasing the aluminum-tube cross-sectional area reduces its compressive shortening. Reducing member length or using a material with a larger elastic modulus would also reduce deformation if permitted.</p><p><strong>Axial stiffness &prop; <em>AE/L</em>.</strong></p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q20",
+        "displayNumber": "M10",
+        "title": "Engineering Assessment",
+        "type": "engineering assessment",
+        "difficulty": "intermediate",
+        "tags": [
+          "assessment",
+          "displacement",
+          "stiffness modification"
+        ],
+        "learningObjectives": [
+          "Summarize the mechanical response and recommend a stiffness modification."
+        ],
+        "selected": true,
+        "student": "<p>Summarize the mechanical response of the tie-rod assembly. State the predicted displacement of the loaded end, identify which member contributes most to that displacement, and recommend one modification if a stiffer assembly is required.</p>",
+        "instructor": "<p>The loaded end moves approximately {{axial_total_displacement_rounded_mm}} mm to the right relative to the fixed support. About {{axial_rod_elongation_mm}} mm comes from steel-rod elongation and {{axial_tube_shortening_mm}} mm from aluminum-tube shortening. The steel rod contributes the larger share, so increasing the rod diameter is a direct mechanics-based modification for reducing total displacement.</p>",
         "section": "analysis"
       }
     ],
     "variants": [
       {
         "id": "section-a",
-        "title": "Homework Version A - baseline rod and tube assembly",
-        "description": "Default sequence for load path, member action, axial deformation, and displacement compatibility.",
+        "title": "Homework Version A - corrected tie-rod and tube assembly",
+        "description": "Complete corrected sequence for context interpretation, idealization, axial deformation, displacement compatibility, and engineering assessment.",
         "selectedQuestions": [
           "q1",
           "q2",
@@ -383,7 +531,13 @@ window.PROBLEM_CATALOG = [
           "q11",
           "q12",
           "q13",
-          "q14"
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20"
         ],
         "variables": {
           "P": 80,

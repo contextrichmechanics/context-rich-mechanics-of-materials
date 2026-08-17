@@ -1,7 +1,7 @@
 {
   "id": "section-a",
-  "title": "Homework Version A - baseline rod and tube assembly",
-  "description": "Default sequence for load path, member action, axial deformation, and displacement compatibility.",
+  "title": "Homework Version A - corrected tie-rod and tube assembly",
+  "description": "Complete corrected sequence for context interpretation, idealization, axial deformation, displacement compatibility, and engineering assessment.",
   "selectedQuestions": [
     "q1",
     "q2",
@@ -16,7 +16,13 @@
     "q11",
     "q12",
     "q13",
-    "q14"
+    "q14",
+    "q15",
+    "q16",
+    "q17",
+    "q18",
+    "q19",
+    "q20"
   ],
   "variables": {
     "P": 80,

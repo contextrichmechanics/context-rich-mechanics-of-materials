@@ -1,23 +1,22 @@
 # Context-Rich Solid Mechanics Problem
 
-## Axial Displacement of a Steel Tie Rod and Aluminum Spacer Tube Assembly
+## Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly
 
 ### Engineering Context
 
-A mechanical engineering team is evaluating a compact tie-rod assembly used in a machine-frame or actuator support system. A steel rod passes through an aluminum spacer tube. A rigid collar attached to the rod bears against the left end of the tube, while the right end of the tube reacts against a fixed support plate.
+Tie-rod assemblies are widely used in mechanical systems to transfer axial force while controlling the relative position of connected parts. Familiar applications include vehicle steering linkages, machine frames, actuator supports, clamping assemblies, and structural fixtures. The industrial image provides a real example of a tie-rod assembly; the mechanics model used in this problem isolates the axial load-transfer behavior needed for a Solid Mechanics analysis.
 
-When a tensile load is applied to the exposed end of the steel rod, the rod elongates and the aluminum tube shortens. The free rod end positions or preloads a connected component, so its net displacement relative to the fixed support must be determined.
+In the assembly considered for analysis, a steel tie rod passes through an aluminum spacer tube. A rigid collar attached to the rod bears against one end of the tube, while the opposite end of the tube bears against a rigid support. When the exposed end of the rod is pulled, the steel rod elongates and the aluminum tube shortens. The final movement of the loaded end therefore depends on the deformation of both members rather than on the elongation of the steel rod alone.
 
-![Industrial tie-rod and spacer-tube assembly mounted to a machine frame.](assets/axial-industry-context.png){fig-alt="Industrial steel tie rod and aluminum spacer tube assembly mounted at a machine-frame support." width=100%}
+![Representative industrial tie-rod assembly used to establish the real-system context.](assets/axial-industry-context.jpg){fig-alt="Vehicle steering linkage showing inner and outer tie rods." width=100%}
 
 ### Main Engineering Goal
 
-Determine the displacement of free end C relative to fixed support A by accounting for both the elongation of the steel rod and the shortening of the aluminum tube.
+Determine the displacement of the loaded end of the tie rod relative to the fixed supporting structure by accounting for both the elongation of the steel rod and the shortening of the aluminum tube.
 
 ### System Components
 
-- aluminum spacer tube AB;
-- steel tie rod BC;
-- rigid collar at B;
-- fixed support plate at A;
-- loaded rod end C.
+- steel tie rod;
+- aluminum spacer tube;
+- rigid collar;
+- support plate.

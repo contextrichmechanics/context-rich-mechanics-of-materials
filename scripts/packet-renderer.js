@@ -603,13 +603,15 @@
       const tubeShortening = loadN * axialTubeLength / (axialTubeArea * aluminumModulusMPa);
       values.axial_load_N = formatDerived(loadN);
       values.axial_area_BC_mm2 = formatDerived(rodArea, 2);
-      values.axial_force_BC_kN = formatDerived(axialLoad, 1);
-      values.axial_force_AB_kN = formatDerived(-axialLoad, 1);
+      const axialLoadDigits = Number.isInteger(axialLoad) ? 0 : 3;
+      values.axial_force_BC_kN = formatDerived(axialLoad, axialLoadDigits);
+      values.axial_force_AB_kN = formatDerived(-axialLoad, axialLoadDigits);
       values.axial_E_al_MPa = formatDerived(aluminumModulusMPa);
       values.axial_E_st_MPa = formatDerived(steelModulusMPa);
       values.axial_rod_elongation_mm = formatDerived(rodElongation, 3);
       values.axial_tube_shortening_mm = formatDerived(tubeShortening, 3);
       values.axial_total_displacement_mm = formatDerived(rodElongation + tubeShortening, 3);
+      values.axial_total_displacement_rounded_mm = formatDerived(rodElongation + tubeShortening, 2);
     }
 
     const springLoad = numericValue(values, "P");
@@ -1642,7 +1644,7 @@
         <h2>${section.title}</h2>
         ${sectionQuestions.map((question) => `
           <section class="generated-question">
-            <h3>${numberById.get(question.id)}. ${escapeHtml(question.title)}</h3>
+            <h3>${escapeHtml(question.displayNumber || numberById.get(question.id))}. ${escapeHtml(question.title)}</h3>
             ${renderQuestionImage(problem, question)}
             ${substitute(question.student, values)}
             ${isInstructor ? `<div class="answer-block"><h4>Representative Instructor Answer</h4>${substitute(question.instructor, values)}</div>${renderInstructorSupport(question, values)}` : ""}

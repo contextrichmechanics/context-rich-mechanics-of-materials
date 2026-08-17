@@ -1,23 +1,23 @@
-# Graph Report - context-rich-mos-quarto-v3  (2026-08-17)
+# Graph Report - context-rich-mos-quarto-v3  (2026-08-16)
 
 ## Corpus Check
-- 209 files · ~2,553,898 words
+- 209 files · ~2,614,505 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 676 nodes · 689 edges · 77 communities (72 shown, 5 thin omitted)
+- 674 nodes · 687 edges · 76 communities (71 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `eb8775cb`
+- Built from commit: `57781003`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - render-assignment.mjs
 - authoring-guide.qmd
-- MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md
+- 7. Mechanics Analysis Questions
 - Supplemental Instructor Background
 - What You Must Do When Invoked
 - packet-renderer.js
@@ -25,7 +25,6 @@
 - build-catalog.mjs
 - new-problem.mjs
 - AI Agent Project Guide
-- 7. Mechanics Analysis Questions
 - jib-crane-battery-pack/index.qmd
 - 15. Common Failure Modes
 - 8. Create The Package
@@ -53,7 +52,7 @@
 - spoked-wheel-load-sharing/instructor-guide.qmd
 - suspended-equipment-cable-system/instructor-guide.qmd
 - graphify reference: query, path, explain
-- Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly
+- Axial Displacement of a Steel Tie Rod and Aluminum Spacer Tube Assembly
 - Bending Stress in a Cantilevered Industrial Operator-Seat Support
 - Industrial Clevis-Pin Linkage Under Tensile Load
 - Bolt-Group Design for an Industrial Flanged Shaft Coupling
@@ -107,7 +106,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (77 total, 5 thin omitted)
+## Communities (76 total, 5 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -117,9 +116,9 @@ Nodes (35): catalog, catalogPath, decodeEntities(), documentStyles(), escapeHtml
 Cohesion: 0.06
 Nodes (31): Catalog Metadata, Export Assignments From The Command Line, Images, Package Structure, Problem Health, Purpose, Question Design, Questions (+23 more)
 
-### Community 2 - "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md"
-Cohesion: 0.06
-Nodes (34): 10. Faculty Authoring Guidance, 11. Prompt Format for Automated Problem Generation, 1. Problem Identification and Instructor Setup, 2. System Components, 3. Engineering Context and Main Goal, 4. Context and Mechanics Reasoning Questions, 5. Transition to a Mechanics Model, 6. Instructor Reference Idealization and Input Variables (Instructor Only) (+26 more)
+### Community 2 - "7. Mechanics Analysis Questions"
+Cohesion: 0.04
+Nodes (47): 10. Faculty Authoring Guidance, 11. Prompt Format for Automated Problem Generation, 1. Problem Identification and Instructor Setup, 2. System Components, 3. Engineering Context and Main Goal, 4. Context and Mechanics Reasoning Questions, 5. Transition to a Mechanics Model, 6. Instructor Reference Idealization and Input Variables (Instructor Only) (+39 more)
 
 ### Community 3 - "Supplemental Instructor Background"
 Cohesion: 0.06
@@ -149,10 +148,6 @@ Nodes (12): existingProblemIds(), id, nextProblemId(), problem, problemPath, pro
 Cohesion: 0.15
 Nodes (13): 11. Catalog And Search Integration, 13. Git And Publishing Discipline, 14. Maintaining Existing Problems, 16. Definition Of Done, 17. Recommended Handoff Report, 18. Fast Start For The Next Agent, 1. Mission, 2. Non-Negotiable Rules (+5 more)
 
-### Community 10 - "7. Mechanics Analysis Questions"
-Cohesion: 0.15
-Nodes (13): 7. Mechanics Analysis Questions, Q10. Connector-Based Modification, Q11. Stability or Buckling Check, Q12. Engineering Assessment and Recommendation, Q1. Boundary Conditions, Q2. Unknown Constraint Loads, Q3. Solve for Unknown Constraint Loads, Q4. Stiffness Evaluation (+5 more)
-
 ### Community 11 - "jib-crane-battery-pack/index.qmd"
 Cohesion: 0.15
 Nodes (9): Purpose, Reference 2D Structural Model, Assignment Options, Default Given Data, Package Files, Recommended Starting Point, Generated Question Set and Solutions, Main Engineering Task — Representative Answer (+1 more)
@@ -170,8 +165,8 @@ Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
 ### Community 15 - "axial-rod-tube-assembly/instructor-guide.qmd"
-Cohesion: 0.18
-Nodes (8): Assignment Options, Generated Question Set and Solutions, Instructor Notes and Model Limitations, Instructor Solution Summary, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
+Cohesion: 0.22
+Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
 
 ### Community 17 - "cantilevered-operator-seat-bending/instructor-guide.qmd"
 Cohesion: 0.22
@@ -261,9 +256,9 @@ Nodes (4): Assignment Options, Generated Question Set and Solutions, Purpose, Su
 Cohesion: 0.33
 Nodes (5): For /graphify explain, For /graphify path, graphify reference: query, path, explain, Step 0 — Constrained query expansion (REQUIRED before traversal), Step 1 — Traversal
 
-### Community 39 - "Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly"
+### Community 39 - "Axial Displacement of a Steel Tie Rod and Aluminum Spacer Tube Assembly"
 Cohesion: 0.33
-Nodes (5): Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components
+Nodes (5): Axial Displacement of a Steel Tie Rod and Aluminum Spacer Tube Assembly, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components
 
 ### Community 41 - "Bending Stress in a Cantilevered Industrial Operator-Seat Support"
 Cohesion: 0.33
@@ -382,7 +377,7 @@ Cohesion: 0.67
 Nodes (3): 10. Packet Separation, Instructor packet contains, Student packet contains
 
 ## Knowledge Gaps
-- **425 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+420 more)
+- **423 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+418 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -394,12 +389,12 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Supplemental Instructor Background` connect `Supplemental Instructor Background` to `jib-crane-battery-pack/index.qmd`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _425 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _423 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
-- **Should `MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.05714285714285714 - nodes in this community are weakly interconnected._
+- **Should `7. Mechanics Analysis Questions` be split into smaller, more focused modules?**
+  _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
 - **Should `Supplemental Instructor Background` be split into smaller, more focused modules?**
   _Cohesion score 0.05714285714285714 - nodes in this community are weakly interconnected._

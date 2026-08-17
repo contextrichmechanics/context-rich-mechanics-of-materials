@@ -12,7 +12,7 @@
   {
     "key": "L_AB",
     "symbol": "L_AB",
-    "label": "Length of aluminum tube AB",
+    "label": "Length of aluminum tube",
     "value": 400,
     "unit": "mm",
     "min": 50,
@@ -22,7 +22,7 @@
   {
     "key": "L_BC",
     "symbol": "L_BC",
-    "label": "Length of steel rod segment BC",
+    "label": "Length from collar B to loaded end C",
     "value": 600,
     "unit": "mm",
     "min": 50,
@@ -42,7 +42,7 @@
   {
     "key": "d_BC",
     "symbol": "d_BC",
-    "label": "Diameter of steel rod BC",
+    "label": "Diameter of steel rod",
     "value": 10,
     "unit": "mm",
     "min": 1,
@@ -52,7 +52,7 @@
   {
     "key": "E_al",
     "symbol": "E_al",
-    "label": "Elastic modulus of aluminum tube",
+    "label": "Elastic modulus of aluminum",
     "value": 70,
     "unit": "GPa",
     "min": 1,
@@ -62,7 +62,7 @@
   {
     "key": "E_st",
     "symbol": "E_st",
-    "label": "Elastic modulus of steel rod",
+    "label": "Elastic modulus of steel",
     "value": 200,
     "unit": "GPa",
     "min": 1,

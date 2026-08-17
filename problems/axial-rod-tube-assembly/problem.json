@@ -1,10 +1,30 @@
 {
   "id": "MOS-AXIAL-009",
   "slug": "axial-rod-tube-assembly",
-  "title": "Axial Displacement of a Steel Tie Rod and Aluminum Spacer Tube Assembly",
+  "title": "Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly",
   "studentDocumentTitle": "Student Homework Questions",
   "instructorDocumentTitle": "Instructor Answers",
-  "summary": "A context-rich mechanics problem on axial force, deformation of dissimilar materials, compatibility, and total end displacement.",
+  "summary": "A context-rich axial-deformation problem on a steel tie rod in tension, an aluminum spacer tube in compression, and displacement compatibility.",
+  "primaryTopics": [
+    "Axial Deformation",
+    "Compression"
+  ],
+  "courseTopic": "Axial loading, axial deformation, and displacement compatibility",
+  "targetLevel": "Intermediate MEEN 305 context-rich problem",
+  "primaryMechanicsCompetencies": [
+    "Interpretation of a real mechanical assembly",
+    "Load-path identification",
+    "Tension and compression recognition",
+    "Free-body diagrams",
+    "Internal axial force",
+    "Axial deformation",
+    "Displacement compatibility",
+    "Engineering interpretation"
+  ],
+  "expectedStudentDeliverable": "Interpretation of the physical assembly, load-path description, student-generated simplified model, free-body diagrams, internal-force calculations, deformation calculations, total displacement of the loaded end, and a concise engineering assessment.",
+  "difficultyLevel": 3,
+  "geometryComplexity": "1D multi-member axial assembly",
+  "problemDeliverableType": "Simplified model, free-body diagram, internal-force calculations, deformation calculations, displacement compatibility, and engineering interpretation.",
   "textbookChapters": [
     "Axial loading",
     "Axial deformation",
@@ -20,12 +40,13 @@
     "axial_E_st_MPa",
     "axial_rod_elongation_mm",
     "axial_tube_shortening_mm",
-    "axial_total_displacement_mm"
+    "axial_total_displacement_mm",
+    "axial_total_displacement_rounded_mm"
   ],
-  "image": "assets/axial-industry-context.png",
+  "image": "assets/axial-industry-context.jpg",
   "idealizedImage": "assets/axial-instructor-idealization.png",
   "idealizedImageAlt": "Instructor reference idealization of a steel tie rod passing through an aluminum spacer tube, with a rigid collar, fixed support, dimensions, and applied tensile load.",
   "source": "index.html",
-  "problemStatement": "<p>A mechanical engineering team is evaluating a compact tie-rod assembly used in a machine-frame or actuator support system. A steel rod passes through an aluminum spacer tube. A rigid collar attached to the rod bears against the left end of the tube, and the right end of the tube reacts against a fixed support plate.</p><p>When a tensile load is applied to the exposed end of the steel rod, the rod elongates while the aluminum tube shortens. Because the free rod end positions or preloads a connected component, the team must determine its net displacement relative to the fixed support.</p>",
-  "engineeringGoal": "<p>Determine the displacement of the free end C of the steel rod relative to the fixed support at A by accounting for both the elongation of the steel rod and the shortening of the aluminum tube.</p>"
+  "problemStatement": "<p>Tie-rod assemblies are widely used in mechanical systems to transfer axial force while controlling the relative position of connected parts. Familiar applications include vehicle steering linkages, machine frames, actuator supports, clamping assemblies, and structural fixtures. The industrial image provides a real example of a tie-rod assembly; the mechanics model used in this problem isolates the axial load-transfer behavior needed for a Solid Mechanics analysis.</p><p>In the assembly considered for analysis, a steel tie rod passes through an aluminum spacer tube. A rigid collar attached to the rod bears against one end of the tube, while the opposite end of the tube bears against a rigid support. When the exposed end of the rod is pulled, the steel rod elongates and the aluminum tube shortens. The final movement of the loaded end therefore depends on the deformation of both members rather than on the elongation of the steel rod alone.</p>",
+  "engineeringGoal": "<p>Determine the displacement of the loaded end of the tie rod relative to the fixed supporting structure by accounting for both the elongation of the steel rod and the shortening of the aluminum tube.</p>"
 }
