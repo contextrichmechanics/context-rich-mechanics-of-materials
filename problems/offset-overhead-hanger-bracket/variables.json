@@ -1,9 +1,0 @@
-[
-  {"key":"hanger_sigma_allow","symbol":"sigma_allow","label":"Allowable bending stress","value":150,"unit":"MPa","min":10,"max":1000,"step":5},
-  {"key":"hanger_L","symbol":"L","label":"Horizontal load offset to section a-a","value":600,"unit":"mm","min":50,"max":3000,"step":10},
-  {"key":"hanger_R","symbol":"R","label":"Nominal bend radius","value":300,"unit":"mm","min":25,"max":2000,"step":10},
-  {"key":"hanger_B","symbol":"B","label":"Top-flange width","value":80,"unit":"mm","min":10,"max":500,"step":1},
-  {"key":"hanger_H","symbol":"H","label":"Overall section depth","value":120,"unit":"mm","min":20,"max":800,"step":1},
-  {"key":"hanger_t1","symbol":"t_1","label":"Web thickness","value":12,"unit":"mm","min":1,"max":100,"step":1},
-  {"key":"hanger_t2","symbol":"t_2","label":"Flange thickness and bottom projection","value":16,"unit":"mm","min":1,"max":100,"step":1}
-]

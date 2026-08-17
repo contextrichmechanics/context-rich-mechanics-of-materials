@@ -60,16 +60,6 @@
     "warnings": []
   },
   {
-    "id": "MOS-ACTUATOR-BRACKET-026",
-    "slug": "industrial-actuator-bracket-combined-stress",
-    "title": "Combined Stress Analysis of an Offset Industrial Actuator Support Bracket",
-    "status": "OK",
-    "variables": 7,
-    "questions": 20,
-    "variants": 1,
-    "warnings": []
-  },
-  {
     "id": "MOS-LINE-SHAFT-025",
     "slug": "industrial-line-shaft-shear-moment",
     "title": "Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft",
@@ -120,16 +110,6 @@
     "warnings": []
   },
   {
-    "id": "MOS-LEVER-014",
-    "slug": "lever-actuated-wire-support",
-    "title": "Lever-Actuated Wire Support Mechanism",
-    "status": "OK",
-    "variables": 9,
-    "questions": 19,
-    "variants": 1,
-    "warnings": []
-  },
-  {
     "id": "MOS-SHAFT-016",
     "slug": "motor-driven-shaft-torsion",
     "title": "Motor-Driven Shaft Design for a Belt-Transmission System",
@@ -156,16 +136,6 @@
     "status": "OK",
     "variables": 13,
     "questions": 19,
-    "variants": 1,
-    "warnings": []
-  },
-  {
-    "id": "MOS-HANGER-024",
-    "slug": "offset-overhead-hanger-bracket",
-    "title": "Allowable Load for an Offset Overhead Process-Equipment Hanger",
-    "status": "OK",
-    "variables": 7,
-    "questions": 20,
     "variants": 1,
     "warnings": []
   },
@@ -203,16 +173,6 @@
     "id": "MOS-THERMAL-012",
     "slug": "steam-pipe-thermal-expansion",
     "title": "Thermal Expansion Force in a Steam Pipe Between Turbine Housings",
-    "status": "OK",
-    "variables": 9,
-    "questions": 19,
-    "variants": 1,
-    "warnings": []
-  },
-  {
-    "id": "MOS-LINK-013",
-    "slug": "stepped-steel-tension-link",
-    "title": "Maximum Axial Load and Elongation of a Stepped Steel Tension Link",
     "status": "OK",
     "variables": 9,
     "questions": 19,

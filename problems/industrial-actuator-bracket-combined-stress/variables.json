@@ -1,9 +1,0 @@
-[
-  {"key":"act_F","symbol":"F","label":"Applied horizontal load","value":150,"unit":"lb","min":0,"max":10000,"step":10},
-  {"key":"act_P","symbol":"P","label":"Applied vertical load","value":200,"unit":"lb","min":0,"max":10000,"step":10},
-  {"key":"act_e","symbol":"e","label":"Upper connection horizontal offset","value":0.50,"unit":"in","min":0,"max":20,"step":0.05},
-  {"key":"act_h","symbol":"h","label":"Vertical distance from section a-a to lower pin centerline","value":2.00,"unit":"in","min":0.05,"max":50,"step":0.05},
-  {"key":"act_c","symbol":"c","label":"Horizontal eccentricity of vertical load P","value":1.25,"unit":"in","min":0,"max":20,"step":0.05},
-  {"key":"act_b","symbol":"b","label":"Rectangular section width in bending direction","value":0.75,"unit":"in","min":0.05,"max":20,"step":0.05},
-  {"key":"act_t","symbol":"t","label":"Rectangular section thickness","value":0.50,"unit":"in","min":0.05,"max":20,"step":0.05}
-]
