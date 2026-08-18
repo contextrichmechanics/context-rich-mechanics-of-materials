@@ -4,7 +4,7 @@
   "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",
   "studentDocumentTitle": "Student Homework Questions - Cantilevered Operator-Seat Support",
   "instructorDocumentTitle": "Instructor Answers - Cantilevered Operator-Seat Support",
-  "summary": "A cantilever-beam problem integrating load paths, internal shear and moment, hollow rectangular section properties, maximum flexural stress, stress sense, and engineering assessment.",
+  "summary": "A cantilever-bending problem integrating load path, equilibrium, internal shear and moment, hollow-section properties, flexural stress, and engineering judgment.",
   "textbookChapters": [
     "Internal loadings in structural members",
     "Centroids and moments of inertia",
@@ -14,10 +14,8 @@
   "derivedPlaceholders": [
     "seat_V_lb",
     "seat_M_lbin",
-    "seat_area_in2",
     "seat_I_in4",
     "seat_c_in",
-    "seat_S_in3",
     "seat_sigma_max_psi",
     "seat_sigma_max_ksi",
     "seat_tension_fiber",
@@ -28,6 +26,6 @@
   "idealizedImage": "assets/seat-instructor-idealization.png",
   "idealizedImageAlt": "Instructor reference idealization of a cantilevered operator seat with downward load P, offset x, fixed support A, section a-a, and hollow rectangular cross-section dimensions B, H, b, and h.",
   "source": "index.html",
-  "problemStatement": "<p>An industrial machine uses a side-mounted operator seat so that a technician can remain near a control or inspection station without a support column beneath the seat. A hollow rectangular steel-tube arm projects from the machine frame and carries the downward seat-and-occupant load <em>P</em>.</p><p>Evaluate section a-a, located a horizontal distance <em>x</em> from the load line. Model the machine-frame attachment at A as fixed and limit the base analysis to static, linear-elastic beam bending.</p>",
-  "engineeringGoal": "<p>Determine the maximum normal bending stress at section a-a, identify the extreme fibers in tension and compression, and explain how geometry or load offset could be changed to reduce bending demand.</p>"
+  "problemStatement": "<p>Industrial machines sometimes use side-mounted operator seats so that the floor area beneath the seat remains clear for access, tooling, material movement, or machine components. The seat is supported from the machine frame by a projecting structural arm, so the weight of the operator acts at a horizontal offset from the machine structure and creates bending in the arm.</p><p>Hollow rectangular tubing is a practical choice for this type of support because it places material away from the neutral axis, providing good bending stiffness and strength without the mass of a solid section. The bending demand increases as the seat is moved farther from the machine frame, while the tube geometry controls how effectively the arm resists that bending.</p><p>For this MEEN 305 analysis, the seat support is treated as a cantilevered beam under a static occupant load. The engineering objective is to determine the bending stress in the hollow tube and identify how the seat offset and cross-sectional geometry influence the structural demand.</p>",
+  "engineeringGoal": "<p>Determine the maximum normal bending stress in the hollow rectangular support arm, identify the extreme fibers where the largest tensile and compressive stresses occur, and explain which geometric changes would most effectively reduce the bending demand.</p>"
 }

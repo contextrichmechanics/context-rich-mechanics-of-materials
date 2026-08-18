@@ -1324,23 +1324,19 @@
       Number.isFinite(seatInnerWidth) && seatInnerWidth >= 0 && seatInnerWidth < seatOuterWidth &&
       Number.isFinite(seatInnerHeight) && seatInnerHeight >= 0 && seatInnerHeight < seatOuterHeight
     ) {
-      const area = seatOuterWidth * seatOuterHeight - seatInnerWidth * seatInnerHeight;
       const inertia = (seatOuterWidth * seatOuterHeight ** 3 - seatInnerWidth * seatInnerHeight ** 3) / 12;
       const extremeFiber = seatOuterHeight / 2;
       const moment = seatLoad * seatOffset;
-      const sectionModulus = inertia / extremeFiber;
-      const maximumStress = moment / sectionModulus;
+      const maximumStress = moment * extremeFiber / inertia;
       values.seat_V_lb = formatDerived(seatLoad, 1);
       values.seat_M_lbin = formatDerived(moment, 1);
-      values.seat_area_in2 = formatDerived(area, 4);
       values.seat_I_in4 = formatDerived(inertia, 4);
       values.seat_c_in = formatDerived(extremeFiber, 3);
-      values.seat_S_in3 = formatDerived(sectionModulus, 4);
       values.seat_sigma_max_psi = formatDerived(maximumStress, 1);
       values.seat_sigma_max_ksi = formatDerived(maximumStress / 1000, 3);
       values.seat_tension_fiber = "upper outer fiber";
       values.seat_compression_fiber = "lower outer fiber";
-      values.seat_assessment = `The simplified static bending-stress magnitude is ${formatDerived(maximumStress / 1000, 3)} ksi. Compare this value with the specified allowable normal stress, or compute FOS = sigma_allow/|sigma_max|. If the criterion is not met, increase effective section depth or wall thickness, reduce the load offset, reduce the design load, or select an appropriate stronger section and material.`;
+      values.seat_assessment = "The region near the fixed machine attachment is critical because the bending moment increases toward the support. A practical improvement is to increase the tube section height, increase wall thickness, or reduce the horizontal seat offset. Increasing section height is especially efficient because it places more material farther from the neutral axis.";
     }
 
     const lineF1 = numericValue(values, "line_F1");

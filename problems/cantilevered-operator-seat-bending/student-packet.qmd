@@ -1,6 +1,6 @@
 ---
 title: "Student Packet - Cantilevered Operator-Seat Support"
-subtitle: "Context, Idealization, Section Properties, and Bending Stress"
+subtitle: "Context, Cantilever Idealization, Hollow-Section Properties, and Bending Stress"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html: {toc: true, number-sections: true}

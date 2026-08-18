@@ -15,7 +15,7 @@ window.PROBLEM_HEALTH = [
     "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",
     "status": "OK",
     "variables": 6,
-    "questions": 20,
+    "questions": 19,
     "variants": 1,
     "warnings": []
   },

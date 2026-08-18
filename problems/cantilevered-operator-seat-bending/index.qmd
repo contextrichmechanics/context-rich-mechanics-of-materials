@@ -1,18 +1,18 @@
 ---
 title: "Bending Stress in a Cantilevered Industrial Operator-Seat Support"
-description: "A cantilever-beam problem on internal shear and moment, hollow rectangular section properties, and maximum flexural stress."
+description: "A cantilever-bending problem on load path, equilibrium, hollow-section properties, flexural stress, and engineering judgment."
 image: "assets/seat-industry-context.png"
 categories: [context-rich, mechanics-of-materials, analysis]
-mechanics_concepts: [cantilever beam, equilibrium, internal shear, bending moment, second moment of area, flexure formula, bending stress, neutral axis, section modulus]
-course_topics: [internal loadings, area moments of inertia, flexural stress, hollow sections, engineering design]
+mechanics_concepts: [cantilever bending, hollow-section, shear, load path, equilibrium, internal bending moment, second moment of area, flexural stress, extreme fibers, engineering judgment]
+course_topics: [cantilever bending, hollow-section, shear]
 textbook_chapters: [Internal loadings in structural members, Centroids and moments of inertia, Flexural deformation of a straight member, The flexure formula]
-problem_types: [load-path analysis, free-body diagram, internal-resultant calculation, section-property calculation, stress calculation, engineering evaluation]
+problem_types: [load-path analysis, free-body diagram, internal-resultant calculation, section-property calculation, bending-stress calculation, engineering assessment]
 competencies: [engineering idealization, equilibrium, section properties, flexure formula, stress interpretation, engineering judgment]
 industries: [industrial machinery, operator stations, maintenance equipment, manufacturing]
 difficulty: "Introductory to intermediate"
 status: "Published"
 problem_id: "MOS-SEAT-023"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}

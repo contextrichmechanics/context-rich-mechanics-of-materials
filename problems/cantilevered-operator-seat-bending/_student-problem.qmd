@@ -4,20 +4,21 @@
 
 ### Engineering Context
 
-An industrial machine uses a side-mounted operator seat so that a technician can remain near a control or inspection station without placing a support column beneath the seat. The seat is carried by a hollow rectangular steel-tube arm projecting from the machine frame. The seat and occupant produce a downward load at an offset from the frame, creating shear and bending in the arm.
+Industrial machines sometimes use side-mounted operator seats so that the floor area beneath the seat remains clear for access, tooling, material movement, or machine components. The seat is supported from the machine frame by a projecting structural arm, so the weight of the operator acts at a horizontal offset from the machine structure and creates bending in the arm.
 
-The structural review focuses on whether the selected tube geometry produces an acceptable bending stress at a designated section near the machine attachment. Local weld and bolt stresses, fatigue, impact, and dynamic seat loads are outside the base problem.
+Hollow rectangular tubing is a practical choice for this type of support because it places material away from the neutral axis, providing good bending stiffness and strength without the mass of a solid section. The bending demand increases as the seat is moved farther from the machine frame, while the tube geometry controls how effectively the arm resists that bending.
+
+For this MEEN 305 analysis, the seat support is treated as a cantilevered beam under a static occupant load. The engineering objective is to determine the bending stress in the hollow tube and identify how the seat offset and cross-sectional geometry influence the structural demand.
 
 ![Cantilevered industrial operator seat attached to a machine frame by a hollow rectangular support arm.](assets/seat-industry-context.png){fig-alt="Side-mounted industrial operator seat supported by a cantilever arm attached to a machine frame." width=88%}
 
 ### Main Engineering Goal
 
-Determine the maximum normal bending stress at section a-a of the hollow rectangular support arm, identify the extreme fibers in tension and compression, and explain how the design could be modified to reduce bending demand.
+Determine the maximum normal bending stress in the hollow rectangular support arm, identify the extreme fibers where the largest tensile and compressive stresses occur, and explain which geometric changes would most effectively reduce the bending demand.
 
 ### System Components
 
-- operator seat and occupant load;
-- vertical seat post and mounting bracket;
-- hollow rectangular steel-tube cantilever arm;
-- fixed machine-frame attachment at A; and
-- machine frame carrying the reactions.
+- operator seat;
+- seat mounting post;
+- structural support arm; and
+- machine frame.

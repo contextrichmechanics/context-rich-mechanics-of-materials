@@ -1,7 +1,7 @@
 # Graph Report - context-rich-mos-quarto-v3  (2026-08-17)
 
 ## Corpus Check
-- 209 files · ~2,209,387 words
+- 209 files · ~2,255,331 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8a3121d2`
+- Built from commit: `9c7b92b9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -58,7 +58,7 @@
 - Industrial Clevis-Pin Linkage Under Tensile Load
 - Bolt-Group Design for an Industrial Flanged Shaft Coupling
 - Hydraulic Press Punching Shear and Bearing Stress Check
-- Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm
+- Shear and Bending-Moment Analysis of an Industrial Robot Arm
 - Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft
 - Motor-Driven Shaft Design for a Belt-Transmission System
 - Mountain Bike Rear Suspension Linkage: Pin Shear and Factor of Safety
@@ -281,9 +281,9 @@ Nodes (5): Bolt-Group Design for an Industrial Flanged Shaft Coupling, Context-R
 Cohesion: 0.33
 Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Hydraulic Press Punching Shear and Bearing Stress Check, Main Engineering Goal, System Components
 
-### Community 45 - "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm"
+### Community 45 - "Shear and Bending-Moment Analysis of an Industrial Robot Arm"
 Cohesion: 0.33
-Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm, System Components
+Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Shear and Bending-Moment Analysis of an Industrial Robot Arm, System Components
 
 ### Community 46 - "Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft"
 Cohesion: 0.33

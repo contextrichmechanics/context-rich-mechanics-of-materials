@@ -5328,7 +5328,7 @@
       "_origin": "ast",
       "id": "problems_industrial_robot_arm_shear_moment_student_problem",
       "community": 45,
-      "community_name": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
+      "community_name": "Shear and Bending-Moment Analysis of an Industrial Robot Arm",
       "norm_label": "industrial-robot-arm-shear-moment/_student-problem.qmd"
     },
     {
@@ -5339,7 +5339,7 @@
       "_origin": "ast",
       "id": "problems_industrial_robot_arm_shear_moment_student_problem_context_rich_solid_mechanics_problem",
       "community": 45,
-      "community_name": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
+      "community_name": "Shear and Bending-Moment Analysis of an Industrial Robot Arm",
       "norm_label": "context-rich solid mechanics problem"
     },
     {
@@ -5350,40 +5350,40 @@
       "_origin": "ast",
       "id": "problems_industrial_robot_arm_shear_moment_student_problem_engineering_context",
       "community": 45,
-      "community_name": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
+      "community_name": "Shear and Bending-Moment Analysis of an Industrial Robot Arm",
       "norm_label": "engineering context"
     },
     {
       "label": "Main Engineering Goal",
       "file_type": "document",
       "source_file": "problems/industrial-robot-arm-shear-moment/_student-problem.qmd",
-      "source_location": "L13",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "problems_industrial_robot_arm_shear_moment_student_problem_main_engineering_goal",
       "community": 45,
-      "community_name": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
+      "community_name": "Shear and Bending-Moment Analysis of an Industrial Robot Arm",
       "norm_label": "main engineering goal"
     },
     {
-      "label": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
+      "label": "Shear and Bending-Moment Analysis of an Industrial Robot Arm",
       "file_type": "document",
       "source_file": "problems/industrial-robot-arm-shear-moment/_student-problem.qmd",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "problems_industrial_robot_arm_shear_moment_student_problem_shear_and_bending_moment_analysis_of_a_hydraulically_supported_industrial_robot_arm",
+      "id": "problems_industrial_robot_arm_shear_moment_student_problem_shear_and_bending_moment_analysis_of_an_industrial_robot_arm",
       "community": 45,
-      "community_name": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
-      "norm_label": "shear and bending-moment analysis of a hydraulically supported industrial robot arm"
+      "community_name": "Shear and Bending-Moment Analysis of an Industrial Robot Arm",
+      "norm_label": "shear and bending-moment analysis of an industrial robot arm"
     },
     {
       "label": "System Components",
       "file_type": "document",
       "source_file": "problems/industrial-robot-arm-shear-moment/_student-problem.qmd",
-      "source_location": "L17",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "problems_industrial_robot_arm_shear_moment_student_problem_system_components",
       "community": 45,
-      "community_name": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
+      "community_name": "Shear and Bending-Moment Analysis of an Industrial Robot Arm",
       "norm_label": "system components"
     },
     {
@@ -11196,17 +11196,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "problems_industrial_robot_arm_shear_moment_student_problem_context_rich_solid_mechanics_problem",
-      "target": "problems_industrial_robot_arm_shear_moment_student_problem_shear_and_bending_moment_analysis_of_a_hydraulically_supported_industrial_robot_arm",
+      "target": "problems_industrial_robot_arm_shear_moment_student_problem_shear_and_bending_moment_analysis_of_an_industrial_robot_arm",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "problems/industrial-robot-arm-shear-moment/_student-problem.qmd",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "problems_industrial_robot_arm_shear_moment_student_problem_shear_and_bending_moment_analysis_of_a_hydraulically_supported_industrial_robot_arm",
+      "source": "problems_industrial_robot_arm_shear_moment_student_problem_shear_and_bending_moment_analysis_of_an_industrial_robot_arm",
       "target": "problems_industrial_robot_arm_shear_moment_student_problem_main_engineering_goal",
       "confidence_score": 1.0
     },
@@ -11214,10 +11214,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "problems/industrial-robot-arm-shear-moment/_student-problem.qmd",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "problems_industrial_robot_arm_shear_moment_student_problem_shear_and_bending_moment_analysis_of_a_hydraulically_supported_industrial_robot_arm",
+      "source": "problems_industrial_robot_arm_shear_moment_student_problem_shear_and_bending_moment_analysis_of_an_industrial_robot_arm",
       "target": "problems_industrial_robot_arm_shear_moment_student_problem_system_components",
       "confidence_score": 1.0
     },
@@ -11228,7 +11228,7 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "problems_industrial_robot_arm_shear_moment_student_problem_shear_and_bending_moment_analysis_of_a_hydraulically_supported_industrial_robot_arm",
+      "source": "problems_industrial_robot_arm_shear_moment_student_problem_shear_and_bending_moment_analysis_of_an_industrial_robot_arm",
       "target": "problems_industrial_robot_arm_shear_moment_student_problem_engineering_context",
       "confidence_score": 1.0
     },
@@ -15161,5 +15161,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8a3121d2d536c1fd179b64d7b216cac2dbebfdb2"
+  "built_at_commit": "9c7b92b9ba011da6c4864167e491a7bf9f37b56e"
 }

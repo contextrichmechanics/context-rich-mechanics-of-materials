@@ -8,7 +8,7 @@ format:
 
 # Purpose
 
-Award credit for a defensible cantilever idealization, complete free-body diagram, consistent sign convention, correct internal resultants, accurate hollow-section properties, correct use of the flexure formula, and a conclusion bounded by the stated assumptions.
+Award credit for a defensible cantilever idealization, complete free-body diagram, correct internal resultants, accurate hollow-section properties, correct use of the flexure formula, and a concise engineering assessment bounded by the stated assumptions.
 
 # Problem Context
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-The base model assumes static loading, a straight prismatic arm, a concentrated load through the seat-post centerline, linear-elastic material response, small deformation, plane sections, and concentric inner and outer rectangles. It neglects arm and hardware self-weight unless included in P, connection flexibility, local attachment stresses, weld and bolt failure, stress concentrations, fatigue, impact, dynamics, and applicable seating or machinery safety requirements.
+The base model assumes static loading, a straight prismatic arm, a concentrated occupant/seat force, linear-elastic material response, small deformation, plane sections remaining plane, and concentric inner and outer rectangles. It neglects arm and hardware self-weight unless included in P, local weld and bolt stresses, bracket flexibility, contact effects, stress concentrations, fatigue, impact, vibration, and dynamic occupant loading. No allowable stress is assigned, so the final assessment interprets demand and geometry sensitivity without claiming a complete pass/fail verification.
 
 # Supplemental Assessment Structure
 
