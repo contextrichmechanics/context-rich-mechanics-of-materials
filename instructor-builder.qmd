@@ -919,8 +919,13 @@ function variableMap(problem) {
     Number.isFinite(taperedShearModulusGPa) && taperedShearModulusGPa > 0 &&
     Number.isFinite(taperedAllowableTwist) && taperedAllowableTwist > 0
   ) {
-    const radiusAt = (x) => taperedMinimumRadius *
-      (1 + x ** 1.5 + x ** 2.5);
+    const radiusAt = (x) => {
+      const normalizedPosition = x / taperedLength;
+      return taperedMinimumRadius * (
+        1 + 0.8 * normalizedPosition ** 1.5 +
+        0.4 * normalizedPosition ** 2.5
+      );
+    };
     const integrateCompliance = (end, intervals = 4000) => {
       const count = intervals % 2 === 0 ? intervals : intervals + 1;
       const step = end / count;
@@ -933,7 +938,6 @@ function variableMap(problem) {
     };
     const shearModulusPa = taperedShearModulusGPa * 1e9;
     const complianceIntegral = integrateCompliance(taperedLength);
-    const firstQuarterIntegral = integrateCompliance(taperedLength / 4);
     const twistRad = 2 * taperedTorque * complianceIntegral /
       (Math.PI * shearModulusPa);
     const twistDeg = twistRad * 180 / Math.PI;
@@ -944,25 +948,22 @@ function variableMap(problem) {
 
     values.taper_reaction_Nm = formatDerived(taperedTorque, 3);
     values.taper_G_Pa = formatDerived(shearModulusPa, 0);
-    values.taper_r_A_m = formatDerived(taperedMinimumRadius, 4);
-    values.taper_r_L_m = formatDerived(radiusAt(taperedLength), 4);
+    values.taper_r_A_m = formatDerived(taperedMinimumRadius, 3);
+    values.taper_r_L_m = formatDerived(radiusAt(taperedLength), 3);
     values.taper_J_A_m4 = formatDerived(
       Math.PI * taperedMinimumRadius ** 4 / 2, 10
     );
     values.taper_integral_m_neg3 = formatDerived(complianceIntegral, 3);
-    values.taper_phi_rad = formatDerived(twistRad, 6);
-    values.taper_phi_deg = formatDerived(twistDeg, 4);
-    values.taper_twist_utilization = formatDerived(twistUtilization, 4);
+    values.taper_phi_rad = formatDerived(twistRad, 5);
+    values.taper_phi_deg = formatDerived(twistDeg, 3);
+    values.taper_twist_utilization = formatDerived(twistUtilization, 3);
     values.taper_twist_assessment = twistPasses
       ? "The calculated rotation satisfies the assigned torsional-stiffness limit."
       : "The calculated rotation exceeds the assigned torsional-stiffness limit.";
-    values.taper_tau_max_MPa = formatDerived(maximumStressMPa, 3);
-    values.taper_first_quarter_pct = formatDerived(
-      100 * firstQuarterIntegral / complianceIntegral, 2
-    );
+    values.taper_tau_max_MPa = formatDerived(maximumStressMPa, 2);
     values.taper_recommendation = twistPasses
-      ? `The assigned profile meets the ${formatDerived(taperedAllowableTwist, 3)} degree twist limit in the simplified model. Preserve the minimum radius unless omitted strength, fatigue, dynamic, or manufacturing checks require a larger section.`
-      : `Increase the minimum radius near end A or revise the taper profile before approval. Increasing the small-end radius directly reduces both the local stress and the dominant 1/r^4 contribution to total twist; a higher-modulus material can reduce twist but not stress under prescribed torque.`;
+      ? `The predicted twist is ${formatDerived(twistDeg, 3)} degrees, which satisfies the ${formatDerived(taperedAllowableTwist, 1)} degree allowable limit. The small-radius end still governs torsional compliance, so omitted strength, fatigue, dynamic, bearing, and manufacturing effects require separate evaluation.`
+      : `The predicted twist is ${formatDerived(twistDeg, 3)} degrees, which exceeds the ${formatDerived(taperedAllowableTwist, 1)} degree allowable limit, so the current equivalent geometry does not satisfy the assigned stiffness criterion. The small-radius end governs torsional compliance. Increase the minimum radius or otherwise increase torsional rigidity, then re-evaluate twist. The maximum torsional shear stress is ${formatDerived(maximumStressMPa, 2)} MPa in this simplified load case, so the present problem is governed by stiffness rather than the calculated torsional stress.`;
   }
 
   const turbineDiameter = numericValue(values, "turbine_d");

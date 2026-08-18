@@ -1,5 +1,5 @@
 ---
-title: "Instructor Guide - Variable-Radius Aluminum Drive Shaft"
+title: "Instructor Guide - Variable-Section Industrial Spindle"
 subtitle: "Representative Answers and Evaluation Guidance"
 author: "Context-Rich Mechanics of Materials Library"
 format:
@@ -8,7 +8,7 @@ format:
 
 # Purpose
 
-Award credit for a correct torque load path, constant internal torque, the variable polar moment, a dimensionally consistent radius profile, correct twist integration, stress localization, sensitivity reasoning, and a bounded stiffness recommendation.
+Award credit for a correct torque load path, constant internal torque, variable polar moment, dimensionally consistent radius function, correct twist integration, stress localization, stiffness interpretation, and a bounded engineering recommendation.
 
 # Problem Context
 
@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-The base model assumes Saint-Venant torsion of a solid circular shaft, homogeneous isotropic linear elasticity, constant shear modulus, small rotation, shaft-axis torque, and a perfectly rigid fixed interface. A complete design also requires bending, axial loading, local attachment flexibility, stress concentrations, fatigue, dynamics, manufacturing constraints, and applicable allowables.
+The base model assumes a solid circular shaft, homogeneous isotropic linear-elastic material, Saint-Venant torsion, small rotation, shaft-axis torque, constant shear modulus, continuously varying radius, and a rigid rotational restraint. Bending, axial loading, local shoulder stress concentrations, bearing flexibility, fatigue, warping, dynamics, and manufacturing details are excluded.
 
 # Supplemental Assessment Structure
 
 - context interpretation and idealization: 20%;
-- variable section property and twist formulation: 30%;
-- numerical twist and stress evaluation: 30%;
-- compliance interpretation and recommendation: 20%.
+- internal torque and variable section formulation: 25%;
+- numerical twist and stress evaluation: 35%;
+- stiffness interpretation and recommendation: 20%.

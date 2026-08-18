@@ -1,26 +1,26 @@
 ---
-title: "Torsional Stiffness of a Variable-Radius Aluminum Drive Shaft"
-description: "A context-rich torsion problem on variable section properties, twist integration, and compliance localization."
+title: "Torsional Stiffness of a Variable-Section Industrial Spindle"
+description: "An industrial-spindle problem on tapered shaft, torque, angle of twist, nonprismatic torsion, shear stress, and torsional stiffness."
 image: "assets/tapered-shaft-industry-context.png"
 categories: [context-rich, mechanics-of-materials, analysis]
-mechanics_concepts: [torsion, nonprismatic shafts, polar moment, shear stress, angle of twist]
-course_topics: [torsion, nonprismatic shafts, polar moment, angle of twist, shear stress]
+mechanics_concepts: [tapered shaft, torque, angle of twist, torsion, nonprismatic circular shafts, polar moment of inertia, torsional shear stress, torsional stiffness]
+course_topics: [tapered shaft, torque, angle of twist, torsion, deformation of nonprismatic circular shafts, torsional stiffness]
 textbook_chapters: [Torsion of circular shafts, Nonprismatic shaft deformation, Polar moment of inertia, Angle of twist]
-problem_types: [load-path analysis, symbolic derivation, numerical integration, stress calculation, engineering evaluation]
-competencies: [boundary conditions, internal torque, variable section properties, numerical integration, sensitivity analysis, engineering judgment]
-industries: [aerospace drives, robotics, turbomachinery, precision test systems]
+problem_types: [load-path analysis, student idealization, symbolic derivation, numerical integration, stress calculation, serviceability assessment]
+competencies: [load path, internal torque, variable section property, integration, angle of twist, shear stress, stiffness interpretation, engineering judgment]
+industries: [machine-tool spindles, pulley-driven rotating shafts, industrial spindle assemblies, precision drive systems]
 difficulty: "Intermediate to advanced"
-status: "Published"
+status: "Faculty-reviewed cleaned draft"
 problem_id: "MOS-TAPER-020"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
 
 ## Assignment Options
 
-::: {.callout-note title="Radius Profile"}
-Use &xi; = <em>x</em>/(1 m) and <em>r</em>(<em>x</em>) = <em>r</em><sub>0</sub>[1 + &xi;<sup>3/2</sup> + &xi;<sup>5/2</sup>] so the fractional powers act on a nondimensional coordinate.
+::: {.callout-note title="Equivalent Radius Profile"}
+The smooth taper is an equivalent mechanics model. Use <em>r</em>(<em>x</em>) = 0.030[1 + 0.8(<em>x</em>/<em>L</em>)<sup>3/2</sup> + 0.4(<em>x</em>/<em>L</em>)<sup>5/2</sup>] m. The normalized coordinate <em>x</em>/<em>L</em> is dimensionless.
 :::
 
 [Student packet](student-packet.qmd){.btn .btn-primary}

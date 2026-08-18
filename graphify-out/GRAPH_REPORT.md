@@ -1,7 +1,7 @@
 # Graph Report - context-rich-mos-quarto-v3  (2026-08-17)
 
 ## Corpus Check
-- 209 files · ~2,287,537 words
+- 209 files · ~2,209,387 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5d94b683`
+- Built from commit: `8a3121d2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -71,7 +71,7 @@
 - Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables
 - Suspended Platform Assembly - Wire Elongation, Vertical Displacement, and Tilt
 - Torsional Response of a Multi-Stage Turbine Rotor
-- Torsional Stiffness of a Variable-Radius Aluminum Drive Shaft
+- Torsional Stiffness of a Variable-Section Industrial Spindle
 - __PROBLEM_TITLE__
 - Commercial Aluminum Ladder-Platform System and Adjustable Support Bracket
 - problem-template.qmd
@@ -333,9 +333,9 @@ Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engin
 Cohesion: 0.33
 Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components, Torsional Response of a Multi-Stage Turbine Rotor
 
-### Community 58 - "Torsional Stiffness of a Variable-Radius Aluminum Drive Shaft"
+### Community 58 - "Torsional Stiffness of a Variable-Section Industrial Spindle"
 Cohesion: 0.33
-Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components, Torsional Stiffness of a Variable-Radius Aluminum Drive Shaft
+Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components, Torsional Stiffness of a Variable-Section Industrial Spindle
 
 ### Community 59 - "__PROBLEM_TITLE__"
 Cohesion: 0.33

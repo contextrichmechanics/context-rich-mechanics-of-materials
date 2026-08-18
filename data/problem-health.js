@@ -202,10 +202,10 @@ window.PROBLEM_HEALTH = [
   {
     "id": "MOS-TAPER-020",
     "slug": "variable-radius-tapered-shaft",
-    "title": "Torsional Stiffness of a Variable-Radius Aluminum Drive Shaft",
+    "title": "Torsional Stiffness of a Variable-Section Industrial Spindle",
     "status": "OK",
     "variables": 5,
-    "questions": 19,
+    "questions": 20,
     "variants": 1,
     "warnings": []
   }

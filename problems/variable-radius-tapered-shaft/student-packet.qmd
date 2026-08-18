@@ -1,6 +1,6 @@
 ---
-title: "Student Packet - Variable-Radius Aluminum Drive Shaft"
-subtitle: "Nonprismatic Torsion, Twist Integration, and Compliance"
+title: "Student Packet - Variable-Section Industrial Spindle"
+subtitle: "Tapered-Shaft Torsion, Angle of Twist, and Stiffness"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html: {toc: true, number-sections: true}

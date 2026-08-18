@@ -10912,10 +10912,31 @@ window.PROBLEM_CATALOG = [
   {
     "id": "MOS-TAPER-020",
     "slug": "variable-radius-tapered-shaft",
-    "title": "Torsional Stiffness of a Variable-Radius Aluminum Drive Shaft",
+    "title": "Torsional Stiffness of a Variable-Section Industrial Spindle",
     "studentDocumentTitle": "Student Homework Questions",
     "instructorDocumentTitle": "Instructor Answers",
-    "summary": "A nonprismatic-shaft torsion problem integrating a variable polar moment, numerical angle-of-twist integration, maximum shear stress, compliance localization, and stiffness assessment.",
+    "summary": "An industrial-spindle problem integrating tapered-shaft torsion, constant internal torque, variable polar moment, angle-of-twist integration, shear stress, and stiffness assessment.",
+    "primaryTopics": [
+      "Tapered Shaft",
+      "Torque",
+      "Angle of Twist"
+    ],
+    "courseTopic": "Torsion; deformation of nonprismatic circular shafts; torsional stiffness",
+    "targetLevel": "Intermediate to advanced MEEN 305",
+    "primaryMechanicsCompetencies": [
+      "Load path",
+      "Internal torque",
+      "Variable section property",
+      "Integration",
+      "Angle of twist",
+      "Shear stress",
+      "Stiffness interpretation",
+      "Engineering judgment"
+    ],
+    "expectedStudentDeliverable": "Annotated idealization, symbolic derivation, numerical integration, stress and twist calculations, and a concise engineering recommendation.",
+    "difficultyLevel": 4,
+    "geometryComplexity": "One-dimensional nonprismatic circular shaft represented by a smooth equivalent taper.",
+    "problemDeliverableType": "Mathematical derivation, numerical integration, stress and twist calculations, physical interpretation, and engineering recommendation.",
     "textbookChapters": [
       "Torsion of circular shafts",
       "Nonprismatic shaft deformation",
@@ -10934,20 +10955,19 @@ window.PROBLEM_CATALOG = [
       "taper_twist_utilization",
       "taper_twist_assessment",
       "taper_tau_max_MPa",
-      "taper_first_quarter_pct",
       "taper_recommendation"
     ],
     "image": "problems/variable-radius-tapered-shaft/assets/tapered-shaft-industry-context.png",
     "idealizedImage": "problems/variable-radius-tapered-shaft/assets/tapered-shaft-instructor-idealization.png",
-    "idealizedImageAlt": "Instructor reference idealization of a solid tapered shaft with applied torque at end A, fixed support at the large end, coordinate x, length L, and variable radius r of x.",
+    "idealizedImageAlt": "Instructor reference idealization of a continuously varying solid circular industrial spindle with applied torque at end A, a fixed support at the large end, coordinate x, length L, and radius r of x.",
     "source": "problems/variable-radius-tapered-shaft/index.html",
-    "problemStatement": "<p>A mechanical engineering team is evaluating a lightweight 2014-T6 aluminum torque-transmission shaft for a precision industrial drive or test system. The solid shaft radius increases continuously from the torque-input end A toward a rigid mounting interface.</p><p>To keep the radius law dimensionally consistent, define &xi; = <em>x</em>/(1 m) and use <em>r</em>(<em>x</em>) = <em>r</em><sub>0</sub>[1 + &xi;<sup>3/2</sup> + &xi;<sup>5/2</sup>]. The shaft carries constant internal torque but has a position-dependent polar moment.</p>",
-    "engineeringGoal": "<p>Determine the angular rotation of end A relative to the fixed interface, locate the maximum torsional shear stress, quantify where torsional compliance accumulates, and assess the shaft against the assigned twist limit.</p>",
+    "problemStatement": "<p>Variable-section shafts are used in machine tools and industrial rotating equipment because different regions serve bearings, pulleys, couplings, or tooling interfaces while other regions can be smaller to reduce material and rotating mass.</p><p>The detailed industrial spindle is simplified as a smooth variable-radius shaft. Its radius is <em>r</em>(<em>x</em>) = {{taper_r_A_m}}[1 + 0.8(<em>x</em>/<em>L</em>)<sup>3/2</sup> + 0.4(<em>x</em>/<em>L</em>)<sup>5/2</sup>] m. The shaft transmits a constant internal torque, but its local torsional rigidity varies strongly with radius.</p>",
+    "engineeringGoal": "<p>Determine the angular rotation of the torque-input end relative to the restrained machine interface, identify the region that contributes most strongly to torsional compliance, evaluate the maximum torsional shear stress, and determine whether the shaft satisfies the specified 1.0&deg; rotational serviceability limit.</p>",
     "variables": [
       {
         "key": "taper_T",
         "symbol": "T",
-        "label": "Applied torque at end A",
+        "label": "Applied torque",
         "value": 450,
         "unit": "N*m",
         "min": 0.1,
@@ -10967,8 +10987,8 @@ window.PROBLEM_CATALOG = [
       {
         "key": "taper_r0",
         "symbol": "r_0",
-        "label": "Minimum radius at end A",
-        "value": 0.02,
+        "label": "Minimum radius at the torque-input end",
+        "value": 0.03,
         "unit": "m",
         "min": 0.001,
         "max": 10,
@@ -10998,97 +11018,122 @@ window.PROBLEM_CATALOG = [
     "questions": [
       {
         "id": "q1",
-        "title": "Primary Function of the Tapered Shaft",
+        "displayNumber": "Q1",
+        "title": "Primary Function of the System",
         "type": "context interpretation",
         "difficulty": "introductory",
         "tags": [
+          "industrial spindle",
           "shaft function",
-          "torque transmission",
-          "precision drive"
+          "torque transmission"
         ],
         "learningObjectives": [
-          "Identify the shaft's role in the drive or test system."
+          "Identify the spindle's primary mechanical function."
         ],
         "selected": true,
-        "student": "<p>State the primary mechanical function of the tapered shaft.</p>",
-        "instructor": "<p>The shaft transmits torque between the input coupling and the fixed or driven machine interface while limiting rotational compliance.</p>",
+        "student": "<p>What is the primary mechanical function of the rotating shaft or spindle in the industrial assembly?</p>",
+        "instructor": "<p>The shaft transmits rotational power and torque between machine components while maintaining the required rotational alignment.</p>",
         "section": "context"
       },
       {
         "id": "q2",
-        "title": "External Torsional Loading",
+        "displayNumber": "Q2",
+        "title": "Source of Mechanical Loading",
         "type": "load identification",
         "difficulty": "introductory",
         "tags": [
-          "applied torque",
-          "input coupling",
-          "end A"
+          "torque",
+          "rotational power",
+          "shaft loading"
         ],
         "learningObjectives": [
-          "Identify the load entering the shaft."
+          "Identify the loading transmitted by the shaft."
         ],
         "selected": true,
-        "student": "<p>Identify the externally applied mechanical load and where it enters the system.</p>",
-        "instructor": "<p>A shaft-axis torque <em>T</em> is applied at end A through the input coupling.</p>",
+        "student": "<p>What type of mechanical loading is transmitted through the shaft during operation?</p>",
+        "instructor": "<p>The shaft carries torque about its longitudinal axis as rotational power is transferred through the machine.</p>",
         "section": "context"
       },
       {
         "id": "q3",
-        "title": "Fixed-End Boundary Condition",
+        "displayNumber": "Q3",
+        "title": "Supports and Connections",
         "type": "boundary conditions",
         "difficulty": "introductory",
         "tags": [
-          "fixed support",
-          "zero rotation",
-          "reaction torque"
+          "bearings",
+          "mounting regions",
+          "alignment"
         ],
         "learningObjectives": [
-          "State the rotational restraint at the large end."
+          "Explain the roles of bearings and mounting regions."
         ],
         "selected": true,
-        "student": "<p>Identify the torsional boundary condition at the large end and explain its mechanical consequence.</p>",
-        "instructor": "<p>The large end is fixed against rotation, so its angular displacement is zero and the interface develops a reaction torque.</p>",
+        "student": "<p>What roles do the bearing or mounting regions play in the physical shaft assembly?</p>",
+        "instructor": "<p>They support and align the rotating shaft and constrain its position while allowing the intended rotation. Torque may enter or leave the assembly through a pulley, coupling, tooling interface, or driven component.</p>",
         "section": "context"
       },
       {
         "id": "q4",
+        "displayNumber": "Q4",
         "title": "Torque Load Path",
         "type": "load path",
         "difficulty": "introductory",
         "tags": [
-          "coupling",
-          "variable-radius shaft",
-          "machine frame"
+          "drive component",
+          "shaft",
+          "tooling interface"
         ],
         "learningObjectives": [
-          "Trace torque transfer from input to support."
+          "Trace rotational load transfer through the spindle assembly."
         ],
         "selected": true,
-        "student": "<p>Trace the torque load path from the input coupling to the support.</p>",
-        "instructor": "<p>The path is input coupling, small-radius end A, continuously varying shaft, fixed interface, and machine frame.</p>",
+        "student": "<p>Trace the rotational load path through the example shaft assembly.</p>",
+        "instructor": "<p>Torque enters through the driving component, is transmitted through the shaft, and is transferred to the connected machine or tooling interface.</p>",
         "section": "context"
       },
       {
         "id": "q5",
-        "title": "Expected Compliance-Dominating Region",
+        "displayNumber": "Q5",
+        "title": "Effect of Changing Shaft Size",
         "type": "mechanics reasoning",
         "difficulty": "introductory",
         "tags": [
-          "small radius",
-          "local compliance",
-          "r to fourth power"
+          "variable diameter",
+          "torsional stiffness",
+          "angular twist"
         ],
         "learningObjectives": [
-          "Predict where most shaft twist will accumulate."
+          "Predict how shaft diameter affects local twist."
         ],
         "selected": true,
-        "student": "<p>Before calculating, identify the shaft region expected to contribute most strongly to total twist and explain why.</p>",
-        "instructor": "<p>The small-radius region near A should dominate because <em>J</em> is proportional to <em>r</em><sup>4</sup> and local torsional compliance is proportional to 1/<em>r</em><sup>4</sup>.</p>",
+        "student": "<p>If different portions of the shaft have different diameters, would you expect them to contribute equally to the total angular twist? Explain qualitatively.</p>",
+        "instructor": "<p>No. Smaller-diameter regions are less torsionally stiff and therefore contribute more strongly to the total angular twist.</p>",
         "section": "context"
       },
       {
         "id": "q6",
-        "title": "Parameters Governing Twist",
+        "displayNumber": "Q6",
+        "title": "Relevant Mechanical Response",
+        "type": "scope identification",
+        "difficulty": "introductory",
+        "tags": [
+          "angle of twist",
+          "rotational accuracy",
+          "shear stress"
+        ],
+        "learningObjectives": [
+          "Identify responses governing rotational accuracy and strength."
+        ],
+        "selected": true,
+        "student": "<p>What mechanical response is important if angular positioning or rotational accuracy is a design concern?</p>",
+        "instructor": "<p>The torsional deformation, or angle of twist, is the primary response. Torsional shear stress is also relevant when evaluating the shaft's strength.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q7",
+        "displayNumber": "Q7",
+        "title": "Relevant Geometric and Material Parameters",
         "type": "parameter identification",
         "difficulty": "introductory",
         "tags": [
@@ -11098,255 +11143,268 @@ window.PROBLEM_CATALOG = [
           "shear modulus"
         ],
         "learningObjectives": [
-          "Identify inputs controlling the angle of twist."
+          "Identify parameters controlling nonprismatic shaft deformation."
         ],
         "selected": true,
-        "student": "<p>Identify the geometric, loading, and material parameters governing the angle of twist.</p>",
-        "instructor": "<p>The governing parameters are applied torque <em>T</em>, shaft length <em>L</em>, radius function <em>r</em>(<em>x</em>), and shear modulus <em>G</em>.</p>",
-        "section": "context"
-      },
-      {
-        "id": "q7",
-        "title": "Why Integration Is Required",
-        "type": "conceptual reasoning",
-        "difficulty": "intermediate",
-        "tags": [
-          "nonprismatic shaft",
-          "variable J",
-          "differential twist"
-        ],
-        "learningObjectives": [
-          "Explain why a constant-section twist formula is insufficient."
-        ],
-        "selected": true,
-        "student": "<p>Explain why the constant-section equation &phi; = <em>TL</em>/(<em>JG</em>) cannot be used directly.</p>",
-        "instructor": "<p>The radius and polar moment vary with position, so local differential twist must be integrated along the shaft. No single constant <em>J</em> represents the actual geometry.</p>",
+        "student": "<p>What geometric, material, and loading characteristics would affect the torsional deformation of a variable-section shaft?</p>",
+        "instructor": "<p>Relevant characteristics include the applied torque, overall shaft length, variation of shaft radius or diameter along its length, and the material shear modulus.</p>",
         "section": "context"
       },
       {
         "id": "q8",
-        "title": "Student-Generated Tapered-Shaft Idealization",
+        "displayNumber": "Q8",
+        "title": "Student-Generated Structural Idealization",
         "type": "free-body diagram",
         "difficulty": "intermediate",
         "tags": [
-          "idealization",
-          "coordinate x",
-          "radius profile"
+          "one-dimensional model",
+          "variable radius",
+          "student idealization"
         ],
         "learningObjectives": [
-          "Create a variable-radius torsion model before viewing the reference figure."
+          "Convert the industrial spindle into a nonprismatic shaft model."
         ],
         "selected": true,
-        "student": "<p>Before using the reference figure, draw a solid circular shaft of length <em>L</em> with coordinate <em>x</em> measured from end A, applied torque <em>T</em> at A, and zero rotation at the opposite end. Label <em>r</em>(<em>x</em>), <em>J</em>(<em>x</em>), and the internal torque.</p>",
-        "instructor": "<p>A valid model shows a solid nonprismatic circular shaft carrying constant internal torque, with <em>x</em> measured from A and zero rotation at the fixed large end.</p>",
-        "gradingNotes": "<p>Students should attempt the idealization before seeing the instructor reference figure.</p>",
+        "student": "<p>Replace the detailed industrial spindle geometry with an equivalent one-dimensional solid circular shaft whose radius varies continuously along its length. Show the applied torque, restrained end, axial coordinate, and variable radius.</p>",
+        "instructor": "<p>A correct model shows a solid circular nonprismatic shaft carrying torque about its longitudinal axis. One end is restrained against rotation, the opposite end receives the applied torque, and the shaft radius is represented as a function of axial position.</p>",
+        "gradingNotes": "<p>The student model should be created before the instructor reference diagram is shown whenever the activity is used to assess representational competence.</p>",
         "section": "transition"
       },
       {
         "id": "q9",
+        "displayNumber": "Q9",
         "title": "Modeling Assumptions",
         "type": "assumptions",
         "difficulty": "intermediate",
         "tags": [
           "Saint-Venant torsion",
           "linear elasticity",
-          "small rotation"
+          "smooth taper"
         ],
         "learningObjectives": [
-          "State assumptions supporting the nonprismatic torsion model."
+          "State assumptions supporting the equivalent spindle model."
         ],
         "selected": true,
-        "student": "<p>State the assumptions needed for the base torsion model.</p>",
-        "instructor": "<p>Assume Saint-Venant torsion of a solid circular shaft, homogeneous isotropic linear-elastic material, constant <em>G</em>, small rotation, and torque applied about the shaft axis. Neglect bending, axial loading, local stress concentrations, attachment flexibility, and warping effects.</p>",
+        "student": "<p>State the assumptions used to convert the physical spindle into the simplified torsion model.</p>",
+        "instructor": "<p>Reasonable assumptions are: solid circular shaft; homogeneous isotropic linear-elastic material; Saint-Venant torsion; small rotation; torque acts about the shaft axis; constant shear modulus; continuously varying radius; rigid rotational restraint at one end; and bending, axial loading, local shoulder stress concentrations, bearing flexibility, fatigue, and warping effects are neglected.</p>",
         "section": "transition"
       },
       {
         "id": "q10",
+        "displayNumber": "Q10",
         "title": "Mechanics Analysis Plan",
         "type": "analysis planning",
         "difficulty": "intermediate",
         "tags": [
-          "reaction torque",
-          "variable polar moment",
+          "internal torque",
+          "polar moment",
           "integration"
         ],
         "learningObjectives": [
-          "Plan a complete nonprismatic-shaft analysis."
+          "Plan the nonprismatic torsion analysis."
         ],
         "selected": true,
-        "student": "<p>Write the calculation sequence before substituting values.</p>",
-        "instructor": "<p>Determine the reaction and internal torque; define the nondimensional coordinate and radius law; write <em>J</em>(<em>x</em>) = &pi;<em>r</em>(<em>x</em>)<sup>4</sup>/2; use d&phi; = <em>T</em> d<em>x</em>/[<em>GJ</em>(<em>x</em>)]; integrate from 0 to <em>L</em>; calculate stress; and interpret the result.</p>",
+        "student": "<p>Before performing numerical calculations, describe the sequence required to determine shaft twist and stress.</p>",
+        "instructor": "<p>Determine the torsional reaction and internal torque, define the variable polar moment of inertia, write the differential twist relation, integrate along the shaft length, calculate the maximum shear stress, compare the twist with the serviceability limit, and make a mechanics-based recommendation.</p>",
         "section": "transition"
       },
       {
-        "id": "q11",
+        "id": "m1",
+        "displayNumber": "M1",
         "title": "Boundary Condition and Reaction Torque",
-        "type": "equilibrium",
+        "type": "mechanics setup",
         "difficulty": "introductory",
         "tags": [
           "fixed end",
           "reaction torque",
-          "static equilibrium"
+          "equilibrium"
         ],
         "learningObjectives": [
-          "Determine the fixed-end torsional reaction."
+          "Apply rotational boundary conditions and torque equilibrium."
         ],
         "selected": true,
-        "student": "<p>State the fixed-end rotational boundary condition and determine the reaction torque.</p>",
-        "instructor": "<p>The fixed-end rotation is zero. Static equilibrium gives a reaction torque of magnitude <strong>{{taper_reaction_Nm}} N&middot;m</strong>, opposite the applied torque.</p>",
+        "student": "<p>From the instructor reference model, state the rotational boundary condition at the restrained end and determine the reaction torque.</p>",
+        "instructor": "<p>The restrained-end rotation is zero. Static torque equilibrium requires a reaction torque equal in magnitude and opposite in direction to the applied torque: <em>T</em><sub>R</sub> = -<em>T</em>. Its magnitude is <strong>{{taper_reaction_Nm}} N&middot;m</strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q12",
-        "title": "Internal Torque Distribution",
+        "id": "m2",
+        "displayNumber": "M2",
+        "title": "Internal Torque",
         "type": "internal loading",
         "difficulty": "introductory",
         "tags": [
           "constant internal torque",
-          "shaft cut",
-          "no intermediate loads"
+          "cut section",
+          "equilibrium"
         ],
         "learningObjectives": [
-          "Determine internal torque throughout the shaft."
+          "Determine the internal torque function."
         ],
         "selected": true,
-        "student": "<p>Determine the internal torque <em>T</em><sub>int</sub>(<em>x</em>) for 0 &le; <em>x</em> &le; <em>L</em>.</p>",
-        "instructor": "<p>Because no additional torques act along the shaft, <em>T</em><sub>int</sub>(<em>x</em>) = <em>T</em> throughout 0 &le; <em>x</em> &le; <em>L</em>.</p>",
+        "student": "<p>Determine the internal torque carried by the shaft as a function of position.</p>",
+        "instructor": "<p>Because there are no additional applied torques along the shaft, the internal torque magnitude is constant: <em>T</em><sub>int</sub>(<em>x</em>) = <em>T</em> for 0 &le; <em>x</em> &le; <em>L</em>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q13",
-        "title": "Radius Function and Variable Polar Moment",
-        "type": "section-property derivation",
+        "id": "m3",
+        "displayNumber": "M3",
+        "title": "Variable Polar Moment of Inertia",
+        "type": "section property",
         "difficulty": "intermediate",
         "tags": [
-          "nondimensional coordinate",
-          "radius law",
-          "polar moment"
+          "polar moment",
+          "solid circular section",
+          "variable radius"
         ],
         "learningObjectives": [
-          "Write a dimensionally consistent radius law and variable polar moment."
+          "Express polar moment as a position-dependent property."
         ],
         "selected": true,
-        "student": "<p>Define a dimensionally consistent radius function and write the polar moment of inertia as a function of position.</p>",
-        "instructor": "<p>Define &xi; = <em>x</em>/(1 m). Then <em>r</em>(<em>x</em>) = <em>r</em><sub>0</sub>[1 + &xi;<sup>3/2</sup> + &xi;<sup>5/2</sup>] and <em>J</em>(<em>x</em>) = &pi;<em>r</em>(<em>x</em>)<sup>4</sup>/2.</p><p>For the assigned geometry, <em>r</em>(0) = <strong>{{taper_r_A_m}} m</strong>, <em>r</em>(<em>L</em>) = <strong>{{taper_r_L_m}} m</strong>, and <em>J</em>(0) = <strong>{{taper_J_A_m4}} m<sup>4</sup></strong>.</p>",
+        "student": "<p>Write the polar moment of inertia as a function of axial position.</p>",
+        "instructor": "<p>For a solid circular section, <em>J</em>(<em>x</em>) = &pi;<em>r</em>(<em>x</em>)<sup>4</sup>/2.</p>",
         "section": "analysis"
       },
       {
-        "id": "q14",
+        "id": "m4",
+        "displayNumber": "M4",
         "title": "Differential Twist Relation",
         "type": "symbolic derivation",
         "difficulty": "intermediate",
         "tags": [
-          "differential rotation",
+          "differential twist",
           "variable J",
           "torsional compliance"
         ],
         "learningObjectives": [
-          "Derive the local twist relation for the tapered shaft."
+          "Derive the local rotation relation for a variable-radius shaft."
         ],
         "selected": true,
-        "student": "<p>Write the differential relation for shaft rotation in terms of <em>T</em>, <em>G</em>, and <em>r</em>(<em>x</em>).</p>",
-        "instructor": "<p>d&phi; = <em>T</em> d<em>x</em>/[<em>GJ</em>(<em>x</em>)] = 2<em>T</em> d<em>x</em>/[&pi;<em>G r</em>(<em>x</em>)<sup>4</sup>].</p>",
+        "student": "<p>Write the differential relation for shaft rotation.</p>",
+        "instructor": "<p>Using d&phi; = <em>T</em><sub>int</sub>d<em>x</em>/[<em>GJ</em>(<em>x</em>)] and <em>T</em><sub>int</sub> = <em>T</em>, d&phi; = 2<em>T</em>d<em>x</em>/[&pi;<em>G r</em>(<em>x</em>)<sup>4</sup>].</p>",
         "section": "analysis"
       },
       {
-        "id": "q15",
+        "id": "m5",
+        "displayNumber": "M5",
         "title": "Angle-of-Twist Integral",
-        "type": "integral formulation",
-        "difficulty": "intermediate",
+        "type": "symbolic derivation",
+        "difficulty": "advanced",
         "tags": [
           "definite integral",
-          "nonprismatic shaft",
-          "radius function"
+          "radius function",
+          "nonprismatic torsion"
         ],
         "learningObjectives": [
-          "Formulate the total rotation integral."
+          "Formulate total twist for the assigned radius profile."
         ],
         "selected": true,
-        "student": "<p>Formulate the definite integral for rotation of end A relative to the fixed end.</p>",
-        "instructor": "<p>&phi;<sub>A</sub> = &int;<sub>0</sub><sup><em>L</em></sup> 2<em>T</em>/[&pi;<em>G r</em>(<em>x</em>)<sup>4</sup>] d<em>x</em>. The evaluated geometric integral &int;<sub>0</sub><sup><em>L</em></sup> d<em>x</em>/<em>r</em>(<em>x</em>)<sup>4</sup> is <strong>{{taper_integral_m_neg3}} m<sup>-3</sup></strong>.</p>",
+        "student": "<p>Formulate the definite integral for the rotation of the torque-input end relative to the restrained end.</p>",
+        "instructor": "<p>&phi; = &int;<sub>0</sub><sup><em>L</em></sup>2<em>T</em>/[&pi;<em>G r</em>(<em>x</em>)<sup>4</sup>]d<em>x</em>, where <em>r</em>(<em>x</em>) = {{taper_r_A_m}}[1 + 0.8(<em>x</em>/<em>L</em>)<sup>3/2</sup> + 0.4(<em>x</em>/<em>L</em>)<sup>5/2</sup>] m.</p>",
         "section": "analysis"
       },
       {
-        "id": "q16",
-        "title": "Numerical Angle of Twist",
+        "id": "m6",
+        "displayNumber": "M6",
+        "title": "Numerical Evaluation of Twist",
         "type": "numerical integration",
         "difficulty": "advanced",
         "tags": [
-          "Simpson integration",
-          "radians",
-          "degrees"
+          "angle of twist",
+          "numerical integration",
+          "serviceability"
         ],
         "learningObjectives": [
-          "Numerically evaluate the nonprismatic-shaft twist."
+          "Numerically evaluate the nonprismatic shaft twist."
         ],
         "selected": true,
-        "student": "<p>Evaluate the twist integral numerically and report the angle in radians and degrees.</p>",
-        "instructor": "<p>Using <em>G</em> = <strong>{{taper_G_Pa}} Pa</strong>, &phi;<sub>A</sub> = <strong>{{taper_phi_rad}} rad</strong> = <strong>{{taper_phi_deg}}&deg;</strong>.</p>",
-        "gradingNotes": "<p>Numerical quadrature, a documented calculator integral, or equivalent computational evaluation is acceptable.</p>",
+        "student": "<p>Evaluate the angle-of-twist integral using the assigned variables and report the result in radians and degrees.</p>",
+        "instructor": "<p>Numerical integration gives &phi; = <strong>{{taper_phi_rad}} rad</strong> = <strong>{{taper_phi_deg}}&deg;</strong>. {{taper_twist_assessment}}</p>",
         "section": "analysis"
       },
       {
-        "id": "q17",
+        "id": "m7",
+        "displayNumber": "M7",
         "title": "Maximum Torsional Shear Stress",
         "type": "torsional stress calculation",
         "difficulty": "intermediate",
         "tags": [
           "minimum radius",
           "surface stress",
-          "end A"
+          "torque-input end"
         ],
         "learningObjectives": [
-          "Calculate and locate the maximum stress in a tapered shaft."
+          "Calculate and locate the maximum torsional shear stress."
         ],
         "selected": true,
-        "student": "<p>Determine the maximum torsional shear stress and identify its location.</p>",
-        "instructor": "<p>&tau;<sub>max</sub>(<em>x</em>) = 2<em>T</em>/[&pi;<em>r</em>(<em>x</em>)<sup>3</sup>]. Because the radius is smallest at <em>x</em> = 0, the maximum occurs at the outer surface of end A: <strong>{{taper_tau_max_MPa}} MPa</strong>.</p>",
+        "student": "<p>Determine the maximum torsional shear stress and identify where it occurs.</p>",
+        "instructor": "<p>For a solid circular shaft, &tau;<sub>max</sub>(<em>x</em>) = 2<em>T</em>/[&pi;<em>r</em>(<em>x</em>)<sup>3</sup>]. Since <em>r</em>(<em>x</em>) increases monotonically, the maximum occurs at the smallest-radius end, <em>x</em> = 0. With <em>r</em>(0) = <strong>{{taper_r_A_m}} m</strong>, &tau;<sub>max</sub> = <strong>{{taper_tau_max_MPa}} MPa</strong>.</p>",
         "section": "analysis"
       },
       {
-        "id": "q18",
-        "title": "Compliance Localization and Sensitivity",
-        "type": "qualitative reasoning",
+        "id": "m8",
+        "displayNumber": "M8",
+        "title": "Compliance Sensitivity",
+        "type": "mechanics reasoning",
         "difficulty": "intermediate",
         "tags": [
-          "first-quarter twist",
-          "radius sensitivity",
-          "design modification"
+          "small-radius region",
+          "inverse fourth power",
+          "torsional compliance"
         ],
         "learningObjectives": [
-          "Explain why the small-end region controls twist and stress."
+          "Explain why the minimum-radius region dominates twist."
         ],
         "selected": true,
-        "student": "<p>Explain why a modest increase in minimum radius can strongly reduce both stress and twist. Quantify how much of the assigned total twist accumulates in the first quarter of the shaft.</p>",
-        "instructor": "<p>Stress varies as 1/<em>r</em><sup>3</sup> and the twist integrand as 1/<em>r</em><sup>4</sup>, so the minimum-radius region has disproportionate influence. For the assigned profile, approximately <strong>{{taper_first_quarter_pct}}%</strong> of the total twist accumulates over 0 &le; <em>x</em> &le; <em>L</em>/4.</p>",
+        "student": "<p>Explain why the small-radius region contributes disproportionately to the total shaft twist.</p>",
+        "instructor": "<p>The local twist rate varies as 1/<em>r</em>(<em>x</em>)<sup>4</sup>. Therefore even a modest reduction in radius causes a large increase in local torsional compliance. The minimum-radius portion can dominate total rotation even though it occupies only part of the shaft.</p>",
         "section": "analysis"
       },
       {
-        "id": "q19",
-        "title": "Stiffness Assessment and Recommendation",
+        "id": "m9",
+        "displayNumber": "M9",
+        "title": "Stiffness-Based Modification",
+        "type": "design modification",
+        "difficulty": "advanced",
+        "tags": [
+          "minimum radius",
+          "torsional rigidity",
+          "material stiffness"
+        ],
+        "learningObjectives": [
+          "Recommend a change that directly reduces twist."
+        ],
+        "selected": true,
+        "student": "<p>The calculated twist exceeds the allowable value. Identify one geometry or material change that would most directly reduce the twist and explain why.</p>",
+        "instructor": "<p>Increasing the minimum radius near the torque-input end is the most direct geometric change because torsional rigidity scales with <em>r</em><sup>4</sup>. Increasing the shear modulus by selecting a stiffer material or shortening the compliant region would also reduce twist.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "m10",
+        "displayNumber": "M10",
+        "title": "Engineering Assessment and Recommendation",
         "type": "engineering judgment",
         "difficulty": "advanced",
         "tags": [
-          "allowable twist",
-          "utilization",
+          "serviceability limit",
+          "stiffness governed",
           "recommendation"
         ],
         "learningObjectives": [
-          "Assess torsional stiffness and recommend a modification."
+          "Judge serviceability and recommend a bounded design change."
         ],
         "selected": true,
-        "student": "<p>Compare the calculated rotation with the assigned allowable twist and make a limited mechanics-based recommendation.</p>",
-        "instructor": "<p>The twist utilization is <strong>{{taper_twist_utilization}}</strong>. {{taper_twist_assessment}}</p><p>{{taper_recommendation}}</p><p>Detailed design must also consider strength allowables, bending, attachment flexibility, stress concentrations, fatigue, dynamics, manufacturing limits, and applicable standards.</p>",
+        "student": "<p>State whether the simplified shaft satisfies the rotational serviceability requirement and provide a concise mechanics-based recommendation.</p>",
+        "instructor": "<p>{{taper_recommendation}}</p>",
+        "gradingNotes": "<p>The recommendation should distinguish the governing stiffness criterion from the comparatively low calculated torsional stress and acknowledge the simplified model.</p>",
         "section": "analysis"
       }
     ],
     "variants": [
       {
         "id": "section-a",
-        "title": "Homework Version A - baseline tapered aluminum shaft",
-        "description": "Default sequence for variable section properties, twist integration, stress, compliance localization, sensitivity, and stiffness assessment.",
+        "title": "Homework Version A - variable-section industrial spindle",
+        "description": "Faculty-reviewed sequence covering industrial context, student idealization, nonprismatic torsion, stress, twist, stiffness interpretation, and engineering judgment.",
         "selectedQuestions": [
           "q1",
           "q2",
@@ -11358,20 +11416,21 @@ window.PROBLEM_CATALOG = [
           "q8",
           "q9",
           "q10",
-          "q11",
-          "q12",
-          "q13",
-          "q14",
-          "q15",
-          "q16",
-          "q17",
-          "q18",
-          "q19"
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8",
+          "m9",
+          "m10"
         ],
         "variables": {
           "taper_T": 450,
           "taper_L": 4,
-          "taper_r0": 0.02,
+          "taper_r0": 0.03,
           "taper_G": 28,
           "taper_phi_allow": 1
         }
