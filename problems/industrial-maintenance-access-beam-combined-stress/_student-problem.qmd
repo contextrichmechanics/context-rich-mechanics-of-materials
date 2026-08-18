@@ -4,20 +4,21 @@
 
 ### Engineering Context
 
-During a scheduled shutdown at a processing facility, a maintenance technician must cross an open service pit to reach equipment on the opposite side. A removable inclined access member is positioned between a lower support and a smooth contact against a vertical structure. The access member must transfer the technician's weight to the surrounding structure while maintaining a clear route across the pit.
+Industrial plants often contain service pits, sumps, trenches, and changes in floor elevation that technicians must cross during inspection or maintenance. During a shutdown or short-duration service task, a temporary inclined access member may be used to reach equipment on the opposite side without installing a permanent stair or platform. The member must support the technician while transferring the load into the surrounding plant structure.
 
-Because the member is inclined, its support reactions produce axial force, transverse shear, and bending moment at an interior section. The plant engineering team needs a first-order stress assessment before considering local contact, connections, impact, vibration, fatigue, or workplace-access requirements.
+Because the access member is inclined while the technician's weight acts vertically, the load is not purely perpendicular to the member. Relative to the member axis, part of the loading acts along the member and part acts transverse to it. The member therefore develops a combination of axial force, transverse shear force, and bending moment. This makes an inclined access member a useful example of how a single external load can create several internal resultants at the same section.
+
+For this MEEN 305 analysis, the temporary access member is represented by a straight prismatic beam supported at its two ends, with the technician modeled as a concentrated load. The engineering objective is to determine the combined normal and shear stress at a selected point in the member, compare the contributions from axial loading, bending, and transverse shear, and identify which response dominates the local stress state.
 
 ![Temporary inclined maintenance-access member spanning an industrial service pit.](assets/access-beam-industry-context.png){fig-alt="Industrial maintenance technician using an inclined access member across a service pit." width=88%}
 
 ### Main Engineering Goal
 
-Determine the support reactions and local internal resultants at section a-a; calculate the combined normal and transverse shear stress at point A; sketch the local stress element; and identify the mechanical response that dominates at the specified location.
+Determine the state of stress at the selected point on the access member, identify the relative contributions of axial load, bending, and transverse shear, and recommend one mechanics-based change that would reduce the dominant stress contribution.
 
 ### System Components
 
-- inclined maintenance access beam or plank;
-- maintenance technician represented by a concentrated gravitational load;
-- lower support at B;
-- smooth vertical-wall contact at C; and
-- selected section a-a and stress-evaluation point A.
+- temporary access beam or plank;
+- maintenance technician;
+- lower supporting structure; and
+- upper supporting structure.

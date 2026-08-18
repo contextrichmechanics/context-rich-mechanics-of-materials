@@ -5973,7 +5973,7 @@
       "label": "Main Engineering Goal",
       "file_type": "document",
       "source_file": "problems/industrial-maintenance-access-beam-combined-stress/_student-problem.qmd",
-      "source_location": "L13",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "problems_industrial_maintenance_access_beam_combined_stress_student_problem_main_engineering_goal",
       "community": 54,
@@ -5984,7 +5984,7 @@
       "label": "System Components",
       "file_type": "document",
       "source_file": "problems/industrial-maintenance-access-beam-combined-stress/_student-problem.qmd",
-      "source_location": "L17",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "problems_industrial_maintenance_access_beam_combined_stress_student_problem_system_components",
       "community": 54,
@@ -11071,7 +11071,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "problems/industrial-maintenance-access-beam-combined-stress/_student-problem.qmd",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "problems_industrial_maintenance_access_beam_combined_stress_student_problem_combined_stress_analysis_of_an_inclined_industrial_maintenance_access_beam",
@@ -11082,7 +11082,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "problems/industrial-maintenance-access-beam-combined-stress/_student-problem.qmd",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "problems_industrial_maintenance_access_beam_combined_stress_student_problem_combined_stress_analysis_of_an_inclined_industrial_maintenance_access_beam",
@@ -15161,5 +15161,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0925c679ac5bdeade46b46debb829097f527cc2c"
+  "built_at_commit": "7b38227c81f3787aeefcf434ef0503318fcb3d88"
 }

@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1787014926.6003628,
-    "ast_hash": "957bb5c24185ae5efc91d72fe6125155",
+    "mtime": 1787016148.5354304,
+    "ast_hash": "f9e5b7b38bf39753fc00d98cf7e672ce",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1787014926.6023557,
-    "ast_hash": "5588225c7a553ab00cfcd42c5e5295a6",
+    "mtime": 1787016148.5361218,
+    "ast_hash": "72c70bfc78f92638523c78dd7fc9ae1a",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -775,23 +775,23 @@
     "semantic_hash": ""
   },
   "problems/industrial-maintenance-access-beam-combined-stress/_student-problem.qmd": {
-    "mtime": 1786700263.6167433,
-    "ast_hash": "3332303188d0e56a8226b8c731a863d1",
+    "mtime": 1787015928.3654106,
+    "ast_hash": "c1197f007a2d3a3c7a4130716192c383",
     "semantic_hash": ""
   },
   "problems/industrial-maintenance-access-beam-combined-stress/index.qmd": {
-    "mtime": 1786700263.6938357,
-    "ast_hash": "ac31da21f9d396106f7f1db77ee13248",
+    "mtime": 1787015928.4447596,
+    "ast_hash": "35abc34f6152c2b38c8f0290ea8d95cb",
     "semantic_hash": ""
   },
   "problems/industrial-maintenance-access-beam-combined-stress/instructor-guide.qmd": {
-    "mtime": 1786700263.849451,
-    "ast_hash": "c5dab9998f93bae261572cef87aca347",
+    "mtime": 1787015928.6071942,
+    "ast_hash": "f269b4e9a702bb675816da0f1501b9ae",
     "semantic_hash": ""
   },
   "problems/industrial-maintenance-access-beam-combined-stress/student-packet.qmd": {
-    "mtime": 1786700263.7711415,
-    "ast_hash": "ddfb5cf0ff962a9a17125f24dc8d617a",
+    "mtime": 1787015928.5274286,
+    "ast_hash": "f82762f28a76e4a449f7356498a5ea6e",
     "semantic_hash": ""
   },
   "problems/industrial-line-shaft-shear-moment/assets/line-shaft-industry-context.png": {

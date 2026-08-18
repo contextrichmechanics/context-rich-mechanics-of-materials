@@ -2987,7 +2987,7 @@ window.PROBLEM_CATALOG = [
     "title": "Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam",
     "studentDocumentTitle": "Student Homework Questions - Industrial Maintenance Access Beam",
     "instructorDocumentTitle": "Instructor Answers - Industrial Maintenance Access Beam",
-    "summary": "An inclined-beam problem integrating support reactions, local internal resultants, axial and bending stress superposition, transverse shear, stress elements, and engineering assessment.",
+    "summary": "An inclined maintenance-access beam problem integrating equilibrium, axial force, transverse shear, bending moment, normal-stress superposition, and engineering judgment.",
     "textbookChapters": [
       "Equilibrium of a rigid body",
       "Internal loadings in structural members",
@@ -3029,8 +3029,8 @@ window.PROBLEM_CATALOG = [
     "idealizedImage": "problems/industrial-maintenance-access-beam-combined-stress/assets/access-beam-instructor-idealization.png",
     "idealizedImageAlt": "Instructor reference idealization of an inclined maintenance access beam spanning a pit, with supports B and C, worker load W at G, section a-a, point A, and rectangular section dimensions b and t.",
     "source": "problems/industrial-maintenance-access-beam-combined-stress/index.html",
-    "problemStatement": "<p>During a scheduled shutdown, a maintenance technician crosses a removable inclined access member spanning an industrial service pit. The lower support at <em>B</em> supplies horizontal and vertical reactions, while the smooth vertical-wall contact at <em>C</em> supplies only a horizontal reaction.</p><p>Determine the support reactions and the local internal resultants at section a-a. Then calculate the combined normal and transverse shear stress at point <em>A</em>, draw the local stress element, and identify the dominant mechanical response.</p>",
-    "engineeringGoal": "<p>Connect global equilibrium to a local inclined-member section cut, resolve the internal force into member axes, and combine axial, flexural, and beam-shear stress contributions in a limited mechanics-based assessment.</p>",
+    "problemStatement": "<p>Industrial plants often contain service pits, sumps, trenches, and changes in floor elevation that technicians must cross during inspection or maintenance. During a shutdown or short-duration service task, a temporary inclined access member may be used to reach equipment on the opposite side without installing a permanent stair or platform. The member must support the technician while transferring the load into the surrounding plant structure.</p><p>Because the access member is inclined while the technician's weight acts vertically, the load is not purely perpendicular to the member. Relative to the member axis, part of the loading acts along the member and part acts transverse to it. The member therefore develops a combination of axial force, transverse shear force, and bending moment. This makes an inclined access member a useful example of how a single external load can create several internal resultants at the same section.</p><p>For this MEEN 305 analysis, the temporary access member is represented by a straight prismatic beam supported at its two ends, with the technician modeled as a concentrated load. The engineering objective is to determine the combined normal and shear stress at a selected point in the member, compare the contributions from axial loading, bending, and transverse shear, and identify which response dominates the local stress state.</p>",
+    "engineeringGoal": "<p>Determine the state of stress at the selected point on the access member, identify the relative contributions of axial load, bending, and transverse shear, and recommend one mechanics-based change that would reduce the dominant stress contribution.</p>",
     "variables": [
       {
         "key": "beam_m",
@@ -3126,56 +3126,56 @@ window.PROBLEM_CATALOG = [
     "questions": [
       {
         "id": "q1",
-        "title": "Primary Structural Function",
+        "title": "Primary Function of the System",
         "type": "context interpretation",
         "difficulty": "introductory",
         "tags": [
           "temporary access",
-          "load transfer",
-          "inclined member"
+          "structural function",
+          "load transfer"
         ],
         "learningObjectives": [
-          "Describe the member's structural role."
+          "Connect the maintenance setting to the member's structural function."
         ],
         "selected": true,
-        "student": "<p>What is the primary structural function of the temporary access member in this maintenance setting?</p>",
-        "instructor": "<p>The member provides temporary structural access across the pit and transfers the technician load to supports B and C.</p>",
+        "student": "<p>What is the primary structural function of the temporary access member in the maintenance setting?</p>",
+        "instructor": "<p>The member provides temporary access across the pit and transfers the technician's load into the surrounding support structures.</p>",
         "section": "context"
       },
       {
         "id": "q2",
-        "title": "External Load and Technician Weight",
+        "title": "External Loading",
         "type": "load identification",
         "difficulty": "introductory",
         "tags": [
-          "technician mass",
-          "gravitational load",
-          "concentrated force"
+          "technician weight",
+          "concentrated load",
+          "gravity"
         ],
         "learningObjectives": [
-          "Convert mass to weight and identify the applied load."
+          "Identify the dominant external load."
         ],
         "selected": true,
-        "student": "<p>Identify the external load applied to the member. Convert the technician mass <em>m</em> to the gravitational load <em>W</em>.</p>",
-        "instructor": "<p>The technician is modeled as a concentrated vertical load at G. <em>W</em> = <em>mg</em> = <strong>{{beam_W_N}} N</strong> downward. Member self-weight is neglected in the assigned model.</p>",
+        "student": "<p>What is the dominant external load acting on the access member while the technician is standing on it?</p>",
+        "instructor": "<p>The dominant external load is the technician's weight acting vertically downward at the technician's location.</p>",
         "section": "context"
       },
       {
         "id": "q3",
-        "title": "Supports and Boundary Conditions",
+        "title": "Supports and Restraints",
         "type": "boundary conditions",
         "difficulty": "introductory",
         "tags": [
-          "pin support",
-          "smooth wall",
-          "reaction directions"
+          "supports",
+          "reaction forces",
+          "surrounding structure"
         ],
         "learningObjectives": [
-          "Identify the reactions permitted at B and C."
+          "Describe how the member transfers load at its supports."
         ],
         "selected": true,
-        "student": "<p>Identify the support model at B and the smooth-contact boundary at C. Which reaction components can each location exert?</p>",
-        "instructor": "<p>B supplies horizontal and vertical reaction components. C is smooth against a vertical wall, so it supplies only a horizontal normal reaction.</p>",
+        "student": "<p>How is the access member supported by the surrounding structure?</p>",
+        "instructor": "<p>The member contacts supporting structure at its lower and upper ends. These contacts provide reaction forces that transfer the technician load from the member into the plant structure.</p>",
         "section": "context"
       },
       {
@@ -3184,90 +3184,89 @@ window.PROBLEM_CATALOG = [
         "type": "load path",
         "difficulty": "introductory",
         "tags": [
-          "technician load",
-          "support reactions",
-          "surrounding structure"
+          "technician",
+          "access member",
+          "support structure"
         ],
         "learningObjectives": [
-          "Trace the force path through the access system."
+          "Trace force transfer through the system."
         ],
         "selected": true,
-        "student": "<p>Trace the path taken by the technician load from G to the surrounding structure. Identify where axial force, shear force, bending moment, or contact force may occur.</p>",
-        "instructor": "<p>The technician load enters the access member at G, is carried through the inclined member to B and C, and then enters the surrounding structure. At section a-a, the member carries axial force <em>N</em>, transverse shear <em>V</em>, and bending moment <em>M</em>.</p>",
+        "student": "<p>Trace the load path from the technician to the surrounding structure.</p>",
+        "instructor": "<p>Technician &rarr; access member &rarr; lower and upper supports &rarr; surrounding plant structure.</p>",
         "section": "context"
       },
       {
         "id": "q5",
-        "title": "Selected Critical Location",
+        "title": "Effect of Member Inclination",
         "type": "mechanics reasoning",
         "difficulty": "introductory",
         "tags": [
-          "section a-a",
-          "point A",
-          "stress evaluation"
+          "inclined member",
+          "load components",
+          "combined loading"
         ],
         "learningObjectives": [
-          "Identify the assigned section and point."
+          "Explain why inclination creates axial and transverse loading."
         ],
         "selected": true,
-        "student": "<p>Which section and material point are selected for the assigned stress evaluation, and why must the section carry combined internal loading?</p>",
-        "instructor": "<p>Section a-a is the selected cut, and point A is the stress-evaluation location. The inclined orientation and support reactions make the cut carry axial force, transverse shear, and bending moment simultaneously.</p>",
+        "student": "<p>Why can an inclined member develop a different combination of internal forces than a horizontal member under the same vertical technician load?</p>",
+        "instructor": "<p>Because the vertical load has both a component parallel to the inclined member and a component perpendicular to it. The parallel component contributes to axial force, while the perpendicular component contributes to transverse shear and bending.</p>",
         "section": "context"
       },
       {
         "id": "q6",
-        "title": "Expected Stress Components",
+        "title": "Relevant Mechanical Response",
         "type": "mechanics selection",
         "difficulty": "introductory",
         "tags": [
-          "normal stress",
-          "bending stress",
-          "transverse shear"
+          "axial force",
+          "transverse shear",
+          "bending moment"
         ],
         "learningObjectives": [
-          "Select the stress components required at A."
+          "Select the internal responses needed for the stress analysis."
         ],
         "selected": true,
-        "student": "<p>Which stress components should be considered at point A, and which internal resultant produces each contribution?</p>",
-        "instructor": "<p>Axial force produces uniform normal stress, bending moment produces linearly varying normal stress, and transverse shear force produces beam shear stress. The two normal-stress contributions must be superimposed.</p>",
+        "student": "<p>What internal responses should be considered when evaluating the stress state in the inclined access member?</p>",
+        "instructor": "<p>Axial force, transverse shear force, and bending moment should be considered because together they create combined normal and shear stress at a cross-section.</p>",
         "section": "context"
       },
       {
         "id": "q7",
-        "title": "Relevant Parameters",
+        "title": "Relevant Geometric Parameters",
         "type": "parameter identification",
         "difficulty": "introductory",
         "tags": [
-          "inclination angle",
-          "section geometry",
-          "point coordinate"
+          "inclination",
+          "technician position",
+          "cross-section"
         ],
         "learningObjectives": [
-          "Connect model parameters to the calculations."
+          "Identify geometry that influences the local stress state."
         ],
         "selected": true,
-        "student": "<p>Identify the geometric and loading parameters needed for the reaction, internal-resultant, and stress calculations. Briefly explain the role of each group.</p>",
-        "instructor": "<p>Mass <em>m</em> and gravity <em>g</em> determine <em>W</em>; angle &theta; controls global-to-local force resolution; <em>BC</em>, <em>x</em>, and <em>s</em> locate the supports, section, and technician; <em>b</em> and <em>t</em> determine area and moment of inertia; and <em>y</em><sub>A</sub> determines bending stress and the first moment of area for shear.</p>",
+        "student": "<p>What general geometric characteristics of the member and technician position influence the stress state?</p>",
+        "instructor": "<p>Important characteristics include the member inclination, the technician's position along the member, the support spacing, and the cross-sectional width, thickness, and location of the point where stress is evaluated.</p>",
         "section": "context"
       },
       {
         "id": "q8",
-        "title": "Student-Generated Mechanics Model",
+        "title": "Student-Generated Structural Idealization",
         "type": "free-body diagram",
         "difficulty": "intermediate",
         "tags": [
           "idealization",
-          "global FBD",
+          "inclined beam",
           "local axes"
         ],
         "learningObjectives": [
-          "Create the structural idealization before viewing the reference."
+          "Develop a mechanics model from the industrial context."
         ],
         "selected": true,
-        "student": "<p>Before viewing the reference idealization, draw the complete access member and a section-cut free-body diagram. Show B, smooth contact C, technician load <em>W</em> at G, section a-a, distances, and local axes parallel and perpendicular to the member. Define your reaction and internal-resultant sign conventions.</p>",
-        "instructor": "<p>A valid model shows B<sub>x</sub> and B<sub>y</sub>, a horizontal reaction at C, <em>W</em> downward at G, the assigned geometry, and <em>N</em>, <em>V</em>, and <em>M</em> at the cut in clearly defined local directions.</p>",
-        "gradingNotes": "<p>Students should construct the model before seeing the instructor reference idealization.</p>",
-        "commonMistakes": "<p>Do not assign a vertical reaction to the smooth vertical-wall contact at C.</p>",
+        "student": "<p>Convert the real maintenance-access system into a simplified Mechanics of Materials model. Show the inclined member, the two supports, the technician load, the selected section, and local axes along and perpendicular to the member.</p>",
+        "instructor": "<p>A correct idealization is a straight inclined beam supported at both ends, carrying a concentrated vertical technician load. The selected section is cut through the member and local axes are defined along and transverse to the beam.</p>",
+        "gradingNotes": "<p>Detailed symbols, dimensions, and the smooth-contact assumption are introduced only in the instructor reference model.</p>",
         "section": "transition"
       },
       {
@@ -3277,51 +3276,51 @@ window.PROBLEM_CATALOG = [
         "difficulty": "intermediate",
         "tags": [
           "static loading",
-          "prismatic beam",
-          "linear elasticity"
+          "linear elasticity",
+          "model limitations"
         ],
         "learningObjectives": [
-          "State assumptions defining the model's scope."
+          "State assumptions that define the simplified mechanics model."
         ],
         "selected": true,
-        "student": "<p>State the assumptions used to convert the real maintenance-access system into the simplified Mechanics of Materials model.</p>",
-        "instructor": "<p>Assume static loading, a straight prismatic member, a concentrated technician load at G, negligible member self-weight, small deformation, linear-elastic nominal-stress relations, and smooth contact at C. Neglect local contact, connections, technician motion, impact, vibration, fatigue, instability, and material nonlinearity.</p>",
+        "student": "<p>State the assumptions used to convert the real system into the simplified mechanics model.</p>",
+        "instructor": "<p>Static loading; straight prismatic member; technician modeled as a concentrated load; member self-weight neglected; small deformation; linear-elastic stress relations; smooth contact at the upper support; lower support represented by two reaction components; and local contact, impact, vibration, fatigue, instability, and connection details neglected.</p>",
         "section": "transition"
       },
       {
         "id": "q10",
-        "title": "Analysis Plan",
+        "title": "Mechanics Analysis Plan",
         "type": "analysis planning",
         "difficulty": "intermediate",
         "tags": [
           "equilibrium",
-          "section properties",
+          "internal resultants",
           "stress superposition"
         ],
         "learningObjectives": [
-          "Plan the complete mechanics calculation."
+          "Plan the full calculation sequence."
         ],
         "selected": true,
-        "student": "<p>List the calculation sequence required to determine the stress state at point A and make a limited engineering assessment.</p>",
-        "instructor": "<p>Calculate <em>W</em>; solve the support reactions from global equilibrium; resolve forces into member axes and find <em>N</em>, <em>V</em>, and <em>M</em> at a-a; calculate <em>A</em>, <em>I</em>, and <em>Q</em><sub>A</sub>; determine axial, bending, and shear stresses; superimpose the normal stresses; draw the stress element; and compare contribution magnitudes.</p>",
+        "student": "<p>Explain the calculation sequence required to determine the local stress state.</p>",
+        "instructor": "<p>Determine the support reactions; cut the member at the selected section and solve for axial force, transverse shear, and bending moment; calculate the required cross-sectional properties; determine direct axial stress, bending stress, and transverse shear stress; superimpose the normal-stress contributions; sketch the differential stress element; and interpret the dominant contribution.</p>",
         "section": "transition"
       },
       {
         "id": "q11",
-        "title": "Boundary Conditions from the Reference Model",
+        "title": "Boundary Conditions",
         "type": "boundary-condition interpretation",
         "difficulty": "intermediate",
         "tags": [
           "support B",
-          "smooth contact C",
-          "global coordinates"
+          "smooth wall",
+          "reaction directions"
         ],
         "learningObjectives": [
-          "Interpret the instructor reference model precisely."
+          "Interpret the instructor reference model's supports."
         ],
         "selected": true,
-        "student": "<p>From the reference idealization, restate the boundary conditions and reaction directions at B and C using global horizontal and vertical coordinates.</p>",
-        "instructor": "<p>B has unknown horizontal and vertical components B<sub>x</sub> and B<sub>y</sub>. C has one horizontal wall-normal reaction and no vertical reaction.</p>",
+        "student": "<p>From the instructor reference diagram, identify the support idealizations and reaction directions.</p>",
+        "instructor": "<p>The lower support B is modeled with horizontal and vertical reaction components. The upper contact at C is smooth against a vertical wall, so it provides only a horizontal reaction.</p>",
         "section": "analysis"
       },
       {
@@ -3331,34 +3330,33 @@ window.PROBLEM_CATALOG = [
         "difficulty": "intermediate",
         "tags": [
           "unknown reactions",
-          "static determinacy",
-          "free-body diagram"
+          "constraints",
+          "equilibrium"
         ],
         "learningObjectives": [
-          "Identify the three reaction unknowns before solving."
+          "Identify the unknown support reactions."
         ],
         "selected": true,
-        "student": "<p>List the unknown constraint loads for the complete-member free body and confirm whether planar equilibrium provides enough independent equations.</p>",
-        "instructor": "<p>The unknowns are B<sub>x</sub>, B<sub>y</sub>, and the horizontal wall reaction C. The three planar equilibrium equations are sufficient for this statically determinate idealization.</p>",
+        "student": "<p>Identify the unknown support reactions.</p>",
+        "instructor": "<p>The unknown reactions are B<sub>x</sub>, B<sub>y</sub>, and the horizontal wall reaction C.</p>",
         "section": "analysis"
       },
       {
         "id": "q13",
-        "title": "Support Reactions",
+        "title": "Solve for Support Reactions",
         "type": "reaction calculation",
         "difficulty": "intermediate",
         "tags": [
+          "rigid-body equilibrium",
           "moment equilibrium",
-          "horizontal reaction",
-          "vertical reaction"
+          "support reactions"
         ],
         "learningObjectives": [
-          "Solve all support reactions from global equilibrium."
+          "Determine all reactions using planar equilibrium."
         ],
         "selected": true,
-        "student": "<p>Use equilibrium of the complete member to determine the wall reaction at C and the reaction components at B. Report magnitudes and directions.</p>",
-        "instructor": "<p>The technician is located <strong>{{beam_worker_distance_m}} m</strong> from B along the member. Moment equilibrium about B gives C = <em>W</em>(<em>x+s</em>)cos&theta;/(<em>BC</em> sin&theta;) = <strong>{{beam_C_N}} N {{beam_C_direction}}</strong>. Force equilibrium gives B<sub>x</sub> = <strong>{{beam_Bx_N}} N {{beam_Bx_direction}}</strong> and B<sub>y</sub> = <strong>{{beam_By_N}} N {{beam_By_direction}}</strong>.</p>",
-        "gradingNotes": "<p>Require perpendicular moment arms: the wall reaction uses BC sin(theta), and W uses (x+s) cos(theta).</p>",
+        "student": "<p>Use equilibrium of the entire member to determine the support reactions.</p>",
+        "instructor": "<p>Moment equilibrium about B gives |C| = <strong>{{beam_C_N}} N</strong> acting to the left. Force equilibrium gives B<sub>x</sub> = <strong>{{beam_Bx_N}} N</strong> to the right and B<sub>y</sub> = <strong>{{beam_By_N}} N</strong> upward.</p>",
         "section": "analysis"
       },
       {
@@ -3367,129 +3365,106 @@ window.PROBLEM_CATALOG = [
         "type": "internal resultant calculation",
         "difficulty": "intermediate",
         "tags": [
-          "local coordinates",
           "axial force",
-          "shear force",
+          "transverse shear",
           "bending moment"
         ],
         "learningObjectives": [
-          "Resolve global reactions into local section resultants."
+          "Resolve internal resultants in local member axes."
         ],
         "selected": true,
-        "student": "<p>Using the segment from B to section a-a and local axes along and perpendicular to the member, determine the signed internal axial force <em>N</em>, transverse shear <em>V</em>, and bending moment <em>M</em>.</p>",
-        "instructor": "<p>For the stated left-segment local sign convention, <em>N</em> = <strong>{{beam_N_N}} N</strong> (<strong>{{beam_N_type}}</strong>), <em>V</em> = <strong>{{beam_V_N}} N</strong>, and <em>M</em> = <strong>{{beam_M_Nm}} N&middot;m</strong>. The signs follow from resolving B<sub>x</sub> and B<sub>y</sub> along and normal to the inclined member and enforcing cut equilibrium.</p>",
-        "commonMistakes": "<p>Do not treat the global horizontal and vertical reaction components directly as local N and V.</p>",
+        "student": "<p>Cut the member at section a-a and determine the axial force <em>N</em>, transverse shear force <em>V</em>, and bending moment <em>M</em> using local axes aligned with the member.</p>",
+        "instructor": "<p>Using the left segment and the stated local sign convention: <em>N</em> = <strong>{{beam_N_N}} N</strong> (<strong>{{beam_N_type}}</strong>), <em>V</em> = <strong>{{beam_V_N}} N</strong>, and <em>M</em> = <strong>{{beam_M_Nm}} N&middot;m</strong>.</p>",
         "section": "analysis"
       },
       {
         "id": "q15",
-        "title": "Section Properties and First Moment of Area",
+        "title": "Section Properties",
         "type": "section-property calculation",
         "difficulty": "intermediate",
         "tags": [
-          "rectangular area",
+          "area",
           "second moment of area",
-          "first moment of area"
+          "rectangular section"
         ],
         "learningObjectives": [
-          "Calculate A, I, and Q at point A."
+          "Determine the section properties required for normal stress."
         ],
         "selected": true,
-        "student": "<p>For the rectangular section, calculate area <em>A</em>, centroidal second moment of area <em>I</em>, and first moment of area <em>Q</em><sub>A</sub> for the material above point A.</p>",
-        "instructor": "<p><em>A</em> = <em>bt</em> = <strong>{{beam_area_mm2}} mm<sup>2</sup></strong>; <em>I</em> = <em>bt</em><sup>3</sup>/12 = <strong>{{beam_I_mm4}} mm<sup>4</sup></strong>; and Q<sub>A</sub> = (<em>b</em>/2)[(<em>t</em>/2)<sup>2</sup> - <em>y</em><sub>A</sub><sup>2</sup>] = <strong>{{beam_QA_mm3}} mm<sup>3</sup></strong>.</p>",
-        "commonMistakes": "<p>Thickness t is cubed for the shown bending orientation. Q must correspond to the area above or below the actual point A, not automatically the neutral-axis maximum.</p>",
+        "student": "<p>Determine the cross-sectional area and second moment of area required for the normal-stress calculation.</p>",
+        "instructor": "<p>For the rectangular section, <em>A</em> = <em>bt</em> = (600)(50) = <strong>{{beam_area_mm2}} mm<sup>2</sup></strong> and <em>I</em> = <em>bt</em><sup>3</sup>/12 = <strong>{{beam_I_mm4}} mm<sup>4</sup></strong>.</p>",
         "section": "analysis"
       },
       {
         "id": "q16",
-        "title": "Direct Axial Stress at A",
-        "type": "axial stress calculation",
+        "title": "Normal Stress at Point A",
+        "type": "combined normal-stress calculation",
         "difficulty": "intermediate",
         "tags": [
-          "direct stress",
-          "compression",
-          "normal stress"
+          "axial stress",
+          "bending stress",
+          "stress superposition"
         ],
         "learningObjectives": [
-          "Calculate the uniform axial stress contribution."
+          "Superimpose direct axial and bending normal stress."
         ],
         "selected": true,
-        "student": "<p>Determine the direct normal-stress contribution at A caused by axial force <em>N</em>. Use tension as positive.</p>",
-        "instructor": "<p>&sigma;<sub>axial</sub> = <em>N/A</em> = <strong>{{beam_sigma_axial_MPa}} MPa</strong>. The negative sign denotes compression for the baseline sign convention.</p>",
+        "student": "<p>Determine the normal stress at point A by superimposing the direct axial and bending contributions.</p>",
+        "instructor": "<p>The direct axial stress is <em>N/A</em> = <strong>{{beam_sigma_axial_MPa}} MPa</strong>. At y<sub>A</sub> = 12.5 mm, the bending contribution is -<em>My</em><sub>A</sub>/<em>I</em> = <strong>{{beam_sigma_bending_MPa}} MPa</strong> for the stated sign convention. Therefore &sigma;<sub>A</sub> = <strong>{{beam_sigma_A_MPa}} MPa</strong>.</p>",
         "section": "analysis"
       },
       {
         "id": "q17",
-        "title": "Bending and Combined Normal Stress at A",
-        "type": "combined stress calculation",
+        "title": "Transverse Shear Stress at Point A",
+        "type": "transverse shear calculation",
         "difficulty": "intermediate",
         "tags": [
-          "flexure formula",
-          "stress superposition",
-          "point A"
+          "first moment of area",
+          "beam shear",
+          "VQ over Ib"
         ],
         "learningObjectives": [
-          "Calculate bending stress and superimpose normal stresses."
+          "Calculate transverse shear stress at the selected point."
         ],
         "selected": true,
-        "student": "<p>Determine the bending normal-stress contribution at A and superimpose it with the direct axial stress. Use the assigned positive coordinate <em>y</em><sub>A</sub> toward the upper face.</p>",
-        "instructor": "<p>&sigma;<sub>b,A</sub> = -<em>My</em><sub>A</sub>/<em>I</em> = <strong>{{beam_sigma_bending_MPa}} MPa</strong>. Therefore &sigma;<sub>A</sub> = &sigma;<sub>axial</sub> + &sigma;<sub>b,A</sub> = <strong>{{beam_sigma_A_MPa}} MPa</strong>, so point A is in <strong>{{beam_sigma_A_type}}</strong>.</p>",
+        "student": "<p>Determine the transverse shear stress at point A using the first moment of area and the beam-shear relation.</p>",
+        "instructor": "<p>For y<sub>A</sub> = 12.5 mm, the first moment of area of the region above A is Q<sub>A</sub> = <strong>{{beam_QA_mm3}} mm<sup>3</sup></strong>. Using &tau; = <em>VQ</em>/(<em>Ib</em>), &tau;<sub>A</sub> = <strong>{{beam_tau_A_MPa}} MPa</strong>; the magnitude is <strong>{{beam_tau_A_abs_MPa}} MPa</strong>.</p>",
         "section": "analysis"
       },
       {
         "id": "q18",
-        "title": "Transverse Shear Stress at A",
-        "type": "transverse shear calculation",
+        "title": "State of Stress at Point A",
+        "type": "stress-element construction",
         "difficulty": "intermediate",
         "tags": [
-          "beam shear formula",
-          "VQ over Ib",
-          "point A"
+          "differential stress element",
+          "plane stress",
+          "complementary shear"
         ],
         "learningObjectives": [
-          "Calculate the signed transverse shear stress at A."
+          "Represent the calculated stress state on a differential element."
         ],
         "selected": true,
-        "student": "<p>Use the beam-shear relation to determine the signed transverse shear stress at point A. Also calculate the maximum rectangular-section shear magnitude for comparison.</p>",
-        "instructor": "<p>&tau;<sub>A</sub> = <em>VQ</em><sub>A</sub>/(<em>Ib</em>) = <strong>{{beam_tau_A_MPa}} MPa</strong>, with magnitude <strong>{{beam_tau_A_abs_MPa}} MPa</strong>. The signed neutral-axis maximum is 3<em>V</em>/(2<em>A</em>) = <strong>{{beam_tau_max_MPa}} MPa</strong>.</p>",
+        "student": "<p>Sketch the resulting stress state on a differential element at point A.</p>",
+        "instructor": "<p>The beam model gives &sigma;<sub>x</sub> = <strong>{{beam_sigma_A_MPa}} MPa</strong>, &tau;<sub>xy</sub> = <strong>{{beam_tau_A_MPa}} MPa</strong>, and &sigma;<sub>y</sub> = <strong>{{beam_sigma_y_MPa}} MPa</strong>. Complementary shear stresses must be shown with directions consistent with the selected sign convention.</p>",
         "section": "analysis"
       },
       {
         "id": "q19",
-        "title": "Stress Element at Point A",
-        "type": "stress-element construction",
+        "title": "Engineering Assessment and Recommendation",
+        "type": "engineering judgment",
         "difficulty": "intermediate",
         "tags": [
-          "plane stress",
-          "complementary shear",
-          "sign convention"
-        ],
-        "learningObjectives": [
-          "Translate the calculated components into a differential stress element."
-        ],
-        "selected": true,
-        "student": "<p>Sketch the differential stress element at A. Label the normal stress and all complementary shear stresses with directions consistent with your local axes and sign convention.</p>",
-        "instructor": "<p>The elementary beam model gives &sigma;<sub>x</sub> = <strong>{{beam_sigma_A_MPa}} MPa</strong>, &tau;<sub>xy</sub> = <strong>{{beam_tau_A_MPa}} MPa</strong>, and &sigma;<sub>y</sub> = <strong>{{beam_sigma_y_MPa}} MPa</strong>. Draw the axial normal stress as {{beam_sigma_A_type}} and include complementary shear on adjacent faces in the sense corresponding to the signed &tau;<sub>xy</sub>.</p>",
-        "section": "analysis"
-      },
-      {
-        "id": "q20",
-        "title": "Dominant Response and Engineering Assessment",
-        "type": "engineering judgment",
-        "difficulty": "advanced",
-        "tags": [
           "dominant stress",
-          "design modification",
-          "model limitations"
+          "section thickness",
+          "moment arm"
         ],
         "learningObjectives": [
-          "Compare stress contributions and make a limited recommendation."
+          "Identify the dominant stress contribution and recommend a mechanics-based change."
         ],
         "selected": true,
-        "student": "<p>Identify the stress contribution that dominates at A, quantify its size relative to the direct axial contribution, recommend one mechanics-based modification, and state at least three limitations of the model.</p>",
-        "instructor": "<p>{{beam_assessment}}</p>",
-        "gradingNotes": "<p>A complete answer must connect the recommendation to either the moment demand or a section property and must not claim complete access-system safety.</p>",
-        "commonMistakes": "<p>Nominal stress at one point does not address contact, connection, stability, dynamic, fatigue, or regulatory requirements.</p>",
+        "student": "<p>Which stress contribution dominates at point A, and what mechanics-based change would most directly reduce it?</p>",
+        "instructor": "<p>The bending contribution dominates the normal stress at A; the axial contribution is much smaller and transverse shear is small. Increasing section thickness is effective because <em>I</em> varies with <em>t</em><sup>3</sup> for the assigned bending orientation. Reducing the technician moment arm or changing the support geometry would also reduce the bending contribution.</p>",
         "section": "analysis"
       }
     ],
@@ -3528,8 +3503,7 @@ window.PROBLEM_CATALOG = [
           "q16",
           "q17",
           "q18",
-          "q19",
-          "q20"
+          "q19"
         ]
       }
     ]

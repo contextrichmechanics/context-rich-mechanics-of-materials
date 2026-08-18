@@ -1,7 +1,7 @@
 # Graph Report - context-rich-mos-quarto-v3  (2026-08-17)
 
 ## Corpus Check
-- 209 files · ~2,183,175 words
+- 209 files · ~2,182,709 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0925c679`
+- Built from commit: `7b38227c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

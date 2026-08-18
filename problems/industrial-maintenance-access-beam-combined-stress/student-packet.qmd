@@ -1,6 +1,6 @@
 ---
 title: "Student Packet - Industrial Maintenance Access Beam"
-subtitle: "Inclined-Member Equilibrium and Combined Stress"
+subtitle: "Combined Loading, Normal Stress, and Transverse Shear Stress"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html: {toc: true, number-sections: true}

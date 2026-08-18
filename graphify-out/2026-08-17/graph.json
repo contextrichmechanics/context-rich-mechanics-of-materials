@@ -5423,7 +5423,7 @@
       "label": "Main Engineering Goal",
       "file_type": "document",
       "source_file": "problems/industrial-line-shaft-shear-moment/_student-problem.qmd",
-      "source_location": "L13",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "problems_industrial_line_shaft_shear_moment_student_problem_main_engineering_goal",
       "community": 46,
@@ -5445,7 +5445,7 @@
       "label": "System Components",
       "file_type": "document",
       "source_file": "problems/industrial-line-shaft-shear-moment/_student-problem.qmd",
-      "source_location": "L17",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "problems_industrial_line_shaft_shear_moment_student_problem_system_components",
       "community": 46,
@@ -10961,7 +10961,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "problems/industrial-line-shaft-shear-moment/_student-problem.qmd",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "problems_industrial_line_shaft_shear_moment_student_problem_shear_and_bending_moment_analysis_of_a_multi_pulley_industrial_line_shaft",
@@ -10972,7 +10972,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "problems/industrial-line-shaft-shear-moment/_student-problem.qmd",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "problems_industrial_line_shaft_shear_moment_student_problem_shear_and_bending_moment_analysis_of_a_multi_pulley_industrial_line_shaft",
@@ -15161,5 +15161,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8ebf6db911038735665394cd88732bbeab597a4e"
+  "built_at_commit": "0925c679ac5bdeade46b46debb829097f527cc2c"
 }

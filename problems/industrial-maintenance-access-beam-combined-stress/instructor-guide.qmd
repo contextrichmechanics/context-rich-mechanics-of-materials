@@ -1,6 +1,6 @@
 ---
 title: "Instructor Guide - Industrial Maintenance Access Beam"
-subtitle: "Representative Inclined-Member and Combined-Stress Solutions"
+subtitle: "Combined Loading, Normal Stress, and Transverse Shear Stress"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html: {toc: true, number-sections: true}
@@ -8,7 +8,7 @@ format:
 
 # Purpose
 
-Award credit for a defensible global free-body diagram, correct smooth-contact boundary condition, explicit global and local sign conventions, correct local internal resultants, valid rectangular-section properties, axial-plus-bending stress superposition, a correct beam-shear calculation at point A, and an appropriately limited engineering assessment.
+Support student work that connects the maintenance-access context to combined loading. Award credit for a defensible idealization, correct support reactions, internal axial force, transverse shear force and bending moment, valid rectangular-section properties, normal-stress superposition, transverse shear stress at point A, a complete differential stress element, and an appropriately limited engineering assessment.
 
 # Problem Context
 
@@ -29,14 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-The base model assumes static loading, a straight prismatic rectangular member, a concentrated technician load at G, small deformation, and linear-elastic nominal-stress formulas. Support B supplies horizontal and vertical reactions; C is smooth against a vertical wall and therefore supplies only a horizontal reaction. The model excludes member self-weight, local bearing and contact stress, connection behavior, lateral instability, technician motion, impact, vibration, fatigue, material nonlinearity, and regulatory access-system design.
+The base model assumes static loading, a straight prismatic member, a concentrated technician load, negligible member self-weight, small deformation, linear-elastic stress relations, smooth contact at C, and two reaction components at B. It neglects local contact, impact, vibration, fatigue, instability, connection details, and material nonlinearity.
 
-Point A is assigned the coordinate y_A above the centroidal neutral axis. Instructors may change y_A in the Builder while keeping |y_A| <= t/2.
+Point A is located at y_A = t/4 above the centroidal neutral axis so that the selected point has nonzero axial normal stress, bending normal stress, and transverse shear stress. The section appearance is schematic, and no material property is required for the assigned stress calculation.
 
 # Supplemental Assessment Structure
 
 - context interpretation and load path: 20%;
-- student idealization, boundary conditions, and assumptions: 20%;
-- reactions and local internal resultants: 25%;
-- section properties and stress calculations: 25%;
-- stress element, assessment, and limitations: 10%.
+- idealization, boundary conditions, and assumptions: 20%;
+- equilibrium and internal resultants: 25%;
+- combined-stress calculations: 25%;
+- stress element and engineering assessment: 10%.

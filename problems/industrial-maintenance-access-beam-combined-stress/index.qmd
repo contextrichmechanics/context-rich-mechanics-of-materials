@@ -1,10 +1,10 @@
 ---
 title: "Combined-Stress Analysis of an Inclined Industrial Maintenance Access Beam"
-description: "An inclined-beam problem on support reactions, local internal resultants, combined normal stress, transverse shear, and stress elements."
+description: "An inclined access-beam problem on combined loading, normal stress, transverse shear stress, internal resultants, and stress superposition."
 image: "assets/access-beam-industry-context.png"
 categories: [context-rich, mechanics-of-materials, analysis]
-mechanics_concepts: [inclined beam, oblique member, support reactions, smooth contact, free-body diagram, equilibrium, local coordinate axes, section cut, internal axial force, transverse shear force, bending moment, combined loading, axial normal stress, flexure formula, bending stress, beam shear formula, first moment of area, combined stress, stress element, engineering judgment]
-course_topics: [equilibrium, internal loadings, axial stress, bending stress, transverse shear, combined stress, stress elements]
+mechanics_concepts: [combined loading, normal stress, transverse shear stress, inclined beam, support reactions, smooth contact, free-body diagram, equilibrium, local coordinate axes, section cut, axial force, transverse shear force, bending moment, axial normal stress, bending normal stress, stress superposition, first moment of area, differential stress element, engineering judgment]
+course_topics: [combined loading, normal stress, transverse shear stress]
 textbook_chapters: [Equilibrium of a rigid body, Internal loadings in structural members, Axial load, Bending, Transverse shear, Combined loading]
 problem_types: [load-path analysis, free-body diagram, reaction calculation, section-cut equilibrium, section-property calculation, combined-stress calculation, stress-element construction, engineering evaluation]
 competencies: [engineering idealization, global equilibrium, force resolution, local sign conventions, section properties, stress superposition, stress-state interpretation, engineering judgment]
@@ -12,7 +12,7 @@ industries: [industrial maintenance, process plants, service pits, equipment ins
 difficulty: "Intermediate"
 status: "Published"
 problem_id: "MOS-ACCESS-BEAM-027"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
@@ -20,7 +20,7 @@ version: "0.1.0"
 ## Assignment Options
 
 ::: {.callout-note title="Mechanics Focus"}
-The base assignment evaluates a straight prismatic member under static loading. Local support contact, connections, member self-weight, technician motion, impact, vibration, fatigue, instability, and regulatory access-system design are intentionally reserved for later analysis.
+The base assignment evaluates a straight prismatic member under static loading. Member self-weight, local contact stress, fastener details, lateral instability, technician motion, impact, vibration, fatigue, material nonlinearity, and regulatory or workplace-access design requirements are intentionally excluded.
 :::
 
 [Student packet](student-packet.qmd){.btn .btn-primary}
