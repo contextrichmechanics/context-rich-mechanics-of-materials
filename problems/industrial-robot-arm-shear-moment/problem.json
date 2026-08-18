@@ -1,16 +1,16 @@
 {
   "id":"MOS-ROBOT-021",
   "slug":"industrial-robot-arm-shear-moment",
-  "title":"Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
+  "title":"Shear and Bending-Moment Analysis of an Industrial Robot Arm",
   "studentDocumentTitle":"Student Homework Questions",
   "instructorDocumentTitle":"Instructor Answers",
-  "summary":"A robot-arm beam problem integrating two-force-member modeling, whole-arm equilibrium, hydraulic-cylinder force, pin reactions, piecewise shear and moment functions, diagrams, and critical-section identification.",
-  "textbookChapters":["Planar rigid-body equilibrium","Two-force members","Shear-force diagrams","Bending-moment diagrams"],
+  "summary":"An industrial robot-arm problem integrating load-path reasoning, rigid-body equilibrium, two-force-member modeling, internal shear, bending moment, shear-force diagrams, bending-moment diagrams, and critical-section identification.",
+  "textbookChapters":["Bending","Shear","Shear-force diagrams","Bending-moment diagrams"],
   "derivedPlaceholders":["robot_total_length_in","robot_W_lb","robot_xW_in","robot_By_lb","robot_F_BD_lb","robot_Bx_lb","robot_cylinder_state","robot_Ax_signed_lb","robot_Ax_abs_lb","robot_Ax_direction","robot_Ay_signed_lb","robot_Ay_abs_lb","robot_Ay_direction","robot_V_left_lb","robot_V_A_minus_lb","robot_V_A_plus_lb","robot_V_B_minus_lb","robot_V_B_plus_lb","robot_V_C_minus_lb","robot_V_C_plus_lb","robot_M_A_lbin","robot_M_B_lbin","robot_M_C_lbin","robot_M_abs_max_lbin","robot_M_abs_max_lbft","robot_M_signed_max_lbin","robot_M_location","robot_recommendation"],
   "image":"assets/robot-arm-industry-context.png",
   "idealizedImage":"assets/robot-arm-instructor-idealization.png",
-  "idealizedImageAlt":"Instructor reference idealization of a horizontal robot arm with a left free overhang, pin A, hydraulic cylinder at B, end load at C, uniform load, and symbolic geometry.",
+  "idealizedImageAlt":"Instructor reference idealization of a horizontal robot arm with left overhang a, pin support A, inclined two-force actuator at B, end payload P at C, uniform load w, and dimensions b and L.",
   "source":"index.html",
-  "problemStatement":"<p>A hydraulically actuated industrial manipulator holds a payload while stationary. Its horizontal arm carries a uniform downward load representing arm and gripper weight, plus a concentrated payload at C.</p><p>For the beam model, coordinate <em>s</em> is measured from the left free tip. Pin A is at <em>s</em> = <em>a</em>, cylinder attachment B is at <em>s</em> = <em>a</em> + <em>b</em>, and C is at <em>s</em> = <em>a</em> + <em>b</em> + <em>L</em>. Cylinder BD is an ideal two-force member.</p>",
-  "engineeringGoal":"<p>Determine the hydraulic-cylinder force and pin reactions, derive and construct the arm's shear-force and bending-moment diagrams, and identify the location and magnitude of the absolute maximum bending moment.</p>"
+  "problemStatement":"<p>Industrial robots lift, position, and manipulate parts during material handling, machine tending, assembly, welding, and other manufacturing operations. When an arm reaches outward while holding a component, the payload, end-effector, and arm self-weight must be transferred through the robot joints and ultimately into the robot body and floor-mounted base.</p><p>For this analysis, the actual articulated robot is replaced by an equivalent horizontal beam carrying a uniform downward load and a concentrated end load. The beam is supported by a pin and an inclined two-force actuator. The actuator is an equivalent mechanics model and is not intended to reproduce the actual actuation architecture of the robot shown in the industry image.</p>",
+  "engineeringGoal":"<p>Determine the actuator force and support reactions required for static equilibrium, construct the shear-force and bending-moment diagrams for the equivalent robot arm, and identify the location and magnitude of the absolute maximum bending moment for subsequent strength analysis.</p>"
 }

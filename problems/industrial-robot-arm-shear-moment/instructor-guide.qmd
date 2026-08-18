@@ -1,5 +1,5 @@
 ---
-title: "Instructor Guide - Industrial Robot Arm"
+title: "Instructor Guide - Shear and Bending-Moment Analysis of an Industrial Robot Arm"
 subtitle: "Representative Answers and Evaluation Guidance"
 author: "Context-Rich Mechanics of Materials Library"
 format:
@@ -8,7 +8,7 @@ format:
 
 # Purpose
 
-Award credit for a correct beam idealization, two-force-member direction, whole-arm equilibrium, signed reactions, piecewise shear and moment functions, diagram jumps and slopes, critical-section identification, and a bounded engineering recommendation.
+Use the student work to assess load-path reasoning, rigid-body equilibrium, two-force-member modeling, internal shear, internal moment, diagram construction, critical-section identification, and engineering judgment.
 
 # Problem Context
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-The base model assumes a straight horizontal arm, static loading, small deformation, uniform weight over the full modeled length, a frictionless pin at A, and an ideal two-force hydraulic cylinder. A complete design also requires axial force, bending stress and deflection, actuator capacity, pin and connection stresses, local geometry, fatigue, dynamics, stability, controls, and applicable safety factors.
+The base model assumes a straight and initially horizontal arm, static loading, small deformation, uniform distributed weight, a frictionless pin at A, and an ideal inclined two-force actuator. Joint and gripper dimensions are neglected. The horizontal actuator component creates axial force in the equivalent arm, but the assigned MEEN 305 objective is limited to vertical shear and bending moment. Deflection, detailed actuator sizing, pin and bearing stress, fatigue, stability, servo-drive behavior, dynamic robot motion, and FEA are intentionally excluded.
 
 # Supplemental Assessment Structure
 

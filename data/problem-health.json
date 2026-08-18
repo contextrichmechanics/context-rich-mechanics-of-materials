@@ -72,7 +72,7 @@
   {
     "id": "MOS-ROBOT-021",
     "slug": "industrial-robot-arm-shear-moment",
-    "title": "Shear and Bending-Moment Analysis of a Hydraulically Supported Industrial Robot Arm",
+    "title": "Shear and Bending-Moment Analysis of an Industrial Robot Arm",
     "status": "OK",
     "variables": 6,
     "questions": 20,

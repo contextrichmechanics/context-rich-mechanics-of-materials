@@ -1,5 +1,5 @@
 ---
-title: "Student Packet - Industrial Robot Arm"
+title: "Student Packet - Shear and Bending-Moment Analysis of an Industrial Robot Arm"
 subtitle: "Equilibrium, Shear-Force Diagrams, and Bending-Moment Diagrams"
 author: "Context-Rich Mechanics of Materials Library"
 format:

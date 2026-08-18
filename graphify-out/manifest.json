@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1787010475.5316215,
-    "ast_hash": "71809f5f60d62f299920482774bafceb",
+    "mtime": 1787011857.048799,
+    "ast_hash": "2481d23a2d60edcb108c6161a42bf393",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1787010475.5327845,
-    "ast_hash": "563c4e6db1dbe66d9d1dc21c67f86407",
+    "mtime": 1787011857.0496936,
+    "ast_hash": "89355a30b81c5e9612eaabadf4dbb94b",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -230,23 +230,23 @@
     "semantic_hash": ""
   },
   "problems/industrial-robot-arm-shear-moment/_student-problem.qmd": {
-    "mtime": 1785788000.5642228,
-    "ast_hash": "d77191b12b528923a9a81ca131e91f54",
+    "mtime": 1787011634.2314434,
+    "ast_hash": "9f27847c0443fdddcdda687bedfdfd96",
     "semantic_hash": ""
   },
   "problems/industrial-robot-arm-shear-moment/index.qmd": {
-    "mtime": 1785854454.7774673,
-    "ast_hash": "8d3a07d6ddd79ca97902baad59cde460",
+    "mtime": 1787011634.150716,
+    "ast_hash": "4e55e23bd607e3e99a8ee1d089c9c9ad",
     "semantic_hash": ""
   },
   "problems/industrial-robot-arm-shear-moment/instructor-guide.qmd": {
-    "mtime": 1785818550.2121763,
-    "ast_hash": "34441afe9070f96dd8119ebf1e8802a7",
+    "mtime": 1787011634.3942006,
+    "ast_hash": "d14a633164fee9c3db3a9767f466374c",
     "semantic_hash": ""
   },
   "problems/industrial-robot-arm-shear-moment/student-packet.qmd": {
-    "mtime": 1785818550.2040024,
-    "ast_hash": "e11fd016bf027b057162e89d0429f938",
+    "mtime": 1787011634.3122022,
+    "ast_hash": "f91ed5efd18af9558940c915520b15e1",
     "semantic_hash": ""
   },
   "problems/jib-crane-battery-pack/_scenario-and-q1.qmd": {
@@ -600,12 +600,12 @@
     "semantic_hash": ""
   },
   "problems/industrial-robot-arm-shear-moment/assets/robot-arm-industry-context.png": {
-    "mtime": 1785787933.8760383,
-    "ast_hash": "e472d2b94bb5c119e07974c841c918f6",
+    "mtime": 1787011856.6797698,
+    "ast_hash": "73bf48b4607784068cfc35b3e5dae449",
     "semantic_hash": ""
   },
   "problems/industrial-robot-arm-shear-moment/assets/robot-arm-instructor-idealization.png": {
-    "mtime": 1785787933.8803,
+    "mtime": 1787011856.6863568,
     "ast_hash": "f52422951ac0656e1622278579739adc",
     "semantic_hash": ""
   },

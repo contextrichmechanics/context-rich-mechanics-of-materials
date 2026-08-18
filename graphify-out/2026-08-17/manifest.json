@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1787009144.4565787,
-    "ast_hash": "b81b25a0a28fe6b49dc26283ee934119",
+    "mtime": 1787010475.5316215,
+    "ast_hash": "71809f5f60d62f299920482774bafceb",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1787009144.457672,
-    "ast_hash": "0cf9205cadc1ae43f69993dccaee64e2",
+    "mtime": 1787010475.5327845,
+    "ast_hash": "563c4e6db1dbe66d9d1dc21c67f86407",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1787008073.8848143,
-    "ast_hash": "fcc2bd02851a456ccebb89bd10791f3d",
+    "mtime": 1787010420.561413,
+    "ast_hash": "9633fe73cdd4a078982f4a9260acba01",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1787008073.963613,
-    "ast_hash": "fa499fce12efb5f1ff0c061d559d53f7",
+    "mtime": 1787010420.6427138,
+    "ast_hash": "058926142c975b617a933a8c43adee9e",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1787008074.0431623,
-    "ast_hash": "e3981cc8d1af6e325131ecb2122453e1",
+    "mtime": 1787010420.7214751,
+    "ast_hash": "210c044332419b95b19b724a9a7e8400",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -505,23 +505,23 @@
     "semantic_hash": ""
   },
   "problems/variable-radius-tapered-shaft/_student-problem.qmd": {
-    "mtime": 1785786903.070177,
-    "ast_hash": "91f26f6e7752cc129d539012ffdd3673",
+    "mtime": 1787009876.5840297,
+    "ast_hash": "a9b898e6836ed4ba419416b064b5bea8",
     "semantic_hash": ""
   },
   "problems/variable-radius-tapered-shaft/index.qmd": {
-    "mtime": 1785854458.0328856,
-    "ast_hash": "ad7db99496d858591ee4849ee860cb36",
+    "mtime": 1787009876.6671233,
+    "ast_hash": "5d3b97137c9101cb8878e38a3796a1b0",
     "semantic_hash": ""
   },
   "problems/variable-radius-tapered-shaft/instructor-guide.qmd": {
-    "mtime": 1785818550.2184608,
-    "ast_hash": "2140d4670e13673735b964e9a30aa440",
+    "mtime": 1787009876.8216496,
+    "ast_hash": "0831be3c68e9f6bbf8700cdb1fe4fb1c",
     "semantic_hash": ""
   },
   "problems/variable-radius-tapered-shaft/student-packet.qmd": {
-    "mtime": 1785818550.2099783,
-    "ast_hash": "ec9e720a28487d0113d93d2f513c793a",
+    "mtime": 1787009876.7447805,
+    "ast_hash": "5ad4a090a302360ce394ab1577fb5440",
     "semantic_hash": ""
   },
   "schema/metadata-guide.yml": {
@@ -735,12 +735,12 @@
     "semantic_hash": ""
   },
   "problems/variable-radius-tapered-shaft/assets/tapered-shaft-industry-context.png": {
-    "mtime": 1785786843.8011901,
-    "ast_hash": "8da9083b788665b01588d1bd4181e23b",
+    "mtime": 1787010030.8375182,
+    "ast_hash": "d39ba7d905abba9bc01b523f8a6a6478",
     "semantic_hash": ""
   },
   "problems/variable-radius-tapered-shaft/assets/tapered-shaft-instructor-idealization.png": {
-    "mtime": 1785786843.8045592,
+    "mtime": 1787010030.8418894,
     "ast_hash": "011a1c48cd8a580229147fcb6e5775b5",
     "semantic_hash": ""
   },
