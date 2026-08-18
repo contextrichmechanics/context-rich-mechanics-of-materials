@@ -1,18 +1,18 @@
 ---
 title: "Shear and Bending-Moment Analysis of a Multi-Pulley Industrial Line Shaft"
-description: "An overhanging-shaft problem on bearing reactions, shear-force diagrams, bending-moment diagrams, and critical-station identification."
+description: "A line-shaft problem on bearing reactions, shear-force diagrams, bending-moment diagrams, and critical shaft location."
 image: "assets/line-shaft-industry-context.png"
 categories: [context-rich, mechanics-of-materials, analysis]
-mechanics_concepts: [overhanging beam, bearing reactions, equilibrium, concentrated loads, internal shear, bending moment, shear-force diagram, bending-moment diagram, piecewise functions, sign convention, critical section, maximum bending moment]
-course_topics: [rigid-body equilibrium, internal loadings, shear diagrams, moment diagrams, beam analysis, shaft loading]
+mechanics_concepts: [bearing reactions, shear-force diagrams, bending-moment diagrams, critical shaft location, load path, equilibrium, internal resultants, overhung pulley, piecewise functions, engineering judgment]
+course_topics: [bearing reactions, shear-force diagrams, bending-moment diagrams, critical shaft location]
 textbook_chapters: [Equilibrium of a rigid body, Internal loadings in structural members, Shear and moment diagrams for a beam]
-problem_types: [load-path analysis, free-body diagram, support-reaction calculation, piecewise internal-resultant calculation, shear-force diagram, bending-moment diagram, engineering evaluation]
-competencies: [engineering idealization, equilibrium, sign conventions, internal resultants, diagram construction, critical-location identification, engineering judgment]
+problem_types: [load-path analysis, structural idealization, free-body diagram, support-reaction calculation, shear-force diagram, bending-moment diagram, piecewise internal-resultant calculation, engineering assessment]
+competencies: [load path, equilibrium, internal resultants, shear-force diagrams, bending-moment diagrams, engineering judgment]
 industries: [conveyor systems, packaging machinery, process equipment, belt drives, manufacturing]
 difficulty: "Intermediate"
 status: "Published"
 problem_id: "MOS-LINE-SHAFT-025"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
@@ -20,7 +20,7 @@ version: "0.1.0"
 ## Assignment Options
 
 ::: {.callout-note title="Mechanics Focus"}
-The base assignment treats the shaft as an overhanging beam under known transverse pulley resultants. Shaft torsion, diameter selection, bending stress, fatigue, dynamics, and local hub or keyway effects are intentionally excluded.
+The base assignment isolates transverse vertical loading, bearing reactions, shear force, and bending moment. Torsion, shaft sizing, bending stress, fatigue, dynamics, and local hub or keyway effects are intentionally excluded.
 :::
 
 [Student packet](student-packet.qmd){.btn .btn-primary}

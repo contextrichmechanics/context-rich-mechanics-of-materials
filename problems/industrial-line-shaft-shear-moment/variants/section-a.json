@@ -1,7 +1,7 @@
 {
   "id": "section-a",
   "title": "Homework Version A - baseline pulley loading",
-  "description": "Baseline line-shaft idealization, bearing reactions, shear-force and bending-moment diagrams, and critical-station assessment.",
-  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19","q20"],
+  "description": "Faculty-reviewed line-shaft idealization, bearing reactions, shear-force and bending-moment diagrams, piecewise resultants, and critical-location assessment.",
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18"],
   "variables": {"line_F1":450,"line_F2":300,"line_F3":150,"line_L1":200,"line_L2":400,"line_L3":300,"line_L4":200}
 }

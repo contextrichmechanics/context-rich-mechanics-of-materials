@@ -1445,7 +1445,7 @@ function variableMap(problem, currentValues) {
     const lineStations = [
       { name: "bearing A", x: 0, moment: lineMoments[0] },
       { name: "pulley 1", x: lineX1, moment: lineMoments[1] },
-      { name: "center pulley 2", x: lineX2, moment: lineMoments[2] },
+      { name: "center-pulley station", x: lineX2, moment: lineMoments[2] },
       { name: "bearing B", x: lineXB, moment: lineMoments[3] },
       { name: "overhung pulley 3", x: lineX3, moment: lineMoments[4] }
     ];
@@ -1471,7 +1471,7 @@ function variableMap(problem, currentValues) {
     values.line_Mmax_x_mm = formatDerived(lineCritical.x, 1);
     values.line_Mmax_station = lineCritical.name;
     values.line_force_check_N = formatDerived(lineShears[4], 3);
-    values.line_assessment = `The first static bending check should be made at the ${lineCritical.name}, ${formatDerived(lineCritical.x, 1)} mm from bearing A, where |M| = ${formatDerived(Math.abs(lineCritical.moment), 2)} N·m. Bending demand can be reduced by moving a bearing or pulley to shorten a governing moment arm, or by reducing the associated belt resultant. A complete shaft design must also evaluate torsion, combined stress, fatigue, stress concentrations, bearing reactions in the perpendicular plane, shaft and pulley weight, alignment, and dynamic belt loading.`;
+    values.line_assessment = `The ${lineCritical.name} should be checked first because it has the largest absolute bending moment, |M| = ${formatDerived(Math.abs(lineCritical.moment), 2)} N·m at x = ${formatDerived(lineCritical.x, 1)} mm from bearing A. A realistic change is to reduce the overhung distance or move bearing B closer to the overhung pulley, which reduces the pulley moment arm. Any layout change alters the bearing reactions and moment distribution, so the complete shear and bending-moment diagrams must be recalculated.`;
   }
 
 

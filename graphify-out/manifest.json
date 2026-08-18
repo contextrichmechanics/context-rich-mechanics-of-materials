@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1787013964.7716372,
-    "ast_hash": "d802aa253bacc48055e822e7136081ba",
+    "mtime": 1787014926.6003628,
+    "ast_hash": "957bb5c24185ae5efc91d72fe6125155",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1787013964.7726948,
-    "ast_hash": "15d8b418155159512b0ef9ff866e0618",
+    "mtime": 1787014926.6023557,
+    "ast_hash": "5588225c7a553ab00cfcd42c5e5295a6",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1787012825.4824736,
-    "ast_hash": "12e43aea42b7d97228c78bdef37a44ec",
+    "mtime": 1787014926.0980895,
+    "ast_hash": "2fe4bd934cb72c783bcad071a11833b7",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1787012825.5646667,
-    "ast_hash": "33d68c49516054f1904b73208ef6d828",
+    "mtime": 1787014926.178191,
+    "ast_hash": "a1dd022eb0c921ad6999c826a8d921e3",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -755,23 +755,23 @@
     "semantic_hash": ""
   },
   "problems/industrial-line-shaft-shear-moment/_student-problem.qmd": {
-    "mtime": 1786693806.218398,
-    "ast_hash": "a0f24d53eeacd3fb97c540aa8d73aa34",
+    "mtime": 1787014702.3762736,
+    "ast_hash": "a53581dd23b93e4fe5292bb70565ed0c",
     "semantic_hash": ""
   },
   "problems/industrial-line-shaft-shear-moment/index.qmd": {
-    "mtime": 1786693806.296543,
-    "ast_hash": "b8ac820338b2af7d4a240122aa0f3008",
+    "mtime": 1787014702.2974777,
+    "ast_hash": "47915f5f6b65d8609d32b115a11bb408",
     "semantic_hash": ""
   },
   "problems/industrial-line-shaft-shear-moment/instructor-guide.qmd": {
-    "mtime": 1786693806.4500663,
-    "ast_hash": "4ff2b6724390c3bd0f927aeb5c7becd7",
+    "mtime": 1787014702.4539533,
+    "ast_hash": "14ef017a4198644cda875e7dd1c9e526",
     "semantic_hash": ""
   },
   "problems/industrial-line-shaft-shear-moment/student-packet.qmd": {
-    "mtime": 1786693806.37302,
-    "ast_hash": "b98bd40b308cc923ecd0983660e6903d",
+    "mtime": 1787014702.532123,
+    "ast_hash": "d560a899cf03dcf1d609114113d951ba",
     "semantic_hash": ""
   },
   "problems/industrial-maintenance-access-beam-combined-stress/_student-problem.qmd": {
@@ -795,12 +795,12 @@
     "semantic_hash": ""
   },
   "problems/industrial-line-shaft-shear-moment/assets/line-shaft-industry-context.png": {
-    "mtime": 1786693631.9625168,
-    "ast_hash": "f00311fe88bbbe7072ebbb6edd18dc80",
+    "mtime": 1787014926.2383802,
+    "ast_hash": "7fed0670f5b06a6211499ae887ef5b3e",
     "semantic_hash": ""
   },
   "problems/industrial-line-shaft-shear-moment/assets/line-shaft-instructor-idealization.png": {
-    "mtime": 1786693631.967192,
+    "mtime": 1787014926.2428493,
     "ast_hash": "e05c9331d943836bdae6aa2e547818df",
     "semantic_hash": ""
   },

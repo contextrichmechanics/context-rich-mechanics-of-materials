@@ -1,6 +1,6 @@
 ---
 title: "Student Packet - Multi-Pulley Industrial Line Shaft"
-subtitle: "Context, Bearing Reactions, Shear Diagram, and Bending-Moment Diagram"
+subtitle: "Context, Bearing Reactions, Shear-Force Diagram, and Bending-Moment Diagram"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html: {toc: true, number-sections: true}

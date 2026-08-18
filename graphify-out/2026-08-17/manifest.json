@@ -1,12 +1,12 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1787011857.048799,
-    "ast_hash": "2481d23a2d60edcb108c6161a42bf393",
+    "mtime": 1787013964.7716372,
+    "ast_hash": "d802aa253bacc48055e822e7136081ba",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1787011857.0496936,
-    "ast_hash": "89355a30b81c5e9612eaabadf4dbb94b",
+    "mtime": 1787013964.7726948,
+    "ast_hash": "15d8b418155159512b0ef9ff866e0618",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -20,13 +20,13 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1787010420.561413,
-    "ast_hash": "9633fe73cdd4a078982f4a9260acba01",
+    "mtime": 1787012825.4824736,
+    "ast_hash": "12e43aea42b7d97228c78bdef37a44ec",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1787010420.6427138,
-    "ast_hash": "058926142c975b617a933a8c43adee9e",
+    "mtime": 1787012825.5646667,
+    "ast_hash": "33d68c49516054f1904b73208ef6d828",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -150,23 +150,23 @@
     "semantic_hash": ""
   },
   "problems/cantilevered-operator-seat-bending/_student-problem.qmd": {
-    "mtime": 1786688611.662842,
-    "ast_hash": "63f0fe5b2bd9f53e3edf0f14803a4823",
+    "mtime": 1787012825.0810094,
+    "ast_hash": "87e985a36ba58a429d6c888754914455",
     "semantic_hash": ""
   },
   "problems/cantilevered-operator-seat-bending/index.qmd": {
-    "mtime": 1786688611.744137,
-    "ast_hash": "88f08aaddecb87d839c1a8b138af3d27",
+    "mtime": 1787012825.1623874,
+    "ast_hash": "4eb06aecda0163a19260ca774fc278ab",
     "semantic_hash": ""
   },
   "problems/cantilevered-operator-seat-bending/instructor-guide.qmd": {
-    "mtime": 1786688611.903848,
-    "ast_hash": "eaa7e76dacf322c3ff1df6a833857493",
+    "mtime": 1787012825.243976,
+    "ast_hash": "544abb8314e601fc645362e5512060bb",
     "semantic_hash": ""
   },
   "problems/cantilevered-operator-seat-bending/student-packet.qmd": {
-    "mtime": 1786688611.8253276,
-    "ast_hash": "55f026bceaa888a089095542cad91638",
+    "mtime": 1787012825.322253,
+    "ast_hash": "ff7479b5b324bb0a3f81b11778e1cdb3",
     "semantic_hash": ""
   },
   "problems/clevis-pin-tensile-linkage/_student-problem.qmd": {
@@ -560,12 +560,12 @@
     "semantic_hash": ""
   },
   "problems/cantilevered-operator-seat-bending/assets/seat-industry-context.png": {
-    "mtime": 1786688433.4640625,
+    "mtime": 1787013036.5805168,
     "ast_hash": "381e51faa91a560438b7072feec48f32",
     "semantic_hash": ""
   },
   "problems/cantilevered-operator-seat-bending/assets/seat-instructor-idealization.png": {
-    "mtime": 1786688433.4692113,
+    "mtime": 1787013036.5852976,
     "ast_hash": "ac950021e8c6c3ce2e583f5926b2c1f9",
     "semantic_hash": ""
   },

@@ -1,6 +1,6 @@
 ---
 title: "Instructor Guide - Multi-Pulley Industrial Line Shaft"
-subtitle: "Representative Solutions and Shear-Moment Guidance"
+subtitle: "Faculty-Reviewed Solutions and Shear-Moment Guidance"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html: {toc: true, number-sections: true}
@@ -8,7 +8,7 @@ format:
 
 # Purpose
 
-Award credit for a correct shaft idealization, complete free-body diagram, explicit sign convention, correct bearing reactions, internally consistent piecewise shear and moment functions, accurately labeled diagrams, and a limited recommendation tied to the absolute maximum bending moment.
+Support assessment of context interpretation, load-path reasoning, beam idealization, equilibrium, internal-resultant diagrams, critical-location identification, and a limited engineering recommendation.
 
 # Problem Context
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-The base model assumes static transverse loading, a slender shaft represented as a beam, concentrated pulley resultants at pulley centerlines, vertical bearing reactions only, small deformation, and negligible shaft self-weight. It excludes torsion, axial loading, shaft diameter and stress, fatigue, dynamic belt effects, bearing compliance, and local hub, shoulder, or keyway stresses.
+The base model assumes static transverse loading, a slender beam idealization, concentrated vertical pulley resultants, vertical bearing reactions only in the selected plane, negligible shaft self-weight, and small deformation. It excludes torsion, axial loading, dynamic belt effects, bearing friction, and local hub or contact stresses. Because no shaft diameter, section modulus, material strength, or fatigue data are provided, do not add a numerical bending-stress or factor-of-safety calculation.
 
 # Supplemental Assessment Structure
 
@@ -37,4 +37,4 @@ The base model assumes static transverse loading, a slender shaft represented as
 - student idealization and assumptions: 20%;
 - equilibrium and bearing reactions: 20%;
 - shear and bending-moment analysis: 30%;
-- critical-station assessment and limitations: 10%.
+- critical-location assessment and limited recommendation: 10%.

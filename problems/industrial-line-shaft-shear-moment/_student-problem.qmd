@@ -4,22 +4,22 @@
 
 ### Engineering Context
 
-A production line uses a horizontal shaft to transmit motion between belt-driven conveyor and processing stations. The shaft is supported by pillow-block bearings while several pulleys apply transverse belt-force resultants. One pulley is mounted outside the right bearing, creating an overhung load that can substantially alter the inboard bending moment.
+Industrial line shafts and belt-driven shaft systems are used to distribute rotational power from a common drive to multiple machines or auxiliary components. Pulleys mounted along the shaft transfer power through belts, while bearings support and align the rotating shaft. Similar arrangements are found in machine shops, conveyors, packaging systems, process equipment, and older centralized power-transmission systems.
 
-Before selecting a shaft diameter or performing fatigue calculations, the machine-design and maintenance team needs the bearing reactions and complete shear-force and bending-moment diagrams. Those diagrams identify the shaft station that should be examined first in a later stress analysis.
+Although the shaft's main purpose is to transmit torque, the belts also apply transverse forces to the pulleys. These forces are transferred into the shaft and then into the bearings, producing vertical shear force and bending moment along the shaft. The magnitude of the bending depends on both the pulley-force resultants and their locations relative to the bearings. A pulley mounted outside a bearing creates an overhung load, which can significantly increase bending demand in the adjacent shaft region.
+
+Before selecting a shaft diameter or performing a later bending-stress or fatigue calculation, engineers first determine the bearing reactions and construct the complete shear-force and bending-moment diagrams. These diagrams reveal where the shaft experiences its largest bending moment and therefore identify the shaft station that should be examined first in a subsequent strength analysis. The present problem isolates this transverse-bending behavior; torsional power transmission is part of the industrial context but is not included in the assigned calculations.
 
 ![Industrial line shaft supported by pillow-block bearings and carrying multiple belt pulleys.](assets/line-shaft-industry-context.png){fig-alt="Belt-driven production-line shaft with several pulleys and pillow-block bearing supports." width=88%}
 
 ### Main Engineering Goal
 
-Determine the vertical reactions at bearings A and B, construct the shear-force and bending-moment diagrams, and identify the location and magnitude of the absolute maximum bending moment.
+Determine the vertical bearing reactions, construct the shear-force and bending-moment diagrams for the shaft, and identify the location and magnitude of the absolute maximum bending moment.
 
 ### System Components
 
-- horizontal line shaft;
-- pillow-block bearings A and B;
-- pulley or sheave 1;
-- center pulley or sheave 2;
-- overhung pulley or sheave 3;
-- belts applying transverse force resultants; and
-- machine frame carrying the bearing reactions.
+- rotating line shaft;
+- drive pulleys or sheaves;
+- belt drives;
+- shaft bearings; and
+- machine frame or driven equipment.
