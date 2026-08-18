@@ -1,0 +1,40 @@
+---
+title: "Instructor Guide - Aerial Gondola Suspension Hanger"
+subtitle: "Representative Solutions for Eccentric Axial Loading and Combined Normal Stress"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+# Purpose
+
+Award credit for a defensible pin-connected hanger idealization, correct two-force-body equilibrium, accurate internal resultants in the aligned and offset regions, correct square-section properties, proper stress superposition, and an engineering assessment bounded by the stated assumptions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="gondola-hanger-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "aerial-gondola-suspension-hanger", targetId: "gondola-hanger-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base model uses a static concentrated gondola load, neglects hanger self-weight, models the cabin and carriage connections as frictionless pins, assumes linearly elastic material and small deformation, and evaluates straight regions with axial-plus-bending stress formulas. Local bend stresses, pin-hole stresses, fatigue, vibration, and carriage dynamics are excluded. No material strength or allowable stress is supplied, so the assessment identifies governing stress demand and geometry sensitivity without certifying the hanger as safe or unsafe.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization and assumptions: 20%;
+- internal axial force and bending moment: 25%;
+- normal-stress calculation and distributions: 25%;
+- engineering assessment and limitations: 10%.

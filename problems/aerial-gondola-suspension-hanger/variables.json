@@ -1,0 +1,7 @@
+[
+  {"key":"hanger_W","symbol":"W","label":"Total gondola-plus-passenger weight","value":1500,"unit":"lb","min":100,"max":10000,"step":50},
+  {"key":"hanger_s","symbol":"s","label":"Square hanger cross-section side","value":1.5,"unit":"in","min":0.25,"max":6,"step":0.05},
+  {"key":"hanger_e","symbol":"e","label":"Horizontal eccentricity of offset region","value":1.25,"unit":"ft","min":0,"max":5,"step":0.05},
+  {"key":"hanger_h1","symbol":"h_1","label":"Vertical distance A to C","value":5.5,"unit":"ft","min":0.5,"max":20,"step":0.25},
+  {"key":"hanger_h2","symbol":"h_2","label":"Vertical distance C to D","value":4.0,"unit":"ft","min":0.5,"max":20,"step":0.25}
+]

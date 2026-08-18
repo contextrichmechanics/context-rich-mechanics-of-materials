@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - 1500 lb gondola load",
+  "description": "Faculty-reviewed eccentric-loading idealization, internal resultants, combined normal stress, stress distributions, and engineering assessment.",
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19"],
+  "variables": {"hanger_W":1500,"hanger_s":1.5,"hanger_e":1.25,"hanger_h1":5.5,"hanger_h2":4.0}
+}

@@ -1405,6 +1405,39 @@ function variableMap(problem, currentValues) {
     values.seat_assessment = "The region near the fixed machine attachment is critical because the bending moment increases toward the support. A practical improvement is to increase the tube section height, increase wall thickness, or reduce the horizontal seat offset. Increasing section height is especially efficient because it places more material farther from the neutral axis.";
   }
 
+  const hangerWeight = numericValue(values, "hanger_W");
+  const hangerSide = numericValue(values, "hanger_s");
+  const hangerEccentricityFt = numericValue(values, "hanger_e");
+
+  if (
+    Number.isFinite(hangerWeight) && hangerWeight >= 0 &&
+    Number.isFinite(hangerSide) && hangerSide > 0 &&
+    Number.isFinite(hangerEccentricityFt) && hangerEccentricityFt >= 0
+  ) {
+    const area = hangerSide ** 2;
+    const inertia = hangerSide ** 4 / 12;
+    const extremeFiber = hangerSide / 2;
+    const eccentricityIn = hangerEccentricityFt * 12;
+    const moment = hangerWeight * eccentricityIn;
+    const directStressPsi = hangerWeight / area;
+    const bendingStressPsi = moment * extremeFiber / inertia;
+
+    values.hanger_area_in2 = formatDerived(area, 4);
+    values.hanger_I_in4 = formatDerived(inertia, 6);
+    values.hanger_c_in = formatDerived(extremeFiber, 3);
+    values.hanger_e_in = formatDerived(eccentricityIn, 1);
+    values.hanger_N_AB_lb = formatDerived(hangerWeight, 1);
+    values.hanger_M_AB_lbin = formatDerived(0, 1);
+    values.hanger_sigma_AB_psi = formatDerived(directStressPsi, 1);
+    values.hanger_sigma_AB_ksi = formatDerived(directStressPsi / 1000, 3);
+    values.hanger_N_DC_lb = formatDerived(hangerWeight, 1);
+    values.hanger_M_DC_lbin = formatDerived(moment, 1);
+    values.hanger_sigma_direct_ksi = formatDerived(directStressPsi / 1000, 3);
+    values.hanger_sigma_bending_ksi = formatDerived(bendingStressPsi / 1000, 3);
+    values.hanger_sigma_DC_max_ksi = formatDerived((directStressPsi + bendingStressPsi) / 1000, 3);
+    values.hanger_sigma_DC_opp_ksi = formatDerived((directStressPsi - bendingStressPsi) / 1000, 3);
+  }
+
   const lineF1 = numericValue(values, "line_F1");
   const lineF2 = numericValue(values, "line_F2");
   const lineF3 = numericValue(values, "line_F3");

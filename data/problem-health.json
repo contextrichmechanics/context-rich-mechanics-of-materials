@@ -1,5 +1,15 @@
 [
   {
+    "id": "MOS-GONDOLA-028",
+    "slug": "aerial-gondola-suspension-hanger",
+    "title": "Structural Stress Evaluation of an Aerial Gondola Suspension Hanger",
+    "status": "OK",
+    "variables": 5,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-AXIAL-009",
     "slug": "axial-rod-tube-assembly",
     "title": "Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly",

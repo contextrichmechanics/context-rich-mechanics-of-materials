@@ -1,5 +1,490 @@
 [
   {
+    "id": "MOS-GONDOLA-028",
+    "slug": "aerial-gondola-suspension-hanger",
+    "title": "Structural Stress Evaluation of an Aerial Gondola Suspension Hanger",
+    "studentDocumentTitle": "Student Homework Questions - Aerial Gondola Suspension Hanger",
+    "instructorDocumentTitle": "Instructor Answers - Aerial Gondola Suspension Hanger",
+    "summary": "An eccentric-axial-loading problem comparing direct and combined normal stress in aligned and offset regions of a pin-connected gondola hanger.",
+    "primaryTopics": [
+      "Eccentric axial loading",
+      "Combined normal stress"
+    ],
+    "courseTopic": "Combined loading / stress",
+    "targetLevel": "Intermediate",
+    "primaryMechanicsCompetencies": [
+      "Load path",
+      "Equilibrium",
+      "Internal axial force and bending moment",
+      "Eccentric loading",
+      "Normal stress",
+      "Engineering judgment"
+    ],
+    "expectedStudentDeliverable": "Annotated idealization, internal-resultant calculation, stress-distribution sketch, region comparison, and short engineering assessment.",
+    "difficultyLevel": 3,
+    "geometryComplexity": "2D offset hanger analyzed by section cuts through two straight regions.",
+    "problemDeliverableType": "Free-body diagram, internal axial force and moment, section-property calculations, stress-distribution sketches, region comparison, and engineering assessment.",
+    "textbookChapters": [
+      "Axial loading",
+      "Internal loadings in structural members",
+      "Combined loadings",
+      "The flexure formula"
+    ],
+    "derivedPlaceholders": [
+      "hanger_area_in2",
+      "hanger_I_in4",
+      "hanger_c_in",
+      "hanger_e_in",
+      "hanger_N_AB_lb",
+      "hanger_M_AB_lbin",
+      "hanger_sigma_AB_psi",
+      "hanger_sigma_AB_ksi",
+      "hanger_N_DC_lb",
+      "hanger_M_DC_lbin",
+      "hanger_sigma_direct_ksi",
+      "hanger_sigma_bending_ksi",
+      "hanger_sigma_DC_max_ksi",
+      "hanger_sigma_DC_opp_ksi"
+    ],
+    "image": "problems/aerial-gondola-suspension-hanger/assets/gondola-hanger-industry-context.png",
+    "idealizedImage": "problems/aerial-gondola-suspension-hanger/assets/gondola-hanger-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference idealization of an aerial gondola suspension hanger with collinear pins A and E, aligned region AB, offset region DC, eccentricity e, and square side s.",
+    "source": "problems/aerial-gondola-suspension-hanger/index.html",
+    "problemStatement": "<p>Aerial gondola cabins are suspended from an overhead cable carriage through a structural hanger. The hanger must transfer the weight of the cabin and passengers to the carriage while providing sufficient clearance between the cabin roof, cable, grip mechanism, and carriage hardware. For this reason, the hanger is often shaped or offset rather than being a single straight member.</p><p>The offset is useful for packaging and clearance, but it introduces an important structural tradeoff. A portion of the hanger that lies directly on the load line carries mainly axial tension, while a portion located away from that load line carries the same tensile force through an eccentric path. That eccentricity creates an additional bending moment and can greatly increase the tensile stress at one side of the cross-section.</p><p>For this MEEN 305 analysis, the hanger is idealized as a pin-connected offset member with a uniform square cross-section. The engineering objective is to compare the normal stress in an aligned region with the normal stress in an offset region and determine how strongly the hanger geometry influences the maximum tensile demand.</p>",
+    "engineeringGoal": "<p>Determine the largest tensile normal stress in the aligned and offset hanger regions, identify the governing region and mechanical cause, and recommend one geometry change that would reduce the governing stress.</p>",
+    "variables": [
+      {
+        "key": "hanger_W",
+        "symbol": "W",
+        "label": "Total gondola-plus-passenger weight",
+        "value": 1500,
+        "unit": "lb",
+        "min": 100,
+        "max": 10000,
+        "step": 50
+      },
+      {
+        "key": "hanger_s",
+        "symbol": "s",
+        "label": "Square hanger cross-section side",
+        "value": 1.5,
+        "unit": "in",
+        "min": 0.25,
+        "max": 6,
+        "step": 0.05
+      },
+      {
+        "key": "hanger_e",
+        "symbol": "e",
+        "label": "Horizontal eccentricity of offset region",
+        "value": 1.25,
+        "unit": "ft",
+        "min": 0,
+        "max": 5,
+        "step": 0.05
+      },
+      {
+        "key": "hanger_h1",
+        "symbol": "h_1",
+        "label": "Vertical distance A to C",
+        "value": 5.5,
+        "unit": "ft",
+        "min": 0.5,
+        "max": 20,
+        "step": 0.25
+      },
+      {
+        "key": "hanger_h2",
+        "symbol": "h_2",
+        "label": "Vertical distance C to D",
+        "value": 4,
+        "unit": "ft",
+        "min": 0.5,
+        "max": 20,
+        "step": 0.25
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "structural function",
+          "load transfer",
+          "aerial gondola"
+        ],
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the primary structural function of the suspension hanger."
+        ],
+        "student": "<p>What is the primary structural function of the suspension hanger in the aerial gondola system?</p>",
+        "instructor": "<p>The hanger transfers the suspended cabin and passenger load to the overhead carriage while maintaining the geometric clearance required by the ropeway system.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Loading",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "external loading",
+          "gondola weight",
+          "static load"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the primary load transferred by the hanger."
+        ],
+        "student": "<p>What primary load must the hanger transfer during normal static operation?</p>",
+        "instructor": "<p>The hanger primarily transfers the downward weight of the gondola cabin and its passengers.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Connections",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "pin connections",
+          "relative rotation",
+          "boundary conditions"
+        ],
+        "type": "connection interpretation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Describe the simplified hanger connections."
+        ],
+        "student": "<p>How is the hanger connected between the gondola cabin and the overhead carriage?</p>",
+        "instructor": "<p>The hanger is connected at the cabin and carriage through joints that transfer force while allowing relative rotation in the simplified model.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path",
+          "force transfer",
+          "ropeway carriage"
+        ],
+        "type": "load path",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Trace the dominant load path through the gondola system."
+        ],
+        "student": "<p>Trace the dominant load path from the gondola passengers to the ropeway cable system.</p>",
+        "instructor": "<p>Passengers and cabin &rarr; suspension hanger &rarr; overhead carriage / trolley &rarr; cable system.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Purpose of the Hanger Offset",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "offset geometry",
+          "clearance",
+          "packaging"
+        ],
+        "type": "design reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Explain the practical purpose of the hanger offset."
+        ],
+        "student": "<p>Why might the hanger be shaped with an offset instead of being perfectly straight?</p>",
+        "instructor": "<p>The offset provides clearance and packaging space between the gondola cabin, cable, grip mechanism, carriage hardware, and surrounding ropeway components.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Mechanical Effect of the Offset",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "eccentric axial loading",
+          "bending stress",
+          "combined normal stress"
+        ],
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Relate load eccentricity to combined axial and bending stress."
+        ],
+        "student": "<p>How can locating part of a member away from the main load line change its stress state?</p>",
+        "instructor": "<p>The load becomes eccentric relative to that member region. The eccentricity creates bending in addition to direct axial loading, so the stress is no longer uniform across the section.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Geometric Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "cross-sectional size",
+          "eccentricity",
+          "normal stress"
+        ],
+        "type": "geometry reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the quantities governing the simplified stress analysis."
+        ],
+        "student": "<p>What general geometric characteristics would influence the normal stress in the hanger?</p>",
+        "instructor": "<p>The suspended load, the cross-sectional size, and the distance between the centroid of a hanger region and the main load line are the most important quantities for this simplified analysis.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "engineering idealization",
+          "free-body diagram",
+          "offset member"
+        ],
+        "type": "idealization",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Convert the physical gondola suspension into a Mechanics of Materials model."
+        ],
+        "student": "<p>Convert the real gondola suspension system into a simplified Mechanics of Materials model that preserves the load path and the hanger offset. Show the two end connections, the vertical load line, one aligned straight region, one offset straight region, and the hanger cross-section.</p><p><strong>Student model / free-body diagram space:</strong></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>",
+        "instructor": "<p>A correct model shows a pin-connected hanger carrying a vertical tensile load between the cabin and overhead carriage. One straight region is aligned with the force line, while another is horizontally offset from that line.</p><p><strong>Instructor note:</strong> Detailed symbols such as A, E, AB, DC, e, and s are introduced only in the instructor reference model.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "modeling assumptions",
+          "linear elasticity",
+          "model limitations"
+        ],
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "State assumptions that bound the simplified combined-stress model."
+        ],
+        "student": "<p>State the assumptions used to convert the real gondola suspension system into the simplified mechanics model.</p>",
+        "instructor": "<p>Static concentrated gondola load; hanger self-weight neglected; cabin and carriage connections modeled as frictionless pins; material treated as linearly elastic; small-deformation Mechanics of Materials relations; straight hanger regions evaluated using axial-plus-bending stress formulas; local bend stresses, pin-hole stresses, fatigue, vibration, and carriage dynamics neglected.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "analysis plan",
+          "internal resultants",
+          "stress superposition"
+        ],
+        "type": "solution planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Organize the calculation sequence for comparing aligned and offset regions."
+        ],
+        "student": "<p>Describe the calculation sequence required to compare the aligned and offset hanger regions.</p>",
+        "instructor": "<p>Use whole-hanger equilibrium to determine the pin force; cut the aligned region and determine its internal axial force and bending moment; repeat for the offset region; calculate the square-section properties; evaluate direct and bending normal stress; sketch the stress distribution in each region; compare the maximum tensile stresses; and make a limited geometry recommendation.</p>"
+      },
+      {
+        "id": "q11",
+        "title": "Boundary Conditions",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "pin connections",
+          "boundary conditions",
+          "reaction couples"
+        ],
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Interpret the connection idealizations in the instructor model."
+        ],
+        "student": "<p>From the instructor reference diagram, identify the connection idealizations at A and E.</p>",
+        "instructor": "<p>Pins A and E permit relative rotation and transmit force. They are not modeled as fixed connections and therefore do not directly transmit reaction couples.</p>"
+      },
+      {
+        "id": "q12",
+        "title": "External Pin Forces",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "external forces",
+          "pin reaction",
+          "free-body diagram"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the external forces on the isolated hanger."
+        ],
+        "student": "<p>Identify the external forces acting on the isolated hanger.</p>",
+        "instructor": "<p>The gondola applies the known downward load W at A. The overhead carriage applies the balancing reaction at E.</p>"
+      },
+      {
+        "id": "q13",
+        "title": "Whole-Hanger Equilibrium",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "two-force body",
+          "equilibrium",
+          "collinear forces"
+        ],
+        "type": "equilibrium",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Use two-force-body equilibrium to determine the reaction at E."
+        ],
+        "student": "<p>Use equilibrium to determine the force at E and explain why the forces at A and E must be collinear.</p>",
+        "instructor": "<p>The isolated hanger is a two-force body. Static equilibrium therefore requires the forces at A and E to be equal, opposite, and collinear. The reaction at E is W upward on the same vertical load line.</p>"
+      },
+      {
+        "id": "q14",
+        "title": "Internal Resultants in the Aligned Region",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "internal axial force",
+          "aligned region",
+          "direct tension"
+        ],
+        "type": "internal-resultant calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Determine axial force and bending moment in the aligned region."
+        ],
+        "student": "<p>Cut the hanger through the lower aligned region and determine the internal axial force and bending moment.</p>",
+        "instructor": "<p>The internal axial force is N = W = <strong>{{hanger_N_AB_lb}} lb</strong> in tension. Because the centroidal axis of the aligned region coincides with the force line, M = <strong>{{hanger_M_AB_lbin}} lb&middot;in</strong>. The region therefore carries direct axial tension.</p>"
+      },
+      {
+        "id": "q15",
+        "title": "Internal Resultants in the Offset Region",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "eccentric axial loading",
+          "internal bending moment",
+          "offset region"
+        ],
+        "type": "internal-resultant calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Determine axial force and bending moment in the offset region."
+        ],
+        "student": "<p>Cut the hanger through the upper offset region and determine the internal axial force and bending moment.</p>",
+        "instructor": "<p>The axial force is N = W = <strong>{{hanger_N_DC_lb}} lb</strong> in tension. The centroidal axis is offset from the force line by e = {{hanger_e}} ft = <strong>{{hanger_e_in}} in.</strong>, so the internal bending moment magnitude is M = We = <strong>{{hanger_M_DC_lbin}} lb&middot;in</strong>.</p>"
+      },
+      {
+        "id": "q16",
+        "title": "Normal Stress in the Aligned Region",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "direct normal stress",
+          "axial tension",
+          "cross-sectional area"
+        ],
+        "type": "stress calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate direct tensile stress in the aligned region."
+        ],
+        "student": "<p>Determine the largest tensile normal stress in the aligned region.</p>",
+        "instructor": "<p>A = s<sup>2</sup> = <strong>{{hanger_area_in2}} in.<sup>2</sup></strong>. Because the region carries direct tension only, &sigma; = W/A = {{hanger_W}}/{{hanger_area_in2}} = <strong>{{hanger_sigma_AB_psi}} psi</strong> = <strong>{{hanger_sigma_AB_ksi}} ksi</strong>.</p>"
+      },
+      {
+        "id": "q17",
+        "title": "Maximum Tensile Stress in the Offset Region",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "combined normal stress",
+          "stress superposition",
+          "flexure formula"
+        ],
+        "type": "combined-stress calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Superimpose direct axial and bending stress in the offset region."
+        ],
+        "student": "<p>Determine the largest tensile normal stress in the offset region by superimposing direct axial and bending stress.</p>",
+        "instructor": "<p>I = s<sup>4</sup>/12 = <strong>{{hanger_I_in4}} in.<sup>4</sup></strong> and c = s/2 = <strong>{{hanger_c_in}} in.</strong> The direct tensile stress is <strong>{{hanger_sigma_direct_ksi}} ksi</strong> and the bending-stress magnitude is Mc/I = <strong>{{hanger_sigma_bending_ksi}} ksi</strong>. Therefore the maximum tensile stress is &sigma;<sub>max</sub> = <strong>{{hanger_sigma_DC_max_ksi}} ksi</strong>.</p>"
+      },
+      {
+        "id": "q18",
+        "title": "Stress Distribution Interpretation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "stress distribution",
+          "axial stress",
+          "bending stress"
+        ],
+        "type": "stress interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Compare the stress distributions in the aligned and offset regions."
+        ],
+        "student": "<p>Sketch the normal-stress distribution across the square cross-section in the aligned and offset regions. Explain the difference.</p>",
+        "instructor": "<p>The aligned region has a uniform tensile stress equal to W/A. The offset region has the same uniform tensile component plus a linear bending component. One extreme fiber reaches <strong>{{hanger_sigma_DC_max_ksi}} ksi</strong> tension while the opposite extreme fiber reaches <strong>{{hanger_sigma_DC_opp_ksi}} ksi</strong> compression for the assigned values.</p>"
+      },
+      {
+        "id": "q19",
+        "title": "Engineering Assessment and Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "governing region",
+          "eccentricity",
+          "engineering judgment"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Identify the governing region and recommend a mechanics-based geometry change."
+        ],
+        "student": "<p>Identify the governing region and mechanical cause. Recommend one geometry change that would reduce the governing tensile stress.</p>",
+        "instructor": "<p>The offset region governs because eccentricity creates a large bending contribution in addition to direct tension. Reducing the eccentricity e directly reduces M = We. Increasing the square-section size s also reduces both direct and bending stress. No pass/fail safety statement should be made because no allowable stress or material strength is assigned.</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - 1500 lb gondola load",
+        "description": "Faculty-reviewed eccentric-loading idealization, internal resultants, combined normal stress, stress distributions, and engineering assessment.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19"
+        ],
+        "variables": {
+          "hanger_W": 1500,
+          "hanger_s": 1.5,
+          "hanger_e": 1.25,
+          "hanger_h1": 5.5,
+          "hanger_h2": 4
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-AXIAL-009",
     "slug": "axial-rod-tube-assembly",
     "title": "Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly",
