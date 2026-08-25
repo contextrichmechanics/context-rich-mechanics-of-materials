@@ -1,0 +1,28 @@
+---
+title: "Bending Stress in a Baseball Bat During Ball Contact"
+description: "A baseball-bat problem on beam idealization, internal shear and bending moment, flexural stress, transverse shear, and strength assessment."
+image: "assets/baseball-bat-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [bending, transverse shear, cantilever beam, beam reactions, internal shear force, bending moment, flexure formula, circular section, second moment of area, maximum bending stress, transverse shear stress, factor of safety, allowable stress, minimum diameter, free-body diagram, engineering judgment]
+course_topics: [bending, transverse shear, allowable stress]
+textbook_chapters: [Internal loadings in structural members, Shear and moment diagrams, The flexure formula, Transverse shear]
+problem_types: [load-path analysis, beam idealization, free-body diagram, reaction calculation, internal-resultant calculation, section-property calculation, stress calculation, factor-of-safety assessment, minimum-diameter design]
+competencies: [load-path identification, beam idealization, equilibrium, internal shear and bending moment, flexure formula, transverse shear, factor of safety, engineering judgment]
+industries: [sports equipment, baseball, product design]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-BASEBALL-029"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+The base problem replaces the transient ball-bat collision with an instructor-specified equivalent transverse load and models the restrained grip as a fixed end. Detailed taper, hollow construction, local contact stress, stress concentrations, hand compliance, vibration, wave propagation, and collision dynamics are intentionally excluded.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=baseball-bat-impact-bending){.btn .btn-secondary}

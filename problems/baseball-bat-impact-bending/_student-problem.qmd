@@ -1,0 +1,22 @@
+# Context-Rich Solid Mechanics Problem
+
+## Bending Stress in a Baseball Bat During Ball Contact
+
+### Engineering Context
+
+When a baseball is struck, the ball exerts a short-duration contact force on the barrel of the bat. This force is transmitted through the bat toward the player's grip. The bat therefore develops internal shear force and bending moment during the contact event.
+
+To keep the problem within introductory Mechanics of Materials, the transient collision is not derived from ball speed, contact duration, coefficient of restitution, or detailed bat vibration. Instead, the ball-bat interaction is represented by an instructor-specified equivalent transverse force $P$ acting at the ball-contact location. The grip region is idealized as a restrained end.
+
+![Baseball approaching a bat during ball contact.](assets/baseball-bat-industry-context.jpg){fig-alt="Baseball approaching the barrel of a bat held by a player, establishing the sports-equipment context for the mechanics problem." width=88%}
+
+### Main Engineering Goal
+
+Determine the bending and transverse shear stresses at the critical handle section of the idealized bat and assess whether the section satisfies the specified factor-of-safety requirement under the assigned equivalent ball-contact load.
+
+### System Components
+
+- player's hands and grip region, which restrain the bat and transfer its reaction to the player;
+- baseball bat, the primary structural member evaluated;
+- barrel and ball-contact region, where the equivalent contact load acts; and
+- baseball, which applies the contact force during impact.

@@ -1,0 +1,16 @@
+{
+  "id": "MOS-BASEBALL-029",
+  "slug": "baseball-bat-impact-bending",
+  "title": "Bending Stress in a Baseball Bat During Ball Contact",
+  "studentDocumentTitle": "Student Homework Questions - Baseball Bat During Ball Contact",
+  "instructorDocumentTitle": "Instructor Answers - Baseball Bat During Ball Contact",
+  "summary": "A baseball-bat problem integrating beam idealization, reactions, internal shear and bending moment, flexural stress, transverse shear, factor of safety, and minimum-diameter design.",
+  "textbookChapters": ["Internal loadings in structural members", "Shear and moment diagrams", "The flexure formula", "Transverse shear"],
+  "derivedPlaceholders": ["bat_Ay_N", "bat_MA_Nmm", "bat_MA_Nm", "bat_V_N", "bat_Mmax_Nmm", "bat_Mmax_Nm", "bat_area_mm2", "bat_I_mm4", "bat_c_mm", "bat_sigma_max_MPa", "bat_tau_max_MPa", "bat_fos", "bat_sigma_allow_MPa", "bat_d_min_mm", "bat_fos_assessment", "bat_diameter_assessment"],
+  "image": "assets/baseball-bat-industry-context.jpg",
+  "idealizedImage": "assets/baseball-bat-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference idealization of a baseball bat as a cantilever beam restrained at grip A, loaded transversely by force P at ball-contact point B, with span L_AB and equivalent solid circular diameter d.",
+  "source": "index.html",
+  "problemStatement": "<p>When a baseball is struck, the ball exerts a short-duration contact force on the barrel of the bat. This force is transmitted through the bat toward the player's grip. The bat therefore develops internal shear force and bending moment during the contact event.</p><p>To keep the problem within introductory Mechanics of Materials, the transient collision is not derived from ball speed, contact duration, coefficient of restitution, or detailed bat vibration. Instead, the ball-bat interaction is represented by an instructor-specified equivalent transverse force <em>P</em> acting at the ball-contact location. The grip region is idealized as a restrained end.</p>",
+  "engineeringGoal": "<p>Determine the bending and transverse shear stresses at the critical handle section of the idealized bat and assess whether the section satisfies the specified factor-of-safety requirement under the assigned equivalent ball-contact load.</p>"
+}

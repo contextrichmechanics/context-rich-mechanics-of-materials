@@ -1,0 +1,8 @@
+[
+  {"key":"bat_P","symbol":"P","label":"Equivalent transverse ball-contact load at B","value":500,"unit":"N","min":50,"max":5000,"step":25},
+  {"key":"bat_L_AB","symbol":"L_AB","label":"Distance from restrained grip to contact point","value":650,"unit":"mm","min":100,"max":1500,"step":10},
+  {"key":"bat_d","symbol":"d","label":"Equivalent solid circular diameter at critical handle section","value":30,"unit":"mm","min":10,"max":100,"step":1},
+  {"key":"bat_E","symbol":"E","label":"Elastic modulus","value":69,"unit":"GPa","min":1,"max":250,"step":1},
+  {"key":"bat_Sy","symbol":"S_y","label":"Yield strength","value":275,"unit":"MPa","min":10,"max":1500,"step":5},
+  {"key":"bat_n_req","symbol":"n_req","label":"Required factor of safety","value":2.0,"unit":"-","min":1,"max":10,"step":0.1}
+]

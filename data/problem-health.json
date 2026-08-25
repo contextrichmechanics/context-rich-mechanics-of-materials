@@ -20,6 +20,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-BASEBALL-029",
+    "slug": "baseball-bat-impact-bending",
+    "title": "Bending Stress in a Baseball Bat During Ball Contact",
+    "status": "OK",
+    "variables": 6,
+    "questions": 18,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-SEAT-023",
     "slug": "cantilevered-operator-seat-bending",
     "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",

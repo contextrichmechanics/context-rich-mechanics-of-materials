@@ -1037,6 +1037,467 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-BASEBALL-029",
+    "slug": "baseball-bat-impact-bending",
+    "title": "Bending Stress in a Baseball Bat During Ball Contact",
+    "studentDocumentTitle": "Student Homework Questions - Baseball Bat During Ball Contact",
+    "instructorDocumentTitle": "Instructor Answers - Baseball Bat During Ball Contact",
+    "summary": "A baseball-bat problem integrating beam idealization, reactions, internal shear and bending moment, flexural stress, transverse shear, factor of safety, and minimum-diameter design.",
+    "textbookChapters": [
+      "Internal loadings in structural members",
+      "Shear and moment diagrams",
+      "The flexure formula",
+      "Transverse shear"
+    ],
+    "derivedPlaceholders": [
+      "bat_Ay_N",
+      "bat_MA_Nmm",
+      "bat_MA_Nm",
+      "bat_V_N",
+      "bat_Mmax_Nmm",
+      "bat_Mmax_Nm",
+      "bat_area_mm2",
+      "bat_I_mm4",
+      "bat_c_mm",
+      "bat_sigma_max_MPa",
+      "bat_tau_max_MPa",
+      "bat_fos",
+      "bat_sigma_allow_MPa",
+      "bat_d_min_mm",
+      "bat_fos_assessment",
+      "bat_diameter_assessment"
+    ],
+    "image": "problems/baseball-bat-impact-bending/assets/baseball-bat-industry-context.jpg",
+    "idealizedImage": "problems/baseball-bat-impact-bending/assets/baseball-bat-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference idealization of a baseball bat as a cantilever beam restrained at grip A, loaded transversely by force P at ball-contact point B, with span L_AB and equivalent solid circular diameter d.",
+    "source": "problems/baseball-bat-impact-bending/index.html",
+    "problemStatement": "<p>When a baseball is struck, the ball exerts a short-duration contact force on the barrel of the bat. This force is transmitted through the bat toward the player's grip. The bat therefore develops internal shear force and bending moment during the contact event.</p><p>To keep the problem within introductory Mechanics of Materials, the transient collision is not derived from ball speed, contact duration, coefficient of restitution, or detailed bat vibration. Instead, the ball-bat interaction is represented by an instructor-specified equivalent transverse force <em>P</em> acting at the ball-contact location. The grip region is idealized as a restrained end.</p>",
+    "engineeringGoal": "<p>Determine the bending and transverse shear stresses at the critical handle section of the idealized bat and assess whether the section satisfies the specified factor-of-safety requirement under the assigned equivalent ball-contact load.</p>",
+    "variables": [
+      {
+        "key": "bat_P",
+        "symbol": "P",
+        "label": "Equivalent transverse ball-contact load at B",
+        "value": 500,
+        "unit": "N",
+        "min": 50,
+        "max": 5000,
+        "step": 25
+      },
+      {
+        "key": "bat_L_AB",
+        "symbol": "L_AB",
+        "label": "Distance from restrained grip to contact point",
+        "value": 650,
+        "unit": "mm",
+        "min": 100,
+        "max": 1500,
+        "step": 10
+      },
+      {
+        "key": "bat_d",
+        "symbol": "d",
+        "label": "Equivalent solid circular diameter at critical handle section",
+        "value": 30,
+        "unit": "mm",
+        "min": 10,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "key": "bat_E",
+        "symbol": "E",
+        "label": "Elastic modulus",
+        "value": 69,
+        "unit": "GPa",
+        "min": 1,
+        "max": 250,
+        "step": 1
+      },
+      {
+        "key": "bat_Sy",
+        "symbol": "S_y",
+        "label": "Yield strength",
+        "value": 275,
+        "unit": "MPa",
+        "min": 10,
+        "max": 1500,
+        "step": 5
+      },
+      {
+        "key": "bat_n_req",
+        "symbol": "n_req",
+        "label": "Required factor of safety",
+        "value": 2,
+        "unit": "-",
+        "min": 1,
+        "max": 10,
+        "step": 0.1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "sports equipment",
+          "structural function",
+          "load transfer"
+        ],
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Explain the bat's mechanical and structural function during ball contact."
+        ],
+        "student": "<p>Based on the photograph, explain the primary mechanical function of the baseball bat during a hit.</p>",
+        "instructor": "<p>The bat transfers force and momentum between the player and the baseball. Structurally, it must transmit the ball-contact load through the bat toward the grip without developing unacceptable stress.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Load",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "transverse load",
+          "ball contact",
+          "load identification"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the external load used in the simplified bat analysis."
+        ],
+        "student": "<p>What external load is most relevant to the simplified bat analysis, and where does it act?</p>",
+        "instructor": "<p>The relevant load is the force exerted by the baseball on the bat during contact. In the simplified model, it is represented by an equivalent transverse force acting at the barrel/contact location.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Restraint",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "fixed support",
+          "grip",
+          "boundary condition"
+        ],
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Idealize the player's grip as a beam restraint."
+        ],
+        "student": "<p>Where is the bat restrained during the hit, and how can this be idealized for a first Mechanics of Materials model?</p>",
+        "instructor": "<p>The player restrains the bat through the hands at the grip. For the base model, the grip region is idealized as a restrained or fixed end.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path",
+          "barrel",
+          "grip"
+        ],
+        "type": "load path",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Trace the ball-contact load through the bat to the player."
+        ],
+        "student": "<p>Trace the load path from the baseball to the player.</p>",
+        "instructor": "<p>The baseball applies force at the barrel; the load is transmitted through the bat, through the handle/grip region, and finally to the player's hands.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Location",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "bending moment",
+          "critical section",
+          "cantilever beam"
+        ],
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Predict where the bending-moment magnitude is largest."
+        ],
+        "student": "<p>For the simplified beam model, where would you expect the bending moment to be largest?</p>",
+        "instructor": "<p>The bending-moment magnitude is largest at the restrained grip end, so the specified handle section near the grip is the critical section in the idealized model.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "bending stress",
+          "transverse shear",
+          "scope"
+        ],
+        "type": "scope identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Distinguish included and excluded mechanical responses."
+        ],
+        "student": "<p>Which responses are most relevant to the base problem: bending stress, transverse shear, torsion, buckling, fatigue, or vibration?</p>",
+        "instructor": "<p>Bending stress is primary, and transverse shear is a secondary check. Torsion, buckling, fatigue, and vibration are excluded from the base problem.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "loading",
+          "geometry",
+          "material strength"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the inputs needed for the simplified stress analysis."
+        ],
+        "student": "<p>Identify the loading, geometric, and material quantities needed for the simplified stress analysis.</p>",
+        "instructor": "<p>Equivalent contact force <em>P</em>, distance from the grip to contact point <em>L</em>, critical-section diameter <em>d</em>, material yield strength, and required factor of safety.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "beam idealization",
+          "free-body diagram",
+          "cantilever beam"
+        ],
+        "type": "idealization",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Convert the physical bat-ball interaction into a mechanics model."
+        ],
+        "student": "<p>Replace the real bat-ball interaction with a simplified Mechanics of Materials model. Show the restrained grip region, the bat centerline, the equivalent ball-contact force, the distance from the grip to the contact point, and the critical circular handle section.</p><p><strong>Student model / free-body diagram space:</strong></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>",
+        "instructor": "<p>A suitable model is a cantilever-like beam restrained at the grip and subjected to a transverse concentrated force <em>P</em> at the ball-contact location. For the base calculation, the critical handle section is represented by an equivalent solid circular cross section.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "modeling assumptions",
+          "linear elasticity",
+          "equivalent load"
+        ],
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "State the assumptions that bound the simplified beam model."
+        ],
+        "student": "<p>Use the following assumptions for the base analysis:</p><ul><li>The grip region is idealized as a fixed restraint for the short-duration load case.</li><li>The ball-bat collision is replaced by a specified equivalent transverse force <em>P</em>.</li><li>The bat is modeled as a straight beam between the grip and the ball-contact point.</li><li>The critical handle section is represented by an equivalent solid circular section of diameter <em>d</em>.</li><li>The material is treated as homogeneous and linearly elastic up to the strength check.</li><li>Detailed taper, hollow construction, local contact stress, stress concentrations, hand compliance, vibration, and dynamic wave effects are neglected.</li><li>The assigned <em>P</em> is a teaching input and is not claimed to be a measured impact force from the photograph.</li></ul>",
+        "instructor": "<p>Students should apply all listed assumptions consistently. Credit may be given for additional clearly stated assumptions that do not contradict the assigned model.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan",
+          "internal loading",
+          "factor of safety"
+        ],
+        "type": "solution planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Organize the complete mechanics-analysis sequence."
+        ],
+        "student": "<p>Outline a mechanics analysis plan for evaluating the assigned bat section.</p>",
+        "instructor": "<p>Draw the FBD; determine the grip reactions; use a section cut to obtain <em>V</em> and <em>M</em>; calculate the circular-section properties; determine maximum bending stress and maximum transverse shear stress; calculate the strength factor of safety; compare with the required value; and state one limitation of the model.</p>"
+      },
+      {
+        "id": "q11",
+        "title": "Support Reactions",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "beam reactions",
+          "fixed support",
+          "equilibrium"
+        ],
+        "type": "reaction calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Determine the force and moment reactions at the grip."
+        ],
+        "student": "<p>Determine the reaction-force and reaction-moment magnitudes at the idealized grip A.</p>",
+        "instructor": "<p>From equilibrium, <em>A</em><sub>y</sub> = <em>P</em> = <strong>{{bat_Ay_N}} N</strong>. The reaction-moment magnitude is <em>M</em><sub>A</sub> = <em>PL</em><sub>AB</sub> = ({{bat_P}} N)({{bat_L_AB}} mm) = <strong>{{bat_MA_Nmm}} N&middot;mm</strong> = <strong>{{bat_MA_Nm}} N&middot;m</strong>. No axial reaction is required for the 2D transverse-load idealization.</p>"
+      },
+      {
+        "id": "q12",
+        "title": "Internal Shear and Bending Moment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "internal shear force",
+          "bending moment",
+          "section cut"
+        ],
+        "type": "internal-resultant calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Determine the internal shear and maximum bending moment."
+        ],
+        "student": "<p>Determine the internal shear-force magnitude and maximum bending-moment magnitude in AB.</p>",
+        "instructor": "<p>The internal shear-force magnitude is <em>V</em> = <em>P</em> = <strong>{{bat_V_N}} N</strong>. The bending-moment magnitude increases toward A and reaches <em>M</em><sub>max</sub> = <em>PL</em><sub>AB</sub> = <strong>{{bat_Mmax_Nmm}} N&middot;mm</strong> = <strong>{{bat_Mmax_Nm}} N&middot;m</strong> at the restrained end.</p>"
+      },
+      {
+        "id": "q13",
+        "title": "Section Properties",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "circular section",
+          "area",
+          "second moment of area"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate area and second moment of area for a solid circular section."
+        ],
+        "student": "<p>Determine the area <em>A</em> and second moment of area <em>I</em> of the equivalent solid circular handle section.</p>",
+        "instructor": "<p><em>A</em> = &pi;<em>d</em><sup>2</sup>/4 = &pi;({{bat_d}} mm)<sup>2</sup>/4 = <strong>{{bat_area_mm2}} mm<sup>2</sup></strong>.</p><p><em>I</em> = &pi;<em>d</em><sup>4</sup>/64 = &pi;({{bat_d}} mm)<sup>4</sup>/64 = <strong>{{bat_I_mm4}} mm<sup>4</sup></strong>.</p>"
+      },
+      {
+        "id": "q14",
+        "title": "Maximum Bending Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "bending stress",
+          "flexure formula",
+          "extreme fiber"
+        ],
+        "type": "stress calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Apply the flexure formula to the critical handle section."
+        ],
+        "student": "<p>Determine the maximum bending normal stress at the critical section.</p>",
+        "instructor": "<p>With <em>c</em> = <em>d</em>/2 = {{bat_c_mm}} mm,</p><p>&sigma;<sub>max</sub> = <em>M</em><sub>max</sub><em>c</em>/<em>I</em> = ({{bat_Mmax_Nmm}} N&middot;mm)({{bat_c_mm}} mm)/({{bat_I_mm4}} mm<sup>4</sup>) = <strong>{{bat_sigma_max_MPa}} MPa</strong>.</p><p>The maximum tensile and compressive stresses occur at opposite outer fibers.</p>"
+      },
+      {
+        "id": "q15",
+        "title": "Maximum Transverse Shear Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "transverse shear stress",
+          "solid circular section",
+          "neutral axis"
+        ],
+        "type": "stress calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate maximum transverse shear stress in a solid circle."
+        ],
+        "student": "<p>Determine the maximum transverse shear stress at the critical solid circular section.</p>",
+        "instructor": "<p>For a solid circular section, &tau;<sub>max</sub> = 4<em>V</em>/(3<em>A</em>) = 4({{bat_V_N}} N)/[3({{bat_area_mm2}} mm<sup>2</sup>)] = <strong>{{bat_tau_max_MPa}} MPa</strong>. This occurs at the neutral axis and is much smaller than the outer-fiber bending stress.</p>"
+      },
+      {
+        "id": "q16",
+        "title": "Strength Factor of Safety",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "factor of safety",
+          "yield strength",
+          "bending stress"
+        ],
+        "type": "strength assessment",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Determine and assess the factor of safety against yielding."
+        ],
+        "student": "<p>Determine the factor of safety against yielding based on the governing bending stress. Does the idealized section satisfy the required factor of safety?</p>",
+        "instructor": "<p>F.S. = <em>S</em><sub>y</sub>/&sigma;<sub>max</sub> = ({{bat_Sy}} MPa)/({{bat_sigma_max_MPa}} MPa) = <strong>{{bat_fos}}</strong>. {{bat_fos_assessment}}</p>"
+      },
+      {
+        "id": "q17",
+        "title": "Minimum Diameter Check",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "minimum diameter",
+          "allowable stress",
+          "design"
+        ],
+        "type": "minimum-diameter design",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Size the equivalent solid section using an allowable bending stress."
+        ],
+        "student": "<p>Keeping <em>P</em>, <em>L</em><sub>AB</sub>, <em>S</em><sub>y</sub>, and <em>n</em><sub>req</sub> unchanged, determine the minimum equivalent solid diameter required by the bending-strength criterion.</p>",
+        "instructor": "<p>&sigma;<sub>allow</sub> = <em>S</em><sub>y</sub>/<em>n</em><sub>req</sub> = ({{bat_Sy}} MPa)/({{bat_n_req}}) = <strong>{{bat_sigma_allow_MPa}} MPa</strong>.</p><p>Using &sigma;<sub>max</sub> = 32<em>M</em>/( &pi;<em>d</em><sup>3</sup>),</p><p><em>d</em><sub>min</sub> = [32<em>M</em>/( &pi;&sigma;<sub>allow</sub>)]<sup>1/3</sup> = <strong>{{bat_d_min_mm}} mm</strong>. {{bat_diameter_assessment}}</p>"
+      },
+      {
+        "id": "q18",
+        "title": "Engineering Assessment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "governing response",
+          "engineering judgment",
+          "model limitations"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "State the governing response, pass/fail conclusion, and a model limitation."
+        ],
+        "student": "<p>State the governing response, whether the idealized bat section passes the assigned criterion, and one important limitation of the model.</p>",
+        "instructor": "<p>Bending governs. The calculated F.S. is <strong>{{bat_fos}}</strong>. {{bat_fos_assessment}} A major limitation is that a real bat is tapered and may be hollow, while the actual collision and hand restraint are dynamic and distributed rather than a static point load and perfect fixed support.</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - 500 N equivalent contact load",
+        "description": "Faculty-reviewed baseball-bat idealization, internal loading, bending and transverse-shear stress, factor of safety, and minimum-diameter design.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18"
+        ],
+        "variables": {
+          "bat_P": 500,
+          "bat_L_AB": 650,
+          "bat_d": 30,
+          "bat_E": 69,
+          "bat_Sy": 275,
+          "bat_n_req": 2
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-SEAT-023",
     "slug": "cantilevered-operator-seat-bending",
     "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",

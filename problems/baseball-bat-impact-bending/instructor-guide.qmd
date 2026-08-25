@@ -1,0 +1,40 @@
+---
+title: "Instructor Guide - Baseball Bat During Ball Contact"
+subtitle: "Representative Solutions for Bending, Transverse Shear, and Strength Assessment"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+# Purpose
+
+Award credit for a defensible cantilever-beam idealization, complete free-body diagram, correct grip reactions and internal resultants, accurate solid-circular-section properties, correct bending and transverse-shear stresses, and a factor-of-safety assessment bounded by the stated assumptions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="baseball-bat-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "baseball-bat-impact-bending", targetId: "baseball-bat-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The grip is idealized as fixed for the assigned short-duration load case, and the collision is replaced by a specified equivalent transverse force. The bat is treated as a straight, linearly elastic beam with an equivalent solid circular critical section. Detailed taper, hollow construction, local ball-contact stress, stress concentrations, hand compliance, vibration, wave propagation, fatigue, and transient collision mechanics are excluded. The assigned load and material properties are teaching inputs and are not inferred from the photograph.
+
+# Supplemental Assessment Structure
+
+- context interpretation, load path, and restraint: 20%;
+- student idealization, assumptions, and analysis plan: 20%;
+- reactions, internal loading, and section properties: 25%;
+- bending and transverse-shear stress: 20%;
+- factor of safety, diameter design, and engineering assessment: 15%.

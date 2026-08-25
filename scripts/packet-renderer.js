@@ -1339,6 +1339,51 @@
       values.seat_assessment = "The region near the fixed machine attachment is critical because the bending moment increases toward the support. A practical improvement is to increase the tube section height, increase wall thickness, or reduce the horizontal seat offset. Increasing section height is especially efficient because it places more material farther from the neutral axis.";
     }
 
+    const batLoad = numericValue(values, "bat_P");
+    const batLength = numericValue(values, "bat_L_AB");
+    const batDiameter = numericValue(values, "bat_d");
+    const batYieldStrength = numericValue(values, "bat_Sy");
+    const batRequiredFos = numericValue(values, "bat_n_req");
+
+    if (
+      Number.isFinite(batLoad) && batLoad > 0 &&
+      Number.isFinite(batLength) && batLength > 0 &&
+      Number.isFinite(batDiameter) && batDiameter > 0 &&
+      Number.isFinite(batYieldStrength) && batYieldStrength > 0 &&
+      Number.isFinite(batRequiredFos) && batRequiredFos > 0
+    ) {
+      const area = Math.PI * batDiameter ** 2 / 4;
+      const inertia = Math.PI * batDiameter ** 4 / 64;
+      const extremeFiber = batDiameter / 2;
+      const momentNmm = batLoad * batLength;
+      const bendingStress = momentNmm * extremeFiber / inertia;
+      const transverseShearStress = 4 * batLoad / (3 * area);
+      const factorOfSafety = batYieldStrength / bendingStress;
+      const allowableStress = batYieldStrength / batRequiredFos;
+      const minimumDiameter = Math.cbrt(32 * momentNmm / (Math.PI * allowableStress));
+
+      values.bat_Ay_N = formatDerived(batLoad, 1);
+      values.bat_MA_Nmm = formatDerived(momentNmm, 0);
+      values.bat_MA_Nm = formatDerived(momentNmm / 1000, 1);
+      values.bat_V_N = formatDerived(batLoad, 1);
+      values.bat_Mmax_Nmm = formatDerived(momentNmm, 0);
+      values.bat_Mmax_Nm = formatDerived(momentNmm / 1000, 1);
+      values.bat_area_mm2 = formatDerived(area, 1);
+      values.bat_I_mm4 = formatDerived(inertia, 0);
+      values.bat_c_mm = formatDerived(extremeFiber, 1);
+      values.bat_sigma_max_MPa = formatDerived(bendingStress, 2);
+      values.bat_tau_max_MPa = formatDerived(transverseShearStress, 3);
+      values.bat_fos = formatDerived(factorOfSafety, 2);
+      values.bat_sigma_allow_MPa = formatDerived(allowableStress, 1);
+      values.bat_d_min_mm = formatDerived(minimumDiameter, 2);
+      values.bat_fos_assessment = factorOfSafety >= batRequiredFos
+        ? `Since ${formatDerived(factorOfSafety, 2)} is greater than or equal to the required value of ${formatDerived(batRequiredFos, 1)}, the assigned idealized section satisfies the strength requirement.`
+        : `Since ${formatDerived(factorOfSafety, 2)} is less than the required value of ${formatDerived(batRequiredFos, 1)}, the assigned idealized section does not satisfy the strength requirement.`;
+      values.bat_diameter_assessment = batDiameter >= minimumDiameter
+        ? `The assigned ${formatDerived(batDiameter, 1)} mm diameter is adequate for this criterion.`
+        : `The assigned ${formatDerived(batDiameter, 1)} mm diameter is smaller than the required diameter and is not adequate for this criterion.`;
+    }
+
     const hangerWeight = numericValue(values, "hanger_W");
     const hangerSide = numericValue(values, "hanger_s");
     const hangerEccentricityFt = numericValue(values, "hanger_e");

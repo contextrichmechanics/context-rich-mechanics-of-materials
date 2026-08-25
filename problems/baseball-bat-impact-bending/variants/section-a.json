@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - 500 N equivalent contact load",
+  "description": "Faculty-reviewed baseball-bat idealization, internal loading, bending and transverse-shear stress, factor of safety, and minimum-diameter design.",
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18"],
+  "variables": {"bat_P":500,"bat_L_AB":650,"bat_d":30,"bat_E":69,"bat_Sy":275,"bat_n_req":2.0}
+}
