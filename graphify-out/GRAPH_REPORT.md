@@ -1,16 +1,16 @@
-# Graph Report - context-rich-mos-quarto-v3  (2026-08-17)
+# Graph Report - context-rich-mechanics-of-materials  (2026-08-26)
 
 ## Corpus Check
-- 209 files · ~2,182,709 words
+- 233 files · ~2,277,409 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 676 nodes · 689 edges · 77 communities (72 shown, 5 thin omitted)
+- 721 nodes · 728 edges · 83 communities (78 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7b38227c`
+- Built from commit: `b9bdfc31`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -31,6 +31,7 @@
 - 8. Create The Package
 - graphify reference: extra exports and benchmark
 - axial-rod-tube-assembly/instructor-guide.qmd
+- aerial-gondola-suspension-hanger/instructor-guide.qmd
 - cantilevered-operator-seat-bending/instructor-guide.qmd
 - flanged-shaft-coupling/instructor-guide.qmd
 - industrial-robot-arm-shear-moment/instructor-guide.qmd
@@ -54,6 +55,7 @@
 - suspended-equipment-cable-system/instructor-guide.qmd
 - graphify reference: query, path, explain
 - Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly
+- baseball-bat-impact-bending/instructor-guide.qmd
 - Bending Stress in a Cantilevered Industrial Operator-Seat Support
 - Industrial Clevis-Pin Linkage Under Tensile Load
 - Bolt-Group Design for an Industrial Flanged Shaft Coupling
@@ -88,6 +90,10 @@
 - instructor-notes.qmd
 - AGENTS.md
 - extraction-spec.md
+- basketball-hoop-support-arm-bending/instructor-guide.qmd
+- Structural Stress Evaluation of an Aerial Gondola Suspension Hanger
+- Bending Stress in a Baseball Bat During Ball Contact
+- Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -107,7 +113,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (77 total, 5 thin omitted)
+## Communities (83 total, 5 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -172,6 +178,10 @@ Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only
 ### Community 15 - "axial-rod-tube-assembly/instructor-guide.qmd"
 Cohesion: 0.18
 Nodes (8): Assignment Options, Generated Question Set and Solutions, Instructor Notes and Model Limitations, Instructor Solution Summary, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
+
+### Community 16 - "aerial-gondola-suspension-hanger/instructor-guide.qmd"
+Cohesion: 0.22
+Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
 
 ### Community 17 - "cantilevered-operator-seat-bending/instructor-guide.qmd"
 Cohesion: 0.22
@@ -264,6 +274,10 @@ Nodes (5): For /graphify explain, For /graphify path, graphify reference: query,
 ### Community 39 - "Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly"
 Cohesion: 0.33
 Nodes (5): Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components
+
+### Community 40 - "baseball-bat-impact-bending/instructor-guide.qmd"
+Cohesion: 0.22
+Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
 
 ### Community 41 - "Bending Stress in a Cantilevered Industrial Operator-Seat Support"
 Cohesion: 0.33
@@ -381,8 +395,24 @@ Nodes (3): Industry Scenario, Question 1 — Design and Commercialization Consid
 Cohesion: 0.67
 Nodes (3): 10. Packet Separation, Instructor packet contains, Student packet contains
 
+### Community 79 - "basketball-hoop-support-arm-bending/instructor-guide.qmd"
+Cohesion: 0.22
+Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
+
+### Community 80 - "Structural Stress Evaluation of an Aerial Gondola Suspension Hanger"
+Cohesion: 0.33
+Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Structural Stress Evaluation of an Aerial Gondola Suspension Hanger, System Components
+
+### Community 81 - "Bending Stress in a Baseball Bat During Ball Contact"
+Cohesion: 0.33
+Nodes (5): Bending Stress in a Baseball Bat During Ball Contact, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components
+
+### Community 82 - "Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk"
+Cohesion: 0.33
+Nodes (5): Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components
+
 ## Knowledge Gaps
-- **425 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+420 more)
+- **452 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+447 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -390,11 +420,11 @@ Nodes (3): 10. Packet Separation, Instructor packet contains, Student packet con
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `Supplemental Instructor Background` connect `Supplemental Instructor Background` to `jib-crane-battery-pack/index.qmd`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _425 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _452 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**

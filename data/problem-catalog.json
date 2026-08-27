@@ -1498,6 +1498,551 @@
     ]
   },
   {
+    "id": "MOS-BASKETBALL-HOOP-SU-001",
+    "slug": "basketball-hoop-support-arm-bending",
+    "title": "Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk",
+    "studentDocumentTitle": "Student Homework Questions - Basketball Hoop Support Arm",
+    "instructorDocumentTitle": "Instructor Answers - Basketball Hoop Support Arm",
+    "summary": "A wall-mounted basketball-hoop problem integrating cantilever idealization, reactions, internal shear and moment, bending and shear stress, factor of safety, beam deflection, and stiffness-based sizing.",
+    "textbookChapters": [
+      "Internal loadings in structural members",
+      "Shear and moment diagrams",
+      "The flexure formula",
+      "Transverse shear",
+      "Deflection of beams and shafts"
+    ],
+    "derivedPlaceholders": [
+      "hoop_Ax_kN",
+      "hoop_Ay_kN",
+      "hoop_MA_kNm",
+      "hoop_V_kN",
+      "hoop_Mmax_kNm",
+      "hoop_area_mm2",
+      "hoop_I_mm4",
+      "hoop_c_mm",
+      "hoop_sigma_max_MPa",
+      "hoop_tau_max_MPa",
+      "hoop_fos",
+      "hoop_strength_assessment",
+      "hoop_tip_deflection_mm",
+      "hoop_deflection_assessment",
+      "hoop_h_min_mm",
+      "hoop_h_recommended_mm",
+      "hoop_revised_deflection_mm",
+      "hoop_revised_fos",
+      "hoop_revised_assessment",
+      "hoop_engineering_assessment"
+    ],
+    "image": "problems/basketball-hoop-support-arm-bending/assets/basketball-hoop-industry-context.jpeg",
+    "idealizedImage": "problems/basketball-hoop-support-arm-bending/assets/basketball-hoop-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference idealization of the basketball-hoop support arm as a cantilever beam fixed at A, loaded downward by P at free end B over length L_AB, with a solid rectangular section of width b and height h.",
+    "source": "problems/basketball-hoop-support-arm-bending/index.html",
+    "problemStatement": "<p>Wall-mounted basketball goals use a horizontal structural arm to position the backboard and rim away from the supporting wall. During a forceful dunk, load from the rim passes through the backboard/frame assembly into the horizontal arm and then into the wall-mounted bracket.</p><p>The actual short-duration interaction is not derived from player mass, velocity, impact duration, or rim compliance. Instead, the transferred demand is represented by an instructor-specified equivalent downward design load <em>P</em> at point B. The horizontal arm is modeled as a straight, prismatic cantilever with an equivalent solid rectangular section so its internal shear, bending moment, stress, and end deflection can be evaluated.</p>",
+    "engineeringGoal": "<p>Determine whether the idealized support arm satisfies both the required first-yield bending factor of safety and the allowable free-end deflection. If either criterion is not met, determine a practical section-height modification and state a limitation of the model.</p>",
+    "variables": [
+      {
+        "key": "hoop_P",
+        "symbol": "P",
+        "label": "Equivalent downward design load at B",
+        "value": 4,
+        "unit": "kN",
+        "min": 0.5,
+        "max": 10,
+        "step": 0.1
+      },
+      {
+        "key": "hoop_L_AB",
+        "symbol": "L_AB",
+        "label": "Support-arm length",
+        "value": 1500,
+        "unit": "mm",
+        "min": 500,
+        "max": 3000,
+        "step": 25
+      },
+      {
+        "key": "hoop_b",
+        "symbol": "b",
+        "label": "Equivalent rectangular section width",
+        "value": 50,
+        "unit": "mm",
+        "min": 20,
+        "max": 150,
+        "step": 1
+      },
+      {
+        "key": "hoop_h",
+        "symbol": "h",
+        "label": "Equivalent rectangular section height",
+        "value": 80,
+        "unit": "mm",
+        "min": 40,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "key": "hoop_E",
+        "symbol": "E",
+        "label": "Elastic modulus of steel",
+        "value": 200,
+        "unit": "GPa",
+        "min": 150,
+        "max": 220,
+        "step": 1
+      },
+      {
+        "key": "hoop_Sy",
+        "symbol": "S_y",
+        "label": "Yield strength of steel",
+        "value": 250,
+        "unit": "MPa",
+        "min": 150,
+        "max": 700,
+        "step": 5
+      },
+      {
+        "key": "hoop_n_req",
+        "symbol": "n_req",
+        "label": "Required bending factor of safety",
+        "value": 2,
+        "unit": "-",
+        "min": 1,
+        "max": 5,
+        "step": 0.1
+      },
+      {
+        "key": "hoop_delta_allow",
+        "symbol": "delta_allow",
+        "label": "Allowable downward deflection at B",
+        "value": 10,
+        "unit": "mm",
+        "min": 2,
+        "max": 30,
+        "step": 0.5
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "sports equipment",
+          "structural function",
+          "load transfer"
+        ],
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Explain the structural function of the wall-mounted goal support."
+        ],
+        "gradingNotes": "<p>Require the positioning function and transfer of vertical use loads into the wall.</p>",
+        "commonMistakes": "<p>Describing only the rim or backboard without identifying the horizontal arm and wall load path.</p>",
+        "student": "<p>Based on the photograph and component list, explain the primary structural function of the wall-mounted basketball-goal support system.</p>",
+        "instructor": "<p>The support system holds the backboard and rim at the required position and transfers their vertical use loads into the wall. The horizontal arm provides the primary load path between the backboard assembly and wall-mounted support.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Load",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "equivalent load",
+          "transverse load",
+          "load identification"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the external load used in the simplified analysis."
+        ],
+        "gradingNotes": "<p>Students must distinguish the assigned equivalent load from a measured player-impact force.</p>",
+        "commonMistakes": "<p>Attempting to calculate impact force from player mass or treating P as a verified LeBron James force.</p>",
+        "student": "<p>Identify the major external load that the horizontal support arm carries in the simplified problem. Where does it enter the arm?</p>",
+        "instructor": "<p>The dunk creates a downward demand at the rim. The detailed impact event is replaced by an equivalent downward design load <em>P</em> transmitted through the rim/backboard assembly to point B of the horizontal support arm.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Support and Boundary Condition",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "fixed support",
+          "wall bracket",
+          "boundary condition"
+        ],
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Idealize the wall bracket as a beam restraint."
+        ],
+        "gradingNotes": "<p>Require a fixed support that restrains translation and rotation.</p>",
+        "commonMistakes": "<p>Modeling the wall connection as a pin and omitting its reaction moment.</p>",
+        "student": "<p>Where is the support arm restrained by the building structure, and what support condition is appropriate for a first Mechanics of Materials idealization?</p>",
+        "instructor": "<p>The arm is restrained at the wall-mounted bracket. It is idealized as fixed, preventing horizontal translation, vertical translation, and rotation.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path",
+          "shear",
+          "bending moment"
+        ],
+        "type": "load path",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Trace the rim load to the building support."
+        ],
+        "gradingNotes": "<p>Look for the complete rim-to-wall sequence and internal shear and bending in the arm.</p>",
+        "commonMistakes": "<p>Stopping the load path at the backboard or bracket rather than continuing into the wall.</p>",
+        "student": "<p>Trace the load path from the basketball rim and backboard to the building wall. Identify where shear force and bending moment develop.</p>",
+        "instructor": "<p>Load enters at the rim, transfers through the backboard/frame assembly to point B, travels through the horizontal arm to the wall bracket, and then enters the wall. The arm carries transverse shear and bending moment, with the largest bending-moment magnitude at the fixed wall end.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Component and Location",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "critical section",
+          "cantilever bending",
+          "fixed end"
+        ],
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Predict the critical section for cantilever bending."
+        ],
+        "gradingNotes": "<p>Require the arm section adjacent to the fixed support and a moment-based explanation.</p>",
+        "commonMistakes": "<p>Selecting the free end because that is where the load is applied.</p>",
+        "student": "<p>Which component and section are most likely to govern the bending response of the simplified system? Explain why.</p>",
+        "instructor": "<p>The horizontal support arm is the primary component. Its section adjacent to the fixed wall support is critical because the bending-moment magnitude is maximum there.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Responses",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "bending strength",
+          "beam deflection",
+          "transverse shear"
+        ],
+        "type": "scope identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Distinguish primary, secondary, and excluded responses."
+        ],
+        "gradingNotes": "<p>Bending strength and deflection are primary; transverse shear is secondary.</p>",
+        "commonMistakes": "<p>Treating buckling, fatigue, connectors, or impact dynamics as part of the base calculation.</p>",
+        "student": "<p>Rank the responses most relevant to this problem: bending strength, transverse shear, deflection, buckling, fatigue, and connector demand.</p>",
+        "instructor": "<p>Bending strength and beam deflection are primary. Transverse shear is a secondary check. Buckling, fatigue, and connector demand are excluded from the base problem.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "loading",
+          "geometry",
+          "material properties"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify inputs controlling bending stress and deflection."
+        ],
+        "gradingNotes": "<p>Expect P, L_AB, b, h, E, S_y, n_req, and delta_allow.</p>",
+        "commonMistakes": "<p>Omitting elastic modulus from the deflection analysis or yield strength from the strength check.</p>",
+        "student": "<p>Identify the loading, geometric, material, and design quantities that affect bending stress and support-arm deflection.</p>",
+        "instructor": "<p>The relevant quantities are load <em>P</em>, arm length <em>L</em><sub>AB</sub>, width <em>b</em>, height <em>h</em>, elastic modulus <em>E</em>, yield strength <em>S</em><sub>y</sub>, required factor of safety <em>n</em><sub>req</sub>, and allowable deflection &delta;<sub>allow</sub>.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "cantilever beam",
+          "free-body diagram",
+          "rectangular section"
+        ],
+        "type": "idealization",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Convert the real assembly into a cantilever-beam model."
+        ],
+        "gradingNotes": "<p>Require the fixed wall support, downward end load, beam span, and rectangular-section dimensions.</p>",
+        "commonMistakes": "<p>Showing the instructor reference figure before developing an independent model or omitting the fixed-end moment.</p>",
+        "student": "<p>Convert the real basketball-goal support into a simplified Mechanics of Materials model that preserves the dominant vertical load path. Show the wall restraint, downward applied load, beam span, and cross-sectional dimensions needed for bending and deflection calculations.</p><p><strong>Student model / free-body diagram space:</strong></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>",
+        "instructor": "<p>A suitable model is a straight, prismatic cantilever beam fixed at the wall and loaded downward at its free end. The bracket, bolts, backboard frame, and rim details are replaced by a fixed support and equivalent end load, and the arm is represented by a solid rectangular section.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "Euler-Bernoulli beam",
+          "linear elasticity",
+          "model limitations"
+        ],
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Apply and evaluate the assumptions bounding the beam model."
+        ],
+        "gradingNotes": "<p>Require consistent use of the listed idealizations and recognition that P is an equivalent teaching load.</p>",
+        "commonMistakes": "<p>Claiming that the model includes impact, fatigue, bracket flexibility, or local connection stresses.</p>",
+        "student": "<p>Use the following assumptions:</p><ul><li>The arm is straight, prismatic, and represented by an equivalent solid rectangular section.</li><li>The wall connection is perfectly fixed.</li><li>The dunk demand is represented by one equivalent downward end load <em>P</em>.</li><li>Steel is homogeneous, isotropic, and linearly elastic for deflection.</li><li>Small deformation and Euler-Bernoulli beam theory apply; transverse shear deformation is neglected.</li><li>Arm self-weight, local bracket/bolt/weld stresses, stress concentrations, backboard load eccentricity, fatigue, vibration, and impact dynamics are excluded.</li></ul><p>For the default geometry, <em>L</em>/<em>h</em> = 18.75, supporting the beam approximation for this instructional model.</p>",
+        "instructor": "<p>Students should apply all assumptions consistently and should not interpret the equivalent load as a measured player force or the solid rectangle as the actual fabricated arm.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan",
+          "beam stress",
+          "beam deflection"
+        ],
+        "type": "solution planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Organize the strength and stiffness analysis."
+        ],
+        "gradingNotes": "<p>Require reactions, internal resultants, section properties, stress, factor of safety, deflection, and assessment.</p>",
+        "commonMistakes": "<p>Substituting values before identifying the governing equations or omitting either design criterion.</p>",
+        "student": "<p>Before calculating, describe the sequence required to determine whether the support arm satisfies both strength and stiffness requirements.</p>",
+        "instructor": "<p>Determine the fixed-support reactions; obtain internal shear and bending moment and identify the critical section; calculate rectangular-section properties; calculate bending and transverse shear stresses; evaluate the bending factor of safety; calculate free-end deflection; compare both criteria; and make a mechanics-based recommendation.</p>"
+      },
+      {
+        "id": "q11",
+        "title": "Support Reactions",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "beam reactions",
+          "fixed support",
+          "equilibrium"
+        ],
+        "type": "reaction calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Determine force and moment reactions at the fixed support."
+        ],
+        "gradingNotes": "<p>Accept a clearly stated sign convention; magnitudes must be correct.</p>",
+        "commonMistakes": "<p>Omitting the reaction moment or mixing kN-mm and kN-m.</p>",
+        "student": "<p>Using the instructor reference model, identify the support condition at A and determine the horizontal reaction, vertical reaction, and reaction-moment magnitudes.</p>",
+        "instructor": "<p>A is fixed. From equilibrium, <em>A</em><sub>x</sub> = <strong>{{hoop_Ax_kN}} kN</strong>, |<em>A</em><sub>y</sub>| = <em>P</em> = <strong>{{hoop_Ay_kN}} kN</strong>, and |<em>M</em><sub>A</sub>| = <em>PL</em><sub>AB</sub> = <strong>{{hoop_MA_kNm}} kN&middot;m</strong>. The reaction force and moment oppose the effects of the applied load.</p>"
+      },
+      {
+        "id": "q12",
+        "title": "Internal Shear and Bending Moment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "internal shear force",
+          "bending moment",
+          "critical section"
+        ],
+        "type": "internal-resultant calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Determine internal shear and maximum bending moment."
+        ],
+        "gradingNotes": "<p>Require constant shear magnitude and a linear moment diagram with its maximum at A.</p>",
+        "commonMistakes": "<p>Placing maximum moment at the loaded free end.</p>",
+        "student": "<p>Determine the internal shear force and bending moment in member AB and identify where the bending-moment magnitude is maximum.</p>",
+        "instructor": "<p>The shear-force magnitude is <em>V</em> = <em>P</em> = <strong>{{hoop_V_kN}} kN</strong>. The bending-moment magnitude increases linearly toward the wall and reaches |<em>M</em>|<sub>max</sub> = <em>PL</em><sub>AB</sub> = <strong>{{hoop_Mmax_kNm}} kN&middot;m</strong> at A.</p>"
+      },
+      {
+        "id": "q13",
+        "title": "Section Properties",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "rectangular section",
+          "area",
+          "second moment of area"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate rectangular-section properties for vertical bending."
+        ],
+        "gradingNotes": "<p>Require A = bh, I = bh^3/12, and c = h/2 about the horizontal centroidal axis.</p>",
+        "commonMistakes": "<p>Interchanging b and h in the cubic inertia term.</p>",
+        "student": "<p>Determine the area <em>A</em>, second moment of area <em>I</em>, and extreme-fiber distance <em>c</em> for the equivalent rectangular arm.</p>",
+        "instructor": "<p><em>A</em> = <em>bh</em> = <strong>{{hoop_area_mm2}} mm<sup>2</sup></strong>. For vertical bending, <em>I</em> = <em>bh</em><sup>3</sup>/12 = <strong>{{hoop_I_mm4}} mm<sup>4</sup></strong>, and <em>c</em> = <em>h</em>/2 = <strong>{{hoop_c_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "q14",
+        "title": "Maximum Bending Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "maximum bending stress",
+          "flexure formula",
+          "extreme fiber"
+        ],
+        "type": "stress calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Apply the flexure formula at the critical section."
+        ],
+        "gradingNotes": "<p>Require moment in N-mm with dimensions in mm.</p>",
+        "commonMistakes": "<p>Using kN-m directly with mm-based section properties or omitting c.</p>",
+        "student": "<p>Determine the maximum bending normal stress at the critical section adjacent to A.</p>",
+        "instructor": "<p>Using &sigma;<sub>max</sub> = <em>M</em><sub>max</sub><em>c</em>/<em>I</em>, the maximum bending-stress magnitude is <strong>{{hoop_sigma_max_MPa}} MPa</strong>. It occurs at the outer fibers of the fixed-end section.</p>"
+      },
+      {
+        "id": "q15",
+        "title": "Maximum Transverse Shear Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "transverse shear stress",
+          "rectangular section",
+          "neutral axis"
+        ],
+        "type": "stress calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate and interpret maximum shear stress in a rectangle."
+        ],
+        "gradingNotes": "<p>Require tau_max = 1.5V/A and identify its neutral-axis location.</p>",
+        "commonMistakes": "<p>Comparing bending and shear stresses as though they occur at the same point.</p>",
+        "student": "<p>Determine the maximum transverse shear stress in the rectangular section and compare its magnitude and location with the maximum bending stress.</p>",
+        "instructor": "<p>For the solid rectangle, &tau;<sub>max</sub> = 1.5<em>V</em>/<em>A</em> = <strong>{{hoop_tau_max_MPa}} MPa</strong> at the neutral axis. The maximum bending stress is <strong>{{hoop_sigma_max_MPa}} MPa</strong> at the outer fibers, where transverse shear is zero. Bending governs the simplified strength response.</p>"
+      },
+      {
+        "id": "q16",
+        "title": "Strength Factor of Safety",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "factor of safety",
+          "yield strength",
+          "strength assessment"
+        ],
+        "type": "strength assessment",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Evaluate the first-yield bending criterion."
+        ],
+        "gradingNotes": "<p>Use the outer-fiber uniaxial bending stress and compare with n_req.</p>",
+        "commonMistakes": "<p>Using n_req as a multiplier on yield strength or combining stresses from different section locations.</p>",
+        "student": "<p>Determine the factor of safety against first yield based on maximum bending stress. Does the arm satisfy the required value <em>n</em><sub>req</sub>?</p>",
+        "instructor": "<p>At the critical outer fiber, F.S. = <em>S</em><sub>y</sub>/&sigma;<sub>max</sub> = <strong>{{hoop_fos}}</strong>. {{hoop_strength_assessment}}</p>"
+      },
+      {
+        "id": "q17",
+        "title": "Free-End Deflection",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "beam deflection",
+          "cantilever end load",
+          "serviceability"
+        ],
+        "type": "deflection calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate and assess cantilever free-end deflection."
+        ],
+        "gradingNotes": "<p>Require E in N/mm^2, I in mm^4, and a downward displacement conclusion.</p>",
+        "commonMistakes": "<p>Using E in GPa without conversion or omitting the cube on L.</p>",
+        "student": "<p>Determine the downward deflection of point B using the cantilever end-load relation and compare it with the allowable deflection.</p>",
+        "instructor": "<p>&delta;<sub>B</sub> = <em>PL</em><sub>AB</sub><sup>3</sup>/(3<em>EI</em>) = <strong>{{hoop_tip_deflection_mm}} mm downward</strong>. {{hoop_deflection_assessment}}</p>"
+      },
+      {
+        "id": "q18",
+        "title": "Stiffness-Based Section Modification",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "minimum height",
+          "section sizing",
+          "serviceability"
+        ],
+        "type": "section-sizing calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Solve the deflection criterion for minimum section height."
+        ],
+        "gradingNotes": "<p>Require the calculated minimum and upward whole-millimeter rounding, followed by rechecking both criteria.</p>",
+        "commonMistakes": "<p>Rounding the required height downward or failing to re-evaluate strength.</p>",
+        "student": "<p>Keeping <em>P</em>, <em>L</em><sub>AB</sub>, <em>b</em>, and <em>E</em> unchanged, determine the minimum section height required to satisfy the allowable deflection. Round upward to a whole millimeter and recheck deflection and bending factor of safety.</p>",
+        "instructor": "<p>Solving &delta;<sub>allow</sub> = <em>PL</em><sup>3</sup>/(3<em>EI</em>) with <em>I</em> = <em>bh</em><sup>3</sup>/12 gives <em>h</em><sub>min</sub> = <strong>{{hoop_h_min_mm}} mm</strong>. Rounding upward gives <strong>{{hoop_h_recommended_mm}} mm</strong>. The revised deflection is <strong>{{hoop_revised_deflection_mm}} mm</strong>, and the revised bending factor of safety is <strong>{{hoop_revised_fos}}</strong>. {{hoop_revised_assessment}}</p>"
+      },
+      {
+        "id": "q19",
+        "title": "Engineering Assessment and Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "governing response",
+          "engineering recommendation",
+          "model limitations"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Synthesize strength, stiffness, modification, and model limitations."
+        ],
+        "gradingNotes": "<p>Require separate strength and serviceability conclusions, a mechanics-based recommendation, and one limitation.</p>",
+        "commonMistakes": "<p>Calling the actual basketball system safe based only on the simplified member model.</p>",
+        "student": "<p>Summarize the governing response. State whether strength and stiffness requirements are met, recommend one mechanics-based change if needed, and state one important limitation.</p>",
+        "instructor": "<p>{{hoop_engineering_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - Baseline hoop support",
+        "description": "Faculty-reviewed cantilever bending, shear, strength, deflection, and section-height assessment using the submitted teaching values.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19"
+        ],
+        "variables": {
+          "hoop_P": 4,
+          "hoop_L_AB": 1500,
+          "hoop_b": 50,
+          "hoop_h": 80,
+          "hoop_E": 200,
+          "hoop_Sy": 250,
+          "hoop_n_req": 2,
+          "hoop_delta_allow": 10
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-SEAT-023",
     "slug": "cantilevered-operator-seat-bending",
     "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",

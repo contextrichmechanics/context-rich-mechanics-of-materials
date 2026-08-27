@@ -1,0 +1,42 @@
+---
+title: "Instructor Guide - Basketball Hoop Support Arm"
+subtitle: "Representative Solutions for Cantilever Bending, Shear, and Deflection"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+Award credit for a defensible cantilever idealization, complete free-body diagram, consistent units, correct reactions and internal resultants, accurate rectangular-section properties, correct stress and deflection calculations, and an engineering recommendation bounded by the stated assumptions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="basketball-hoop-support-arm-bending-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "basketball-hoop-support-arm-bending", targetId: "basketball-hoop-support-arm-bending-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The arm is modeled as a straight, prismatic Euler-Bernoulli cantilever with an equivalent solid rectangular section, a perfectly fixed wall end, a concentrated equivalent static load, small deformation, and homogeneous linear-elastic steel. The model neglects self-weight, the actual hollow construction, bracket and anchor flexibility, bolt and weld stresses, local stress concentrations, load eccentricity in the backboard/rim assembly, fatigue, vibration, impact dynamics, and code-specific basketball-equipment requirements.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization and assumptions: 20%;
+- reactions, internal resultants, and section properties: 20%;
+- stress, factor of safety, and deflection calculations: 30%;
+- engineering recommendation and limitations: 10%.

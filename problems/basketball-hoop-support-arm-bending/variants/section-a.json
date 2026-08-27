@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - Baseline hoop support",
+  "description": "Faculty-reviewed cantilever bending, shear, strength, deflection, and section-height assessment using the submitted teaching values.",
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19"],
+  "variables": {"hoop_P":4.0,"hoop_L_AB":1500,"hoop_b":50,"hoop_h":80,"hoop_E":200,"hoop_Sy":250,"hoop_n_req":2.0,"hoop_delta_allow":10}
+}

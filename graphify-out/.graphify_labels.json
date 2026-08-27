@@ -15,6 +15,7 @@
   "13": "8. Create The Package",
   "14": "graphify reference: extra exports and benchmark",
   "15": "axial-rod-tube-assembly/instructor-guide.qmd",
+  "16": "aerial-gondola-suspension-hanger/instructor-guide.qmd",
   "17": "cantilevered-operator-seat-bending/instructor-guide.qmd",
   "18": "flanged-shaft-coupling/instructor-guide.qmd",
   "19": "industrial-robot-arm-shear-moment/instructor-guide.qmd",
@@ -38,6 +39,7 @@
   "37": "suspended-equipment-cable-system/instructor-guide.qmd",
   "38": "graphify reference: query, path, explain",
   "39": "Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly",
+  "40": "baseball-bat-impact-bending/instructor-guide.qmd",
   "41": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",
   "42": "Industrial Clevis-Pin Linkage Under Tensile Load",
   "43": "Bolt-Group Design for an Industrial Flanged Shaft Coupling",
@@ -75,5 +77,9 @@
   "75": "about.qmd",
   "76": "problem-catalog.js",
   "77": "problem-health.js",
-  "78": "index.qmd"
+  "78": "index.qmd",
+  "79": "basketball-hoop-support-arm-bending/instructor-guide.qmd",
+  "80": "Structural Stress Evaluation of an Aerial Gondola Suspension Hanger",
+  "81": "Bending Stress in a Baseball Bat During Ball Contact",
+  "82": "Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk"
 }

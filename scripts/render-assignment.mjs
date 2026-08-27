@@ -1450,6 +1450,74 @@ function variableMap(problem, currentValues) {
       : `The assigned ${formatDerived(batDiameter, 1)} mm diameter is smaller than the required diameter and is not adequate for this criterion.`;
   }
 
+  const hoopLoadKn = numericValue(values, "hoop_P");
+  const hoopLength = numericValue(values, "hoop_L_AB");
+  const hoopWidth = numericValue(values, "hoop_b");
+  const hoopHeight = numericValue(values, "hoop_h");
+  const hoopElasticModulusGpa = numericValue(values, "hoop_E");
+  const hoopYieldStrength = numericValue(values, "hoop_Sy");
+  const hoopRequiredFos = numericValue(values, "hoop_n_req");
+  const hoopAllowableDeflection = numericValue(values, "hoop_delta_allow");
+
+  if (
+    Number.isFinite(hoopLoadKn) && hoopLoadKn > 0 &&
+    Number.isFinite(hoopLength) && hoopLength > 0 &&
+    Number.isFinite(hoopWidth) && hoopWidth > 0 &&
+    Number.isFinite(hoopHeight) && hoopHeight > 0 &&
+    Number.isFinite(hoopElasticModulusGpa) && hoopElasticModulusGpa > 0 &&
+    Number.isFinite(hoopYieldStrength) && hoopYieldStrength > 0 &&
+    Number.isFinite(hoopRequiredFos) && hoopRequiredFos > 0 &&
+    Number.isFinite(hoopAllowableDeflection) && hoopAllowableDeflection > 0
+  ) {
+    const loadN = hoopLoadKn * 1000;
+    const elasticModulusMpa = hoopElasticModulusGpa * 1000;
+    const momentNmm = loadN * hoopLength;
+    const area = hoopWidth * hoopHeight;
+    const inertia = hoopWidth * hoopHeight ** 3 / 12;
+    const extremeFiber = hoopHeight / 2;
+    const bendingStress = momentNmm * extremeFiber / inertia;
+    const transverseShearStress = 1.5 * loadN / area;
+    const factorOfSafety = hoopYieldStrength / bendingStress;
+    const tipDeflection = loadN * hoopLength ** 3 / (3 * elasticModulusMpa * inertia);
+    const minimumHeight = Math.cbrt(4 * loadN * hoopLength ** 3 /
+      (elasticModulusMpa * hoopWidth * hoopAllowableDeflection));
+    const recommendedHeight = Math.ceil(minimumHeight);
+    const revisedInertia = hoopWidth * recommendedHeight ** 3 / 12;
+    const revisedBendingStress = momentNmm * (recommendedHeight / 2) / revisedInertia;
+    const revisedFactorOfSafety = hoopYieldStrength / revisedBendingStress;
+    const revisedDeflection = loadN * hoopLength ** 3 / (3 * elasticModulusMpa * revisedInertia);
+    const strengthPasses = factorOfSafety >= hoopRequiredFos;
+    const deflectionPasses = tipDeflection <= hoopAllowableDeflection;
+    const revisedPasses = revisedFactorOfSafety >= hoopRequiredFos && revisedDeflection <= hoopAllowableDeflection;
+
+    values.hoop_Ax_kN = formatDerived(0, 1);
+    values.hoop_Ay_kN = formatDerived(hoopLoadKn, 1);
+    values.hoop_MA_kNm = formatDerived(hoopLoadKn * hoopLength / 1000, 2);
+    values.hoop_V_kN = formatDerived(hoopLoadKn, 1);
+    values.hoop_Mmax_kNm = formatDerived(hoopLoadKn * hoopLength / 1000, 2);
+    values.hoop_area_mm2 = formatDerived(area, 0);
+    values.hoop_I_mm4 = formatDerived(inertia, 0);
+    values.hoop_c_mm = formatDerived(extremeFiber, 1);
+    values.hoop_sigma_max_MPa = formatDerived(bendingStress, 2);
+    values.hoop_tau_max_MPa = formatDerived(transverseShearStress, 2);
+    values.hoop_fos = formatDerived(factorOfSafety, 2);
+    values.hoop_strength_assessment = strengthPasses
+      ? `Since ${formatDerived(factorOfSafety, 2)} is greater than or equal to the required value of ${formatDerived(hoopRequiredFos, 1)}, the idealized arm satisfies the assigned first-yield bending-strength requirement.`
+      : `Since ${formatDerived(factorOfSafety, 2)} is less than the required value of ${formatDerived(hoopRequiredFos, 1)}, the idealized arm does not satisfy the assigned first-yield bending-strength requirement.`;
+    values.hoop_tip_deflection_mm = formatDerived(tipDeflection, 2);
+    values.hoop_deflection_assessment = deflectionPasses
+      ? `Since ${formatDerived(tipDeflection, 2)} mm is less than or equal to the ${formatDerived(hoopAllowableDeflection, 1)} mm limit, the arm satisfies the serviceability requirement.`
+      : `Since ${formatDerived(tipDeflection, 2)} mm exceeds the ${formatDerived(hoopAllowableDeflection, 1)} mm limit, the arm does not satisfy the serviceability requirement.`;
+    values.hoop_h_min_mm = formatDerived(minimumHeight, 2);
+    values.hoop_h_recommended_mm = formatDerived(recommendedHeight, 0);
+    values.hoop_revised_deflection_mm = formatDerived(revisedDeflection, 2);
+    values.hoop_revised_fos = formatDerived(revisedFactorOfSafety, 2);
+    values.hoop_revised_assessment = revisedPasses
+      ? "The rounded-up section height satisfies both assigned criteria for the simplified model."
+      : "The rounded-up height satisfies the deflection target, but another assigned criterion still requires revision.";
+    values.hoop_engineering_assessment = `The ${formatDerived(hoopWidth, 0)} mm by ${formatDerived(hoopHeight, 0)} mm idealized arm ${strengthPasses ? "satisfies" : "does not satisfy"} the strength requirement with F.S. = ${formatDerived(factorOfSafety, 2)} and ${deflectionPasses ? "satisfies" : "does not satisfy"} the stiffness requirement with a predicted downward deflection of ${formatDerived(tipDeflection, 2)} mm. ${deflectionPasses ? "No stiffness increase is required by the assigned limit." : `Increasing the equivalent section height to at least ${formatDerived(recommendedHeight, 0)} mm is an efficient stiffness-based modification; the revised model predicts ${formatDerived(revisedDeflection, 2)} mm deflection and F.S. = ${formatDerived(revisedFactorOfSafety, 2)}.`} A major limitation is that the actual hollow arm, bracket, anchors, welds, load eccentricity, stress concentrations, fatigue, and dynamic dunk response are not modeled.`;
+  }
+
   const hangerWeight = numericValue(values, "hanger_W");
   const hangerSide = numericValue(values, "hanger_s");
   const hangerEccentricityFt = numericValue(values, "hanger_e");

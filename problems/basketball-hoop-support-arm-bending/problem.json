@@ -1,0 +1,16 @@
+{
+  "id": "MOS-BASKETBALL-HOOP-SU-001",
+  "slug": "basketball-hoop-support-arm-bending",
+  "title": "Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk",
+  "studentDocumentTitle": "Student Homework Questions - Basketball Hoop Support Arm",
+  "instructorDocumentTitle": "Instructor Answers - Basketball Hoop Support Arm",
+  "summary": "A wall-mounted basketball-hoop problem integrating cantilever idealization, reactions, internal shear and moment, bending and shear stress, factor of safety, beam deflection, and stiffness-based sizing.",
+  "textbookChapters": ["Internal loadings in structural members", "Shear and moment diagrams", "The flexure formula", "Transverse shear", "Deflection of beams and shafts"],
+  "derivedPlaceholders": ["hoop_Ax_kN", "hoop_Ay_kN", "hoop_MA_kNm", "hoop_V_kN", "hoop_Mmax_kNm", "hoop_area_mm2", "hoop_I_mm4", "hoop_c_mm", "hoop_sigma_max_MPa", "hoop_tau_max_MPa", "hoop_fos", "hoop_strength_assessment", "hoop_tip_deflection_mm", "hoop_deflection_assessment", "hoop_h_min_mm", "hoop_h_recommended_mm", "hoop_revised_deflection_mm", "hoop_revised_fos", "hoop_revised_assessment", "hoop_engineering_assessment"],
+  "image": "assets/basketball-hoop-industry-context.jpeg",
+  "idealizedImage": "assets/basketball-hoop-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference idealization of the basketball-hoop support arm as a cantilever beam fixed at A, loaded downward by P at free end B over length L_AB, with a solid rectangular section of width b and height h.",
+  "source": "index.html",
+  "problemStatement": "<p>Wall-mounted basketball goals use a horizontal structural arm to position the backboard and rim away from the supporting wall. During a forceful dunk, load from the rim passes through the backboard/frame assembly into the horizontal arm and then into the wall-mounted bracket.</p><p>The actual short-duration interaction is not derived from player mass, velocity, impact duration, or rim compliance. Instead, the transferred demand is represented by an instructor-specified equivalent downward design load <em>P</em> at point B. The horizontal arm is modeled as a straight, prismatic cantilever with an equivalent solid rectangular section so its internal shear, bending moment, stress, and end deflection can be evaluated.</p>",
+  "engineeringGoal": "<p>Determine whether the idealized support arm satisfies both the required first-yield bending factor of safety and the allowable free-end deflection. If either criterion is not met, determine a practical section-height modification and state a limitation of the model.</p>"
+}

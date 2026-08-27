@@ -1,0 +1,28 @@
+---
+title: "Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk"
+description: "A wall-mounted basketball-hoop problem on cantilever reactions, bending and shear stress, factor of safety, beam deflection, and stiffness-based sizing."
+image: "assets/basketball-hoop-industry-context.jpeg"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [cantilever beam, beam reactions, internal shear force, bending moment, rectangular section, second moment of area, flexure formula, maximum bending stress, transverse shear stress, factor of safety, beam deflection, serviceability, section sizing, free-body diagram, engineering judgment]
+course_topics: [bending, transverse shear, beam deflection]
+textbook_chapters: [Internal loadings in structural members, Shear and moment diagrams, The flexure formula, Transverse shear, Deflection of beams and shafts]
+problem_types: [load-path analysis, beam idealization, free-body diagram, reaction calculation, internal-resultant calculation, section-property calculation, stress calculation, factor-of-safety assessment, deflection calculation, section sizing, engineering assessment]
+competencies: [load-path identification, beam idealization, equilibrium, internal shear and bending moment, section properties, flexure formula, transverse shear, factor of safety, beam deflection, engineering judgment]
+industries: [sports equipment, basketball, structural support hardware]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-BASKETBALL-HOOP-SU-001"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+The base problem replaces the transient dunk interaction with an instructor-specified equivalent end load and models the horizontal arm as a solid rectangular cantilever. Connection stresses, fatigue, vibration, impact dynamics, and local stress concentrations are intentionally excluded.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=basketball-hoop-support-arm-bending){.btn .btn-secondary}

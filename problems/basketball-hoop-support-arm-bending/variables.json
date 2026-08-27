@@ -1,0 +1,10 @@
+[
+  {"key":"hoop_P","symbol":"P","label":"Equivalent downward design load at B","value":4.0,"unit":"kN","min":0.5,"max":10,"step":0.1},
+  {"key":"hoop_L_AB","symbol":"L_AB","label":"Support-arm length","value":1500,"unit":"mm","min":500,"max":3000,"step":25},
+  {"key":"hoop_b","symbol":"b","label":"Equivalent rectangular section width","value":50,"unit":"mm","min":20,"max":150,"step":1},
+  {"key":"hoop_h","symbol":"h","label":"Equivalent rectangular section height","value":80,"unit":"mm","min":40,"max":200,"step":1},
+  {"key":"hoop_E","symbol":"E","label":"Elastic modulus of steel","value":200,"unit":"GPa","min":150,"max":220,"step":1},
+  {"key":"hoop_Sy","symbol":"S_y","label":"Yield strength of steel","value":250,"unit":"MPa","min":150,"max":700,"step":5},
+  {"key":"hoop_n_req","symbol":"n_req","label":"Required bending factor of safety","value":2.0,"unit":"-","min":1,"max":5,"step":0.1},
+  {"key":"hoop_delta_allow","symbol":"delta_allow","label":"Allowable downward deflection at B","value":10,"unit":"mm","min":2,"max":30,"step":0.5}
+]

@@ -30,6 +30,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-BASKETBALL-HOOP-SU-001",
+    "slug": "basketball-hoop-support-arm-bending",
+    "title": "Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk",
+    "status": "OK",
+    "variables": 8,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-SEAT-023",
     "slug": "cantilevered-operator-seat-bending",
     "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",
