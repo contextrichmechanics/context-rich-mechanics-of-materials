@@ -1794,6 +1794,9 @@
       : null;
     const values = variableMap(problem, variant?.variables || {});
     const isInstructor = options.type === "instructor";
+    const showIdealizedImage =
+      isInstructor ||
+      problem.showIdealizedImageInStudentPacket === true;
     const questions = selectedQuestions(problem, variant, options.type);
     const numberById = new Map(questions.map((question, index) => [question.id, index + 1]));
     const title = isInstructor ? "Selected Questions and Answers" : "Selected Homework Questions";
@@ -1804,7 +1807,7 @@
         <h1>${title}</h1>
         ${renderQuestionSection(problem, questions, questionSections[0], isInstructor, values, numberById)}
         ${renderQuestionSection(problem, questions, questionSections[1], isInstructor, values, numberById)}
-        ${renderIdealizedImage(problem)}
+        ${showIdealizedImage ? renderIdealizedImage(problem) : ""}
         ${renderVariableTable(problem, values)}
         ${renderQuestionSection(problem, questions, questionSections[2], isInstructor, values, numberById)}
       </section>`;

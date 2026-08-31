@@ -259,10 +259,7 @@ Justify:
 ::: {.callout-note}
 ## Instructor release
 
-First submit your own 2D idealization. The instructor may then release the reference idealized model for the numerical-analysis phase. Example
-diagram,
-
-![Example: two-dimensional idealized side view of the wall-mounted swing-jib crane.](assets/jib-crane-industry-2d.png){fig-alt="Two-dimensional idealized side view showing the wall supports, horizontal boom, diagonal brace, trolley position, hook height, and battery-pack mass." width=100%}
+First submit your own 2D idealization. The instructor may then release the reference idealized model for the numerical-analysis phase.
 
 :::
 

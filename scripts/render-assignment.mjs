@@ -1839,6 +1839,9 @@ function renderQuestionSectionHtml(problem, questions, section, isInstructor, va
 
 function renderBody(problem, variant, type) {
   const isInstructor = type === "instructor";
+  const showIdealizedImage =
+    isInstructor ||
+    problem.showIdealizedImageInStudentPacket === true;
   const documentTitle = isInstructor ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
   const values = { ...(variant?.variables || {}) };
   const questions = selectedQuestions(problem, variant, type);
@@ -1862,7 +1865,7 @@ function renderBody(problem, variant, type) {
   <section><h2>Engineering Design Goal</h2>${substitute(problem.engineeringGoal, problem, values)}</section>
   ${renderQuestionSectionHtml(problem, questions, questionSections[0], isInstructor, values, numberById)}
   ${renderQuestionSectionHtml(problem, questions, questionSections[1], isInstructor, values, numberById)}
-  ${renderIdealizedImageHtml(problem)}
+  ${showIdealizedImage ? renderIdealizedImageHtml(problem) : ""}
   <section><h2>Given Data</h2><table><thead><tr><th>Symbol</th><th>Quantity</th><th>Value</th></tr></thead><tbody>${rows}</tbody></table></section>
   ${renderQuestionSectionHtml(problem, questions, questionSections[2], isInstructor, values, numberById)}
 </article>`;
@@ -1887,6 +1890,9 @@ ${renderBody(problem, variant, type)}
 function qmdDocument(problem, variant, type, outDir) {
   const title = type === "instructor" ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
   const isInstructor = type === "instructor";
+  const showIdealizedImage =
+    isInstructor ||
+    problem.showIdealizedImageInStudentPacket === true;
   const values = { ...(variant?.variables || {}) };
   const questions = selectedQuestions(problem, variant, type);
   const numberById = new Map(questions.map((question, index) => [question.id, index + 1]));
@@ -1954,7 +1960,7 @@ ${renderQuestionSection(questionSections[0])}
 
 ${renderQuestionSection(questionSections[1])}
 
-${idealizedImage ? `## Instructor Reference Idealization and Input Variables\n\n${idealizedImage}\n\n` : ""}## Given Data
+${showIdealizedImage && idealizedImage ? `## Instructor Reference Idealization and Input Variables\n\n${idealizedImage}\n\n` : ""}## Given Data
 
 | Symbol | Quantity | Value |
 |---|---|---:|

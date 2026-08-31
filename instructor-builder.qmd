@@ -1899,6 +1899,9 @@ function renderQuestionImage(problem, question, embeddedImages = {}) {
 function renderDocumentBody(type, embeddedImages = {}) {
   const problem = selectedProblem();
   const isInstructor = type === "instructor";
+  const showIdealizedImage =
+    isInstructor ||
+    problem.showIdealizedImageInStudentPacket === true;
   const documentTitle = isInstructor ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
   const questions = selectedQuestions(problem, type);
   const numberById = new Map(questions.map((question, index) => [question.id, index + 1]));
@@ -1929,7 +1932,7 @@ function renderDocumentBody(type, embeddedImages = {}) {
 
       ${renderQuestionSection(problem, questions, questionSections[1], isInstructor, numberById, embeddedImages)}
 
-      ${renderIdealizedImage(problem, embeddedImages)}
+      ${showIdealizedImage ? renderIdealizedImage(problem, embeddedImages) : ""}
 
       <section>
         <h2>Given Data</h2>
@@ -2029,10 +2032,14 @@ async function fetchEmbeddedImage(source) {
   return isSvg ? svgBlobToPngDataUrl(blob) : blobToDataUrl(blob);
 }
 
-async function embeddedPacketImages(problem, questions) {
+async function embeddedPacketImages(problem, questions, type) {
+  const isInstructor = type === "instructor";
+  const showIdealizedImage =
+    isInstructor ||
+    problem.showIdealizedImageInStudentPacket === true;
   const sources = [
     packetImageUrl(problem, problem.image),
-    packetImageUrl(problem, problem.idealizedImage),
+    showIdealizedImage ? packetImageUrl(problem, problem.idealizedImage) : "",
     ...questions.map((question) => questionImagePath(problem, question))
   ].filter(Boolean);
   const uniqueSources = [...new Set(sources)];
@@ -2046,7 +2053,7 @@ async function embeddedPacketImages(problem, questions) {
 async function fullHtmlDocument(type) {
   const problem = selectedProblem();
   const questions = selectedQuestions(problem, type);
-  const embeddedImages = await embeddedPacketImages(problem, questions);
+  const embeddedImages = await embeddedPacketImages(problem, questions, type);
   const title = type === "instructor" ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
 
   return `<!doctype html>
