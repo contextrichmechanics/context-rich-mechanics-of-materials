@@ -1,0 +1,45 @@
+---
+title: "Instructor Guide - Basketball-Hoop Bolted Connection"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+These answers are representative. Award credit for a defensible direct-shear idealization, correct equations and units, and a conclusion bounded by the model assumptions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="basketball-hoop-bolted-connection-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "basketball-hoop-bolted-connection",
+    targetId: "basketball-hoop-bolted-connection-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+This is a deliberately limited average direct-shear check. The stated 640 MPa value is the nominal minimum tensile yield strength for property class 8.8; the shear-yield estimate uses the von Mises relation. It is not a certified capacity for the photographed hardware. A complete connection design must also address eccentric bolt-group action, bolt tension, bearing, tear-out, prying, threads in the shear plane, preload and slip, fatigue and impact dynamics, wall anchors, and the actual bracket geometry.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization and assumptions: 20%;
+- mechanics calculations: 40%;
+- engineering assessment and limitations: 20%.

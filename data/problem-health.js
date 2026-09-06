@@ -30,6 +30,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-BASKETBALL-HOOP-BO-001",
+    "slug": "basketball-hoop-bolted-connection",
+    "title": "Direct-Shear Safety Check of Basketball-Hoop Mounting Bolts During a Dunk",
+    "status": "OK",
+    "variables": 6,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-BASKETBALL-HOOP-SU-001",
     "slug": "basketball-hoop-support-arm-bending",
     "title": "Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk",

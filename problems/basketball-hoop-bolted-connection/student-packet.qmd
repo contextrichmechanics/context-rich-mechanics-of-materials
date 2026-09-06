@@ -1,0 +1,26 @@
+---
+title: "Student Packet - Direct-Shear Safety Check of Basketball-Hoop Mounting Bolts During a Dunk"
+subtitle: "Context, Idealization, and Mechanics Analysis"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="basketball-hoop-bolted-connection-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "basketball-hoop-bolted-connection",
+    targetId: "basketball-hoop-bolted-connection-student-questions",
+    type: "student"
+  });
+});
+</script>
+```

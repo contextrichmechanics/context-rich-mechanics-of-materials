@@ -1,23 +1,23 @@
-# Graph Report - context-rich-mechanics-of-materials  (2026-09-06)
+# Graph Report - context-rich-mechanics-of-materials  (2026-08-26)
 
 ## Corpus Check
-- 241 files · ~2,297,169 words
+- 233 files · ~2,277,409 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 737 nodes · 742 edges · 84 communities (79 shown, 5 thin omitted)
+- 721 nodes · 728 edges · 83 communities (78 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9761ba17`
+- Built from commit: `b9bdfc31`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - render-assignment.mjs
 - authoring-guide.qmd
-- 7. Mechanics Analysis Questions
+- MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md
 - Supplemental Instructor Background
 - What You Must Do When Invoked
 - packet-renderer.js
@@ -25,7 +25,7 @@
 - build-catalog.mjs
 - new-problem.mjs
 - AI Agent Project Guide
-- basketball-hoop-bolted-connection/instructor-guide.qmd
+- 7. Mechanics Analysis Questions
 - jib-crane-battery-pack/index.qmd
 - 15. Common Failure Modes
 - 8. Create The Package
@@ -94,7 +94,6 @@
 - Structural Stress Evaluation of an Aerial Gondola Suspension Hanger
 - Bending Stress in a Baseball Bat During Ball Contact
 - Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk
-- Direct-Shear Safety Check of Basketball-Hoop Mounting Bolts During a Dunk
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -114,7 +113,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (84 total, 5 thin omitted)
+## Communities (83 total, 5 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -124,9 +123,9 @@ Nodes (35): catalog, catalogPath, decodeEntities(), documentStyles(), escapeHtml
 Cohesion: 0.06
 Nodes (31): Catalog Metadata, Export Assignments From The Command Line, Images, Package Structure, Problem Health, Purpose, Question Design, Questions (+23 more)
 
-### Community 2 - "7. Mechanics Analysis Questions"
-Cohesion: 0.04
-Nodes (47): 10. Faculty Authoring Guidance, 11. Prompt Format for Automated Problem Generation, 1. Problem Identification and Instructor Setup, 2. System Components, 3. Engineering Context and Main Goal, 4. Context and Mechanics Reasoning Questions, 5. Transition to a Mechanics Model, 6. Instructor Reference Idealization and Input Variables (Instructor Only) (+39 more)
+### Community 2 - "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md"
+Cohesion: 0.06
+Nodes (34): 10. Faculty Authoring Guidance, 11. Prompt Format for Automated Problem Generation, 1. Problem Identification and Instructor Setup, 2. System Components, 3. Engineering Context and Main Goal, 4. Context and Mechanics Reasoning Questions, 5. Transition to a Mechanics Model, 6. Instructor Reference Idealization and Input Variables (Instructor Only) (+26 more)
 
 ### Community 3 - "Supplemental Instructor Background"
 Cohesion: 0.06
@@ -156,9 +155,9 @@ Nodes (12): existingProblemIds(), id, nextProblemId(), problem, problemPath, pro
 Cohesion: 0.15
 Nodes (13): 11. Catalog And Search Integration, 13. Git And Publishing Discipline, 14. Maintaining Existing Problems, 16. Definition Of Done, 17. Recommended Handoff Report, 18. Fast Start For The Next Agent, 1. Mission, 2. Non-Negotiable Rules (+5 more)
 
-### Community 10 - "basketball-hoop-bolted-connection/instructor-guide.qmd"
-Cohesion: 0.22
-Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
+### Community 10 - "7. Mechanics Analysis Questions"
+Cohesion: 0.15
+Nodes (13): 7. Mechanics Analysis Questions, Q10. Connector-Based Modification, Q11. Stability or Buckling Check, Q12. Engineering Assessment and Recommendation, Q1. Boundary Conditions, Q2. Unknown Constraint Loads, Q3. Solve for Unknown Constraint Loads, Q4. Stiffness Evaluation (+5 more)
 
 ### Community 11 - "jib-crane-battery-pack/index.qmd"
 Cohesion: 0.15
@@ -412,12 +411,8 @@ Nodes (5): Bending Stress in a Baseball Bat During Ball Contact, Context-Rich So
 Cohesion: 0.33
 Nodes (5): Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components
 
-### Community 83 - "Direct-Shear Safety Check of Basketball-Hoop Mounting Bolts During a Dunk"
-Cohesion: 0.29
-Nodes (6): Context-Rich Solid Mechanics Problem, Direct-Shear Safety Check of Basketball-Hoop Mounting Bolts During a Dunk, Engineering Context, Main Engineering Goal, Scope of the Model, System Components
-
 ## Knowledge Gaps
-- **462 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+457 more)
+- **452 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+447 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -425,16 +420,16 @@ Nodes (6): Context-Rich Solid Mechanics Problem, Direct-Shear Safety Check of Ba
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `Supplemental Instructor Background` connect `Supplemental Instructor Background` to `jib-crane-battery-pack/index.qmd`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _462 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _452 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
-- **Should `7. Mechanics Analysis Questions` be split into smaller, more focused modules?**
-  _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
+- **Should `MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md` be split into smaller, more focused modules?**
+  _Cohesion score 0.05714285714285714 - nodes in this community are weakly interconnected._
 - **Should `Supplemental Instructor Background` be split into smaller, more focused modules?**
   _Cohesion score 0.05714285714285714 - nodes in this community are weakly interconnected._

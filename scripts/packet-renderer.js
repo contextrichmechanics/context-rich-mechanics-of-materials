@@ -512,6 +512,54 @@
       }
     }
 
+    const boltLoad = numericValue(values, "bolt_V");
+    const boltCount = numericValue(values, "bolt_n_b");
+    const boltShearPlanes = numericValue(values, "bolt_n_s");
+    const boltDiameter = numericValue(values, "bolt_d");
+    const boltYieldStrength = numericValue(values, "bolt_S_y");
+    const boltRequiredFos = numericValue(values, "bolt_FS_req");
+
+    if (
+      Number.isFinite(boltLoad) && boltLoad > 0 &&
+      Number.isFinite(boltCount) && boltCount > 0 &&
+      Number.isFinite(boltShearPlanes) && boltShearPlanes > 0 &&
+      Number.isFinite(boltDiameter) && boltDiameter > 0 &&
+      Number.isFinite(boltYieldStrength) && boltYieldStrength > 0 &&
+      Number.isFinite(boltRequiredFos) && boltRequiredFos > 0
+    ) {
+      const loadN = boltLoad * 1000;
+      const forcePerBolt = loadN / boltCount;
+      const area = Math.PI * boltDiameter ** 2 / 4;
+      const totalShearAreaPerBolt = boltShearPlanes * area;
+      const tauActual = forcePerBolt / totalShearAreaPerBolt;
+      const tauYield = boltYieldStrength / Math.sqrt(3);
+      const tauAllow = tauYield / boltRequiredFos;
+      const actualFos = tauYield / tauActual;
+      const minimumDiameter = Math.sqrt(4 * forcePerBolt / (Math.PI * boltShearPlanes * tauAllow));
+      const groupCapacityN = boltCount * totalShearAreaPerBolt * tauAllow;
+      const passes = actualFos >= boltRequiredFos;
+      values.bolt_load_N = formatDerived(loadN);
+      values.bolt_force_per_bolt_N = formatDerived(forcePerBolt);
+      values.bolt_area_mm2 = formatDerived(area, 2);
+      values.bolt_total_shear_area_per_bolt_mm2 = formatDerived(totalShearAreaPerBolt, 2);
+      values.bolt_tau_y_MPa = formatDerived(tauYield, 1);
+      values.bolt_tau_allow_MPa = formatDerived(tauAllow, 1);
+      values.bolt_tau_actual_MPa = formatDerived(tauActual, 2);
+      values.bolt_fos_actual = formatDerived(actualFos, 2);
+      values.bolt_d_min_mm = formatDerived(minimumDiameter, 2);
+      values.bolt_group_capacity_N = formatDerived(groupCapacityN);
+      values.bolt_group_capacity_kN = formatDerived(groupCapacityN / 1000, 2);
+      values.bolt_diameter_assessment = passes
+        ? "The proposed diameter meets the minimum required diameter for this simplified direct-shear check."
+        : "The proposed diameter is smaller than the minimum required diameter for this simplified direct-shear check.";
+      values.bolt_fos_assessment = passes
+        ? "The actual factor of safety meets or exceeds the requirement."
+        : "The actual factor of safety is below the requirement.";
+      values.bolt_engineering_assessment = passes
+        ? "The proposed bolts satisfy the assigned average direct-shear yielding check."
+        : "The proposed bolts do not satisfy the assigned average direct-shear yielding check.";
+    }
+
     const clevisLoad = numericValue(values, "P");
     const clevisD1 = numericValue(values, "d_1");
     const clevisD2 = numericValue(values, "d_2");

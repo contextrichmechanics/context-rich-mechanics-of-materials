@@ -1,0 +1,26 @@
+# Context-Rich Solid Mechanics Problem
+
+## Direct-Shear Safety Check of Basketball-Hoop Mounting Bolts During a Dunk
+
+### Engineering Context
+
+During a forceful dunk, load applied at the rim passes through the backboard and frame into the horizontal support structure. In this problem, you are part of a design team reviewing the selected four-bolt joint between the backboard mounting plate and the support-arm bracket.
+
+The assigned connection shear is based on a simplified player-impact estimate. For a representative 95 kg player descending 0.10 m before the rim is fully loaded, the speed is about 1.40 m/s. With an effective stopping distance of 0.060 m and a triangular approximation for the dynamic portion of the pulse, the estimated peak force is about 4.04 kN; the baseline problem uses a rounded 4.0 kN load.
+
+![Wall-mounted basketball hoop with the selected four-bolt backboard connection highlighted.](assets/basketball-bolt-industry-context.jpg){fig-alt="Wall-mounted basketball hoop, backboard, rim, support arm, wall bracket, and highlighted four-bolt connection." width=88%}
+
+### Main Engineering Goal
+
+Determine whether the proposed bolts provide the required factor of safety against bolt shear yielding. Also determine the minimum nominal bolt diameter and the allowable total connection shear for the simplified direct-shear model.
+
+### System Components
+
+- backboard and rim assembly that receives the applied dunk load;
+- mounting plate and support-arm bracket joined at the selected connection;
+- identical mounting bolts that transfer the connection shear; and
+- horizontal support arm that carries load toward the wall mounting system.
+
+### Scope of the Model
+
+Treat the assigned load as an equivalent static vertical connection shear. Assume identical bolts, equal direct-shear sharing, rigid connected plates, and smooth bolt shanks at the shear plane. The model excludes eccentric bolt-group moment, bolt tension, bearing, tear-out, prying, thread effects, preload and friction, fatigue, and local deformation.

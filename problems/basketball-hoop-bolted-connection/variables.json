@@ -1,0 +1,8 @@
+[
+  {"key":"bolt_V","symbol":"V","label":"Equivalent vertical connection shear","value":4.0,"unit":"kN","min":0.5,"max":15,"step":0.1},
+  {"key":"bolt_n_b","symbol":"n_b","label":"Number of identical load-sharing bolts","value":4,"unit":"-","min":4,"max":4,"step":1},
+  {"key":"bolt_n_s","symbol":"n_s","label":"Number of shear planes per bolt","value":1,"unit":"-","min":1,"max":1,"step":1},
+  {"key":"bolt_d","symbol":"d","label":"Nominal smooth-shank bolt diameter","value":8,"unit":"mm","min":3,"max":20,"step":0.5},
+  {"key":"bolt_S_y","symbol":"S_y","label":"Bolt tensile yield strength","value":640,"unit":"MPa","min":200,"max":1200,"step":10},
+  {"key":"bolt_FS_req","symbol":"FS_req","label":"Required factor of safety against shear yielding","value":2.5,"unit":"-","min":1,"max":5,"step":0.1}
+]

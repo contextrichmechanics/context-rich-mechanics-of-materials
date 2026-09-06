@@ -1,14 +1,14 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1788731277.3144517,
-    "seen": 1788732914.5191424,
-    "ast_hash": "30b3ca3f793e353801e54db47442c68e",
+    "mtime": 1787791850.0687785,
+    "seen": 1787795663.283202,
+    "ast_hash": "d7b789eb1542812cab4ee91cf1c9e916",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1788731277.3157136,
-    "seen": 1788732914.519147,
-    "ast_hash": "6428dccf99d86b56cebaf02d80787f46",
+    "mtime": 1787791850.0716133,
+    "seen": 1787795663.2832067,
+    "ast_hash": "7da1dae1d333cace5dabafc2ded13330",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -24,15 +24,15 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1788730498.8412137,
-    "seen": 1788732914.5192544,
-    "ast_hash": "f9fcba59701c71d5459b5380f5ba1159",
+    "mtime": 1787788768.5135329,
+    "seen": 1787795663.2833385,
+    "ast_hash": "cb2dd70d7f58cc897c82ebfe6df59dd6",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1788730499.7828884,
-    "seen": 1788732914.5192556,
-    "ast_hash": "0e8de4b6c5bce903c1c7e532b7e074c4",
+    "mtime": 1787788769.2925386,
+    "seen": 1787795663.2833402,
+    "ast_hash": "2950d59bdb2c85a3bb06e7ca27fa75ce",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -90,8 +90,8 @@
     "semantic_hash": ""
   },
   ".github/workflows/publish.yml": {
-    "mtime": 1788733203.8753097,
-    "seen": 1788733293.3591356,
+    "mtime": 1787702519.7023196,
+    "seen": 1787795663.2833579,
     "ast_hash": "895ef030dda31c8e72f48697222980fb",
     "semantic_hash": ""
   },
@@ -150,9 +150,9 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1788730500.6809635,
-    "seen": 1788732914.5192769,
-    "ast_hash": "2bcb27b668b2727dcb0d4de178b80dd7",
+    "mtime": 1787788817.1379201,
+    "seen": 1787795663.283371,
+    "ast_hash": "754013c7825b83b9345a2cf103e80f2e",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -306,9 +306,9 @@
     "semantic_hash": ""
   },
   "problems/jib-crane-battery-pack/_student-problem.qmd": {
-    "mtime": 1788198237.1134229,
-    "seen": 1788732914.5193205,
-    "ast_hash": "c9e9ef4a840f8c8ec67c2ae7df4b6b5d",
+    "mtime": 1787702519.945261,
+    "seen": 1787795663.2834268,
+    "ast_hash": "ed26534607c03203058abcf5291e4a5e",
     "semantic_hash": ""
   },
   "problems/jib-crane-battery-pack/calculations.qmd": {
@@ -996,15 +996,15 @@
     "semantic_hash": ""
   },
   "data/problem-catalog.json": {
-    "mtime": 1788731277.3144517,
-    "seen": 1788732914.519145,
-    "ast_hash": "6fc0e15f58b1579c3aa3cdead780c27d",
+    "mtime": 1787791850.0687785,
+    "seen": 1787795663.2832043,
+    "ast_hash": "37acdbbc50bbfcc9e2366b4a0e16d539",
     "semantic_hash": ""
   },
   "data/problem-health.json": {
-    "mtime": 1788731277.3157136,
-    "seen": 1788732914.519148,
-    "ast_hash": "4066fd64f17d4c46f9a054f5591ce904",
+    "mtime": 1787791850.0716133,
+    "seen": 1787795663.2832093,
+    "ast_hash": "9543582d0d6fa945b6815eb337d25ac8",
     "semantic_hash": ""
   },
   "problems/aerial-gondola-suspension-hanger/problem.json": {
@@ -1725,66 +1725,6 @@
     "mtime": 1787708566.714775,
     "seen": 1787795663.2835119,
     "ast_hash": "8ddf3afa620abf80edb863d9a0a6cc49",
-    "semantic_hash": ""
-  },
-  "problems/basketball-hoop-bolted-connection/problem.json": {
-    "mtime": 1788730358.4477265,
-    "seen": 1788732914.5191653,
-    "ast_hash": "47aa1b71ad4998a82954425c4987b931",
-    "semantic_hash": ""
-  },
-  "problems/basketball-hoop-bolted-connection/questions.json": {
-    "mtime": 1788730432.6123526,
-    "seen": 1788732914.5191662,
-    "ast_hash": "42f4bfcc4a3ce10e98cb822242d754f9",
-    "semantic_hash": ""
-  },
-  "problems/basketball-hoop-bolted-connection/variables.json": {
-    "mtime": 1788731263.245432,
-    "seen": 1788732914.5191667,
-    "ast_hash": "1d07b5a54a15a43fe38eae6ff087ca7a",
-    "semantic_hash": ""
-  },
-  "problems/basketball-hoop-bolted-connection/variants/section-a.json": {
-    "mtime": 1788730362.780006,
-    "seen": 1788732914.5191672,
-    "ast_hash": "911ec2433065b6042288f8826e2bced5",
-    "semantic_hash": ""
-  },
-  "problems/basketball-hoop-bolted-connection/_student-problem.qmd": {
-    "mtime": 1788730361.0505114,
-    "seen": 1788732914.5192885,
-    "ast_hash": "af900aedd9b4eb33c36568f75014eb97",
-    "semantic_hash": ""
-  },
-  "problems/basketball-hoop-bolted-connection/index.qmd": {
-    "mtime": 1788730360.197414,
-    "seen": 1788732914.5192893,
-    "ast_hash": "565cd100bd35a78800d89600df565c8e",
-    "semantic_hash": ""
-  },
-  "problems/basketball-hoop-bolted-connection/instructor-guide.qmd": {
-    "mtime": 1788730361.916422,
-    "seen": 1788732914.5192902,
-    "ast_hash": "99d31d02fefe4896d1d96fd3c5a5dc70",
-    "semantic_hash": ""
-  },
-  "problems/basketball-hoop-bolted-connection/student-packet.qmd": {
-    "mtime": 1788730224.8518484,
-    "seen": 1788732914.5192907,
-    "ast_hash": "ef51d38b6708f22437fc766a38937b02",
-    "semantic_hash": ""
-  },
-  "problems/basketball-hoop-bolted-connection/assets/basketball-bolt-industry-context.jpg": {
-    "mtime": 1788725237.921883,
-    "seen": 1788732914.5193758,
-    "ast_hash": "7bab93aeffb9f98bf3719dfdb7754328",
-    "semantic_hash": ""
-  },
-  "problems/basketball-hoop-bolted-connection/assets/basketball-bolt-instructor-idealization.jpg": {
-    "mtime": 1788725262.5558517,
-    "seen": 1788732914.5193768,
-    "ast_hash": "c0d1a3303ac54376c4e5133f84567cf9",
     "semantic_hash": ""
   }
 }

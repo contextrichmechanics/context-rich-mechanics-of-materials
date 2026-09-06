@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "description": "Baseline four-bolt, single-shear basketball-hoop connection assignment.",
+  "variables": {"bolt_V":4.0,"bolt_n_b":4,"bolt_n_s":1,"bolt_d":8,"bolt_S_y":640,"bolt_FS_req":2.5},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19"]
+}

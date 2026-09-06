@@ -1,0 +1,16 @@
+{
+  "id": "MOS-BASKETBALL-HOOP-BO-001",
+  "slug": "basketball-hoop-bolted-connection",
+  "title": "Direct-Shear Safety Check of Basketball-Hoop Mounting Bolts During a Dunk",
+  "studentDocumentTitle": "Student Packet - Basketball-Hoop Bolted Connection",
+  "instructorDocumentTitle": "Instructor Guide - Basketball-Hoop Bolted Connection",
+  "summary": "Evaluate four basketball-hoop mounting bolts for average direct shear, factor of safety against shear yielding, and minimum required bolt diameter.",
+  "textbookChapters": ["Stress and strain", "Shear stress", "Connections and fasteners", "Factor of safety"],
+  "derivedPlaceholders": ["bolt_load_N", "bolt_force_per_bolt_N", "bolt_area_mm2", "bolt_total_shear_area_per_bolt_mm2", "bolt_tau_y_MPa", "bolt_tau_allow_MPa", "bolt_tau_actual_MPa", "bolt_fos_actual", "bolt_d_min_mm", "bolt_group_capacity_N", "bolt_group_capacity_kN", "bolt_diameter_assessment", "bolt_fos_assessment", "bolt_engineering_assessment"],
+  "image": "assets/basketball-bolt-industry-context.jpg",
+  "idealizedImage": "assets/basketball-bolt-instructor-idealization.jpg",
+  "idealizedImageAlt": "Instructor reference diagram of a four-bolt connection sharing vertical shear and a representative bolt in single shear.",
+  "source": "index.html",
+  "problemStatement": "<p>A design team is reviewing the four bolts that connect a basketball backboard mounting plate to its horizontal support arm. A short-duration dunk load is represented by an equivalent static downward connection shear <strong>V = {{bolt_V}} {{bolt_V_unit}}</strong>. The <strong>{{bolt_n_b}}</strong> identical bolts are assumed to share that direct shear equally, with <strong>{{bolt_n_s}}</strong> shear plane per bolt through the smooth shank.</p><p>This introductory connector check intentionally excludes eccentric bolt-group moment, bolt tension, bearing, tear-out, prying, thread-root reduction, preload and friction, fatigue, and local plate deformation.</p>",
+  "engineeringGoal": "<p>Determine the average bolt shear stress, shear-yield factor of safety, minimum nominal bolt diameter, and allowable group load. Decide whether the proposed <strong>{{bolt_d}} {{bolt_d_unit}}</strong> bolts satisfy the required factor of safety <strong>{{bolt_FS_req}}</strong> within the stated direct-shear model.</p>"
+}

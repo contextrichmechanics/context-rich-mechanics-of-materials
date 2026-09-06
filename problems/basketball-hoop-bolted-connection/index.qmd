@@ -1,0 +1,29 @@
+---
+title: "Direct-Shear Safety Check of Basketball-Hoop Mounting Bolts During a Dunk"
+description: "Check a four-bolt basketball-hoop connection for direct shear yielding, factor of safety, and required diameter."
+image: "assets/basketball-bolt-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, sports engineering, connector design]
+mechanics_concepts:
+  - direct shear
+  - average shear stress
+  - bolted connections
+  - factor of safety
+  - connector sizing
+course_topics: [stress and strain, shear stress, connection design]
+textbook_chapters: [Stress and strain, Shear stress, Connections and fasteners, Factor of safety]
+problem_types: [context interpretation, free-body diagram, mechanics analysis, design evaluation]
+competencies: [load-path identification, engineering idealization, unit-consistent calculation, engineering judgment]
+industries: [sports equipment, structural connections]
+difficulty: "Introductory-Intermediate"
+status: "Ready"
+problem_id: "MOS-BASKETBALL-HOOP-BO-001"
+version: "1.0.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=basketball-hoop-bolted-connection){.btn .btn-secondary}

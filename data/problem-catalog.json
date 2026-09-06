@@ -1498,6 +1498,475 @@
     ]
   },
   {
+    "id": "MOS-BASKETBALL-HOOP-BO-001",
+    "slug": "basketball-hoop-bolted-connection",
+    "title": "Direct-Shear Safety Check of Basketball-Hoop Mounting Bolts During a Dunk",
+    "studentDocumentTitle": "Student Packet - Basketball-Hoop Bolted Connection",
+    "instructorDocumentTitle": "Instructor Guide - Basketball-Hoop Bolted Connection",
+    "summary": "Evaluate four basketball-hoop mounting bolts for average direct shear, factor of safety against shear yielding, and minimum required bolt diameter.",
+    "textbookChapters": [
+      "Stress and strain",
+      "Shear stress",
+      "Connections and fasteners",
+      "Factor of safety"
+    ],
+    "derivedPlaceholders": [
+      "bolt_load_N",
+      "bolt_force_per_bolt_N",
+      "bolt_area_mm2",
+      "bolt_total_shear_area_per_bolt_mm2",
+      "bolt_tau_y_MPa",
+      "bolt_tau_allow_MPa",
+      "bolt_tau_actual_MPa",
+      "bolt_fos_actual",
+      "bolt_d_min_mm",
+      "bolt_group_capacity_N",
+      "bolt_group_capacity_kN",
+      "bolt_diameter_assessment",
+      "bolt_fos_assessment",
+      "bolt_engineering_assessment"
+    ],
+    "image": "problems/basketball-hoop-bolted-connection/assets/basketball-bolt-industry-context.jpg",
+    "idealizedImage": "problems/basketball-hoop-bolted-connection/assets/basketball-bolt-instructor-idealization.jpg",
+    "idealizedImageAlt": "Instructor reference diagram of a four-bolt connection sharing vertical shear and a representative bolt in single shear.",
+    "source": "problems/basketball-hoop-bolted-connection/index.html",
+    "problemStatement": "<p>A design team is reviewing the four bolts that connect a basketball backboard mounting plate to its horizontal support arm. A short-duration dunk load is represented by an equivalent static downward connection shear <strong>V = {{bolt_V}} {{bolt_V_unit}}</strong>. The <strong>{{bolt_n_b}}</strong> identical bolts are assumed to share that direct shear equally, with <strong>{{bolt_n_s}}</strong> shear plane per bolt through the smooth shank.</p><p>This introductory connector check intentionally excludes eccentric bolt-group moment, bolt tension, bearing, tear-out, prying, thread-root reduction, preload and friction, fatigue, and local plate deformation.</p>",
+    "engineeringGoal": "<p>Determine the average bolt shear stress, shear-yield factor of safety, minimum nominal bolt diameter, and allowable group load. Decide whether the proposed <strong>{{bolt_d}} {{bolt_d_unit}}</strong> bolts satisfy the required factor of safety <strong>{{bolt_FS_req}}</strong> within the stated direct-shear model.</p>",
+    "variables": [
+      {
+        "key": "bolt_V",
+        "symbol": "V",
+        "label": "Equivalent vertical connection shear",
+        "value": 4,
+        "unit": "kN",
+        "min": 0.5,
+        "max": 15,
+        "step": 0.1
+      },
+      {
+        "key": "bolt_n_b",
+        "symbol": "n_b",
+        "label": "Number of identical load-sharing bolts",
+        "value": 4,
+        "unit": "-",
+        "min": 4,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "key": "bolt_n_s",
+        "symbol": "n_s",
+        "label": "Number of shear planes per bolt",
+        "value": 1,
+        "unit": "-",
+        "min": 1,
+        "max": 1,
+        "step": 1
+      },
+      {
+        "key": "bolt_d",
+        "symbol": "d",
+        "label": "Nominal smooth-shank bolt diameter",
+        "value": 8,
+        "unit": "mm",
+        "min": 3,
+        "max": 20,
+        "step": 0.5
+      },
+      {
+        "key": "bolt_S_y",
+        "symbol": "S_y",
+        "label": "Bolt tensile yield strength",
+        "value": 640,
+        "unit": "MPa",
+        "min": 200,
+        "max": 1200,
+        "step": 10
+      },
+      {
+        "key": "bolt_FS_req",
+        "symbol": "FS_req",
+        "label": "Required factor of safety against shear yielding",
+        "value": 2.5,
+        "unit": "-",
+        "min": 1,
+        "max": 5,
+        "step": 0.1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the Connection",
+        "section": "context",
+        "selected": true,
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "context",
+          "function",
+          "bolted connection"
+        ],
+        "learningObjectives": [
+          "Identify the selected joint's structural function."
+        ],
+        "student": "<p>What is the primary structural function of the selected bolted joint in the basketball-hoop assembly?</p>",
+        "instructor": "<p>The bolt group transfers load from the backboard mounting plate into the horizontal support structure while holding the connected parts together.</p>",
+        "gradingNotes": "<p>Look for load transfer through the selected joint, not a description of the entire hoop.</p>",
+        "commonMistakes": "<p>Students may incorrectly identify the wall anchors as the selected connection.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "Assigned External Load",
+        "section": "context",
+        "selected": true,
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "loading",
+          "direct shear"
+        ],
+        "learningObjectives": [
+          "Identify the prescribed connection load and direction."
+        ],
+        "student": "<p>What load is assigned to the selected connection in the simplified problem?</p>",
+        "instructor": "<p>An equivalent static downward connection shear <strong>V = {{bolt_V}} {{bolt_V_unit}} = {{bolt_load_N}} N</strong> is applied to the selected bolt group.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Connector Identification",
+        "section": "context",
+        "selected": true,
+        "type": "component identification",
+        "difficulty": "introductory",
+        "tags": [
+          "connectors",
+          "bolts"
+        ],
+        "learningObjectives": [
+          "Identify the connectors included in the local model."
+        ],
+        "student": "<p>Which physical components are treated as the connectors in this problem?</p>",
+        "instructor": "<p>The <strong>{{bolt_n_b}}</strong> identical mounting bolts joining the backboard mounting plate to the support-arm bracket are the connectors analyzed.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Simplified Load Path",
+        "section": "context",
+        "selected": true,
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "load path",
+          "components"
+        ],
+        "learningObjectives": [
+          "Trace load through the selected connection."
+        ],
+        "student": "<p>Trace the simplified load path from the rim and backboard through the selected bolts and into the support arm.</p>",
+        "instructor": "<p>Rim/backboard load &rarr; backboard/frame &rarr; mounting plate &rarr; bolts &rarr; support-arm bracket &rarr; horizontal support arm.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Shear Condition",
+        "section": "context",
+        "selected": true,
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "single shear",
+          "shear planes"
+        ],
+        "learningObjectives": [
+          "Relate connection geometry to shear-plane count."
+        ],
+        "student": "<p>In the assigned model, how many shear planes resist load in each bolt, and what physical motion does the shear model represent?</p>",
+        "instructor": "<p>Each bolt has <strong>n<sub>s</sub> = {{bolt_n_s}}</strong> resisting shear plane(s). For the baseline single-shear model, the two connected parts tend to slide relative to one another across one plane through the smooth bolt shank.</p>",
+        "commonMistakes": "<p>Do not infer double shear merely because several bolts are present; bolt count and shear-plane count are separate quantities.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Included and Excluded Responses",
+        "section": "context",
+        "selected": true,
+        "type": "scope identification",
+        "difficulty": "introductory",
+        "tags": [
+          "average shear stress",
+          "limitations"
+        ],
+        "learningObjectives": [
+          "Distinguish the assigned check from a complete connection design."
+        ],
+        "student": "<p>Which connector response is evaluated, and which important connection effects are deliberately excluded?</p>",
+        "instructor": "<p>The problem evaluates average direct shear stress and shear yielding in the bolts. It excludes bolt tension, eccentric bolt-group moment, bearing, tear-out, prying, thread-root reduction, preload and slip, fatigue, local plate failure, and wall-anchor behavior.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Required Parameters",
+        "section": "context",
+        "selected": true,
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "variables",
+          "design data"
+        ],
+        "learningObjectives": [
+          "Identify the data required for a shear-yield safety check."
+        ],
+        "student": "<p>Identify the assigned quantities needed to evaluate bolt shear safety and size the bolts.</p>",
+        "instructor": "<p>The required data are V = {{bolt_V}} {{bolt_V_unit}}, n<sub>b</sub> = {{bolt_n_b}}, n<sub>s</sub> = {{bolt_n_s}}, d = {{bolt_d}} {{bolt_d_unit}}, S<sub>y</sub> = {{bolt_S_y}} {{bolt_S_y_unit}}, and FS<sub>req</sub> = {{bolt_FS_req}}.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "type": "free-body diagram",
+        "difficulty": "introductory",
+        "tags": [
+          "idealization",
+          "FBD",
+          "load sharing"
+        ],
+        "learningObjectives": [
+          "Develop a direct-shear bolt-group idealization from a physical connection."
+        ],
+        "student": "<p>Replace the detailed joint with a rigid connection-plate model. Show the applied vertical connection shear V, the {{bolt_n_b}} identical bolts, equal load sharing, and the {{bolt_n_s}} shear plane(s) through one representative bolt. Label V<sub>b</sub>, d, and A<sub>b</sub>.</p>",
+        "instructor": "<p>A correct model shows a rigid plate carrying vertical V, {{bolt_n_b}} identical bolts sharing V equally so V<sub>b</sub> = V/n<sub>b</sub>, and one representative bolt with {{bolt_n_s}} shear plane(s). Label d and A<sub>b</sub> = &pi;d<sup>2</sup>/4.</p>",
+        "gradingNotes": "<p>Students should construct this idealization before viewing the instructor reference image.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "type": "assumptions",
+        "difficulty": "introductory",
+        "tags": [
+          "assumptions",
+          "connection model"
+        ],
+        "learningObjectives": [
+          "State assumptions supporting equal direct-shear sharing."
+        ],
+        "student": "<p>State the assumptions used to reduce the real connection to the assigned average direct-shear model.</p>",
+        "instructor": "<p>Use equivalent static loading, identical bolts, equal load sharing, {{bolt_n_s}} shear plane(s) per bolt, smooth shanks at the planes, and rigid connected plates. Exclude the additional connection effects listed in the scope.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "type": "analysis planning",
+        "difficulty": "introductory",
+        "tags": [
+          "solution strategy",
+          "connector sizing"
+        ],
+        "learningObjectives": [
+          "Plan a complete direct-shear safety and sizing calculation."
+        ],
+        "student": "<p>Before substituting values, outline the calculations needed to check the proposed bolts and determine a minimum required diameter.</p>",
+        "instructor": "<p>Find the load per bolt; compute the shank area; calculate average shear stress; estimate shear-yield strength using von Mises; calculate allowable shear stress and actual factor of safety; solve for minimum diameter; compare the proposal with that diameter; and state model limitations.</p>"
+      },
+      {
+        "id": "q11",
+        "title": "Load Carried by One Bolt",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "introductory",
+        "tags": [
+          "load sharing",
+          "bolt force"
+        ],
+        "learningObjectives": [
+          "Apply equal load sharing to a bolt group."
+        ],
+        "student": "<p>Assuming equal direct-shear sharing, determine the shear force carried by one bolt.</p>",
+        "instructor": "<p>V<sub>b</sub> = V/n<sub>b</sub> = {{bolt_load_N}} N / {{bolt_n_b}} = <strong>{{bolt_force_per_bolt_N}} N</strong> per bolt.</p>",
+        "commonMistakes": "<p>Do not divide by the shear-plane count here; n<sub>s</sub> enters the resisting area for each bolt.</p>"
+      },
+      {
+        "id": "q12",
+        "title": "Bolt Shear Area",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "introductory",
+        "tags": [
+          "area",
+          "circular section"
+        ],
+        "learningObjectives": [
+          "Compute nominal bolt-shank shear area."
+        ],
+        "student": "<p>Determine the nominal shear area of one bolt and its total resisting area across all assigned shear planes.</p>",
+        "instructor": "<p>A<sub>b</sub> = &pi;({{bolt_d}} mm)<sup>2</sup>/4 = <strong>{{bolt_area_mm2}} mm<sup>2</sup></strong>. The total resisting area per bolt is n<sub>s</sub>A<sub>b</sub> = <strong>{{bolt_total_shear_area_per_bolt_mm2}} mm<sup>2</sup></strong>.</p>"
+      },
+      {
+        "id": "q13",
+        "title": "Average Bolt Shear Stress",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "introductory",
+        "tags": [
+          "average shear stress",
+          "direct shear"
+        ],
+        "learningObjectives": [
+          "Calculate average shear stress using N and mm units."
+        ],
+        "student": "<p>Determine the average shear stress in one bolt.</p>",
+        "instructor": "<p>&tau;<sub>b</sub> = V<sub>b</sub>/(n<sub>s</sub>A<sub>b</sub>) = {{bolt_force_per_bolt_N}} N / {{bolt_total_shear_area_per_bolt_mm2}} mm<sup>2</sup> = <strong>{{bolt_tau_actual_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "q14",
+        "title": "Shear-Yield and Allowable Stress",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "von Mises",
+          "allowable stress",
+          "factor of safety"
+        ],
+        "learningObjectives": [
+          "Estimate shear yield and apply a required factor of safety."
+        ],
+        "student": "<p>Using the tensile yield strength and the von Mises criterion, estimate the bolt shear-yield strength and allowable shear stress.</p>",
+        "instructor": "<p>&tau;<sub>y</sub> = S<sub>y</sub>/&radic;3 = {{bolt_S_y}} MPa/&radic;3 = <strong>{{bolt_tau_y_MPa}} MPa</strong>. Then &tau;<sub>allow</sub> = &tau;<sub>y</sub>/FS<sub>req</sub> = <strong>{{bolt_tau_allow_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "q15",
+        "title": "Actual Factor of Safety",
+        "section": "analysis",
+        "selected": true,
+        "type": "design evaluation",
+        "difficulty": "intermediate",
+        "tags": [
+          "factor of safety",
+          "shear yielding"
+        ],
+        "learningObjectives": [
+          "Calculate and interpret a shear-yield factor of safety."
+        ],
+        "student": "<p>Determine the actual factor of safety against the estimated bolt shear-yield strength and compare it with the requirement.</p>",
+        "instructor": "<p>FS<sub>actual</sub> = &tau;<sub>y</sub>/&tau;<sub>b</sub> = {{bolt_tau_y_MPa}}/{{bolt_tau_actual_MPa}} = <strong>{{bolt_fos_actual}}</strong>. <strong>{{bolt_fos_assessment}}</strong></p>"
+      },
+      {
+        "id": "q16",
+        "title": "Minimum Required Bolt Diameter",
+        "section": "analysis",
+        "selected": true,
+        "type": "connector sizing",
+        "difficulty": "intermediate",
+        "tags": [
+          "minimum diameter",
+          "allowable stress"
+        ],
+        "learningObjectives": [
+          "Size a circular connector for average direct shear."
+        ],
+        "student": "<p>Determine the minimum nominal smooth-shank bolt diameter required to satisfy the specified factor of safety.</p>",
+        "instructor": "<p>Set &tau;<sub>b</sub> = &tau;<sub>allow</sub>. Then d<sub>min</sub> = &radic;[4V<sub>b</sub>/(&pi;n<sub>s</sub>&tau;<sub>allow</sub>)] = <strong>{{bolt_d_min_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "q17",
+        "title": "Proposed Bolt Assessment",
+        "section": "analysis",
+        "selected": true,
+        "type": "design evaluation",
+        "difficulty": "intermediate",
+        "tags": [
+          "diameter comparison",
+          "engineering decision"
+        ],
+        "learningObjectives": [
+          "Compare a proposed connector size with a calculated minimum."
+        ],
+        "student": "<p>Compare the proposed nominal bolt diameter with the calculated minimum and state whether it is adequate for the assigned direct-shear check.</p>",
+        "instructor": "<p>The proposed diameter is {{bolt_d}} mm and d<sub>min</sub> = {{bolt_d_min_mm}} mm. <strong>{{bolt_diameter_assessment}}</strong></p>"
+      },
+      {
+        "id": "q18",
+        "title": "Allowable Connection Load",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "group capacity",
+          "allowable load"
+        ],
+        "learningObjectives": [
+          "Calculate the allowable direct-shear load for a bolt group."
+        ],
+        "student": "<p>Determine the maximum total connection shear the bolt group can carry at the required factor of safety within this simplified model.</p>",
+        "instructor": "<p>V<sub>allow,group</sub> = n<sub>b</sub>n<sub>s</sub>A<sub>b</sub>&tau;<sub>allow</sub> = <strong>{{bolt_group_capacity_N}} N = {{bolt_group_capacity_kN}} kN</strong>.</p>"
+      },
+      {
+        "id": "q19",
+        "title": "Engineering Assessment and Limitations",
+        "section": "analysis",
+        "selected": true,
+        "type": "engineering judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "recommendation",
+          "limitations",
+          "connection design"
+        ],
+        "learningObjectives": [
+          "Make a bounded engineering recommendation from a simplified connector check."
+        ],
+        "student": "<p>Give a concise engineering recommendation and identify at least two additional effects that must be checked before approving the real basketball-hoop connection.</p>",
+        "instructor": "<p><strong>{{bolt_engineering_assessment}}</strong> A complete design must also check effects such as eccentric bolt-group action and tension, plate bearing and tear-out, prying, threads at the shear plane, preload and slip, fatigue and impact dynamics, wall anchors, and actual bracket geometry.</p>",
+        "gradingNotes": "<p>Do not award full credit for an unqualified claim that the complete real connection is safe.</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Baseline four-bolt, single-shear basketball-hoop connection assignment.",
+        "variables": {
+          "bolt_V": 4,
+          "bolt_n_b": 4,
+          "bolt_n_s": 1,
+          "bolt_d": 8,
+          "bolt_S_y": 640,
+          "bolt_FS_req": 2.5
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-BASKETBALL-HOOP-SU-001",
     "slug": "basketball-hoop-support-arm-bending",
     "title": "Bending and Deflection of a Basketball Hoop Support Arm During a LeBron James Dunk",
