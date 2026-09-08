@@ -13303,5 +13303,476 @@
         }
       }
     ]
+  },
+  {
+    "id": "MOS-WEIGHT-STACK-SELEC-001",
+    "slug": "weight-stack-selector-pin-double-shear",
+    "title": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+    "studentDocumentTitle": "Student Packet - Weight-Stack Selector Pin in Double Shear",
+    "instructorDocumentTitle": "Instructor Guide - Weight-Stack Selector Pin in Double Shear",
+    "summary": "Evaluate a weight-stack selector pin for average double-shear stress, factor of safety against shear yielding, and minimum required diameter.",
+    "textbookChapters": [
+      "Stress and strain",
+      "Shear stress",
+      "Connections and fasteners",
+      "Factor of safety"
+    ],
+    "derivedPlaceholders": [
+      "selector_mass_kg",
+      "selector_load_N",
+      "selector_force_per_plane_N",
+      "selector_area_mm2",
+      "selector_tau_actual_MPa",
+      "selector_tau_y_MPa",
+      "selector_tau_allow_MPa",
+      "selector_fos_actual",
+      "selector_d_min_mm",
+      "selector_diameter_assessment",
+      "selector_fos_assessment",
+      "selector_engineering_assessment"
+    ],
+    "image": "problems/weight-stack-selector-pin-double-shear/assets/selector-pin-industry-context.png",
+    "idealizedImage": "problems/weight-stack-selector-pin-double-shear/assets/selector-pin-instructor-idealization.png",
+    "idealizedImageAlt": "Instructor reference section view and free-body diagram of a weight-stack selector pin loaded symmetrically in double shear.",
+    "source": "problems/weight-stack-selector-pin-double-shear/index.html",
+    "problemStatement": "<p>A fitness-equipment engineering team is checking the horizontal selector pin that connects a cable-driven selector stem to a selected portion of a lat-pulldown weight stack. The selected stack setting is <strong>W<sub>s</sub> = {{selector_W_lb}} {{selector_W_lb_unit}}</strong>. During controlled constant-speed lifting, the pin is idealized as a circular connector in symmetric double shear, with the central selector stem loading the pin and the selected plate supporting it on two sides.</p><p>This introductory check assumes two equally loaded shear planes through the smooth pin shank. It neglects pin bending, bearing and tear-out, fatigue, wear, clearance and impact effects, friction, cable/pulley losses, and local stress concentrations.</p>",
+    "engineeringGoal": "<p>Determine the average double-shear stress and factor of safety against shear yielding for the <strong>{{selector_d_mm}} {{selector_d_mm_unit}}</strong> pin, then determine the minimum diameter required to satisfy <strong>FS<sub>req</sub> = {{selector_FS_req}}</strong> and make a bounded engineering recommendation.</p>",
+    "variables": [
+      {
+        "key": "selector_W_lb",
+        "symbol": "W_s",
+        "label": "Selected stack setting",
+        "value": 190,
+        "unit": "lb",
+        "min": 10,
+        "max": 400,
+        "step": 5
+      },
+      {
+        "key": "selector_d_mm",
+        "symbol": "d",
+        "label": "Selector-pin diameter",
+        "value": 9.525,
+        "unit": "mm",
+        "min": 3,
+        "max": 20,
+        "step": 0.125
+      },
+      {
+        "key": "selector_S_y_MPa",
+        "symbol": "S_y",
+        "label": "Pin tensile yield strength",
+        "value": 205,
+        "unit": "MPa",
+        "min": 100,
+        "max": 1000,
+        "step": 5
+      },
+      {
+        "key": "selector_FS_req",
+        "symbol": "FS_req",
+        "label": "Required factor of safety against shear yielding",
+        "value": 2.5,
+        "unit": "-",
+        "min": 1,
+        "max": 6,
+        "step": 0.1
+      },
+      {
+        "key": "selector_g",
+        "symbol": "g",
+        "label": "Gravitational acceleration",
+        "value": 9.81,
+        "unit": "m/s^2",
+        "min": 9.81,
+        "max": 9.81,
+        "step": 0.01
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the Selector Pin",
+        "section": "context",
+        "selected": true,
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "context",
+          "function",
+          "pin connection"
+        ],
+        "learningObjectives": [
+          "Identify the selector pin's mechanical function."
+        ],
+        "student": "<p>What is the mechanical purpose of the selector pin in a selectorized weight-stack machine?</p>",
+        "instructor": "<p>The pin connects the cable-driven selector stem to the chosen weight plate so the stem can lift that plate and all plates above it.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Load",
+        "section": "context",
+        "selected": true,
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "loading",
+          "equilibrium"
+        ],
+        "learningObjectives": [
+          "Relate the selected stack setting to connector load."
+        ],
+        "student": "<p>During the controlled constant-speed lift, what load must the selector pin transmit?</p>",
+        "instructor": "<p>The pin transmits the force needed to support the selected moving stack. With negligible acceleration, vertical equilibrium gives P = mg = <strong>{{selector_load_N}} N</strong>.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Components Loading and Supporting the Pin",
+        "section": "context",
+        "selected": true,
+        "type": "component identification",
+        "difficulty": "introductory",
+        "tags": [
+          "components",
+          "boundary conditions"
+        ],
+        "learningObjectives": [
+          "Identify the local pin-loading components."
+        ],
+        "student": "<p>Identify the selector stem, selector pin, and selected plate. Which component loads the middle of the pin, and which material supports it?</p>",
+        "instructor": "<p>The central selector stem loads the middle portion of the horizontal pin. Material from the selected plate supports the pin on the two sides of the stem.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "load path",
+          "components"
+        ],
+        "learningObjectives": [
+          "Trace force transfer through the machine."
+        ],
+        "student": "<p>Trace the load path from the user to the selected weight-stack plates.</p>",
+        "instructor": "<p>User &rarr; exercise bar &rarr; cable and pulleys &rarr; selector stem &rarr; selector pin &rarr; selected plate &rarr; plates stacked above it.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Connection",
+        "section": "context",
+        "selected": true,
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "connector",
+          "failure consequence"
+        ],
+        "learningObjectives": [
+          "Explain why the pin is mechanically important."
+        ],
+        "student": "<p>Why is the selector pin a mechanically important connection in this load path?</p>",
+        "instructor": "<p>The pin is the removable connector that transfers the entire selected-stack load from the stem into the plate. Loss of its load-transfer capacity would disconnect the selected stack from the lifting system.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Double-Shear Failure Mode",
+        "section": "context",
+        "selected": true,
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "double shear",
+          "failure mode"
+        ],
+        "learningObjectives": [
+          "Relate the connection geometry to two shear planes."
+        ],
+        "student": "<p>What connector failure mode is evaluated, and why is a double-shear model appropriate?</p>",
+        "instructor": "<p>The assigned mode is average direct shear through the pin. The central stem load is resisted by selected-plate contact on both sides, creating two pin cross sections at which relative sliding could occur.</p>",
+        "commonMistakes": "<p>Do not treat the two supporting sides as two separate pins; one pin has two resisting shear planes.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Controlling Parameters",
+        "section": "context",
+        "selected": true,
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "variables",
+          "design data"
+        ],
+        "learningObjectives": [
+          "Identify the data required for the pin check."
+        ],
+        "student": "<p>Identify the assigned loading, geometry, material, and design parameters that control the pin shear stress and factor of safety.</p>",
+        "instructor": "<p>The required data are W<sub>s</sub> = {{selector_W_lb}} {{selector_W_lb_unit}}, d = {{selector_d_mm}} {{selector_d_mm_unit}}, S<sub>y</sub> = {{selector_S_y_MPa}} {{selector_S_y_MPa_unit}}, FS<sub>req</sub> = {{selector_FS_req}}, g = {{selector_g}} {{selector_g_unit}}, and two symmetric shear planes.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "type": "free-body diagram",
+        "difficulty": "introductory",
+        "tags": [
+          "idealization",
+          "FBD",
+          "double shear"
+        ],
+        "learningObjectives": [
+          "Develop a double-shear pin idealization from a physical connection."
+        ],
+        "student": "<p>Create a simplified connection model and free-body diagram of the selector pin. Show the central selector stem, selected-plate material on both sides, the horizontal pin, two shear planes, total load P, and equal reactions P/2.</p>",
+        "instructor": "<p>A correct model shows the stem applying P to the middle of the pin, the selected plate providing two symmetric P/2 reactions, and shear planes at the two stem/plate interfaces. Label the circular pin diameter d and A = &pi;d<sup>2</sup>/4.</p>",
+        "gradingNotes": "<p>Students should construct this idealization before viewing the instructor reference image.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "type": "assumptions",
+        "difficulty": "introductory",
+        "tags": [
+          "assumptions",
+          "connection model"
+        ],
+        "learningObjectives": [
+          "State assumptions supporting the double-shear model."
+        ],
+        "student": "<p>State and justify the assumptions used to reduce the real machine to the assigned selector-pin model.</p>",
+        "instructor": "<p>Treat the selected plates as one translating mass, use controlled constant speed so acceleration is negligible, assume symmetric direct shear and equal load sharing, use a circular smooth shank and uniform average stress, and neglect the excluded effects stated in the problem scope.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "type": "analysis planning",
+        "difficulty": "introductory",
+        "tags": [
+          "solution strategy",
+          "connector sizing"
+        ],
+        "learningObjectives": [
+          "Plan a complete double-shear safety calculation."
+        ],
+        "student": "<p>Before substituting values, outline the calculations needed to evaluate and size the selector pin.</p>",
+        "instructor": "<p>Convert the stack setting to mass; use P = mg; divide P equally between two shear planes; compute pin area and average shear stress; estimate shear yield and allowable stress; calculate actual factor of safety and minimum diameter; then make a bounded engineering assessment.</p>"
+      },
+      {
+        "id": "q11",
+        "title": "Selected Moving Mass",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "introductory",
+        "tags": [
+          "unit conversion",
+          "mass"
+        ],
+        "learningObjectives": [
+          "Convert pound-mass to kilograms."
+        ],
+        "student": "<p>Convert the selected <strong>{{selector_W_lb}} {{selector_W_lb_unit}}</strong> stack setting to mass in kilograms using 1 lb = 0.45359237 kg.</p>",
+        "instructor": "<p>m = ({{selector_W_lb}} lb)(0.45359237 kg/lb) = <strong>{{selector_mass_kg}} kg</strong>.</p>"
+      },
+      {
+        "id": "q12",
+        "title": "Constant-Speed Connector Load",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "introductory",
+        "tags": [
+          "equilibrium",
+          "connector load"
+        ],
+        "learningObjectives": [
+          "Apply vertical equilibrium at constant speed."
+        ],
+        "student": "<p>For controlled constant-speed lifting, determine the force P transmitted by the selector stem to the pin.</p>",
+        "instructor": "<p>Because a &asymp; 0, &Sigma;F<sub>y</sub> = 0 gives P = mg = ({{selector_mass_kg}} kg)({{selector_g}} m/s<sup>2</sup>) = <strong>{{selector_load_N}} N</strong>.</p>"
+      },
+      {
+        "id": "q13",
+        "title": "Double-Shear Load Sharing",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "introductory",
+        "tags": [
+          "load sharing",
+          "double shear"
+        ],
+        "learningObjectives": [
+          "Determine force on each shear plane."
+        ],
+        "student": "<p>Assuming symmetric load sharing, determine the shear force carried on each of the two shear planes.</p>",
+        "instructor": "<p>V<sub>plane</sub> = P/2 = {{selector_load_N}} N/2 = <strong>{{selector_force_per_plane_N}} N</strong>.</p>"
+      },
+      {
+        "id": "q14",
+        "title": "Pin Cross-Sectional Area",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "introductory",
+        "tags": [
+          "area",
+          "circular section"
+        ],
+        "learningObjectives": [
+          "Compute circular pin area."
+        ],
+        "student": "<p>For the <strong>{{selector_d_mm}} {{selector_d_mm_unit}}</strong> circular pin, calculate the area of one shear plane.</p>",
+        "instructor": "<p>A = &pi;d<sup>2</sup>/4 = &pi;({{selector_d_mm}} mm)<sup>2</sup>/4 = <strong>{{selector_area_mm2}} mm<sup>2</sup></strong>.</p>"
+      },
+      {
+        "id": "q15",
+        "title": "Average Double-Shear Stress",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "introductory",
+        "tags": [
+          "average shear stress",
+          "double shear"
+        ],
+        "learningObjectives": [
+          "Calculate average pin shear stress."
+        ],
+        "student": "<p>Calculate the average shear stress in the selector pin.</p>",
+        "instructor": "<p>&tau;<sub>avg</sub> = (P/2)/A = {{selector_force_per_plane_N}} N/{{selector_area_mm2}} mm<sup>2</sup> = <strong>{{selector_tau_actual_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "q16",
+        "title": "Shear-Yield and Allowable Stress",
+        "section": "analysis",
+        "selected": true,
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "von Mises",
+          "allowable stress",
+          "factor of safety"
+        ],
+        "learningObjectives": [
+          "Estimate shear yield and allowable stress."
+        ],
+        "student": "<p>Using the tensile yield strength and von Mises criterion, estimate the pin's shear-yield strength and allowable shear stress.</p>",
+        "instructor": "<p>&tau;<sub>y</sub> = S<sub>y</sub>/&radic;3 = {{selector_S_y_MPa}} MPa/&radic;3 = <strong>{{selector_tau_y_MPa}} MPa</strong>. Then &tau;<sub>allow</sub> = &tau;<sub>y</sub>/FS<sub>req</sub> = <strong>{{selector_tau_allow_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "q17",
+        "title": "Actual Factor of Safety",
+        "section": "analysis",
+        "selected": true,
+        "type": "design evaluation",
+        "difficulty": "intermediate",
+        "tags": [
+          "factor of safety",
+          "shear yielding"
+        ],
+        "learningObjectives": [
+          "Calculate and interpret factor of safety."
+        ],
+        "student": "<p>Determine the actual factor of safety against estimated shear yielding and compare it with the requirement.</p>",
+        "instructor": "<p>FS<sub>actual</sub> = &tau;<sub>y</sub>/&tau;<sub>avg</sub> = {{selector_tau_y_MPa}}/{{selector_tau_actual_MPa}} = <strong>{{selector_fos_actual}}</strong>. <strong>{{selector_fos_assessment}}</strong></p>"
+      },
+      {
+        "id": "q18",
+        "title": "Minimum Required Pin Diameter",
+        "section": "analysis",
+        "selected": true,
+        "type": "connector sizing",
+        "difficulty": "intermediate",
+        "tags": [
+          "minimum diameter",
+          "allowable stress"
+        ],
+        "learningObjectives": [
+          "Size a circular pin for double shear."
+        ],
+        "student": "<p>Determine the minimum smooth-shank pin diameter required to satisfy the specified factor of safety under the same load.</p>",
+        "instructor": "<p>Set P/(2A) = &tau;<sub>allow</sub> with A = &pi;d<sup>2</sup>/4. Thus d<sub>min</sub> = &radic;[2P/(&pi;&tau;<sub>allow</sub>)] = <strong>{{selector_d_min_mm}} mm</strong>. <strong>{{selector_diameter_assessment}}</strong></p>"
+      },
+      {
+        "id": "q19",
+        "title": "Sensitivity and Operating Condition",
+        "section": "analysis",
+        "selected": true,
+        "type": "mechanics reasoning",
+        "difficulty": "intermediate",
+        "tags": [
+          "sensitivity",
+          "dynamics"
+        ],
+        "learningObjectives": [
+          "Explain how load and acceleration affect pin stress."
+        ],
+        "student": "<p>Explain how increasing the selected stack mass changes pin shear stress. How would rapid upward acceleration affect pin load relative to the constant-speed case?</p>",
+        "instructor": "<p>For fixed diameter, average shear stress increases linearly with selected mass. During upward acceleration, P = m(g + a), so the pin load and stress exceed the constant-speed values.</p>"
+      },
+      {
+        "id": "q20",
+        "title": "Engineering Assessment and Limitations",
+        "section": "analysis",
+        "selected": true,
+        "type": "engineering judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "recommendation",
+          "limitations",
+          "connection design"
+        ],
+        "learningObjectives": [
+          "Make a bounded selector-pin recommendation."
+        ],
+        "student": "<p>State whether the specified pin is adequate for the idealized load case and identify at least two effects that require consideration in a detailed product design.</p>",
+        "instructor": "<p><strong>{{selector_engineering_assessment}}</strong> A complete design must also check effects such as pin bending, plate and stem bearing, tear-out, fatigue, wear, clearance and impact, stress concentrations, material condition, and actual geometry.</p>",
+        "gradingNotes": "<p>Do not award full credit for an unqualified statement that the complete machine is safe.</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Baseline 190 lb weight-stack selector-pin assignment using symmetric double shear.",
+        "variables": {
+          "selector_W_lb": 190,
+          "selector_d_mm": 9.525,
+          "selector_S_y_MPa": 205,
+          "selector_FS_req": 2.5,
+          "selector_g": 9.81
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20"
+        ]
+      }
+    ]
   }
 ]

@@ -1,0 +1,29 @@
+---
+title: "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown"
+description: "Check a weight-stack selector pin for double-shear stress, shear-yield factor of safety, and required diameter."
+image: "assets/selector-pin-industry-context.png"
+categories: [context-rich, mechanics-of-materials, fitness equipment, connector design]
+mechanics_concepts:
+  - double shear
+  - average shear stress
+  - pin connections
+  - factor of safety
+  - connector sizing
+course_topics: [stress and strain, shear stress, connection design]
+textbook_chapters: [Stress and strain, Shear stress, Connections and fasteners, Factor of safety]
+problem_types: [context interpretation, free-body diagram, mechanics analysis, design evaluation]
+competencies: [load-path identification, engineering idealization, unit conversion, unit-consistent calculation, engineering judgment]
+industries: [fitness equipment, mechanical connections]
+difficulty: "Introductory-Intermediate"
+status: "Ready"
+problem_id: "MOS-WEIGHT-STACK-SELEC-001"
+version: "1.0.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=weight-stack-selector-pin-double-shear){.btn .btn-secondary}

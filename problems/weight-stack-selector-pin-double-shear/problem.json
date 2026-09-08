@@ -1,0 +1,16 @@
+{
+  "id": "MOS-WEIGHT-STACK-SELEC-001",
+  "slug": "weight-stack-selector-pin-double-shear",
+  "title": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+  "studentDocumentTitle": "Student Packet - Weight-Stack Selector Pin in Double Shear",
+  "instructorDocumentTitle": "Instructor Guide - Weight-Stack Selector Pin in Double Shear",
+  "summary": "Evaluate a weight-stack selector pin for average double-shear stress, factor of safety against shear yielding, and minimum required diameter.",
+  "textbookChapters": ["Stress and strain", "Shear stress", "Connections and fasteners", "Factor of safety"],
+  "derivedPlaceholders": ["selector_mass_kg", "selector_load_N", "selector_force_per_plane_N", "selector_area_mm2", "selector_tau_actual_MPa", "selector_tau_y_MPa", "selector_tau_allow_MPa", "selector_fos_actual", "selector_d_min_mm", "selector_diameter_assessment", "selector_fos_assessment", "selector_engineering_assessment"],
+  "image": "assets/selector-pin-industry-context.png",
+  "idealizedImage": "assets/selector-pin-instructor-idealization.png",
+  "idealizedImageAlt": "Instructor reference section view and free-body diagram of a weight-stack selector pin loaded symmetrically in double shear.",
+  "source": "index.html",
+  "problemStatement": "<p>A fitness-equipment engineering team is checking the horizontal selector pin that connects a cable-driven selector stem to a selected portion of a lat-pulldown weight stack. The selected stack setting is <strong>W<sub>s</sub> = {{selector_W_lb}} {{selector_W_lb_unit}}</strong>. During controlled constant-speed lifting, the pin is idealized as a circular connector in symmetric double shear, with the central selector stem loading the pin and the selected plate supporting it on two sides.</p><p>This introductory check assumes two equally loaded shear planes through the smooth pin shank. It neglects pin bending, bearing and tear-out, fatigue, wear, clearance and impact effects, friction, cable/pulley losses, and local stress concentrations.</p>",
+  "engineeringGoal": "<p>Determine the average double-shear stress and factor of safety against shear yielding for the <strong>{{selector_d_mm}} {{selector_d_mm_unit}}</strong> pin, then determine the minimum diameter required to satisfy <strong>FS<sub>req</sub> = {{selector_FS_req}}</strong> and make a bounded engineering recommendation.</p>"
+}

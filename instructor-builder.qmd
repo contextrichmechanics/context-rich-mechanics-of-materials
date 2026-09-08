@@ -612,6 +612,49 @@ function variableMap(problem) {
       : "The proposed bolts do not satisfy the assigned average direct-shear yielding check.";
   }
 
+  const selectorStackLb = numericValue(values, "selector_W_lb");
+  const selectorDiameter = numericValue(values, "selector_d_mm");
+  const selectorYieldStrength = numericValue(values, "selector_S_y_MPa");
+  const selectorRequiredFos = numericValue(values, "selector_FS_req");
+  const selectorGravity = numericValue(values, "selector_g");
+
+  if (
+    Number.isFinite(selectorStackLb) && selectorStackLb > 0 &&
+    Number.isFinite(selectorDiameter) && selectorDiameter > 0 &&
+    Number.isFinite(selectorYieldStrength) && selectorYieldStrength > 0 &&
+    Number.isFinite(selectorRequiredFos) && selectorRequiredFos > 0 &&
+    Number.isFinite(selectorGravity) && selectorGravity > 0
+  ) {
+    const massKg = selectorStackLb * 0.45359237;
+    const loadN = massKg * selectorGravity;
+    const forcePerPlane = loadN / 2;
+    const area = Math.PI * selectorDiameter ** 2 / 4;
+    const tauActual = forcePerPlane / area;
+    const tauYield = selectorYieldStrength / Math.sqrt(3);
+    const tauAllow = tauYield / selectorRequiredFos;
+    const actualFos = tauYield / tauActual;
+    const minimumDiameter = Math.sqrt(2 * loadN / (Math.PI * tauAllow));
+    const passes = actualFos >= selectorRequiredFos;
+    values.selector_mass_kg = formatDerived(massKg, 2);
+    values.selector_load_N = formatDerived(loadN, 1);
+    values.selector_force_per_plane_N = formatDerived(forcePerPlane, 1);
+    values.selector_area_mm2 = formatDerived(area, 2);
+    values.selector_tau_actual_MPa = formatDerived(tauActual, 2);
+    values.selector_tau_y_MPa = formatDerived(tauYield, 2);
+    values.selector_tau_allow_MPa = formatDerived(tauAllow, 2);
+    values.selector_fos_actual = formatDerived(actualFos, 2);
+    values.selector_d_min_mm = formatDerived(minimumDiameter, 2);
+    values.selector_diameter_assessment = selectorDiameter >= minimumDiameter
+      ? "The specified pin diameter meets the calculated minimum for this simplified double-shear check."
+      : "The specified pin diameter is smaller than the calculated minimum for this simplified double-shear check.";
+    values.selector_fos_assessment = passes
+      ? "The actual factor of safety meets or exceeds the requirement."
+      : "The actual factor of safety is below the requirement.";
+    values.selector_engineering_assessment = passes
+      ? "The specified pin satisfies the assigned average double-shear yielding check."
+      : "The specified pin does not satisfy the assigned average double-shear yielding check.";
+  }
+
   const clevisLoad = numericValue(values, "P");
   const clevisD1 = numericValue(values, "d_1");
   const clevisD2 = numericValue(values, "d_2");

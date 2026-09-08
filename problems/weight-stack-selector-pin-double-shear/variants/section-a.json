@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "description": "Baseline 190 lb weight-stack selector-pin assignment using symmetric double shear.",
+  "variables": {"selector_W_lb":190,"selector_d_mm":9.525,"selector_S_y_MPa":205,"selector_FS_req":2.5,"selector_g":9.81},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19","q20"]
+}

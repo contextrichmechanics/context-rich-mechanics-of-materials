@@ -248,5 +248,15 @@
     "questions": 20,
     "variants": 1,
     "warnings": []
+  },
+  {
+    "id": "MOS-WEIGHT-STACK-SELEC-001",
+    "slug": "weight-stack-selector-pin-double-shear",
+    "title": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+    "status": "OK",
+    "variables": 5,
+    "questions": 20,
+    "variants": 1,
+    "warnings": []
   }
 ]

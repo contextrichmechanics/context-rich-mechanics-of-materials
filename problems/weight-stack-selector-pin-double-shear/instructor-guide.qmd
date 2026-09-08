@@ -1,0 +1,45 @@
+---
+title: "Instructor Guide - Weight-Stack Selector Pin in Double Shear"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+These answers are representative. Award credit for a defensible load path and double-shear idealization, correct equations and units, and a conclusion bounded by the model assumptions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="weight-stack-selector-pin-double-shear-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "weight-stack-selector-pin-double-shear",
+    targetId: "weight-stack-selector-pin-double-shear-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The stack label is treated as a pound-mass value, converted with 1 lb = 0.45359237 kg, and multiplied by the assigned gravitational acceleration. The specified 205 MPa value is the tensile yield strength used for the 304 stainless-steel pin, and shear yield is estimated by the von Mises relation. The result is an average direct-shear exercise, not a complete certification of the pictured machine. Product design must also address pin bending, plate and stem bearing, tear-out, fatigue, wear, clearance and impact, stress concentrations, material condition, manufacturing details, and the actual cable-machine geometry.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization and assumptions: 20%;
+- mechanics calculations: 40%;
+- engineering assessment and limitations: 20%.
