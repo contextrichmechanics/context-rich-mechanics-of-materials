@@ -23,4 +23,4 @@ Determine whether the proposed bolts provide the required factor of safety again
 
 ### Scope of the Model
 
-Treat the assigned load as an equivalent static vertical connection shear. Assume identical bolts, equal direct-shear sharing, rigid connected plates, and smooth bolt shanks at the shear plane. The model excludes eccentric bolt-group moment, bolt tension, bearing, tear-out, prying, thread effects, preload and friction, fatigue, and local deformation.
+Treat the assigned load as an equivalent static vertical connection shear. Assume identical bolts, equal direct-shear sharing, rigid connected plates, and smooth bolt shanks at the shear plane. Idealize the mounting bolts as loose, clearance-fit connectors: the connected brackets bear against the bolt shanks, transferring the assigned transverse load directly to the bolts in shear. Frictional load transfer from bolt clamping or preload is neglected. The model excludes eccentric bolt-group moment, bolt tension, bearing failure, tear-out, prying, thread effects, fatigue, and local deformation.

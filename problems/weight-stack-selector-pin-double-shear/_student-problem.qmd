@@ -23,4 +23,4 @@ Determine the selector pin's average double-shear stress and factor of safety ag
 
 ### Scope of the Model
 
-Treat the selected plates as one translating mass lifted at controlled constant speed. Model the circular pin in symmetric direct double shear with equal load sharing between two shear planes and uniform average shear stress. Neglect pin bending, bearing and tear-out, fatigue, wear, clearance and impact effects, friction, cable/pulley losses, stress concentrations, and local deformation.
+Treat the selected plates as one translating mass lifted at controlled constant speed. Model the circular pin in symmetric direct double shear with equal load sharing between two shear planes and uniform average shear stress. Assume the removable selector pin has a loose clearance fit in the selector-stem and plate holes, so the load transfers to the pin through bearing contact and the two supporting sides produce the idealized double-shear condition. Neglect pin bending, bearing failure and tear-out, fatigue, wear, clearance-induced impact, friction, cable/pulley losses, stress concentrations, and local deformation.

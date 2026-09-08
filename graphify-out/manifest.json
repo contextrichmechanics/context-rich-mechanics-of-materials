@@ -1,13 +1,13 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1788836114.5029306,
-    "seen": 1788836588.7842867,
-    "ast_hash": "fa3ef6f554ee2690f8f1179829e061a1",
+    "mtime": 1788848679.0553777,
+    "seen": 1788848983.9586582,
+    "ast_hash": "fb39a9cab4f9c61b931d95fc4313ad11",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1788836114.504912,
-    "seen": 1788836588.784293,
+    "mtime": 1788848679.0553777,
+    "seen": 1788848983.9586632,
     "ast_hash": "ed43cdcf67d0f7f1a74c258ba7db150a",
     "semantic_hash": ""
   },
@@ -996,14 +996,14 @@
     "semantic_hash": ""
   },
   "data/problem-catalog.json": {
-    "mtime": 1788836114.5007107,
-    "seen": 1788836588.784291,
-    "ast_hash": "49e3a28dd84c9d4f4dadd3276afc9826",
+    "mtime": 1788848679.0498128,
+    "seen": 1788848983.9586613,
+    "ast_hash": "f306d3bac4c8fbf1a05799e216dcc74d",
     "semantic_hash": ""
   },
   "data/problem-health.json": {
-    "mtime": 1788836114.5039139,
-    "seen": 1788836588.7842946,
+    "mtime": 1788848679.0553777,
+    "seen": 1788848983.9586644,
     "ast_hash": "9c453fa77d009521fabe4fed8b87c4a2",
     "semantic_hash": ""
   },
@@ -1728,15 +1728,15 @@
     "semantic_hash": ""
   },
   "problems/basketball-hoop-bolted-connection/problem.json": {
-    "mtime": 1788730358.4477265,
-    "seen": 1788732914.5191653,
-    "ast_hash": "47aa1b71ad4998a82954425c4987b931",
+    "mtime": 1788848619.6739252,
+    "seen": 1788848983.9586844,
+    "ast_hash": "ebaf772d61ee393597d09c17031aad92",
     "semantic_hash": ""
   },
   "problems/basketball-hoop-bolted-connection/questions.json": {
-    "mtime": 1788730432.6123526,
-    "seen": 1788732914.5191662,
-    "ast_hash": "42f4bfcc4a3ce10e98cb822242d754f9",
+    "mtime": 1788848620.5609374,
+    "seen": 1788848983.9586856,
+    "ast_hash": "2f6d16ddd82cd0484fe7ce9cf986b410",
     "semantic_hash": ""
   },
   "problems/basketball-hoop-bolted-connection/variables.json": {
@@ -1752,9 +1752,9 @@
     "semantic_hash": ""
   },
   "problems/basketball-hoop-bolted-connection/_student-problem.qmd": {
-    "mtime": 1788730361.0505114,
-    "seen": 1788732914.5192885,
-    "ast_hash": "af900aedd9b4eb33c36568f75014eb97",
+    "mtime": 1788848618.8136733,
+    "seen": 1788848983.958835,
+    "ast_hash": "e520999f88233251ba8d341db58132b3",
     "semantic_hash": ""
   },
   "problems/basketball-hoop-bolted-connection/index.qmd": {
@@ -1788,15 +1788,15 @@
     "semantic_hash": ""
   },
   "problems/weight-stack-selector-pin-double-shear/problem.json": {
-    "mtime": 1788824976.2985573,
-    "seen": 1788826002.4339156,
-    "ast_hash": "454d086e468c36237f747781b8ac5668",
+    "mtime": 1788848622.312676,
+    "seen": 1788848983.9587877,
+    "ast_hash": "d9e2e2ad78a04b9ede3a7df6c832bab1",
     "semantic_hash": ""
   },
   "problems/weight-stack-selector-pin-double-shear/questions.json": {
-    "mtime": 1788825222.99268,
-    "seen": 1788826002.433917,
-    "ast_hash": "8bcd1c0b456585b72dcc5c680a7d0d8a",
+    "mtime": 1788848623.1903405,
+    "seen": 1788848983.9587896,
+    "ast_hash": "147ac088f4e60bb3d241ce257e4cd505",
     "semantic_hash": ""
   },
   "problems/weight-stack-selector-pin-double-shear/variables.json": {
@@ -1812,9 +1812,9 @@
     "semantic_hash": ""
   },
   "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd": {
-    "mtime": 1788824979.5870492,
-    "seen": 1788826002.4340541,
-    "ast_hash": "27ce8363bac3398c1d15e877e5d7c3a8",
+    "mtime": 1788848621.4337182,
+    "seen": 1788848983.9589322,
+    "ast_hash": "cc777130c24a507e415cffcd09be409c",
     "semantic_hash": ""
   },
   "problems/weight-stack-selector-pin-double-shear/index.qmd": {

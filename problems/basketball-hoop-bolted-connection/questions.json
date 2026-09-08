@@ -55,7 +55,7 @@
     "id":"q9","title":"Modeling Assumptions","section":"transition","selected":true,"type":"assumptions","difficulty":"introductory",
     "tags":["assumptions","connection model"],"learningObjectives":["State assumptions supporting equal direct-shear sharing."],
     "student":"<p>State the assumptions used to reduce the real connection to the assigned average direct-shear model.</p>",
-    "instructor":"<p>Use equivalent static loading, identical bolts, equal load sharing, {{bolt_n_s}} shear plane(s) per bolt, smooth shanks at the planes, and rigid connected plates. Exclude the additional connection effects listed in the scope.</p>"
+    "instructor":"<p>Use equivalent static loading, identical bolts, equal load sharing, {{bolt_n_s}} shear plane(s) per bolt, smooth shanks at the planes, and rigid connected plates. Idealize the mounting bolts as loose, clearance-fit connectors, so the connected brackets bear against the bolt shanks and the assigned transverse load transfers directly to the bolts in shear. Neglect frictional load transfer from bolt clamping or preload and exclude the additional connection effects listed in the scope.</p>"
   },
   {
     "id":"q10","title":"Mechanics Analysis Plan","section":"transition","selected":true,"type":"analysis planning","difficulty":"introductory",
