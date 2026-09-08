@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1839"
+      "source_location": "L1882"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1922"
+      "source_location": "L1965"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1818"
+      "source_location": "L1861"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1938"
+      "source_location": "L1981"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1783"
+      "source_location": "L1826"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1779"
+      "source_location": "L1822"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1888"
+      "source_location": "L1931"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1830"
+      "source_location": "L1873"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1863"
+      "source_location": "L1906"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1856"
+      "source_location": "L1899"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1797"
+      "source_location": "L1840"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1806"
+      "source_location": "L1849"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1869"
+      "source_location": "L1912"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1765"
+      "source_location": "L1808"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1755"
+      "source_location": "L1798"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1735"
+      "source_location": "L1778"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1720"
+      "source_location": "L1763"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1716"
+      "source_location": "L1759"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1751"
+      "source_location": "L1794"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1805"
+      "source_location": "L1848"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1798"
+      "source_location": "L1841"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1832"
+      "source_location": "L1875"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1789"
+      "source_location": "L1832"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1811"
+      "source_location": "L1854"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1767"
+      "source_location": "L1810"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1702"
+      "source_location": "L1745"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1693"
+      "source_location": "L1736"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2040"
+      "source_location": "L2083"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2027"
+      "source_location": "L2070"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2051"
+      "source_location": "L2094"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2041"
+      "source_location": "L2084"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2021"
+      "source_location": "L2064"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1773"
+      "source_location": "L1816"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2026"
+      "source_location": "L2069"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2028"
+      "source_location": "L2071"
     },
     {
       "id": "instructor_builder",
@@ -2606,7 +2606,7 @@
       "label": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1.md",
@@ -2618,7 +2618,7 @@
       "label": "10. Faculty Authoring Guidance",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "10. faculty authoring guidance",
@@ -2630,7 +2630,7 @@
       "label": "11. Prompt Format for Automated Problem Generation",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "11. prompt format for automated problem generation",
@@ -2642,7 +2642,7 @@
       "label": "1. Problem Identification and Instructor Setup",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. problem identification and instructor setup",
@@ -2654,7 +2654,7 @@
       "label": "2. System Components",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. system components",
@@ -2666,7 +2666,7 @@
       "label": "3. Engineering Context and Main Goal",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "3. engineering context and main goal",
@@ -2678,7 +2678,7 @@
       "label": "4. Context and Mechanics Reasoning Questions",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4. context and mechanics reasoning questions",
@@ -2690,7 +2690,7 @@
       "label": "5. Transition to a Mechanics Model",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "5. transition to a mechanics model",
@@ -2702,7 +2702,7 @@
       "label": "6. Instructor Reference Idealization and Input Variables (Instructor Only)",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "6. instructor reference idealization and input variables (instructor only)",
@@ -2710,23 +2710,11 @@
       "source_location": "L74"
     },
     {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "label": "7. Mechanics Analysis Questions",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7. mechanics analysis questions",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L85"
-    },
-    {
       "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_8_suggested_assessment_structure",
       "label": "8. Suggested Assessment Structure",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "8. suggested assessment structure",
@@ -2738,7 +2726,7 @@
       "label": "9. Instructor Authoring Checklist",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "9. instructor authoring checklist",
@@ -2750,7 +2738,7 @@
       "label": "Constrain open-ended questions",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "constrain open-ended questions",
@@ -2762,7 +2750,7 @@
       "label": "Difficulty Level",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "difficulty level",
@@ -2774,7 +2762,7 @@
       "label": "End with judgment, not full redesign",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "end with judgment, not full redesign",
@@ -2786,7 +2774,7 @@
       "label": "Engineering Context",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "engineering context",
@@ -2798,7 +2786,7 @@
       "label": "Geometry Complexity",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "geometry complexity",
@@ -2810,7 +2798,7 @@
       "label": "Image Placeholder A \u2014 Real Application / Field Image",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "image placeholder a \u2014 real application / field image",
@@ -2822,7 +2810,7 @@
       "label": "Image Placeholder B \u2014 Instructor Reference Simplified Model",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "image placeholder b \u2014 instructor reference simplified model",
@@ -2834,7 +2822,7 @@
       "label": "Instructor Input Variables",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "instructor input variables",
@@ -2846,7 +2834,7 @@
       "label": "Keep the mechanics central",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "keep the mechanics central",
@@ -2858,7 +2846,7 @@
       "label": "Main Engineering Goal",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "main engineering goal",
@@ -2870,7 +2858,7 @@
       "label": "Problem Deliverable Type",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "problem deliverable type",
@@ -2882,7 +2870,7 @@
       "label": "Purpose",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "purpose",
@@ -2890,23 +2878,11 @@
       "source_location": "L5"
     },
     {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q10_connector_based_modification",
-      "label": "Q10. Connector-Based Modification",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q10. connector-based modification",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L106"
-    },
-    {
       "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q10_mechanics_analysis_plan",
       "label": "Q10. Mechanics Analysis Plan",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "q10. mechanics analysis plan",
@@ -2914,47 +2890,11 @@
       "source_location": "L66"
     },
     {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q11_stability_or_buckling_check",
-      "label": "Q11. Stability or Buckling Check",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q11. stability or buckling check",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L108"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q12_engineering_assessment_and_recommendation",
-      "label": "Q12. Engineering Assessment and Recommendation",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q12. engineering assessment and recommendation",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L110"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q1_boundary_conditions",
-      "label": "Q1. Boundary Conditions",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q1. boundary conditions",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L88"
-    },
-    {
       "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q1_primary_function_of_the_system",
       "label": "Q1. Primary Function of the System",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "q1. primary function of the system",
@@ -2966,7 +2906,7 @@
       "label": "Q2. External Loads",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "q2. external loads",
@@ -2974,35 +2914,11 @@
       "source_location": "L37"
     },
     {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q2_unknown_constraint_loads",
-      "label": "Q2. Unknown Constraint Loads",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q2. unknown constraint loads",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L90"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q3_solve_for_unknown_constraint_loads",
-      "label": "Q3. Solve for Unknown Constraint Loads",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q3. solve for unknown constraint loads",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L92"
-    },
-    {
       "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q3_supports_and_boundary_conditions",
       "label": "Q3. Supports and Boundary Conditions",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "q3. supports and boundary conditions",
@@ -3014,7 +2930,7 @@
       "label": "Q4. Load Path",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "q4. load path",
@@ -3022,23 +2938,11 @@
       "source_location": "L41"
     },
     {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q4_stiffness_evaluation",
-      "label": "Q4. Stiffness Evaluation",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q4. stiffness evaluation",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L94"
-    },
-    {
       "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q5_critical_components_or_locations",
       "label": "Q5. Critical Components or Locations",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "q5. critical components or locations",
@@ -3046,23 +2950,11 @@
       "source_location": "L43"
     },
     {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q5_stiffness_based_modification",
-      "label": "Q5. Stiffness-Based Modification",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q5. stiffness-based modification",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L96"
-    },
-    {
       "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q6_relevant_mechanical_response_or_failure_mechanism",
       "label": "Q6. Relevant Mechanical Response or Failure Mechanism",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "q6. relevant mechanical response or failure mechanism",
@@ -3070,23 +2962,11 @@
       "source_location": "L45"
     },
     {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q6_strength_factor_of_safety",
-      "label": "Q6. Strength Factor of Safety",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q6. strength factor of safety",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L98"
-    },
-    {
       "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q7_relevant_geometric_and_material_parameters",
       "label": "Q7. Relevant Geometric and Material Parameters",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "q7. relevant geometric and material parameters",
@@ -3094,35 +2974,11 @@
       "source_location": "L47"
     },
     {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q7_strength_based_modification",
-      "label": "Q7. Strength-Based Modification",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q7. strength-based modification",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L100"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q8_connector_load_analysis",
-      "label": "Q8. Connector Load Analysis",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q8. connector load analysis",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L102"
-    },
-    {
       "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q8_student_generated_structural_idealization",
       "label": "Q8. Student-Generated Structural Idealization",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "q8. student-generated structural idealization",
@@ -3130,23 +2986,11 @@
       "source_location": "L50"
     },
     {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q9_connector_factor_of_safety",
-      "label": "Q9. Connector Factor of Safety",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q9. connector factor of safety",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L104"
-    },
-    {
       "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q9_modeling_assumptions",
       "label": "Q9. Modeling Assumptions",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "q9. modeling assumptions",
@@ -3158,7 +3002,7 @@
       "label": "Use selective depth",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "use selective depth",
@@ -3170,7 +3014,7 @@
       "label": "Use the mechanics question bank modularly",
       "_origin": "ast",
       "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
+      "community_name": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "use the mechanics question bank modularly",
@@ -9300,6 +9144,379 @@
       "source_location": "L17"
     },
     {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
+      "label": "7. Mechanics Analysis Questions",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. mechanics analysis questions",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L85"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q10_connector_based_modification",
+      "label": "Q10. Connector-Based Modification",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q10. connector-based modification",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L106"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q11_stability_or_buckling_check",
+      "label": "Q11. Stability or Buckling Check",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q11. stability or buckling check",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L108"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q12_engineering_assessment_and_recommendation",
+      "label": "Q12. Engineering Assessment and Recommendation",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q12. engineering assessment and recommendation",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L110"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q1_boundary_conditions",
+      "label": "Q1. Boundary Conditions",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q1. boundary conditions",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L88"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q2_unknown_constraint_loads",
+      "label": "Q2. Unknown Constraint Loads",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q2. unknown constraint loads",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L90"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q3_solve_for_unknown_constraint_loads",
+      "label": "Q3. Solve for Unknown Constraint Loads",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q3. solve for unknown constraint loads",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L92"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q4_stiffness_evaluation",
+      "label": "Q4. Stiffness Evaluation",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q4. stiffness evaluation",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L94"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q5_stiffness_based_modification",
+      "label": "Q5. Stiffness-Based Modification",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q5. stiffness-based modification",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L96"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q6_strength_factor_of_safety",
+      "label": "Q6. Strength Factor of Safety",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q6. strength factor of safety",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L98"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q7_strength_based_modification",
+      "label": "Q7. Strength-Based Modification",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q7. strength-based modification",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L100"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q8_connector_load_analysis",
+      "label": "Q8. Connector Load Analysis",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q8. connector load analysis",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L102"
+    },
+    {
+      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q9_connector_factor_of_safety",
+      "label": "Q9. Connector Factor of Safety",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "7. Mechanics Analysis Questions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q9. connector factor of safety",
+      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
+      "source_location": "L104"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_student_packet",
+      "label": "weight-stack-selector-pin-double-shear/student-packet.qmd",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+        "subtitle": "Context, Idealization, and Mechanics Analysis",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "weight-stack-selector-pin-double-shear/student-packet.qmd",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_instructor_guide",
+      "label": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - Weight-Stack Selector Pin in Double Shear",
+        "subtitle": "Representative Answers and Evaluation Guidance",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_index",
+      "label": "weight-stack-selector-pin-double-shear/index.qmd",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+        "description": "Check a weight-stack selector pin for double-shear stress, shear-yield factor of safety, and required diameter.",
+        "image": "assets/selector-pin-industry-context.png",
+        "categories": "[context-rich, mechanics-of-materials, fitness equipment, connector design]",
+        "course_topics": "[stress and strain, shear stress, connection design]",
+        "textbook_chapters": "[Stress and strain, Shear stress, Connections and fasteners, Factor of safety]",
+        "problem_types": "[context interpretation, free-body diagram, mechanics analysis, design evaluation]",
+        "competencies": "[load-path identification, engineering idealization, unit conversion, unit-consistent calculation, engineering judgment]",
+        "industries": "[fitness equipment, mechanical connections]",
+        "difficulty": "Introductory-Intermediate",
+        "status": "Ready",
+        "problem_id": "MOS-WEIGHT-STACK-SELEC-001",
+        "version": "1.0.0"
+      },
+      "node_kind": "page",
+      "norm_label": "weight-stack-selector-pin-double-shear/index.qmd",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_index_assignment_options",
+      "label": "Assignment Options",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assignment options",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/index.qmd",
+      "source_location": "L25"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L19"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L15"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L11"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_instructor_guide_scope_of_the_base_problem",
+      "label": "Scope of the Base Problem",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope of the base problem",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L36"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_instructor_guide_supplemental_assessment_structure",
+      "label": "Supplemental Assessment Structure",
+      "_origin": "ast",
+      "community": 85,
+      "community_name": "weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "supplemental assessment structure",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L40"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_student_problem",
+      "label": "weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_student_problem_context_rich_solid_mechanics_problem",
+      "label": "Context-Rich Solid Mechanics Problem",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context-rich solid mechanics problem",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_student_problem_double_shear_safety_of_a_weight_stack_selector_pin_during_a_lat_pulldown",
+      "label": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "double-shear safety of a weight-stack selector pin during a lat pulldown",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L3"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L5"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_student_problem_main_engineering_goal",
+      "label": "Main Engineering Goal",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "main engineering goal",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L13"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_student_problem_scope_of_the_model",
+      "label": "Scope of the Model",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope of the model",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L24"
+    },
+    {
+      "id": "problems_weight_stack_selector_pin_double_shear_student_problem_system_components",
+      "label": "System Components",
+      "_origin": "ast",
+      "community": 86,
+      "community_name": "Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "system components",
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L17"
+    },
+    {
       "id": "ai_agent_11_catalog_and_search_integration",
       "label": "11. Catalog And Search Integration",
       "_origin": "ast",
@@ -9574,7 +9791,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1752",
+      "source_location": "L1795",
       "weight": 1.0
     },
     {
@@ -9586,7 +9803,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1761",
+      "source_location": "L1804",
       "weight": 1.0
     },
     {
@@ -9598,7 +9815,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1806",
+      "source_location": "L1849",
       "weight": 1.0
     },
     {
@@ -9610,7 +9827,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1808",
+      "source_location": "L1851",
       "weight": 1.0
     },
     {
@@ -9622,7 +9839,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1802",
+      "source_location": "L1845",
       "weight": 1.0
     },
     {
@@ -9634,7 +9851,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1843",
+      "source_location": "L1886",
       "weight": 1.0
     },
     {
@@ -9646,7 +9863,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1848",
+      "source_location": "L1891",
       "weight": 1.0
     },
     {
@@ -9658,7 +9875,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1854",
+      "source_location": "L1897",
       "weight": 1.0
     },
     {
@@ -9670,7 +9887,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1856",
+      "source_location": "L1899",
       "weight": 1.0
     },
     {
@@ -9682,7 +9899,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1858",
+      "source_location": "L1901",
       "weight": 1.0
     },
     {
@@ -9694,7 +9911,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1859",
+      "source_location": "L1902",
       "weight": 1.0
     },
     {
@@ -9706,7 +9923,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1790",
+      "source_location": "L1833",
       "weight": 1.0
     },
     {
@@ -9718,7 +9935,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1795",
+      "source_location": "L1838",
       "weight": 1.0
     },
     {
@@ -9730,7 +9947,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1812",
+      "source_location": "L1855",
       "weight": 1.0
     },
     {
@@ -9742,7 +9959,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1822",
+      "source_location": "L1865",
       "weight": 1.0
     },
     {
@@ -9754,7 +9971,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1823",
+      "source_location": "L1866",
       "weight": 1.0
     },
     {
@@ -9766,7 +9983,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1824",
+      "source_location": "L1867",
       "weight": 1.0
     },
     {
@@ -9778,7 +9995,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1825",
+      "source_location": "L1868",
       "weight": 1.0
     },
     {
@@ -9790,7 +10007,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1770",
+      "source_location": "L1813",
       "weight": 1.0
     },
     {
@@ -9802,7 +10019,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1770",
+      "source_location": "L1813",
       "weight": 1.0
     },
     {
@@ -9814,7 +10031,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1770",
+      "source_location": "L1813",
       "weight": 1.0
     },
     {
@@ -9826,7 +10043,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1696",
+      "source_location": "L1739",
       "weight": 1.0
     },
     {
@@ -9838,7 +10055,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1698",
+      "source_location": "L1741",
       "weight": 1.0
     },
     {
@@ -9922,7 +10139,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1929",
+      "source_location": "L1972",
       "weight": 1.0
     },
     {
@@ -9934,7 +10151,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1930",
+      "source_location": "L1973",
       "weight": 1.0
     },
     {
@@ -9946,7 +10163,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1933",
+      "source_location": "L1976",
       "weight": 1.0
     },
     {
@@ -9970,7 +10187,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1945",
+      "source_location": "L1988",
       "weight": 1.0
     },
     {
@@ -9982,7 +10199,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1951",
+      "source_location": "L1994",
       "weight": 1.0
     },
     {
@@ -9994,7 +10211,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1959",
+      "source_location": "L2002",
       "weight": 1.0
     },
     {
@@ -10006,7 +10223,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1959",
+      "source_location": "L2002",
       "weight": 1.0
     },
     {
@@ -10018,7 +10235,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1959",
+      "source_location": "L2002",
       "weight": 1.0
     },
     {
@@ -10030,7 +10247,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1964",
+      "source_location": "L2007",
       "weight": 1.0
     },
     {
@@ -10042,7 +10259,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1964",
+      "source_location": "L2007",
       "weight": 1.0
     },
     {
@@ -10054,7 +10271,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1975",
+      "source_location": "L2018",
       "weight": 1.0
     },
     {
@@ -10066,7 +10283,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1981",
+      "source_location": "L2024",
       "weight": 1.0
     },
     {
@@ -10078,7 +10295,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1895",
+      "source_location": "L1938",
       "weight": 1.0
     },
     {
@@ -10090,7 +10307,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1901",
+      "source_location": "L1944",
       "weight": 1.0
     },
     {
@@ -10102,7 +10319,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1901",
+      "source_location": "L1944",
       "weight": 1.0
     },
     {
@@ -10114,7 +10331,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1901",
+      "source_location": "L1944",
       "weight": 1.0
     },
     {
@@ -10126,7 +10343,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1912",
+      "source_location": "L1955",
       "weight": 1.0
     },
     {
@@ -10138,7 +10355,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1914",
+      "source_location": "L1957",
       "weight": 1.0
     },
     {
@@ -10150,7 +10367,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1916",
+      "source_location": "L1959",
       "weight": 1.0
     },
     {
@@ -10162,7 +10379,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1836",
+      "source_location": "L1879",
       "weight": 1.0
     },
     {
@@ -10174,7 +10391,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1864",
+      "source_location": "L1907",
       "weight": 1.0
     },
     {
@@ -10186,7 +10403,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1866",
+      "source_location": "L1909",
       "weight": 1.0
     },
     {
@@ -10198,7 +10415,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1860",
+      "source_location": "L1903",
       "weight": 1.0
     },
     {
@@ -10210,7 +10427,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1798",
+      "source_location": "L1841",
       "weight": 1.0
     },
     {
@@ -10222,7 +10439,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1803",
+      "source_location": "L1846",
       "weight": 1.0
     },
     {
@@ -10234,7 +10451,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1807",
+      "source_location": "L1850",
       "weight": 1.0
     },
     {
@@ -10246,7 +10463,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1870",
+      "source_location": "L1913",
       "weight": 1.0
     },
     {
@@ -10258,7 +10475,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1880",
+      "source_location": "L1923",
       "weight": 1.0
     },
     {
@@ -10270,7 +10487,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1881",
+      "source_location": "L1924",
       "weight": 1.0
     },
     {
@@ -10282,7 +10499,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1882",
+      "source_location": "L1925",
       "weight": 1.0
     },
     {
@@ -10294,7 +10511,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1883",
+      "source_location": "L1926",
       "weight": 1.0
     },
     {
@@ -10306,7 +10523,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1756",
+      "source_location": "L1799",
       "weight": 1.0
     },
     {
@@ -10318,7 +10535,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1759",
+      "source_location": "L1802",
       "weight": 1.0
     },
     {
@@ -10330,7 +10547,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1761",
+      "source_location": "L1804",
       "weight": 1.0
     },
     {
@@ -15764,6 +15981,138 @@
       "weight": 1.0
     },
     {
+      "source": "problems_weight_stack_selector_pin_double_shear_index",
+      "target": "problems_weight_stack_selector_pin_double_shear_index_assignment_options",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/index.qmd",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_instructor_guide",
+      "target": "problems_weight_stack_selector_pin_double_shear_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_instructor_guide",
+      "target": "problems_weight_stack_selector_pin_double_shear_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_instructor_guide",
+      "target": "problems_weight_stack_selector_pin_double_shear_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_instructor_guide",
+      "target": "problems_weight_stack_selector_pin_double_shear_instructor_guide_scope_of_the_base_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_instructor_guide",
+      "target": "problems_weight_stack_selector_pin_double_shear_instructor_guide_supplemental_assessment_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_student_problem",
+      "target": "problems_weight_stack_selector_pin_double_shear_student_problem_context_rich_solid_mechanics_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_student_problem_context_rich_solid_mechanics_problem",
+      "target": "problems_weight_stack_selector_pin_double_shear_student_problem_double_shear_safety_of_a_weight_stack_selector_pin_during_a_lat_pulldown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_student_problem_double_shear_safety_of_a_weight_stack_selector_pin_during_a_lat_pulldown",
+      "target": "problems_weight_stack_selector_pin_double_shear_student_problem_main_engineering_goal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_student_problem_double_shear_safety_of_a_weight_stack_selector_pin_during_a_lat_pulldown",
+      "target": "problems_weight_stack_selector_pin_double_shear_student_problem_system_components",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_student_problem_double_shear_safety_of_a_weight_stack_selector_pin_during_a_lat_pulldown",
+      "target": "problems_weight_stack_selector_pin_double_shear_student_problem_scope_of_the_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_student_problem_double_shear_safety_of_a_weight_stack_selector_pin_during_a_lat_pulldown",
+      "target": "problems_weight_stack_selector_pin_double_shear_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "readme",
       "target": "readme_context_rich_mechanics_of_materials",
       "relation": "contains",
@@ -16310,7 +16659,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1693",
+      "source_location": "L1736",
       "weight": 1.0
     },
     {
@@ -16321,7 +16670,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1702",
+      "source_location": "L1745",
       "weight": 1.0
     },
     {
@@ -16332,7 +16681,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1716",
+      "source_location": "L1759",
       "weight": 1.0
     },
     {
@@ -16343,7 +16692,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1720",
+      "source_location": "L1763",
       "weight": 1.0
     },
     {
@@ -16354,7 +16703,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1735",
+      "source_location": "L1778",
       "weight": 1.0
     },
     {
@@ -16365,7 +16714,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1751",
+      "source_location": "L1794",
       "weight": 1.0
     },
     {
@@ -16376,7 +16725,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1767",
+      "source_location": "L1810",
       "weight": 1.0
     },
     {
@@ -16387,7 +16736,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1789",
+      "source_location": "L1832",
       "weight": 1.0
     },
     {
@@ -16398,7 +16747,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1798",
+      "source_location": "L1841",
       "weight": 1.0
     },
     {
@@ -16409,7 +16758,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1805",
+      "source_location": "L1848",
       "weight": 1.0
     },
     {
@@ -16420,7 +16769,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1811",
+      "source_location": "L1854",
       "weight": 1.0
     },
     {
@@ -16431,7 +16780,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1832",
+      "source_location": "L1875",
       "weight": 1.0
     },
     {
@@ -16552,62 +16901,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1755",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_selectedquestions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1765",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_questionsections",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1773",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_questionsbysection",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1779",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_questionimagefile",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1783",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderquestionimagehtml",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1797",
+      "source_location": "L1798",
       "weight": 1.0
     },
     {
@@ -16623,13 +16917,68 @@
     },
     {
       "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_selectedquestions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L1808",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_questionsections",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L1816",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_questionsbysection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L1822",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_questionimagefile",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L1826",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_renderquestionimagehtml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L1840",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
       "target": "scripts_render_assignment_renderquestionimagemarkdown",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1806",
+      "source_location": "L1849",
       "weight": 1.0
     },
     {
@@ -16640,7 +16989,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1818",
+      "source_location": "L1861",
       "weight": 1.0
     },
     {
@@ -16651,7 +17000,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1830",
+      "source_location": "L1873",
       "weight": 1.0
     },
     {
@@ -16662,7 +17011,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1839",
+      "source_location": "L1882",
       "weight": 1.0
     },
     {
@@ -16673,7 +17022,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1856",
+      "source_location": "L1899",
       "weight": 1.0
     },
     {
@@ -16684,7 +17033,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1863",
+      "source_location": "L1906",
       "weight": 1.0
     },
     {
@@ -16695,7 +17044,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1869",
+      "source_location": "L1912",
       "weight": 1.0
     },
     {
@@ -16706,7 +17055,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1888",
+      "source_location": "L1931",
       "weight": 1.0
     },
     {
@@ -16717,7 +17066,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1922",
+      "source_location": "L1965",
       "weight": 1.0
     },
     {
@@ -16728,7 +17077,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1938",
+      "source_location": "L1981",
       "weight": 1.0
     },
     {
@@ -16739,7 +17088,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2021",
+      "source_location": "L2064",
       "weight": 1.0
     },
     {
@@ -16750,7 +17099,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2026",
+      "source_location": "L2069",
       "weight": 1.0
     },
     {
@@ -16761,7 +17110,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2027",
+      "source_location": "L2070",
       "weight": 1.0
     },
     {
@@ -16772,7 +17121,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2028",
+      "source_location": "L2071",
       "weight": 1.0
     },
     {
@@ -16783,7 +17132,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2040",
+      "source_location": "L2083",
       "weight": 1.0
     },
     {
@@ -16794,7 +17143,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2041",
+      "source_location": "L2084",
       "weight": 1.0
     },
     {
@@ -16805,7 +17154,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2051",
+      "source_location": "L2094",
       "weight": 1.0
     },
     {
@@ -17634,6 +17983,28 @@
       "weight": 1.0
     },
     {
+      "source": "problems_weight_stack_selector_pin_double_shear_index",
+      "target": "problems_weight_stack_selector_pin_double_shear_student_packet",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/index.qmd",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_weight_stack_selector_pin_double_shear_index",
+      "target": "problems_weight_stack_selector_pin_double_shear_instructor_guide",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/weight-stack-selector-pin-double-shear/index.qmd",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
       "source": "readme",
       "target": "ai_agent",
       "relation": "references",
@@ -17701,5 +18072,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9761ba1760193e45136fc57e10c78cf4a44226ad"
+  "built_at_commit": "a8608ceb2c37dd721d7ec04117a1ece416089b46"
 }

@@ -1,14 +1,14 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1788731277.3144517,
-    "seen": 1788732914.5191424,
-    "ast_hash": "30b3ca3f793e353801e54db47442c68e",
+    "mtime": 1788825986.2476332,
+    "seen": 1788826002.4337769,
+    "ast_hash": "f8221bae45fa9819e553c98e5fe26d28",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1788731277.3157136,
-    "seen": 1788732914.519147,
-    "ast_hash": "6428dccf99d86b56cebaf02d80787f46",
+    "mtime": 1788825986.2476332,
+    "seen": 1788826002.433783,
+    "ast_hash": "b6647964c39b2ed6209d72aeb5b1cfeb",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -24,15 +24,15 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1788730498.8412137,
-    "seen": 1788732914.5192544,
-    "ast_hash": "f9fcba59701c71d5459b5380f5ba1159",
+    "mtime": 1788825321.843134,
+    "seen": 1788826002.433923,
+    "ast_hash": "c155918ba3a7cc0ad0aaf016a45b06f1",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1788730499.7828884,
-    "seen": 1788732914.5192556,
-    "ast_hash": "0e8de4b6c5bce903c1c7e532b7e074c4",
+    "mtime": 1788825322.8627071,
+    "seen": 1788826002.4339242,
+    "ast_hash": "fba9314ee7fe947b8427e4479c23f9a1",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -150,9 +150,9 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1788730500.6809635,
-    "seen": 1788732914.5192769,
-    "ast_hash": "2bcb27b668b2727dcb0d4de178b80dd7",
+    "mtime": 1788825324.1056993,
+    "seen": 1788826002.43395,
+    "ast_hash": "00587417d34c799720e3facf78977fdd",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -996,15 +996,15 @@
     "semantic_hash": ""
   },
   "data/problem-catalog.json": {
-    "mtime": 1788731277.3144517,
-    "seen": 1788732914.519145,
-    "ast_hash": "6fc0e15f58b1579c3aa3cdead780c27d",
+    "mtime": 1788825986.2476332,
+    "seen": 1788826002.4337804,
+    "ast_hash": "5329e9200c99e7f0316178a328dbde27",
     "semantic_hash": ""
   },
   "data/problem-health.json": {
-    "mtime": 1788731277.3157136,
-    "seen": 1788732914.519148,
-    "ast_hash": "4066fd64f17d4c46f9a054f5591ce904",
+    "mtime": 1788825986.2476332,
+    "seen": 1788826002.4337845,
+    "ast_hash": "f2093d9daebd2e5243cf618e4f12ec2b",
     "semantic_hash": ""
   },
   "problems/aerial-gondola-suspension-hanger/problem.json": {
@@ -1785,6 +1785,66 @@
     "mtime": 1788725262.5558517,
     "seen": 1788732914.5193768,
     "ast_hash": "c0d1a3303ac54376c4e5133f84567cf9",
+    "semantic_hash": ""
+  },
+  "problems/weight-stack-selector-pin-double-shear/problem.json": {
+    "mtime": 1788824976.2985573,
+    "seen": 1788826002.4339156,
+    "ast_hash": "454d086e468c36237f747781b8ac5668",
+    "semantic_hash": ""
+  },
+  "problems/weight-stack-selector-pin-double-shear/questions.json": {
+    "mtime": 1788825222.99268,
+    "seen": 1788826002.433917,
+    "ast_hash": "8bcd1c0b456585b72dcc5c680a7d0d8a",
+    "semantic_hash": ""
+  },
+  "problems/weight-stack-selector-pin-double-shear/variables.json": {
+    "mtime": 1788824977.3511715,
+    "seen": 1788826002.433918,
+    "ast_hash": "3f9114e0dc82be3030df48b32ca57249",
+    "semantic_hash": ""
+  },
+  "problems/weight-stack-selector-pin-double-shear/variants/section-a.json": {
+    "mtime": 1788824981.6592946,
+    "seen": 1788826002.4339187,
+    "ast_hash": "db94aa71be556b92a594bd5b0d6c94db",
+    "semantic_hash": ""
+  },
+  "problems/weight-stack-selector-pin-double-shear/_student-problem.qmd": {
+    "mtime": 1788824979.5870492,
+    "seen": 1788826002.4340541,
+    "ast_hash": "27ce8363bac3398c1d15e877e5d7c3a8",
+    "semantic_hash": ""
+  },
+  "problems/weight-stack-selector-pin-double-shear/index.qmd": {
+    "mtime": 1788824978.4756603,
+    "seen": 1788826002.434055,
+    "ast_hash": "1f9335353162a16c8d849c640ac23498",
+    "semantic_hash": ""
+  },
+  "problems/weight-stack-selector-pin-double-shear/instructor-guide.qmd": {
+    "mtime": 1788824980.6405172,
+    "seen": 1788826002.4340563,
+    "ast_hash": "9c6a9a2378ede44e31fff1cd3e538cb9",
+    "semantic_hash": ""
+  },
+  "problems/weight-stack-selector-pin-double-shear/student-packet.qmd": {
+    "mtime": 1788824765.4743655,
+    "seen": 1788826002.4340572,
+    "ast_hash": "6d53bf8a1fd9be6d91e61c382c4ea960",
+    "semantic_hash": ""
+  },
+  "problems/weight-stack-selector-pin-double-shear/assets/selector-pin-industry-context.png": {
+    "mtime": 1788809472.4000297,
+    "seen": 1788826002.4341226,
+    "ast_hash": "e685631af5be0f981dd833a161b6c858",
+    "semantic_hash": ""
+  },
+  "problems/weight-stack-selector-pin-double-shear/assets/selector-pin-instructor-idealization.png": {
+    "mtime": 1788815319.824916,
+    "seen": 1788826002.4341235,
+    "ast_hash": "259a4060ae318187707770feda943067",
     "semantic_hash": ""
   }
 }

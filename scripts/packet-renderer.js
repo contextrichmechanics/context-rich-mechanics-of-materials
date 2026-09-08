@@ -788,6 +788,44 @@
         : "Increase the bolt count, bolt diameter, or bolt-circle radius before completing the omitted coupling checks.";
     }
 
+    const pumpPowerKw = numericValue(values, "pump_P_kW");
+    const pumpSpeedRpm = numericValue(values, "pump_n_rpm");
+    const pumpDiameterMm = numericValue(values, "pump_d_mm");
+    const pumpAllowableStress = numericValue(values, "pump_tau_allow_MPa");
+
+    if (
+      Number.isFinite(pumpPowerKw) && pumpPowerKw > 0 &&
+      Number.isFinite(pumpSpeedRpm) && pumpSpeedRpm > 0 &&
+      Number.isFinite(pumpDiameterMm) && pumpDiameterMm > 0 &&
+      Number.isFinite(pumpAllowableStress) && pumpAllowableStress > 0
+    ) {
+      const omega = pumpSpeedRpm * 2 * Math.PI / 60;
+      const torqueNm = pumpPowerKw * 1000 / omega;
+      const torqueNmm = torqueNm * 1000;
+      const polarMoment = Math.PI * pumpDiameterMm ** 4 / 32;
+      const maximumStress = torqueNmm * (pumpDiameterMm / 2) / polarMoment;
+      const minimumDiameter = (16 * torqueNmm / (Math.PI * pumpAllowableStress)) ** (1 / 3);
+      const utilization = maximumStress / pumpAllowableStress;
+      const passes = maximumStress <= pumpAllowableStress * (1 + 1e-10);
+      values.pump_omega_rad_s = formatDerived(omega, 2);
+      values.pump_torque_Nm = formatDerived(torqueNm, 2);
+      values.pump_torque_Nmm = formatDerived(torqueNmm, 1);
+      values.pump_internal_torque_Nm = formatDerived(torqueNm, 2);
+      values.pump_J_mm4 = formatDerived(polarMoment, 1);
+      values.pump_tau_max_MPa = formatDerived(maximumStress, 2);
+      values.pump_d_min_mm = formatDerived(minimumDiameter, 2);
+      values.pump_utilization = formatDerived(utilization, 3);
+      values.pump_stress_assessment = passes
+        ? "The specified shaft satisfies the allowable torsional shear-stress criterion."
+        : "The specified shaft does not satisfy the allowable torsional shear-stress criterion.";
+      values.pump_diameter_assessment = pumpDiameterMm >= minimumDiameter
+        ? "The specified diameter exceeds the calculated minimum."
+        : "The specified diameter is smaller than the calculated minimum.";
+      values.pump_engineering_assessment = passes
+        ? `The ${formatDerived(pumpDiameterMm, 1)} mm motor shaft is adequate for the assigned steady torsion-only load because its ${formatDerived(maximumStress, 2)} MPa maximum shear stress is below the ${formatDerived(pumpAllowableStress, 1)} MPa allowable stress.`
+        : `The ${formatDerived(pumpDiameterMm, 1)} mm motor shaft is inadequate for the assigned steady torsion-only load because its ${formatDerived(maximumStress, 2)} MPa maximum shear stress exceeds the ${formatDerived(pumpAllowableStress, 1)} MPa allowable stress.`;
+    }
+
     const shaftPower = numericValue(values, "P");
     const shaftSpeed = numericValue(values, "n");
     const shaftAllowableStress = numericValue(values, "tau_allow");

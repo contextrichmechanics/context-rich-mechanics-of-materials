@@ -1,0 +1,26 @@
+---
+title: "Student Packet - Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling"
+subtitle: "Context, Idealization, and Mechanics Analysis"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="pump-drive-shaft-torsion-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "pump-drive-shaft-torsion",
+    targetId: "pump-drive-shaft-torsion-student-questions",
+    type: "student"
+  });
+});
+</script>
+```

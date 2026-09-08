@@ -1,14 +1,14 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1788825986.2476332,
-    "seen": 1788826002.4337769,
-    "ast_hash": "f8221bae45fa9819e553c98e5fe26d28",
+    "mtime": 1788836114.5029306,
+    "seen": 1788836588.7842867,
+    "ast_hash": "fa3ef6f554ee2690f8f1179829e061a1",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1788825986.2476332,
-    "seen": 1788826002.433783,
-    "ast_hash": "b6647964c39b2ed6209d72aeb5b1cfeb",
+    "mtime": 1788836114.504912,
+    "seen": 1788836588.784293,
+    "ast_hash": "ed43cdcf67d0f7f1a74c258ba7db150a",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -24,15 +24,15 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1788825321.843134,
-    "seen": 1788826002.433923,
-    "ast_hash": "c155918ba3a7cc0ad0aaf016a45b06f1",
+    "mtime": 1788835922.4119003,
+    "seen": 1788836588.7845068,
+    "ast_hash": "15b056e4c2fcc24b413d8000984d5424",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1788825322.8627071,
-    "seen": 1788826002.4339242,
-    "ast_hash": "fba9314ee7fe947b8427e4479c23f9a1",
+    "mtime": 1788835924.07087,
+    "seen": 1788836588.7845125,
+    "ast_hash": "f499c2d68303cd355a103691648fd5be",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -150,9 +150,9 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1788825324.1056993,
-    "seen": 1788826002.43395,
-    "ast_hash": "00587417d34c799720e3facf78977fdd",
+    "mtime": 1788835925.773566,
+    "seen": 1788836588.7845442,
+    "ast_hash": "3932eff5ba4f07f1486ad01e45cf2964",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -996,15 +996,15 @@
     "semantic_hash": ""
   },
   "data/problem-catalog.json": {
-    "mtime": 1788825986.2476332,
-    "seen": 1788826002.4337804,
-    "ast_hash": "5329e9200c99e7f0316178a328dbde27",
+    "mtime": 1788836114.5007107,
+    "seen": 1788836588.784291,
+    "ast_hash": "49e3a28dd84c9d4f4dadd3276afc9826",
     "semantic_hash": ""
   },
   "data/problem-health.json": {
-    "mtime": 1788825986.2476332,
-    "seen": 1788826002.4337845,
-    "ast_hash": "f2093d9daebd2e5243cf618e4f12ec2b",
+    "mtime": 1788836114.5039139,
+    "seen": 1788836588.7842946,
+    "ast_hash": "9c453fa77d009521fabe4fed8b87c4a2",
     "semantic_hash": ""
   },
   "problems/aerial-gondola-suspension-hanger/problem.json": {
@@ -1845,6 +1845,66 @@
     "mtime": 1788815319.824916,
     "seen": 1788826002.4341235,
     "ast_hash": "259a4060ae318187707770feda943067",
+    "semantic_hash": ""
+  },
+  "problems/pump-drive-shaft-torsion/problem.json": {
+    "mtime": 1788835698.709952,
+    "seen": 1788836588.7844222,
+    "ast_hash": "f67d6c6db9c5f089c66c565b9546d511",
+    "semantic_hash": ""
+  },
+  "problems/pump-drive-shaft-torsion/questions.json": {
+    "mtime": 1788835808.9103546,
+    "seen": 1788836588.7844234,
+    "ast_hash": "655662b5e41b23e585e3ba77fc4df00d",
+    "semantic_hash": ""
+  },
+  "problems/pump-drive-shaft-torsion/variables.json": {
+    "mtime": 1788835699.8553712,
+    "seen": 1788836588.7844522,
+    "ast_hash": "37c3fc57569c8b581ed4c52ef9ffef6a",
+    "semantic_hash": ""
+  },
+  "problems/pump-drive-shaft-torsion/variants/section-a.json": {
+    "mtime": 1788835704.9074,
+    "seen": 1788836588.7844539,
+    "ast_hash": "874c30580a5e2eb5602549b636e5411d",
+    "semantic_hash": ""
+  },
+  "problems/pump-drive-shaft-torsion/_student-problem.qmd": {
+    "mtime": 1788835702.3879976,
+    "seen": 1788836588.7846475,
+    "ast_hash": "eaeace0c0b135e813e05bb35d9d21815",
+    "semantic_hash": ""
+  },
+  "problems/pump-drive-shaft-torsion/index.qmd": {
+    "mtime": 1788835701.1299574,
+    "seen": 1788836588.7846484,
+    "ast_hash": "a6e747d5cc3ff17c4eb3914db18dd0e6",
+    "semantic_hash": ""
+  },
+  "problems/pump-drive-shaft-torsion/instructor-guide.qmd": {
+    "mtime": 1788835703.7036896,
+    "seen": 1788836588.7846496,
+    "ast_hash": "ac5c7a87099ea69e7c2bac43ffb9853f",
+    "semantic_hash": ""
+  },
+  "problems/pump-drive-shaft-torsion/student-packet.qmd": {
+    "mtime": 1788835597.359819,
+    "seen": 1788836588.7846508,
+    "ast_hash": "4df9d6928ff9f009b249b82f94704b98",
+    "semantic_hash": ""
+  },
+  "problems/pump-drive-shaft-torsion/assets/pump-drive-shaft-industry-context.jpg": {
+    "mtime": 1788832959.0871596,
+    "seen": 1788836588.7847543,
+    "ast_hash": "4220ca66f7e07e4abd0645b83e0f8275",
+    "semantic_hash": ""
+  },
+  "problems/pump-drive-shaft-torsion/assets/pump-drive-shaft-instructor-idealization.jpg": {
+    "mtime": 1788833698.9788685,
+    "seen": 1788836588.7847552,
+    "ast_hash": "1903f836fd3bbd0a0d5760b1e09f1dbe",
     "semantic_hash": ""
   }
 }

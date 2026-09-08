@@ -1,0 +1,6 @@
+[
+  {"key":"pump_P_kW","symbol":"P","label":"Motor power","value":30,"unit":"kW","min":1,"max":200,"step":1},
+  {"key":"pump_n_rpm","symbol":"n","label":"Rotational speed","value":1200,"unit":"rpm","min":100,"max":3600,"step":50},
+  {"key":"pump_d_mm","symbol":"d","label":"Motor-shaft diameter","value":40,"unit":"mm","min":10,"max":100,"step":1},
+  {"key":"pump_tau_allow_MPa","symbol":"tau_allow","label":"Allowable torsional shear stress","value":80,"unit":"MPa","min":10,"max":250,"step":5}
+]

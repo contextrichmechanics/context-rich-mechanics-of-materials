@@ -1,0 +1,16 @@
+{
+  "id": "MOS-PUMP-DRIVE-SHAFT-T-001",
+  "slug": "pump-drive-shaft-torsion",
+  "title": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+  "studentDocumentTitle": "Student Packet - Pump Drive Shaft Torsion",
+  "instructorDocumentTitle": "Instructor Guide - Pump Drive Shaft Torsion",
+  "summary": "Evaluate a motor-side pump drive shaft for transmitted torque, maximum torsional shear stress, allowable-stress adequacy, and minimum required diameter.",
+  "textbookChapters": ["Power and torque", "Torsion of circular shafts", "Allowable stress design", "Shaft sizing"],
+  "derivedPlaceholders": ["pump_omega_rad_s", "pump_torque_Nm", "pump_torque_Nmm", "pump_internal_torque_Nm", "pump_J_mm4", "pump_tau_max_MPa", "pump_d_min_mm", "pump_utilization", "pump_stress_assessment", "pump_diameter_assessment", "pump_engineering_assessment"],
+  "image": "assets/pump-drive-shaft-industry-context.jpg",
+  "idealizedImage": "assets/pump-drive-shaft-instructor-idealization.jpg",
+  "idealizedImageAlt": "Instructor reference torsion model of a motor shaft, shaft coupling, and pump shaft carrying equal and opposite torques.",
+  "source": "index.html",
+  "problemStatement": "<p>An electric motor drives a centrifugal pump through aligned shafts connected by a shaft coupling. During steady operation, the motor supplies <strong>P = {{pump_P_kW}} {{pump_P_kW_unit}}</strong> at <strong>n = {{pump_n_rpm}} {{pump_n_rpm_unit}}</strong>. The coupling transfers the resulting torque from the solid circular motor shaft to the pump shaft without slip.</p><p>The motor-side critical section has diameter <strong>d = {{pump_d_mm}} {{pump_d_mm_unit}}</strong>. Evaluate it using a torsion-only model with allowable shear stress <strong>&tau;<sub>allow</sub> = {{pump_tau_allow_MPa}} {{pump_tau_allow_MPa_unit}}</strong>. Do not include bending, axial load, fatigue, startup transients, stress concentrations, or coupling-internal stresses.</p>",
+  "engineeringGoal": "<p>Determine angular velocity and transmitted torque, calculate the polar moment and maximum torsional shear stress at the motor-side critical section, assess the specified diameter against the allowable stress, and determine the minimum acceptable solid-shaft diameter.</p>"
+}

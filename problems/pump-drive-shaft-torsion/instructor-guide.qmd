@@ -1,0 +1,45 @@
+---
+title: "Instructor Guide - Pump Drive Shaft Torsion"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+These answers are representative. Award credit for a defensible torque load path, a correct steady-state torsion idealization, unit-consistent calculations, and an engineering conclusion bounded by the stated assumptions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="pump-drive-shaft-torsion-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "pump-drive-shaft-torsion",
+    targetId: "pump-drive-shaft-torsion-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The base problem evaluates only steady torque transmission, the solid-shaft polar moment, maximum torsional shear stress, and allowable-stress sizing. It intentionally excludes angle of twist, bending, axial loading, coupling-bolt or coupling-internal stresses, bearing analysis, stress concentrations, fatigue, startup and shutdown transients, torsional vibration, misalignment, and detailed pump or motor design. Passing this simplified check is not approval of the complete rotating system.
+
+# Supplemental Assessment Structure
+
+- context interpretation and torque load path: 20%;
+- student idealization and assumptions: 20%;
+- torsion calculations: 40%;
+- engineering assessment and limitations: 20%.

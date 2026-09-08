@@ -1,16 +1,16 @@
 # Graph Report - context-rich-mechanics-of-materials  (2026-09-07)
 
 ## Corpus Check
-- 249 files · ~2,422,007 words
+- 257 files · ~2,502,061 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 753 nodes · 756 edges · 87 communities (82 shown, 5 thin omitted)
+- 769 nodes · 770 edges · 89 communities (84 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a8608ceb`
+- Built from commit: `63b0f0e4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -98,6 +98,8 @@
 - 7. Mechanics Analysis Questions
 - weight-stack-selector-pin-double-shear/instructor-guide.qmd
 - Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown
+- pump-drive-shaft-torsion/instructor-guide.qmd
+- Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -117,7 +119,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (87 total, 5 thin omitted)
+## Communities (89 total, 5 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -431,8 +433,16 @@ Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Con
 Cohesion: 0.29
 Nodes (6): Context-Rich Solid Mechanics Problem, Double-Shear Safety of a Weight-Stack Selector Pin During a Lat Pulldown, Engineering Context, Main Engineering Goal, Scope of the Model, System Components
 
+### Community 87 - "pump-drive-shaft-torsion/instructor-guide.qmd"
+Cohesion: 0.22
+Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
+
+### Community 88 - "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling"
+Cohesion: 0.29
+Nodes (6): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Scope of the Model, System Components, Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling
+
 ## Knowledge Gaps
-- **472 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+467 more)
+- **482 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+477 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -440,11 +450,11 @@ Nodes (6): Context-Rich Solid Mechanics Problem, Double-Shear Safety of a Weight
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Why does `Supplemental Instructor Background` connect `Supplemental Instructor Background` to `jib-crane-battery-pack/index.qmd`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _472 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _482 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**

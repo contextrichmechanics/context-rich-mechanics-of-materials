@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "description": "Baseline 30 kW, 1200 rpm pump-drive shaft torsion assignment.",
+  "variables": {"pump_P_kW":30,"pump_n_rpm":1200,"pump_d_mm":40,"pump_tau_allow_MPa":80},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18"]
+}

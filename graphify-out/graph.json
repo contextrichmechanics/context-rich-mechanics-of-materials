@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1882"
+      "source_location": "L1920"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1965"
+      "source_location": "L2003"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1861"
+      "source_location": "L1899"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1981"
+      "source_location": "L2019"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1826"
+      "source_location": "L1864"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1822"
+      "source_location": "L1860"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1931"
+      "source_location": "L1969"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1873"
+      "source_location": "L1911"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1906"
+      "source_location": "L1944"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1899"
+      "source_location": "L1937"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1840"
+      "source_location": "L1878"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1849"
+      "source_location": "L1887"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1912"
+      "source_location": "L1950"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1808"
+      "source_location": "L1846"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1798"
+      "source_location": "L1836"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1778"
+      "source_location": "L1816"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1763"
+      "source_location": "L1801"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1759"
+      "source_location": "L1797"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1794"
+      "source_location": "L1832"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1848"
+      "source_location": "L1886"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1841"
+      "source_location": "L1879"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1875"
+      "source_location": "L1913"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1832"
+      "source_location": "L1870"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1854"
+      "source_location": "L1892"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1810"
+      "source_location": "L1848"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1745"
+      "source_location": "L1783"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1736"
+      "source_location": "L1774"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2083"
+      "source_location": "L2121"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2070"
+      "source_location": "L2108"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2094"
+      "source_location": "L2132"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2084"
+      "source_location": "L2122"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2064"
+      "source_location": "L2102"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1816"
+      "source_location": "L1854"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2069"
+      "source_location": "L2107"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2071"
+      "source_location": "L2109"
     },
     {
       "id": "instructor_builder",
@@ -9517,6 +9517,223 @@
       "source_location": "L17"
     },
     {
+      "id": "problems_pump_drive_shaft_torsion_student_packet",
+      "label": "pump-drive-shaft-torsion/student-packet.qmd",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+        "subtitle": "Context, Idealization, and Mechanics Analysis",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "pump-drive-shaft-torsion/student-packet.qmd",
+      "source_file": "problems/pump-drive-shaft-torsion/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_instructor_guide",
+      "label": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - Pump Drive Shaft Torsion",
+        "subtitle": "Representative Answers and Evaluation Guidance",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_index",
+      "label": "pump-drive-shaft-torsion/index.qmd",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+        "description": "Evaluate power-transmission torque, torsional shear stress, allowable-stress adequacy, and minimum diameter for a pump drive shaft.",
+        "image": "assets/pump-drive-shaft-industry-context.jpg",
+        "categories": "[context-rich, mechanics-of-materials, rotating equipment, shaft design]",
+        "course_topics": "[torsion, power transmission, stress analysis, allowable-stress design]",
+        "textbook_chapters": "[Power and torque, Torsion of circular shafts, Allowable stress design, Shaft sizing]",
+        "problem_types": "[context interpretation, free-body diagram, torsion analysis, design evaluation]",
+        "competencies": "[torque-load-path identification, engineering idealization, unit conversion, torsional stress calculation, engineering judgment]",
+        "industries": "[pumps, rotating equipment, mechanical power transmission]",
+        "difficulty": "Intermediate",
+        "status": "Ready",
+        "problem_id": "MOS-PUMP-DRIVE-SHAFT-T-001",
+        "version": "1.0.0"
+      },
+      "node_kind": "page",
+      "norm_label": "pump-drive-shaft-torsion/index.qmd",
+      "source_file": "problems/pump-drive-shaft-torsion/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_index_assignment_options",
+      "label": "Assignment Options",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assignment options",
+      "source_file": "problems/pump-drive-shaft-torsion/index.qmd",
+      "source_location": "L27"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L19"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L15"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L11"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_instructor_guide_scope_of_the_base_problem",
+      "label": "Scope of the Base Problem",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope of the base problem",
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L36"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_instructor_guide_supplemental_assessment_structure",
+      "label": "Supplemental Assessment Structure",
+      "_origin": "ast",
+      "community": 87,
+      "community_name": "pump-drive-shaft-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "supplemental assessment structure",
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L40"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_student_problem",
+      "label": "pump-drive-shaft-torsion/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_student_problem_context_rich_solid_mechanics_problem",
+      "label": "Context-Rich Solid Mechanics Problem",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context-rich solid mechanics problem",
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L5"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_student_problem_main_engineering_goal",
+      "label": "Main Engineering Goal",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "main engineering goal",
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L13"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_student_problem_scope_of_the_model",
+      "label": "Scope of the Model",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope of the model",
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L25"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_student_problem_system_components",
+      "label": "System Components",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "system components",
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L17"
+    },
+    {
+      "id": "problems_pump_drive_shaft_torsion_student_problem_torsional_stress_in_a_pump_drive_shaft_connected_by_a_shaft_coupling",
+      "label": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+      "_origin": "ast",
+      "community": 88,
+      "community_name": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "torsional stress in a pump drive shaft connected by a shaft coupling",
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L3"
+    },
+    {
       "id": "ai_agent_11_catalog_and_search_integration",
       "label": "11. Catalog And Search Integration",
       "_origin": "ast",
@@ -9791,7 +10008,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1795",
+      "source_location": "L1833",
       "weight": 1.0
     },
     {
@@ -9803,7 +10020,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1804",
+      "source_location": "L1842",
       "weight": 1.0
     },
     {
@@ -9815,7 +10032,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1849",
+      "source_location": "L1887",
       "weight": 1.0
     },
     {
@@ -9827,7 +10044,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1851",
+      "source_location": "L1889",
       "weight": 1.0
     },
     {
@@ -9839,7 +10056,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1845",
+      "source_location": "L1883",
       "weight": 1.0
     },
     {
@@ -9851,7 +10068,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1886",
+      "source_location": "L1924",
       "weight": 1.0
     },
     {
@@ -9863,7 +10080,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1891",
+      "source_location": "L1929",
       "weight": 1.0
     },
     {
@@ -9875,7 +10092,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1897",
+      "source_location": "L1935",
       "weight": 1.0
     },
     {
@@ -9887,7 +10104,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1899",
+      "source_location": "L1937",
       "weight": 1.0
     },
     {
@@ -9899,7 +10116,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1901",
+      "source_location": "L1939",
       "weight": 1.0
     },
     {
@@ -9911,7 +10128,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1902",
+      "source_location": "L1940",
       "weight": 1.0
     },
     {
@@ -9923,7 +10140,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1833",
+      "source_location": "L1871",
       "weight": 1.0
     },
     {
@@ -9935,7 +10152,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1838",
+      "source_location": "L1876",
       "weight": 1.0
     },
     {
@@ -9947,7 +10164,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1855",
+      "source_location": "L1893",
       "weight": 1.0
     },
     {
@@ -9959,7 +10176,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1865",
+      "source_location": "L1903",
       "weight": 1.0
     },
     {
@@ -9971,7 +10188,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1866",
+      "source_location": "L1904",
       "weight": 1.0
     },
     {
@@ -9983,7 +10200,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1867",
+      "source_location": "L1905",
       "weight": 1.0
     },
     {
@@ -9995,7 +10212,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1868",
+      "source_location": "L1906",
       "weight": 1.0
     },
     {
@@ -10007,7 +10224,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1813",
+      "source_location": "L1851",
       "weight": 1.0
     },
     {
@@ -10019,7 +10236,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1813",
+      "source_location": "L1851",
       "weight": 1.0
     },
     {
@@ -10031,7 +10248,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1813",
+      "source_location": "L1851",
       "weight": 1.0
     },
     {
@@ -10043,7 +10260,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1739",
+      "source_location": "L1777",
       "weight": 1.0
     },
     {
@@ -10055,7 +10272,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1741",
+      "source_location": "L1779",
       "weight": 1.0
     },
     {
@@ -10139,7 +10356,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1972",
+      "source_location": "L2010",
       "weight": 1.0
     },
     {
@@ -10151,7 +10368,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1973",
+      "source_location": "L2011",
       "weight": 1.0
     },
     {
@@ -10163,7 +10380,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1976",
+      "source_location": "L2014",
       "weight": 1.0
     },
     {
@@ -10187,7 +10404,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1988",
+      "source_location": "L2026",
       "weight": 1.0
     },
     {
@@ -10199,7 +10416,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1994",
+      "source_location": "L2032",
       "weight": 1.0
     },
     {
@@ -10211,7 +10428,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2002",
+      "source_location": "L2040",
       "weight": 1.0
     },
     {
@@ -10223,7 +10440,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2002",
+      "source_location": "L2040",
       "weight": 1.0
     },
     {
@@ -10235,7 +10452,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2002",
+      "source_location": "L2040",
       "weight": 1.0
     },
     {
@@ -10247,7 +10464,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2007",
+      "source_location": "L2045",
       "weight": 1.0
     },
     {
@@ -10259,7 +10476,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2007",
+      "source_location": "L2045",
       "weight": 1.0
     },
     {
@@ -10271,7 +10488,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2018",
+      "source_location": "L2056",
       "weight": 1.0
     },
     {
@@ -10283,7 +10500,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2024",
+      "source_location": "L2062",
       "weight": 1.0
     },
     {
@@ -10295,7 +10512,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1938",
+      "source_location": "L1976",
       "weight": 1.0
     },
     {
@@ -10307,7 +10524,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1944",
+      "source_location": "L1982",
       "weight": 1.0
     },
     {
@@ -10319,7 +10536,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1944",
+      "source_location": "L1982",
       "weight": 1.0
     },
     {
@@ -10331,7 +10548,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1944",
+      "source_location": "L1982",
       "weight": 1.0
     },
     {
@@ -10343,7 +10560,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1955",
+      "source_location": "L1993",
       "weight": 1.0
     },
     {
@@ -10355,7 +10572,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1957",
+      "source_location": "L1995",
       "weight": 1.0
     },
     {
@@ -10367,7 +10584,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1959",
+      "source_location": "L1997",
       "weight": 1.0
     },
     {
@@ -10379,7 +10596,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1879",
+      "source_location": "L1917",
       "weight": 1.0
     },
     {
@@ -10391,7 +10608,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1907",
+      "source_location": "L1945",
       "weight": 1.0
     },
     {
@@ -10403,7 +10620,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1909",
+      "source_location": "L1947",
       "weight": 1.0
     },
     {
@@ -10415,7 +10632,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1903",
+      "source_location": "L1941",
       "weight": 1.0
     },
     {
@@ -10427,7 +10644,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1841",
+      "source_location": "L1879",
       "weight": 1.0
     },
     {
@@ -10439,7 +10656,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1846",
+      "source_location": "L1884",
       "weight": 1.0
     },
     {
@@ -10451,7 +10668,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1850",
+      "source_location": "L1888",
       "weight": 1.0
     },
     {
@@ -10463,7 +10680,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1913",
+      "source_location": "L1951",
       "weight": 1.0
     },
     {
@@ -10475,7 +10692,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1923",
+      "source_location": "L1961",
       "weight": 1.0
     },
     {
@@ -10487,7 +10704,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1924",
+      "source_location": "L1962",
       "weight": 1.0
     },
     {
@@ -10499,7 +10716,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1925",
+      "source_location": "L1963",
       "weight": 1.0
     },
     {
@@ -10511,7 +10728,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1926",
+      "source_location": "L1964",
       "weight": 1.0
     },
     {
@@ -10523,7 +10740,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1799",
+      "source_location": "L1837",
       "weight": 1.0
     },
     {
@@ -10535,7 +10752,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1802",
+      "source_location": "L1840",
       "weight": 1.0
     },
     {
@@ -10547,7 +10764,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1804",
+      "source_location": "L1842",
       "weight": 1.0
     },
     {
@@ -15178,6 +15395,138 @@
       "weight": 1.0
     },
     {
+      "source": "problems_pump_drive_shaft_torsion_index",
+      "target": "problems_pump_drive_shaft_torsion_index_assignment_options",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/index.qmd",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_instructor_guide",
+      "target": "problems_pump_drive_shaft_torsion_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_instructor_guide",
+      "target": "problems_pump_drive_shaft_torsion_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_instructor_guide",
+      "target": "problems_pump_drive_shaft_torsion_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_instructor_guide",
+      "target": "problems_pump_drive_shaft_torsion_instructor_guide_scope_of_the_base_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_instructor_guide",
+      "target": "problems_pump_drive_shaft_torsion_instructor_guide_supplemental_assessment_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/instructor-guide.qmd",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_student_problem",
+      "target": "problems_pump_drive_shaft_torsion_student_problem_context_rich_solid_mechanics_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_student_problem_context_rich_solid_mechanics_problem",
+      "target": "problems_pump_drive_shaft_torsion_student_problem_torsional_stress_in_a_pump_drive_shaft_connected_by_a_shaft_coupling",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_student_problem_torsional_stress_in_a_pump_drive_shaft_connected_by_a_shaft_coupling",
+      "target": "problems_pump_drive_shaft_torsion_student_problem_main_engineering_goal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_student_problem_torsional_stress_in_a_pump_drive_shaft_connected_by_a_shaft_coupling",
+      "target": "problems_pump_drive_shaft_torsion_student_problem_system_components",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_student_problem_torsional_stress_in_a_pump_drive_shaft_connected_by_a_shaft_coupling",
+      "target": "problems_pump_drive_shaft_torsion_student_problem_scope_of_the_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_student_problem_torsional_stress_in_a_pump_drive_shaft_connected_by_a_shaft_coupling",
+      "target": "problems_pump_drive_shaft_torsion_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/_student-problem.qmd",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "problems_spoked_wheel_load_sharing_index",
       "target": "problems_spoked_wheel_load_sharing_index_assignment_options",
       "relation": "contains",
@@ -16659,7 +17008,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1736",
+      "source_location": "L1774",
       "weight": 1.0
     },
     {
@@ -16670,7 +17019,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1745",
+      "source_location": "L1783",
       "weight": 1.0
     },
     {
@@ -16681,7 +17030,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1759",
+      "source_location": "L1797",
       "weight": 1.0
     },
     {
@@ -16692,7 +17041,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1763",
+      "source_location": "L1801",
       "weight": 1.0
     },
     {
@@ -16703,7 +17052,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1778",
+      "source_location": "L1816",
       "weight": 1.0
     },
     {
@@ -16714,7 +17063,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1794",
+      "source_location": "L1832",
       "weight": 1.0
     },
     {
@@ -16725,7 +17074,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1810",
+      "source_location": "L1848",
       "weight": 1.0
     },
     {
@@ -16736,7 +17085,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1832",
+      "source_location": "L1870",
       "weight": 1.0
     },
     {
@@ -16747,7 +17096,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1841",
+      "source_location": "L1879",
       "weight": 1.0
     },
     {
@@ -16758,7 +17107,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1848",
+      "source_location": "L1886",
       "weight": 1.0
     },
     {
@@ -16769,7 +17118,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1854",
+      "source_location": "L1892",
       "weight": 1.0
     },
     {
@@ -16780,7 +17129,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1875",
+      "source_location": "L1913",
       "weight": 1.0
     },
     {
@@ -16895,17 +17244,6 @@
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_substitute",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1798",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
       "target": "scripts_render_assignment_usage",
       "relation": "contains",
       "_origin": "ast",
@@ -16917,13 +17255,24 @@
     },
     {
       "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_substitute",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L1836",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
       "target": "scripts_render_assignment_selectedquestions",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1808",
+      "source_location": "L1846",
       "weight": 1.0
     },
     {
@@ -16934,7 +17283,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1816",
+      "source_location": "L1854",
       "weight": 1.0
     },
     {
@@ -16945,7 +17294,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1822",
+      "source_location": "L1860",
       "weight": 1.0
     },
     {
@@ -16956,7 +17305,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1826",
+      "source_location": "L1864",
       "weight": 1.0
     },
     {
@@ -16967,7 +17316,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1840",
+      "source_location": "L1878",
       "weight": 1.0
     },
     {
@@ -16978,7 +17327,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1849",
+      "source_location": "L1887",
       "weight": 1.0
     },
     {
@@ -16989,7 +17338,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1861",
+      "source_location": "L1899",
       "weight": 1.0
     },
     {
@@ -17000,7 +17349,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1873",
+      "source_location": "L1911",
       "weight": 1.0
     },
     {
@@ -17011,7 +17360,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1882",
+      "source_location": "L1920",
       "weight": 1.0
     },
     {
@@ -17022,7 +17371,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1899",
+      "source_location": "L1937",
       "weight": 1.0
     },
     {
@@ -17033,7 +17382,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1906",
+      "source_location": "L1944",
       "weight": 1.0
     },
     {
@@ -17044,7 +17393,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1912",
+      "source_location": "L1950",
       "weight": 1.0
     },
     {
@@ -17055,7 +17404,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1931",
+      "source_location": "L1969",
       "weight": 1.0
     },
     {
@@ -17066,7 +17415,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1965",
+      "source_location": "L2003",
       "weight": 1.0
     },
     {
@@ -17077,7 +17426,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1981",
+      "source_location": "L2019",
       "weight": 1.0
     },
     {
@@ -17088,7 +17437,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2064",
+      "source_location": "L2102",
       "weight": 1.0
     },
     {
@@ -17099,7 +17448,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2069",
+      "source_location": "L2107",
       "weight": 1.0
     },
     {
@@ -17110,7 +17459,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2070",
+      "source_location": "L2108",
       "weight": 1.0
     },
     {
@@ -17121,7 +17470,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2071",
+      "source_location": "L2109",
       "weight": 1.0
     },
     {
@@ -17132,7 +17481,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2083",
+      "source_location": "L2121",
       "weight": 1.0
     },
     {
@@ -17143,7 +17492,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2084",
+      "source_location": "L2122",
       "weight": 1.0
     },
     {
@@ -17154,7 +17503,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2094",
+      "source_location": "L2132",
       "weight": 1.0
     },
     {
@@ -17829,6 +18178,28 @@
       "weight": 1.0
     },
     {
+      "source": "problems_pump_drive_shaft_torsion_index",
+      "target": "problems_pump_drive_shaft_torsion_student_packet",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/index.qmd",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_pump_drive_shaft_torsion_index",
+      "target": "problems_pump_drive_shaft_torsion_instructor_guide",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/pump-drive-shaft-torsion/index.qmd",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
       "source": "problems_spoked_wheel_load_sharing_index",
       "target": "problems_spoked_wheel_load_sharing_student_packet",
       "relation": "references",
@@ -18072,5 +18443,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a8608ceb2c37dd721d7ec04117a1ece416089b46"
+  "built_at_commit": "63b0f0e4256ddeb7dd215eab8bb56b41bdd6c858"
 }

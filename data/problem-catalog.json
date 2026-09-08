@@ -9390,6 +9390,444 @@
     ]
   },
   {
+    "id": "MOS-PUMP-DRIVE-SHAFT-T-001",
+    "slug": "pump-drive-shaft-torsion",
+    "title": "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling",
+    "studentDocumentTitle": "Student Packet - Pump Drive Shaft Torsion",
+    "instructorDocumentTitle": "Instructor Guide - Pump Drive Shaft Torsion",
+    "summary": "Evaluate a motor-side pump drive shaft for transmitted torque, maximum torsional shear stress, allowable-stress adequacy, and minimum required diameter.",
+    "textbookChapters": [
+      "Power and torque",
+      "Torsion of circular shafts",
+      "Allowable stress design",
+      "Shaft sizing"
+    ],
+    "derivedPlaceholders": [
+      "pump_omega_rad_s",
+      "pump_torque_Nm",
+      "pump_torque_Nmm",
+      "pump_internal_torque_Nm",
+      "pump_J_mm4",
+      "pump_tau_max_MPa",
+      "pump_d_min_mm",
+      "pump_utilization",
+      "pump_stress_assessment",
+      "pump_diameter_assessment",
+      "pump_engineering_assessment"
+    ],
+    "image": "problems/pump-drive-shaft-torsion/assets/pump-drive-shaft-industry-context.jpg",
+    "idealizedImage": "problems/pump-drive-shaft-torsion/assets/pump-drive-shaft-instructor-idealization.jpg",
+    "idealizedImageAlt": "Instructor reference torsion model of a motor shaft, shaft coupling, and pump shaft carrying equal and opposite torques.",
+    "source": "problems/pump-drive-shaft-torsion/index.html",
+    "problemStatement": "<p>An electric motor drives a centrifugal pump through aligned shafts connected by a shaft coupling. During steady operation, the motor supplies <strong>P = {{pump_P_kW}} {{pump_P_kW_unit}}</strong> at <strong>n = {{pump_n_rpm}} {{pump_n_rpm_unit}}</strong>. The coupling transfers the resulting torque from the solid circular motor shaft to the pump shaft without slip.</p><p>The motor-side critical section has diameter <strong>d = {{pump_d_mm}} {{pump_d_mm_unit}}</strong>. Evaluate it using a torsion-only model with allowable shear stress <strong>&tau;<sub>allow</sub> = {{pump_tau_allow_MPa}} {{pump_tau_allow_MPa_unit}}</strong>. Do not include bending, axial load, fatigue, startup transients, stress concentrations, or coupling-internal stresses.</p>",
+    "engineeringGoal": "<p>Determine angular velocity and transmitted torque, calculate the polar moment and maximum torsional shear stress at the motor-side critical section, assess the specified diameter against the allowable stress, and determine the minimum acceptable solid-shaft diameter.</p>",
+    "variables": [
+      {
+        "key": "pump_P_kW",
+        "symbol": "P",
+        "label": "Motor power",
+        "value": 30,
+        "unit": "kW",
+        "min": 1,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "key": "pump_n_rpm",
+        "symbol": "n",
+        "label": "Rotational speed",
+        "value": 1200,
+        "unit": "rpm",
+        "min": 100,
+        "max": 3600,
+        "step": 50
+      },
+      {
+        "key": "pump_d_mm",
+        "symbol": "d",
+        "label": "Motor-shaft diameter",
+        "value": 40,
+        "unit": "mm",
+        "min": 10,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "key": "pump_tau_allow_MPa",
+        "symbol": "tau_allow",
+        "label": "Allowable torsional shear stress",
+        "value": 80,
+        "unit": "MPa",
+        "min": 10,
+        "max": 250,
+        "step": 5
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "section": "context",
+        "selected": true,
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "power transmission",
+          "system function",
+          "rotating equipment"
+        ],
+        "learningObjectives": [
+          "Identify the motor-coupling-pump system's mechanical function."
+        ],
+        "student": "<p>State the primary mechanical function of the motor-shaft-coupling-pump system.</p>",
+        "instructor": "<p>The system transfers rotational mechanical power and torque from the electric motor, through the motor shaft and coupling, to the pump shaft and centrifugal pump.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Torques",
+        "section": "context",
+        "selected": true,
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "driving torque",
+          "resisting torque",
+          "steady state"
+        ],
+        "learningObjectives": [
+          "Identify the applied torques in steady operation."
+        ],
+        "student": "<p>Identify the driving and resisting torques acting on the simplified system during steady operation.</p>",
+        "instructor": "<p>The motor supplies the driving torque. The pump supplies an equal-magnitude opposing torque during steady operation, so the net external torque on the complete rotating assembly is zero.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "tags": [
+          "torsion model",
+          "bearings",
+          "rotational loading"
+        ],
+        "learningObjectives": [
+          "Distinguish torsional loading from omitted support reactions."
+        ],
+        "student": "<p>Why are bearing reactions and detailed supports unnecessary in the assigned torsion-only model, and what rotational loading must still be represented?</p>",
+        "instructor": "<p>Bearing reactions are associated primarily with radial and axial support, which are outside this pure-torsion model. The model must retain the motor driving torque and equal opposing pump torque.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Torque Load Path",
+        "section": "context",
+        "selected": true,
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "torque path",
+          "shaft coupling",
+          "pump"
+        ],
+        "learningObjectives": [
+          "Trace torque through the physical system."
+        ],
+        "student": "<p>Trace the torque-transfer path from the electric motor to the centrifugal pump.</p>",
+        "instructor": "<p>Electric motor &rarr; motor shaft &rarr; shaft coupling &rarr; pump shaft &rarr; centrifugal pump.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Shaft Section",
+        "section": "context",
+        "selected": true,
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "critical section",
+          "motor shaft",
+          "internal torque"
+        ],
+        "learningObjectives": [
+          "Identify the section evaluated in the simplified model."
+        ],
+        "student": "<p>Which shaft section is checked for torsional shear stress, and why is it selected in this simplified model?</p>",
+        "instructor": "<p>The motor-shaft section immediately before the coupling is checked. It carries the full transmitted torque, and the assigned uniform diameter there defines the section stress.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Dominant Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "torsion",
+          "shear stress",
+          "solid shaft"
+        ],
+        "learningObjectives": [
+          "Identify the governing response in the base problem."
+        ],
+        "student": "<p>What mechanical response is evaluated, and why is torsional shear stress the governing quantity in the baseline model?</p>",
+        "instructor": "<p>The shaft is modeled in pure torsion while transmitting motor torque. Therefore the relevant response is torsional shear stress, with its maximum value occurring at the outer surface of the solid circular shaft.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "power",
+          "rotational speed",
+          "diameter",
+          "allowable stress"
+        ],
+        "learningObjectives": [
+          "Identify inputs controlling torsional stress and sizing."
+        ],
+        "student": "<p>Identify the operating, geometric, and allowable-stress parameters needed for the shaft check.</p>",
+        "instructor": "<p>The assigned inputs are P = {{pump_P_kW}} {{pump_P_kW_unit}}, n = {{pump_n_rpm}} {{pump_n_rpm_unit}}, d = {{pump_d_mm}} {{pump_d_mm_unit}}, and &tau;<sub>allow</sub> = {{pump_tau_allow_MPa}} {{pump_tau_allow_MPa_unit}}. The solid circular geometry determines J.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Torsion Idealization",
+        "section": "transition",
+        "selected": true,
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "tags": [
+          "idealization",
+          "torque arrows",
+          "critical section"
+        ],
+        "learningObjectives": [
+          "Convert the real system into a simplified torsion model."
+        ],
+        "student": "<p>Create a simplified torsion model of the motor shaft, shaft coupling, and pump shaft. Show equal and opposite motor and pump torques during steady operation and identify the motor-side critical section used for stress evaluation.</p>",
+        "instructor": "<p>A valid idealization shows collinear motor and pump shafts joined by the coupling, a driving torque at the motor end, an equal opposing torque at the pump end, and the critical motor-shaft section immediately before the coupling.</p>",
+        "gradingNotes": "<p>Students should develop their own idealization before viewing the instructor reference image.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "tags": [
+          "steady state",
+          "pure torsion",
+          "solid circular shaft"
+        ],
+        "learningObjectives": [
+          "State assumptions supporting the simplified torsion analysis."
+        ],
+        "student": "<p>State and justify the assumptions used to reduce the real motor-pump installation to the assigned torsion model.</p>",
+        "instructor": "<p>Assume steady-state operation, aligned solid circular shafts, uniform diameter at the critical motor-shaft section, no coupling slip, constant transmitted torque through the load path, and linear-elastic torsion. Exclude bending, axial load, stress concentrations, fatigue, transients, and coupling-internal stresses.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "tags": [
+          "power-torque relation",
+          "polar moment",
+          "shaft sizing"
+        ],
+        "learningObjectives": [
+          "Plan the torsional stress and sizing calculation."
+        ],
+        "student": "<p>Before substituting values, outline the calculation sequence required to evaluate the shaft and determine its minimum diameter.</p>",
+        "instructor": "<p>Convert rpm to angular velocity; calculate torque from P = T&omega;; identify the internal torque; compute J for the solid shaft; calculate &tau;<sub>max</sub> = Tc/J; compare with the allowable stress; solve for the minimum diameter; and state a bounded engineering assessment.</p>"
+      },
+      {
+        "id": "q11",
+        "title": "Angular Velocity",
+        "section": "analysis",
+        "selected": true,
+        "type": "unit conversion",
+        "difficulty": "introductory",
+        "tags": [
+          "rpm",
+          "angular velocity",
+          "radians per second"
+        ],
+        "learningObjectives": [
+          "Convert rotational speed from rpm to rad/s."
+        ],
+        "student": "<p>Convert the assigned motor speed to angular velocity in rad/s.</p>",
+        "instructor": "<p>&omega; = n(2&pi;/60) = ({{pump_n_rpm}} rpm)(2&pi;/60) = <strong>{{pump_omega_rad_s}} rad/s</strong>.</p>"
+      },
+      {
+        "id": "q12",
+        "title": "Transmitted Torque",
+        "section": "analysis",
+        "selected": true,
+        "type": "power and torque calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "power-torque relationship",
+          "SI units",
+          "torque"
+        ],
+        "learningObjectives": [
+          "Calculate torque from power and angular velocity."
+        ],
+        "student": "<p>Using the motor power and angular velocity, determine the torque transmitted through the motor shaft and coupling.</p>",
+        "instructor": "<p>Convert power to watts: P = ({{pump_P_kW}} kW)(1000 W/kW). Then T = P/&omega; = <strong>{{pump_torque_Nm}} N&middot;m = {{pump_torque_Nmm}} N&middot;mm</strong>.</p>",
+        "commonMistakes": "<p>Use N&middot;mm when combining torque with millimeter shaft dimensions and J in mm<sup>4</sup>.</p>"
+      },
+      {
+        "id": "q13",
+        "title": "Internal Torque at the Critical Section",
+        "section": "analysis",
+        "selected": true,
+        "type": "internal loading",
+        "difficulty": "intermediate",
+        "tags": [
+          "internal torque",
+          "section cut",
+          "steady state"
+        ],
+        "learningObjectives": [
+          "Determine internal torque at the selected section."
+        ],
+        "student": "<p>Determine the internal torque in the motor shaft at the critical section during steady operation.</p>",
+        "instructor": "<p>A section cut through the motor shaft must equilibrate the motor torque, so the internal torque magnitude is constant and equals <strong>{{pump_internal_torque_Nm}} N&middot;m</strong> between the motor and coupling.</p>"
+      },
+      {
+        "id": "q14",
+        "title": "Polar Moment of Inertia",
+        "section": "analysis",
+        "selected": true,
+        "type": "section property calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "polar moment",
+          "solid circular shaft",
+          "section property"
+        ],
+        "learningObjectives": [
+          "Calculate the polar moment for a solid shaft."
+        ],
+        "student": "<p>Determine the polar moment of inertia for the solid circular motor shaft.</p>",
+        "instructor": "<p>J = &pi;d<sup>4</sup>/32 = &pi;({{pump_d_mm}} mm)<sup>4</sup>/32 = <strong>{{pump_J_mm4}} mm<sup>4</sup></strong>.</p>"
+      },
+      {
+        "id": "q15",
+        "title": "Maximum Torsional Shear Stress",
+        "section": "analysis",
+        "selected": true,
+        "type": "torsional stress calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "maximum shear stress",
+          "outer surface",
+          "torsion formula"
+        ],
+        "learningObjectives": [
+          "Calculate and locate maximum torsional shear stress."
+        ],
+        "student": "<p>Determine the maximum torsional shear stress in the motor shaft and identify where it occurs on the cross-section.</p>",
+        "instructor": "<p>At c = d/2, &tau;<sub>max</sub> = Tc/J = 16T/(&pi;d<sup>3</sup>) = <strong>{{pump_tau_max_MPa}} MPa</strong>. It occurs at every point on the outer circumference of the circular section.</p>"
+      },
+      {
+        "id": "q16",
+        "title": "Allowable-Stress Check",
+        "section": "analysis",
+        "selected": true,
+        "type": "design evaluation",
+        "difficulty": "intermediate",
+        "tags": [
+          "allowable stress",
+          "utilization",
+          "shaft adequacy"
+        ],
+        "learningObjectives": [
+          "Compare calculated stress with the allowable value."
+        ],
+        "student": "<p>Compare the calculated maximum shear stress with the allowable shear stress and determine whether the specified shaft satisfies the requirement.</p>",
+        "instructor": "<p>The stress utilization is &tau;<sub>max</sub>/&tau;<sub>allow</sub> = <strong>{{pump_utilization}}</strong>. <strong>{{pump_stress_assessment}}</strong></p>"
+      },
+      {
+        "id": "q17",
+        "title": "Minimum Required Shaft Diameter",
+        "section": "analysis",
+        "selected": true,
+        "type": "shaft sizing",
+        "difficulty": "intermediate",
+        "tags": [
+          "minimum diameter",
+          "solid shaft",
+          "allowable stress"
+        ],
+        "learningObjectives": [
+          "Size a solid circular shaft using allowable torsional stress."
+        ],
+        "student": "<p>Determine the minimum solid-shaft diameter required so that the maximum torsional shear stress does not exceed the allowable value.</p>",
+        "instructor": "<p>Set 16T/(&pi;d<sup>3</sup>) = &tau;<sub>allow</sub>. Then d<sub>min</sub> = [16T/(&pi;&tau;<sub>allow</sub>)]<sup>1/3</sup> = <strong>{{pump_d_min_mm}} mm</strong>. <strong>{{pump_diameter_assessment}}</strong></p>"
+      },
+      {
+        "id": "q18",
+        "title": "Engineering Assessment and Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "type": "engineering judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "recommendation",
+          "limitations",
+          "torsion design"
+        ],
+        "learningObjectives": [
+          "Make a bounded shaft-adequacy recommendation."
+        ],
+        "student": "<p>State whether the specified shaft is adequate under the stated assumptions, identify the governing response, and give a mechanics-based recommendation if it is inadequate.</p>",
+        "instructor": "<p><strong>{{pump_engineering_assessment}}</strong></p><p>If inadequate, increase the shaft diameter until the allowable-stress criterion is met. This conclusion applies only to the assigned steady torsion model and does not address the excluded effects.</p>",
+        "gradingNotes": "<p>Do not award full credit for an unqualified claim that the complete motor-pump installation is safe.</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Baseline 30 kW, 1200 rpm pump-drive shaft torsion assignment.",
+        "variables": {
+          "pump_P_kW": 30,
+          "pump_n_rpm": 1200,
+          "pump_d_mm": 40,
+          "pump_tau_allow_MPa": 80
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-WHEEL-005",
     "slug": "spoked-wheel-load-sharing",
     "title": "Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load",

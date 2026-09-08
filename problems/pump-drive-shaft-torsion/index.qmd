@@ -1,0 +1,31 @@
+---
+title: "Torsional Stress in a Pump Drive Shaft Connected by a Shaft Coupling"
+description: "Evaluate power-transmission torque, torsional shear stress, allowable-stress adequacy, and minimum diameter for a pump drive shaft."
+image: "assets/pump-drive-shaft-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, rotating equipment, shaft design]
+mechanics_concepts:
+  - power-torque relationship
+  - internal torque
+  - torsional shear stress
+  - polar moment of inertia
+  - solid circular shafts
+  - allowable stress
+  - shaft sizing
+course_topics: [torsion, power transmission, stress analysis, allowable-stress design]
+textbook_chapters: [Power and torque, Torsion of circular shafts, Allowable stress design, Shaft sizing]
+problem_types: [context interpretation, free-body diagram, torsion analysis, design evaluation]
+competencies: [torque-load-path identification, engineering idealization, unit conversion, torsional stress calculation, engineering judgment]
+industries: [pumps, rotating equipment, mechanical power transmission]
+difficulty: "Intermediate"
+status: "Ready"
+problem_id: "MOS-PUMP-DRIVE-SHAFT-T-001"
+version: "1.0.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=pump-drive-shaft-torsion){.btn .btn-secondary}
