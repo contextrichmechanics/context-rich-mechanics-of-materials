@@ -1,14 +1,14 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1789171198.2345715,
-    "seen": 1789171248.9718049,
-    "ast_hash": "907368af8fdab67837204b6cc96efea7",
+    "mtime": 1788848679.0553777,
+    "seen": 1788848983.9586582,
+    "ast_hash": "fb39a9cab4f9c61b931d95fc4313ad11",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1789171198.2345715,
-    "seen": 1789171248.9718099,
-    "ast_hash": "bc54bf9eced318a771124071475dce0d",
+    "mtime": 1788848679.0553777,
+    "seen": 1788848983.9586632,
+    "ast_hash": "ed43cdcf67d0f7f1a74c258ba7db150a",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -24,15 +24,15 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1789170829.6075292,
-    "seen": 1789171248.971933,
-    "ast_hash": "0a666e6689b56e8ece6707cc22136b24",
+    "mtime": 1788835922.4119003,
+    "seen": 1788836588.7845068,
+    "ast_hash": "15b056e4c2fcc24b413d8000984d5424",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1789170830.427864,
-    "seen": 1789171248.9719336,
-    "ast_hash": "12b52912266a82da9f0c293ad1c65f63",
+    "mtime": 1788835924.07087,
+    "seen": 1788836588.7845125,
+    "ast_hash": "f499c2d68303cd355a103691648fd5be",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -150,9 +150,9 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1789170831.2559106,
-    "seen": 1789171248.971957,
-    "ast_hash": "6c45d82fc706123adefe94164c76e7d5",
+    "mtime": 1788835925.773566,
+    "seen": 1788836588.7845442,
+    "ast_hash": "3932eff5ba4f07f1486ad01e45cf2964",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -996,15 +996,15 @@
     "semantic_hash": ""
   },
   "data/problem-catalog.json": {
-    "mtime": 1789171198.2345715,
-    "seen": 1789171248.971808,
-    "ast_hash": "8a80d22c5997d24fa62d296e2167a5ac",
+    "mtime": 1788848679.0498128,
+    "seen": 1788848983.9586613,
+    "ast_hash": "f306d3bac4c8fbf1a05799e216dcc74d",
     "semantic_hash": ""
   },
   "data/problem-health.json": {
-    "mtime": 1789171198.2345715,
-    "seen": 1789171248.9718113,
-    "ast_hash": "1061ea491482cffaf80222b20b68b7f0",
+    "mtime": 1788848679.0553777,
+    "seen": 1788848983.9586644,
+    "ast_hash": "9c453fa77d009521fabe4fed8b87c4a2",
     "semantic_hash": ""
   },
   "problems/aerial-gondola-suspension-hanger/problem.json": {
@@ -1905,66 +1905,6 @@
     "mtime": 1788833698.9788685,
     "seen": 1788836588.7847552,
     "ast_hash": "1903f836fd3bbd0a0d5760b1e09f1dbe",
-    "semantic_hash": ""
-  },
-  "problems/trailer-hitch-ball-mount-combined-loading/problem.json": {
-    "mtime": 1789170568.6395981,
-    "seen": 1789171248.9719136,
-    "ast_hash": "5cb62d3cad13e34dc22952c0dc01c62e",
-    "semantic_hash": ""
-  },
-  "problems/trailer-hitch-ball-mount-combined-loading/questions.json": {
-    "mtime": 1789170570.3340247,
-    "seen": 1789171248.9719145,
-    "ast_hash": "eaa0c41cfe28d0a0c63631b1fd5671f9",
-    "semantic_hash": ""
-  },
-  "problems/trailer-hitch-ball-mount-combined-loading/variables.json": {
-    "mtime": 1789170569.5072207,
-    "seen": 1789171248.9719155,
-    "ast_hash": "a87535863bb8eeb1567a510465b49386",
-    "semantic_hash": ""
-  },
-  "problems/trailer-hitch-ball-mount-combined-loading/variants/section-a.json": {
-    "mtime": 1789170682.1879506,
-    "seen": 1789171248.971916,
-    "ast_hash": "924b042f4d5767511b8ca7833e92bfbf",
-    "semantic_hash": ""
-  },
-  "problems/trailer-hitch-ball-mount-combined-loading/_student-problem.qmd": {
-    "mtime": 1789170678.8884275,
-    "seen": 1789171248.9720461,
-    "ast_hash": "34c9f144f2df3f8fc4037082d765dc24",
-    "semantic_hash": ""
-  },
-  "problems/trailer-hitch-ball-mount-combined-loading/index.qmd": {
-    "mtime": 1789170679.7145212,
-    "seen": 1789171248.9720469,
-    "ast_hash": "900263f900a9911cc16a71995b57ae6a",
-    "semantic_hash": ""
-  },
-  "problems/trailer-hitch-ball-mount-combined-loading/instructor-guide.qmd": {
-    "mtime": 1789170681.3578181,
-    "seen": 1789171248.9720478,
-    "ast_hash": "fae7a84858d91edfef4b94e1b34dd22f",
-    "semantic_hash": ""
-  },
-  "problems/trailer-hitch-ball-mount-combined-loading/student-packet.qmd": {
-    "mtime": 1789170680.5368874,
-    "seen": 1789171248.9720483,
-    "ast_hash": "65788cd3e23d771e1c8f675ea7a253f5",
-    "semantic_hash": ""
-  },
-  "problems/trailer-hitch-ball-mount-combined-loading/assets/hitch-ball-industry-context.jpg": {
-    "mtime": 1787204319.9997585,
-    "seen": 1789171248.9721117,
-    "ast_hash": "6afac58e5118f3f9fc62187618d5aa8f",
-    "semantic_hash": ""
-  },
-  "problems/trailer-hitch-ball-mount-combined-loading/assets/hitch-ball-instructor-reference.jpg": {
-    "mtime": 1789169702.2264106,
-    "seen": 1789171248.9721124,
-    "ast_hash": "58c1bf5f978c45bd5c3064f27196fe1d",
     "semantic_hash": ""
   }
 }

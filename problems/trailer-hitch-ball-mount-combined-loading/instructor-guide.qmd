@@ -1,0 +1,46 @@
+---
+title: "Instructor Guide - Trailer Hitch Ball Mount Combined Loading"
+subtitle: "Combined Loading, First-Yield Strength, and Equivalent-Section Sizing"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+# Purpose
+
+Support student work that connects a real trailer-hitch load path to an equivalent receiver-side section. Award credit for a defensible idealization, correct equilibrium and internal resultants, valid circular-section properties, correct normal-stress superposition, proper separation of transverse-shear and bending-stress maxima, and a recommendation limited to the assigned model.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="trailer-hitch-ball-mount-combined-loading-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "trailer-hitch-ball-mount-combined-loading",
+    targetId: "trailer-hitch-ball-mount-combined-loading-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The straight inclined member is an equivalent load-path idealization of the real curved or forged ball mount. At C, the equivalent circular critical section is oriented normal to the horizontal receiver axis; this definition makes P the section normal force and W the transverse shear while retaining the moment contributions Ph and WL. The section is checked against first yield using the maximum axial-plus-bending normal stress.
+
+The maximum transverse shear stress occurs at the neutral axis. The maximum bending normal stress occurs at the outer fiber, where transverse shear is zero, so those two maxima are not combined as if they acted at the same material point. The problem excludes local stress concentrations, detailed receiver/pin behavior, hitch-ball/coupler contact, fatigue, dynamic impact, exact forged geometry, and certification requirements.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- idealization and assumptions: 20%;
+- equilibrium, resultants, and section properties: 25%;
+- stress, strength, and sizing calculations: 25%;
+- engineering assessment and limitations: 10%.

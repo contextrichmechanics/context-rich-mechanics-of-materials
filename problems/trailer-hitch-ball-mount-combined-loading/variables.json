@@ -1,0 +1,9 @@
+[
+  {"key":"hitch_P_kN","symbol":"P","label":"Horizontal towing/braking force","value":4.0,"unit":"kN","min":0.5,"max":15,"step":0.1},
+  {"key":"hitch_W_kN","symbol":"W","label":"Vertical tongue load","value":2.5,"unit":"kN","min":0.5,"max":10,"step":0.1},
+  {"key":"hitch_L_mm","symbol":"L","label":"Horizontal offset from A to C","value":300,"unit":"mm","min":100,"max":600,"step":10},
+  {"key":"hitch_h_mm","symbol":"h","label":"Vertical offset from receiver axis to load line","value":150,"unit":"mm","min":0,"max":300,"step":10},
+  {"key":"hitch_d_mm","symbol":"d","label":"Equivalent solid circular diameter at C","value":40,"unit":"mm","min":20,"max":100,"step":1},
+  {"key":"hitch_S_y_MPa","symbol":"S_y","label":"Ductile-steel yield strength","value":360,"unit":"MPa","min":200,"max":700,"step":10},
+  {"key":"hitch_n_req","symbol":"n_req","label":"Required factor of safety against first yield","value":2.0,"unit":"-","min":1,"max":5,"step":0.1}
+]

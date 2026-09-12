@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A - Baseline Trailer Hitch Ball Mount",
+  "description": "Baseline combined axial, transverse-shear, and bending strength check with equivalent circular-section sizing.",
+  "variables": {"hitch_P_kN":4.0,"hitch_W_kN":2.5,"hitch_L_mm":300,"hitch_h_mm":150,"hitch_d_mm":40,"hitch_S_y_MPa":360,"hitch_n_req":2.0},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17"]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "MOS-TRAILER-HITCH-BALL-001",
+  "slug": "trailer-hitch-ball-mount-combined-loading",
+  "title": "Trailer Hitch Ball Mount — Combined Loading and Strength",
+  "studentDocumentTitle": "Student Packet - Trailer Hitch Ball Mount Combined Loading",
+  "instructorDocumentTitle": "Instructor Guide - Trailer Hitch Ball Mount Combined Loading",
+  "summary": "Evaluate an equivalent receiver-side section of a trailer hitch ball mount under combined axial force, transverse shear, and bending, then size the section for first yield.",
+  "textbookChapters": ["Equilibrium of a rigid body", "Internal loadings in structural members", "Axial load", "Bending", "Transverse shear", "Combined loading", "Factor of safety"],
+  "derivedPlaceholders": ["hitch_P_N", "hitch_W_N", "hitch_M_Nmm", "hitch_M_kNm", "hitch_area_mm2", "hitch_I_mm4", "hitch_c_mm", "hitch_sigma_axial_MPa", "hitch_sigma_bending_MPa", "hitch_sigma_max_MPa", "hitch_tau_max_MPa", "hitch_sigma_allow_MPa", "hitch_fos_actual", "hitch_d_min_mm", "hitch_d_recommended_mm", "hitch_strength_assessment", "hitch_diameter_assessment", "hitch_engineering_assessment"],
+  "image": "assets/hitch-ball-industry-context.jpg",
+  "idealizedImage": "assets/hitch-ball-instructor-reference.jpg",
+  "idealizedImageAlt": "Instructor reference idealization of a straight inclined ball-mount load path from hitch-ball point A to receiver-side critical section C, with horizontal force P, vertical force W, offsets L and h, and equivalent circular diameter d.",
+  "source": "index.html",
+  "problemStatement": "<p>A towing-systems engineering team is evaluating the ball mount that transfers trailer loads through the hitch ball into a vehicle receiver. Represent the real curved or forged mount by the supplied straight inclined-member load-path idealization. At hitch-ball point A, a horizontal towing/braking force <strong>P = {{hitch_P_kN}} {{hitch_P_kN_unit}}</strong> acts to the left and a vertical tongue load <strong>W = {{hitch_W_kN}} {{hitch_W_kN_unit}}</strong> acts downward. Point A is horizontally offset by <strong>L = {{hitch_L_mm}} {{hitch_L_mm_unit}}</strong> and vertically offset by <strong>h = {{hitch_h_mm}} {{hitch_h_mm_unit}}</strong> from receiver-side critical section C.</p><p>For this instructional model, C is an equivalent solid circular section of diameter <strong>d = {{hitch_d_mm}} {{hitch_d_mm_unit}}</strong>, oriented normal to the horizontal receiver axis. Thus P is the section's normal-force resultant and W is its transverse-shear resultant, while both loads contribute to bending moment. The analysis is a simplified equivalent-section first-yield check, not a trailer-hitch certification.</p>",
+  "engineeringGoal": "<p>Determine the support actions and internal resultants at C, calculate the governing combined axial-plus-bending normal stress, and compare its factor of safety with <strong>n<sub>req</sub> = {{hitch_n_req}}</strong>. If the assigned section is inadequate, determine the minimum equivalent diameter and make a recommendation bounded by the model assumptions.</p>"
+}

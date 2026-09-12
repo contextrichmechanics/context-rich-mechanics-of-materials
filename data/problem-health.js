@@ -240,6 +240,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-TRAILER-HITCH-BALL-001",
+    "slug": "trailer-hitch-ball-mount-combined-loading",
+    "title": "Trailer Hitch Ball Mount — Combined Loading and Strength",
+    "status": "OK",
+    "variables": 7,
+    "questions": 17,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-TURBINE-019",
     "slug": "turbine-shaft-distributed-torque",
     "title": "Torsional Response of a Multi-Stage Turbine Rotor",

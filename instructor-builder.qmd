@@ -878,6 +878,81 @@ function variableMap(problem) {
       : `The ${formatDerived(pumpDiameterMm, 1)} mm motor shaft is inadequate for the assigned steady torsion-only load because its ${formatDerived(maximumStress, 2)} MPa maximum shear stress exceeds the ${formatDerived(pumpAllowableStress, 1)} MPa allowable stress.`;
   }
 
+  const hitchHorizontalLoadKn = numericValue(values, "hitch_P_kN");
+  const hitchVerticalLoadKn = numericValue(values, "hitch_W_kN");
+  const hitchHorizontalOffsetMm = numericValue(values, "hitch_L_mm");
+  const hitchVerticalOffsetMm = numericValue(values, "hitch_h_mm");
+  const hitchDiameterMm = numericValue(values, "hitch_d_mm");
+  const hitchYieldStrengthMpa = numericValue(values, "hitch_S_y_MPa");
+  const hitchRequiredFos = numericValue(values, "hitch_n_req");
+
+  if (
+    Number.isFinite(hitchHorizontalLoadKn) && hitchHorizontalLoadKn > 0 &&
+    Number.isFinite(hitchVerticalLoadKn) && hitchVerticalLoadKn > 0 &&
+    Number.isFinite(hitchHorizontalOffsetMm) && hitchHorizontalOffsetMm >= 0 &&
+    Number.isFinite(hitchVerticalOffsetMm) && hitchVerticalOffsetMm >= 0 &&
+    Number.isFinite(hitchDiameterMm) && hitchDiameterMm > 0 &&
+    Number.isFinite(hitchYieldStrengthMpa) && hitchYieldStrengthMpa > 0 &&
+    Number.isFinite(hitchRequiredFos) && hitchRequiredFos > 0
+  ) {
+    const horizontalLoadN = hitchHorizontalLoadKn * 1000;
+    const verticalLoadN = hitchVerticalLoadKn * 1000;
+    const momentNmm = horizontalLoadN * hitchVerticalOffsetMm + verticalLoadN * hitchHorizontalOffsetMm;
+    const areaMm2 = Math.PI * hitchDiameterMm ** 2 / 4;
+    const inertiaMm4 = Math.PI * hitchDiameterMm ** 4 / 64;
+    const outerRadiusMm = hitchDiameterMm / 2;
+    const axialStressMpa = horizontalLoadN / areaMm2;
+    const bendingStressMpa = momentNmm * outerRadiusMm / inertiaMm4;
+    const maximumNormalStressMpa = axialStressMpa + bendingStressMpa;
+    const maximumTransverseShearMpa = 4 * verticalLoadN / (3 * areaMm2);
+    const allowableNormalStressMpa = hitchYieldStrengthMpa / hitchRequiredFos;
+    const actualFos = hitchYieldStrengthMpa / maximumNormalStressMpa;
+    const stressAtDiameter = (diameter) =>
+      4 * horizontalLoadN / (Math.PI * diameter ** 2) +
+      32 * momentNmm / (Math.PI * diameter ** 3);
+    let lowerDiameter = Number.EPSILON;
+    let upperDiameter = Math.max(hitchDiameterMm, 1);
+    while (stressAtDiameter(upperDiameter) > allowableNormalStressMpa) {
+      upperDiameter *= 2;
+    }
+    for (let iteration = 0; iteration < 100; iteration += 1) {
+      const trialDiameter = (lowerDiameter + upperDiameter) / 2;
+      if (stressAtDiameter(trialDiameter) > allowableNormalStressMpa) {
+        lowerDiameter = trialDiameter;
+      } else {
+        upperDiameter = trialDiameter;
+      }
+    }
+    const minimumDiameterMm = (lowerDiameter + upperDiameter) / 2;
+    const recommendedDiameterMm = Math.ceil(minimumDiameterMm - 1e-12);
+    const passes = maximumNormalStressMpa <= allowableNormalStressMpa * (1 + 1e-10);
+
+    values.hitch_P_N = formatDerived(horizontalLoadN, 0);
+    values.hitch_W_N = formatDerived(verticalLoadN, 0);
+    values.hitch_M_Nmm = formatDerived(momentNmm, 0);
+    values.hitch_M_kNm = formatDerived(momentNmm / 1e6, 2);
+    values.hitch_area_mm2 = formatDerived(areaMm2, 1);
+    values.hitch_I_mm4 = formatDerived(inertiaMm4, 1);
+    values.hitch_c_mm = formatDerived(outerRadiusMm, 1);
+    values.hitch_sigma_axial_MPa = formatDerived(axialStressMpa, 2);
+    values.hitch_sigma_bending_MPa = formatDerived(bendingStressMpa, 2);
+    values.hitch_sigma_max_MPa = formatDerived(maximumNormalStressMpa, 2);
+    values.hitch_tau_max_MPa = formatDerived(maximumTransverseShearMpa, 2);
+    values.hitch_sigma_allow_MPa = formatDerived(allowableNormalStressMpa, 2);
+    values.hitch_fos_actual = formatDerived(actualFos, 2);
+    values.hitch_d_min_mm = formatDerived(minimumDiameterMm, 2);
+    values.hitch_d_recommended_mm = formatDerived(recommendedDiameterMm, 0);
+    values.hitch_strength_assessment = passes
+      ? "The assigned equivalent section meets the required first-yield factor of safety."
+      : "The assigned equivalent section does not meet the required first-yield factor of safety.";
+    values.hitch_diameter_assessment = hitchDiameterMm >= minimumDiameterMm
+      ? "The assigned equivalent diameter meets or exceeds the calculated minimum."
+      : "The assigned equivalent diameter is smaller than the calculated minimum.";
+    values.hitch_engineering_assessment = passes
+      ? `The ${formatDerived(hitchDiameterMm, 1)} mm equivalent section provides FS = ${formatDerived(actualFos, 2)}, meeting the required ${formatDerived(hitchRequiredFos, 1)} first-yield factor of safety for the prescribed static model.`
+      : `The ${formatDerived(hitchDiameterMm, 1)} mm equivalent section provides FS = ${formatDerived(actualFos, 2)}, below the required ${formatDerived(hitchRequiredFos, 1)}; increase the equivalent diameter to at least ${formatDerived(recommendedDiameterMm, 0)} mm for this prescribed static model.`;
+  }
+
   const shaftPower = numericValue(values, "P");
   const shaftSpeed = numericValue(values, "n");
   const shaftAllowableStress = numericValue(values, "tau_allow");

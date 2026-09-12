@@ -1,0 +1,24 @@
+---
+title: "Student Packet - Trailer Hitch Ball Mount Combined Loading"
+subtitle: "Combined Loading, First-Yield Strength, and Equivalent-Section Sizing"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="trailer-hitch-ball-mount-combined-loading-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "trailer-hitch-ball-mount-combined-loading",
+    targetId: "trailer-hitch-ball-mount-combined-loading-student-questions",
+    type: "student"
+  });
+});
+</script>
+```

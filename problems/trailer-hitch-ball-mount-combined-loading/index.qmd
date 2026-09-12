@@ -1,0 +1,28 @@
+---
+title: "Trailer Hitch Ball Mount — Combined Loading and Strength"
+description: "Evaluate an equivalent trailer-hitch ball-mount section under axial force, transverse shear, and bending, then size it for first yield."
+image: "assets/hitch-ball-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, automotive, towing systems]
+mechanics_concepts: [combined loading, axial stress, bending stress, transverse shear, factor of safety]
+course_topics: [combined loading, normal stress, bending, transverse shear, strength design]
+textbook_chapters: [Equilibrium of a rigid body, Internal loadings in structural members, Axial load, Bending, Transverse shear, Combined loading, Factor of safety]
+problem_types: [load-path analysis, free-body diagram, equilibrium calculation, combined-stress calculation, section sizing, engineering evaluation]
+competencies: [engineering idealization, global equilibrium, internal resultants, section properties, stress superposition, factor of safety, engineering judgment]
+industries: [automotive, towing systems, trailer equipment, mechanical connections]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-TRAILER-HITCH-BALL-001"
+version: "1.0.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+This is a simplified equivalent-section strength problem. It evaluates static axial-plus-bending normal stress, transverse shear at its separate maximum location, first-yield factor of safety, and equivalent-diameter sizing. It is not a complete trailer-hitch design or certification analysis.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=trailer-hitch-ball-mount-combined-loading){.btn .btn-secondary}
