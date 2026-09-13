@@ -1,0 +1,50 @@
+---
+title: "Instructor Guide - Motorcycle Final Drive — Chain Loading and Rear-Axle Bending"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+Support assessment of motorcycle final-drive interpretation, chain force–torque reasoning, student idealization, simply supported axle reactions, flexural stress, first-yield strength, and a bounded engineering recommendation.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="motorcycle-chain-drive-rear-axle-bending-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "motorcycle-chain-drive-rear-axle-bending",
+    targetId: "motorcycle-chain-drive-rear-axle-bending-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The rear axle is an equivalent simply supported, constant-diameter solid circular beam subjected only to the chain-induced transverse point load. The rear axle does not carry wheel-driving torque in this idealization; that torque passes through the sprocket carrier and wheel. The model excludes vehicle/rider weight, tire and road loads, braking, cornering, suspension action, dynamic impact, vibration, fatigue, stress concentrations, threads, shoulders, clamping, detailed bearing contact, and detailed chain/sprocket contact.
+
+# Textbook Connection
+
+The bending-strength portion aligns with Hibbeler, *Mechanics of Materials*, 11th ed., Chapter 6. Problem 6-109 similarly sizes a steel shaft under transverse loading using an allowable bending stress. This problem adds the motorcycle chain-drive load-path step used to generate the transverse axle load.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization and assumptions: 20%;
+- chain-force and equilibrium calculations: 20%;
+- bending strength and diameter sizing: 30%;
+- engineering interpretation and limitations: 10%.

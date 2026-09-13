@@ -150,6 +150,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-MOTORCYCLE-CHAIN-D-001",
+    "slug": "motorcycle-chain-drive-rear-axle-bending",
+    "title": "Motorcycle Final Drive — Chain Loading and Rear-Axle Bending",
+    "status": "OK",
+    "variables": 8,
+    "questions": 18,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-BIKE-004",
     "slug": "mountain-bike-suspension-pin",
     "title": "Rear Suspension Linkage Pin Safety Check for a Mountain Bike",

@@ -1,14 +1,14 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1789273049.0821483,
-    "seen": 1789273072.1136239,
-    "ast_hash": "c67c38a93228d487cec6ec936d734d92",
+    "mtime": 1789171198.2345715,
+    "seen": 1789171248.9718049,
+    "ast_hash": "907368af8fdab67837204b6cc96efea7",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1789273049.0821483,
-    "seen": 1789273072.1136296,
-    "ast_hash": "28f0ee6fe5b5c23302e63ce879ab5b6d",
+    "mtime": 1789171198.2345715,
+    "seen": 1789171248.9718099,
+    "ast_hash": "bc54bf9eced318a771124071475dce0d",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -24,15 +24,15 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1789272932.617221,
-    "seen": 1789273072.1137757,
-    "ast_hash": "25e00a0f291d081cf33677ce0fcfc23d",
+    "mtime": 1789170829.6075292,
+    "seen": 1789171248.971933,
+    "ast_hash": "0a666e6689b56e8ece6707cc22136b24",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1789272933.4296339,
-    "seen": 1789273072.1137764,
-    "ast_hash": "2c8784f9be9ff0a9cf48f66501f64bc5",
+    "mtime": 1789170830.427864,
+    "seen": 1789171248.9719336,
+    "ast_hash": "12b52912266a82da9f0c293ad1c65f63",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -150,9 +150,9 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1789272934.2838783,
-    "seen": 1789273072.1137993,
-    "ast_hash": "37c3a2241eff7ddeff43251e5615e450",
+    "mtime": 1789170831.2559106,
+    "seen": 1789171248.971957,
+    "ast_hash": "6c45d82fc706123adefe94164c76e7d5",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -996,15 +996,15 @@
     "semantic_hash": ""
   },
   "data/problem-catalog.json": {
-    "mtime": 1789273049.0812838,
-    "seen": 1789273072.1136274,
-    "ast_hash": "d255e778c9776193da06ae0be424a871",
+    "mtime": 1789171198.2345715,
+    "seen": 1789171248.971808,
+    "ast_hash": "8a80d22c5997d24fa62d296e2167a5ac",
     "semantic_hash": ""
   },
   "data/problem-health.json": {
-    "mtime": 1789273049.0821483,
-    "seen": 1789273072.113631,
-    "ast_hash": "9f66afdcbc7d5e0e8464fb32e3dc7097",
+    "mtime": 1789171198.2345715,
+    "seen": 1789171248.9718113,
+    "ast_hash": "1061ea491482cffaf80222b20b68b7f0",
     "semantic_hash": ""
   },
   "problems/aerial-gondola-suspension-hanger/problem.json": {
@@ -1965,66 +1965,6 @@
     "mtime": 1789169702.2264106,
     "seen": 1789171248.9721124,
     "ast_hash": "58c1bf5f978c45bd5c3064f27196fe1d",
-    "semantic_hash": ""
-  },
-  "problems/motorcycle-chain-drive-rear-axle-bending/problem.json": {
-    "mtime": 1789272668.3361337,
-    "seen": 1789273072.113716,
-    "ast_hash": "920862ba170bb75c59f9e355ba2e3393",
-    "semantic_hash": ""
-  },
-  "problems/motorcycle-chain-drive-rear-axle-bending/questions.json": {
-    "mtime": 1789272745.501377,
-    "seen": 1789273072.1137176,
-    "ast_hash": "7b7d240c7660389ac7b6827ee5111294",
-    "semantic_hash": ""
-  },
-  "problems/motorcycle-chain-drive-rear-axle-bending/variables.json": {
-    "mtime": 1789272669.1763282,
-    "seen": 1789273072.1137183,
-    "ast_hash": "858d586e70b0f1b07a5dae68dd0eb12c",
-    "semantic_hash": ""
-  },
-  "problems/motorcycle-chain-drive-rear-axle-bending/variants/section-a.json": {
-    "mtime": 1789272669.9894202,
-    "seen": 1789273072.1137192,
-    "ast_hash": "b36c49a49ed83023817c9b13c460ab76",
-    "semantic_hash": ""
-  },
-  "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd": {
-    "mtime": 1789272831.9726515,
-    "seen": 1789273072.1138606,
-    "ast_hash": "2952cbd396418e4713693b33d662b6e2",
-    "semantic_hash": ""
-  },
-  "problems/motorcycle-chain-drive-rear-axle-bending/index.qmd": {
-    "mtime": 1789272831.1324422,
-    "seen": 1789273072.1138616,
-    "ast_hash": "e3e1416b08d569b3026317f5808aeec9",
-    "semantic_hash": ""
-  },
-  "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd": {
-    "mtime": 1789272832.8547215,
-    "seen": 1789273072.1138625,
-    "ast_hash": "f2bb8eb0486c8a60298df4e20a0986f4",
-    "semantic_hash": ""
-  },
-  "problems/motorcycle-chain-drive-rear-axle-bending/student-packet.qmd": {
-    "mtime": 1789272524.4215586,
-    "seen": 1789273072.1138635,
-    "ast_hash": "9abb5beaeb42bf3a73f64c1cdd157793",
-    "semantic_hash": ""
-  },
-  "problems/motorcycle-chain-drive-rear-axle-bending/assets/chain-drive-industry-context.jpg": {
-    "mtime": 1789256914.1054907,
-    "seen": 1789273072.1139555,
-    "ast_hash": "b3b8c84802ea74d644677b123a90a84f",
-    "semantic_hash": ""
-  },
-  "problems/motorcycle-chain-drive-rear-axle-bending/assets/chain-drive-instructor-reference.jpg": {
-    "mtime": 1789252271.6716707,
-    "seen": 1789273072.1139567,
-    "ast_hash": "e52404b896e4e407a0ea8cec1fa10ef2",
     "semantic_hash": ""
   }
 }

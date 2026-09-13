@@ -1,0 +1,16 @@
+{
+  "id": "MOS-MOTORCYCLE-CHAIN-D-001",
+  "slug": "motorcycle-chain-drive-rear-axle-bending",
+  "title": "Motorcycle Final Drive — Chain Loading and Rear-Axle Bending",
+  "studentDocumentTitle": "Student Packet - Motorcycle Final Drive — Chain Loading and Rear-Axle Bending",
+  "instructorDocumentTitle": "Instructor Guide - Motorcycle Final Drive — Chain Loading and Rear-Axle Bending",
+  "summary": "Relate motorcycle chain tensions to rear-sprocket loading, determine equivalent rear-axle reactions and bending moment, and size a circular axle for first yield.",
+  "textbookChapters": ["Equilibrium of a rigid body", "Internal loadings in structural members", "Shear and moment diagrams for a beam", "The flexure formula", "Design of beams and shafts"],
+  "derivedPlaceholders": ["chain_F_t_kN", "chain_P_kN", "chain_b_mm", "chain_R_A_kN", "chain_R_B_kN", "chain_M_max_kNmm", "chain_M_max_kNm", "chain_I_mm4", "chain_c_mm", "chain_sigma_max_MPa", "chain_sigma_allow_MPa", "chain_fos_actual", "chain_d_min_mm", "chain_d_recommended_mm", "chain_sigma_recommended_MPa", "chain_fos_recommended", "chain_strength_assessment", "chain_diameter_assessment", "chain_engineering_assessment"],
+  "image": "assets/chain-drive-industry-context.jpg",
+  "idealizedImage": "assets/chain-drive-instructor-reference.jpg",
+  "idealizedImageAlt": "Instructor reference model showing tight- and slack-side chain tensions on a rear sprocket and an equivalent simply supported rear axle with transverse load P at distance a from support A over span L.",
+  "source": "Khaosaming, Honda VTR250 2009 Sprocket.JPG, Wikimedia Commons, CC BY-SA 3.0",
+  "problemStatement": "<p>A motorcycle roller chain transfers power from the gearbox/front sprocket to the rear sprocket and wheel. During steady driving, the chain has a higher tight-side tension and a lower slack-side tension. Their difference produces the specified rear-sprocket torque, while their sum produces the transverse load used in the equivalent rear-axle model.</p><p>The real wheel, sprocket carrier, bearings, axle, and swingarm are reduced to a planar teaching model. The rear axle is represented as a simply supported solid circular beam of diameter <strong>d = {{chain_d_mm}} {{chain_d_mm_unit}}</strong> over span <strong>L = {{chain_L_mm}} {{chain_L_mm_unit}}</strong>. The sprocket-load plane is <strong>a = {{chain_a_mm}} {{chain_a_mm_unit}}</strong> from support A. All assigned values are representative teaching/design inputs and are not specifications of the motorcycle shown.</p>",
+  "engineeringGoal": "<p>Determine the chain-induced transverse load, support reactions, and maximum rear-axle bending moment; evaluate the baseline section against the required first-yield factor of safety; and determine the minimum equivalent axle diameter when necessary.</p>"
+}

@@ -7723,6 +7723,495 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-MOTORCYCLE-CHAIN-D-001",
+    "slug": "motorcycle-chain-drive-rear-axle-bending",
+    "title": "Motorcycle Final Drive — Chain Loading and Rear-Axle Bending",
+    "studentDocumentTitle": "Student Packet - Motorcycle Final Drive — Chain Loading and Rear-Axle Bending",
+    "instructorDocumentTitle": "Instructor Guide - Motorcycle Final Drive — Chain Loading and Rear-Axle Bending",
+    "summary": "Relate motorcycle chain tensions to rear-sprocket loading, determine equivalent rear-axle reactions and bending moment, and size a circular axle for first yield.",
+    "textbookChapters": [
+      "Equilibrium of a rigid body",
+      "Internal loadings in structural members",
+      "Shear and moment diagrams for a beam",
+      "The flexure formula",
+      "Design of beams and shafts"
+    ],
+    "derivedPlaceholders": [
+      "chain_F_t_kN",
+      "chain_P_kN",
+      "chain_b_mm",
+      "chain_R_A_kN",
+      "chain_R_B_kN",
+      "chain_M_max_kNmm",
+      "chain_M_max_kNm",
+      "chain_I_mm4",
+      "chain_c_mm",
+      "chain_sigma_max_MPa",
+      "chain_sigma_allow_MPa",
+      "chain_fos_actual",
+      "chain_d_min_mm",
+      "chain_d_recommended_mm",
+      "chain_sigma_recommended_MPa",
+      "chain_fos_recommended",
+      "chain_strength_assessment",
+      "chain_diameter_assessment",
+      "chain_engineering_assessment"
+    ],
+    "image": "problems/motorcycle-chain-drive-rear-axle-bending/assets/chain-drive-industry-context.jpg",
+    "idealizedImage": "problems/motorcycle-chain-drive-rear-axle-bending/assets/chain-drive-instructor-reference.jpg",
+    "idealizedImageAlt": "Instructor reference model showing tight- and slack-side chain tensions on a rear sprocket and an equivalent simply supported rear axle with transverse load P at distance a from support A over span L.",
+    "source": "problems/motorcycle-chain-drive-rear-axle-bending/Khaosaming, Honda VTR250 2009 Sprocket.JPG, Wikimedia Commons, CC BY-SA 3.0",
+    "problemStatement": "<p>A motorcycle roller chain transfers power from the gearbox/front sprocket to the rear sprocket and wheel. During steady driving, the chain has a higher tight-side tension and a lower slack-side tension. Their difference produces the specified rear-sprocket torque, while their sum produces the transverse load used in the equivalent rear-axle model.</p><p>The real wheel, sprocket carrier, bearings, axle, and swingarm are reduced to a planar teaching model. The rear axle is represented as a simply supported solid circular beam of diameter <strong>d = {{chain_d_mm}} {{chain_d_mm_unit}}</strong> over span <strong>L = {{chain_L_mm}} {{chain_L_mm_unit}}</strong>. The sprocket-load plane is <strong>a = {{chain_a_mm}} {{chain_a_mm_unit}}</strong> from support A. All assigned values are representative teaching/design inputs and are not specifications of the motorcycle shown.</p>",
+    "engineeringGoal": "<p>Determine the chain-induced transverse load, support reactions, and maximum rear-axle bending moment; evaluate the baseline section against the required first-yield factor of safety; and determine the minimum equivalent axle diameter when necessary.</p>",
+    "variables": [
+      {
+        "key": "chain_T_Nm",
+        "symbol": "T",
+        "label": "Rear-sprocket transmitted torque",
+        "value": 300,
+        "unit": "N·m",
+        "min": 50,
+        "max": 800,
+        "step": 10
+      },
+      {
+        "key": "chain_r_s_mm",
+        "symbol": "r_s",
+        "label": "Rear-sprocket pitch radius",
+        "value": 120,
+        "unit": "mm",
+        "min": 60,
+        "max": 200,
+        "step": 5
+      },
+      {
+        "key": "chain_F_s_kN",
+        "symbol": "F_s",
+        "label": "Slack-side chain tension",
+        "value": 0.5,
+        "unit": "kN",
+        "min": 0,
+        "max": 2,
+        "step": 0.05
+      },
+      {
+        "key": "chain_L_mm",
+        "symbol": "L",
+        "label": "Equivalent axle support span",
+        "value": 240,
+        "unit": "mm",
+        "min": 180,
+        "max": 400,
+        "step": 10
+      },
+      {
+        "key": "chain_a_mm",
+        "symbol": "a",
+        "label": "Distance from support A to sprocket-load plane",
+        "value": 50,
+        "unit": "mm",
+        "min": 20,
+        "max": 120,
+        "step": 5
+      },
+      {
+        "key": "chain_d_mm",
+        "symbol": "d",
+        "label": "Equivalent solid circular axle diameter",
+        "value": 20,
+        "unit": "mm",
+        "min": 12,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "key": "chain_S_y_MPa",
+        "symbol": "S_y",
+        "label": "Ductile-steel axle yield strength",
+        "value": 320,
+        "unit": "MPa",
+        "min": 200,
+        "max": 700,
+        "step": 10
+      },
+      {
+        "key": "chain_n_req",
+        "symbol": "n_req",
+        "label": "Required first-yield factor of safety",
+        "value": 2,
+        "unit": "-",
+        "min": 1,
+        "max": 5,
+        "step": 0.1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "section": "context",
+        "selected": true,
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "motorcycle final drive",
+          "chain drive",
+          "power transmission"
+        ],
+        "learningObjectives": [
+          "Explain the mechanical function of a motorcycle final drive."
+        ],
+        "student": "<p>Based on the photograph and component list, explain the mechanical function of the motorcycle final-drive system.</p>",
+        "instructor": "<p>The chain drive transfers power from the gearbox/front sprocket to the rear sprocket and wheel. The rear sprocket converts the chain-force difference into wheel-driving torque.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Chain Loads",
+        "section": "context",
+        "selected": true,
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "chain tension",
+          "sprocket loading",
+          "transverse load"
+        ],
+        "learningObjectives": [
+          "Identify the forces applied by the chain to the rear sprocket."
+        ],
+        "student": "<p>Identify the major forces applied by the two chain runs to the rear sprocket during steady power transmission.</p>",
+        "instructor": "<p>The tight-side and slack-side chain tensions act tangentially on the rear sprocket. Their difference produces transmitted torque, while their vector sum produces a transverse load on the sprocket/wheel assembly.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "type": "support interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "swingarm supports",
+          "simply supported beam",
+          "rear axle"
+        ],
+        "learningObjectives": [
+          "Identify the physical restraints and equivalent axle supports."
+        ],
+        "student": "<p>Where is the rear-wheel/axle assembly restrained by the motorcycle, and what simplified support model is used here?</p>",
+        "instructor": "<p>The rear assembly is restrained by the swingarm on the two sides. The equivalent axle is modeled as a simply supported circular beam between support locations A and B.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "load path",
+          "chain",
+          "rear axle bending"
+        ],
+        "learningObjectives": [
+          "Trace torque and transverse-force transfer through the final drive."
+        ],
+        "student": "<p>Trace the load path from the gearbox output to the motorcycle structure and identify where bending enters the simplified axle model.</p>",
+        "instructor": "<p>Torque passes from the front sprocket to the chain, rear sprocket, and wheel hub. The chain also applies a transverse resultant to the rear assembly; through the wheel bearings this demand is represented as a transverse axle load that produces reactions, shear, and bending moment.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Component and Location",
+        "section": "context",
+        "selected": true,
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "critical section",
+          "maximum bending moment",
+          "sprocket plane"
+        ],
+        "learningObjectives": [
+          "Predict the critical section in the equivalent axle."
+        ],
+        "student": "<p>Which part of the simplified model is expected to control the axle bending check?</p>",
+        "instructor": "<p>The equivalent rear axle is the component of interest. The maximum bending moment occurs at the sprocket-load plane in the simply supported model, so that section controls the bending-strength check.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "type": "scope identification",
+        "difficulty": "introductory",
+        "tags": [
+          "bending strength",
+          "support reactions",
+          "scope"
+        ],
+        "learningObjectives": [
+          "Distinguish the governing response from excluded real-system effects."
+        ],
+        "student": "<p>Rank the mechanical responses included in the base problem and identify important effects that are excluded.</p>",
+        "instructor": "<p>Axle bending strength is the governing response. Reactions and shear are needed to obtain the bending moment. Chain fatigue, sprocket-tooth contact, bearing stress, braking, wheel loads, and dynamic impact are outside the base problem.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "loading",
+          "geometry",
+          "material strength"
+        ],
+        "learningObjectives": [
+          "Identify inputs controlling the simplified strength check."
+        ],
+        "student": "<p>Identify the loading, geometric, and material quantities that should influence the simplified strength check. Do not introduce instructor point labels yet.</p>",
+        "instructor": "<p>Relevant quantities are transmitted sprocket torque, sprocket pitch radius, tight/slack chain tensions, support span, sprocket position, equivalent axle diameter, yield strength, and required factor of safety.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "type": "structural idealization",
+        "difficulty": "intermediate",
+        "tags": [
+          "chain model",
+          "beam idealization",
+          "free-body diagram"
+        ],
+        "learningObjectives": [
+          "Convert the real chain drive into linked sprocket-load and axle-bending models."
+        ],
+        "student": "<p>Convert the motorcycle chain-drive system into a simplified Mechanics of Materials model that preserves the chain-force/torque relation and the geometry needed for the axle-bending calculation.</p><p><strong>Student model / free-body diagram space:</strong></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>",
+        "instructor": "<p>A suitable model has a rear sprocket acted on by tight- and slack-side tensions. Their equivalent transverse resultant is applied to a simply supported circular axle between two swingarm-support locations, with the sprocket plane offset from the left support.</p>",
+        "gradingNotes": "<p>Students should construct their own idealization before seeing the instructor reference model.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "tags": [
+          "steady loading",
+          "equivalent axle",
+          "model limitations"
+        ],
+        "learningObjectives": [
+          "State the assumptions defining the approved bending model."
+        ],
+        "student": "<p>Use the following assumptions for the base analysis:</p><ul><li>The motorcycle is under a steady chain-drive load; acceleration transients, impact, and vibration are excluded.</li><li>The chain runs are approximately parallel at the rear sprocket, so their transverse-load magnitude is the sum of tight- and slack-side tensions.</li><li>The sprocket torque is <em>T</em> = (<em>F</em><sub>t</sub> - <em>F</em><sub>s</sub>)<em>r</em><sub>s</sub>.</li><li>The rear wheel, sprocket carrier, and bearing load transfer are replaced by a point load <em>P</em> on the axle at the sprocket plane.</li><li>The axle is a simply supported, constant-diameter solid circular beam.</li><li>Only chain-induced axle bending is included; motorcycle/rider weight, road/tire forces, braking, cornering, and suspension loads are excluded.</li><li>The material is homogeneous, isotropic, and linearly elastic through first yield, with small deformation.</li><li>Stress concentrations, threads, shoulders, bearing contact, fatigue, wear, and detailed chain/sprocket contact are neglected.</li></ul>",
+        "instructor": "<p>Students should apply all listed assumptions consistently. The rear axle does not carry wheel-driving torque in this idealization; that torque passes through the sprocket carrier and wheel.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "tags": [
+          "analysis plan",
+          "equilibrium",
+          "bending strength"
+        ],
+        "learningObjectives": [
+          "Plan the chain-force, reaction, bending, and sizing calculations."
+        ],
+        "student": "<p>Before calculating numerical values, describe the required sequence of mechanics calculations.</p>",
+        "instructor": "<p>Use the sprocket torque relation to determine tight-side tension; calculate the equivalent transverse load; solve the axle reactions; identify the maximum-moment section; calculate circular-section bending stress; compare it with the allowable first-yield stress; and determine a revised diameter if necessary.</p>"
+      },
+      {
+        "id": "m1",
+        "title": "Rear-Sprocket Chain Tensions",
+        "section": "analysis",
+        "selected": true,
+        "type": "force-torque calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "torque relation",
+          "chain tension",
+          "rear sprocket"
+        ],
+        "learningObjectives": [
+          "Relate sprocket torque to tight- and slack-side chain tensions."
+        ],
+        "student": "<p>Use <em>T</em> = (<em>F</em><sub>t</sub> - <em>F</em><sub>s</sub>)<em>r</em><sub>s</sub> to determine the tight-side chain tension.</p>",
+        "instructor": "<p><em>F</em><sub>t</sub> = <em>T</em>/<em>r</em><sub>s</sub> + <em>F</em><sub>s</sub> = ({{chain_T_Nm}} N&middot;m)/({{chain_r_s_mm}}/1000 m) + {{chain_F_s_kN}} kN = <strong>{{chain_F_t_kN}} kN</strong>.</p>"
+      },
+      {
+        "id": "m2",
+        "title": "Equivalent Transverse Chain Load",
+        "section": "analysis",
+        "selected": true,
+        "type": "load calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "chain resultant",
+          "transverse load",
+          "sprocket"
+        ],
+        "learningObjectives": [
+          "Determine the equivalent transverse load from the two chain tensions."
+        ],
+        "student": "<p>For the parallel-chain-run idealization, determine the magnitude <em>P</em> of the transverse load applied to the rear sprocket/axle model.</p>",
+        "instructor": "<p><em>P</em> = <em>F</em><sub>t</sub> + <em>F</em><sub>s</sub> = {{chain_F_t_kN}} + {{chain_F_s_kN}} = <strong>{{chain_P_kN}} kN</strong>.</p>"
+      },
+      {
+        "id": "m3",
+        "title": "Axle Support Reactions",
+        "section": "analysis",
+        "selected": true,
+        "type": "reaction calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "simply supported beam",
+          "support reactions",
+          "equilibrium"
+        ],
+        "learningObjectives": [
+          "Calculate the two support reactions from equilibrium."
+        ],
+        "student": "<p>Using the simply supported axle model, determine the reactions at A and B. Write symbolic equilibrium equations before substituting values.</p>",
+        "instructor": "<p>Let <em>b</em> = <em>L</em> - <em>a</em> = <strong>{{chain_b_mm}} mm</strong>. From moment and force equilibrium, <em>R</em><sub>A</sub> = <em>Pb</em>/<em>L</em> = <strong>{{chain_R_A_kN}} kN</strong> and <em>R</em><sub>B</sub> = <em>Pa</em>/<em>L</em> = <strong>{{chain_R_B_kN}} kN</strong>. Their sum equals {{chain_P_kN}} kN.</p>"
+      },
+      {
+        "id": "m4",
+        "title": "Maximum Bending Moment",
+        "section": "analysis",
+        "selected": true,
+        "type": "bending-moment calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "maximum bending moment",
+          "critical section",
+          "sprocket plane"
+        ],
+        "learningObjectives": [
+          "Determine the maximum bending moment and its location."
+        ],
+        "student": "<p>Determine the maximum bending moment in the equivalent axle and identify its location.</p>",
+        "instructor": "<p>The shear changes sign at the sprocket load, so the maximum bending moment is at that plane: <em>M</em><sub>max</sub> = <em>R</em><sub>A</sub><em>a</em> = <strong>{{chain_M_max_kNmm}} kN&middot;mm</strong> = <strong>{{chain_M_max_kNm}} kN&middot;m</strong>.</p>"
+      },
+      {
+        "id": "m5",
+        "title": "Axle Bending Stress",
+        "section": "analysis",
+        "selected": true,
+        "type": "stress calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "flexure formula",
+          "circular section",
+          "bending stress"
+        ],
+        "learningObjectives": [
+          "Calculate maximum bending stress in the equivalent circular axle."
+        ],
+        "student": "<p>For the equivalent solid circular axle, calculate its second moment of area and maximum bending normal stress.</p>",
+        "instructor": "<p><em>I</em> = &pi;<em>d</em><sup>4</sup>/64 = <strong>{{chain_I_mm4}} mm<sup>4</sup></strong> and <em>c</em> = <em>d</em>/2 = <strong>{{chain_c_mm}} mm</strong>. Thus &sigma;<sub>max</sub> = <em>M</em><sub>max</sub><em>c</em>/<em>I</em> = 32<em>M</em><sub>max</sub>/(&pi;<em>d</em><sup>3</sup>) = <strong>{{chain_sigma_max_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "m6",
+        "title": "Strength Factor of Safety",
+        "section": "analysis",
+        "selected": true,
+        "type": "strength assessment",
+        "difficulty": "intermediate",
+        "tags": [
+          "yield strength",
+          "allowable stress",
+          "factor of safety"
+        ],
+        "learningObjectives": [
+          "Evaluate the baseline axle against the first-yield criterion."
+        ],
+        "student": "<p>Determine the allowable first-yield stress and actual factor of safety. Does the baseline axle satisfy the requirement?</p>",
+        "instructor": "<p>&sigma;<sub>allow</sub> = <em>S</em><sub>y</sub>/<em>n</em><sub>req</sub> = <strong>{{chain_sigma_allow_MPa}} MPa</strong>. The actual factor of safety is <em>FS</em> = <em>S</em><sub>y</sub>/&sigma;<sub>max</sub> = <strong>{{chain_fos_actual}}</strong>. <strong>{{chain_strength_assessment}}</strong></p>"
+      },
+      {
+        "id": "m7",
+        "title": "Strength-Based Modification",
+        "section": "analysis",
+        "selected": true,
+        "type": "minimum-diameter design",
+        "difficulty": "intermediate",
+        "tags": [
+          "minimum diameter",
+          "bending strength",
+          "design modification"
+        ],
+        "learningObjectives": [
+          "Size the equivalent axle for the required first-yield factor of safety."
+        ],
+        "student": "<p>Determine the minimum equivalent axle diameter required to satisfy the specified factor of safety. Round upward to the nearest millimeter and verify the rounded diameter.</p>",
+        "instructor": "<p>Solving 32<em>M</em><sub>max</sub>/(&pi;<em>d</em><sup>3</sup>) = <em>S</em><sub>y</sub>/<em>n</em><sub>req</sub> gives <em>d</em><sub>min</sub> = <strong>{{chain_d_min_mm}} mm</strong>; use <strong>{{chain_d_recommended_mm}} mm</strong>. At the rounded diameter, &sigma;<sub>max</sub> = <strong>{{chain_sigma_recommended_MPa}} MPa</strong> and <em>FS</em> = <strong>{{chain_fos_recommended}}</strong>. <strong>{{chain_diameter_assessment}}</strong></p>"
+      },
+      {
+        "id": "m8",
+        "title": "Engineering Assessment and Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "type": "engineering judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "recommendation",
+          "governing response",
+          "model limitations"
+        ],
+        "learningObjectives": [
+          "State a bounded mechanics-based assessment."
+        ],
+        "student": "<p>State the governing load case, critical location, governing response, baseline factor of safety, recommended minimum diameter, and one important limitation.</p>",
+        "instructor": "<p><strong>{{chain_engineering_assessment}}</strong> The critical section is the sprocket-load plane, where chain-induced bending moment is maximum. A real design must also consider wheel/rider and road loads, braking, cornering, impact, fatigue, bearing/contact stresses, threads and shoulders, clamping, and manufacturer requirements.</p>",
+        "gradingNotes": "<p>The recommendation must remain limited to the prescribed equivalent bending model and must not claim certification of the photographed motorcycle.</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A - Baseline Motorcycle Chain Drive",
+        "description": "Faculty-reviewed steady chain-load and equivalent rear-axle bending-strength assignment.",
+        "variables": {
+          "chain_T_Nm": 300,
+          "chain_r_s_mm": 120,
+          "chain_F_s_kN": 0.5,
+          "chain_L_mm": 240,
+          "chain_a_mm": 50,
+          "chain_d_mm": 20,
+          "chain_S_y_MPa": 320,
+          "chain_n_req": 2
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7",
+          "m8"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-BIKE-004",
     "slug": "mountain-bike-suspension-pin",
     "title": "Rear Suspension Linkage Pin Safety Check for a Mountain Bike",

@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A - Baseline Motorcycle Chain Drive",
+  "description": "Faculty-reviewed steady chain-load and equivalent rear-axle bending-strength assignment.",
+  "variables": {"chain_T_Nm":300,"chain_r_s_mm":120,"chain_F_s_kN":0.50,"chain_L_mm":240,"chain_a_mm":50,"chain_d_mm":20,"chain_S_y_MPa":320,"chain_n_req":2.0},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","m1","m2","m3","m4","m5","m6","m7","m8"]
+}

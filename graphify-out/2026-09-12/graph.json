@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2059"
+      "source_location": "L1995"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2142"
+      "source_location": "L2078"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2038"
+      "source_location": "L1974"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2158"
+      "source_location": "L2094"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2003"
+      "source_location": "L1939"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1999"
+      "source_location": "L1935"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2108"
+      "source_location": "L2044"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2050"
+      "source_location": "L1986"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2083"
+      "source_location": "L2019"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2076"
+      "source_location": "L2012"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2017"
+      "source_location": "L1953"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2026"
+      "source_location": "L1962"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2089"
+      "source_location": "L2025"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1985"
+      "source_location": "L1921"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1975"
+      "source_location": "L1911"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1955"
+      "source_location": "L1891"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1940"
+      "source_location": "L1876"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1936"
+      "source_location": "L1872"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1971"
+      "source_location": "L1907"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2025"
+      "source_location": "L1961"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2018"
+      "source_location": "L1954"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2052"
+      "source_location": "L1988"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2009"
+      "source_location": "L1945"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2031"
+      "source_location": "L1967"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1987"
+      "source_location": "L1923"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1922"
+      "source_location": "L1858"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1913"
+      "source_location": "L1849"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2260"
+      "source_location": "L2196"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2247"
+      "source_location": "L2183"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2271"
+      "source_location": "L2207"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2261"
+      "source_location": "L2197"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2241"
+      "source_location": "L2177"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1993"
+      "source_location": "L1929"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2246"
+      "source_location": "L2182"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2248"
+      "source_location": "L2184"
     },
     {
       "id": "instructor_builder",
@@ -10106,224 +10106,6 @@
       "norm_label": "required derived-value workflow",
       "source_file": "ai_agent.md",
       "source_location": "L393"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_student_packet",
-      "label": "motorcycle-chain-drive-rear-axle-bending/student-packet.qmd",
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "file_type": "document",
-      "frontmatter": {
-        "title": "Student Packet - Motorcycle Final Drive \u2014 Chain Loading and Rear-Axle Bending",
-        "subtitle": "Context, Idealization, and Mechanics Analysis",
-        "author": "Context-Rich Mechanics of Materials Library"
-      },
-      "node_kind": "page",
-      "norm_label": "motorcycle-chain-drive-rear-axle-bending/student-packet.qmd",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/student-packet.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide",
-      "label": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "file_type": "document",
-      "frontmatter": {
-        "title": "Instructor Guide - Motorcycle Final Drive \u2014 Chain Loading and Rear-Axle Bending",
-        "subtitle": "Representative Answers and Evaluation Guidance",
-        "author": "Context-Rich Mechanics of Materials Library"
-      },
-      "node_kind": "page",
-      "norm_label": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_index",
-      "label": "motorcycle-chain-drive-rear-axle-bending/index.qmd",
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "file_type": "document",
-      "frontmatter": {
-        "title": "Motorcycle Final Drive \u2014 Chain Loading and Rear-Axle Bending",
-        "description": "Relate motorcycle chain tensions to rear-sprocket loading and evaluate an equivalent rear axle for bending strength.",
-        "image": "assets/chain-drive-industry-context.jpg",
-        "categories": "[context-rich, mechanics-of-materials, automotive, motorcycles]",
-        "mechanics_concepts": "[bending, beam reactions, bending stress, chain loading, factor of safety]",
-        "course_topics": "[bending, load path, equilibrium, flexure formula, strength design]",
-        "textbook_chapters": "[Equilibrium of a rigid body, Internal loadings in structural members, Shear and moment diagrams for a beam, The flexure formula, Design of beams and shafts]",
-        "problem_types": "[load-path analysis, force-torque calculation, free-body diagram, reaction calculation, bending-stress calculation, section sizing, engineering evaluation]",
-        "competencies": "[engineering idealization, force-torque relation, global equilibrium, internal resultants, flexure formula, factor of safety, engineering judgment]",
-        "industries": "[automotive, motorcycles, chain drives, power transmission]",
-        "difficulty": "Intermediate",
-        "status": "Published",
-        "problem_id": "MOS-MOTORCYCLE-CHAIN-D-001",
-        "version": "1.0.0"
-      },
-      "node_kind": "page",
-      "norm_label": "motorcycle-chain-drive-rear-axle-bending/index.qmd",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/index.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_index_assignment_options",
-      "label": "Assignment Options",
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assignment options",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/index.qmd",
-      "source_location": "L20"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_generated_question_set_and_solutions",
-      "label": "Generated Question Set and Solutions",
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "generated question set and solutions",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L19"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_problem_context",
-      "label": "Problem Context",
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "problem context",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L15"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_purpose",
-      "label": "Purpose",
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "purpose",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L11"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_scope_of_the_base_problem",
-      "label": "Scope of the Base Problem",
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "scope of the base problem",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L36"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_supplemental_assessment_structure",
-      "label": "Supplemental Assessment Structure",
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "supplemental assessment structure",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L44"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_textbook_connection",
-      "label": "Textbook Connection",
-      "_origin": "ast",
-      "community": 90,
-      "community_name": "motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "textbook connection",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L40"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem",
-      "label": "motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "_origin": "ast",
-      "community": 91,
-      "community_name": "Motorcycle Final Drive \u2014 Chain Loading and Rear-Axle Bending",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_context_rich_solid_mechanics_problem",
-      "label": "Context-Rich Solid Mechanics Problem",
-      "_origin": "ast",
-      "community": 91,
-      "community_name": "Motorcycle Final Drive \u2014 Chain Loading and Rear-Axle Bending",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "context-rich solid mechanics problem",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_engineering_context",
-      "label": "Engineering Context",
-      "_origin": "ast",
-      "community": 91,
-      "community_name": "Motorcycle Final Drive \u2014 Chain Loading and Rear-Axle Bending",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "engineering context",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L5"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_main_engineering_goal",
-      "label": "Main Engineering Goal",
-      "_origin": "ast",
-      "community": 91,
-      "community_name": "Motorcycle Final Drive \u2014 Chain Loading and Rear-Axle Bending",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "main engineering goal",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L15"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_motorcycle_final_drive_chain_loading_and_rear_axle_bending",
-      "label": "Motorcycle Final Drive \u2014 Chain Loading and Rear-Axle Bending",
-      "_origin": "ast",
-      "community": 91,
-      "community_name": "Motorcycle Final Drive \u2014 Chain Loading and Rear-Axle Bending",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "motorcycle final drive \u2014 chain loading and rear-axle bending",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L3"
-    },
-    {
-      "id": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_system_components",
-      "label": "System Components",
-      "_origin": "ast",
-      "community": 91,
-      "community_name": "Motorcycle Final Drive \u2014 Chain Loading and Rear-Axle Bending",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "system components",
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L19"
     }
   ],
   "links": [
@@ -10444,7 +10226,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1972",
+      "source_location": "L1908",
       "weight": 1.0
     },
     {
@@ -10456,7 +10238,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1981",
+      "source_location": "L1917",
       "weight": 1.0
     },
     {
@@ -10468,7 +10250,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2026",
+      "source_location": "L1962",
       "weight": 1.0
     },
     {
@@ -10480,7 +10262,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2028",
+      "source_location": "L1964",
       "weight": 1.0
     },
     {
@@ -10492,7 +10274,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2022",
+      "source_location": "L1958",
       "weight": 1.0
     },
     {
@@ -10504,7 +10286,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2063",
+      "source_location": "L1999",
       "weight": 1.0
     },
     {
@@ -10516,7 +10298,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2068",
+      "source_location": "L2004",
       "weight": 1.0
     },
     {
@@ -10528,7 +10310,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2074",
+      "source_location": "L2010",
       "weight": 1.0
     },
     {
@@ -10540,7 +10322,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2076",
+      "source_location": "L2012",
       "weight": 1.0
     },
     {
@@ -10552,7 +10334,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2078",
+      "source_location": "L2014",
       "weight": 1.0
     },
     {
@@ -10564,7 +10346,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2079",
+      "source_location": "L2015",
       "weight": 1.0
     },
     {
@@ -10576,7 +10358,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2010",
+      "source_location": "L1946",
       "weight": 1.0
     },
     {
@@ -10588,7 +10370,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2015",
+      "source_location": "L1951",
       "weight": 1.0
     },
     {
@@ -10600,7 +10382,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2032",
+      "source_location": "L1968",
       "weight": 1.0
     },
     {
@@ -10612,7 +10394,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2042",
+      "source_location": "L1978",
       "weight": 1.0
     },
     {
@@ -10624,7 +10406,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2043",
+      "source_location": "L1979",
       "weight": 1.0
     },
     {
@@ -10636,7 +10418,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2044",
+      "source_location": "L1980",
       "weight": 1.0
     },
     {
@@ -10648,7 +10430,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2045",
+      "source_location": "L1981",
       "weight": 1.0
     },
     {
@@ -10660,7 +10442,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1990",
+      "source_location": "L1926",
       "weight": 1.0
     },
     {
@@ -10672,7 +10454,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1990",
+      "source_location": "L1926",
       "weight": 1.0
     },
     {
@@ -10684,7 +10466,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1990",
+      "source_location": "L1926",
       "weight": 1.0
     },
     {
@@ -10696,7 +10478,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1916",
+      "source_location": "L1852",
       "weight": 1.0
     },
     {
@@ -10708,7 +10490,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1918",
+      "source_location": "L1854",
       "weight": 1.0
     },
     {
@@ -10792,7 +10574,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2149",
+      "source_location": "L2085",
       "weight": 1.0
     },
     {
@@ -10804,7 +10586,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2150",
+      "source_location": "L2086",
       "weight": 1.0
     },
     {
@@ -10816,7 +10598,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2153",
+      "source_location": "L2089",
       "weight": 1.0
     },
     {
@@ -10840,7 +10622,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2165",
+      "source_location": "L2101",
       "weight": 1.0
     },
     {
@@ -10852,7 +10634,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2171",
+      "source_location": "L2107",
       "weight": 1.0
     },
     {
@@ -10864,7 +10646,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2179",
+      "source_location": "L2115",
       "weight": 1.0
     },
     {
@@ -10876,7 +10658,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2179",
+      "source_location": "L2115",
       "weight": 1.0
     },
     {
@@ -10888,7 +10670,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2179",
+      "source_location": "L2115",
       "weight": 1.0
     },
     {
@@ -10900,7 +10682,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2184",
+      "source_location": "L2120",
       "weight": 1.0
     },
     {
@@ -10912,7 +10694,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2184",
+      "source_location": "L2120",
       "weight": 1.0
     },
     {
@@ -10924,7 +10706,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2195",
+      "source_location": "L2131",
       "weight": 1.0
     },
     {
@@ -10936,7 +10718,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2201",
+      "source_location": "L2137",
       "weight": 1.0
     },
     {
@@ -10948,7 +10730,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2115",
+      "source_location": "L2051",
       "weight": 1.0
     },
     {
@@ -10960,7 +10742,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2121",
+      "source_location": "L2057",
       "weight": 1.0
     },
     {
@@ -10972,7 +10754,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2121",
+      "source_location": "L2057",
       "weight": 1.0
     },
     {
@@ -10984,7 +10766,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2121",
+      "source_location": "L2057",
       "weight": 1.0
     },
     {
@@ -10996,7 +10778,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2132",
+      "source_location": "L2068",
       "weight": 1.0
     },
     {
@@ -11008,7 +10790,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2134",
+      "source_location": "L2070",
       "weight": 1.0
     },
     {
@@ -11020,7 +10802,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2136",
+      "source_location": "L2072",
       "weight": 1.0
     },
     {
@@ -11032,7 +10814,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2056",
+      "source_location": "L1992",
       "weight": 1.0
     },
     {
@@ -11044,7 +10826,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2084",
+      "source_location": "L2020",
       "weight": 1.0
     },
     {
@@ -11056,7 +10838,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2086",
+      "source_location": "L2022",
       "weight": 1.0
     },
     {
@@ -11068,7 +10850,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2080",
+      "source_location": "L2016",
       "weight": 1.0
     },
     {
@@ -11080,7 +10862,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2018",
+      "source_location": "L1954",
       "weight": 1.0
     },
     {
@@ -11092,7 +10874,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2023",
+      "source_location": "L1959",
       "weight": 1.0
     },
     {
@@ -11104,7 +10886,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2027",
+      "source_location": "L1963",
       "weight": 1.0
     },
     {
@@ -11116,7 +10898,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2090",
+      "source_location": "L2026",
       "weight": 1.0
     },
     {
@@ -11128,7 +10910,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2100",
+      "source_location": "L2036",
       "weight": 1.0
     },
     {
@@ -11140,7 +10922,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2101",
+      "source_location": "L2037",
       "weight": 1.0
     },
     {
@@ -11152,7 +10934,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2102",
+      "source_location": "L2038",
       "weight": 1.0
     },
     {
@@ -11164,7 +10946,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2103",
+      "source_location": "L2039",
       "weight": 1.0
     },
     {
@@ -11176,7 +10958,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1976",
+      "source_location": "L1912",
       "weight": 1.0
     },
     {
@@ -11188,7 +10970,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1979",
+      "source_location": "L1915",
       "weight": 1.0
     },
     {
@@ -11200,7 +10982,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1981",
+      "source_location": "L1917",
       "weight": 1.0
     },
     {
@@ -15479,138 +15261,6 @@
       "weight": 1.0
     },
     {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_index",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_index_assignment_options",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/index.qmd",
-      "source_location": "L20",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_purpose",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L11",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_problem_context",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_generated_question_set_and_solutions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_scope_of_the_base_problem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L36",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_textbook_connection",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L40",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_supplemental_assessment_structure",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L44",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_context_rich_solid_mechanics_problem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_context_rich_solid_mechanics_problem",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_motorcycle_final_drive_chain_loading_and_rear_axle_bending",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_motorcycle_final_drive_chain_loading_and_rear_axle_bending",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_main_engineering_goal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_motorcycle_final_drive_chain_loading_and_rear_axle_bending",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_system_components",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_motorcycle_final_drive_chain_loading_and_rear_axle_bending",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_engineering_context",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
       "source": "problems_mountain_bike_suspension_pin_index",
       "target": "problems_mountain_bike_suspension_pin_index_assignment_options",
       "relation": "contains",
@@ -17708,7 +17358,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1913",
+      "source_location": "L1849",
       "weight": 1.0
     },
     {
@@ -17719,7 +17369,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1922",
+      "source_location": "L1858",
       "weight": 1.0
     },
     {
@@ -17730,7 +17380,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1936",
+      "source_location": "L1872",
       "weight": 1.0
     },
     {
@@ -17741,7 +17391,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1940",
+      "source_location": "L1876",
       "weight": 1.0
     },
     {
@@ -17752,7 +17402,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1955",
+      "source_location": "L1891",
       "weight": 1.0
     },
     {
@@ -17763,7 +17413,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1971",
+      "source_location": "L1907",
       "weight": 1.0
     },
     {
@@ -17774,7 +17424,62 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L1987",
+      "source_location": "L1923",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer",
+      "target": "scripts_packet_renderer_renderquestionimage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L1945",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer",
+      "target": "scripts_packet_renderer_renderlearningobjectives",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L1954",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer",
+      "target": "scripts_packet_renderer_renderinstructorsupport",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L1961",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer",
+      "target": "scripts_packet_renderer_renderquestionsection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L1967",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer",
+      "target": "scripts_packet_renderer_renderpacket",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L1988",
       "weight": 1.0
     },
     {
@@ -17786,61 +17491,6 @@
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
       "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_packet_renderer",
-      "target": "scripts_packet_renderer_renderquestionimage",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2009",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_packet_renderer",
-      "target": "scripts_packet_renderer_renderlearningobjectives",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2018",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_packet_renderer",
-      "target": "scripts_packet_renderer_renderinstructorsupport",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2025",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_packet_renderer",
-      "target": "scripts_packet_renderer_renderquestionsection",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2031",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_packet_renderer",
-      "target": "scripts_packet_renderer_renderpacket",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2052",
       "weight": 1.0
     },
     {
@@ -17961,7 +17611,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1975",
+      "source_location": "L1911",
       "weight": 1.0
     },
     {
@@ -17972,7 +17622,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1985",
+      "source_location": "L1921",
       "weight": 1.0
     },
     {
@@ -17983,7 +17633,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1993",
+      "source_location": "L1929",
       "weight": 1.0
     },
     {
@@ -17994,7 +17644,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L1999",
+      "source_location": "L1935",
       "weight": 1.0
     },
     {
@@ -18005,7 +17655,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2003",
+      "source_location": "L1939",
       "weight": 1.0
     },
     {
@@ -18016,7 +17666,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2017",
+      "source_location": "L1953",
       "weight": 1.0
     },
     {
@@ -18027,7 +17677,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2026",
+      "source_location": "L1962",
       "weight": 1.0
     },
     {
@@ -18038,7 +17688,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2038",
+      "source_location": "L1974",
       "weight": 1.0
     },
     {
@@ -18049,7 +17699,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2050",
+      "source_location": "L1986",
       "weight": 1.0
     },
     {
@@ -18060,7 +17710,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2059",
+      "source_location": "L1995",
       "weight": 1.0
     },
     {
@@ -18071,7 +17721,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2076",
+      "source_location": "L2012",
       "weight": 1.0
     },
     {
@@ -18082,7 +17732,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2083",
+      "source_location": "L2019",
       "weight": 1.0
     },
     {
@@ -18093,7 +17743,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2089",
+      "source_location": "L2025",
       "weight": 1.0
     },
     {
@@ -18104,7 +17754,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2108",
+      "source_location": "L2044",
       "weight": 1.0
     },
     {
@@ -18115,7 +17765,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2142",
+      "source_location": "L2078",
       "weight": 1.0
     },
     {
@@ -18126,7 +17776,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2158",
+      "source_location": "L2094",
       "weight": 1.0
     },
     {
@@ -18137,7 +17787,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2241",
+      "source_location": "L2177",
       "weight": 1.0
     },
     {
@@ -18148,7 +17798,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2246",
+      "source_location": "L2182",
       "weight": 1.0
     },
     {
@@ -18159,7 +17809,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2247",
+      "source_location": "L2183",
       "weight": 1.0
     },
     {
@@ -18170,7 +17820,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2248",
+      "source_location": "L2184",
       "weight": 1.0
     },
     {
@@ -18181,7 +17831,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2260",
+      "source_location": "L2196",
       "weight": 1.0
     },
     {
@@ -18192,7 +17842,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2261",
+      "source_location": "L2197",
       "weight": 1.0
     },
     {
@@ -18203,7 +17853,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2271",
+      "source_location": "L2207",
       "weight": 1.0
     },
     {
@@ -18812,28 +18462,6 @@
       "weight": 1.0
     },
     {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_index",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_student_packet",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/index.qmd",
-      "source_location": "L26",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_motorcycle_chain_drive_rear_axle_bending_index",
-      "target": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/index.qmd",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
       "source": "problems_mountain_bike_suspension_pin_index",
       "target": "problems_mountain_bike_suspension_pin_student_packet",
       "relation": "references",
@@ -19187,5 +18815,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b9d44629aca03f3fedb924247cbf9635823a1394"
+  "built_at_commit": "b17420dca95d641ac993ef7aad5385e3067780a9"
 }

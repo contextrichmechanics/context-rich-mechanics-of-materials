@@ -973,6 +973,70 @@ function variableMap(problem, currentValues) {
       : `The ${formatDerived(hitchDiameterMm, 1)} mm equivalent section provides FS = ${formatDerived(actualFos, 2)}, below the required ${formatDerived(hitchRequiredFos, 1)}; increase the equivalent diameter to at least ${formatDerived(recommendedDiameterMm, 0)} mm for this prescribed static model.`;
   }
 
+  const chainTorqueNm = numericValue(values, "chain_T_Nm");
+  const chainSprocketRadiusMm = numericValue(values, "chain_r_s_mm");
+  const chainSlackTensionKn = numericValue(values, "chain_F_s_kN");
+  const chainSpanMm = numericValue(values, "chain_L_mm");
+  const chainLoadPositionMm = numericValue(values, "chain_a_mm");
+  const chainAxleDiameterMm = numericValue(values, "chain_d_mm");
+  const chainYieldStrengthMpa = numericValue(values, "chain_S_y_MPa");
+  const chainRequiredFos = numericValue(values, "chain_n_req");
+
+  if (
+    Number.isFinite(chainTorqueNm) && chainTorqueNm > 0 &&
+    Number.isFinite(chainSprocketRadiusMm) && chainSprocketRadiusMm > 0 &&
+    Number.isFinite(chainSlackTensionKn) && chainSlackTensionKn >= 0 &&
+    Number.isFinite(chainSpanMm) && chainSpanMm > 0 &&
+    Number.isFinite(chainLoadPositionMm) && chainLoadPositionMm > 0 && chainLoadPositionMm < chainSpanMm &&
+    Number.isFinite(chainAxleDiameterMm) && chainAxleDiameterMm > 0 &&
+    Number.isFinite(chainYieldStrengthMpa) && chainYieldStrengthMpa > 0 &&
+    Number.isFinite(chainRequiredFos) && chainRequiredFos > 0
+  ) {
+    const tightTensionKn = chainTorqueNm / chainSprocketRadiusMm + chainSlackTensionKn;
+    const transverseLoadKn = tightTensionKn + chainSlackTensionKn;
+    const rightDistanceMm = chainSpanMm - chainLoadPositionMm;
+    const reactionAKn = transverseLoadKn * rightDistanceMm / chainSpanMm;
+    const reactionBKn = transverseLoadKn * chainLoadPositionMm / chainSpanMm;
+    const maximumMomentKnMm = reactionAKn * chainLoadPositionMm;
+    const maximumMomentNmm = maximumMomentKnMm * 1000;
+    const inertiaMm4 = Math.PI * chainAxleDiameterMm ** 4 / 64;
+    const outerRadiusMm = chainAxleDiameterMm / 2;
+    const maximumStressMpa = maximumMomentNmm * outerRadiusMm / inertiaMm4;
+    const allowableStressMpa = chainYieldStrengthMpa / chainRequiredFos;
+    const actualFos = chainYieldStrengthMpa / maximumStressMpa;
+    const minimumDiameterMm = (32 * maximumMomentNmm / (Math.PI * allowableStressMpa)) ** (1 / 3);
+    const recommendedDiameterMm = Math.ceil(minimumDiameterMm - 1e-12);
+    const recommendedStressMpa = 32 * maximumMomentNmm / (Math.PI * recommendedDiameterMm ** 3);
+    const recommendedFos = chainYieldStrengthMpa / recommendedStressMpa;
+    const passes = maximumStressMpa <= allowableStressMpa * (1 + 1e-10);
+
+    values.chain_F_t_kN = formatDerived(tightTensionKn, 2);
+    values.chain_P_kN = formatDerived(transverseLoadKn, 2);
+    values.chain_b_mm = formatDerived(rightDistanceMm, 0);
+    values.chain_R_A_kN = formatDerived(reactionAKn, 3);
+    values.chain_R_B_kN = formatDerived(reactionBKn, 3);
+    values.chain_M_max_kNmm = formatDerived(maximumMomentKnMm, 2);
+    values.chain_M_max_kNm = formatDerived(maximumMomentKnMm / 1000, 3);
+    values.chain_I_mm4 = formatDerived(inertiaMm4, 1);
+    values.chain_c_mm = formatDerived(outerRadiusMm, 1);
+    values.chain_sigma_max_MPa = formatDerived(maximumStressMpa, 1);
+    values.chain_sigma_allow_MPa = formatDerived(allowableStressMpa, 1);
+    values.chain_fos_actual = formatDerived(actualFos, 2);
+    values.chain_d_min_mm = formatDerived(minimumDiameterMm, 2);
+    values.chain_d_recommended_mm = formatDerived(recommendedDiameterMm, 0);
+    values.chain_sigma_recommended_MPa = formatDerived(recommendedStressMpa, 1);
+    values.chain_fos_recommended = formatDerived(recommendedFos, 2);
+    values.chain_strength_assessment = passes
+      ? "The baseline equivalent axle satisfies the required first-yield factor of safety."
+      : "The baseline equivalent axle does not satisfy the required first-yield factor of safety.";
+    values.chain_diameter_assessment = recommendedFos >= chainRequiredFos * (1 - 1e-10)
+      ? "The rounded-up equivalent diameter satisfies the required first-yield factor of safety."
+      : "The rounded-up equivalent diameter does not satisfy the required first-yield factor of safety.";
+    values.chain_engineering_assessment = passes
+      ? `The ${formatDerived(chainAxleDiameterMm, 0)} mm baseline equivalent axle provides FS = ${formatDerived(actualFos, 2)}, meeting the required ${formatDerived(chainRequiredFos, 1)} for the prescribed steady chain-induced bending model.`
+      : `The ${formatDerived(chainAxleDiameterMm, 0)} mm baseline equivalent axle provides FS = ${formatDerived(actualFos, 2)}, below the required ${formatDerived(chainRequiredFos, 1)}; increase the equivalent diameter to at least ${formatDerived(recommendedDiameterMm, 0)} mm for the prescribed steady chain-induced bending model.`;
+  }
+
   const shaftPower = numericValue(values, "P");
   const shaftSpeed = numericValue(values, "n");
   const shaftAllowableStress = numericValue(values, "tau_allow");
