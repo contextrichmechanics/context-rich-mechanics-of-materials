@@ -1,0 +1,26 @@
+---
+title: "Student Packet - V-Belt Tension in a Factory Ventilation Blower Drive"
+subtitle: "Context, Idealization, and Mechanics Analysis"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="v-belt-tension-factory-ventilation-blower-drive-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "v-belt-tension-factory-ventilation-blower-drive",
+    targetId: "v-belt-tension-factory-ventilation-blower-drive-student-questions",
+    type: "student"
+  });
+});
+</script>
+```

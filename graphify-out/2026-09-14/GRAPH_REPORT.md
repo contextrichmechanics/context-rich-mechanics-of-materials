@@ -1,16 +1,16 @@
-# Graph Report - context-rich-mechanics-of-materials  (2026-09-14)
+# Graph Report - context-rich-mechanics-of-materials  (2026-09-12)
 
 ## Corpus Check
-- 281 files · ~2,679,470 words
+- 273 files · ~2,629,791 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 817 nodes · 812 edges · 94 communities (89 shown, 5 thin omitted)
+- 801 nodes · 798 edges · 92 communities (87 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7ecbb023`
+- Built from commit: `b9d44629`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -103,8 +103,6 @@
 - Trailer Hitch Ball Mount — Combined Loading and Strength
 - motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd
 - Motorcycle Final Drive — Chain Loading and Rear-Axle Bending
-- v-belt-tension-factory-ventilation-blower-drive/instructor-guide.qmd
-- V-Belt Tension in a Factory Ventilation Blower Drive
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -124,7 +122,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (94 total, 5 thin omitted)
+## Communities (92 total, 5 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -458,16 +456,8 @@ Nodes (7): Assignment Options, Generated Question Set and Solutions, Problem Con
 Cohesion: 0.33
 Nodes (5): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Motorcycle Final Drive — Chain Loading and Rear-Axle Bending, System Components
 
-### Community 92 - "v-belt-tension-factory-ventilation-blower-drive/instructor-guide.qmd"
-Cohesion: 0.22
-Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
-
-### Community 93 - "V-Belt Tension in a Factory Ventilation Blower Drive"
-Cohesion: 0.29
-Nodes (6): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Scope of the Model, System Components, V-Belt Tension in a Factory Ventilation Blower Drive
-
 ## Knowledge Gaps
-- **512 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+507 more)
+- **502 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+497 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -475,11 +465,11 @@ Nodes (6): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engin
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Why does `Supplemental Instructor Background` connect `Supplemental Instructor Background` to `jib-crane-battery-pack/index.qmd`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _512 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _502 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**

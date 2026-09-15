@@ -1,0 +1,45 @@
+---
+title: "Instructor Guide - V-Belt Tension in a Factory Ventilation Blower Drive"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+These answers are representative, not the only acceptable responses. Award credit for physically defensible reasoning, a complete idealization, correct mechanics, consistent units, and an engineering conclusion supported by the analysis.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="v-belt-tension-factory-ventilation-blower-drive-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "v-belt-tension-factory-ventilation-blower-drive",
+    targetId: "v-belt-tension-factory-ventilation-blower-drive-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Scope of the Base Problem
+
+The primary results are the tight-side and slack-side belt tensions required by the prescribed steady power-transmission model. The equivalent area and allowable stress are instructor-defined teaching inputs for an introductory average-normal-stress extension; they must not be presented as a standard method for selecting a commercial V-belt. Real selection uses manufacturer ratings and considers pulley diameter, wrap, service factor, belt speed, number of belts, pretension, centrifugal effects, fatigue, wear, temperature, alignment, and transient loading.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- student idealization and assumptions: 20%;
+- mechanics calculations: 40%;
+- engineering interpretation and limitations: 20%.

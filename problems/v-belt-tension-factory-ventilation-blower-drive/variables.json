@@ -1,0 +1,8 @@
+[
+  {"key":"v_belt_P_kW","symbol":"P","label":"Motor power","value":15,"unit":"kW","min":1,"max":75,"step":1},
+  {"key":"v_belt_n_rpm","symbol":"n","label":"Motor speed","value":1450,"unit":"rpm","min":500,"max":3600,"step":50},
+  {"key":"v_belt_D1_mm","symbol":"D_1","label":"Motor-pulley diameter","value":100,"unit":"mm","min":50,"max":400,"step":5},
+  {"key":"v_belt_k","symbol":"k","label":"Slack-to-tight tension ratio, T_2/T_1","value":0.25,"unit":"-","min":0.05,"max":0.8,"step":0.05},
+  {"key":"v_belt_A_eq_mm2","symbol":"A_eq","label":"Instructor-defined equivalent tensile area","value":100,"unit":"mm^2","min":20,"max":500,"step":10},
+  {"key":"v_belt_sigma_allow_MPa","symbol":"sigma_allow","label":"Instructor-defined allowable average tensile stress","value":30,"unit":"MPa","min":5,"max":100,"step":5}
+]

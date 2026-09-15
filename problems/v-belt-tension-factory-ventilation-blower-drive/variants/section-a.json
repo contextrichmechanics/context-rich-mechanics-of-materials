@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "description": "Baseline 15 kW, 1450 rpm factory-blower V-belt tension assignment.",
+  "variables": {"v_belt_P_kW":15,"v_belt_n_rpm":1450,"v_belt_D1_mm":100,"v_belt_k":0.25,"v_belt_A_eq_mm2":100,"v_belt_sigma_allow_MPa":30},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19"]
+}

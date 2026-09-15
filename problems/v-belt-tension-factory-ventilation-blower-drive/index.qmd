@@ -1,0 +1,30 @@
+---
+title: "V-Belt Tension in a Factory Ventilation Blower Drive"
+description: "Determine tight-side and slack-side belt tensions from transmitted power and assess an instructor-defined equivalent-area tensile stress."
+image: "assets/v-belt-blower-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, factory ventilation, belt drives]
+mechanics_concepts:
+  - power-speed-torque relationship
+  - pulley torque equilibrium
+  - tight-side and slack-side belt tension
+  - axial tensile force
+  - average normal stress
+  - allowable-stress assessment
+course_topics: [axial loading, power transmission, belt tension, average normal stress]
+textbook_chapters: [Power transmission, Torque from power and speed, Axial loading, Average normal stress]
+problem_types: [context interpretation, student idealization, belt-tension calculation, equivalent-area stress assessment]
+competencies: [load-path identification, engineering idealization, unit conversion, torque calculation, tensile-force calculation, engineering judgment]
+industries: [manufacturing, factory ventilation, air handling, belt drives]
+difficulty: "Intermediate"
+status: "Draft"
+problem_id: "MOS-V-BELT-TENSION-FAC-001"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=v-belt-tension-factory-ventilation-blower-drive){.btn .btn-secondary}

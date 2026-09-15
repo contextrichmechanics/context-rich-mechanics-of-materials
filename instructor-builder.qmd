@@ -953,6 +953,58 @@ function variableMap(problem) {
       : `The ${formatDerived(hitchDiameterMm, 1)} mm equivalent section provides FS = ${formatDerived(actualFos, 2)}, below the required ${formatDerived(hitchRequiredFos, 1)}; increase the equivalent diameter to at least ${formatDerived(recommendedDiameterMm, 0)} mm for this prescribed static model.`;
   }
 
+  const vBeltPowerKw = numericValue(values, "v_belt_P_kW");
+  const vBeltSpeedRpm = numericValue(values, "v_belt_n_rpm");
+  const vBeltPulleyDiameterMm = numericValue(values, "v_belt_D1_mm");
+  const vBeltTensionRatio = numericValue(values, "v_belt_k");
+  const vBeltEquivalentAreaMm2 = numericValue(values, "v_belt_A_eq_mm2");
+  const vBeltAllowableStressMpa = numericValue(values, "v_belt_sigma_allow_MPa");
+
+  if (
+    Number.isFinite(vBeltPowerKw) && vBeltPowerKw > 0 &&
+    Number.isFinite(vBeltSpeedRpm) && vBeltSpeedRpm > 0 &&
+    Number.isFinite(vBeltPulleyDiameterMm) && vBeltPulleyDiameterMm > 0 &&
+    Number.isFinite(vBeltTensionRatio) && vBeltTensionRatio >= 0 && vBeltTensionRatio < 1 &&
+    Number.isFinite(vBeltEquivalentAreaMm2) && vBeltEquivalentAreaMm2 > 0 &&
+    Number.isFinite(vBeltAllowableStressMpa) && vBeltAllowableStressMpa > 0
+  ) {
+    const powerW = vBeltPowerKw * 1000;
+    const omegaRadS = 2 * Math.PI * vBeltSpeedRpm / 60;
+    const torqueNm = powerW / omegaRadS;
+    const radiusM = vBeltPulleyDiameterMm / 2000;
+    const tensionDifferenceN = torqueNm / radiusM;
+    const tightTensionN = tensionDifferenceN / (1 - vBeltTensionRatio);
+    const slackTensionN = vBeltTensionRatio * tightTensionN;
+    const beltSpeedMS = omegaRadS * radiusM;
+    const powerCheckKw = tensionDifferenceN * beltSpeedMS / 1000;
+    const tightStressMpa = tightTensionN / vBeltEquivalentAreaMm2;
+    const slackStressMpa = slackTensionN / vBeltEquivalentAreaMm2;
+    const allowableRatio = vBeltAllowableStressMpa / tightStressMpa;
+    const passes = tightStressMpa <= vBeltAllowableStressMpa * (1 + 1e-10);
+
+    values.v_belt_power_W = formatDerived(powerW, 0);
+    values.v_belt_omega_rad_s = formatDerived(omegaRadS, 2);
+    values.v_belt_torque_Nm = formatDerived(torqueNm, 2);
+    values.v_belt_radius_m = formatDerived(radiusM, 3);
+    values.v_belt_tension_difference_N = formatDerived(tensionDifferenceN, 0);
+    values.v_belt_tension_difference_kN = formatDerived(tensionDifferenceN / 1000, 3);
+    values.v_belt_T1_N = formatDerived(tightTensionN, 0);
+    values.v_belt_T1_kN = formatDerived(tightTensionN / 1000, 3);
+    values.v_belt_T2_N = formatDerived(slackTensionN, 0);
+    values.v_belt_T2_kN = formatDerived(slackTensionN / 1000, 3);
+    values.v_belt_speed_m_s = formatDerived(beltSpeedMS, 3);
+    values.v_belt_power_check_kW = formatDerived(powerCheckKw, 2);
+    values.v_belt_sigma1_MPa = formatDerived(tightStressMpa, 2);
+    values.v_belt_sigma2_MPa = formatDerived(slackStressMpa, 2);
+    values.v_belt_allowable_ratio = formatDerived(allowableRatio, 2);
+    values.v_belt_stress_assessment = passes
+      ? "The instructor-defined equivalent-tension model passes the assigned average tensile-stress criterion; the tight side governs."
+      : "The instructor-defined equivalent-tension model does not pass the assigned average tensile-stress criterion; the tight side governs.";
+    values.v_belt_engineering_recommendation = passes
+      ? `The idealized equivalent-area model is acceptable for the assigned load: the governing tight-side stress is ${formatDerived(tightStressMpa, 2)} MPa, below the ${formatDerived(vBeltAllowableStressMpa, 2)} MPa instructor-specified allowable stress.`
+      : `The idealized equivalent-area model is not acceptable for the assigned load: the governing tight-side stress is ${formatDerived(tightStressMpa, 2)} MPa, above the ${formatDerived(vBeltAllowableStressMpa, 2)} MPa instructor-specified allowable stress. Increase the effective area, use an additional belt, or reduce transmitted power.`;
+  }
+
   const chainTorqueNm = numericValue(values, "chain_T_Nm");
   const chainSprocketRadiusMm = numericValue(values, "chain_r_s_mm");
   const chainSlackTensionKn = numericValue(values, "chain_F_s_kN");

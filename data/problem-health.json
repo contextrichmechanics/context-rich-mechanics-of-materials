@@ -270,6 +270,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-V-BELT-TENSION-FAC-001",
+    "slug": "v-belt-tension-factory-ventilation-blower-drive",
+    "title": "V-Belt Tension in a Factory Ventilation Blower Drive",
+    "status": "OK",
+    "variables": 6,
+    "questions": 19,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-TAPER-020",
     "slug": "variable-radius-tapered-shaft",
     "title": "Torsional Stiffness of a Variable-Section Industrial Spindle",

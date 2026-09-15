@@ -14167,6 +14167,532 @@
     ]
   },
   {
+    "id": "MOS-V-BELT-TENSION-FAC-001",
+    "slug": "v-belt-tension-factory-ventilation-blower-drive",
+    "title": "V-Belt Tension in a Factory Ventilation Blower Drive",
+    "studentDocumentTitle": "Student Packet - V-Belt Tension in a Factory Ventilation Blower Drive",
+    "instructorDocumentTitle": "Instructor Guide - V-Belt Tension in a Factory Ventilation Blower Drive",
+    "summary": "Determine tight-side and slack-side V-belt tensions from power transmission and assess an instructor-defined equivalent-area tensile stress.",
+    "primaryTopics": [
+      "Axial Loading",
+      "Belt Tension",
+      "Power Transmission",
+      "Average Normal Stress"
+    ],
+    "courseTopic": "Axial tension in a belt, power-speed-torque conversion, and an instructor-defined equivalent-area stress check",
+    "targetLevel": "Intermediate MEEN 305 context-rich problem",
+    "primaryMechanicsCompetencies": [
+      "Load-path identification",
+      "Torque from power and speed",
+      "Tight-side and slack-side belt tension",
+      "Average normal stress",
+      "Allowable-stress assessment",
+      "Engineering judgment"
+    ],
+    "expectedStudentDeliverable": "Context interpretation, load path, student-generated two-pulley belt model, tight-side and slack-side tension calculations, power verification, equivalent-area stress comparison, and limited engineering assessment.",
+    "difficultyLevel": 3,
+    "geometryComplexity": "Simplified two-pulley and belt assembly using an idealized tensile-member model",
+    "problemDeliverableType": "Calculation set, student-generated simplified belt/pulley model, equivalent-area stress check, and engineering assessment.",
+    "textbookChapters": [
+      "Power transmission",
+      "Torque from power and angular speed",
+      "Axial loading",
+      "Average normal stress",
+      "Allowable stress"
+    ],
+    "derivedPlaceholders": [
+      "v_belt_power_W",
+      "v_belt_omega_rad_s",
+      "v_belt_torque_Nm",
+      "v_belt_radius_m",
+      "v_belt_tension_difference_N",
+      "v_belt_tension_difference_kN",
+      "v_belt_T1_N",
+      "v_belt_T1_kN",
+      "v_belt_T2_N",
+      "v_belt_T2_kN",
+      "v_belt_speed_m_s",
+      "v_belt_power_check_kW",
+      "v_belt_sigma1_MPa",
+      "v_belt_sigma2_MPa",
+      "v_belt_allowable_ratio",
+      "v_belt_stress_assessment",
+      "v_belt_engineering_recommendation"
+    ],
+    "image": "problems/v-belt-tension-factory-ventilation-blower-drive/assets/v-belt-blower-industry-context.jpg",
+    "imageAlt": "Factory ventilation blower driven by an electric motor through two pulleys and a V-belt.",
+    "idealizedImage": "problems/v-belt-tension-factory-ventilation-blower-drive/assets/v-belt-blower-instructor-idealization.jpg",
+    "idealizedImageAlt": "Instructor reference model of a motor pulley and driven blower pulley connected by a V-belt, with tight-side tension T1, slack-side tension T2, motor torque M, pulley diameters, and rotation direction.",
+    "source": "problems/v-belt-tension-factory-ventilation-blower-drive/index.html",
+    "problemStatement": "<p>A factory ventilation system uses an electric motor to drive a centrifugal blower through a V-belt and pulley arrangement. The belt carries unequal tensile forces on its tight and slack sides so that their difference produces the torque required at the motor pulley.</p><p>All numerical operating conditions, dimensions, equivalent belt area, and allowable stress are instructor-assigned representative teaching values and are not specifications extracted from the photograph.</p>",
+    "engineeringGoal": "<p>Determine the tight-side and slack-side V-belt tensions required to transmit the specified motor power. Then, as an instructor-defined Solid Mechanics extension, model the belt as an equivalent tensile member and compare its tight-side average normal stress with the assigned allowable stress.</p>",
+    "variables": [
+      {
+        "key": "v_belt_P_kW",
+        "symbol": "P",
+        "label": "Motor power",
+        "value": 15,
+        "unit": "kW",
+        "min": 1,
+        "max": 75,
+        "step": 1
+      },
+      {
+        "key": "v_belt_n_rpm",
+        "symbol": "n",
+        "label": "Motor speed",
+        "value": 1450,
+        "unit": "rpm",
+        "min": 500,
+        "max": 3600,
+        "step": 50
+      },
+      {
+        "key": "v_belt_D1_mm",
+        "symbol": "D_1",
+        "label": "Motor-pulley diameter",
+        "value": 100,
+        "unit": "mm",
+        "min": 50,
+        "max": 400,
+        "step": 5
+      },
+      {
+        "key": "v_belt_k",
+        "symbol": "k",
+        "label": "Slack-to-tight tension ratio, T_2/T_1",
+        "value": 0.25,
+        "unit": "-",
+        "min": 0.05,
+        "max": 0.8,
+        "step": 0.05
+      },
+      {
+        "key": "v_belt_A_eq_mm2",
+        "symbol": "A_eq",
+        "label": "Instructor-defined equivalent tensile area",
+        "value": 100,
+        "unit": "mm^2",
+        "min": 20,
+        "max": 500,
+        "step": 10
+      },
+      {
+        "key": "v_belt_sigma_allow_MPa",
+        "symbol": "sigma_allow",
+        "label": "Instructor-defined allowable average tensile stress",
+        "value": 30,
+        "unit": "MPa",
+        "min": 5,
+        "max": 100,
+        "step": 5
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "displayNumber": "Q1",
+        "title": "Primary Function",
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "function",
+          "belt drive",
+          "blower"
+        ],
+        "learningObjectives": [
+          "Explain how the drive transmits power."
+        ],
+        "selected": true,
+        "student": "<p>Explain how the motor, pulleys, and V-belt work together to transmit power to the blower.</p>",
+        "instructor": "<p>The motor rotates the small driving pulley. Unequal tensile forces in the belt transmit torque to the larger driven pulley, which rotates the blower shaft and impeller.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q2",
+        "displayNumber": "Q2",
+        "title": "External Loads",
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "motor torque",
+          "belt tension",
+          "tight side",
+          "slack side"
+        ],
+        "learningObjectives": [
+          "Identify the torque and belt forces in the load path."
+        ],
+        "selected": true,
+        "student": "<p>Identify the motor torque applied to the driving pulley and the tensile forces carried by the tight and slack belt spans.</p>",
+        "instructor": "<p>The motor shaft applies torque <em>M</em> to the driving pulley. The belt carries a larger tight-side tensile force <em>T</em><sub>1</sub> and a smaller slack-side tensile force <em>T</em><sub>2</sub>; their moment difference transmits the motor torque.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q3",
+        "displayNumber": "Q3",
+        "title": "Supports and Boundary Conditions",
+        "type": "support identification",
+        "difficulty": "introductory",
+        "tags": [
+          "pulley axes",
+          "shafts",
+          "bearings",
+          "scope"
+        ],
+        "learningObjectives": [
+          "Identify the pulley axes and limits of the belt-tension model."
+        ],
+        "selected": true,
+        "student": "<p>Identify the motor and blower shafts as the pulley axes. Explain why bearing reactions are outside the intended belt-tension calculation.</p>",
+        "instructor": "<p>The motor shaft and blower shaft define the fixed pulley axes. Their bearings support the pulley force resultants, but bearing reactions are excluded because the assigned analysis is limited to torque transmission and belt tension.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q4",
+        "displayNumber": "Q4",
+        "title": "Load Path",
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "motor",
+          "pulley",
+          "belt",
+          "blower"
+        ],
+        "learningObjectives": [
+          "Trace power transfer from motor to blower."
+        ],
+        "selected": true,
+        "student": "<p>Trace the power and load transfer from the motor to the blower.</p>",
+        "instructor": "<p>Power flows from the motor through the motor shaft and driving pulley, into the V-belt through unequal span tensions, into the driven pulley and blower shaft, and finally to the blower rotor.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q5",
+        "displayNumber": "Q5",
+        "title": "Critical Belt Region",
+        "type": "critical location",
+        "difficulty": "introductory",
+        "tags": [
+          "tight side",
+          "critical region",
+          "tension"
+        ],
+        "learningObjectives": [
+          "Identify the governing belt span."
+        ],
+        "selected": true,
+        "student": "<p>Identify the belt region carrying the larger tensile force.</p>",
+        "instructor": "<p>The tight side carries <em>T</em><sub>1</sub>, the larger tensile force, and is therefore the governing belt region for the assigned equivalent-area stress check.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q6",
+        "displayNumber": "Q6",
+        "title": "Relevant Mechanical Response",
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "tensile force",
+          "average normal stress"
+        ],
+        "learningObjectives": [
+          "Relate belt tension to the educational stress extension."
+        ],
+        "selected": true,
+        "student": "<p>Identify the relevant tensile force and average tensile stress in the belt. Explain why the tight side is more critical than the slack side.</p>",
+        "instructor": "<p>Each straight span carries axial tension, and the teaching extension represents its average stress as <em>σ=T/A</em><sub>eq</sub>. Because <em>T</em><sub>1</sub> is larger than <em>T</em><sub>2</sub>, the tight-side average stress is larger and governs this comparison.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q7",
+        "displayNumber": "Q7",
+        "title": "Relevant Parameters",
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "power",
+          "speed",
+          "pulley diameter",
+          "tension ratio",
+          "equivalent area"
+        ],
+        "learningObjectives": [
+          "Identify inputs governing belt tension and the stress extension."
+        ],
+        "selected": true,
+        "student": "<p>Identify the parameters needed to determine the belt tensions and perform the instructor-defined equivalent-area stress check.</p>",
+        "instructor": "<p>The required inputs are motor power <em>P</em>, motor speed <em>n</em>, motor-pulley diameter <em>D</em><sub>1</sub>, the specified ratio <em>k=T</em><sub>2</sub>/<em>T</em><sub>1</sub>, equivalent area <em>A</em><sub>eq</sub>, and allowable stress <em>σ</em><sub>allow</sub>.</p>",
+        "section": "context"
+      },
+      {
+        "id": "q8",
+        "displayNumber": "Q8",
+        "title": "Student-Generated Structural Idealization",
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "tags": [
+          "idealization",
+          "two-pulley model",
+          "belt forces"
+        ],
+        "learningObjectives": [
+          "Create a mechanics model of the belt drive."
+        ],
+        "selected": true,
+        "student": "<p>Create a simplified two-pulley V-belt model. Show the motor pulley, driven pulley, tight-side force <em>T</em><sub>1</sub>, slack-side force <em>T</em><sub>2</sub>, and motor-pulley diameter <em>D</em><sub>1</sub>. Preserve the power-transmission load path without reproducing the photograph's exact geometry.</p><p><strong>STUDENT MODEL / FREE-BODY DIAGRAM SPACE</strong></p><div style=\"height: 12rem; border-bottom: 1px solid #b8bec5;\"></div>",
+        "instructor": "<p>A suitable model contains the small motor pulley and larger driven blower pulley connected by two straight belt spans. Label the motor torque, motor-pulley radius or diameter, tight-side tension <em>T</em><sub>1</sub>, slack-side tension <em>T</em><sub>2</sub>, and rotation direction.</p>",
+        "section": "transition"
+      },
+      {
+        "id": "q9",
+        "displayNumber": "Q9",
+        "title": "Modeling Assumptions",
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "tags": [
+          "steady operation",
+          "no slip",
+          "equivalent area",
+          "scope"
+        ],
+        "learningObjectives": [
+          "State assumptions and distinguish the educational extension from commercial design."
+        ],
+        "selected": true,
+        "student": "<p>State the assumptions used to convert the real belt drive into the simplified model.</p>",
+        "instructor": "<ul><li>Operation is steady and the belt does not slip.</li><li>Belt mass and centrifugal effects are negligible.</li><li>The supplied ratio <em>k=T</em><sub>2</sub>/<em>T</em><sub>1</sub> represents the operating tension relationship.</li><li>Each straight belt span carries uniform axial tension.</li><li>The instructor-defined <em>A</em><sub>eq</sub> is used only for an educational average-stress check.</li><li>Pulley and shaft stress, local belt bending, fatigue, wear, thermal effects, startup transients, and detailed V-groove contact mechanics are neglected.</li><li>The equivalent-area check is not a commercial V-belt sizing method.</li></ul>",
+        "section": "transition"
+      },
+      {
+        "id": "q10",
+        "displayNumber": "Q10",
+        "title": "Mechanics Analysis Plan",
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "tags": [
+          "angular velocity",
+          "torque",
+          "tension equations",
+          "stress"
+        ],
+        "learningObjectives": [
+          "Plan the calculation sequence."
+        ],
+        "selected": true,
+        "student": "<p>Describe the sequence for calculating the belt tensions and completing the limited stress assessment.</p>",
+        "instructor": "<ol><li>Convert speed to angular velocity.</li><li>Compute motor torque from <em>P=Mω</em>.</li><li>Use <em>M=(T</em><sub>1</sub>−<em>T</em><sub>2</sub>)<em>r</em><sub>1</sub>.</li><li>Combine this with <em>T</em><sub>2</sub>=<em>kT</em><sub>1</sub> to solve both tensions.</li><li>Verify power with <em>P=(T</em><sub>1</sub>−<em>T</em><sub>2</sub>)<em>v</em>.</li><li>For the instructor-defined extension, compute <em>σ=T/A</em><sub>eq</sub> and compare the tight-side value with <em>σ</em><sub>allow</sub>.</li></ol>",
+        "section": "transition"
+      },
+      {
+        "id": "q11",
+        "displayNumber": "M1",
+        "title": "Angular Velocity",
+        "type": "unit conversion",
+        "difficulty": "introductory",
+        "tags": [
+          "rpm",
+          "angular velocity"
+        ],
+        "learningObjectives": [
+          "Convert rotational speed to rad/s."
+        ],
+        "selected": true,
+        "student": "<p>Convert the motor speed <em>n</em> to angular velocity <em>ω</em> in rad/s.</p>",
+        "instructor": "<p><em>ω=2πn/60</em> = 2π({{v_belt_n_rpm}} rpm)/60 = <strong>{{v_belt_omega_rad_s}} rad/s</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q12",
+        "displayNumber": "M2",
+        "title": "Motor Torque",
+        "type": "power-torque calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "power",
+          "torque",
+          "angular velocity"
+        ],
+        "learningObjectives": [
+          "Determine torque from power and speed."
+        ],
+        "selected": true,
+        "student": "<p>Determine the torque <em>M</em> delivered by the motor using <em>P=Mω</em>.</p>",
+        "instructor": "<p><em>P</em> = {{v_belt_power_W}} W, so <em>M=P/ω</em> = ({{v_belt_power_W}} W)/({{v_belt_omega_rad_s}} rad/s) = <strong>{{v_belt_torque_Nm}} N·m</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q13",
+        "displayNumber": "M3",
+        "title": "Required Tension Difference",
+        "type": "pulley equilibrium",
+        "difficulty": "intermediate",
+        "tags": [
+          "torque equilibrium",
+          "tension difference",
+          "pulley radius"
+        ],
+        "learningObjectives": [
+          "Relate motor torque to the belt-tension difference."
+        ],
+        "selected": true,
+        "student": "<p>For motor-pulley radius <em>r</em><sub>1</sub>=<em>D</em><sub>1</sub>/2, determine the required tension difference <em>T</em><sub>1</sub>−<em>T</em><sub>2</sub> from <em>M=(T</em><sub>1</sub>−<em>T</em><sub>2</sub>)<em>r</em><sub>1</sub>.</p>",
+        "instructor": "<p><em>r</em><sub>1</sub> = {{v_belt_radius_m}} m, so <em>T</em><sub>1</sub>−<em>T</em><sub>2</sub> = <em>M/r</em><sub>1</sub> = <strong>{{v_belt_tension_difference_N}} N = {{v_belt_tension_difference_kN}} kN</strong>.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q14",
+        "displayNumber": "M4",
+        "title": "Tight-Side and Slack-Side Tensions",
+        "type": "simultaneous equations",
+        "difficulty": "intermediate",
+        "tags": [
+          "tight-side tension",
+          "slack-side tension",
+          "tension ratio"
+        ],
+        "learningObjectives": [
+          "Solve for both belt tensions."
+        ],
+        "selected": true,
+        "student": "<p>Using the specified ratio <em>T</em><sub>2</sub>/<em>T</em><sub>1</sub>=<em>k</em>, determine the tight-side tension <em>T</em><sub>1</sub> and slack-side tension <em>T</em><sub>2</sub>.</p>",
+        "instructor": "<p>With <em>T</em><sub>2</sub>=<em>kT</em><sub>1</sub>, the torque equation gives <em>T</em><sub>1</sub>(1−<em>k</em>) = {{v_belt_tension_difference_N}} N.</p><p><strong><em>T</em><sub>1</sub> = {{v_belt_T1_N}} N = {{v_belt_T1_kN}} kN</strong></p><p><strong><em>T</em><sub>2</sub> = {{v_belt_T2_N}} N = {{v_belt_T2_kN}} kN</strong></p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q15",
+        "displayNumber": "M5",
+        "title": "Power Verification",
+        "type": "power verification",
+        "difficulty": "intermediate",
+        "tags": [
+          "belt speed",
+          "power check"
+        ],
+        "learningObjectives": [
+          "Verify transmitted power from belt forces and speed."
+        ],
+        "selected": true,
+        "student": "<p>Verify power transmission using <em>P=(T</em><sub>1</sub>−<em>T</em><sub>2</sub>)<em>v</em>, where <em>v=ωr</em><sub>1</sub>.</p>",
+        "instructor": "<p><em>v=ωr</em><sub>1</sub> = <strong>{{v_belt_speed_m_s}} m/s</strong>. Therefore, <em>P=(T</em><sub>1</sub>−<em>T</em><sub>2</sub>)<em>v</em> = <strong>{{v_belt_power_check_kW}} kW</strong>, matching the assigned motor power.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q16",
+        "displayNumber": "M6",
+        "title": "Equivalent-Area Tensile Stress",
+        "type": "average normal stress",
+        "difficulty": "intermediate",
+        "tags": [
+          "equivalent area",
+          "average tensile stress",
+          "educational idealization"
+        ],
+        "learningObjectives": [
+          "Apply average normal stress to the instructor-defined equivalent member."
+        ],
+        "selected": true,
+        "student": "<p>As an instructor-defined Solid Mechanics idealization, treat the belt as an equivalent axial tensile member. Determine the average tight-side stress <em>σ</em><sub>1</sub>=<em>T</em><sub>1</sub>/<em>A</em><sub>eq</sub> and slack-side stress <em>σ</em><sub>2</sub>=<em>T</em><sub>2</sub>/<em>A</em><sub>eq</sub>.</p>",
+        "instructor": "<p><em>σ</em><sub>1</sub> = ({{v_belt_T1_N}} N)/({{v_belt_A_eq_mm2}} mm<sup>2</sup>) = <strong>{{v_belt_sigma1_MPa}} MPa</strong>.</p><p><em>σ</em><sub>2</sub> = ({{v_belt_T2_N}} N)/({{v_belt_A_eq_mm2}} mm<sup>2</sup>) = <strong>{{v_belt_sigma2_MPa}} MPa</strong>.</p><p>This is an instructor-defined equivalent-area comparison, not a standard commercial V-belt sizing calculation.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q17",
+        "displayNumber": "M7",
+        "title": "Allowable-Stress Assessment",
+        "type": "allowable stress",
+        "difficulty": "intermediate",
+        "tags": [
+          "allowable stress",
+          "stress ratio",
+          "assessment"
+        ],
+        "learningObjectives": [
+          "Compare the governing idealized stress with the assigned allowable value."
+        ],
+        "selected": true,
+        "student": "<p>Compare the governing tight-side stress with the instructor-specified allowable stress. Determine <em>σ</em><sub>allow</sub>/<em>σ</em><sub>1</sub> and state whether the idealized equivalent-tension model passes.</p>",
+        "instructor": "<p><em>σ</em><sub>allow</sub>/<em>σ</em><sub>1</sub> = <strong>{{v_belt_allowable_ratio}}</strong>. {{v_belt_stress_assessment}}</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q18",
+        "displayNumber": "M8",
+        "title": "Commercial-Selection Limitations",
+        "type": "model limitations",
+        "difficulty": "intermediate",
+        "tags": [
+          "commercial belt selection",
+          "manufacturer ratings",
+          "limitations"
+        ],
+        "learningObjectives": [
+          "Identify refinements required for real belt selection."
+        ],
+        "selected": true,
+        "student": "<p>Explain which assumptions would need refinement for selection of a real commercial V-belt.</p>",
+        "instructor": "<p>Commercial selection should use manufacturer power ratings and account for pulley diameters, wrap angle, service factor, belt speed, number of belts, pretension, centrifugal effects, fatigue and wear, temperature, alignment, startup loading, and V-groove contact. A reinforced composite belt is not designed by a simple gross-area allowable-stress check.</p>",
+        "section": "analysis"
+      },
+      {
+        "id": "q19",
+        "displayNumber": "M9",
+        "title": "Limited Engineering Recommendation",
+        "type": "engineering assessment",
+        "difficulty": "intermediate",
+        "tags": [
+          "recommendation",
+          "equivalent model",
+          "scope"
+        ],
+        "learningObjectives": [
+          "Make a recommendation bounded by the teaching model."
+        ],
+        "selected": true,
+        "student": "<p>Make a limited recommendation: acceptable under the assigned idealized model, or requires a larger effective belt area, an additional belt, or lower transmitted power.</p>",
+        "instructor": "<p>{{v_belt_engineering_recommendation}}</p><p>The recommendation applies only to the instructor-defined equivalent-tension model and is not approval or selection of a commercial V-belt.</p>",
+        "section": "analysis"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Baseline 15 kW, 1450 rpm factory-blower V-belt tension assignment.",
+        "variables": {
+          "v_belt_P_kW": 15,
+          "v_belt_n_rpm": 1450,
+          "v_belt_D1_mm": 100,
+          "v_belt_k": 0.25,
+          "v_belt_A_eq_mm2": 100,
+          "v_belt_sigma_allow_MPa": 30
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-TAPER-020",
     "slug": "variable-radius-tapered-shaft",
     "title": "Torsional Stiffness of a Variable-Section Industrial Spindle",

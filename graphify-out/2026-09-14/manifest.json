@@ -1,14 +1,14 @@
 {
   "data/problem-catalog.js": {
-    "mtime": 1789435297.6832087,
-    "seen": 1789435302.4436696,
-    "ast_hash": "991e77f14d75711912f2668f7f47700a",
+    "mtime": 1789273049.0821483,
+    "seen": 1789273072.1136239,
+    "ast_hash": "c67c38a93228d487cec6ec936d734d92",
     "semantic_hash": ""
   },
   "data/problem-health.js": {
-    "mtime": 1789435297.690404,
-    "seen": 1789435302.443674,
-    "ast_hash": "55f54cfc929e066ba1a25a2200905023",
+    "mtime": 1789273049.0821483,
+    "seen": 1789273072.1136296,
+    "ast_hash": "28f0ee6fe5b5c23302e63ce879ab5b6d",
     "semantic_hash": ""
   },
   "scripts/build-catalog.mjs": {
@@ -24,15 +24,15 @@
     "semantic_hash": ""
   },
   "scripts/packet-renderer.js": {
-    "mtime": 1789435215.7258885,
-    "seen": 1789435302.4438381,
-    "ast_hash": "cd4b8d9b87a9cfd01cbbe3199dc2bf67",
+    "mtime": 1789272932.617221,
+    "seen": 1789273072.1137757,
+    "ast_hash": "25e00a0f291d081cf33677ce0fcfc23d",
     "semantic_hash": ""
   },
   "scripts/render-assignment.mjs": {
-    "mtime": 1789435216.5969908,
-    "seen": 1789435302.443839,
-    "ast_hash": "3d3be18160719f6be11440fec4405bc8",
+    "mtime": 1789272933.4296339,
+    "seen": 1789273072.1137764,
+    "ast_hash": "2c8784f9be9ff0a9cf48f66501f64bc5",
     "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
@@ -138,8 +138,8 @@
     "semantic_hash": ""
   },
   "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md": {
-    "mtime": 1789435241.8328722,
-    "seen": 1789435302.4438608,
+    "mtime": 1787795658.6578438,
+    "seen": 1787795663.283368,
     "ast_hash": "52288622bb76446d24a6514986c59f98",
     "semantic_hash": ""
   },
@@ -150,9 +150,9 @@
     "semantic_hash": ""
   },
   "instructor-builder.qmd": {
-    "mtime": 1789435217.4950385,
-    "seen": 1789435302.4438622,
-    "ast_hash": "25ea8996c5d56b2afcd11b41425c0b9f",
+    "mtime": 1789272934.2838783,
+    "seen": 1789273072.1137993,
+    "ast_hash": "37c3a2241eff7ddeff43251e5615e450",
     "semantic_hash": ""
   },
   "problems/axial-rod-tube-assembly/_student-problem.qmd": {
@@ -996,15 +996,15 @@
     "semantic_hash": ""
   },
   "data/problem-catalog.json": {
-    "mtime": 1789435297.6832087,
-    "seen": 1789435302.4436724,
-    "ast_hash": "b455710317c86a43275afcb1a1d0fdb0",
+    "mtime": 1789273049.0812838,
+    "seen": 1789273072.1136274,
+    "ast_hash": "d255e778c9776193da06ae0be424a871",
     "semantic_hash": ""
   },
   "data/problem-health.json": {
-    "mtime": 1789435297.6832087,
-    "seen": 1789435302.4436758,
-    "ast_hash": "6961314fb48b4f561a87815606b04d33",
+    "mtime": 1789273049.0821483,
+    "seen": 1789273072.113631,
+    "ast_hash": "9f66afdcbc7d5e0e8464fb32e3dc7097",
     "semantic_hash": ""
   },
   "problems/aerial-gondola-suspension-hanger/problem.json": {
@@ -2025,66 +2025,6 @@
     "mtime": 1789252271.6716707,
     "seen": 1789273072.1139567,
     "ast_hash": "e52404b896e4e407a0ea8cec1fa10ef2",
-    "semantic_hash": ""
-  },
-  "problems/v-belt-tension-factory-ventilation-blower-drive/problem.json": {
-    "mtime": 1789434485.7500973,
-    "seen": 1789435302.4438124,
-    "ast_hash": "0bd36f1326d142629edfede26850cf02",
-    "semantic_hash": ""
-  },
-  "problems/v-belt-tension-factory-ventilation-blower-drive/questions.json": {
-    "mtime": 1789434570.5128112,
-    "seen": 1789435302.4438133,
-    "ast_hash": "10b1c7d065dda8d60589c57f7e13efa8",
-    "semantic_hash": ""
-  },
-  "problems/v-belt-tension-factory-ventilation-blower-drive/variables.json": {
-    "mtime": 1789434486.659756,
-    "seen": 1789435302.4438145,
-    "ast_hash": "abdf2f6c348d297e3ecded2352ae36fc",
-    "semantic_hash": ""
-  },
-  "problems/v-belt-tension-factory-ventilation-blower-drive/variants/section-a.json": {
-    "mtime": 1789434489.410147,
-    "seen": 1789435302.4438155,
-    "ast_hash": "3f4d151478a2c61e2db32958404f3f2e",
-    "semantic_hash": ""
-  },
-  "problems/v-belt-tension-factory-ventilation-blower-drive/_student-problem.qmd": {
-    "mtime": 1789434488.5139341,
-    "seen": 1789435302.443972,
-    "ast_hash": "f3852758c7ccdc4a5e89a410d851aa23",
-    "semantic_hash": ""
-  },
-  "problems/v-belt-tension-factory-ventilation-blower-drive/index.qmd": {
-    "mtime": 1789434487.6389925,
-    "seen": 1789435302.4439726,
-    "ast_hash": "e3c7d2f21b5d91c5c882ca936cda0eb4",
-    "semantic_hash": ""
-  },
-  "problems/v-belt-tension-factory-ventilation-blower-drive/instructor-guide.qmd": {
-    "mtime": 1789434490.2709541,
-    "seen": 1789435302.4439735,
-    "ast_hash": "f8b15f46c6b38f7909841acd340436d1",
-    "semantic_hash": ""
-  },
-  "problems/v-belt-tension-factory-ventilation-blower-drive/student-packet.qmd": {
-    "mtime": 1789434417.0911374,
-    "seen": 1789435302.4439747,
-    "ast_hash": "e320eddc1248f58b1495744a548a1e26",
-    "semantic_hash": ""
-  },
-  "problems/v-belt-tension-factory-ventilation-blower-drive/assets/v-belt-blower-industry-context.jpg": {
-    "mtime": 1789414698.7610724,
-    "seen": 1789435302.4440427,
-    "ast_hash": "df1a9ef76eb48583567abe13ee00cf18",
-    "semantic_hash": ""
-  },
-  "problems/v-belt-tension-factory-ventilation-blower-drive/assets/v-belt-blower-instructor-idealization.jpg": {
-    "mtime": 1789433125.8655353,
-    "seen": 1789435302.4440436,
-    "ast_hash": "9274c457cadbb01d90cc0f965ee7ba6b",
     "semantic_hash": ""
   }
 }
