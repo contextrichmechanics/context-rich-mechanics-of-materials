@@ -12,9 +12,11 @@ A roller chain transfers power from a motorcycle gearbox/front sprocket to the r
 
 For this problem, the real wheel, sprocket carrier, bearings, axle, and swingarm are reduced to an equivalent planar model. The axle is treated as a simply supported solid circular beam, and the chain-induced transverse demand is represented by a concentrated load at the sprocket plane. Wheel/rider weight, road and tire forces, braking, cornering, suspension action, impact, and fatigue are outside the base problem.
 
+The equivalent axle is assigned normalized AISI 4140 steel with a yield strength of 485 MPa. This is a published representative yield strength for normalized AISI 4140 steel and an instructor-assigned teaching value; it is not a claim about the actual axle material of the motorcycle shown.
+
 ### Main Engineering Goal
 
-Determine whether the idealized rear axle satisfies the required first-yield factor of safety under the specified steady chain-drive loading, and determine the minimum equivalent axle diameter if the baseline section is inadequate.
+Determine whether the idealized rear axle satisfies the required first-yield factor of safety under the specified steady chain-drive loading, and determine the minimum equivalent axle diameter permitted by the assigned strength criterion.
 
 ### System Components
 

@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 The rear axle is an equivalent simply supported, constant-diameter solid circular beam subjected only to the chain-induced transverse point load. The rear axle does not carry wheel-driving torque in this idealization; that torque passes through the sprocket carrier and wheel. The model excludes vehicle/rider weight, tire and road loads, braking, cornering, suspension action, dynamic impact, vibration, fatigue, stress concentrations, threads, shoulders, clamping, detailed bearing contact, and detailed chain/sprocket contact.
 
+The assigned axle material is normalized AISI 4140 steel with a published representative yield strength of 485 MPa. This material and strength are teaching inputs and must not be represented as the actual axle material or specification of the motorcycle shown in the context image.
+
 # Textbook Connection
 
 The bending-strength portion aligns with Hibbeler, *Mechanics of Materials*, 11th ed., Chapter 6. Problem 6-109 similarly sizes a steel shaft under transverse loading using an allowable bending stress. This problem adds the motorcycle chain-drive load-path step used to generate the transverse axle load.

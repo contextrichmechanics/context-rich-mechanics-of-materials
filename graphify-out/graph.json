@@ -10239,7 +10239,7 @@
       "node_kind": "heading",
       "norm_label": "supplemental assessment structure",
       "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L44"
+      "source_location": "L46"
     },
     {
       "id": "problems_motorcycle_chain_drive_rear_axle_bending_instructor_guide_textbook_connection",
@@ -10251,7 +10251,7 @@
       "node_kind": "heading",
       "norm_label": "textbook connection",
       "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L40"
+      "source_location": "L42"
     },
     {
       "id": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem",
@@ -10299,7 +10299,7 @@
       "node_kind": "heading",
       "norm_label": "main engineering goal",
       "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L15"
+      "source_location": "L17"
     },
     {
       "id": "problems_motorcycle_chain_drive_rear_axle_bending_student_problem_motorcycle_final_drive_chain_loading_and_rear_axle_bending",
@@ -10323,7 +10323,7 @@
       "node_kind": "heading",
       "norm_label": "system components",
       "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L19"
+      "source_location": "L21"
     },
     {
       "id": "problems_v_belt_tension_factory_ventilation_blower_drive_student_packet",
@@ -15758,7 +15758,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L40",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -15769,7 +15769,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/instructor-guide.qmd",
-      "source_location": "L44",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -15802,7 +15802,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -15813,7 +15813,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/motorcycle-chain-drive-rear-axle-bending/_student-problem.qmd",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -19558,5 +19558,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7ecbb02396e197364a04a9cc043f4bf8301a6f39"
+  "built_at_commit": "fc225a95c7fe792c9e1b06fce0e25924bb4b1473"
 }

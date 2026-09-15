@@ -5,6 +5,6 @@
   {"key":"chain_L_mm","symbol":"L","label":"Equivalent axle support span","value":240,"unit":"mm","min":180,"max":400,"step":10},
   {"key":"chain_a_mm","symbol":"a","label":"Distance from support A to sprocket-load plane","value":50,"unit":"mm","min":20,"max":120,"step":5},
   {"key":"chain_d_mm","symbol":"d","label":"Equivalent solid circular axle diameter","value":20,"unit":"mm","min":12,"max":50,"step":1},
-  {"key":"chain_S_y_MPa","symbol":"S_y","label":"Ductile-steel axle yield strength","value":320,"unit":"MPa","min":200,"max":700,"step":10},
+  {"key":"chain_S_y_MPa","symbol":"S_y","label":"Normalized AISI 4140 axle yield strength","value":485,"unit":"MPa","min":200,"max":700,"step":5},
   {"key":"chain_n_req","symbol":"n_req","label":"Required first-yield factor of safety","value":2.0,"unit":"-","min":1,"max":5,"step":0.1}
 ]
