@@ -1,0 +1,12 @@
+[
+  {"key":"lathe_D0_mm","symbol":"D_0","label":"Initial workpiece diameter","value":50.0,"unit":"mm","min":45,"max":80,"step":0.1},
+  {"key":"lathe_a_p_mm","symbol":"a_p","label":"Radial depth of cut","value":1.00,"unit":"mm","min":0.1,"max":3,"step":0.05},
+  {"key":"lathe_f_mm_rev","symbol":"f","label":"Feed","value":0.254,"unit":"mm/rev","min":0.05,"max":0.5,"step":0.001},
+  {"key":"lathe_F_p_N","symbol":"F_p","label":"Passive/radial cutting force","value":65,"unit":"N","min":10,"max":250,"step":5},
+  {"key":"lathe_b_mm","symbol":"b","label":"Square-shank width","value":20,"unit":"mm","min":10,"max":40,"step":1},
+  {"key":"lathe_h_mm","symbol":"h","label":"Square-shank height","value":20,"unit":"mm","min":10,"max":40,"step":1},
+  {"key":"lathe_L_mm","symbol":"L","label":"Effective tool-holder overhang","value":60,"unit":"mm","min":20,"max":120,"step":1},
+  {"key":"lathe_E_GPa","symbol":"E","label":"Steel elastic modulus","value":200,"unit":"GPa","min":180,"max":220,"step":1},
+  {"key":"lathe_D_target_mm","symbol":"D_target","label":"Required finished diameter","value":48.000,"unit":"mm","min":40,"max":75,"step":0.001},
+  {"key":"lathe_tolerance_mm","symbol":"t_D","label":"Symmetric diameter tolerance","value":0.010,"unit":"mm","min":0.002,"max":0.05,"step":0.001}
+]

@@ -901,6 +901,67 @@
         : `The ${formatDerived(hitchDiameterMm, 1)} mm equivalent section provides FS = ${formatDerived(actualFos, 2)}, below the required ${formatDerived(hitchRequiredFos, 1)}; increase the equivalent diameter to at least ${formatDerived(recommendedDiameterMm, 0)} mm for this prescribed static model.`;
     }
 
+    const latheInitialDiameterMm = numericValue(values, "lathe_D0_mm");
+    const latheDepthOfCutMm = numericValue(values, "lathe_a_p_mm");
+    const latheForceN = numericValue(values, "lathe_F_p_N");
+    const latheWidthMm = numericValue(values, "lathe_b_mm");
+    const latheHeightMm = numericValue(values, "lathe_h_mm");
+    const latheOverhangMm = numericValue(values, "lathe_L_mm");
+    const latheElasticModulusGpa = numericValue(values, "lathe_E_GPa");
+    const latheTargetDiameterMm = numericValue(values, "lathe_D_target_mm");
+    const latheToleranceMm = numericValue(values, "lathe_tolerance_mm");
+
+    if (
+      Number.isFinite(latheInitialDiameterMm) && latheInitialDiameterMm > 0 &&
+      Number.isFinite(latheDepthOfCutMm) && latheDepthOfCutMm > 0 &&
+      latheInitialDiameterMm > 2 * latheDepthOfCutMm &&
+      Number.isFinite(latheForceN) && latheForceN > 0 &&
+      Number.isFinite(latheWidthMm) && latheWidthMm > 0 &&
+      Number.isFinite(latheHeightMm) && latheHeightMm > 0 &&
+      Number.isFinite(latheOverhangMm) && latheOverhangMm > 0 &&
+      Number.isFinite(latheElasticModulusGpa) && latheElasticModulusGpa > 0 &&
+      Number.isFinite(latheTargetDiameterMm) && latheTargetDiameterMm > 0 &&
+      Number.isFinite(latheToleranceMm) && latheToleranceMm > 0
+    ) {
+      const nominalDiameterMm = latheInitialDiameterMm - 2 * latheDepthOfCutMm;
+      const inertiaMm4 = latheWidthMm * latheHeightMm ** 3 / 12;
+      const maximumMomentNmm = latheForceN * latheOverhangMm;
+      const elasticModulusMpa = latheElasticModulusGpa * 1000;
+      const radialDeflectionMm = latheForceN * latheOverhangMm ** 3 / (3 * elasticModulusMpa * inertiaMm4);
+      const diameterErrorMm = 2 * radialDeflectionMm;
+      const actualDiameterMm = nominalDiameterMm + diameterErrorMm;
+      const lowerDiameterMm = latheTargetDiameterMm - latheToleranceMm;
+      const upperDiameterMm = latheTargetDiameterMm + latheToleranceMm;
+      const allowableRadialDeflectionMm = latheToleranceMm / 2;
+      const maximumOverhangMm = Math.cbrt(3 * elasticModulusMpa * inertiaMm4 * allowableRadialDeflectionMm / latheForceN);
+      const tolerancePasses = actualDiameterMm >= lowerDiameterMm - 1e-10 && actualDiameterMm <= upperDiameterMm + 1e-10;
+      const overhangPasses = latheOverhangMm <= maximumOverhangMm * (1 + 1e-10);
+
+      values.lathe_D_nom_mm = formatDerived(nominalDiameterMm, 3);
+      values.lathe_I_mm4 = formatDerived(inertiaMm4, 3);
+      values.lathe_M_max_Nmm = formatDerived(maximumMomentNmm, 0);
+      values.lathe_M_max_Nm = formatDerived(maximumMomentNmm / 1000, 2);
+      values.lathe_E_MPa = formatDerived(elasticModulusMpa, 0);
+      values.lathe_delta_r_mm = formatDerived(radialDeflectionMm, 6);
+      values.lathe_delta_r_um = formatDerived(radialDeflectionMm * 1000, 3);
+      values.lathe_diameter_error_mm = formatDerived(diameterErrorMm, 6);
+      values.lathe_D_actual_mm = formatDerived(actualDiameterMm, 6);
+      values.lathe_D_lower_mm = formatDerived(lowerDiameterMm, 3);
+      values.lathe_D_upper_mm = formatDerived(upperDiameterMm, 3);
+      values.lathe_delta_allow_mm = formatDerived(allowableRadialDeflectionMm, 6);
+      values.lathe_L_max_mm = formatDerived(maximumOverhangMm, 4);
+      values.lathe_tolerance_assessment = tolerancePasses
+        ? "The predicted diameter is within the assigned tolerance range."
+        : "The predicted diameter is outside the assigned tolerance range.";
+      values.lathe_overhang_assessment = overhangPasses
+        ? "The assigned effective overhang does not exceed the tolerance-limited maximum."
+        : "The assigned effective overhang exceeds the tolerance-limited maximum.";
+      values.lathe_engineering_assessment = tolerancePasses && overhangPasses
+        ? `The assigned ${formatDerived(latheOverhangMm, 1)} mm overhang satisfies the dimensional-tolerance requirement in the simplified elastic holder model. Stiffness/serviceability governs; reducing overhang is the most direct way to reduce deflection because radial displacement varies with L^3. This result excludes other machine, tool, workpiece, thermal, vibration, wear, runout, and measurement effects.`
+        : `The assigned ${formatDerived(latheOverhangMm, 1)} mm overhang does not satisfy the dimensional-tolerance requirement in the simplified elastic holder model. Reduce the overhang below ${formatDerived(maximumOverhangMm, 4)} mm or increase flexural rigidity, then reassess. This result excludes other machine, tool, workpiece, thermal, vibration, wear, runout, and measurement effects.`;
+    }
+
+
     const vBeltPowerKw = numericValue(values, "v_belt_P_kW");
     const vBeltSpeedRpm = numericValue(values, "v_belt_n_rpm");
     const vBeltPulleyDiameterMm = numericValue(values, "v_belt_D1_mm");

@@ -140,6 +140,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-LATHE-TURNING-CUTT-001",
+    "slug": "lathe-turning-cutting-tool-deflection",
+    "title": "Lathe Turning — Cutting-Tool Deflection and Machining Tolerance",
+    "status": "OK",
+    "variables": 10,
+    "questions": 17,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-SHAFT-016",
     "slug": "motor-driven-shaft-torsion",
     "title": "Motor-Driven Shaft Design for a Belt-Transmission System",

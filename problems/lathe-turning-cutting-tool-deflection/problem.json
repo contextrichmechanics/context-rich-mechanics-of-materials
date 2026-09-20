@@ -1,0 +1,20 @@
+{
+  "id": "MOS-LATHE-TURNING-CUTT-001",
+  "slug": "lathe-turning-cutting-tool-deflection",
+  "title": "Lathe Turning — Cutting-Tool Deflection and Machining Tolerance",
+  "studentDocumentTitle": "Student Packet - Lathe Turning — Cutting-Tool Deflection and Machining Tolerance",
+  "instructorDocumentTitle": "Instructor Guide - Lathe Turning — Cutting-Tool Deflection and Machining Tolerance",
+  "summary": "Model a square-shank lathe tool holder as a cantilever, calculate radial cutting-edge deflection, and assess its contribution to finished-diameter tolerance.",
+  "textbookChapters": ["Internal loadings in structural members", "Deflection of beams and shafts", "Design of beams and shafts"],
+  "derivedPlaceholders": ["lathe_D_nom_mm", "lathe_I_mm4", "lathe_M_max_Nmm", "lathe_M_max_Nm", "lathe_E_MPa", "lathe_delta_r_mm", "lathe_delta_r_um", "lathe_diameter_error_mm", "lathe_D_actual_mm", "lathe_D_lower_mm", "lathe_D_upper_mm", "lathe_delta_allow_mm", "lathe_L_max_mm", "lathe_tolerance_assessment", "lathe_overhang_assessment", "lathe_engineering_assessment"],
+  "image": "assets/lathe-turning-industry-context.jpg",
+  "imageAttribution": "“Lathe, Metal Processing, Machine” by Ralphs_Fotos, via Pixabay. Pixabay image #4021097. Used under the Pixabay Content License.",
+  "imageSource": "https://pixabay.com/photos/lathe-metal-processing-machine-4021097/",
+  "imageLicense": "https://pixabay.com/service/license-summary/",
+  "idealizedImage": "assets/lathe-tool-holder-instructor-reference.jpg",
+  "idealizedImageAlt": "Instructor reference idealization of a 20 mm by 20 mm square-shank lathe tool holder as a cantilever fixed at the rigid tool post, with overhang L and passive radial force F_p at the cutting edge.",
+  "source": "index.html",
+  "machiningDataSource": "Ojal, N., Copenhaver, R., Cherukuri, H. P., Schmitz, T. L., Devlugt, K. T., and Jaycox, A. W. (2022). A Realistic Full-Scale 3D Modeling of Turning Using Coupled Smoothed Particle Hydrodynamics and Finite Element Method for Predicting Cutting Forces. Journal of Manufacturing and Materials Processing, 6(2), 33. https://doi.org/10.3390/jmmp6020033",
+  "problemStatement": "<p>A machinist is performing an external turning operation on an Al 6061 cylindrical workpiece. The machining condition uses radial depth of cut <strong>a<sub>p</sub> = {{lathe_a_p_mm}} {{lathe_a_p_mm_unit}}</strong> and feed <strong>f = {{lathe_f_mm_rev}} {{lathe_f_mm_rev_unit}}</strong>. The measured passive/radial cutting-force component is <strong>F<sub>p</sub> = {{lathe_F_p_N}} {{lathe_F_p_N_unit}}</strong>.</p><p>The exposed square steel tool-holder shank is idealized as a prismatic cantilever fixed at the tool post. The radial force acts transversely at the cutting edge and deflects it away from the workpiece, reducing the achieved radial depth of cut and producing an oversized finished diameter. Only elastic radial bending of the idealized holder is included.</p>",
+  "engineeringGoal": "<p>Determine whether elastic radial deflection of the tool holder is small enough to maintain the assigned <strong>{{lathe_D_target_mm}} ± {{lathe_tolerance_mm}} mm</strong> finished-diameter requirement, and determine the maximum allowable effective tool overhang for this serviceability limit.</p>"
+}

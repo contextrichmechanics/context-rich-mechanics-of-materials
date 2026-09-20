@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - Baseline lathe tool holder",
+  "description": "Faculty-reviewed cantilever-deflection and machining-tolerance assessment using the approved baseline values.",
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","m1","m2","m3","m4","m5","m6","m7"],
+  "variables": {"lathe_D0_mm":50.0,"lathe_a_p_mm":1.00,"lathe_f_mm_rev":0.254,"lathe_F_p_N":65,"lathe_b_mm":20,"lathe_h_mm":20,"lathe_L_mm":60,"lathe_E_GPa":200,"lathe_D_target_mm":48.000,"lathe_tolerance_mm":0.010}
+}

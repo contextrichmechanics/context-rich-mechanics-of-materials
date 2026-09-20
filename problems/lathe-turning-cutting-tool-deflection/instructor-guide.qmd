@@ -1,0 +1,48 @@
+---
+title: "Instructor Guide - Lathe Turning — Cutting-Tool Deflection and Machining Tolerance"
+subtitle: "Representative Solutions for Cantilever Deflection and Dimensional Serviceability"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+Award credit for a defensible cantilever idealization, correct radial load path, consistent millimeter-based units, accurate section inertia and tip-deflection calculations, correct conversion from radial displacement to diameter error, and an engineering recommendation bounded by the stated assumptions.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="lathe-turning-cutting-tool-deflection-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "lathe-turning-cutting-tool-deflection", targetId: "lathe-turning-cutting-tool-deflection-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Source and Input Distinctions
+
+The radial depth of cut, feed, and passive/radial cutting force are taken from Ojal et al. (2022), “A Realistic Full-Scale 3D Modeling of Turning Using Coupled Smoothed Particle Hydrodynamics and Finite Element Method for Predicting Cutting Forces,” *Journal of Manufacturing and Materials Processing*, 6(2), 33, <https://doi.org/10.3390/jmmp6020033>. The initial diameter, effective overhang, elastic modulus, target/tolerance requirement, and structural idealization are instructor-assigned modeling values. The 20 mm × 20 mm shank represents a commercial square-holder geometry; it is not a dimension inferred from the context photograph.
+
+Industry image: “Lathe, Metal Processing, Machine” by Ralphs_Fotos, via [Pixabay](https://pixabay.com/photos/lathe-metal-processing-machine-4021097/), image #4021097. Used under the [Pixabay Content License](https://pixabay.com/service/license-summary/). Attribution is retained for academic source traceability even though Pixabay does not require attribution under the current license. The photograph is representative and is not the experimental setup used by Ojal et al.
+
+# Scope of the Base Problem
+
+The holder is modeled as a straight, prismatic Euler–Bernoulli cantilever with a perfectly fixed tool-post end, a concentrated transverse radial force at the cutting edge, small deformation, and linear-elastic steel. The force is assumed to deflect the edge away from the workpiece. Machine/tool-post compliance, insert deformation, workpiece deflection, thermal effects, vibration/chatter, runout, tool wear, and measurement uncertainty are excluded.
+
+# Supplemental Assessment Structure
+
+- context interpretation and radial load path: 20%;
+- idealization, assumptions, and analysis plan: 20%;
+- nominal geometry, inertia, moment, and deflection: 30%;
+- diameter/tolerance and maximum-overhang calculations: 20%;
+- engineering recommendation and limitation: 10%.

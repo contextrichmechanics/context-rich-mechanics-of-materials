@@ -7224,6 +7224,515 @@
     ]
   },
   {
+    "id": "MOS-LATHE-TURNING-CUTT-001",
+    "slug": "lathe-turning-cutting-tool-deflection",
+    "title": "Lathe Turning — Cutting-Tool Deflection and Machining Tolerance",
+    "studentDocumentTitle": "Student Packet - Lathe Turning — Cutting-Tool Deflection and Machining Tolerance",
+    "instructorDocumentTitle": "Instructor Guide - Lathe Turning — Cutting-Tool Deflection and Machining Tolerance",
+    "summary": "Model a square-shank lathe tool holder as a cantilever, calculate radial cutting-edge deflection, and assess its contribution to finished-diameter tolerance.",
+    "textbookChapters": [
+      "Internal loadings in structural members",
+      "Deflection of beams and shafts",
+      "Design of beams and shafts"
+    ],
+    "derivedPlaceholders": [
+      "lathe_D_nom_mm",
+      "lathe_I_mm4",
+      "lathe_M_max_Nmm",
+      "lathe_M_max_Nm",
+      "lathe_E_MPa",
+      "lathe_delta_r_mm",
+      "lathe_delta_r_um",
+      "lathe_diameter_error_mm",
+      "lathe_D_actual_mm",
+      "lathe_D_lower_mm",
+      "lathe_D_upper_mm",
+      "lathe_delta_allow_mm",
+      "lathe_L_max_mm",
+      "lathe_tolerance_assessment",
+      "lathe_overhang_assessment",
+      "lathe_engineering_assessment"
+    ],
+    "image": "problems/lathe-turning-cutting-tool-deflection/assets/lathe-turning-industry-context.jpg",
+    "imageAttribution": "“Lathe, Metal Processing, Machine” by Ralphs_Fotos, via Pixabay. Pixabay image #4021097. Used under the Pixabay Content License.",
+    "imageSource": "https://pixabay.com/photos/lathe-metal-processing-machine-4021097/",
+    "imageLicense": "https://pixabay.com/service/license-summary/",
+    "idealizedImage": "problems/lathe-turning-cutting-tool-deflection/assets/lathe-tool-holder-instructor-reference.jpg",
+    "idealizedImageAlt": "Instructor reference idealization of a 20 mm by 20 mm square-shank lathe tool holder as a cantilever fixed at the rigid tool post, with overhang L and passive radial force F_p at the cutting edge.",
+    "source": "problems/lathe-turning-cutting-tool-deflection/index.html",
+    "machiningDataSource": "Ojal, N., Copenhaver, R., Cherukuri, H. P., Schmitz, T. L., Devlugt, K. T., and Jaycox, A. W. (2022). A Realistic Full-Scale 3D Modeling of Turning Using Coupled Smoothed Particle Hydrodynamics and Finite Element Method for Predicting Cutting Forces. Journal of Manufacturing and Materials Processing, 6(2), 33. https://doi.org/10.3390/jmmp6020033",
+    "problemStatement": "<p>A machinist is performing an external turning operation on an Al 6061 cylindrical workpiece. The machining condition uses radial depth of cut <strong>a<sub>p</sub> = {{lathe_a_p_mm}} {{lathe_a_p_mm_unit}}</strong> and feed <strong>f = {{lathe_f_mm_rev}} {{lathe_f_mm_rev_unit}}</strong>. The measured passive/radial cutting-force component is <strong>F<sub>p</sub> = {{lathe_F_p_N}} {{lathe_F_p_N_unit}}</strong>.</p><p>The exposed square steel tool-holder shank is idealized as a prismatic cantilever fixed at the tool post. The radial force acts transversely at the cutting edge and deflects it away from the workpiece, reducing the achieved radial depth of cut and producing an oversized finished diameter. Only elastic radial bending of the idealized holder is included.</p>",
+    "engineeringGoal": "<p>Determine whether elastic radial deflection of the tool holder is small enough to maintain the assigned <strong>{{lathe_D_target_mm}} ± {{lathe_tolerance_mm}} mm</strong> finished-diameter requirement, and determine the maximum allowable effective tool overhang for this serviceability limit.</p>",
+    "variables": [
+      {
+        "key": "lathe_D0_mm",
+        "symbol": "D_0",
+        "label": "Initial workpiece diameter",
+        "value": 50,
+        "unit": "mm",
+        "min": 45,
+        "max": 80,
+        "step": 0.1
+      },
+      {
+        "key": "lathe_a_p_mm",
+        "symbol": "a_p",
+        "label": "Radial depth of cut",
+        "value": 1,
+        "unit": "mm",
+        "min": 0.1,
+        "max": 3,
+        "step": 0.05
+      },
+      {
+        "key": "lathe_f_mm_rev",
+        "symbol": "f",
+        "label": "Feed",
+        "value": 0.254,
+        "unit": "mm/rev",
+        "min": 0.05,
+        "max": 0.5,
+        "step": 0.001
+      },
+      {
+        "key": "lathe_F_p_N",
+        "symbol": "F_p",
+        "label": "Passive/radial cutting force",
+        "value": 65,
+        "unit": "N",
+        "min": 10,
+        "max": 250,
+        "step": 5
+      },
+      {
+        "key": "lathe_b_mm",
+        "symbol": "b",
+        "label": "Square-shank width",
+        "value": 20,
+        "unit": "mm",
+        "min": 10,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "key": "lathe_h_mm",
+        "symbol": "h",
+        "label": "Square-shank height",
+        "value": 20,
+        "unit": "mm",
+        "min": 10,
+        "max": 40,
+        "step": 1
+      },
+      {
+        "key": "lathe_L_mm",
+        "symbol": "L",
+        "label": "Effective tool-holder overhang",
+        "value": 60,
+        "unit": "mm",
+        "min": 20,
+        "max": 120,
+        "step": 1
+      },
+      {
+        "key": "lathe_E_GPa",
+        "symbol": "E",
+        "label": "Steel elastic modulus",
+        "value": 200,
+        "unit": "GPa",
+        "min": 180,
+        "max": 220,
+        "step": 1
+      },
+      {
+        "key": "lathe_D_target_mm",
+        "symbol": "D_target",
+        "label": "Required finished diameter",
+        "value": 48,
+        "unit": "mm",
+        "min": 40,
+        "max": 75,
+        "step": 0.001
+      },
+      {
+        "key": "lathe_tolerance_mm",
+        "symbol": "t_D",
+        "label": "Symmetric diameter tolerance",
+        "value": 0.01,
+        "unit": "mm",
+        "min": 0.002,
+        "max": 0.05,
+        "step": 0.001
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "machining",
+          "structural function"
+        ],
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Explain the functions of the cutting tool and holder."
+        ],
+        "gradingNotes": "<p>Require material removal and stable transfer of cutting loads to the tool post.</p>",
+        "commonMistakes": "<p>Describing only rotation of the workpiece.</p>",
+        "student": "<p>State the function of the cutting tool and tool holder during this external turning operation.</p>",
+        "instructor": "<p>The insert removes workpiece material to create the specified cylindrical surface. The holder positions and supports the insert and transfers machining loads to the tool post.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "Relevant External Load",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "radial cutting force",
+          "load identification"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the force component governing radial displacement."
+        ],
+        "gradingNotes": "<p>Require the passive/radial force and its direct connection to diameter error.</p>",
+        "commonMistakes": "<p>Using feed as a force or deriving an unsupported cutting force.</p>",
+        "student": "<p>Which machining load is most directly associated with radial cutting-edge displacement, and why is it used for the diameter-tolerance analysis?</p>",
+        "instructor": "<p>The passive/radial force <em>F</em><sub>p</sub> acts transversely to the tool-holder overhang in the radial plane. Its elastic displacement changes the achieved radial depth of cut and therefore the finished diameter.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Support and Boundary Condition",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "fixed support",
+          "cantilever"
+        ],
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Idealize the tool-post restraint."
+        ],
+        "gradingNotes": "<p>Require a fixed support that prevents translation and rotation.</p>",
+        "commonMistakes": "<p>Modeling the tool post as a pin.</p>",
+        "student": "<p>How is the holder restrained by the tool post, and what idealized beam boundary condition represents that restraint?</p>",
+        "instructor": "<p>The clamped holder is idealized as perfectly fixed at the tool post, preventing translation and rotation. Its exposed overhang is therefore a cantilever.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Radial Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path",
+          "tool holder"
+        ],
+        "type": "load path",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Trace the radial load through the assembly."
+        ],
+        "gradingNotes": "<p>Require workpiece contact, insert, holder, tool post, and machine structure.</p>",
+        "commonMistakes": "<p>Stopping the load path at the insert.</p>",
+        "student": "<p>Trace the radial load path from workpiece contact to the supporting machine structure.</p>",
+        "instructor": "<p>The load passes from the workpiece–insert contact through the insert and square-shank holder into the tool-post clamp and then into the machine structure.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Component and Location",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "critical section",
+          "fixed end"
+        ],
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the deformable component and maximum-moment section."
+        ],
+        "gradingNotes": "<p>Require the holder overhang and fixed-end section.</p>",
+        "commonMistakes": "<p>Selecting the cutting edge as the maximum-moment location.</p>",
+        "student": "<p>Which component's elastic deformation is evaluated, and where is its maximum bending moment?</p>",
+        "instructor": "<p>The exposed square-shank holder is evaluated. Its bending-moment magnitude is maximum at the fixed tool-post face.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Governing Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "beam deflection",
+          "serviceability"
+        ],
+        "type": "scope identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Distinguish stiffness from strength failure."
+        ],
+        "gradingNotes": "<p>Require elastic deflection and dimensional serviceability.</p>",
+        "commonMistakes": "<p>Treating yielding as the governing analysis.</p>",
+        "student": "<p>What mechanical response governs this problem, and how does it differ from a material-strength failure?</p>",
+        "instructor": "<p>Elastic radial deflection governs because it contributes to dimensional error before any assumed material failure. This is a stiffness/serviceability assessment rather than a required stress or yielding design.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "geometry",
+          "elastic modulus",
+          "deflection"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify inputs controlling cantilever deflection."
+        ],
+        "gradingNotes": "<p>Expect F_p, L, E, b, h, I, depth of cut, and diameter tolerance.</p>",
+        "commonMistakes": "<p>Omitting the cubic dependence on overhang or section height.</p>",
+        "student": "<p>Identify the geometric, material, loading, and machining quantities needed for the deflection and tolerance assessment.</p>",
+        "instructor": "<p>The controlling structural inputs are <em>F</em><sub>p</sub>, <em>L</em>, <em>E</em>, <em>b</em>, <em>h</em>, and <em>I</em>. Initial diameter, radial depth of cut, target diameter, and tolerance connect the structural displacement to machining accuracy. Feed documents the machining condition but does not enter the beam equation.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "cantilever beam",
+          "free-body diagram",
+          "square section"
+        ],
+        "type": "idealization",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Create the prescribed cantilever model."
+        ],
+        "gradingNotes": "<p>Require fixed tool-post end, L, 20 mm by 20 mm section, F_p at the cutting edge, and radial-deflection direction.</p>",
+        "commonMistakes": "<p>Exposing or copying the instructor reference rather than developing an independent model.</p>",
+        "student": "<p>Represent the exposed holder as a simplified beam. Show the fixed tool-post end, effective overhang <em>L</em>, square <em>b</em> by <em>h</em> section, passive/radial tip force <em>F</em><sub>p</sub>, and the direction of radial cutting-edge deflection.</p><p><strong>Student model / free-body diagram space:</strong></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>",
+        "instructor": "<p>A suitable model is a prismatic square-section cantilever fixed at the tool post, with the passive/radial force applied transversely at the free cutting edge. For the baseline, <em>b</em> = <em>h</em> = 20 mm, <em>L</em> = 60 mm, and <em>F</em><sub>p</sub> = 65 N.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "Euler-Bernoulli beam",
+          "linear elasticity",
+          "limitations"
+        ],
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "State the assumptions bounding the serviceability model."
+        ],
+        "gradingNotes": "<p>Require the prescribed idealizations and excluded compliance/error sources.</p>",
+        "commonMistakes": "<p>Claiming the result predicts total machining error.</p>",
+        "student": "<p>State the modeling assumptions used to relate tool-holder bending to finished-diameter error.</p>",
+        "instructor": "<p>The exposed square shank is a prismatic Euler–Bernoulli cantilever; the tool post is perfectly fixed; <em>F</em><sub>p</sub> is a concentrated transverse tip load; the steel holder is linear elastic with small deformation; and only radial-plane holder compliance is included. Machine/tool-post compliance, insert deformation, workpiece deflection, thermal effects, vibration, runout, and wear are neglected. The force deflects the cutting edge away from the workpiece, so the resulting diameter contribution is positive and equals twice the radial displacement.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan",
+          "machining tolerance"
+        ],
+        "type": "solution planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Organize the deflection and tolerance analysis."
+        ],
+        "gradingNotes": "<p>Require nominal diameter, I, moment, deflection, diameter conversion, tolerance comparison, and L_max.</p>",
+        "commonMistakes": "<p>Comparing radial displacement directly with the diameter tolerance.</p>",
+        "student": "<p>Outline the calculation sequence needed to assess the finished diameter and determine the maximum allowable overhang.</p>",
+        "instructor": "<p>Calculate nominal diameter, section inertia, fixed-end moment, radial tip deflection, twice-deflection diameter contribution, predicted diameter and tolerance comparison, then solve the same deflection relation for the tolerance-limited overhang.</p>"
+      },
+      {
+        "id": "m1",
+        "title": "Nominal Finished Diameter",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "depth of cut",
+          "diameter"
+        ],
+        "type": "geometry calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Relate radial depth of cut to diameter reduction."
+        ],
+        "gradingNotes": "<p>Require D_nom = D_0 - 2a_p.</p>",
+        "commonMistakes": "<p>Subtracting the radial depth only once.</p>",
+        "student": "<p>Determine the nominal finished diameter before elastic tool deflection is considered.</p>",
+        "instructor": "<p><em>D</em><sub>nom</sub> = <em>D</em><sub>0</sub> − 2<em>a</em><sub>p</sub> = <strong>{{lathe_D_nom_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "m2",
+        "title": "Section Property and Fixed-End Moment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "second moment of area",
+          "bending moment"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate square-section inertia and cantilever moment."
+        ],
+        "gradingNotes": "<p>Require I = bh^3/12 and M_max = F_pL in consistent units.</p>",
+        "commonMistakes": "<p>Using area moment units incorrectly or omitting the cube on h.</p>",
+        "student": "<p>Determine the second moment of area about the radial-plane bending axis and the maximum bending moment at the fixed end.</p>",
+        "instructor": "<p><em>I</em> = <em>bh</em><sup>3</sup>/12 = <strong>{{lathe_I_mm4}} mm<sup>4</sup></strong>. The maximum moment is <em>M</em><sub>max</sub> = <em>F</em><sub>p</sub><em>L</em> = <strong>{{lathe_M_max_Nmm}} N·mm</strong> (<strong>{{lathe_M_max_Nm}} N·m</strong>).</p>"
+      },
+      {
+        "id": "m3",
+        "title": "Radial Cutting-Edge Deflection",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "cantilever deflection",
+          "serviceability"
+        ],
+        "type": "deflection calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate cantilever tip displacement."
+        ],
+        "gradingNotes": "<p>Require E conversion from GPa to N/mm².</p>",
+        "commonMistakes": "<p>Using E = 200 directly with millimeter units or omitting L cubed.</p>",
+        "student": "<p>Determine the radial cutting-edge displacement using the cantilever tip-load relation.</p>",
+        "instructor": "<p>With <em>E</em> = <strong>{{lathe_E_MPa}} N/mm<sup>2</sup></strong>, δ<sub>r</sub> = <em>F</em><sub>p</sub><em>L</em><sup>3</sup>/(3<em>EI</em>) = <strong>{{lathe_delta_r_mm}} mm</strong> = <strong>{{lathe_delta_r_um}} μm</strong>.</p>"
+      },
+      {
+        "id": "m4",
+        "title": "Diameter Error and Predicted Diameter",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "diameter error",
+          "radial displacement"
+        ],
+        "type": "tolerance calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Convert radial displacement to diameter contribution."
+        ],
+        "gradingNotes": "<p>Require ΔD = 2δ_r and the positive oversize sign.</p>",
+        "commonMistakes": "<p>Using ΔD = δ_r or subtracting the effect despite the stated away-from-workpiece direction.</p>",
+        "student": "<p>Determine the diameter-error contribution and predicted finished diameter caused by this elastic effect alone.</p>",
+        "instructor": "<p>Because the edge deflects away from the workpiece, Δ<em>D</em> = 2δ<sub>r</sub> = <strong>{{lathe_diameter_error_mm}} mm</strong>, and <em>D</em><sub>actual</sub> = <em>D</em><sub>nom</sub> + Δ<em>D</em> = <strong>{{lathe_D_actual_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "m5",
+        "title": "Machining-Tolerance Assessment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "tolerance",
+          "serviceability"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Compare predicted diameter with tolerance limits."
+        ],
+        "gradingNotes": "<p>Require both limits and a pass/fail conclusion.</p>",
+        "commonMistakes": "<p>Comparing radial deflection directly with the full diameter tolerance.</p>",
+        "student": "<p>Determine the acceptable diameter range and assess the predicted diameter against it.</p>",
+        "instructor": "<p>The acceptable range is <strong>{{lathe_D_lower_mm}} to {{lathe_D_upper_mm}} mm</strong>. {{lathe_tolerance_assessment}}</p>"
+      },
+      {
+        "id": "m6",
+        "title": "Maximum Allowable Overhang",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "overhang sizing",
+          "deflection limit"
+        ],
+        "type": "length-sizing calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Solve the cantilever relation for allowable length."
+        ],
+        "gradingNotes": "<p>Require δ_allow = tolerance/2 and the cube-root solution.</p>",
+        "commonMistakes": "<p>Using the full diameter tolerance as radial displacement or omitting the cube root.</p>",
+        "student": "<p>Determine the maximum allowable overhang such that holder deflection alone does not exceed the assigned diameter tolerance.</p>",
+        "instructor": "<p>The allowable radial displacement is δ<sub>allow</sub> = <strong>{{lathe_delta_allow_mm}} mm</strong>. Solving δ<sub>allow</sub> = <em>F</em><sub>p</sub><em>L</em><sup>3</sup>/(3<em>EI</em>) gives <em>L</em><sub>max</sub> = <strong>{{lathe_L_max_mm}} mm</strong>. {{lathe_overhang_assessment}}</p>"
+      },
+      {
+        "id": "m7",
+        "title": "Engineering Assessment and Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "engineering recommendation",
+          "model limitations"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Synthesize the serviceability result and limitation."
+        ],
+        "gradingNotes": "<p>Require a tolerance conclusion, stiffness-based recommendation, and one model limitation.</p>",
+        "commonMistakes": "<p>Calling the real machining process fully qualified from this one compliance contribution.</p>",
+        "student": "<p>State whether the assigned overhang satisfies the tolerance, identify the governing response, recommend one mechanics-based way to reduce deflection if tighter control is required, and state one important limitation.</p>",
+        "instructor": "<p>{{lathe_engineering_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Homework Version A - Baseline lathe tool holder",
+        "description": "Faculty-reviewed cantilever-deflection and machining-tolerance assessment using the approved baseline values.",
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7"
+        ],
+        "variables": {
+          "lathe_D0_mm": 50,
+          "lathe_a_p_mm": 1,
+          "lathe_f_mm_rev": 0.254,
+          "lathe_F_p_N": 65,
+          "lathe_b_mm": 20,
+          "lathe_h_mm": 20,
+          "lathe_L_mm": 60,
+          "lathe_E_GPa": 200,
+          "lathe_D_target_mm": 48,
+          "lathe_tolerance_mm": 0.01
+        }
+      }
+    ]
+  },
+  {
     "id": "MOS-SHAFT-016",
     "slug": "motor-driven-shaft-torsion",
     "title": "Motor-Driven Shaft Design for a Belt-Transmission System",

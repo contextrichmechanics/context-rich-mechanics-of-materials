@@ -1,0 +1,26 @@
+---
+title: "Student Packet - Lathe Turning — Cutting-Tool Deflection and Machining Tolerance"
+subtitle: "Context, Cantilever Idealization, and Tolerance Assessment"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="lathe-turning-cutting-tool-deflection-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "lathe-turning-cutting-tool-deflection",
+    targetId: "lathe-turning-cutting-tool-deflection-student-questions",
+    type: "student"
+  });
+});
+</script>
+```

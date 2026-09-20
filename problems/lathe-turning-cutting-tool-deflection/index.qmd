@@ -1,0 +1,28 @@
+---
+title: "Lathe Turning — Cutting-Tool Deflection and Machining Tolerance"
+description: "A machining-context problem connecting cantilever tool-holder deflection to finished-diameter tolerance and allowable overhang."
+image: "assets/lathe-turning-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [cantilever beam, beam deflection, serviceability, second moment of area, fixed-end bending moment, machining tolerance, radial displacement, free-body diagram, engineering judgment]
+course_topics: [bending, beam deflection]
+textbook_chapters: [Internal loadings in structural members, Deflection of beams and shafts, Design of beams and shafts]
+problem_types: [load-path analysis, beam idealization, free-body diagram, section-property calculation, bending-moment calculation, deflection calculation, tolerance assessment, length sizing, engineering assessment]
+competencies: [load-path identification, cantilever idealization, section properties, beam deflection, unit consistency, serviceability assessment, engineering judgment]
+industries: [manufacturing, machining, lathe turning]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-LATHE-TURNING-CUTT-001"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+The base problem models the exposed 20 mm × 20 mm tool-holder shank as a prismatic cantilever under a transverse passive/radial tip force. It evaluates elastic radial deflection and its diameter-error contribution. Stress design, chatter, thermal effects, and complete machine-system compliance are intentionally excluded.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=lathe-turning-cutting-tool-deflection){.btn .btn-secondary}
