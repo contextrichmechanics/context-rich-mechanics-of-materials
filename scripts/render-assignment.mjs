@@ -973,6 +973,42 @@ function variableMap(problem, currentValues) {
       : `The ${formatDerived(hitchDiameterMm, 1)} mm equivalent section provides FS = ${formatDerived(actualFos, 2)}, below the required ${formatDerived(hitchRequiredFos, 1)}; increase the equivalent diameter to at least ${formatDerived(recommendedDiameterMm, 0)} mm for this prescribed static model.`;
   }
 
+  const pistonDiameterMm = numericValue(values, "piston_d_mm");
+  const pistonFreeGapMm = numericValue(values, "piston_m_mm");
+  const pistonInstalledGapMm = numericValue(values, "piston_s_mm");
+  const pistonRadialThicknessMm = numericValue(values, "piston_a_mm");
+  const pistonAxialWidthMm = numericValue(values, "piston_h_mm");
+  const pistonTangentialForceN = numericValue(values, "piston_F_t_N");
+  const pistonElasticModulusMpa = numericValue(values, "piston_E_MPa");
+
+  if (
+    Number.isFinite(pistonDiameterMm) && pistonDiameterMm > 0 &&
+    Number.isFinite(pistonFreeGapMm) && pistonFreeGapMm > 0 &&
+    Number.isFinite(pistonInstalledGapMm) && pistonInstalledGapMm >= 0 &&
+    pistonFreeGapMm > pistonInstalledGapMm &&
+    Number.isFinite(pistonRadialThicknessMm) && pistonRadialThicknessMm > 0 &&
+    Number.isFinite(pistonAxialWidthMm) && pistonAxialWidthMm > 0 &&
+    Number.isFinite(pistonTangentialForceN) && pistonTangentialForceN > 0 &&
+    Number.isFinite(pistonElasticModulusMpa) && pistonElasticModulusMpa > 0
+  ) {
+    const gapClosureMm = pistonFreeGapMm - pistonInstalledGapMm;
+    const areaMm2 = pistonRadialThicknessMm * pistonAxialWidthMm;
+    const inertiaMm4 = pistonAxialWidthMm * pistonRadialThicknessMm ** 3 / 12;
+    const pressureMpa = 2 * pistonTangentialForceN / (pistonAxialWidthMm * pistonDiameterMm);
+    const contactAreaMm2 = Math.PI * pistonDiameterMm * pistonAxialWidthMm;
+    const normalForceN = pressureMpa * contactAreaMm2;
+    const normalForceCheckN = 2 * Math.PI * pistonTangentialForceN;
+
+    values.piston_gap_closure_mm = formatDerived(gapClosureMm, 2);
+    values.piston_area_mm2 = formatDerived(areaMm2, 3);
+    values.piston_I_mm4 = formatDerived(inertiaMm4, 3);
+    values.piston_pressure_MPa = formatDerived(pressureMpa, 4);
+    values.piston_contact_area_mm2 = formatDerived(contactAreaMm2, 2);
+    values.piston_normal_force_N = formatDerived(normalForceN, 2);
+    values.piston_normal_force_check_N = formatDerived(normalForceCheckN, 2);
+    values.piston_engineering_assessment = `The specified tangential closing force corresponds to a mean/equivalent cylinder-wall pressure of ${formatDerived(pressureMpa, 4)} MPa and an equivalent total normal contact force of ${formatDerived(normalForceN, 2)} N. This does not imply uniform local pressure: manufactured free shape, local geometry, bore distortion, gas loading, temperature, friction, wear, coatings, piston-groove interaction, and ring twist can redistribute real contact pressure. Manufacturing must therefore control the free shape as well as nominal diameter.`;
+  }
+
   const latheInitialDiameterMm = numericValue(values, "lathe_D0_mm");
   const latheDepthOfCutMm = numericValue(values, "lathe_a_p_mm");
   const latheForceN = numericValue(values, "lathe_F_p_N");

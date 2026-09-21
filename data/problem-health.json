@@ -190,6 +190,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-PISTON-RING-ELASTI-001",
+    "slug": "piston-ring-elastic-closure-contact-pressure",
+    "title": "Piston Ring — Elastic Closure and Cylinder-Wall Contact Pressure",
+    "status": "OK",
+    "variables": 7,
+    "questions": 16,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-TRANSPORT-022",
     "slug": "precast-concrete-column-transport",
     "title": "Optimal Support Placement for Transporting a Precast Concrete Column",

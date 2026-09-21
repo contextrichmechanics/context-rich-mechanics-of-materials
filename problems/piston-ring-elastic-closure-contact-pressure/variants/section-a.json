@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Homework Version A - Baseline piston ring",
+  "description": "Faculty-approved elastic-closure and mean-contact-pressure case using the baseline values.",
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","a1","a2","a3","a4","a5","a6"],
+  "variables": {"piston_d_mm":80,"piston_m_mm":10.0,"piston_s_mm":0.25,"piston_a_mm":3.35,"piston_h_mm":1.50,"piston_F_t_N":9.50,"piston_E_MPa":100000}
+}

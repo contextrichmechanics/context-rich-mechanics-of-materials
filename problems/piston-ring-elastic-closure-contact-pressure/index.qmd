@@ -1,0 +1,28 @@
+---
+title: "Piston Ring — Elastic Closure and Cylinder-Wall Contact Pressure"
+description: "A curved-ring application connecting installation gap closure and specified tangential force to mean cylinder-wall pressure."
+image: "assets/piston-ring-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [elastic deformation, curved member, contact pressure, equivalent normal force, section properties, load path, engineering idealization]
+course_topics: [elastic deformation, curved-member behavior, contact-pressure interpretation]
+textbook_chapters: [Stress, Strain, Mechanical properties of materials, Bending deformation of curved members]
+problem_types: [load-path analysis, curved-member idealization, section-property calculation, pressure calculation, contact-force calculation, engineering assessment]
+competencies: [physical idealization, section properties, unit consistency, contact-pressure interpretation, model limitations, engineering judgment]
+industries: [automotive, internal-combustion engines, piston rings]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-PISTON-RING-ELASTI-001"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+The baseline problem treats the tangential closing force as a specified piston-ring parameter and uses it to calculate mean/equivalent wall pressure. It does not replace the curved split ring with a straight beam or claim to predict the real local pressure distribution.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=piston-ring-elastic-closure-contact-pressure){.btn .btn-secondary}

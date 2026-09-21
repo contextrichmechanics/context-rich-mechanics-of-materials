@@ -1,16 +1,16 @@
-# Graph Report - codex-piston-ring-worktree-bb94c8a3df564cc0a79387055bac3290  (2026-09-21)
+# Graph Report - codex-lathe-only-worktree-16f91f2d119243749b540b5dfd6c8261  (2026-09-20)
 
 ## Corpus Check
-- 297 files · ~2,927,425 words
+- 289 files · ~2,880,542 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 851 nodes · 842 edges · 98 communities (93 shown, 5 thin omitted)
+- 834 nodes · 827 edges · 96 communities (91 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `dad44cde`
+- Built from commit: `19ecff98`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -107,8 +107,6 @@
 - V-Belt Tension in a Factory Ventilation Blower Drive
 - lathe-turning-cutting-tool-deflection/instructor-guide.qmd
 - Lathe Turning — Cutting-Tool Deflection and Machining Tolerance
-- piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd
-- Piston Ring — Elastic Closure and Cylinder-Wall Contact Pressure
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -128,7 +126,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (98 total, 5 thin omitted)
+## Communities (96 total, 5 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -478,16 +476,8 @@ Nodes (7): Assignment Options, Generated Question Set and Solutions, Problem Con
 Cohesion: 0.29
 Nodes (6): Assigned Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Lathe Turning — Cutting-Tool Deflection and Machining Tolerance, Main Engineering Goal, System Components
 
-### Community 96 - "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd"
-Cohesion: 0.20
-Nodes (7): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Source and Input Distinctions, Supplemental Assessment Structure
-
-### Community 97 - "Piston Ring — Elastic Closure and Cylinder-Wall Contact Pressure"
-Cohesion: 0.29
-Nodes (6): Assigned Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Piston Ring — Elastic Closure and Cylinder-Wall Contact Pressure, System Components
-
 ## Knowledge Gaps
-- **534 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+529 more)
+- **523 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+518 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -499,7 +489,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Supplemental Instructor Background` connect `Supplemental Instructor Background` to `jib-crane-battery-pack/index.qmd`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _534 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _523 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**

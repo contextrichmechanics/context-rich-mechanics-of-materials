@@ -1,0 +1,49 @@
+---
+title: "Instructor Guide - Piston Ring — Elastic Closure and Cylinder-Wall Contact Pressure"
+subtitle: "Representative Solutions for Curved-Ring Closure and Mean Contact Pressure"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+Award credit for a defensible free/installed split-ring idealization, correct interpretation of the bore constraint and specified tangential closing force, consistent millimeter-newton units, accurate section and mean-pressure calculations, and an engineering interpretation bounded by the stated limitations.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="piston-ring-elastic-closure-contact-pressure-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "piston-ring-elastic-closure-contact-pressure", targetId: "piston-ring-elastic-closure-contact-pressure-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Source and Input Distinctions
+
+The numerical set is a representative teaching case assembled from piston-ring standard/reference information. The selected nominal dimensions and tangential force correspond to the faculty template's 80 mm rectangular compression-ring case; the 10 mm free gap is representative contextual input. The photograph is illustrative only and is not claimed to depict this specification.
+
+Industry image: “AMIR-PISTON RING-3.JPG” by Jaeyoungchoi77, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AMIR-PISTON_RING-3.JPG), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+
+Reference bases identified by the faculty template include ISO 6621-2:2020 for inspection terminology; ISO 6621-3/6621-4 for piston-ring material/general specification context and the cast-iron modulus basis; ISO/DIS 6622-1 for the selected dimensional/force case; and NACA Technical Memorandum No. 1056 for the mean specific ring-pressure relation.
+
+# Scope of the Base Problem
+
+Use a single-piece ring, linear elasticity, small elastic strain, a nominally circular installed state, a representative rectangular section, quasi-static installation, and a mean/equivalent pressure. Treat *F*~t~ as specified rather than deriving it from gap closure. Exclude local pressure variation, gas pressure, friction, temperature, bore distortion, piston-groove contact, ring twist, wear, coatings, and detailed manufactured free-shape analysis.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- free/installed idealization and assumptions: 20%;
+- closure, section, pressure, and force calculations: 40%;
+- engineering interpretation and limitations: 20%.

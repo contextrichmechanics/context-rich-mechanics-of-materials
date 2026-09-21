@@ -1,0 +1,9 @@
+[
+  {"key":"piston_d_mm","symbol":"d","label":"Nominal cylinder/ring diameter","value":80,"unit":"mm","min":50,"max":150,"step":1},
+  {"key":"piston_m_mm","symbol":"m","label":"Total free gap","value":10.0,"unit":"mm","min":2,"max":20,"step":0.1},
+  {"key":"piston_s_mm","symbol":"s","label":"Installed gap","value":0.25,"unit":"mm","min":0.1,"max":2,"step":0.05},
+  {"key":"piston_a_mm","symbol":"a","label":"Nominal radial wall thickness","value":3.35,"unit":"mm","min":2,"max":6,"step":0.05},
+  {"key":"piston_h_mm","symbol":"h","label":"Axial ring width","value":1.50,"unit":"mm","min":1,"max":4,"step":0.05},
+  {"key":"piston_F_t_N","symbol":"F_t","label":"Specified tangential closing force","value":9.50,"unit":"N","min":2,"max":30,"step":0.25},
+  {"key":"piston_E_MPa","symbol":"E","label":"Cast-iron elastic modulus","value":100000,"unit":"MPa","min":80000,"max":160000,"step":5000}
+]

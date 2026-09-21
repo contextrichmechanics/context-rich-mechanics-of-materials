@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2208"
+      "source_location": "L2172"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2291"
+      "source_location": "L2255"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2187"
+      "source_location": "L2151"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2307"
+      "source_location": "L2271"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2152"
+      "source_location": "L2116"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2148"
+      "source_location": "L2112"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2257"
+      "source_location": "L2221"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2199"
+      "source_location": "L2163"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2232"
+      "source_location": "L2196"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2225"
+      "source_location": "L2189"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2166"
+      "source_location": "L2130"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2175"
+      "source_location": "L2139"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2238"
+      "source_location": "L2202"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2134"
+      "source_location": "L2098"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2124"
+      "source_location": "L2088"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2104"
+      "source_location": "L2068"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2089"
+      "source_location": "L2053"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2085"
+      "source_location": "L2049"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2120"
+      "source_location": "L2084"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2174"
+      "source_location": "L2138"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2167"
+      "source_location": "L2131"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2201"
+      "source_location": "L2165"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2158"
+      "source_location": "L2122"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2180"
+      "source_location": "L2144"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2136"
+      "source_location": "L2100"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2071"
+      "source_location": "L2035"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2062"
+      "source_location": "L2026"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2409"
+      "source_location": "L2373"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2396"
+      "source_location": "L2360"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2420"
+      "source_location": "L2384"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2410"
+      "source_location": "L2374"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2390"
+      "source_location": "L2354"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2142"
+      "source_location": "L2106"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2395"
+      "source_location": "L2359"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2397"
+      "source_location": "L2361"
     },
     {
       "id": "instructor_builder",
@@ -10771,236 +10771,6 @@
       "norm_label": "system components",
       "source_file": "problems/lathe-turning-cutting-tool-deflection/_student-problem.qmd",
       "source_location": "L19"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_student_packet",
-      "label": "piston-ring-elastic-closure-contact-pressure/student-packet.qmd",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "file_type": "document",
-      "frontmatter": {
-        "title": "Student Packet - Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-        "subtitle": "Context, Idealization, and Mechanics Analysis",
-        "author": "Context-Rich Mechanics of Materials Library"
-      },
-      "node_kind": "page",
-      "norm_label": "piston-ring-elastic-closure-contact-pressure/student-packet.qmd",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/student-packet.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide",
-      "label": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "file_type": "document",
-      "frontmatter": {
-        "title": "Instructor Guide - Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-        "subtitle": "Representative Solutions for Curved-Ring Closure and Mean Contact Pressure",
-        "author": "Context-Rich Mechanics of Materials Library"
-      },
-      "node_kind": "page",
-      "norm_label": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_index",
-      "label": "piston-ring-elastic-closure-contact-pressure/index.qmd",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "file_type": "document",
-      "frontmatter": {
-        "title": "Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-        "description": "A curved-ring application connecting installation gap closure and specified tangential force to mean cylinder-wall pressure.",
-        "image": "assets/piston-ring-industry-context.jpg",
-        "categories": "[context-rich, mechanics-of-materials, analysis]",
-        "mechanics_concepts": "[elastic deformation, curved member, contact pressure, equivalent normal force, section properties, load path, engineering idealization]",
-        "course_topics": "[elastic deformation, curved-member behavior, contact-pressure interpretation]",
-        "textbook_chapters": "[Stress, Strain, Mechanical properties of materials, Bending deformation of curved members]",
-        "problem_types": "[load-path analysis, curved-member idealization, section-property calculation, pressure calculation, contact-force calculation, engineering assessment]",
-        "competencies": "[physical idealization, section properties, unit consistency, contact-pressure interpretation, model limitations, engineering judgment]",
-        "industries": "[automotive, internal-combustion engines, piston rings]",
-        "difficulty": "Intermediate",
-        "status": "Published",
-        "problem_id": "MOS-PISTON-RING-ELASTI-001",
-        "version": "0.1.0"
-      },
-      "node_kind": "page",
-      "norm_label": "piston-ring-elastic-closure-contact-pressure/index.qmd",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/index.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_index_assignment_options",
-      "label": "Assignment Options",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assignment options",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/index.qmd",
-      "source_location": "L20"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_generated_question_set_and_solutions",
-      "label": "Generated Question Set and Solutions",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "generated question set and solutions",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L19"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_problem_context",
-      "label": "Problem Context",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "problem context",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L15"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_purpose",
-      "label": "Purpose",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "purpose",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L11"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_scope_of_the_base_problem",
-      "label": "Scope of the Base Problem",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "scope of the base problem",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L40"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_source_and_input_distinctions",
-      "label": "Source and Input Distinctions",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "source and input distinctions",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L32"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_supplemental_assessment_structure",
-      "label": "Supplemental Assessment Structure",
-      "_origin": "ast",
-      "community": 96,
-      "community_name": "piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "supplemental assessment structure",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L44"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_student_problem",
-      "label": "piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_assigned_scope",
-      "label": "Assigned Scope",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assigned scope",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L26"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_context_rich_solid_mechanics_problem",
-      "label": "Context-Rich Solid Mechanics Problem",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "context-rich solid mechanics problem",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_engineering_context",
-      "label": "Engineering Context",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "engineering context",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L5"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_main_engineering_goal",
-      "label": "Main Engineering Goal",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "main engineering goal",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L15"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_piston_ring_elastic_closure_and_cylinder_wall_contact_pressure",
-      "label": "Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "piston ring \u2014 elastic closure and cylinder-wall contact pressure",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L3"
-    },
-    {
-      "id": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_system_components",
-      "label": "System Components",
-      "_origin": "ast",
-      "community": 97,
-      "community_name": "Piston Ring \u2014 Elastic Closure and Cylinder-Wall Contact Pressure",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "system components",
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L19"
     }
   ],
   "links": [
@@ -11121,7 +10891,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2121",
+      "source_location": "L2085",
       "weight": 1.0
     },
     {
@@ -11133,7 +10903,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2130",
+      "source_location": "L2094",
       "weight": 1.0
     },
     {
@@ -11145,7 +10915,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2175",
+      "source_location": "L2139",
       "weight": 1.0
     },
     {
@@ -11157,7 +10927,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2177",
+      "source_location": "L2141",
       "weight": 1.0
     },
     {
@@ -11169,7 +10939,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2171",
+      "source_location": "L2135",
       "weight": 1.0
     },
     {
@@ -11181,7 +10951,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2212",
+      "source_location": "L2176",
       "weight": 1.0
     },
     {
@@ -11193,7 +10963,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2217",
+      "source_location": "L2181",
       "weight": 1.0
     },
     {
@@ -11205,7 +10975,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2223",
+      "source_location": "L2187",
       "weight": 1.0
     },
     {
@@ -11217,7 +10987,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2225",
+      "source_location": "L2189",
       "weight": 1.0
     },
     {
@@ -11229,7 +10999,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2227",
+      "source_location": "L2191",
       "weight": 1.0
     },
     {
@@ -11241,7 +11011,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2228",
+      "source_location": "L2192",
       "weight": 1.0
     },
     {
@@ -11253,7 +11023,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2159",
+      "source_location": "L2123",
       "weight": 1.0
     },
     {
@@ -11265,7 +11035,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2164",
+      "source_location": "L2128",
       "weight": 1.0
     },
     {
@@ -11277,7 +11047,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2181",
+      "source_location": "L2145",
       "weight": 1.0
     },
     {
@@ -11289,7 +11059,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2191",
+      "source_location": "L2155",
       "weight": 1.0
     },
     {
@@ -11301,7 +11071,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2192",
+      "source_location": "L2156",
       "weight": 1.0
     },
     {
@@ -11313,7 +11083,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2193",
+      "source_location": "L2157",
       "weight": 1.0
     },
     {
@@ -11325,7 +11095,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2194",
+      "source_location": "L2158",
       "weight": 1.0
     },
     {
@@ -11337,7 +11107,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2139",
+      "source_location": "L2103",
       "weight": 1.0
     },
     {
@@ -11349,7 +11119,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2139",
+      "source_location": "L2103",
       "weight": 1.0
     },
     {
@@ -11361,7 +11131,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2139",
+      "source_location": "L2103",
       "weight": 1.0
     },
     {
@@ -11373,7 +11143,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2065",
+      "source_location": "L2029",
       "weight": 1.0
     },
     {
@@ -11385,7 +11155,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2067",
+      "source_location": "L2031",
       "weight": 1.0
     },
     {
@@ -11469,7 +11239,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2298",
+      "source_location": "L2262",
       "weight": 1.0
     },
     {
@@ -11481,7 +11251,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2299",
+      "source_location": "L2263",
       "weight": 1.0
     },
     {
@@ -11493,7 +11263,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2302",
+      "source_location": "L2266",
       "weight": 1.0
     },
     {
@@ -11517,7 +11287,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2314",
+      "source_location": "L2278",
       "weight": 1.0
     },
     {
@@ -11529,7 +11299,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2320",
+      "source_location": "L2284",
       "weight": 1.0
     },
     {
@@ -11541,7 +11311,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2328",
+      "source_location": "L2292",
       "weight": 1.0
     },
     {
@@ -11553,7 +11323,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2328",
+      "source_location": "L2292",
       "weight": 1.0
     },
     {
@@ -11565,7 +11335,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2328",
+      "source_location": "L2292",
       "weight": 1.0
     },
     {
@@ -11577,7 +11347,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2333",
+      "source_location": "L2297",
       "weight": 1.0
     },
     {
@@ -11589,7 +11359,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2333",
+      "source_location": "L2297",
       "weight": 1.0
     },
     {
@@ -11601,7 +11371,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2344",
+      "source_location": "L2308",
       "weight": 1.0
     },
     {
@@ -11613,7 +11383,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2350",
+      "source_location": "L2314",
       "weight": 1.0
     },
     {
@@ -11625,7 +11395,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2264",
+      "source_location": "L2228",
       "weight": 1.0
     },
     {
@@ -11637,7 +11407,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2270",
+      "source_location": "L2234",
       "weight": 1.0
     },
     {
@@ -11649,7 +11419,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2270",
+      "source_location": "L2234",
       "weight": 1.0
     },
     {
@@ -11661,7 +11431,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2270",
+      "source_location": "L2234",
       "weight": 1.0
     },
     {
@@ -11673,7 +11443,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2281",
+      "source_location": "L2245",
       "weight": 1.0
     },
     {
@@ -11685,7 +11455,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2283",
+      "source_location": "L2247",
       "weight": 1.0
     },
     {
@@ -11697,7 +11467,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2285",
+      "source_location": "L2249",
       "weight": 1.0
     },
     {
@@ -11709,7 +11479,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2205",
+      "source_location": "L2169",
       "weight": 1.0
     },
     {
@@ -11721,7 +11491,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2233",
+      "source_location": "L2197",
       "weight": 1.0
     },
     {
@@ -11733,7 +11503,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2235",
+      "source_location": "L2199",
       "weight": 1.0
     },
     {
@@ -11745,7 +11515,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2229",
+      "source_location": "L2193",
       "weight": 1.0
     },
     {
@@ -11757,7 +11527,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2167",
+      "source_location": "L2131",
       "weight": 1.0
     },
     {
@@ -11769,7 +11539,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2172",
+      "source_location": "L2136",
       "weight": 1.0
     },
     {
@@ -11781,7 +11551,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2176",
+      "source_location": "L2140",
       "weight": 1.0
     },
     {
@@ -11793,7 +11563,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2239",
+      "source_location": "L2203",
       "weight": 1.0
     },
     {
@@ -11805,7 +11575,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2249",
+      "source_location": "L2213",
       "weight": 1.0
     },
     {
@@ -11817,7 +11587,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2250",
+      "source_location": "L2214",
       "weight": 1.0
     },
     {
@@ -11829,7 +11599,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2251",
+      "source_location": "L2215",
       "weight": 1.0
     },
     {
@@ -11841,7 +11611,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2252",
+      "source_location": "L2216",
       "weight": 1.0
     },
     {
@@ -11853,7 +11623,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2125",
+      "source_location": "L2089",
       "weight": 1.0
     },
     {
@@ -11865,7 +11635,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2128",
+      "source_location": "L2092",
       "weight": 1.0
     },
     {
@@ -11877,7 +11647,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2130",
+      "source_location": "L2094",
       "weight": 1.0
     },
     {
@@ -16662,149 +16432,6 @@
       "weight": 1.0
     },
     {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_index",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_index_assignment_options",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/index.qmd",
-      "source_location": "L20",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_purpose",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L11",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_problem_context",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_generated_question_set_and_solutions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_source_and_input_distinctions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L32",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_scope_of_the_base_problem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L40",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide_supplemental_assessment_structure",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/instructor-guide.qmd",
-      "source_location": "L44",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_student_problem",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_context_rich_solid_mechanics_problem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_context_rich_solid_mechanics_problem",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_piston_ring_elastic_closure_and_cylinder_wall_contact_pressure",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_piston_ring_elastic_closure_and_cylinder_wall_contact_pressure",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_main_engineering_goal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_piston_ring_elastic_closure_and_cylinder_wall_contact_pressure",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_system_components",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_piston_ring_elastic_closure_and_cylinder_wall_contact_pressure",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_assigned_scope",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L26",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_piston_ring_elastic_closure_and_cylinder_wall_contact_pressure",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_student_problem_engineering_context",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
       "source": "problems_precast_concrete_column_transport_index",
       "target": "problems_precast_concrete_column_transport_index_assignment_options",
       "relation": "contains",
@@ -18814,7 +18441,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2062",
+      "source_location": "L2026",
       "weight": 1.0
     },
     {
@@ -18825,7 +18452,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2071",
+      "source_location": "L2035",
       "weight": 1.0
     },
     {
@@ -18836,7 +18463,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2085",
+      "source_location": "L2049",
       "weight": 1.0
     },
     {
@@ -18847,7 +18474,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2089",
+      "source_location": "L2053",
       "weight": 1.0
     },
     {
@@ -18858,7 +18485,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2104",
+      "source_location": "L2068",
       "weight": 1.0
     },
     {
@@ -18869,7 +18496,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2120",
+      "source_location": "L2084",
       "weight": 1.0
     },
     {
@@ -18880,7 +18507,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2136",
+      "source_location": "L2100",
       "weight": 1.0
     },
     {
@@ -18891,7 +18518,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2158",
+      "source_location": "L2122",
       "weight": 1.0
     },
     {
@@ -18902,7 +18529,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2167",
+      "source_location": "L2131",
       "weight": 1.0
     },
     {
@@ -18913,7 +18540,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2174",
+      "source_location": "L2138",
       "weight": 1.0
     },
     {
@@ -18924,7 +18551,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2180",
+      "source_location": "L2144",
       "weight": 1.0
     },
     {
@@ -18935,7 +18562,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2201",
+      "source_location": "L2165",
       "weight": 1.0
     },
     {
@@ -19056,7 +18683,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2124",
+      "source_location": "L2088",
       "weight": 1.0
     },
     {
@@ -19067,7 +18694,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2134",
+      "source_location": "L2098",
       "weight": 1.0
     },
     {
@@ -19078,7 +18705,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2142",
+      "source_location": "L2106",
       "weight": 1.0
     },
     {
@@ -19089,7 +18716,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2148",
+      "source_location": "L2112",
       "weight": 1.0
     },
     {
@@ -19100,7 +18727,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2152",
+      "source_location": "L2116",
       "weight": 1.0
     },
     {
@@ -19111,7 +18738,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2166",
+      "source_location": "L2130",
       "weight": 1.0
     },
     {
@@ -19122,7 +18749,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2175",
+      "source_location": "L2139",
       "weight": 1.0
     },
     {
@@ -19133,7 +18760,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2187",
+      "source_location": "L2151",
       "weight": 1.0
     },
     {
@@ -19144,7 +18771,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2199",
+      "source_location": "L2163",
       "weight": 1.0
     },
     {
@@ -19155,7 +18782,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2208",
+      "source_location": "L2172",
       "weight": 1.0
     },
     {
@@ -19166,7 +18793,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2225",
+      "source_location": "L2189",
       "weight": 1.0
     },
     {
@@ -19177,7 +18804,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2232",
+      "source_location": "L2196",
       "weight": 1.0
     },
     {
@@ -19188,7 +18815,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2238",
+      "source_location": "L2202",
       "weight": 1.0
     },
     {
@@ -19199,7 +18826,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2257",
+      "source_location": "L2221",
       "weight": 1.0
     },
     {
@@ -19210,7 +18837,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2291",
+      "source_location": "L2255",
       "weight": 1.0
     },
     {
@@ -19221,7 +18848,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2307",
+      "source_location": "L2271",
       "weight": 1.0
     },
     {
@@ -19232,7 +18859,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2390",
+      "source_location": "L2354",
       "weight": 1.0
     },
     {
@@ -19243,7 +18870,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2395",
+      "source_location": "L2359",
       "weight": 1.0
     },
     {
@@ -19254,7 +18881,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2396",
+      "source_location": "L2360",
       "weight": 1.0
     },
     {
@@ -19265,7 +18892,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2397",
+      "source_location": "L2361",
       "weight": 1.0
     },
     {
@@ -19276,7 +18903,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2409",
+      "source_location": "L2373",
       "weight": 1.0
     },
     {
@@ -19287,7 +18914,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2410",
+      "source_location": "L2374",
       "weight": 1.0
     },
     {
@@ -19298,7 +18925,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2420",
+      "source_location": "L2384",
       "weight": 1.0
     },
     {
@@ -19995,28 +19622,6 @@
       "weight": 1.0
     },
     {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_index",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_student_packet",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/index.qmd",
-      "source_location": "L26",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_piston_ring_elastic_closure_contact_pressure_index",
-      "target": "problems_piston_ring_elastic_closure_contact_pressure_instructor_guide",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/piston-ring-elastic-closure-contact-pressure/index.qmd",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
       "source": "problems_precast_concrete_column_transport_index",
       "target": "problems_precast_concrete_column_transport_student_packet",
       "relation": "references",
@@ -20348,5 +19953,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "dad44cde64051df2564b5088deba5cdcf853e8eb"
+  "built_at_commit": "19ecff9889d3ebe98bc3e8ee2bb48f1b9b92c67e"
 }
