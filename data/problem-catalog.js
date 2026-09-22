@@ -3513,6 +3513,495 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-END-MILLING-COMBIN-001",
+    "slug": "end-milling-combined-bending-torsion",
+    "title": "End Milling — Combined Bending and Torsion of an End Mill",
+    "studentDocumentTitle": "Student Packet - End Milling Combined Bending and Torsion",
+    "instructorDocumentTitle": "Instructor Guide - End Milling Combined Bending and Torsion",
+    "summary": "Evaluate nominal bending and torsional stresses in an idealized cantilevered end mill, combine them with the von Mises criterion, and assess static factor of safety.",
+    "textbookChapters": [
+      "Internal loadings",
+      "Bending stress",
+      "Torsion",
+      "Combined loading",
+      "Failure theories",
+      "Factor of safety"
+    ],
+    "derivedPlaceholders": [
+      "mill_I_mm4",
+      "mill_J_mm4",
+      "mill_M_Nmm",
+      "mill_T_Nmm",
+      "mill_sigma_b_MPa",
+      "mill_tau_t_MPa",
+      "mill_sigma_vm_MPa",
+      "mill_fos",
+      "mill_sigma_allow_MPa",
+      "mill_force_at_required_fos_N",
+      "mill_baseline_assessment",
+      "mill_sensitivity_assessment",
+      "mill_engineering_assessment"
+    ],
+    "image": "problems/end-milling-combined-bending-torsion/assets/end-milling-industry-context.jpg",
+    "imageAttribution": "Representative end-milling image supplied by the instructor/user. The faculty template identifies a visually matching Wikimedia Commons record, ‘Roughing Endmill in Use.jpg’ by David English (Fixerdave), CC BY-SA 4.0; exact file/version confirmation is required before public release.",
+    "idealizedImage": "problems/end-milling-combined-bending-torsion/assets/end-milling-instructor-reference.jpg",
+    "idealizedImageAlt": "Instructor reference idealization of a solid circular end mill as a cantilever with transverse end force F, torque T equal to F_t times D over 2, effective overhang L, and diameter D.",
+    "source": "problems/end-milling-combined-bending-torsion/index.html",
+    "problemStatement": "<p>A manufacturing engineer is reviewing a light end-milling operation on an Aluminum 6061 workpiece. The rotating end mill experiences a transverse cutting force that bends the exposed tool and a tangential force component that produces torque about the cutter axis. For this Mechanics of Materials assessment, the exposed cutter is modeled as a prismatic solid circular cantilever fixed at the holder face.</p><p>The assigned case uses a {{mill_D_mm}} {{mill_D_mm_unit}} HSS end mill with {{mill_z}} flutes at {{mill_n_rpm}} {{mill_n_rpm_unit}}, axial depth of cut {{mill_ap_mm}} {{mill_ap_mm_unit}}, and feed rate {{mill_vf_mm_min}} {{mill_vf_mm_min_unit}}. The baseline machining context follows Suraidah et al. (2020). The assigned forces, overhang, yield strength, and required factor of safety are instructor-selected teaching values, not exact experimental measurements or manufacturer ratings.</p>",
+    "engineeringGoal": "<p>Determine the maximum bending moment and applied torque, calculate nominal bending and torsional stresses at the critical outer surface, combine them using the von Mises criterion, and assess whether the simplified cutter model meets the required static factor of safety. Then determine the transverse force that would reduce the static factor of safety to the requirement while keeping F<sub>t</sub>/F = 0.80.</p>",
+    "variables": [
+      {
+        "key": "mill_D_mm",
+        "symbol": "D",
+        "label": "End-mill diameter",
+        "value": 10,
+        "unit": "mm",
+        "min": 2,
+        "max": 30,
+        "step": 0.5
+      },
+      {
+        "key": "mill_z",
+        "symbol": "z",
+        "label": "Number of flutes",
+        "value": 2,
+        "unit": "-",
+        "min": 1,
+        "max": 8,
+        "step": 1
+      },
+      {
+        "key": "mill_n_rpm",
+        "symbol": "n",
+        "label": "Spindle speed",
+        "value": 1300,
+        "unit": "rpm",
+        "min": 100,
+        "max": 10000,
+        "step": 100
+      },
+      {
+        "key": "mill_ap_mm",
+        "symbol": "a_p",
+        "label": "Axial depth of cut",
+        "value": 3,
+        "unit": "mm",
+        "min": 0.1,
+        "max": 10,
+        "step": 0.1
+      },
+      {
+        "key": "mill_vf_mm_min",
+        "symbol": "v_f",
+        "label": "Feed rate",
+        "value": 46,
+        "unit": "mm/min",
+        "min": 1,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "key": "mill_L_mm",
+        "symbol": "L",
+        "label": "Effective unsupported length",
+        "value": 30,
+        "unit": "mm",
+        "min": 5,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "key": "mill_F_N",
+        "symbol": "F",
+        "label": "Transverse design force",
+        "value": 15,
+        "unit": "N",
+        "min": 1,
+        "max": 1500,
+        "step": 1
+      },
+      {
+        "key": "mill_Ft_N",
+        "symbol": "F_t",
+        "label": "Tangential force for torque",
+        "value": 12,
+        "unit": "N",
+        "min": 0,
+        "max": 1200,
+        "step": 1
+      },
+      {
+        "key": "mill_Sy_MPa",
+        "symbol": "S_y",
+        "label": "Representative HSS yield strength",
+        "value": 600,
+        "unit": "MPa",
+        "min": 100,
+        "max": 2000,
+        "step": 10
+      },
+      {
+        "key": "mill_n_req",
+        "symbol": "n_req",
+        "label": "Required static factor of safety",
+        "value": 2,
+        "unit": "-",
+        "min": 1,
+        "max": 10,
+        "step": 0.1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "function",
+          "machining"
+        ],
+        "type": "conceptual",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Connect machining and structural functions."
+        ],
+        "student": "<p>State the primary machining and structural function of the end mill.</p>",
+        "instructor": "<p>The end mill removes material from the Aluminum 6061 workpiece while transmitting spindle torque and resisting cutting forces through its exposed shank into the holder and spindle.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Loads",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "loads",
+          "bending",
+          "torsion"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Distinguish force components that generate bending and torsion."
+        ],
+        "student": "<p>Identify where cutting loads act. Which contribution bends the cutter, and which tangential contribution produces torque?</p>",
+        "instructor": "<p>Cutting loads act near the engaged cutting edge. The transverse design force <em>F</em> bends the exposed cutter; the tangential component <em>F</em><sub>t</sub> acting at radius <em>D</em>/2 produces torque <em>T</em> = <em>F</em><sub>t</sub>(<em>D</em>/2).</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "support",
+          "cantilever"
+        ],
+        "type": "boundary condition",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the fixed restraint."
+        ],
+        "student": "<p>Locate the cutter restraint and identify the appropriate simplified support condition at the tool holder.</p>",
+        "instructor": "<p>The cutter is restrained at the holder face and idealized as fixed there. The exposed portion therefore acts as a cantilever.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path",
+          "machine structure"
+        ],
+        "type": "load-path reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Trace force and torque through the milling system."
+        ],
+        "student": "<p>Trace the force and torque path from the cutting zone through the end mill, holder, spindle, and machine structure.</p>",
+        "instructor": "<p>Workpiece reactions act at the cutting edges, pass through the exposed cutter to the holder/collet, then into the spindle bearings and machine structure. Spindle torque follows the reverse path to the cutting zone.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Location",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "critical section",
+          "fixed end"
+        ],
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Locate the maximum moment and combined stress."
+        ],
+        "student": "<p>For the cantilever idealization, identify where the bending moment and nominal combined stress are largest.</p>",
+        "instructor": "<p>The maximum bending moment occurs at the fixed holder face. There, bending normal stress and torsional shear stress are both maximum in magnitude at the outer surface.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "combined loading",
+          "limitations"
+        ],
+        "type": "scope identification",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Explain combined loading and identify excluded effects."
+        ],
+        "student": "<p>Explain why bending normal stress and torsional shear stress must be considered together. Identify important real effects omitted by the model.</p>",
+        "instructor": "<p>Both components act at the same critical outer-surface point and form a combined stress state evaluated with von Mises stress. Omitted effects include flute-root stress concentrations, helical geometry, interrupted cutting, runout, chatter, fatigue, wear, temperature, and local cutting-edge failure.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "parameters",
+          "geometry",
+          "material"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify inputs controlling nominal static strength."
+        ],
+        "student": "<p>Identify the geometry, loading, and material variables needed for the strength assessment.</p>",
+        "instructor": "<p>The calculation needs diameter <em>D</em>, overhang <em>L</em>, forces <em>F</em> and <em>F</em><sub>t</sub>, yield strength <em>S</em><sub>y</sub>, and required factor of safety <em>n</em><sub>req</sub>. Flute count, speed, depth of cut, and feed define the machining context.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "idealization",
+          "fbd"
+        ],
+        "type": "fbd/modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Create a cantilever model before seeing the reference."
+        ],
+        "student": "<p>Draw the exposed end mill as a circular cantilever of diameter <em>D</em> and effective overhang <em>L</em>. Show transverse force <em>F</em> and torque <em>T</em> generated by <em>F</em><sub>t</sub>.</p>",
+        "instructor": "<p>Show a fixed holder face, a solid circular cantilever of length <em>L</em> and diameter <em>D</em>, an end force <em>F</em>, and an axial torque <em>T</em> = <em>F</em><sub>t</sub>(<em>D</em>/2).</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "assumptions",
+          "static model"
+        ],
+        "type": "modeling assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "State the assumptions defining the nominal model."
+        ],
+        "student": "<p>State the assumptions used to reduce the real fluted rotating cutter to a static Mechanics of Materials model.</p>",
+        "instructor": "<p>Assume a prismatic solid circular shank, fixed holder face, static end loads replacing time-varying tooth contact, linear elasticity, and small deformation. Neglect flute-root stress concentrations, helical geometry, interrupted cutting, runout, chatter, fatigue, wear, thermal effects, and local cutting-edge failure.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan",
+          "von Mises"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Plan the combined-loading calculation."
+        ],
+        "student": "<p>Outline the calculation sequence from applied loads to internal resultants, nominal stresses, equivalent stress, factor of safety, and assessment.</p>",
+        "instructor": "<p>Compute <em>M</em><sub>max</sub> and <em>T</em>; calculate <em>I</em> and <em>J</em>; calculate outer-surface bending and torsional stresses; combine them with von Mises; calculate factor of safety; compare with the requirement; and state limitations.</p>"
+      },
+      {
+        "id": "a1",
+        "title": "Boundary Condition and Internal Resultants",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "moment",
+          "torque"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the critical moment and torque."
+        ],
+        "student": "<p>Identify the fixed boundary. Determine <em>M</em><sub>max</sub> = <em>FL</em> and <em>T</em> = <em>F</em><sub>t</sub>(<em>D</em>/2).</p>",
+        "instructor": "<p>The holder face is fixed. <em>M</em><sub>max</sub> = ({{mill_F_N}} N)({{mill_L_mm}} mm) = <strong>{{mill_M_Nmm}} N&middot;mm</strong>. <em>T</em> = ({{mill_Ft_N}} N)({{mill_D_mm}} mm/2) = <strong>{{mill_T_Nmm}} N&middot;mm</strong>.</p>"
+      },
+      {
+        "id": "a2",
+        "title": "Section Properties",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "area moment",
+          "polar moment"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate solid circular section properties."
+        ],
+        "student": "<p>Calculate <em>I</em> = &pi;<em>D</em><sup>4</sup>/64 and <em>J</em> = &pi;<em>D</em><sup>4</sup>/32.</p>",
+        "instructor": "<p>For <em>D</em> = {{mill_D_mm}} mm, <em>I</em> = <strong>{{mill_I_mm4}} mm<sup>4</sup></strong> and <em>J</em> = <strong>{{mill_J_mm4}} mm<sup>4</sup></strong>.</p>"
+      },
+      {
+        "id": "a3",
+        "title": "Bending Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "bending stress",
+          "outer surface"
+        ],
+        "type": "stress calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate nominal bending stress."
+        ],
+        "student": "<p>Calculate &sigma;<sub>b</sub> = <em>M</em><sub>max</sub>(<em>D</em>/2)/<em>I</em> at the critical outer surface near the fixed end.</p>",
+        "instructor": "<p>&sigma;<sub>b</sub> = 32<em>M</em><sub>max</sub>/(&pi;<em>D</em><sup>3</sup>) = <strong>{{mill_sigma_b_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "a4",
+        "title": "Torsional Shear Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "torsional shear",
+          "outer surface"
+        ],
+        "type": "stress calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate nominal torsional shear stress."
+        ],
+        "student": "<p>Calculate &tau;<sub>t</sub> = <em>T</em>(<em>D</em>/2)/<em>J</em> at the outer surface.</p>",
+        "instructor": "<p>&tau;<sub>t</sub> = 16<em>T</em>/(&pi;<em>D</em><sup>3</sup>) = <strong>{{mill_tau_t_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "a5",
+        "title": "Combined Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "von Mises",
+          "combined stress"
+        ],
+        "type": "failure-theory calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Combine co-located normal and shear stresses."
+        ],
+        "student": "<p>Calculate &sigma;<sub>vm</sub> = [&sigma;<sub>b</sub><sup>2</sup> + 3&tau;<sub>t</sub><sup>2</sup>]<sup>1/2</sup>.</p>",
+        "instructor": "<p>At the critical outer-surface point, &sigma;<sub>vm</sub> = <strong>{{mill_sigma_vm_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "a6",
+        "title": "Strength Factor of Safety",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "factor of safety",
+          "yield"
+        ],
+        "type": "strength assessment",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Compare calculated and required factors of safety."
+        ],
+        "student": "<p>Calculate <em>n</em> = <em>S</em><sub>y</sub>/&sigma;<sub>vm</sub> and compare it with <em>n</em><sub>req</sub>.</p>",
+        "instructor": "<p><em>n</em> = {{mill_Sy_MPa}} MPa/{{mill_sigma_vm_MPa}} MPa = <strong>{{mill_fos}}</strong>. The allowable equivalent stress is <strong>{{mill_sigma_allow_MPa}} MPa</strong>. {{mill_baseline_assessment}}</p>"
+      },
+      {
+        "id": "a7",
+        "title": "Strength Capacity and Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "force capacity"
+        ],
+        "type": "design sensitivity",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "Solve for force at the required factor of safety."
+        ],
+        "student": "<p>Keeping <em>F</em><sub>t</sub>/<em>F</em> = 0.80 and all geometry fixed, determine <em>F</em> that would reduce the static factor of safety to exactly {{mill_n_req}}.</p>",
+        "instructor": "<p>Set &sigma;<sub>vm</sub>(<em>F</em>) = <em>S</em><sub>y</sub>/<em>n</em><sub>req</sub> with <em>F</em><sub>t</sub> = 0.80<em>F</em>. Solving gives <strong><em>F</em> = {{mill_force_at_required_fos_N}} N</strong>. {{mill_sensitivity_assessment}}</p>"
+      },
+      {
+        "id": "a8",
+        "title": "Engineering Assessment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "engineering judgment",
+          "limitations"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "Make a bounded static-strength conclusion."
+        ],
+        "student": "<p>State whether nominal static yielding governs for the baseline case. Explain at least two omitted real milling behaviors and why this factor of safety is not a complete tool-life prediction.</p>",
+        "instructor": "<p>{{mill_engineering_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Faculty-approved baseline values with all context, modeling, and analysis questions.",
+        "variables": {
+          "mill_D_mm": 10,
+          "mill_z": 2,
+          "mill_n_rpm": 1300,
+          "mill_ap_mm": 3,
+          "mill_vf_mm_min": 46,
+          "mill_L_mm": 30,
+          "mill_F_N": 15,
+          "mill_Ft_N": 12,
+          "mill_Sy_MPa": 600,
+          "mill_n_req": 2
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "a6",
+          "a7",
+          "a8"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-COUPLING-017",
     "slug": "flanged-shaft-coupling",
     "title": "Bolt-Group Design for an Industrial Flanged Shaft Coupling",

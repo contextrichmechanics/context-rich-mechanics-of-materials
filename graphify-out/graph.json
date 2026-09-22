@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2208"
+      "source_location": "L2257"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2291"
+      "source_location": "L2340"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2187"
+      "source_location": "L2236"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2307"
+      "source_location": "L2356"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2152"
+      "source_location": "L2201"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2148"
+      "source_location": "L2197"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2257"
+      "source_location": "L2306"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2199"
+      "source_location": "L2248"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2232"
+      "source_location": "L2281"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2225"
+      "source_location": "L2274"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2166"
+      "source_location": "L2215"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2175"
+      "source_location": "L2224"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2238"
+      "source_location": "L2287"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2134"
+      "source_location": "L2183"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2124"
+      "source_location": "L2173"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2104"
+      "source_location": "L2153"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2089"
+      "source_location": "L2138"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2085"
+      "source_location": "L2134"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2120"
+      "source_location": "L2169"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2174"
+      "source_location": "L2223"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2167"
+      "source_location": "L2216"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2201"
+      "source_location": "L2250"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2158"
+      "source_location": "L2207"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2180"
+      "source_location": "L2229"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2136"
+      "source_location": "L2185"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2071"
+      "source_location": "L2120"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2062"
+      "source_location": "L2111"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2409"
+      "source_location": "L2458"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2396"
+      "source_location": "L2445"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2420"
+      "source_location": "L2469"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2410"
+      "source_location": "L2459"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2390"
+      "source_location": "L2439"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2142"
+      "source_location": "L2191"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2395"
+      "source_location": "L2444"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2397"
+      "source_location": "L2446"
     },
     {
       "id": "instructor_builder",
@@ -11001,6 +11001,224 @@
       "norm_label": "system components",
       "source_file": "problems/piston-ring-elastic-closure-contact-pressure/_student-problem.qmd",
       "source_location": "L19"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_student_packet",
+      "label": "end-milling-combined-bending-torsion/student-packet.qmd",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - End Milling - Combined Bending and Torsion of an End Mill",
+        "subtitle": "Context, Idealization, and Mechanics Analysis",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "end-milling-combined-bending-torsion/student-packet.qmd",
+      "source_file": "problems/end-milling-combined-bending-torsion/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_instructor_guide",
+      "label": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - End Milling Combined Bending and Torsion",
+        "subtitle": "Representative Solutions for Nominal Static Shank Strength",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_index",
+      "label": "end-milling-combined-bending-torsion/index.qmd",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "End Milling \u2014 Combined Bending and Torsion of an End Mill",
+        "description": "Evaluate a cantilevered end mill under simultaneous bending and torsion using nominal stresses and the von Mises criterion.",
+        "image": "assets/end-milling-industry-context.jpg",
+        "categories": "[context-rich, mechanics-of-materials, analysis]",
+        "mechanics_concepts": "[combined loading, bending stress, torsional shear stress, von Mises stress, factor of safety, cantilever]",
+        "course_topics": "[bending, torsion, combined stress, failure theory]",
+        "textbook_chapters": "[Internal loadings, Bending stress, Torsion, Combined loading, Failure theories, Factor of safety]",
+        "problem_types": "[load-path analysis, structural idealization, stress calculation, failure-theory calculation, sensitivity analysis, engineering assessment]",
+        "competencies": "[load-path reasoning, free-body modeling, section properties, combined-stress analysis, engineering judgment]",
+        "industries": "[manufacturing, machining, end milling]",
+        "difficulty": "Intermediate",
+        "status": "Published",
+        "problem_id": "MOS-END-MILLING-COMBIN-001",
+        "version": "0.1.0"
+      },
+      "node_kind": "page",
+      "norm_label": "end-milling-combined-bending-torsion/index.qmd",
+      "source_file": "problems/end-milling-combined-bending-torsion/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_index_assignment_options",
+      "label": "Assignment Options",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assignment options",
+      "source_file": "problems/end-milling-combined-bending-torsion/index.qmd",
+      "source_location": "L20"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L19"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L15"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L11"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_instructor_guide_scope_of_the_base_problem",
+      "label": "Scope of the Base Problem",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope of the base problem",
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L40"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_instructor_guide_source_and_input_distinctions",
+      "label": "Source and Input Distinctions",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "source and input distinctions",
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L32"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_instructor_guide_supplemental_assessment_structure",
+      "label": "Supplemental Assessment Structure",
+      "_origin": "ast",
+      "community": 98,
+      "community_name": "end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "supplemental assessment structure",
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L44"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_student_problem",
+      "label": "end-milling-combined-bending-torsion/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "End Milling \u2014 Combined Bending and Torsion of an End Mill",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_student_problem_context_rich_solid_mechanics_problem",
+      "label": "Context-Rich Solid Mechanics Problem",
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "End Milling \u2014 Combined Bending and Torsion of an End Mill",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context-rich solid mechanics problem",
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_student_problem_end_milling_combined_bending_and_torsion_of_an_end_mill",
+      "label": "End Milling \u2014 Combined Bending and Torsion of an End Mill",
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "End Milling \u2014 Combined Bending and Torsion of an End Mill",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "end milling \u2014 combined bending and torsion of an end mill",
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L3"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "End Milling \u2014 Combined Bending and Torsion of an End Mill",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L5"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_student_problem_main_engineering_goal",
+      "label": "Main Engineering Goal",
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "End Milling \u2014 Combined Bending and Torsion of an End Mill",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "main engineering goal",
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L15"
+    },
+    {
+      "id": "problems_end_milling_combined_bending_torsion_student_problem_system_components",
+      "label": "System Components",
+      "_origin": "ast",
+      "community": 99,
+      "community_name": "End Milling \u2014 Combined Bending and Torsion of an End Mill",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "system components",
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L19"
     }
   ],
   "links": [
@@ -11121,7 +11339,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2121",
+      "source_location": "L2170",
       "weight": 1.0
     },
     {
@@ -11133,7 +11351,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2130",
+      "source_location": "L2179",
       "weight": 1.0
     },
     {
@@ -11145,7 +11363,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2175",
+      "source_location": "L2224",
       "weight": 1.0
     },
     {
@@ -11157,7 +11375,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2177",
+      "source_location": "L2226",
       "weight": 1.0
     },
     {
@@ -11169,7 +11387,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2171",
+      "source_location": "L2220",
       "weight": 1.0
     },
     {
@@ -11181,7 +11399,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2212",
+      "source_location": "L2261",
       "weight": 1.0
     },
     {
@@ -11193,7 +11411,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2217",
+      "source_location": "L2266",
       "weight": 1.0
     },
     {
@@ -11205,7 +11423,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2223",
+      "source_location": "L2272",
       "weight": 1.0
     },
     {
@@ -11217,7 +11435,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2225",
+      "source_location": "L2274",
       "weight": 1.0
     },
     {
@@ -11229,7 +11447,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2227",
+      "source_location": "L2276",
       "weight": 1.0
     },
     {
@@ -11241,7 +11459,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2228",
+      "source_location": "L2277",
       "weight": 1.0
     },
     {
@@ -11253,7 +11471,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2159",
+      "source_location": "L2208",
       "weight": 1.0
     },
     {
@@ -11265,7 +11483,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2164",
+      "source_location": "L2213",
       "weight": 1.0
     },
     {
@@ -11277,7 +11495,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2181",
+      "source_location": "L2230",
       "weight": 1.0
     },
     {
@@ -11289,7 +11507,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2191",
+      "source_location": "L2240",
       "weight": 1.0
     },
     {
@@ -11301,7 +11519,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2192",
+      "source_location": "L2241",
       "weight": 1.0
     },
     {
@@ -11313,7 +11531,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2193",
+      "source_location": "L2242",
       "weight": 1.0
     },
     {
@@ -11325,7 +11543,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2194",
+      "source_location": "L2243",
       "weight": 1.0
     },
     {
@@ -11337,7 +11555,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2139",
+      "source_location": "L2188",
       "weight": 1.0
     },
     {
@@ -11349,7 +11567,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2139",
+      "source_location": "L2188",
       "weight": 1.0
     },
     {
@@ -11361,7 +11579,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2139",
+      "source_location": "L2188",
       "weight": 1.0
     },
     {
@@ -11373,7 +11591,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2065",
+      "source_location": "L2114",
       "weight": 1.0
     },
     {
@@ -11385,7 +11603,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2067",
+      "source_location": "L2116",
       "weight": 1.0
     },
     {
@@ -11469,7 +11687,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2298",
+      "source_location": "L2347",
       "weight": 1.0
     },
     {
@@ -11481,7 +11699,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2299",
+      "source_location": "L2348",
       "weight": 1.0
     },
     {
@@ -11493,7 +11711,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2302",
+      "source_location": "L2351",
       "weight": 1.0
     },
     {
@@ -11517,7 +11735,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2314",
+      "source_location": "L2363",
       "weight": 1.0
     },
     {
@@ -11529,7 +11747,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2320",
+      "source_location": "L2369",
       "weight": 1.0
     },
     {
@@ -11541,7 +11759,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2328",
+      "source_location": "L2377",
       "weight": 1.0
     },
     {
@@ -11553,7 +11771,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2328",
+      "source_location": "L2377",
       "weight": 1.0
     },
     {
@@ -11565,7 +11783,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2328",
+      "source_location": "L2377",
       "weight": 1.0
     },
     {
@@ -11577,7 +11795,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2333",
+      "source_location": "L2382",
       "weight": 1.0
     },
     {
@@ -11589,7 +11807,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2333",
+      "source_location": "L2382",
       "weight": 1.0
     },
     {
@@ -11601,7 +11819,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2344",
+      "source_location": "L2393",
       "weight": 1.0
     },
     {
@@ -11613,7 +11831,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2350",
+      "source_location": "L2399",
       "weight": 1.0
     },
     {
@@ -11625,7 +11843,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2264",
+      "source_location": "L2313",
       "weight": 1.0
     },
     {
@@ -11637,7 +11855,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2270",
+      "source_location": "L2319",
       "weight": 1.0
     },
     {
@@ -11649,7 +11867,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2270",
+      "source_location": "L2319",
       "weight": 1.0
     },
     {
@@ -11661,7 +11879,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2270",
+      "source_location": "L2319",
       "weight": 1.0
     },
     {
@@ -11673,7 +11891,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2281",
+      "source_location": "L2330",
       "weight": 1.0
     },
     {
@@ -11685,7 +11903,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2283",
+      "source_location": "L2332",
       "weight": 1.0
     },
     {
@@ -11697,7 +11915,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2285",
+      "source_location": "L2334",
       "weight": 1.0
     },
     {
@@ -11709,7 +11927,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2205",
+      "source_location": "L2254",
       "weight": 1.0
     },
     {
@@ -11721,7 +11939,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2233",
+      "source_location": "L2282",
       "weight": 1.0
     },
     {
@@ -11733,7 +11951,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2235",
+      "source_location": "L2284",
       "weight": 1.0
     },
     {
@@ -11745,7 +11963,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2229",
+      "source_location": "L2278",
       "weight": 1.0
     },
     {
@@ -11757,7 +11975,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2167",
+      "source_location": "L2216",
       "weight": 1.0
     },
     {
@@ -11769,7 +11987,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2172",
+      "source_location": "L2221",
       "weight": 1.0
     },
     {
@@ -11781,7 +11999,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2176",
+      "source_location": "L2225",
       "weight": 1.0
     },
     {
@@ -11793,7 +12011,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2239",
+      "source_location": "L2288",
       "weight": 1.0
     },
     {
@@ -11805,7 +12023,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2249",
+      "source_location": "L2298",
       "weight": 1.0
     },
     {
@@ -11817,7 +12035,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2250",
+      "source_location": "L2299",
       "weight": 1.0
     },
     {
@@ -11829,7 +12047,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2251",
+      "source_location": "L2300",
       "weight": 1.0
     },
     {
@@ -11841,7 +12059,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2252",
+      "source_location": "L2301",
       "weight": 1.0
     },
     {
@@ -11853,7 +12071,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2125",
+      "source_location": "L2174",
       "weight": 1.0
     },
     {
@@ -11865,7 +12083,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2128",
+      "source_location": "L2177",
       "weight": 1.0
     },
     {
@@ -11877,7 +12095,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2130",
+      "source_location": "L2179",
       "weight": 1.0
     },
     {
@@ -14645,6 +14863,138 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/clevis-pin-tensile-linkage/_student-problem.qmd",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_index",
+      "target": "problems_end_milling_combined_bending_torsion_index_assignment_options",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/index.qmd",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_instructor_guide",
+      "target": "problems_end_milling_combined_bending_torsion_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_instructor_guide",
+      "target": "problems_end_milling_combined_bending_torsion_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_instructor_guide",
+      "target": "problems_end_milling_combined_bending_torsion_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_instructor_guide",
+      "target": "problems_end_milling_combined_bending_torsion_instructor_guide_source_and_input_distinctions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_instructor_guide",
+      "target": "problems_end_milling_combined_bending_torsion_instructor_guide_scope_of_the_base_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_instructor_guide",
+      "target": "problems_end_milling_combined_bending_torsion_instructor_guide_supplemental_assessment_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_student_problem",
+      "target": "problems_end_milling_combined_bending_torsion_student_problem_context_rich_solid_mechanics_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_student_problem_context_rich_solid_mechanics_problem",
+      "target": "problems_end_milling_combined_bending_torsion_student_problem_end_milling_combined_bending_and_torsion_of_an_end_mill",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_student_problem_end_milling_combined_bending_and_torsion_of_an_end_mill",
+      "target": "problems_end_milling_combined_bending_torsion_student_problem_main_engineering_goal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_student_problem_end_milling_combined_bending_and_torsion_of_an_end_mill",
+      "target": "problems_end_milling_combined_bending_torsion_student_problem_system_components",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_student_problem_end_milling_combined_bending_and_torsion_of_an_end_mill",
+      "target": "problems_end_milling_combined_bending_torsion_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/_student-problem.qmd",
       "source_location": "L5",
       "weight": 1.0
     },
@@ -18814,7 +19164,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2062",
+      "source_location": "L2111",
       "weight": 1.0
     },
     {
@@ -18825,7 +19175,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2071",
+      "source_location": "L2120",
       "weight": 1.0
     },
     {
@@ -18836,7 +19186,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2085",
+      "source_location": "L2134",
       "weight": 1.0
     },
     {
@@ -18847,7 +19197,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2089",
+      "source_location": "L2138",
       "weight": 1.0
     },
     {
@@ -18858,7 +19208,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2104",
+      "source_location": "L2153",
       "weight": 1.0
     },
     {
@@ -18869,7 +19219,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2120",
+      "source_location": "L2169",
       "weight": 1.0
     },
     {
@@ -18880,7 +19230,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2136",
+      "source_location": "L2185",
       "weight": 1.0
     },
     {
@@ -18891,7 +19241,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2158",
+      "source_location": "L2207",
       "weight": 1.0
     },
     {
@@ -18902,7 +19252,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2167",
+      "source_location": "L2216",
       "weight": 1.0
     },
     {
@@ -18913,7 +19263,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2174",
+      "source_location": "L2223",
       "weight": 1.0
     },
     {
@@ -18924,7 +19274,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2180",
+      "source_location": "L2229",
       "weight": 1.0
     },
     {
@@ -18935,7 +19285,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2201",
+      "source_location": "L2250",
       "weight": 1.0
     },
     {
@@ -19056,7 +19406,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2124",
+      "source_location": "L2173",
       "weight": 1.0
     },
     {
@@ -19067,7 +19417,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2134",
+      "source_location": "L2183",
       "weight": 1.0
     },
     {
@@ -19078,7 +19428,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2142",
+      "source_location": "L2191",
       "weight": 1.0
     },
     {
@@ -19089,7 +19439,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2148",
+      "source_location": "L2197",
       "weight": 1.0
     },
     {
@@ -19100,7 +19450,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2152",
+      "source_location": "L2201",
       "weight": 1.0
     },
     {
@@ -19111,7 +19461,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2166",
+      "source_location": "L2215",
       "weight": 1.0
     },
     {
@@ -19122,7 +19472,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2175",
+      "source_location": "L2224",
       "weight": 1.0
     },
     {
@@ -19133,7 +19483,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2187",
+      "source_location": "L2236",
       "weight": 1.0
     },
     {
@@ -19144,7 +19494,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2199",
+      "source_location": "L2248",
       "weight": 1.0
     },
     {
@@ -19155,7 +19505,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2208",
+      "source_location": "L2257",
       "weight": 1.0
     },
     {
@@ -19166,7 +19516,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2225",
+      "source_location": "L2274",
       "weight": 1.0
     },
     {
@@ -19177,7 +19527,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2232",
+      "source_location": "L2281",
       "weight": 1.0
     },
     {
@@ -19188,7 +19538,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2238",
+      "source_location": "L2287",
       "weight": 1.0
     },
     {
@@ -19199,7 +19549,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2257",
+      "source_location": "L2306",
       "weight": 1.0
     },
     {
@@ -19210,7 +19560,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2291",
+      "source_location": "L2340",
       "weight": 1.0
     },
     {
@@ -19221,7 +19571,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2307",
+      "source_location": "L2356",
       "weight": 1.0
     },
     {
@@ -19232,7 +19582,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2390",
+      "source_location": "L2439",
       "weight": 1.0
     },
     {
@@ -19243,7 +19593,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2395",
+      "source_location": "L2444",
       "weight": 1.0
     },
     {
@@ -19254,7 +19604,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2396",
+      "source_location": "L2445",
       "weight": 1.0
     },
     {
@@ -19265,7 +19615,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2397",
+      "source_location": "L2446",
       "weight": 1.0
     },
     {
@@ -19276,7 +19626,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2409",
+      "source_location": "L2458",
       "weight": 1.0
     },
     {
@@ -19287,7 +19637,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2410",
+      "source_location": "L2459",
       "weight": 1.0
     },
     {
@@ -19298,7 +19648,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2420",
+      "source_location": "L2469",
       "weight": 1.0
     },
     {
@@ -19717,6 +20067,28 @@
       "confidence_score": 1.0,
       "source_file": "problems/clevis-pin-tensile-linkage/index.qmd",
       "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_index",
+      "target": "problems_end_milling_combined_bending_torsion_student_packet",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/index.qmd",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_end_milling_combined_bending_torsion_index",
+      "target": "problems_end_milling_combined_bending_torsion_instructor_guide",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/end-milling-combined-bending-torsion/index.qmd",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -20348,5 +20720,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "dad44cde64051df2564b5088deba5cdcf853e8eb"
+  "built_at_commit": "d05bbfee06e2bf284c710775fc375c5c48796b58"
 }

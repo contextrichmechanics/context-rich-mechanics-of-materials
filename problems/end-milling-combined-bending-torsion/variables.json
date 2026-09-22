@@ -1,0 +1,12 @@
+[
+  {"key":"mill_D_mm","symbol":"D","label":"End-mill diameter","value":10,"unit":"mm","min":2,"max":30,"step":0.5},
+  {"key":"mill_z","symbol":"z","label":"Number of flutes","value":2,"unit":"-","min":1,"max":8,"step":1},
+  {"key":"mill_n_rpm","symbol":"n","label":"Spindle speed","value":1300,"unit":"rpm","min":100,"max":10000,"step":100},
+  {"key":"mill_ap_mm","symbol":"a_p","label":"Axial depth of cut","value":3,"unit":"mm","min":0.1,"max":10,"step":0.1},
+  {"key":"mill_vf_mm_min","symbol":"v_f","label":"Feed rate","value":46,"unit":"mm/min","min":1,"max":1000,"step":1},
+  {"key":"mill_L_mm","symbol":"L","label":"Effective unsupported length","value":30,"unit":"mm","min":5,"max":100,"step":1},
+  {"key":"mill_F_N","symbol":"F","label":"Transverse design force","value":15,"unit":"N","min":1,"max":1500,"step":1},
+  {"key":"mill_Ft_N","symbol":"F_t","label":"Tangential force for torque","value":12,"unit":"N","min":0,"max":1200,"step":1},
+  {"key":"mill_Sy_MPa","symbol":"S_y","label":"Representative HSS yield strength","value":600,"unit":"MPa","min":100,"max":2000,"step":10},
+  {"key":"mill_n_req","symbol":"n_req","label":"Required static factor of safety","value":2,"unit":"-","min":1,"max":10,"step":0.1}
+]

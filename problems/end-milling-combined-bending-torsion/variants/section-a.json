@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "description": "Faculty-approved baseline values with all context, modeling, and analysis questions.",
+  "variables": {"mill_D_mm":10,"mill_z":2,"mill_n_rpm":1300,"mill_ap_mm":3,"mill_vf_mm_min":46,"mill_L_mm":30,"mill_F_N":15,"mill_Ft_N":12,"mill_Sy_MPa":600,"mill_n_req":2},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","a1","a2","a3","a4","a5","a6","a7","a8"]
+}

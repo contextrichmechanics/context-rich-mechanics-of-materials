@@ -70,6 +70,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-END-MILLING-COMBIN-001",
+    "slug": "end-milling-combined-bending-torsion",
+    "title": "End Milling — Combined Bending and Torsion of an End Mill",
+    "status": "OK",
+    "variables": 10,
+    "questions": 18,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-COUPLING-017",
     "slug": "flanged-shaft-coupling",
     "title": "Bolt-Group Design for an Industrial Flanged Shaft Coupling",

@@ -1,0 +1,28 @@
+---
+title: "End Milling — Combined Bending and Torsion of an End Mill"
+description: "Evaluate a cantilevered end mill under simultaneous bending and torsion using nominal stresses and the von Mises criterion."
+image: "assets/end-milling-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [combined loading, bending stress, torsional shear stress, von Mises stress, factor of safety, cantilever]
+course_topics: [bending, torsion, combined stress, failure theory]
+textbook_chapters: [Internal loadings, Bending stress, Torsion, Combined loading, Failure theories, Factor of safety]
+problem_types: [load-path analysis, structural idealization, stress calculation, failure-theory calculation, sensitivity analysis, engineering assessment]
+competencies: [load-path reasoning, free-body modeling, section properties, combined-stress analysis, engineering judgment]
+industries: [manufacturing, machining, end milling]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-END-MILLING-COMBIN-001"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+The baseline evaluates nominal static shank strength for a solid circular cantilever. It is not a tool-life prediction or a detailed model of a fluted cutter.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=end-milling-combined-bending-torsion){.btn .btn-secondary}

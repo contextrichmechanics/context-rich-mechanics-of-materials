@@ -1,0 +1,49 @@
+---
+title: "Instructor Guide - End Milling Combined Bending and Torsion"
+subtitle: "Representative Solutions for Nominal Static Shank Strength"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+Award credit for a defensible cutter/holder load path, a fixed-end cantilever idealization, correct moment and torque resultants, consistent millimeter-newton units, co-located bending and torsional stress components, correct von Mises and factor-of-safety calculations, and an engineering conclusion bounded by the model.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="end-milling-combined-bending-torsion-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "end-milling-combined-bending-torsion", targetId: "end-milling-combined-bending-torsion-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Source and Input Distinctions
+
+Suraidah et al. (2020), “End milling finite element method for cutting force prediction and material removal analysis,” *IOP Conference Series: Materials Science and Engineering* 788, 012020, DOI 10.1088/1757-899X/788/1/012020 (CC BY 3.0), supports the Aluminum 6061 workpiece, 10 mm HSS cutter, two-flute case, 1300 rpm, 3 mm depth of cut, 46 mm/min feed, and measurement of radial, tangential, and axial force components.
+
+The effective overhang, transverse force, tangential force, representative HSS yield strength, and required static factor of safety are instructor-assigned teaching inputs. They are not claimed as exact experimental readings, tool-manufacturer ratings, or specifications of the photographed system.
+
+The industry image attribution is provisional. The faculty template identifies a visually matching Wikimedia Commons record, “Roughing Endmill in Use.jpg” by David English (Fixerdave), CC BY-SA 4.0, but requires exact file/version confirmation before public release.
+
+# Scope of the Base Problem
+
+Use a prismatic solid circular cantilever fixed at the holder face, static end loads replacing time-varying tooth contact, linear elasticity, and small deformation. Exclude flute-root stress concentrations, helical geometry, interrupted cutting, runout, chatter, fatigue, wear, thermal effects, local cutting-edge failure, and detailed tool-life prediction.
+
+# Supplemental Assessment Structure
+
+- context interpretation and load path: 20%;
+- idealization and assumptions: 20%;
+- resultants, stresses, von Mises stress, and factor of safety: 40%;
+- sensitivity and bounded engineering interpretation: 20%.

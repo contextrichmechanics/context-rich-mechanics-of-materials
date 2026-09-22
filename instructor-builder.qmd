@@ -953,6 +953,55 @@ function variableMap(problem) {
       : `The ${formatDerived(hitchDiameterMm, 1)} mm equivalent section provides FS = ${formatDerived(actualFos, 2)}, below the required ${formatDerived(hitchRequiredFos, 1)}; increase the equivalent diameter to at least ${formatDerived(recommendedDiameterMm, 0)} mm for this prescribed static model.`;
   }
 
+  const millDiameterMm = numericValue(values, "mill_D_mm");
+  const millOverhangMm = numericValue(values, "mill_L_mm");
+  const millForceN = numericValue(values, "mill_F_N");
+  const millTangentialForceN = numericValue(values, "mill_Ft_N");
+  const millYieldStrengthMpa = numericValue(values, "mill_Sy_MPa");
+  const millRequiredFos = numericValue(values, "mill_n_req");
+
+  if (
+    Number.isFinite(millDiameterMm) && millDiameterMm > 0 &&
+    Number.isFinite(millOverhangMm) && millOverhangMm > 0 &&
+    Number.isFinite(millForceN) && millForceN >= 0 &&
+    Number.isFinite(millTangentialForceN) && millTangentialForceN >= 0 &&
+    Number.isFinite(millYieldStrengthMpa) && millYieldStrengthMpa > 0 &&
+    Number.isFinite(millRequiredFos) && millRequiredFos > 0
+  ) {
+    const inertiaMm4 = Math.PI * millDiameterMm ** 4 / 64;
+    const polarInertiaMm4 = Math.PI * millDiameterMm ** 4 / 32;
+    const momentNmm = millForceN * millOverhangMm;
+    const torqueNmm = millTangentialForceN * millDiameterMm / 2;
+    const bendingStressMpa = momentNmm * (millDiameterMm / 2) / inertiaMm4;
+    const torsionalStressMpa = torqueNmm * (millDiameterMm / 2) / polarInertiaMm4;
+    const vonMisesStressMpa = Math.sqrt(bendingStressMpa ** 2 + 3 * torsionalStressMpa ** 2);
+    const actualFos = vonMisesStressMpa > 0 ? millYieldStrengthMpa / vonMisesStressMpa : Infinity;
+    const allowableStressMpa = millYieldStrengthMpa / millRequiredFos;
+    const bendingCoefficient = 32 * millOverhangMm / (Math.PI * millDiameterMm ** 3);
+    const torsionCoefficient = 8 * 0.80 / (Math.PI * millDiameterMm ** 2);
+    const forceAtRequiredFosN = allowableStressMpa / Math.sqrt(bendingCoefficient ** 2 + 3 * torsionCoefficient ** 2);
+    const passes = actualFos >= millRequiredFos;
+
+    values.mill_I_mm4 = formatDerived(inertiaMm4, 2);
+    values.mill_J_mm4 = formatDerived(polarInertiaMm4, 2);
+    values.mill_M_Nmm = formatDerived(momentNmm, 1);
+    values.mill_T_Nmm = formatDerived(torqueNmm, 1);
+    values.mill_sigma_b_MPa = formatDerived(bendingStressMpa, 3);
+    values.mill_tau_t_MPa = formatDerived(torsionalStressMpa, 3);
+    values.mill_sigma_vm_MPa = formatDerived(vonMisesStressMpa, 3);
+    values.mill_fos = Number.isFinite(actualFos) ? formatDerived(actualFos, 1) : "unbounded";
+    values.mill_sigma_allow_MPa = formatDerived(allowableStressMpa, 1);
+    values.mill_force_at_required_fos_N = formatDerived(forceAtRequiredFosN, 1);
+    values.mill_baseline_assessment = passes
+      ? `The nominal static factor of safety meets the required ${formatDerived(millRequiredFos, 1)} for this simplified solid-shank model.`
+      : `The nominal static factor of safety is below the required ${formatDerived(millRequiredFos, 1)} for this simplified solid-shank model.`;
+    values.mill_sensitivity_assessment = "This sensitivity value applies only while F_t/F remains 0.80 and the assigned diameter, overhang, material strength, and static model remain unchanged.";
+    values.mill_engineering_assessment = passes
+      ? `The nominal von Mises stress is ${formatDerived(vonMisesStressMpa, 3)} MPa and the static factor of safety is ${formatDerived(actualFos, 1)}, so gross nominal static yielding of the idealized solid shank does not govern under this load case. This is not a complete tool-life prediction: flute-root stress concentrations, interrupted cyclic cutting, runout and chatter, wear, temperature, and local cutting-edge behavior can govern actual performance.`
+      : `The nominal von Mises stress is ${formatDerived(vonMisesStressMpa, 3)} MPa and the static factor of safety is ${formatDerived(actualFos, 1)}, below the required ${formatDerived(millRequiredFos, 1)}. The simplified shank does not pass the assigned static-yield check, and real flute geometry, cyclic cutting, runout, chatter, wear, temperature, and local edge behavior require additional evaluation.`;
+  }
+
+
   const pistonDiameterMm = numericValue(values, "piston_d_mm");
   const pistonFreeGapMm = numericValue(values, "piston_m_mm");
   const pistonInstalledGapMm = numericValue(values, "piston_s_mm");
