@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Source and Input Distinctions
 
-Suraidah et al. (2020), “End milling finite element method for cutting force prediction and material removal analysis,” *IOP Conference Series: Materials Science and Engineering* 788, 012020, DOI 10.1088/1757-899X/788/1/012020 (CC BY 3.0), supports the Aluminum 6061 workpiece, 10 mm HSS cutter, two-flute case, 1300 rpm, 3 mm depth of cut, 46 mm/min feed, and measurement of radial, tangential, and axial force components.
+Suraidah et al. (2020), “End milling finite element method for cutting force prediction and material removal analysis,” *IOP Conference Series: Materials Science and Engineering* 788, 012020, DOI 10.1088/1757-899X/788/1/012020 (CC BY 3.0), supports the Aluminum 6061 end-milling context, the 10 mm HSS cutter, and measurement of radial, tangential, and axial cutting-force components. Detailed machining settings are background context only and are not student calculation inputs.
 
-The effective overhang, transverse force, tangential force, representative HSS yield strength, and required static factor of safety are instructor-assigned teaching inputs. They are not claimed as exact experimental readings, tool-manufacturer ratings, or specifications of the photographed system.
+The transverse force of 15 N and tangential force of 10 N are representative physically reasonable light-cutting design loads, not exact experimental readings. The 30 mm effective overhang is an instructor-selected modeling value, giving <em>L</em>/<em>D</em> = 3 for the baseline cutter. The 1263 MPa yield strength is a published representative value from Sandvik Osprey heat-treated M2 data at approximately 66 HRC; it is a separate material-property basis and is not claimed as the verified material condition of the Suraidah cutter. The required static factor of safety of 2.0 is instructor specified.
 
 The industry image attribution is provisional. The faculty template identifies a visually matching Wikimedia Commons record, “Roughing Endmill in Use.jpg” by David English (Fixerdave), CC BY-SA 4.0, but requires exact file/version confirmation before public release.
 

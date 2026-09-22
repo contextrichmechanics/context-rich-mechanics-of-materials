@@ -74,7 +74,7 @@
     "slug": "end-milling-combined-bending-torsion",
     "title": "End Milling — Combined Bending and Torsion of an End Mill",
     "status": "OK",
-    "variables": 10,
+    "variables": 6,
     "questions": 18,
     "variants": 1,
     "warnings": []

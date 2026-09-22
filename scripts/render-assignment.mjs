@@ -998,7 +998,7 @@ function variableMap(problem, currentValues) {
     const actualFos = vonMisesStressMpa > 0 ? millYieldStrengthMpa / vonMisesStressMpa : Infinity;
     const allowableStressMpa = millYieldStrengthMpa / millRequiredFos;
     const bendingCoefficient = 32 * millOverhangMm / (Math.PI * millDiameterMm ** 3);
-    const torsionCoefficient = 8 * 0.80 / (Math.PI * millDiameterMm ** 2);
+    const torsionCoefficient = 8 * (2 / 3) / (Math.PI * millDiameterMm ** 2);
     const forceAtRequiredFosN = allowableStressMpa / Math.sqrt(bendingCoefficient ** 2 + 3 * torsionCoefficient ** 2);
     const passes = actualFos >= millRequiredFos;
 
@@ -1015,7 +1015,7 @@ function variableMap(problem, currentValues) {
     values.mill_baseline_assessment = passes
       ? `The nominal static factor of safety meets the required ${formatDerived(millRequiredFos, 1)} for this simplified solid-shank model.`
       : `The nominal static factor of safety is below the required ${formatDerived(millRequiredFos, 1)} for this simplified solid-shank model.`;
-    values.mill_sensitivity_assessment = "This sensitivity value applies only while F_t/F remains 0.80 and the assigned diameter, overhang, material strength, and static model remain unchanged.";
+    values.mill_sensitivity_assessment = "This sensitivity value applies only while F_t/F remains 2/3 and the assigned diameter, overhang, material strength, and static model remain unchanged.";
     values.mill_engineering_assessment = passes
       ? `The nominal von Mises stress is ${formatDerived(vonMisesStressMpa, 3)} MPa and the static factor of safety is ${formatDerived(actualFos, 1)}, so gross nominal static yielding of the idealized solid shank does not govern under this load case. This is not a complete tool-life prediction: flute-root stress concentrations, interrupted cyclic cutting, runout and chatter, wear, temperature, and local cutting-edge behavior can govern actual performance.`
       : `The nominal von Mises stress is ${formatDerived(vonMisesStressMpa, 3)} MPa and the static factor of safety is ${formatDerived(actualFos, 1)}, below the required ${formatDerived(millRequiredFos, 1)}. The simplified shank does not pass the assigned static-yield check, and real flute geometry, cyclic cutting, runout, chatter, wear, temperature, and local edge behavior require additional evaluation.`;

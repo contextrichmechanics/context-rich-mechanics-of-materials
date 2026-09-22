@@ -6,7 +6,7 @@
 
 A manufacturing engineer is reviewing a light end-milling operation on an Aluminum 6061 workpiece. As the rotating cutter engages the workpiece, transverse cutting force bends the exposed tool and a tangential force component produces torque about its axis. The exposed cutter is idealized as a solid circular cantilever fixed at the holder face.
 
-The baseline machining context follows Suraidah et al. (2020), including an HSS end mill on Aluminum 6061 and representative operating parameters. The forces, overhang, yield strength, and required factor of safety are instructor-assigned teaching values—not exact force readings, manufacturer ratings, or specifications of the pictured machine. The complete assigned values appear after the modeling questions.
+The machining context follows Suraidah et al. (2020), including an HSS end mill on Aluminum 6061 and measured radial, tangential, and axial cutting-force components. The assigned forces are representative light-cutting design loads rather than exact experimental readings. The effective overhang is an instructor-selected modeling value, and heat-treated M2 high-speed steel is used as a separate representative material-property basis for the static strength idealization. The complete six calculation inputs appear after the modeling questions.
 
 ![Representative vertical end-milling operation with an end mill cutting a clamped metal workpiece.](assets/end-milling-industry-context.jpg){fig-alt="Representative vertical end-milling operation with an end mill cutting a clamped metal workpiece." width=88%}
 
@@ -14,7 +14,7 @@ The baseline machining context follows Suraidah et al. (2020), including an HSS 
 
 ### Main Engineering Goal
 
-Determine the nominal bending and torsional stresses at the critical outer surface of the exposed cutter, combine them with the von Mises criterion, and assess the simplified static factor of safety. Then determine the transverse force associated with the required factor of safety when the tangential-to-transverse force ratio remains 0.80.
+Determine the nominal bending and torsional stresses at the critical outer surface of the exposed cutter, combine them with the von Mises criterion, and assess the simplified static factor of safety. Then determine the transverse force associated with the required factor of safety when the baseline tangential-to-transverse force ratio remains 2/3.
 
 ### System Components
 

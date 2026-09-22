@@ -3547,8 +3547,8 @@
     "idealizedImage": "problems/end-milling-combined-bending-torsion/assets/end-milling-instructor-reference.jpg",
     "idealizedImageAlt": "Instructor reference idealization of a solid circular end mill as a cantilever with transverse end force F, torque T equal to F_t times D over 2, effective overhang L, and diameter D.",
     "source": "problems/end-milling-combined-bending-torsion/index.html",
-    "problemStatement": "<p>A manufacturing engineer is reviewing a light end-milling operation on an Aluminum 6061 workpiece. The rotating end mill experiences a transverse cutting force that bends the exposed tool and a tangential force component that produces torque about the cutter axis. For this Mechanics of Materials assessment, the exposed cutter is modeled as a prismatic solid circular cantilever fixed at the holder face.</p><p>The assigned case uses a {{mill_D_mm}} {{mill_D_mm_unit}} HSS end mill with {{mill_z}} flutes at {{mill_n_rpm}} {{mill_n_rpm_unit}}, axial depth of cut {{mill_ap_mm}} {{mill_ap_mm_unit}}, and feed rate {{mill_vf_mm_min}} {{mill_vf_mm_min_unit}}. The baseline machining context follows Suraidah et al. (2020). The assigned forces, overhang, yield strength, and required factor of safety are instructor-selected teaching values, not exact experimental measurements or manufacturer ratings.</p>",
-    "engineeringGoal": "<p>Determine the maximum bending moment and applied torque, calculate nominal bending and torsional stresses at the critical outer surface, combine them using the von Mises criterion, and assess whether the simplified cutter model meets the required static factor of safety. Then determine the transverse force that would reduce the static factor of safety to the requirement while keeping F<sub>t</sub>/F = 0.80.</p>",
+    "problemStatement": "<p>A manufacturing engineer is reviewing a light end-milling operation on an Aluminum 6061 workpiece. The rotating end mill experiences a transverse cutting force that bends the exposed tool and a tangential force component that produces torque about the cutter axis. For this Mechanics of Materials assessment, the exposed cutter is modeled as a prismatic solid circular cantilever fixed at the holder face.</p><p>The assigned case uses a {{mill_D_mm}} {{mill_D_mm_unit}} HSS end mill represented for the static strength check by heat-treated M2 high-speed steel with yield strength {{mill_Sy_MPa}} {{mill_Sy_MPa_unit}}. Suraidah et al. (2020) supports the Aluminum 6061 end-milling context, the 10 mm HSS cutter, and measured cutting-force-component context; it does not establish the assigned M2 material condition. The forces are representative light-cutting design loads, the effective overhang is instructor selected, and the required factor of safety is an instructor-specified static requirement.</p>",
+    "engineeringGoal": "<p>Determine the maximum bending moment and applied torque, calculate nominal bending and torsional stresses at the critical outer surface, combine them using the von Mises criterion, and assess whether the simplified cutter model meets the required static factor of safety. Then determine the transverse force that would reduce the static factor of safety to the requirement while keeping F<sub>t</sub>/F = 2/3.</p>",
     "variables": [
       {
         "key": "mill_D_mm",
@@ -3559,46 +3559,6 @@
         "min": 2,
         "max": 30,
         "step": 0.5
-      },
-      {
-        "key": "mill_z",
-        "symbol": "z",
-        "label": "Number of flutes",
-        "value": 2,
-        "unit": "-",
-        "min": 1,
-        "max": 8,
-        "step": 1
-      },
-      {
-        "key": "mill_n_rpm",
-        "symbol": "n",
-        "label": "Spindle speed",
-        "value": 1300,
-        "unit": "rpm",
-        "min": 100,
-        "max": 10000,
-        "step": 100
-      },
-      {
-        "key": "mill_ap_mm",
-        "symbol": "a_p",
-        "label": "Axial depth of cut",
-        "value": 3,
-        "unit": "mm",
-        "min": 0.1,
-        "max": 10,
-        "step": 0.1
-      },
-      {
-        "key": "mill_vf_mm_min",
-        "symbol": "v_f",
-        "label": "Feed rate",
-        "value": 46,
-        "unit": "mm/min",
-        "min": 1,
-        "max": 1000,
-        "step": 1
       },
       {
         "key": "mill_L_mm",
@@ -3623,8 +3583,8 @@
       {
         "key": "mill_Ft_N",
         "symbol": "F_t",
-        "label": "Tangential force for torque",
-        "value": 12,
+        "label": "Tangential design force for torque",
+        "value": 10,
         "unit": "N",
         "min": 0,
         "max": 1200,
@@ -3633,12 +3593,12 @@
       {
         "key": "mill_Sy_MPa",
         "symbol": "S_y",
-        "label": "Representative HSS yield strength",
-        "value": 600,
+        "label": "Representative heat-treated M2 HSS yield strength",
+        "value": 1263,
         "unit": "MPa",
         "min": 100,
         "max": 2000,
-        "step": 10
+        "step": 1
       },
       {
         "key": "mill_n_req",
@@ -3771,7 +3731,7 @@
           "Identify inputs controlling nominal static strength."
         ],
         "student": "<p>Identify the geometry, loading, and material variables needed for the strength assessment.</p>",
-        "instructor": "<p>The calculation needs diameter <em>D</em>, overhang <em>L</em>, forces <em>F</em> and <em>F</em><sub>t</sub>, yield strength <em>S</em><sub>y</sub>, and required factor of safety <em>n</em><sub>req</sub>. Flute count, speed, depth of cut, and feed define the machining context.</p>"
+        "instructor": "<p>The calculation needs diameter <em>D</em>, overhang <em>L</em>, forces <em>F</em> and <em>F</em><sub>t</sub>, representative heat-treated M2 HSS yield strength <em>S</em><sub>y</sub>, and required factor of safety <em>n</em><sub>req</sub>. Other machining-process details are background context only and are not calculation inputs.</p>"
       },
       {
         "id": "q8",
@@ -3940,8 +3900,8 @@
         "learningObjectives": [
           "Solve for force at the required factor of safety."
         ],
-        "student": "<p>Keeping <em>F</em><sub>t</sub>/<em>F</em> = 0.80 and all geometry fixed, determine <em>F</em> that would reduce the static factor of safety to exactly {{mill_n_req}}.</p>",
-        "instructor": "<p>Set &sigma;<sub>vm</sub>(<em>F</em>) = <em>S</em><sub>y</sub>/<em>n</em><sub>req</sub> with <em>F</em><sub>t</sub> = 0.80<em>F</em>. Solving gives <strong><em>F</em> = {{mill_force_at_required_fos_N}} N</strong>. {{mill_sensitivity_assessment}}</p>"
+        "student": "<p>Keeping the baseline force-component ratio <em>F</em><sub>t</sub>/<em>F</em> = 2/3 and all geometry fixed, determine <em>F</em> that would reduce the static factor of safety to exactly {{mill_n_req}}.</p>",
+        "instructor": "<p>Set &sigma;<sub>vm</sub>(<em>F</em>) = <em>S</em><sub>y</sub>/<em>n</em><sub>req</sub> with <em>F</em><sub>t</sub> = (2/3)<em>F</em>. Solving gives <strong><em>F</em> = {{mill_force_at_required_fos_N}} N</strong>. {{mill_sensitivity_assessment}}</p>"
       },
       {
         "id": "a8",
@@ -3968,14 +3928,10 @@
         "description": "Faculty-approved baseline values with all context, modeling, and analysis questions.",
         "variables": {
           "mill_D_mm": 10,
-          "mill_z": 2,
-          "mill_n_rpm": 1300,
-          "mill_ap_mm": 3,
-          "mill_vf_mm_min": 46,
           "mill_L_mm": 30,
           "mill_F_N": 15,
-          "mill_Ft_N": 12,
-          "mill_Sy_MPa": 600,
+          "mill_Ft_N": 10,
+          "mill_Sy_MPa": 1263,
           "mill_n_req": 2
         },
         "selectedQuestions": [
