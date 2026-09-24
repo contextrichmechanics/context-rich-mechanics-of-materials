@@ -1,0 +1,44 @@
+---
+title: "Instructor Guide - Brass Bushing Thermal Contraction"
+subtitle: "Representative Answers and Evaluation Guidance"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+These answers are representative. Award credit for correct fit interpretation, a clear student-generated dimensional model, consistent signed thermal deformation, and an engineering assessment that remains within the uniform-temperature model.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="bushing-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "brass-bushing-thermal-contraction",
+    targetId: "bushing-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Source and Input Distinctions
+
+The coefficient $\alpha_b = 19.9\times10^{-6}/^\circ\mathrm{C}$ is a representative published value for C26000 cartridge brass from the Termomecanica data identified in the faculty template. The bushing diameter, housing-bore diameter, temporary assembly clearance, and initial temperature are instructor-assigned values.
+
+The temporary commercial image illustrates a sleeve bushing only. Its licensing has not been verified, and neither its product dimensions nor its material condition are used in this analysis. It must be replaced with an appropriately licensed image before public/final release.
+
+# Scope and Limitations
+
+Assume uniform bushing temperature, isotropic linear thermal expansion/contraction, constant $\alpha_b$, small thermal strain, an unchanged room-temperature housing bore, and no permanent deformation or phase change. Contact pressure, hoop stress, thick-cylinder response, yielding, fatigue, wear, bearing life, and detailed installation practice are outside the model.

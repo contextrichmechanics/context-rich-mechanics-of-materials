@@ -1,0 +1,26 @@
+---
+title: "Student Packet - Brass Bushing Thermal Contraction"
+subtitle: "Thermal Deformation and Interference-Fit Installation"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="bushing-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "brass-bushing-thermal-contraction",
+    targetId: "bushing-student-questions",
+    type: "student"
+  });
+});
+</script>
+```

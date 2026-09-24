@@ -1,0 +1,28 @@
+---
+title: "Brass Sleeve Bushing – Thermal Contraction for Interference-Fit Installation"
+description: "A thermal-deformation problem determining the cooling temperature needed to install an interference-fit brass bushing with temporary clearance."
+image: "assets/brass-bushing-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, thermal-deformation]
+mechanics_concepts: [thermal strain, thermal deformation, interference fit, clearance fit, dimensional compatibility]
+course_topics: [thermal deformation, axial deformation]
+textbook_chapters: [Thermal deformation, Axial deformation, Thermal strain]
+problem_types: [thermal deformation, dimensional-fit analysis, engineering evaluation]
+competencies: [thermal deformation, sign interpretation, dimensional compatibility, engineering judgment]
+industries: [machine design, maintenance, bearing installation]
+difficulty: "Introductory–Intermediate"
+status: "Development - temporary industry image must be replaced before public release"
+problem_id: "MOS-BRASS-BUSHING-THERMAL-001"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Recommended Starting Point"}
+Use the default packet for fit interpretation, student-generated idealization, thermal contraction, required installation temperature, and engineering assessment.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=brass-bushing-thermal-contraction){.btn .btn-secondary}

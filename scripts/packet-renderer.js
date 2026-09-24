@@ -950,6 +950,51 @@
     }
 
 
+    const bushingRoomDiameterMm = numericValue(values, "bushing_Db_mm");
+    const bushingHousingDiameterMm = numericValue(values, "bushing_Dh_mm");
+    const bushingClearanceMm = numericValue(values, "bushing_c_mm");
+    const bushingInitialTemperatureC = numericValue(values, "bushing_Ti_C");
+    const bushingAlphaPerC = numericValue(values, "bushing_alpha_per_C");
+
+    if (
+      Number.isFinite(bushingRoomDiameterMm) && bushingRoomDiameterMm > 0 &&
+      Number.isFinite(bushingHousingDiameterMm) && bushingHousingDiameterMm > 0 &&
+      Number.isFinite(bushingClearanceMm) && bushingClearanceMm >= 0 &&
+      bushingHousingDiameterMm > bushingClearanceMm &&
+      Number.isFinite(bushingInitialTemperatureC) &&
+      Number.isFinite(bushingAlphaPerC) && bushingAlphaPerC > 0
+    ) {
+      const interferenceMm = bushingRoomDiameterMm - bushingHousingDiameterMm;
+      const cooledDiameterMm = bushingHousingDiameterMm - bushingClearanceMm;
+      const diameterChangeMm = cooledDiameterMm - bushingRoomDiameterMm;
+      const temperatureChangeC = diameterChangeMm / (bushingAlphaPerC * bushingRoomDiameterMm);
+      const finalTemperatureC = bushingInitialTemperatureC + temperatureChangeC;
+
+      values.bushing_interference_mm = formatDerived(interferenceMm, 3);
+      values.bushing_cold_diameter_mm = formatDerived(cooledDiameterMm, 3);
+      values.bushing_delta_D_mm = formatDerived(diameterChangeMm, 3);
+      values.bushing_delta_T_C = formatDerived(temperatureChangeC, 1);
+      values.bushing_final_T_C = formatDerived(finalTemperatureC, 1);
+      values.bushing_interference_component_mm = formatDerived(interferenceMm, 3);
+      values.bushing_clearance_component_mm = formatDerived(bushingClearanceMm, 3);
+      values.bushing_fit_assessment = interferenceMm > 0
+        ? "The positive value is diametral interference, so the specified positive assembly clearance does not exist at room temperature."
+        : interferenceMm < 0
+          ? "The negative value indicates an initial clearance rather than the intended interference-fit scenario."
+          : "The zero value indicates a line-to-line fit rather than the intended interference-fit scenario.";
+      values.bushing_dimensional_interpretation = diameterChangeMm < 0 && interferenceMm > 0
+        ? `The negative sign means contraction. Its magnitude consists of ${formatDerived(interferenceMm, 3)} mm to remove the initial interference plus ${formatDerived(bushingClearanceMm, 3)} mm to create the desired clearance.`
+        : diameterChangeMm < 0
+          ? "The negative sign means contraction, although these editable inputs do not begin with the intended positive interference."
+        : diameterChangeMm > 0
+          ? "The positive sign means expansion, indicating that these editable inputs do not describe the intended cooling-for-installation scenario."
+          : "The zero value means no diameter change is required for these editable inputs.";
+      values.bushing_sensitivity_assessment = `Increasing c above its current ${formatDerived(bushingClearanceMm, 3)} mm value would reduce D_cold by the same increment, require a larger-magnitude contraction, make delta T more negative, and therefore require a colder final bushing temperature.`;
+      values.bushing_engineering_assessment = temperatureChangeC < 0
+        ? `The uniform linear-thermal model requires cooling the bushing by ${formatDerived(Math.abs(temperatureChangeC), 1)} deg C to a target temperature of ${formatDerived(finalTemperatureC, 1)} deg C. This is a physically plausible controlled cooling target, but actual installation planning must verify temperature uniformity, handling and condensation controls, property variation with temperature, housing temperature stability, and the time available before warm-up. Contact pressure and stresses after warm-up are outside this model.`
+        : "These editable inputs do not require cooling and therefore fall outside the intended interference-fit cooling scenario. Review the assigned diameters and clearance.";
+    }
+
     const pistonDiameterMm = numericValue(values, "piston_d_mm");
     const pistonFreeGapMm = numericValue(values, "piston_m_mm");
     const pistonInstalledGapMm = numericValue(values, "piston_s_mm");

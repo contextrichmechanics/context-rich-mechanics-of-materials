@@ -50,6 +50,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-BRASS-BUSHING-THERMAL-001",
+    "slug": "brass-bushing-thermal-contraction",
+    "title": "Brass Sleeve Bushing – Thermal Contraction for Interference-Fit Installation",
+    "status": "OK",
+    "variables": 5,
+    "questions": 15,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-SEAT-023",
     "slug": "cantilevered-operator-seat-bending",
     "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",

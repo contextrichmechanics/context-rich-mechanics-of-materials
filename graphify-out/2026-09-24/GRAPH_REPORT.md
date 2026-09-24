@@ -1,16 +1,16 @@
-# Graph Report - codex-brass-bushing-c5330b854457481daca743b1fc9e512f  (2026-09-24)
+# Graph Report - codex-end-milling-worktree-a6f665a5d9184ade93376d4864a80a75  (2026-09-21)
 
 ## Corpus Check
-- 313 files · ~2,978,545 words
+- 306 files · ~2,967,963 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 883 nodes · 870 edges · 101 communities (96 shown, 5 thin omitted)
+- 867 nodes · 856 edges · 100 communities (95 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b9e31f55`
+- Built from commit: `d05bbfee`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,7 +26,7 @@
 - new-problem.mjs
 - AI Agent Project Guide
 - basketball-hoop-bolted-connection/instructor-guide.qmd
-- brass-bushing-thermal-contraction/instructor-guide.qmd
+- jib-crane-battery-pack/index.qmd
 - 15. Common Failure Modes
 - 8. Create The Package
 - graphify reference: extra exports and benchmark
@@ -111,7 +111,6 @@
 - Piston Ring — Elastic Closure and Cylinder-Wall Contact Pressure
 - end-milling-combined-bending-torsion/instructor-guide.qmd
 - End Milling — Combined Bending and Torsion of an End Mill
-- Brass Sleeve Bushing – Thermal Contraction for Interference-Fit Installation
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -131,7 +130,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (101 total, 5 thin omitted)
+## Communities (100 total, 5 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -146,8 +145,8 @@ Cohesion: 0.04
 Nodes (47): 10. Faculty Authoring Guidance, 11. Prompt Format for Automated Problem Generation, 1. Problem Identification and Instructor Setup, 2. System Components, 3. Engineering Context and Main Goal, 4. Context and Mechanics Reasoning Questions, 5. Transition to a Mechanics Model, 6. Instructor Reference Idealization and Input Variables (Instructor Only) (+39 more)
 
 ### Community 3 - "Supplemental Instructor Background"
-Cohesion: 0.04
-Nodes (44): Purpose, Reference 2D Structural Model, Assignment Options, Default Given Data, Package Files, Recommended Starting Point, 2D Idealization — Representative Reasoning, Assessment Guidance (+36 more)
+Cohesion: 0.06
+Nodes (35): 2D Idealization — Representative Reasoning, Assessment Guidance, Baseline Numerical Solution, Bearing, Bolts and anchors, Boom and brace, Buckling, Chain, hook, and hoist hardware (+27 more)
 
 ### Community 4 - "What You Must Do When Invoked"
 Cohesion: 0.08
@@ -177,9 +176,9 @@ Nodes (13): 11. Catalog And Search Integration, 13. Git And Publishing Disciplin
 Cohesion: 0.22
 Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure
 
-### Community 11 - "brass-bushing-thermal-contraction/instructor-guide.qmd"
-Cohesion: 0.22
-Nodes (6): Assignment Options, Generated Question Set and Solutions, Problem Context, Purpose, Scope and Limitations, Source and Input Distinctions
+### Community 11 - "jib-crane-battery-pack/index.qmd"
+Cohesion: 0.15
+Nodes (9): Purpose, Reference 2D Structural Model, Assignment Options, Default Given Data, Package Files, Recommended Starting Point, Generated Question Set and Solutions, Main Engineering Task — Representative Answer (+1 more)
 
 ### Community 12 - "15. Common Failure Modes"
 Cohesion: 0.22
@@ -497,12 +496,8 @@ Nodes (7): Assignment Options, Generated Question Set and Solutions, Problem Con
 Cohesion: 0.33
 Nodes (5): Context-Rich Solid Mechanics Problem, End Milling — Combined Bending and Torsion of an End Mill, Engineering Context, Main Engineering Goal, System Components
 
-### Community 100 - "Brass Sleeve Bushing – Thermal Contraction for Interference-Fit Installation"
-Cohesion: 0.29
-Nodes (6): Analysis Scope, Brass Sleeve Bushing – Thermal Contraction for Interference-Fit Installation, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, System Components
-
 ## Knowledge Gaps
-- **554 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+549 more)
+- **544 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+539 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -511,8 +506,10 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `Supplemental Instructor Background` connect `Supplemental Instructor Background` to `jib-crane-battery-pack/index.qmd`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _554 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _544 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**
@@ -520,6 +517,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `7. Mechanics Analysis Questions` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
 - **Should `Supplemental Instructor Background` be split into smaller, more focused modules?**
-  _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
-- **Should `What You Must Do When Invoked` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05714285714285714 - nodes in this community are weakly interconnected._
