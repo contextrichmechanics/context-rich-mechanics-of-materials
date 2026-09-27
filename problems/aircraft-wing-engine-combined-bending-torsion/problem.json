@@ -1,0 +1,17 @@
+{
+  "id": "MOS-AIRCRAFT-WING-ENGI-001",
+  "slug": "aircraft-wing-engine-combined-bending-torsion",
+  "title": "Aircraft Wing with Engine - Combined Bending and Torsion",
+  "studentDocumentTitle": "Student Packet - Aircraft Wing with Engine - Combined Bending and Torsion",
+  "instructorDocumentTitle": "Instructor Guide - Aircraft Wing with Engine - Combined Bending and Torsion",
+  "summary": "Evaluate engine-weight-induced bending and thin-walled closed-section torsion at two sections of an idealized tapered cantilever wing box.",
+  "textbookChapters": ["Internal loadings", "Bending stress", "Torsion", "Thin-walled tubes having closed cross sections", "Combined loading"],
+  "derivedPlaceholders": ["wing_W_kN","wing_M_root_kNm","wing_T_kNm","wing_b_root_m","wing_h_root_m","wing_I_root_m4","wing_Am_root_m2","wing_sigma_root_MPa","wing_tau_root_MPa","wing_x_mid_m","wing_b_mid_m","wing_h_mid_m","wing_M_mid_kNm","wing_I_mid_m4","wing_Am_mid_m2","wing_sigma_mid_MPa","wing_tau_mid_MPa","wing_bending_comparison","wing_torsion_comparison","wing_engineering_assessment"],
+  "image": "assets/aircraft-wing-industry-context.jpg",
+  "imageAttribution": "Industry-context photograph supplied by the instructor/user. It motivates the wing-engine system only; no aircraft model or analytical dimension is inferred from the photograph.",
+  "idealizedImage": "assets/aircraft-wing-instructor-reference.jpg",
+  "idealizedImageAlt": "Instructor reference multi-panel idealization showing an engine-loaded tapered cantilever wing, rectangular thin-walled wing-box section, engine station, chordwise eccentricity, and reference shear axis.",
+  "source": "index.html",
+  "problemStatement": "<p>A large under-wing turbofan engine applies its weight to the wing through the pylon. For a simplified Strength of Materials analysis, one wing is modeled as a tapered cantilever wing box fixed at the fuselage. The engine/pylon assembly is represented by a concentrated mass at its center of mass, located a spanwise distance <em>L</em><sub>e</sub> from the root and a chordwise eccentricity <em>e</em> from the idealized wing-box shear/reference axis. The same engine weight therefore produces bending and torsion in the inboard wing.</p><p>This problem isolates the static engine-weight contribution. The published GEnx-1B dry mass supplies context for <em>m</em><sub>e</sub>; the wing-box dimensions, engine station, eccentricity, and equivalent wall thickness are instructor-assigned teaching values and are not proprietary or measured aircraft geometry.</p>",
+  "engineeringGoal": "<p>Determine the engine weight, internal bending moment and torque, tapered section geometry, hollow-section second moment of area, maximum bending normal stress, and thin-walled closed-section torsional shear stress at the root and at <em>x</em> = <em>L</em><sub>e</sub>/2. Compare the two sections and state a bounded engineering assessment of this engine-weight-only model.</p>"
+}

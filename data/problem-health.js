@@ -10,6 +10,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-AIRCRAFT-WING-ENGI-001",
+    "slug": "aircraft-wing-engine-combined-bending-torsion",
+    "title": "Aircraft Wing with Engine - Combined Bending and Torsion",
+    "status": "OK",
+    "variables": 8,
+    "questions": 20,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-AXIAL-009",
     "slug": "axial-rod-tube-assembly",
     "title": "Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly",

@@ -1022,6 +1022,77 @@ function variableMap(problem, currentValues) {
   }
 
 
+  const wingMassKg = numericValue(values, "wing_me_kg");
+  const wingEngineStationM = numericValue(values, "wing_Le_m");
+  const wingEccentricityM = numericValue(values, "wing_e_m");
+  const wingRootWidthM = numericValue(values, "wing_br_m");
+  const wingRootHeightM = numericValue(values, "wing_hr_m");
+  const wingEngineWidthM = numericValue(values, "wing_be_m");
+  const wingEngineHeightM = numericValue(values, "wing_he_m");
+  const wingThicknessMm = numericValue(values, "wing_t_mm");
+
+  if (
+    Number.isFinite(wingMassKg) && wingMassKg > 0 &&
+    Number.isFinite(wingEngineStationM) && wingEngineStationM > 0 &&
+    Number.isFinite(wingEccentricityM) && wingEccentricityM > 0 &&
+    Number.isFinite(wingRootWidthM) && wingRootWidthM > 0 &&
+    Number.isFinite(wingRootHeightM) && wingRootHeightM > 0 &&
+    Number.isFinite(wingEngineWidthM) && wingEngineWidthM > 0 &&
+    Number.isFinite(wingEngineHeightM) && wingEngineHeightM > 0 &&
+    Number.isFinite(wingThicknessMm) && wingThicknessMm > 0
+  ) {
+    const gravityMps2 = 9.81;
+    const thicknessM = wingThicknessMm / 1000;
+    const midX = wingEngineStationM / 2;
+    const midFraction = midX / wingEngineStationM;
+    const midWidthM = wingRootWidthM + (wingEngineWidthM - wingRootWidthM) * midFraction;
+    const midHeightM = wingRootHeightM + (wingEngineHeightM - wingRootHeightM) * midFraction;
+    const validSections = wingRootWidthM > 2 * thicknessM && wingRootHeightM > 2 * thicknessM &&
+      midWidthM > 2 * thicknessM && midHeightM > 2 * thicknessM;
+
+    if (validSections) {
+      const weightN = wingMassKg * gravityMps2;
+      const torqueNm = weightN * wingEccentricityM;
+      const rootMomentNm = weightN * wingEngineStationM;
+      const midMomentNm = weightN * (wingEngineStationM - midX);
+      const sectionI = (b, h) => (b * h ** 3 - (b - 2 * thicknessM) * (h - 2 * thicknessM) ** 3) / 12;
+      const meanArea = (b, h) => (b - thicknessM) * (h - thicknessM);
+      const rootI = sectionI(wingRootWidthM, wingRootHeightM);
+      const midI = sectionI(midWidthM, midHeightM);
+      const rootAm = meanArea(wingRootWidthM, wingRootHeightM);
+      const midAm = meanArea(midWidthM, midHeightM);
+      const rootSigmaMPa = rootMomentNm * (wingRootHeightM / 2) / rootI / 1e6;
+      const midSigmaMPa = midMomentNm * (midHeightM / 2) / midI / 1e6;
+      const rootTauMPa = torqueNm / (2 * thicknessM * rootAm) / 1e6;
+      const midTauMPa = torqueNm / (2 * thicknessM * midAm) / 1e6;
+
+      values.wing_W_kN = formatDerived(weightN / 1000, 3);
+      values.wing_M_root_kNm = formatDerived(rootMomentNm / 1000, 3);
+      values.wing_T_kNm = formatDerived(torqueNm / 1000, 3);
+      values.wing_b_root_m = formatDerived(wingRootWidthM, 2);
+      values.wing_h_root_m = formatDerived(wingRootHeightM, 2);
+      values.wing_I_root_m4 = formatDerived(rootI, 6);
+      values.wing_Am_root_m2 = formatDerived(rootAm, 4);
+      values.wing_sigma_root_MPa = formatDerived(rootSigmaMPa, 3);
+      values.wing_tau_root_MPa = formatDerived(rootTauMPa, 3);
+      values.wing_x_mid_m = formatDerived(midX, 2);
+      values.wing_b_mid_m = formatDerived(midWidthM, 2);
+      values.wing_h_mid_m = formatDerived(midHeightM, 2);
+      values.wing_M_mid_kNm = formatDerived(midMomentNm / 1000, 3);
+      values.wing_I_mid_m4 = formatDerived(midI, 6);
+      values.wing_Am_mid_m2 = formatDerived(midAm, 4);
+      values.wing_sigma_mid_MPa = formatDerived(midSigmaMPa, 3);
+      values.wing_tau_mid_MPa = formatDerived(midTauMPa, 3);
+      values.wing_bending_comparison = rootSigmaMPa >= midSigmaMPa
+        ? "Among these two sections, the root has the larger engine-weight-induced bending stress."
+        : "For these editable values, the mid-inboard section has the larger engine-weight-induced bending stress.";
+      values.wing_torsion_comparison = midTauMPa >= rootTauMPa
+        ? "Among these two sections, the mid-inboard section has the larger torsional shear stress because its mean enclosed area is smaller."
+        : "For these editable values, the root has the larger torsional shear stress.";
+      values.wing_engineering_assessment = `The root bending stress is ${formatDerived(rootSigmaMPa, 3)} MPa and the mid-inboard bending stress is ${formatDerived(midSigmaMPa, 3)} MPa; ${rootSigmaMPa >= midSigmaMPa ? "the root is larger" : "the mid-inboard section is larger"}. The root torsional shear stress is ${formatDerived(rootTauMPa, 3)} MPa and the mid-inboard value is ${formatDerived(midTauMPa, 3)} MPa; ${midTauMPa >= rootTauMPa ? "the mid-inboard section is larger" : "the root is larger"}. These values include only the simplified static engine-weight contribution and cannot represent total operational stresses because aerodynamic lift, fuel and wing self-weight, thrust, maneuver/gust and dynamic loads, fatigue, local attachments, multicell geometry, and composite anisotropy are excluded.`;
+    }
+  }
+
   const bushingRoomDiameterMm = numericValue(values, "bushing_Db_mm");
   const bushingHousingDiameterMm = numericValue(values, "bushing_Dh_mm");
   const bushingClearanceMm = numericValue(values, "bushing_c_mm");

@@ -1,0 +1,50 @@
+---
+title: "Instructor Guide - Aircraft Wing with Engine - Combined Bending and Torsion"
+subtitle: "Engine-Weight Contribution to Tapered Wing-Box Bending and Torsion"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+# Purpose
+
+Award credit for a defensible engine-to-wing load path, a tapered fixed-root cantilever idealization, correct moment and torque resultants, consistent SI units, correct hollow-section properties, Hibbeler Section 5.7 thin-walled closed-section torsion, and an engineering conclusion explicitly limited to the static engine-weight contribution.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="aircraft-wing-engine-combined-bending-torsion-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "aircraft-wing-engine-combined-bending-torsion",
+    targetId: "aircraft-wing-engine-combined-bending-torsion-instructor-questions",
+    type: "instructor"
+  });
+});
+</script>
+```
+
+# Source and Input Distinctions
+
+The engine dry mass is based on the GEnx-1B value listed in European Union Aviation Safety Agency Type Certificate Data Sheet IM.E.102, Issue 12, dated 25 February 2026. The calculation uses <em>g</em> = 9.81 m/s<sup>2</sup> as a fixed constant.
+
+The wing-box dimensions, root-to-engine station, chordwise eccentricity, and equivalent wall thickness are instructor-assigned physically representative teaching values. They are not claimed as proprietary Boeing geometry and are not measured from the supplied photograph.
+
+The closed-section torsion calculation follows Hibbeler, <em>Mechanics of Materials</em> (Pearson, 2022), Section 5.7: <em>q</em> = <em>T</em>/(2<em>A</em><sub>m</sub>) and &tau;<sub>avg</sub> = <em>T</em>/(2<em>tA</em><sub>m</sub>).
+
+# Scope of the Base Problem
+
+Use a fixed-root tapered cantilever, a concentrated engine mass, linear geometric taper, and a single-cell thin-walled rectangular closed section with uniform equivalent thickness. Exclude aerodynamic lift, fuel, wing self-weight, thrust, maneuver/gust and dynamic loads, fatigue, buckling, local pylon/attachment stresses, stress concentrations, detailed multicell geometry, composite anisotropy, failure criteria, and certification-level analysis.
+
+# Faculty Template Verification Note
+
+The faculty template's baseline list contains one typographical error: <em>M</em><sub>root</sub> is written once as 6.030 kN&middot;m. The governing equation and all downstream stresses require the dimensionally correct value, 603.030 kN&middot;m, which is used here.

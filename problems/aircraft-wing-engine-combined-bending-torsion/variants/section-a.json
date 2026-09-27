@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "description": "Faculty-approved engine-weight-only baseline with all context, modeling, and analysis questions.",
+  "variables": {"wing_me_kg":6147.1,"wing_Le_m":10.0,"wing_e_m":2.00,"wing_br_m":4.00,"wing_hr_m":1.20,"wing_be_m":3.00,"wing_he_m":0.80,"wing_t_mm":20.0},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","a1","a2","a3","a4","a5","a6","a7","a8","a9","a10"]
+}

@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2373"
+      "source_location": "L2302"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2456"
+      "source_location": "L2385"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2352"
+      "source_location": "L2281"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2472"
+      "source_location": "L2401"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2317"
+      "source_location": "L2246"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2313"
+      "source_location": "L2242"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2422"
+      "source_location": "L2351"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2364"
+      "source_location": "L2293"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2397"
+      "source_location": "L2326"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2390"
+      "source_location": "L2319"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2331"
+      "source_location": "L2260"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2340"
+      "source_location": "L2269"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2403"
+      "source_location": "L2332"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2299"
+      "source_location": "L2228"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2289"
+      "source_location": "L2218"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2269"
+      "source_location": "L2198"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2254"
+      "source_location": "L2183"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2250"
+      "source_location": "L2179"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2285"
+      "source_location": "L2214"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2339"
+      "source_location": "L2268"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2332"
+      "source_location": "L2261"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2366"
+      "source_location": "L2295"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2323"
+      "source_location": "L2252"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2345"
+      "source_location": "L2274"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2301"
+      "source_location": "L2230"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2236"
+      "source_location": "L2165"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2227"
+      "source_location": "L2156"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2574"
+      "source_location": "L2503"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2561"
+      "source_location": "L2490"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2585"
+      "source_location": "L2514"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2575"
+      "source_location": "L2504"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2555"
+      "source_location": "L2484"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2307"
+      "source_location": "L2236"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2560"
+      "source_location": "L2489"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2562"
+      "source_location": "L2491"
     },
     {
       "id": "instructor_builder",
@@ -1492,224 +1492,6 @@
       "norm_label": "system components",
       "source_file": "problems/brass-bushing-thermal-contraction/_student-problem.qmd",
       "source_location": "L19"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_student_packet",
-      "label": "aircraft-wing-engine-combined-bending-torsion/student-packet.qmd",
-      "_origin": "ast",
-      "community": 101,
-      "community_name": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "file_type": "document",
-      "frontmatter": {
-        "title": "Student Packet - Aircraft Wing with Engine - Combined Bending and Torsion",
-        "subtitle": "Context, Student Idealization, and Mechanics Analysis",
-        "author": "Context-Rich Mechanics of Materials Library"
-      },
-      "node_kind": "page",
-      "norm_label": "aircraft-wing-engine-combined-bending-torsion/student-packet.qmd",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/student-packet.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide",
-      "label": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "_origin": "ast",
-      "community": 101,
-      "community_name": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "file_type": "document",
-      "frontmatter": {
-        "title": "Instructor Guide - Aircraft Wing with Engine - Combined Bending and Torsion",
-        "subtitle": "Engine-Weight Contribution to Tapered Wing-Box Bending and Torsion",
-        "author": "Context-Rich Mechanics of Materials Library"
-      },
-      "node_kind": "page",
-      "norm_label": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_index",
-      "label": "aircraft-wing-engine-combined-bending-torsion/index.qmd",
-      "_origin": "ast",
-      "community": 101,
-      "community_name": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "file_type": "document",
-      "frontmatter": {
-        "title": "Aircraft Wing with Engine - Combined Bending and Torsion",
-        "description": "Evaluate engine-weight-induced bending and thin-walled closed-section torsion in a tapered cantilever wing box.",
-        "image": "assets/aircraft-wing-industry-context.jpg",
-        "categories": "[context-rich, mechanics-of-materials, analysis]",
-        "mechanics_concepts": "[cantilever beam, bending stress, torsional shear stress, thin-walled closed section, combined loading, tapered section]",
-        "course_topics": "[bending, torsion, combined loading, thin-walled closed-section torsion]",
-        "textbook_chapters": "[Internal loadings, Bending stress, Torsion, Thin-walled tubes having closed cross sections, Combined loading]",
-        "problem_types": "[load-path analysis, structural idealization, section-property calculation, stress calculation, engineering assessment]",
-        "competencies": "[load-path reasoning, free-body modeling, tapered geometry, section properties, bending analysis, closed-section torsion, engineering judgment]",
-        "industries": "[aerospace, aircraft structures, wing structures]",
-        "difficulty": "Advanced",
-        "status": "Published",
-        "problem_id": "MOS-AIRCRAFT-WING-ENGI-001",
-        "version": "0.1.0"
-      },
-      "node_kind": "page",
-      "norm_label": "aircraft-wing-engine-combined-bending-torsion/index.qmd",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/index.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_index_assignment_options",
-      "label": "Assignment Options",
-      "_origin": "ast",
-      "community": 101,
-      "community_name": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assignment options",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/index.qmd",
-      "source_location": "L20"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_faculty_template_verification_note",
-      "label": "Faculty Template Verification Note",
-      "_origin": "ast",
-      "community": 101,
-      "community_name": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "faculty template verification note",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L48"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_generated_question_set_and_solutions",
-      "label": "Generated Question Set and Solutions",
-      "_origin": "ast",
-      "community": 101,
-      "community_name": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "generated question set and solutions",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L19"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_problem_context",
-      "label": "Problem Context",
-      "_origin": "ast",
-      "community": 101,
-      "community_name": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "problem context",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L15"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_purpose",
-      "label": "Purpose",
-      "_origin": "ast",
-      "community": 101,
-      "community_name": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "purpose",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L11"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_scope_of_the_base_problem",
-      "label": "Scope of the Base Problem",
-      "_origin": "ast",
-      "community": 101,
-      "community_name": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "scope of the base problem",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L44"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_source_and_input_distinctions",
-      "label": "Source and Input Distinctions",
-      "_origin": "ast",
-      "community": 101,
-      "community_name": "aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "source and input distinctions",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L36"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem",
-      "label": "aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Aircraft Wing with Engine - Combined Bending and Torsion",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_aircraft_wing_with_engine_combined_bending_and_torsion",
-      "label": "Aircraft Wing with Engine - Combined Bending and Torsion",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Aircraft Wing with Engine - Combined Bending and Torsion",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "aircraft wing with engine - combined bending and torsion",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L3"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_analysis_scope",
-      "label": "Analysis Scope",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Aircraft Wing with Engine - Combined Bending and Torsion",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "analysis scope",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L19"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_context_rich_solid_mechanics_problem",
-      "label": "Context-Rich Solid Mechanics Problem",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Aircraft Wing with Engine - Combined Bending and Torsion",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "context-rich solid mechanics problem",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L1"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_engineering_context",
-      "label": "Engineering Context",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Aircraft Wing with Engine - Combined Bending and Torsion",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "engineering context",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L5"
-    },
-    {
-      "id": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_main_engineering_goal",
-      "label": "Main Engineering Goal",
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "Aircraft Wing with Engine - Combined Bending and Torsion",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "main engineering goal",
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L15"
     },
     {
       "id": "problems_brass_bushing_thermal_contraction_instructor_guide",
@@ -11775,7 +11557,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2286",
+      "source_location": "L2215",
       "weight": 1.0
     },
     {
@@ -11787,7 +11569,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2295",
+      "source_location": "L2224",
       "weight": 1.0
     },
     {
@@ -11799,7 +11581,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2340",
+      "source_location": "L2269",
       "weight": 1.0
     },
     {
@@ -11811,7 +11593,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2342",
+      "source_location": "L2271",
       "weight": 1.0
     },
     {
@@ -11823,7 +11605,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2336",
+      "source_location": "L2265",
       "weight": 1.0
     },
     {
@@ -11835,7 +11617,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2377",
+      "source_location": "L2306",
       "weight": 1.0
     },
     {
@@ -11847,7 +11629,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2382",
+      "source_location": "L2311",
       "weight": 1.0
     },
     {
@@ -11859,7 +11641,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2388",
+      "source_location": "L2317",
       "weight": 1.0
     },
     {
@@ -11871,7 +11653,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2390",
+      "source_location": "L2319",
       "weight": 1.0
     },
     {
@@ -11883,7 +11665,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2392",
+      "source_location": "L2321",
       "weight": 1.0
     },
     {
@@ -11895,7 +11677,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2393",
+      "source_location": "L2322",
       "weight": 1.0
     },
     {
@@ -11907,7 +11689,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2324",
+      "source_location": "L2253",
       "weight": 1.0
     },
     {
@@ -11919,7 +11701,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2329",
+      "source_location": "L2258",
       "weight": 1.0
     },
     {
@@ -11931,7 +11713,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2346",
+      "source_location": "L2275",
       "weight": 1.0
     },
     {
@@ -11943,7 +11725,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2356",
+      "source_location": "L2285",
       "weight": 1.0
     },
     {
@@ -11955,7 +11737,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2357",
+      "source_location": "L2286",
       "weight": 1.0
     },
     {
@@ -11967,7 +11749,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2358",
+      "source_location": "L2287",
       "weight": 1.0
     },
     {
@@ -11979,7 +11761,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2359",
+      "source_location": "L2288",
       "weight": 1.0
     },
     {
@@ -11991,7 +11773,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2304",
+      "source_location": "L2233",
       "weight": 1.0
     },
     {
@@ -12003,7 +11785,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2304",
+      "source_location": "L2233",
       "weight": 1.0
     },
     {
@@ -12015,7 +11797,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2304",
+      "source_location": "L2233",
       "weight": 1.0
     },
     {
@@ -12027,7 +11809,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2230",
+      "source_location": "L2159",
       "weight": 1.0
     },
     {
@@ -12039,7 +11821,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2232",
+      "source_location": "L2161",
       "weight": 1.0
     },
     {
@@ -12123,7 +11905,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2463",
+      "source_location": "L2392",
       "weight": 1.0
     },
     {
@@ -12135,7 +11917,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2464",
+      "source_location": "L2393",
       "weight": 1.0
     },
     {
@@ -12147,7 +11929,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2467",
+      "source_location": "L2396",
       "weight": 1.0
     },
     {
@@ -12171,7 +11953,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2479",
+      "source_location": "L2408",
       "weight": 1.0
     },
     {
@@ -12183,7 +11965,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2485",
+      "source_location": "L2414",
       "weight": 1.0
     },
     {
@@ -12195,7 +11977,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2493",
+      "source_location": "L2422",
       "weight": 1.0
     },
     {
@@ -12207,7 +11989,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2493",
+      "source_location": "L2422",
       "weight": 1.0
     },
     {
@@ -12219,7 +12001,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2493",
+      "source_location": "L2422",
       "weight": 1.0
     },
     {
@@ -12231,7 +12013,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2498",
+      "source_location": "L2427",
       "weight": 1.0
     },
     {
@@ -12243,7 +12025,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2498",
+      "source_location": "L2427",
       "weight": 1.0
     },
     {
@@ -12255,7 +12037,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2509",
+      "source_location": "L2438",
       "weight": 1.0
     },
     {
@@ -12267,7 +12049,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2515",
+      "source_location": "L2444",
       "weight": 1.0
     },
     {
@@ -12279,7 +12061,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2429",
+      "source_location": "L2358",
       "weight": 1.0
     },
     {
@@ -12291,7 +12073,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2435",
+      "source_location": "L2364",
       "weight": 1.0
     },
     {
@@ -12303,7 +12085,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2435",
+      "source_location": "L2364",
       "weight": 1.0
     },
     {
@@ -12315,7 +12097,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2435",
+      "source_location": "L2364",
       "weight": 1.0
     },
     {
@@ -12327,7 +12109,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2446",
+      "source_location": "L2375",
       "weight": 1.0
     },
     {
@@ -12339,7 +12121,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2448",
+      "source_location": "L2377",
       "weight": 1.0
     },
     {
@@ -12351,7 +12133,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2450",
+      "source_location": "L2379",
       "weight": 1.0
     },
     {
@@ -12363,7 +12145,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2370",
+      "source_location": "L2299",
       "weight": 1.0
     },
     {
@@ -12375,7 +12157,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2398",
+      "source_location": "L2327",
       "weight": 1.0
     },
     {
@@ -12387,7 +12169,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2400",
+      "source_location": "L2329",
       "weight": 1.0
     },
     {
@@ -12399,7 +12181,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2394",
+      "source_location": "L2323",
       "weight": 1.0
     },
     {
@@ -12411,7 +12193,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2332",
+      "source_location": "L2261",
       "weight": 1.0
     },
     {
@@ -12423,7 +12205,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2337",
+      "source_location": "L2266",
       "weight": 1.0
     },
     {
@@ -12435,7 +12217,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2341",
+      "source_location": "L2270",
       "weight": 1.0
     },
     {
@@ -12447,7 +12229,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2404",
+      "source_location": "L2333",
       "weight": 1.0
     },
     {
@@ -12459,7 +12241,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2414",
+      "source_location": "L2343",
       "weight": 1.0
     },
     {
@@ -12471,7 +12253,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2415",
+      "source_location": "L2344",
       "weight": 1.0
     },
     {
@@ -12483,7 +12265,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2416",
+      "source_location": "L2345",
       "weight": 1.0
     },
     {
@@ -12495,7 +12277,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2417",
+      "source_location": "L2346",
       "weight": 1.0
     },
     {
@@ -12507,7 +12289,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2290",
+      "source_location": "L2219",
       "weight": 1.0
     },
     {
@@ -12519,7 +12301,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2293",
+      "source_location": "L2222",
       "weight": 1.0
     },
     {
@@ -12531,7 +12313,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2295",
+      "source_location": "L2224",
       "weight": 1.0
     },
     {
@@ -14563,138 +14345,6 @@
       "confidence_score": 1.0,
       "source_file": "problems/aerial-gondola-suspension-hanger/_student-problem.qmd",
       "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_index",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_index_assignment_options",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/index.qmd",
-      "source_location": "L20",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_purpose",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L11",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_problem_context",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_generated_question_set_and_solutions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_source_and_input_distinctions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L36",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_scope_of_the_base_problem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L44",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide_faculty_template_verification_note",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/instructor-guide.qmd",
-      "source_location": "L48",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_context_rich_solid_mechanics_problem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_aircraft_wing_with_engine_combined_bending_and_torsion",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_main_engineering_goal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_aircraft_wing_with_engine_combined_bending_and_torsion",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_analysis_scope",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_aircraft_wing_with_engine_combined_bending_and_torsion",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_engineering_context",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_context_rich_solid_mechanics_problem",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_student_problem_aircraft_wing_with_engine_combined_bending_and_torsion",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/_student-problem.qmd",
-      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -19864,7 +19514,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2227",
+      "source_location": "L2156",
       "weight": 1.0
     },
     {
@@ -19875,7 +19525,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2236",
+      "source_location": "L2165",
       "weight": 1.0
     },
     {
@@ -19886,7 +19536,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2250",
+      "source_location": "L2179",
       "weight": 1.0
     },
     {
@@ -19897,7 +19547,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2254",
+      "source_location": "L2183",
       "weight": 1.0
     },
     {
@@ -19908,7 +19558,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2269",
+      "source_location": "L2198",
       "weight": 1.0
     },
     {
@@ -19919,7 +19569,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2285",
+      "source_location": "L2214",
       "weight": 1.0
     },
     {
@@ -19930,7 +19580,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2301",
+      "source_location": "L2230",
       "weight": 1.0
     },
     {
@@ -19941,7 +19591,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2323",
+      "source_location": "L2252",
       "weight": 1.0
     },
     {
@@ -19952,7 +19602,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2332",
+      "source_location": "L2261",
       "weight": 1.0
     },
     {
@@ -19963,7 +19613,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2339",
+      "source_location": "L2268",
       "weight": 1.0
     },
     {
@@ -19974,7 +19624,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2345",
+      "source_location": "L2274",
       "weight": 1.0
     },
     {
@@ -19985,7 +19635,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2366",
+      "source_location": "L2295",
       "weight": 1.0
     },
     {
@@ -20106,7 +19756,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2289",
+      "source_location": "L2218",
       "weight": 1.0
     },
     {
@@ -20117,7 +19767,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2299",
+      "source_location": "L2228",
       "weight": 1.0
     },
     {
@@ -20128,7 +19778,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2307",
+      "source_location": "L2236",
       "weight": 1.0
     },
     {
@@ -20139,7 +19789,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2313",
+      "source_location": "L2242",
       "weight": 1.0
     },
     {
@@ -20150,7 +19800,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2317",
+      "source_location": "L2246",
       "weight": 1.0
     },
     {
@@ -20161,7 +19811,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2331",
+      "source_location": "L2260",
       "weight": 1.0
     },
     {
@@ -20172,7 +19822,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2340",
+      "source_location": "L2269",
       "weight": 1.0
     },
     {
@@ -20183,7 +19833,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2352",
+      "source_location": "L2281",
       "weight": 1.0
     },
     {
@@ -20194,7 +19844,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2364",
+      "source_location": "L2293",
       "weight": 1.0
     },
     {
@@ -20205,7 +19855,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2373",
+      "source_location": "L2302",
       "weight": 1.0
     },
     {
@@ -20216,7 +19866,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2390",
+      "source_location": "L2319",
       "weight": 1.0
     },
     {
@@ -20227,7 +19877,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2397",
+      "source_location": "L2326",
       "weight": 1.0
     },
     {
@@ -20238,7 +19888,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2403",
+      "source_location": "L2332",
       "weight": 1.0
     },
     {
@@ -20249,7 +19899,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2422",
+      "source_location": "L2351",
       "weight": 1.0
     },
     {
@@ -20260,7 +19910,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2456",
+      "source_location": "L2385",
       "weight": 1.0
     },
     {
@@ -20271,7 +19921,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2472",
+      "source_location": "L2401",
       "weight": 1.0
     },
     {
@@ -20282,7 +19932,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2555",
+      "source_location": "L2484",
       "weight": 1.0
     },
     {
@@ -20293,7 +19943,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2560",
+      "source_location": "L2489",
       "weight": 1.0
     },
     {
@@ -20304,7 +19954,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2561",
+      "source_location": "L2490",
       "weight": 1.0
     },
     {
@@ -20315,7 +19965,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2562",
+      "source_location": "L2491",
       "weight": 1.0
     },
     {
@@ -20326,7 +19976,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2574",
+      "source_location": "L2503",
       "weight": 1.0
     },
     {
@@ -20337,7 +19987,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2575",
+      "source_location": "L2504",
       "weight": 1.0
     },
     {
@@ -20348,7 +19998,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2585",
+      "source_location": "L2514",
       "weight": 1.0
     },
     {
@@ -20634,28 +20284,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/aerial-gondola-suspension-hanger/index.qmd",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_index",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_student_packet",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/index.qmd",
-      "source_location": "L26",
-      "weight": 1.0
-    },
-    {
-      "source": "problems_aircraft_wing_engine_combined_bending_torsion_index",
-      "target": "problems_aircraft_wing_engine_combined_bending_torsion_instructor_guide",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "problems/aircraft-wing-engine-combined-bending-torsion/index.qmd",
       "source_location": "L27",
       "weight": 1.0
     },
@@ -21464,5 +21092,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2977dc129252a7b573cbb5560d58fc86981e08fe"
+  "built_at_commit": "b9e31f55821781d40e1b9cea923a41382f983e76"
 }
