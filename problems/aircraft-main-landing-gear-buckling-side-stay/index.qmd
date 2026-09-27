@@ -1,0 +1,28 @@
+---
+title: "Aircraft Main Landing Gear - Column Buckling and Side-Stay Loading"
+description: "Analyze side-stay equilibrium and Euler buckling of an equivalent aircraft main-strut column."
+image: "assets/landing-gear-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [column buckling, axial loading, planar equilibrium, two-force member, Euler buckling, stability]
+course_topics: [columns, axial loading, equilibrium, stability]
+textbook_chapters: [Axial loading, Equilibrium, Columns, Buckling of columns]
+problem_types: [load-path analysis, structural idealization, equilibrium calculation, section-property calculation, stability assessment]
+competencies: [load-path reasoning, free-body modeling, two-force-member equilibrium, section properties, Euler buckling, engineering judgment]
+industries: [aerospace, aircraft structures, landing gear]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-AIRCRAFT-MAIN-LAND-001"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+The Euler result is a teaching-level margin for an assigned equivalent unbraced column, not a certification assessment of actual landing gear.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=aircraft-main-landing-gear-buckling-side-stay){.btn .btn-secondary}

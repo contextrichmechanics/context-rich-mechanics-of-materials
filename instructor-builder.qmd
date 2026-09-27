@@ -1073,6 +1073,64 @@ function variableMap(problem) {
     }
   }
 
+  const gearMassEquivalentKg = numericValue(values, "gear_meq_kg");
+  const gearLengthM = numericValue(values, "gear_L_m");
+  const gearOuterDiameterMm = numericValue(values, "gear_D_mm");
+  const gearInnerDiameterMm = numericValue(values, "gear_d_mm");
+  const gearModulusGPa = numericValue(values, "gear_E_GPa");
+  const gearEffectiveLengthFactor = numericValue(values, "gear_K");
+  const gearSideStayAngleDeg = numericValue(values, "gear_theta_deg");
+  const gearLateralLoadKN = numericValue(values, "gear_H_kN");
+
+  if (
+    Number.isFinite(gearMassEquivalentKg) && gearMassEquivalentKg > 0 &&
+    Number.isFinite(gearLengthM) && gearLengthM > 0 &&
+    Number.isFinite(gearOuterDiameterMm) && gearOuterDiameterMm > 0 &&
+    Number.isFinite(gearInnerDiameterMm) && gearInnerDiameterMm >= 0 && gearInnerDiameterMm < gearOuterDiameterMm &&
+    Number.isFinite(gearModulusGPa) && gearModulusGPa > 0 &&
+    Number.isFinite(gearEffectiveLengthFactor) && gearEffectiveLengthFactor > 0 &&
+    Number.isFinite(gearSideStayAngleDeg) && gearSideStayAngleDeg > 0 && gearSideStayAngleDeg < 90 &&
+    Number.isFinite(gearLateralLoadKN) && gearLateralLoadKN >= 0
+  ) {
+    const gravityMps2 = 9.81;
+    const angleRad = gearSideStayAngleDeg * Math.PI / 180;
+    const outerDiameterM = gearOuterDiameterMm / 1000;
+    const innerDiameterM = gearInnerDiameterMm / 1000;
+    const verticalLoadN = gearMassEquivalentKg * gravityMps2;
+    const verticalLoadKN = verticalLoadN / 1000;
+    const lateralLoadN = gearLateralLoadKN * 1000;
+    const sideStayForceN = lateralLoadN / Math.cos(angleRad);
+    const verticalComponentKN = gearLateralLoadKN * Math.tan(angleRad);
+    const rightwardCompressionKN = verticalLoadKN - verticalComponentKN;
+    const reversedCompressionKN = verticalLoadKN + verticalComponentKN;
+    const areaM2 = Math.PI * (outerDiameterM ** 2 - innerDiameterM ** 2) / 4;
+    const inertiaM4 = Math.PI * (outerDiameterM ** 4 - innerDiameterM ** 4) / 64;
+    const radiusM = Math.sqrt(inertiaM4 / areaM2);
+    const slenderness = gearEffectiveLengthFactor * gearLengthM / radiusM;
+    const criticalLoadN = Math.PI ** 2 * gearModulusGPa * 1e9 * inertiaM4 /
+      (gearEffectiveLengthFactor * gearLengthM) ** 2;
+    const bucklingMargin = criticalLoadN / verticalLoadN;
+
+    values.gear_P_kN = formatDerived(verticalLoadKN, 4);
+    values.gear_Fs_parked_kN = formatDerived(0, 1);
+    values.gear_N_parked_kN = formatDerived(verticalLoadKN, 4);
+    values.gear_Fs_lateral_kN = formatDerived(sideStayForceN / 1000, 4);
+    values.gear_N_right_kN = formatDerived(rightwardCompressionKN, 4);
+    values.gear_N_reverse_kN = formatDerived(reversedCompressionKN, 4);
+    values.gear_side_stay_state = gearLateralLoadKN === 0 ? "zero-force" : "tension";
+    values.gear_A_m2 = formatDerived(areaM2, 8);
+    values.gear_A_mm2 = formatDerived(areaM2 * 1e6, 2);
+    values.gear_I_m4 = formatDerived(inertiaM4, 10);
+    values.gear_I_mm4 = formatDerived(inertiaM4 * 1e12, 2);
+    values.gear_r_m = formatDerived(radiusM, 6);
+    values.gear_r_mm = formatDerived(radiusM * 1000, 3);
+    values.gear_slenderness = formatDerived(slenderness, 3);
+    values.gear_Pcr_MN = formatDerived(criticalLoadN / 1e6, 4);
+    values.gear_nb = formatDerived(bucklingMargin, 3);
+    values.gear_stability_interpretation = `The parked load is ${formatDerived(verticalLoadKN, 4)} kN, compared with an Euler critical load of ${formatDerived(criticalLoadN / 1e6, 4)} MN, giving an idealized buckling margin of ${formatDerived(bucklingMargin, 3)}. This comparison supports only the assigned straight, prismatic, pinned-pinned elastic-column model; it does not establish actual landing-gear adequacy because real geometry, joints, eccentricity, local stresses, dynamics, fatigue, material allowables, and certification load cases are excluded.`;
+    values.gear_engineering_assessment = `The rightward ${formatDerived(gearLateralLoadKN, 1)} kN load shown gives ${formatDerived(rightwardCompressionKN, 4)} kN main-strut compression, while reversing that lateral load gives ${formatDerived(reversedCompressionKN, 4)} kN; therefore the reversed direction governs the two assigned lateral directions. The side-stay force magnitude is ${formatDerived(sideStayForceN / 1000, 4)} kN, and the unbraced parked Euler margin is ${formatDerived(bucklingMargin, 3)}. This teaching result is not a certification assessment because it excludes joint eccentricity and local bending, non-prismatic geometry and actual restraints, shock-strut and tire compliance, impact and dynamic loads, fatigue, yielding, detailed mechanism loads, and three-dimensional aircraft load distribution.`;
+  }
+
   const bushingRoomDiameterMm = numericValue(values, "bushing_Db_mm");
   const bushingHousingDiameterMm = numericValue(values, "bushing_Dh_mm");
   const bushingClearanceMm = numericValue(values, "bushing_c_mm");

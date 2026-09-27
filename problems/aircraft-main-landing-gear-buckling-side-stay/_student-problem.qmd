@@ -1,0 +1,21 @@
+# Context-Rich Solid Mechanics Problem
+
+## Aircraft Main Landing Gear - Column Buckling and Side-Stay Loading
+
+### Engineering Context
+
+A deployed aircraft main landing gear transfers vertical load from the aircraft structure to the runway through the main strut and wheel assembly. A diagonal side stay provides lateral restraint and stabilizes the deployed mechanism. This problem separates that system into a pin-jointed equilibrium model and a hypothetical unbraced-column model.
+
+The photograph motivates the real system only. Do not infer geometry or dimensions from it. The published kg-equivalent ground load and a representative compressed gear length provide context; the equivalent tube dimensions, material modulus, effective-length factor, side-stay angle, and lateral load are instructor-assigned teaching values.
+
+![Commercial-aircraft main landing gear in the deployed ground configuration.](assets/landing-gear-industry-context.jpg){fig-alt="Commercial-aircraft main landing gear, wheel assembly, and diagonal bracing beneath the wing." width=92%}
+
+*Industry-context photograph supplied by the instructor/user. It is not a dimensional reference.*
+
+### Main Engineering Goal
+
+Determine the side-stay and main-strut forces for parked and lateral ground-load cases. Then hypothetically remove the side stay, model the equivalent main strut as a pinned-pinned hollow circular column, and evaluate its Euler buckling margin under the parked static load.
+
+### Analysis Scope
+
+Use static planar equilibrium, a pin-connected two-force side stay, and a straight prismatic equivalent Euler column. Exclude landing impact, dynamic loads, fatigue, vibration, shock-strut dynamics, tire compliance, local joint and connector stresses, actuator and lock-stay loads, yielding, nonlinear behavior, FEA, three-dimensional geometry, full aircraft load distribution, and certification-level analysis.

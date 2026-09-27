@@ -10,6 +10,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-AIRCRAFT-MAIN-LAND-001",
+    "slug": "aircraft-main-landing-gear-buckling-side-stay",
+    "title": "Aircraft Main Landing Gear - Column Buckling and Side-Stay Loading",
+    "status": "OK",
+    "variables": 8,
+    "questions": 22,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-AIRCRAFT-WING-ENGI-001",
     "slug": "aircraft-wing-engine-combined-bending-torsion",
     "title": "Aircraft Wing with Engine - Combined Bending and Torsion",

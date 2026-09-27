@@ -485,6 +485,547 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-AIRCRAFT-MAIN-LAND-001",
+    "slug": "aircraft-main-landing-gear-buckling-side-stay",
+    "title": "Aircraft Main Landing Gear - Column Buckling and Side-Stay Loading",
+    "studentDocumentTitle": "Student Packet - Aircraft Main Landing Gear - Column Buckling and Side-Stay Loading",
+    "instructorDocumentTitle": "Instructor Guide - Aircraft Main Landing Gear - Column Buckling and Side-Stay Loading",
+    "summary": "Analyze side-stay equilibrium under vertical and lateral ground loads and evaluate Euler buckling of an equivalent unbraced main strut.",
+    "textbookChapters": [
+      "Axial loading",
+      "Equilibrium",
+      "Columns",
+      "Buckling of columns"
+    ],
+    "derivedPlaceholders": [
+      "gear_P_kN",
+      "gear_Fs_parked_kN",
+      "gear_N_parked_kN",
+      "gear_Fs_lateral_kN",
+      "gear_N_right_kN",
+      "gear_N_reverse_kN",
+      "gear_side_stay_state",
+      "gear_A_m2",
+      "gear_A_mm2",
+      "gear_I_m4",
+      "gear_I_mm4",
+      "gear_r_m",
+      "gear_r_mm",
+      "gear_slenderness",
+      "gear_Pcr_MN",
+      "gear_nb",
+      "gear_stability_interpretation",
+      "gear_engineering_assessment"
+    ],
+    "image": "problems/aircraft-main-landing-gear-buckling-side-stay/assets/landing-gear-industry-context.jpg",
+    "imageAttribution": "Industry-context photograph supplied by the instructor/user. It motivates the deployed landing-gear system only; no analytical dimensions are inferred from the photograph.",
+    "idealizedImage": "problems/aircraft-main-landing-gear-buckling-side-stay/assets/landing-gear-instructor-reference.jpg",
+    "idealizedImageAlt": "Instructor reference idealization showing parked and rightward lateral-load cases, a diagonal side stay, a hollow circular main-strut section, and a pinned-pinned Euler column model.",
+    "source": "problems/aircraft-main-landing-gear-buckling-side-stay/index.html",
+    "problemStatement": "<p>A commercial-aircraft main landing gear transfers vertical load to the runway through its main strut, while a diagonal side stay provides lateral restraint. Analyze two linked teaching idealizations: a pin-jointed side-stay equilibrium model under parked and lateral ground loading, and an equivalent hollow circular main strut treated as a pinned-pinned Euler column after the side stay is hypothetically removed.</p><p>The published maximum static main-gear ground load per strut and a representative compressed gear length supply context. The equivalent tube dimensions, elastic modulus, effective-length factor, side-stay angle, and lateral load are instructor-assigned teaching values; they are not measured aircraft geometry or certification loads.</p>",
+    "engineeringGoal": "<p>Determine the parked and lateral-load member forces, calculate the equivalent column section properties and slenderness, evaluate the Euler critical load and parked-load buckling margin, and explain the side stay's structural role and the limits of this simplified analysis.</p>",
+    "variables": [
+      {
+        "key": "gear_meq_kg",
+        "symbol": "m_eq",
+        "label": "Maximum static main-gear load per strut, kg-equivalent",
+        "value": 34720,
+        "unit": "kg",
+        "min": 10000,
+        "max": 60000,
+        "step": 10
+      },
+      {
+        "key": "gear_L_m",
+        "symbol": "L",
+        "label": "Equivalent main-strut column length",
+        "value": 2.265,
+        "unit": "m",
+        "min": 0.5,
+        "max": 5,
+        "step": 0.005
+      },
+      {
+        "key": "gear_D_mm",
+        "symbol": "D",
+        "label": "Equivalent main-strut outer diameter",
+        "value": 180,
+        "unit": "mm",
+        "min": 50,
+        "max": 500,
+        "step": 1
+      },
+      {
+        "key": "gear_d_mm",
+        "symbol": "d",
+        "label": "Equivalent main-strut inner diameter",
+        "value": 140,
+        "unit": "mm",
+        "min": 0,
+        "max": 450,
+        "step": 1
+      },
+      {
+        "key": "gear_E_GPa",
+        "symbol": "E",
+        "label": "Equivalent steel elastic modulus",
+        "value": 200,
+        "unit": "GPa",
+        "min": 50,
+        "max": 300,
+        "step": 1
+      },
+      {
+        "key": "gear_K",
+        "symbol": "K",
+        "label": "Effective-length factor",
+        "value": 1,
+        "unit": "-",
+        "min": 0.5,
+        "max": 2,
+        "step": 0.05
+      },
+      {
+        "key": "gear_theta_deg",
+        "symbol": "theta",
+        "label": "Side-stay angle to horizontal",
+        "value": 45,
+        "unit": "deg",
+        "min": 10,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "key": "gear_H_kN",
+        "symbol": "H",
+        "label": "Assigned lateral wheel load magnitude",
+        "value": 50,
+        "unit": "kN",
+        "min": 0,
+        "max": 200,
+        "step": 1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "function",
+          "landing gear"
+        ],
+        "type": "conceptual",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Connect landing-gear components to structural function."
+        ],
+        "student": "<p>State the primary structural functions of the deployed main landing gear and side stay.</p>",
+        "instructor": "<p>The main gear transfers aircraft load to the runway. The main strut is the primary vertical load-carrying member, while the side stay provides lateral restraint and helps stabilize the deployed mechanism.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Loads",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "loads",
+          "ground reaction"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the two assigned loading cases."
+        ],
+        "student": "<p>Identify the external loads in the parked vertical-load case and in the assigned lateral-load case.</p>",
+        "instructor": "<p>The parked model has vertical load <em>P</em> only. The lateral case adds horizontal wheel load <em>H</em> to the same vertical load.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "pins",
+          "two-force member"
+        ],
+        "type": "boundary condition",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Relate the real attachments to the simplified pin model."
+        ],
+        "student": "<p>Identify the upper aircraft attachment and wheel/ground interaction. Explain why idealized pins and a two-force side stay are used.</p>",
+        "instructor": "<p>The upper structure supplies the aircraft-side reactions and the wheel/ground interface supplies ground loads. Ideal pins neglect moment transfer, so the pin-connected side stay carries only axial force between its end joints.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path",
+          "side stay"
+        ],
+        "type": "load-path reasoning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Trace vertical and lateral force transfer."
+        ],
+        "student": "<p>Trace the vertical load from the aircraft structure to the ground, then trace the lateral wheel load through the side stay and upper structure.</p>",
+        "instructor": "<p>Vertical load passes through the main strut and wheel assembly to the runway. Lateral wheel load creates axial force in the diagonal side stay and is transferred through its upper attachment into the aircraft structure.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Components",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "main strut",
+          "side stay"
+        ],
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the components associated with stability and axial-force transfer."
+        ],
+        "student": "<p>Identify the member of interest for column stability and the member of interest for lateral axial-force transfer.</p>",
+        "instructor": "<p>The main strut is the member of interest for the idealized column-stability check; the side stay is the two-force member of interest for lateral-load transfer.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Responses",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "buckling",
+          "axial force"
+        ],
+        "type": "response identification",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Distinguish axial equilibrium from Euler stability."
+        ],
+        "student": "<p>Why is Euler buckling relevant to the hypothetical unbraced main strut, and why is axial force the relevant response for the idealized side stay?</p>",
+        "instructor": "<p>The unbraced main strut is an idealized compression column, so elastic instability is checked with Euler buckling. A pin-connected two-force side stay carries only axial tension or compression.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "parameters",
+          "geometry"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify all active mechanics inputs."
+        ],
+        "student": "<p>Identify <em>m</em><sub>eq</sub>, <em>L</em>, <em>D</em>, <em>d</em>, <em>E</em>, <em>K</em>, &theta;, and <em>H</em>, and explain where each enters the analysis.</p>",
+        "instructor": "<p><em>m</em><sub>eq</sub> generates <em>P</em>; <em>L</em>, <em>K</em>, and radius of gyration set slenderness; <em>D</em> and <em>d</em> set <em>A</em>, <em>I</em>, and <em>r</em>; <em>E</em> sets Euler stiffness; and &theta; and <em>H</em> determine side-stay and main-strut forces.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "idealization",
+          "fbd"
+        ],
+        "type": "fbd/modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Create both equilibrium and column models before viewing the reference."
+        ],
+        "student": "<p>Draw free-body diagrams for (a) the deployed braced gear under parked vertical load and (b) the same gear with the assigned lateral wheel load. Separately draw the main strut with the side stay removed as a pinned-pinned equivalent column.</p>",
+        "instructor": "<p>A complete response shows the vertical main strut, diagonal pin-connected side stay, upper attachment, lower wheel joint, <em>P</em>, rightward <em>H</em>, side-stay angle, axial member forces, and a separate straight hollow pinned-pinned column of length <em>L</em>.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "assumptions",
+          "scope"
+        ],
+        "type": "modeling assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Bound the static teaching idealization."
+        ],
+        "student": "<p>State the assumptions used to reduce the real landing gear to the equilibrium and Euler-column models.</p>",
+        "instructor": "<p>Use static loading; fixed <em>g</em> = 9.81 m/s<sup>2</sup>; a straight prismatic homogeneous hollow circular equivalent steel column; pinned-pinned <em>K</em>; a pin-connected two-force side stay; small-deformation linear elasticity; and the assigned angle and lateral load. Neglect impact, dynamics, fatigue, vibration, eccentricity, local bending, non-prismatic geometry, real joint stiffness, shock-strut and tire compliance, detailed mechanism geometry, yielding, FEA, and certification analysis. Do not infer geometry from the photograph.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan",
+          "stability"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Plan the linked equilibrium and buckling calculations."
+        ],
+        "student": "<p>State the calculation sequence from kg-equivalent load through member equilibrium, section properties, slenderness, Euler load, buckling margin, and engineering interpretation.</p>",
+        "instructor": "<p>Convert mass-equivalent to <em>P</em>; solve parked and lateral joint equilibrium; calculate <em>A</em>, <em>I</em>, and <em>r</em>; calculate <em>KL/r</em>; calculate <em>P</em><sub>cr</sub>; calculate <em>n</em><sub>b</sub>; compare load directions; and state a bounded assessment.</p>"
+      },
+      {
+        "id": "a1",
+        "title": "Vertical Ground Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "weight",
+          "units"
+        ],
+        "type": "calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Convert kg-equivalent load to force."
+        ],
+        "student": "<p>Using <em>g</em> = 9.81 m/s<sup>2</sup>, calculate <em>P</em> = <em>m</em><sub>eq</sub><em>g</em>.</p>",
+        "instructor": "<p><em>P</em> = ({{gear_meq_kg}} kg)(9.81 m/s<sup>2</sup>) = <strong>{{gear_P_kN}} kN</strong>.</p>"
+      },
+      {
+        "id": "a2",
+        "title": "Parked Side-Stay Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "equilibrium",
+          "parked case"
+        ],
+        "type": "calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Solve the collinear parked load case."
+        ],
+        "student": "<p>For <em>H</em> = 0, determine side-stay axial force <em>F</em><sub>s</sub> and main-strut compression <em>N</em>.</p>",
+        "instructor": "<p>Horizontal equilibrium gives <em>F</em><sub>s</sub> = <strong>{{gear_Fs_parked_kN}} kN</strong>. With no side-stay vertical component, <em>N</em> = <em>P</em> = <strong>{{gear_N_parked_kN}} kN compression</strong>. This idealized zero does not establish that a real parked-aircraft side stay is unstressed.</p>"
+      },
+      {
+        "id": "a3",
+        "title": "Lateral Side-Stay Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "two-force member",
+          "lateral load"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Solve side-stay force with the stated direction."
+        ],
+        "student": "<p>For rightward <em>H</em> and side-stay angle &theta;, use horizontal equilibrium to calculate <em>F</em><sub>s</sub>. State whether the side stay is in tension or compression.</p>",
+        "instructor": "<p><em>F</em><sub>s</sub> = <em>H</em>/cos&theta; = <strong>{{gear_Fs_lateral_kN}} kN</strong>. For the rightward arrow shown, the idealized side stay is in <strong>{{gear_side_stay_state}}</strong>.</p>"
+      },
+      {
+        "id": "a4",
+        "title": "Main-Strut Force Under Lateral Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "vertical equilibrium",
+          "load direction"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Apply the correct lateral-load sign convention."
+        ],
+        "student": "<p>For the rightward lateral load, determine main-strut compression using vertical equilibrium. Then determine the result if the lateral load reverses.</p>",
+        "instructor": "<p>For rightward <em>H</em>, the side-stay vertical component acts upward, so <em>N</em> = <em>P</em> - <em>H</em> tan&theta; = <strong>{{gear_N_right_kN}} kN compression</strong>. Reversing <em>H</em> reverses the member force and gives <em>N</em> = <em>P</em> + <em>H</em> tan&theta; = <strong>{{gear_N_reverse_kN}} kN compression</strong>.</p>"
+      },
+      {
+        "id": "a5",
+        "title": "Equivalent Column Section Properties",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "area",
+          "moment of inertia",
+          "radius of gyration"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate hollow circular section properties."
+        ],
+        "student": "<p>Calculate <em>A</em> = &pi;(<em>D</em><sup>2</sup>-<em>d</em><sup>2</sup>)/4, <em>I</em> = &pi;(<em>D</em><sup>4</sup>-<em>d</em><sup>4</sup>)/64, and <em>r</em> = &radic;(<em>I</em>/<em>A</em>).</p>",
+        "instructor": "<p><em>A</em> = <strong>{{gear_A_m2}} m<sup>2</sup> = {{gear_A_mm2}} mm<sup>2</sup></strong>; <em>I</em> = <strong>{{gear_I_m4}} m<sup>4</sup> = {{gear_I_mm4}} mm<sup>4</sup></strong>; and <em>r</em> = <strong>{{gear_r_m}} m = {{gear_r_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "a6",
+        "title": "Slenderness",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "slenderness",
+          "effective length"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate and interpret column slenderness."
+        ],
+        "student": "<p>Calculate <em>KL/r</em>. Explain why this nondimensional quantity is useful in a column-stability idealization.</p>",
+        "instructor": "<p><em>KL/r</em> = <strong>{{gear_slenderness}}</strong>. It combines effective unsupported length with section resistance to lateral curvature and is a central measure in classifying idealized column behavior.</p>"
+      },
+      {
+        "id": "a7",
+        "title": "Euler Buckling Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "Euler buckling",
+          "critical load"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the elastic critical load."
+        ],
+        "student": "<p>With the side stay hypothetically removed, calculate <em>P</em><sub>cr</sub> = &pi;<sup>2</sup><em>EI</em>/(<em>KL</em>)<sup>2</sup>.</p>",
+        "instructor": "<p><em>P</em><sub>cr</sub> = &pi;<sup>2</sup>({{gear_E_GPa}} GPa)({{gear_I_m4}} m<sup>4</sup>)/[({{gear_K}})({{gear_L_m}} m)]<sup>2</sup> = <strong>{{gear_Pcr_MN}} MN</strong>.</p>"
+      },
+      {
+        "id": "a8",
+        "title": "Buckling Factor of Safety",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "factor of safety",
+          "buckling"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the parked-load Euler margin."
+        ],
+        "student": "<p>Calculate <em>n</em><sub>b</sub> = <em>P</em><sub>cr</sub>/<em>P</em> for the parked vertical-load case.</p>",
+        "instructor": "<p><em>n</em><sub>b</sub> = <strong>{{gear_nb}}</strong>. This is a margin for the assigned equivalent unbraced Euler-column model, not a certification factor of safety for actual landing gear.</p>"
+      },
+      {
+        "id": "a9",
+        "title": "Stability Interpretation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "interpretation",
+          "limitations"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Interpret the Euler result without overclaiming."
+        ],
+        "student": "<p>Compare <em>P</em> and <em>P</em><sub>cr</sub>. State what the comparison does and does not establish about the real landing gear.</p>",
+        "instructor": "<p>{{gear_stability_interpretation}}</p>"
+      },
+      {
+        "id": "a10",
+        "title": "Side-Stay Role",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "side stay",
+          "load path"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Explain why lateral load activates the diagonal member."
+        ],
+        "student": "<p>Compare the parked and lateral cases. Explain why the idealized side stay can carry zero axial force under collinear vertical load yet become important under lateral load.</p>",
+        "instructor": "<p>With <em>H</em> = 0, no horizontal equilibrium demand exists and the idealized side stay carries zero axial force. A lateral load requires a horizontal side-stay component, so the diagonal member immediately develops axial force and its vertical component changes main-strut compression.</p>"
+      },
+      {
+        "id": "a11",
+        "title": "Sensitivity and Modification",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "Euler relation"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "Relate Euler capacity to material, geometry, and effective length."
+        ],
+        "student": "<p>Using the Euler relation, explain how <em>P</em><sub>cr</sub> changes if <em>L</em>, <em>K</em>, <em>E</em>, or the tube dimensions change. Identify a direct geometric way to increase <em>I</em>.</p>",
+        "instructor": "<p><em>P</em><sub>cr</sub> is proportional to <em>E</em> and <em>I</em> and inversely proportional to (<em>KL</em>)<sup>2</sup>. Increasing the tube's outer diameter while maintaining a suitable wall efficiently increases <em>I</em>; increasing <em>L</em> or <em>K</em> reduces the Euler load quadratically.</p>"
+      },
+      {
+        "id": "a12",
+        "title": "Engineering Assessment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "engineering judgment",
+          "recommendation"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "Synthesize equilibrium, stability, and limitations."
+        ],
+        "student": "<p>Identify the governing assigned lateral direction for main-strut compression, report the unbraced parked Euler margin and side-stay force, and list at least three limitations that prevent treating this as a certification analysis.</p>",
+        "instructor": "<p>{{gear_engineering_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Faculty-approved landing-gear equilibrium and unbraced-column baseline with all context, modeling, and analysis questions.",
+        "variables": {
+          "gear_meq_kg": 34720,
+          "gear_L_m": 2.265,
+          "gear_D_mm": 180,
+          "gear_d_mm": 140,
+          "gear_E_GPa": 200,
+          "gear_K": 1,
+          "gear_theta_deg": 45,
+          "gear_H_kN": 50
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "a6",
+          "a7",
+          "a8",
+          "a9",
+          "a10",
+          "a11",
+          "a12"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-AIRCRAFT-WING-ENGI-001",
     "slug": "aircraft-wing-engine-combined-bending-torsion",
     "title": "Aircraft Wing with Engine - Combined Bending and Torsion",
