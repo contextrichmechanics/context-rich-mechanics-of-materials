@@ -270,6 +270,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-SHOP-CRANE-PIN-CO-001",
+    "slug": "shop-crane-pin-connection-shear-bearing",
+    "title": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
+    "status": "OK",
+    "variables": 6,
+    "questions": 24,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-SHOP-CRANE-MAST-B-001",
     "slug": "shop-crane-vertical-mast-buckling",
     "title": "Shop Crane Vertical Mast - Column Buckling",

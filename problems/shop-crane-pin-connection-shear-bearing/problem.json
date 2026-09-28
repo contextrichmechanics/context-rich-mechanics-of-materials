@@ -1,0 +1,17 @@
+{
+  "id":"MOS-SHOP-CRANE-PIN-CO-001",
+  "slug":"shop-crane-pin-connection-shear-bearing",
+  "title":"Shop Crane Pin/Bolt Connection - Shear and Bearing",
+  "studentDocumentTitle":"Student Packet - Shop Crane Pin/Bolt Connection - Shear and Bearing",
+  "instructorDocumentTitle":"Instructor Guide - Shop Crane Pin/Bolt Connection - Shear and Bearing",
+  "summary":"Evaluate average double-shear stress in the upper boom-to-mast pivot pin and bearing stress in its central lug and outer clevis plates.",
+  "textbookChapters":["Connections","Average shear stress","Bearing stress"],
+  "derivedPlaceholders":["crane_pin_Ap_mm2","crane_pin_Ashear_mm2","crane_pin_tau_MPa","crane_pin_n_shear","crane_pin_Ab_boom_mm2","crane_pin_sigma_boom_MPa","crane_pin_n_boom","crane_pin_Fplate_kN","crane_pin_Ab_clevis_mm2","crane_pin_sigma_clevis_MPa","crane_pin_n_clevis","crane_pin_governing_mode","crane_pin_governing_ratio","crane_pin_F25_kN","crane_pin_tau_F25_MPa","crane_pin_sigma_boom_F25_MPa","crane_pin_sigma_clevis_F25_MPa","crane_pin_n_shear_F25","crane_pin_n_boom_F25","crane_pin_n_clevis_F25","crane_pin_governing_F25","crane_pin_d25_mm","crane_pin_tau_d25_MPa","crane_pin_sigma_boom_d25_MPa","crane_pin_sigma_clevis_d25_MPa","crane_pin_n_shear_d25","crane_pin_n_boom_d25","crane_pin_n_clevis_d25","crane_pin_thickness_assessment","crane_pin_assessment"],
+  "image":"assets/shop-crane-pin-connection-industry-context.jpg",
+  "imageAttribution":"Professor-supplied unannotated focused shop-crane photograph. It provides context only; no geometry, force, material property, allowable, or model identity is inferred from it.",
+  "idealizedImage":"assets/shop-crane-pin-connection-instructor-reference.png",
+  "idealizedImageAlt":"Instructor reference showing the equivalent symmetric double-shear clevis connection at the upper boom-to-mast pivot.",
+  "source":"index.html",
+  "problemStatement":"<p>Analyze only the large upper boom-to-mast pivot pin, where the adjustable boom rotates relative to the mast assembly. Do not analyze the smaller lower hydraulic-ram pin or another fastener.</p><p>Replace the selected connection with an instructor-assigned symmetric double-shear clevis: one central boom lug carries the full equivalent transverse force F, two outer mast-clevis plates carry F/2 each, and the pin has two shear planes. The force, geometry, and allowables are teaching inputs, not measurements or manufacturer data.</p>",
+  "engineeringGoal":"<p>Calculate average pin double-shear stress and central/outer plate bearing stresses, compare each with its assigned allowable, identify the dynamically governing included mode, evaluate load, diameter, and thickness sensitivities, and state a limited connection assessment without claiming crane certification.</p>"
+}

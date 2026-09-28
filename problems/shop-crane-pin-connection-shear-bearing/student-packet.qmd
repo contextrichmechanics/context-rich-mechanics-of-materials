@@ -1,0 +1,14 @@
+---
+title: "Student Packet - Shop Crane Pin/Bolt Connection - Shear and Bearing"
+format: html
+---
+
+{{< include _student-problem.qmd >}}
+
+## Questions
+
+```{=html}
+<div id="shop-crane-pin-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"shop-crane-pin-connection-shear-bearing",targetId:"shop-crane-pin-student-questions",type:"student"}));</script>
+```

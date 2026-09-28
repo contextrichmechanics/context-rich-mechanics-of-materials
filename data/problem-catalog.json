@@ -13691,6 +13691,553 @@
     ]
   },
   {
+    "id": "MOS-SHOP-CRANE-PIN-CO-001",
+    "slug": "shop-crane-pin-connection-shear-bearing",
+    "title": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
+    "studentDocumentTitle": "Student Packet - Shop Crane Pin/Bolt Connection - Shear and Bearing",
+    "instructorDocumentTitle": "Instructor Guide - Shop Crane Pin/Bolt Connection - Shear and Bearing",
+    "summary": "Evaluate average double-shear stress in the upper boom-to-mast pivot pin and bearing stress in its central lug and outer clevis plates.",
+    "textbookChapters": [
+      "Connections",
+      "Average shear stress",
+      "Bearing stress"
+    ],
+    "derivedPlaceholders": [
+      "crane_pin_Ap_mm2",
+      "crane_pin_Ashear_mm2",
+      "crane_pin_tau_MPa",
+      "crane_pin_n_shear",
+      "crane_pin_Ab_boom_mm2",
+      "crane_pin_sigma_boom_MPa",
+      "crane_pin_n_boom",
+      "crane_pin_Fplate_kN",
+      "crane_pin_Ab_clevis_mm2",
+      "crane_pin_sigma_clevis_MPa",
+      "crane_pin_n_clevis",
+      "crane_pin_governing_mode",
+      "crane_pin_governing_ratio",
+      "crane_pin_F25_kN",
+      "crane_pin_tau_F25_MPa",
+      "crane_pin_sigma_boom_F25_MPa",
+      "crane_pin_sigma_clevis_F25_MPa",
+      "crane_pin_n_shear_F25",
+      "crane_pin_n_boom_F25",
+      "crane_pin_n_clevis_F25",
+      "crane_pin_governing_F25",
+      "crane_pin_d25_mm",
+      "crane_pin_tau_d25_MPa",
+      "crane_pin_sigma_boom_d25_MPa",
+      "crane_pin_sigma_clevis_d25_MPa",
+      "crane_pin_n_shear_d25",
+      "crane_pin_n_boom_d25",
+      "crane_pin_n_clevis_d25",
+      "crane_pin_thickness_assessment",
+      "crane_pin_assessment"
+    ],
+    "image": "problems/shop-crane-pin-connection-shear-bearing/assets/shop-crane-pin-connection-industry-context.jpg",
+    "imageAttribution": "Professor-supplied unannotated focused shop-crane photograph. It provides context only; no geometry, force, material property, allowable, or model identity is inferred from it.",
+    "idealizedImage": "problems/shop-crane-pin-connection-shear-bearing/assets/shop-crane-pin-connection-instructor-reference.png",
+    "idealizedImageAlt": "Instructor reference showing the equivalent symmetric double-shear clevis connection at the upper boom-to-mast pivot.",
+    "source": "problems/shop-crane-pin-connection-shear-bearing/index.html",
+    "problemStatement": "<p>Analyze only the large upper boom-to-mast pivot pin, where the adjustable boom rotates relative to the mast assembly. Do not analyze the smaller lower hydraulic-ram pin or another fastener.</p><p>Replace the selected connection with an instructor-assigned symmetric double-shear clevis: one central boom lug carries the full equivalent transverse force F, two outer mast-clevis plates carry F/2 each, and the pin has two shear planes. The force, geometry, and allowables are teaching inputs, not measurements or manufacturer data.</p>",
+    "engineeringGoal": "<p>Calculate average pin double-shear stress and central/outer plate bearing stresses, compare each with its assigned allowable, identify the dynamically governing included mode, evaluate load, diameter, and thickness sensitivities, and state a limited connection assessment without claiming crane certification.</p>",
+    "variables": [
+      {
+        "key": "crane_pin_F_kN",
+        "symbol": "F",
+        "label": "Equivalent transverse connection force",
+        "value": 20,
+        "unit": "kN",
+        "min": 1,
+        "max": 100,
+        "step": 0.5
+      },
+      {
+        "key": "crane_pin_d_mm",
+        "symbol": "d",
+        "label": "Equivalent pin diameter",
+        "value": 20,
+        "unit": "mm",
+        "min": 5,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "key": "crane_pin_tb_mm",
+        "symbol": "t_b",
+        "label": "Equivalent central boom-lug thickness",
+        "value": 10,
+        "unit": "mm",
+        "min": 2,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "key": "crane_pin_tc_mm",
+        "symbol": "t_c",
+        "label": "Equivalent thickness of each outer clevis plate",
+        "value": 8,
+        "unit": "mm",
+        "min": 2,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "key": "crane_pin_tau_allow_MPa",
+        "symbol": "tau_allow",
+        "label": "Instructor-specified allowable pin shear stress",
+        "value": 100,
+        "unit": "MPa",
+        "min": 10,
+        "max": 500,
+        "step": 5
+      },
+      {
+        "key": "crane_pin_sigma_b_allow_MPa",
+        "symbol": "sigma_b,allow",
+        "label": "Instructor-specified allowable plate bearing stress",
+        "value": 180,
+        "unit": "MPa",
+        "min": 10,
+        "max": 700,
+        "step": 5
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "function"
+        ],
+        "type": "conceptual",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Connect crane function to pivot load transfer."
+        ],
+        "student": "<p>State the primary function of the shop crane and the structural role of the upper boom-to-mast pivot connection.</p>",
+        "instructor": "<p>The crane lifts and positions heavy components. The upper pivot joins the boom to the mast assembly, transfers force, and permits boom rotation.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Loads",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "loads"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Distinguish hook load from local pivot force."
+        ],
+        "student": "<p>Identify the principal lifting load and explain why the local pivot force need not equal the suspended hook load.</p>",
+        "instructor": "<p>The hook load enters the boom, but the pivot force depends on boom geometry, the hydraulic ram, reactions, and frame interaction. F is therefore supplied as an equivalent local teaching load.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "joint"
+        ],
+        "type": "boundary condition",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Explain force transfer and rotation at the pin."
+        ],
+        "student": "<p>Identify the members joined at the upper pivot and describe how the pin permits rotation while transferring force.</p>",
+        "instructor": "<p>The central boom lug lies between two outer mast-clevis plates. The pin passes through all three plates, transfers transverse force, and permits relative rotation.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path"
+        ],
+        "type": "load-path reasoning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Trace force through the selected joint."
+        ],
+        "student": "<p>Trace the qualitative load path from the hook and boom through the upper pivot toward the mast and base.</p>",
+        "instructor": "<p>Hook demand enters the boom, reaches the central lug, crosses the pin into the two clevis plates, and continues through the mast/frame and base to the floor.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Connection",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "pivot"
+        ],
+        "type": "component selection",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the exact analyzed components."
+        ],
+        "student": "<p>Identify the exact connection and local components analyzed in this problem.</p>",
+        "instructor": "<p>The selected connection is the large upper boom-to-mast pivot, comprising the pin, central boom lug, and two outer clevis plates. The lower ram pin is not analyzed.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Responses",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "shear",
+          "bearing"
+        ],
+        "type": "response identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Distinguish average pin shear and plate bearing."
+        ],
+        "student": "<p>Identify the assigned pin-shear and plate-bearing checks and distinguish them physically.</p>",
+        "instructor": "<p>Pin shear acts across two transverse pin sections. Bearing represents compressive contact averaged over projected plate area td.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "parameters"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify all active inputs."
+        ],
+        "student": "<p>Identify F, d, t_b, t_c, tau_allow, and sigma_b,allow and explain where each enters the model.</p>",
+        "instructor": "<p>F sets demand; d controls pin area and bearing width; t_b and t_c set the corresponding projected areas; the two allowables define the teaching comparisons.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "idealization",
+          "double shear"
+        ],
+        "type": "fbd/modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Construct the symmetric clevis model."
+        ],
+        "student": "<p>Draw a central boom lug between two outer clevis plates. Show the pin, two shear planes, full F on the central lug, and F/2 carried by each outer plate.</p>",
+        "instructor": "<p>A complete model shows one central plate, two equal outer plates, a cylindrical pin, two shear planes, F on the central lug, and symmetric F/2 outer reactions.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "assumptions"
+        ],
+        "type": "modeling assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Bound the average-stress model."
+        ],
+        "student": "<p>State the assumptions used to reduce the real upper pivot to the connection model.</p>",
+        "instructor": "<p>Use static equivalent loading, symmetric double shear, F/2 outer sharing, a cylindrical pin, uniform average shear and projected bearing stress, and assigned geometry/allowables. Neglect all excluded local, frame, dynamic, and certification effects.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Plan the connector calculations."
+        ],
+        "student": "<p>Outline the calculation sequence from load split through stresses, allowable ratios, governing mode, sensitivities, and assessment.</p>",
+        "instructor": "<p>Find F/2, pin one-plane and total areas, pin shear, central and outer projected areas/bearing stresses, all three ratios, the minimum governing ratio, sensitivities, and limitations.</p>"
+      },
+      {
+        "id": "a1",
+        "title": "Connection Load Distribution",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "load split"
+        ],
+        "type": "calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Apply symmetric load sharing."
+        ],
+        "student": "<p>Determine the force carried by the central lug and by each outer clevis plate.</p>",
+        "instructor": "<p>The central lug carries F = <strong>{{crane_pin_F_kN}} kN</strong>; each outer plate carries F/2 = <strong>{{crane_pin_Fplate_kN}} kN</strong>.</p>"
+      },
+      {
+        "id": "a2",
+        "title": "Pin Shear Area",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "double shear"
+        ],
+        "type": "calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Calculate double-shear area."
+        ],
+        "student": "<p>Calculate A_p = pi d^2/4 for one shear plane and the total double-shear area 2A_p.</p>",
+        "instructor": "<p>A_p = <strong>{{crane_pin_Ap_mm2}} mm<sup>2</sup></strong>; 2A_p = <strong>{{crane_pin_Ashear_mm2}} mm<sup>2</sup></strong>.</p>"
+      },
+      {
+        "id": "a3",
+        "title": "Average Pin Shear Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "pin shear"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate average double-shear stress."
+        ],
+        "student": "<p>Calculate tau_pin = F/(2A_p).</p>",
+        "instructor": "<p>tau_pin = <strong>{{crane_pin_tau_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "a4",
+        "title": "Pin Shear Allowable Comparison",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "allowable"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the pin shear ratio."
+        ],
+        "student": "<p>Compare tau_pin with tau_allow and calculate n_shear = tau_allow/tau_pin.</p>",
+        "instructor": "<p>n_shear = <strong>{{crane_pin_n_shear}}</strong>.</p>"
+      },
+      {
+        "id": "a5",
+        "title": "Central-Lug Bearing Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "bearing"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate central-lug bearing stress."
+        ],
+        "student": "<p>Calculate projected area t_b d and average bearing stress F/(t_b d).</p>",
+        "instructor": "<p>A_b,boom = <strong>{{crane_pin_Ab_boom_mm2}} mm<sup>2</sup></strong>; sigma_b,boom = <strong>{{crane_pin_sigma_boom_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "a6",
+        "title": "Central-Lug Allowable Comparison",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "bearing allowable"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the central bearing ratio."
+        ],
+        "student": "<p>Compare central-lug bearing stress with sigma_b,allow and calculate its ratio.</p>",
+        "instructor": "<p>n_b,boom = <strong>{{crane_pin_n_boom}}</strong>.</p>"
+      },
+      {
+        "id": "a7",
+        "title": "Outer-Clevis Bearing Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "bearing",
+          "load split"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate each outer-plate bearing stress."
+        ],
+        "student": "<p>Using F/2 on each plate, calculate t_c d and average outer-clevis bearing stress.</p>",
+        "instructor": "<p>A_b,clevis = <strong>{{crane_pin_Ab_clevis_mm2}} mm<sup>2</sup></strong>; sigma_b,clevis = <strong>{{crane_pin_sigma_clevis_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "a8",
+        "title": "Outer-Clevis Allowable Comparison",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "bearing allowable"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the outer bearing ratio."
+        ],
+        "student": "<p>Compare outer-clevis bearing stress with sigma_b,allow and calculate its ratio.</p>",
+        "instructor": "<p>n_b,clevis = <strong>{{crane_pin_n_clevis}}</strong>.</p>"
+      },
+      {
+        "id": "a9",
+        "title": "Governing Included Mode",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "governing mode"
+        ],
+        "type": "comparison",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Select the smallest calculated ratio."
+        ],
+        "student": "<p>Compare all three modeled ratios and identify the governing included check.</p>",
+        "instructor": "<p><strong>{{crane_pin_governing_mode}}</strong> governs the included checks at <strong>{{crane_pin_governing_ratio}}</strong>.</p>"
+      },
+      {
+        "id": "a10",
+        "title": "Load Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "load"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Recalculate at 1.25F."
+        ],
+        "student": "<p>Increase F by 25%. Recalculate all three stresses and ratios and determine whether the governing mode changes.</p>",
+        "instructor": "<p>At F = <strong>{{crane_pin_F25_kN}} kN</strong>: tau = <strong>{{crane_pin_tau_F25_MPa}} MPa</strong>, central bearing = <strong>{{crane_pin_sigma_boom_F25_MPa}} MPa</strong>, outer bearing = <strong>{{crane_pin_sigma_clevis_F25_MPa}} MPa</strong>; ratios are <strong>{{crane_pin_n_shear_F25}}, {{crane_pin_n_boom_F25}}, {{crane_pin_n_clevis_F25}}</strong>. Governing: <strong>{{crane_pin_governing_F25}}</strong>.</p>"
+      },
+      {
+        "id": "a11",
+        "title": "Pin-Diameter Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "diameter"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Contrast inverse-square and inverse diameter scaling."
+        ],
+        "student": "<p>Increase d by 25%. Quantify changes in pin shear and both bearing stresses and explain why shear decreases faster.</p>",
+        "instructor": "<p>At d = <strong>{{crane_pin_d25_mm}} mm</strong>, tau = <strong>{{crane_pin_tau_d25_MPa}} MPa</strong>, central bearing = <strong>{{crane_pin_sigma_boom_d25_MPa}} MPa</strong>, and outer bearing = <strong>{{crane_pin_sigma_clevis_d25_MPa}} MPa</strong>. Ratios are <strong>{{crane_pin_n_shear_d25}}, {{crane_pin_n_boom_d25}}, {{crane_pin_n_clevis_d25}}</strong>. Shear scales with 1/d<sup>2</sup>; bearing scales with 1/d.</p>"
+      },
+      {
+        "id": "a12",
+        "title": "Plate-Thickness Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "thickness"
+        ],
+        "type": "interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Isolate thickness effects."
+        ],
+        "student": "<p>Explain how increasing t_b or t_c affects the corresponding bearing stress and why neither changes idealized pin shear.</p>",
+        "instructor": "<p>{{crane_pin_thickness_assessment}}</p>"
+      },
+      {
+        "id": "a13",
+        "title": "Model Limitations",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "limitations"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "Identify omitted connection modes."
+        ],
+        "student": "<p>Identify important effects omitted by the average-stress model, including pin bending, contact pressure, tear-out/net-section behavior, clearance/eccentricity, fatigue, and frame interaction.</p>",
+        "instructor": "<p>The model excludes pin bending and deformation, nonuniform/Hertz contact, tear-out, net-section tension, edge effects, plate bending, clearance, eccentricity, preload/friction, hole ovalization, welds, fatigue, impact, wear, dynamics, and frame interaction.</p>"
+      },
+      {
+        "id": "a14",
+        "title": "Engineering Assessment and Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "engineering judgment"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "State a bounded connection recommendation."
+        ],
+        "student": "<p>Report all baseline ratios, the governing included response, whether each assigned criterion is met, one mechanics-based improvement, and important limitations. Do not claim crane certification.</p>",
+        "instructor": "<p>{{crane_pin_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Faculty-approved upper boom-to-mast pivot connection baseline.",
+        "variables": {
+          "crane_pin_F_kN": 20,
+          "crane_pin_d_mm": 20,
+          "crane_pin_tb_mm": 10,
+          "crane_pin_tc_mm": 8,
+          "crane_pin_tau_allow_MPa": 100,
+          "crane_pin_sigma_b_allow_MPa": 180
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "a6",
+          "a7",
+          "a8",
+          "a9",
+          "a10",
+          "a11",
+          "a12",
+          "a13",
+          "a14"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-SHOP-CRANE-MAST-B-001",
     "slug": "shop-crane-vertical-mast-buckling",
     "title": "Shop Crane Vertical Mast - Column Buckling",

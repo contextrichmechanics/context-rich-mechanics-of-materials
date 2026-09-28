@@ -1,0 +1,15 @@
+---
+title: "Shop Crane Pin/Bolt Connection - Shear and Bearing"
+image: "assets/shop-crane-pin-connection-industry-context.jpg"
+format: html
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assigned Values
+
+```{=html}
+<div id="shop-crane-pin-values"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"shop-crane-pin-connection-shear-bearing",targetId:"shop-crane-pin-values",type:"student"}));</script>
+```

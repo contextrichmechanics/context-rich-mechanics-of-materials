@@ -1021,6 +1021,74 @@
     }
   }
 
+  const cranePinForceKN = numericValue(values, "crane_pin_F_kN");
+  const cranePinDiameterMm = numericValue(values, "crane_pin_d_mm");
+  const cranePinBoomThicknessMm = numericValue(values, "crane_pin_tb_mm");
+  const cranePinClevisThicknessMm = numericValue(values, "crane_pin_tc_mm");
+  const cranePinShearAllowMPa = numericValue(values, "crane_pin_tau_allow_MPa");
+  const cranePinBearingAllowMPa = numericValue(values, "crane_pin_sigma_b_allow_MPa");
+
+  if ([cranePinForceKN, cranePinDiameterMm, cranePinBoomThicknessMm, cranePinClevisThicknessMm, cranePinShearAllowMPa, cranePinBearingAllowMPa].every(value => Number.isFinite(value) && value > 0)) {
+    const forceN = cranePinForceKN * 1000;
+    const pinAreaMm2 = Math.PI * cranePinDiameterMm ** 2 / 4;
+    const totalShearAreaMm2 = 2 * pinAreaMm2;
+    const pinShearMPa = forceN / totalShearAreaMm2;
+    const boomAreaMm2 = cranePinBoomThicknessMm * cranePinDiameterMm;
+    const boomBearingMPa = forceN / boomAreaMm2;
+    const outerForceKN = cranePinForceKN / 2;
+    const clevisAreaMm2 = cranePinClevisThicknessMm * cranePinDiameterMm;
+    const clevisBearingMPa = forceN / 2 / clevisAreaMm2;
+    const ratios = [
+      { label: "pin double shear", value: cranePinShearAllowMPa / pinShearMPa },
+      { label: "central boom-lug bearing", value: cranePinBearingAllowMPa / boomBearingMPa },
+      { label: "outer clevis-plate bearing", value: cranePinBearingAllowMPa / clevisBearingMPa }
+    ];
+    const governing = ratios.reduce((minimum, item) => item.value < minimum.value ? item : minimum);
+    const force25N = 1.25 * forceN;
+    const ratiosF25 = [
+      { label: "pin double shear", value: cranePinShearAllowMPa / (force25N / totalShearAreaMm2) },
+      { label: "central boom-lug bearing", value: cranePinBearingAllowMPa / (force25N / boomAreaMm2) },
+      { label: "outer clevis-plate bearing", value: cranePinBearingAllowMPa / (force25N / 2 / clevisAreaMm2) }
+    ];
+    const governingF25 = ratiosF25.reduce((minimum, item) => item.value < minimum.value ? item : minimum);
+    const diameter25Mm = 1.25 * cranePinDiameterMm;
+    const pinArea25Mm2 = Math.PI * diameter25Mm ** 2 / 4;
+    const pinShearD25MPa = forceN / (2 * pinArea25Mm2);
+    const boomBearingD25MPa = forceN / (cranePinBoomThicknessMm * diameter25Mm);
+    const clevisBearingD25MPa = forceN / 2 / (cranePinClevisThicknessMm * diameter25Mm);
+
+    values.crane_pin_Ap_mm2 = formatDerived(pinAreaMm2, 3);
+    values.crane_pin_Ashear_mm2 = formatDerived(totalShearAreaMm2, 3);
+    values.crane_pin_tau_MPa = formatDerived(pinShearMPa, 3);
+    values.crane_pin_n_shear = formatDerived(ratios[0].value, 3);
+    values.crane_pin_Ab_boom_mm2 = formatDerived(boomAreaMm2, 2);
+    values.crane_pin_sigma_boom_MPa = formatDerived(boomBearingMPa, 3);
+    values.crane_pin_n_boom = formatDerived(ratios[1].value, 3);
+    values.crane_pin_Fplate_kN = formatDerived(outerForceKN, 3);
+    values.crane_pin_Ab_clevis_mm2 = formatDerived(clevisAreaMm2, 2);
+    values.crane_pin_sigma_clevis_MPa = formatDerived(clevisBearingMPa, 3);
+    values.crane_pin_n_clevis = formatDerived(ratios[2].value, 3);
+    values.crane_pin_governing_mode = governing.label;
+    values.crane_pin_governing_ratio = formatDerived(governing.value, 3);
+    values.crane_pin_F25_kN = formatDerived(1.25 * cranePinForceKN, 3);
+    values.crane_pin_tau_F25_MPa = formatDerived(force25N / totalShearAreaMm2, 3);
+    values.crane_pin_sigma_boom_F25_MPa = formatDerived(force25N / boomAreaMm2, 3);
+    values.crane_pin_sigma_clevis_F25_MPa = formatDerived(force25N / 2 / clevisAreaMm2, 3);
+    values.crane_pin_n_shear_F25 = formatDerived(ratiosF25[0].value, 3);
+    values.crane_pin_n_boom_F25 = formatDerived(ratiosF25[1].value, 3);
+    values.crane_pin_n_clevis_F25 = formatDerived(ratiosF25[2].value, 3);
+    values.crane_pin_governing_F25 = governingF25.label;
+    values.crane_pin_d25_mm = formatDerived(diameter25Mm, 2);
+    values.crane_pin_tau_d25_MPa = formatDerived(pinShearD25MPa, 3);
+    values.crane_pin_sigma_boom_d25_MPa = formatDerived(boomBearingD25MPa, 3);
+    values.crane_pin_sigma_clevis_d25_MPa = formatDerived(clevisBearingD25MPa, 3);
+    values.crane_pin_n_shear_d25 = formatDerived(cranePinShearAllowMPa / pinShearD25MPa, 3);
+    values.crane_pin_n_boom_d25 = formatDerived(cranePinBearingAllowMPa / boomBearingD25MPa, 3);
+    values.crane_pin_n_clevis_d25 = formatDerived(cranePinBearingAllowMPa / clevisBearingD25MPa, 3);
+    values.crane_pin_thickness_assessment = `Central-lug bearing stress varies inversely with t_b, so increasing t_b changes only that included bearing check. Outer-clevis bearing stress varies inversely with t_c, so increasing t_c changes only the outer-plate check. Neither thickness appears in F/[2(pi d^2/4)], so neither changes idealized pin shear stress.`;
+    values.crane_pin_assessment = `The included ratios are ${formatDerived(ratios[0].value, 3)} for pin double shear, ${formatDerived(ratios[1].value, 3)} for central boom-lug bearing, and ${formatDerived(ratios[2].value, 3)} for outer clevis-plate bearing. The governing included mode is ${governing.label} at ${formatDerived(governing.value, 3)}. ${ratios.every(item => item.value >= 1) ? "All three assigned allowable criteria are met" : "At least one assigned allowable criterion is not met"} within this teaching model. Increasing the dimension most directly associated with the governing mode, such as central-lug thickness for central bearing or pin diameter for pin shear/bearing, improves that check. This is an idealized allowable-stress comparison, not the actual crane factor of safety, failure-mode determination, or certification.`;
+  }
+
   const craneMastLoadKN = numericValue(values, "crane_mast_P_kN");
   const craneMastLengthM = numericValue(values, "crane_mast_L_m");
   const craneMastWidthMm = numericValue(values, "crane_mast_b_mm");
