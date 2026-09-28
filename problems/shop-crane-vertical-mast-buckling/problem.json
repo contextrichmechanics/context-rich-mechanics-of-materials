@@ -1,0 +1,17 @@
+{
+  "id": "MOS-SHOP-CRANE-MAST-B-001",
+  "slug": "shop-crane-vertical-mast-buckling",
+  "title": "Shop Crane Vertical Mast - Column Buckling",
+  "studentDocumentTitle": "Student Packet - Shop Crane Vertical Mast - Column Buckling",
+  "instructorDocumentTitle": "Instructor Guide - Shop Crane Vertical Mast - Column Buckling",
+  "summary": "Evaluate weak-axis Euler buckling of an equivalent shop-crane vertical mast column and interpret the model limitations.",
+  "textbookChapters": ["Columns", "Buckling", "Euler critical load"],
+  "derivedPlaceholders": ["crane_mast_A_mm2","crane_mast_Ix_mm4","crane_mast_Iy_mm4","crane_mast_Imin_mm4","crane_mast_axis","crane_mast_rmin_mm","crane_mast_slenderness","crane_mast_Pcr_kN","crane_mast_Pcr_MN","crane_mast_nb","crane_mast_P25_kN","crane_mast_nb_P25","crane_mast_L25_m","crane_mast_Pcr_L25_kN","crane_mast_nb_L25","crane_mast_Pcr_K2_kN","crane_mast_nb_K2","crane_mast_section_assessment","crane_mast_assessment"],
+  "image": "assets/shop-crane-mast-industry-context.jpg",
+  "imageAttribution": "Professor-supplied focused shop-crane photograph. It provides context only; no model identity, dimensions, material grade, mast force, or end restraint is inferred from it.",
+  "idealizedImage": "assets/shop-crane-mast-instructor-reference.jpg",
+  "idealizedImageAlt": "Instructor reference showing an equivalent pinned-pinned mast column and rectangular hollow cross section.",
+  "source": "index.html",
+  "problemStatement": "<p>A portable shop crane transfers lifting demand through its boom, hydraulic system, vertical mast, diagonal braces, connections, base, and floor. The real mast is part of a braced frame and is not literally an isolated pinned-pinned column.</p><p>For this teaching problem, isolate the vertical mast and replace its interaction with the real frame by an equivalent straight prismatic column carrying an instructor-defined axial compressive load. The assigned length and rectangular hollow-section dimensions are teaching-model values, not measurements from the photograph.</p>",
+  "engineeringGoal": "<p>Calculate section properties about both centroidal axes, identify the weak axis, determine radius of gyration and slenderness, calculate the Euler critical load and idealized Euler load ratio, evaluate load, length, restraint, and section sensitivities, and explain why this equivalent model is not a prediction or certification of the real crane.</p>"
+}

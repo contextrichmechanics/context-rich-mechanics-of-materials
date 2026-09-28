@@ -1021,6 +1021,64 @@
     }
   }
 
+  const craneMastLoadKN = numericValue(values, "crane_mast_P_kN");
+  const craneMastLengthM = numericValue(values, "crane_mast_L_m");
+  const craneMastWidthMm = numericValue(values, "crane_mast_b_mm");
+  const craneMastHeightMm = numericValue(values, "crane_mast_h_mm");
+  const craneMastThicknessMm = numericValue(values, "crane_mast_t_mm");
+  const craneMastModulusGPa = numericValue(values, "crane_mast_E_GPa");
+  const craneMastEffectiveLengthFactor = numericValue(values, "crane_mast_K");
+
+  if (
+    Number.isFinite(craneMastLoadKN) && craneMastLoadKN > 0 &&
+    Number.isFinite(craneMastLengthM) && craneMastLengthM > 0 &&
+    Number.isFinite(craneMastWidthMm) && craneMastWidthMm > 0 &&
+    Number.isFinite(craneMastHeightMm) && craneMastHeightMm > 0 &&
+    Number.isFinite(craneMastThicknessMm) && craneMastThicknessMm > 0 &&
+    craneMastWidthMm > 2 * craneMastThicknessMm && craneMastHeightMm > 2 * craneMastThicknessMm &&
+    Number.isFinite(craneMastModulusGPa) && craneMastModulusGPa > 0 &&
+    Number.isFinite(craneMastEffectiveLengthFactor) && craneMastEffectiveLengthFactor > 0
+  ) {
+    const innerWidthMm = craneMastWidthMm - 2 * craneMastThicknessMm;
+    const innerHeightMm = craneMastHeightMm - 2 * craneMastThicknessMm;
+    const areaMm2 = craneMastWidthMm * craneMastHeightMm - innerWidthMm * innerHeightMm;
+    const inertiaXMm4 = (craneMastWidthMm * craneMastHeightMm ** 3 - innerWidthMm * innerHeightMm ** 3) / 12;
+    const inertiaYMm4 = (craneMastHeightMm * craneMastWidthMm ** 3 - innerHeightMm * innerWidthMm ** 3) / 12;
+    const inertiaMinMm4 = Math.min(inertiaXMm4, inertiaYMm4);
+    const governingAxis = inertiaXMm4 <= inertiaYMm4 ? "the x axis (I_x)" : "the y axis (I_y)";
+    const radiusMinMm = Math.sqrt(inertiaMinMm4 / areaMm2);
+    const lengthMm = craneMastLengthM * 1000;
+    const slenderness = craneMastEffectiveLengthFactor * lengthMm / radiusMinMm;
+    const criticalLoadN = Math.PI ** 2 * craneMastModulusGPa * 1000 * inertiaMinMm4 /
+      (craneMastEffectiveLengthFactor * lengthMm) ** 2;
+    const criticalLoadKN = criticalLoadN / 1000;
+    const bucklingMargin = criticalLoadKN / craneMastLoadKN;
+    const load25KN = 1.25 * craneMastLoadKN;
+    const length25M = 1.25 * craneMastLengthM;
+    const criticalLength25KN = criticalLoadKN / 1.25 ** 2;
+    const criticalK2KN = criticalLoadKN * (craneMastEffectiveLengthFactor / 2) ** 2;
+
+    values.crane_mast_A_mm2 = formatDerived(areaMm2, 2);
+    values.crane_mast_Ix_mm4 = formatDerived(inertiaXMm4, 2);
+    values.crane_mast_Iy_mm4 = formatDerived(inertiaYMm4, 2);
+    values.crane_mast_Imin_mm4 = formatDerived(inertiaMinMm4, 2);
+    values.crane_mast_axis = governingAxis;
+    values.crane_mast_rmin_mm = formatDerived(radiusMinMm, 4);
+    values.crane_mast_slenderness = formatDerived(slenderness, 4);
+    values.crane_mast_Pcr_kN = formatDerived(criticalLoadKN, 3);
+    values.crane_mast_Pcr_MN = formatDerived(criticalLoadKN / 1000, 5);
+    values.crane_mast_nb = formatDerived(bucklingMargin, 2);
+    values.crane_mast_P25_kN = formatDerived(load25KN, 3);
+    values.crane_mast_nb_P25 = formatDerived(criticalLoadKN / load25KN, 2);
+    values.crane_mast_L25_m = formatDerived(length25M, 2);
+    values.crane_mast_Pcr_L25_kN = formatDerived(criticalLength25KN, 2);
+    values.crane_mast_nb_L25 = formatDerived(criticalLength25KN / craneMastLoadKN, 2);
+    values.crane_mast_Pcr_K2_kN = formatDerived(criticalK2KN, 2);
+    values.crane_mast_nb_K2 = formatDerived(criticalK2KN / craneMastLoadKN, 2);
+    values.crane_mast_section_assessment = `Changing b, h, or t changes both centroidal inertias, the governing minimum inertia, and r_min. Increasing dimensions or wall thickness generally raises Euler resistance, but material placed farther from the governing centroidal axis is especially effective because second moment of area weights distance from that axis quadratically. Both I_x and I_y must be recalculated because the governing axis can change.`;
+    values.crane_mast_assessment = `The idealized weak-axis buckling mode is associated with ${governingAxis}, with P_cr = ${formatDerived(criticalLoadKN, 3)} kN and an Euler load ratio n_b = ${formatDerived(bucklingMargin, 2)}. The most influential modeled quantities are E, the governing I_min, and effective length KL; reducing effective length, improving equivalent restraint, or increasing weak-axis inertia increases the idealized resistance. This is not a crane certification or the real crane's factor of safety: the modeled KL/r is ${formatDerived(slenderness, 4)}, and real bracing, restraint, frame interaction, eccentricity, imperfections, residual stress, yielding or inelastic behavior, local wall buckling, connections, hydraulic/boom interaction, and dynamics are excluded.`;
+  }
+
   const craneLoadKN = numericValue(values, "crane_W_kN");
   const craneLengthM = numericValue(values, "crane_L_m");
   const craneWidthMm = numericValue(values, "crane_b_mm");

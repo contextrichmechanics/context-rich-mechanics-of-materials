@@ -13691,6 +13691,554 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-SHOP-CRANE-MAST-B-001",
+    "slug": "shop-crane-vertical-mast-buckling",
+    "title": "Shop Crane Vertical Mast - Column Buckling",
+    "studentDocumentTitle": "Student Packet - Shop Crane Vertical Mast - Column Buckling",
+    "instructorDocumentTitle": "Instructor Guide - Shop Crane Vertical Mast - Column Buckling",
+    "summary": "Evaluate weak-axis Euler buckling of an equivalent shop-crane vertical mast column and interpret the model limitations.",
+    "textbookChapters": [
+      "Columns",
+      "Buckling",
+      "Euler critical load"
+    ],
+    "derivedPlaceholders": [
+      "crane_mast_A_mm2",
+      "crane_mast_Ix_mm4",
+      "crane_mast_Iy_mm4",
+      "crane_mast_Imin_mm4",
+      "crane_mast_axis",
+      "crane_mast_rmin_mm",
+      "crane_mast_slenderness",
+      "crane_mast_Pcr_kN",
+      "crane_mast_Pcr_MN",
+      "crane_mast_nb",
+      "crane_mast_P25_kN",
+      "crane_mast_nb_P25",
+      "crane_mast_L25_m",
+      "crane_mast_Pcr_L25_kN",
+      "crane_mast_nb_L25",
+      "crane_mast_Pcr_K2_kN",
+      "crane_mast_nb_K2",
+      "crane_mast_section_assessment",
+      "crane_mast_assessment"
+    ],
+    "image": "problems/shop-crane-vertical-mast-buckling/assets/shop-crane-mast-industry-context.jpg",
+    "imageAttribution": "Professor-supplied focused shop-crane photograph. It provides context only; no model identity, dimensions, material grade, mast force, or end restraint is inferred from it.",
+    "idealizedImage": "problems/shop-crane-vertical-mast-buckling/assets/shop-crane-mast-instructor-reference.jpg",
+    "idealizedImageAlt": "Instructor reference showing an equivalent pinned-pinned mast column and rectangular hollow cross section.",
+    "source": "problems/shop-crane-vertical-mast-buckling/index.html",
+    "problemStatement": "<p>A portable shop crane transfers lifting demand through its boom, hydraulic system, vertical mast, diagonal braces, connections, base, and floor. The real mast is part of a braced frame and is not literally an isolated pinned-pinned column.</p><p>For this teaching problem, isolate the vertical mast and replace its interaction with the real frame by an equivalent straight prismatic column carrying an instructor-defined axial compressive load. The assigned length and rectangular hollow-section dimensions are teaching-model values, not measurements from the photograph.</p>",
+    "engineeringGoal": "<p>Calculate section properties about both centroidal axes, identify the weak axis, determine radius of gyration and slenderness, calculate the Euler critical load and idealized Euler load ratio, evaluate load, length, restraint, and section sensitivities, and explain why this equivalent model is not a prediction or certification of the real crane.</p>",
+    "variables": [
+      {
+        "key": "crane_mast_P_kN",
+        "symbol": "P",
+        "label": "Equivalent axial compressive mast load",
+        "value": 8.896,
+        "unit": "kN",
+        "min": 1,
+        "max": 50,
+        "step": 0.1
+      },
+      {
+        "key": "crane_mast_L_m",
+        "symbol": "L",
+        "label": "Equivalent modeled column length",
+        "value": 1.2,
+        "unit": "m",
+        "min": 0.3,
+        "max": 4,
+        "step": 0.05
+      },
+      {
+        "key": "crane_mast_b_mm",
+        "symbol": "b",
+        "label": "Equivalent outer section width",
+        "value": 80,
+        "unit": "mm",
+        "min": 30,
+        "max": 250,
+        "step": 1
+      },
+      {
+        "key": "crane_mast_h_mm",
+        "symbol": "h",
+        "label": "Equivalent outer section height",
+        "value": 100,
+        "unit": "mm",
+        "min": 30,
+        "max": 300,
+        "step": 1
+      },
+      {
+        "key": "crane_mast_t_mm",
+        "symbol": "t",
+        "label": "Uniform wall thickness",
+        "value": 5,
+        "unit": "mm",
+        "min": 1,
+        "max": 25,
+        "step": 0.5
+      },
+      {
+        "key": "crane_mast_E_GPa",
+        "symbol": "E",
+        "label": "Representative structural-steel elastic modulus",
+        "value": 200,
+        "unit": "GPa",
+        "min": 50,
+        "max": 250,
+        "step": 1
+      },
+      {
+        "key": "crane_mast_K",
+        "symbol": "K",
+        "label": "Equivalent effective-length factor",
+        "value": 1,
+        "unit": "-",
+        "min": 0.5,
+        "max": 2.5,
+        "step": 0.05
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "function"
+        ],
+        "type": "conceptual",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Connect crane function to mast load transfer."
+        ],
+        "student": "<p>State the primary function of the shop crane and the structural role of the vertical mast.</p>",
+        "instructor": "<p>The crane lifts and positions heavy components. The mast participates in the frame load path, transferring demand from the boom and hydraulic system toward the base while carrying compression and receiving lateral restraint from the real braces.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Loads",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "loads"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Relate the suspended load to mast demand without equating them."
+        ],
+        "student": "<p>Identify the principal external load during lifting and explain how the boom and hydraulic system can transfer structural demand into the mast.</p>",
+        "instructor": "<p>The suspended hook load acts on the boom. Boom, ram, joints, and braces redistribute forces into the mast and base, so the actual mast force is not generally identical to the hook load.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "restraint",
+          "boundary conditions"
+        ],
+        "type": "boundary condition",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Distinguish real bracing from equivalent end conditions."
+        ],
+        "student": "<p>Identify real supports and restraints visible in the crane and distinguish them from the equivalent column end conditions used later.</p>",
+        "instructor": "<p>The base, braces, boom-mast connection, and hydraulic/frame connections restrain the real mast. The pinned-pinned K = 1.0 condition is only an instructor-assigned equivalent model.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path"
+        ],
+        "type": "load-path reasoning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Trace lifting demand to the floor."
+        ],
+        "student": "<p>Trace the qualitative load path from the suspended load through the hook, boom, crane frame, base, and floor.</p>",
+        "instructor": "<p>Demand travels from the hook into the boom, through the boom pivot and hydraulic/frame system into the mast and braces, then through the base and wheels or supports to the floor.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Component",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "mast",
+          "compression"
+        ],
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Select the mast for stability analysis."
+        ],
+        "student": "<p>Identify the component selected for this problem and explain why a compression-member stability check is relevant.</p>",
+        "instructor": "<p>The vertical mast is isolated because its equivalent axial compression makes column instability a relevant teaching check.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "buckling"
+        ],
+        "type": "response identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Distinguish instability from axial stress."
+        ],
+        "student": "<p>Identify the target failure mechanism and distinguish column buckling from a simple axial-stress calculation.</p>",
+        "instructor": "<p>Buckling is a stability loss involving lateral deformation; it can govern before a simple uniform-stress limit in a sufficiently slender compression member.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "parameters"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify all Euler-model inputs."
+        ],
+        "student": "<p>Identify the geometric, material, load, and restraint parameters controlling the assigned analysis.</p>",
+        "instructor": "<p>P sets the applied demand; L and K define effective length; b, h, and t determine area and both centroidal inertias; E sets elastic stiffness.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "idealization",
+          "column"
+        ],
+        "type": "fbd/modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Construct the equivalent column model."
+        ],
+        "student": "<p>Draw an equivalent column showing axial P, modeled L, assumed end conditions, rectangular hollow cross section, and likely buckling direction.</p>",
+        "instructor": "<p>A complete model shows a straight prismatic column, axial compression, equivalent pinned-pinned ends with K = 1.0, the assigned rectangular hollow section, and weak-axis lateral buckling.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "assumptions",
+          "scope"
+        ],
+        "type": "modeling assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Bound the Euler teaching model."
+        ],
+        "student": "<p>State the assumptions used to reduce the real braced crane mast to the equivalent column model.</p>",
+        "instructor": "<p>Use static equivalent axial loading, a straight prismatic rectangular hollow column, assigned L and geometry, linear elasticity, small initial deformation, Euler theory, and equivalent pinned-pinned K = 1.0. Neglect self-weight, connections, welds, ram and braces explicitly, frame interaction, eccentricity, residual stress, imperfections, local buckling, impact, fatigue, vibration, and dynamics.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Plan the stability calculation."
+        ],
+        "student": "<p>Outline the calculation sequence before numerical work.</p>",
+        "instructor": "<p>Calculate A, Ix, and Iy; select Imin and the weak axis; calculate rmin and KL/rmin; calculate Euler Pcr and the idealized load ratio; evaluate sensitivities; and interpret limitations.</p>"
+      },
+      {
+        "id": "a1",
+        "title": "Equivalent Column Boundary Conditions",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "effective length"
+        ],
+        "type": "boundary condition",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "State the equivalent end condition and K."
+        ],
+        "student": "<p>Using the assigned model, identify the equivalent end conditions and state K.</p>",
+        "instructor": "<p>The teaching model is equivalent pinned-pinned with K = <strong>{{crane_mast_K}}</strong>. This is not a claim about literal real-crane joints.</p>"
+      },
+      {
+        "id": "a2",
+        "title": "Cross-Sectional Area",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "area"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Calculate hollow-section area."
+        ],
+        "student": "<p>Calculate A = bh - (b - 2t)(h - 2t).</p>",
+        "instructor": "<p>A = <strong>{{crane_mast_A_mm2}} mm<sup>2</sup></strong>.</p>"
+      },
+      {
+        "id": "a3",
+        "title": "Centroidal Second Moments of Area",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "second moment"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate both centroidal inertias."
+        ],
+        "student": "<p>Calculate I<sub>x</sub> and I<sub>y</sub> for the rectangular hollow section.</p>",
+        "instructor": "<p>I<sub>x</sub> = <strong>{{crane_mast_Ix_mm4}} mm<sup>4</sup></strong> and I<sub>y</sub> = <strong>{{crane_mast_Iy_mm4}} mm<sup>4</sup></strong>.</p>"
+      },
+      {
+        "id": "a4",
+        "title": "Governing Buckling Axis",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "weak axis"
+        ],
+        "type": "interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Select Imin and buckling axis."
+        ],
+        "student": "<p>Determine I<sub>min</sub> by comparing both axes and identify the expected weak-axis buckling direction.</p>",
+        "instructor": "<p>I<sub>min</sub> = <strong>{{crane_mast_Imin_mm4}} mm<sup>4</sup></strong>, associated with <strong>{{crane_mast_axis}}</strong>.</p>"
+      },
+      {
+        "id": "a5",
+        "title": "Radius of Gyration",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "radius of gyration"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate rmin."
+        ],
+        "student": "<p>Calculate r<sub>min</sub> = sqrt(I<sub>min</sub>/A).</p>",
+        "instructor": "<p>r<sub>min</sub> = <strong>{{crane_mast_rmin_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "a6",
+        "title": "Slenderness Ratio",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "slenderness"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate and interpret effective slenderness."
+        ],
+        "student": "<p>Calculate KL/r<sub>min</sub> using consistent units and explain what it represents.</p>",
+        "instructor": "<p>KL/r<sub>min</sub> = <strong>{{crane_mast_slenderness}}</strong>. This moderate modeled slenderness is central to the limitation on interpreting classical Euler theory as a real failure prediction.</p>"
+      },
+      {
+        "id": "a7",
+        "title": "Euler Critical Buckling Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "Euler buckling"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate Euler critical load."
+        ],
+        "student": "<p>Calculate P<sub>cr</sub> = pi<sup>2</sup>EI<sub>min</sub>/(KL)<sup>2</sup>.</p>",
+        "instructor": "<p>P<sub>cr</sub> = <strong>{{crane_mast_Pcr_kN}} kN = {{crane_mast_Pcr_MN}} MN</strong>.</p>"
+      },
+      {
+        "id": "a8",
+        "title": "Idealized Buckling Margin",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "buckling margin"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate and bound the Euler load ratio."
+        ],
+        "student": "<p>Calculate n<sub>b</sub> = P<sub>cr</sub>/P and interpret it only within the equivalent Euler model.</p>",
+        "instructor": "<p>n<sub>b</sub> = <strong>{{crane_mast_nb}}</strong>. This is an idealized Euler buckling margin, not the real crane's physical factor of safety.</p>"
+      },
+      {
+        "id": "a9",
+        "title": "Load Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "load"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Evaluate applied-load sensitivity."
+        ],
+        "student": "<p>Increase P by 25%. Determine the new n<sub>b</sub> and explain why P<sub>cr</sub> is unchanged.</p>",
+        "instructor": "<p>P<sub>new</sub> = <strong>{{crane_mast_P25_kN}} kN</strong>; P<sub>cr</sub> is unchanged because applied load is absent from the Euler capacity equation; n<sub>b,new</sub> = <strong>{{crane_mast_nb_P25}}</strong>.</p>"
+      },
+      {
+        "id": "a10",
+        "title": "Length Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "length"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Apply inverse-square length scaling."
+        ],
+        "student": "<p>Increase L by 25%. Determine the new P<sub>cr</sub> and n<sub>b</sub>, and explain the L<sup>-2</sup> dependence.</p>",
+        "instructor": "<p>L<sub>new</sub> = <strong>{{crane_mast_L25_m}} m</strong>, P<sub>cr,new</sub> = <strong>{{crane_mast_Pcr_L25_kN}} kN</strong>, and n<sub>b,new</sub> = <strong>{{crane_mast_nb_L25}}</strong>.</p>"
+      },
+      {
+        "id": "a11",
+        "title": "Effective-Length Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "restraint"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Apply inverse-square K scaling."
+        ],
+        "student": "<p>Set K = 2.0 with other inputs unchanged. Determine the new P<sub>cr</sub> and n<sub>b</sub>, and explain the K<sup>-2</sup> dependence.</p>",
+        "instructor": "<p>P<sub>cr,new</sub> = <strong>{{crane_mast_Pcr_K2_kN}} kN</strong> and n<sub>b,new</sub> = <strong>{{crane_mast_nb_K2}}</strong>.</p>"
+      },
+      {
+        "id": "a12",
+        "title": "Section Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "section geometry"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Relate section dimensions to buckling resistance."
+        ],
+        "student": "<p>Explain how b, h, and t affect I<sub>x</sub>, I<sub>y</sub>, I<sub>min</sub>, r<sub>min</sub>, and Euler resistance. Why is material farther from the governing centroidal axis effective?</p>",
+        "instructor": "<p>{{crane_mast_section_assessment}}</p>"
+      },
+      {
+        "id": "a13",
+        "title": "Euler-Model Applicability",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "model validity"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "Critique Euler applicability."
+        ],
+        "student": "<p>Discuss why Euler buckling alone should not automatically be treated as the real mast failure load. Address slenderness, real bracing and restraint, imperfections and eccentricity, local buckling, yielding or inelastic behavior, and frame interaction.</p>",
+        "instructor": "<p>With KL/r = <strong>{{crane_mast_slenderness}}</strong>, the assigned model has relatively low/moderate slenderness. Real bracing, non-ideal restraint, frame interaction, eccentricity, imperfections, residual stress, yielding or inelastic behavior, local wall buckling, connections, and hydraulic/boom interaction prevent treating Euler P<sub>cr</sub> as a validated real failure load.</p>"
+      },
+      {
+        "id": "a14",
+        "title": "Engineering Assessment and Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "engineering judgment"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "State a bounded stability assessment."
+        ],
+        "student": "<p>State the governing idealized buckling axis, P<sub>cr</sub>, n<sub>b</sub>, influential modeled parameters, one mechanics-based modification, and important model limitations. Do not claim crane certification.</p>",
+        "instructor": "<p>{{crane_mast_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Faculty-approved equivalent vertical-mast Euler-buckling baseline.",
+        "variables": {
+          "crane_mast_P_kN": 8.896,
+          "crane_mast_L_m": 1.2,
+          "crane_mast_b_mm": 80,
+          "crane_mast_h_mm": 100,
+          "crane_mast_t_mm": 5,
+          "crane_mast_E_GPa": 200,
+          "crane_mast_K": 1
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "a6",
+          "a7",
+          "a8",
+          "a9",
+          "a10",
+          "a11",
+          "a12",
+          "a13",
+          "a14"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-WHEEL-005",
     "slug": "spoked-wheel-load-sharing",
     "title": "Load Sharing in a Three-Spoke Mobility Wheel Under Axle Load",
