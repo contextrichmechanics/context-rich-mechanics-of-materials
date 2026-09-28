@@ -1,16 +1,16 @@
-# Graph Report - codex-shop-crane-20260928  (2026-09-28)
+# Graph Report - codex-landing-gear-20260927  (2026-09-27)
 
 ## Corpus Check
-- 337 files · ~3,246,573 words
+- 329 files · ~3,190,322 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 932 nodes · 913 edges · 107 communities (102 shown, 5 thin omitted)
+- 916 nodes · 899 edges · 105 communities (100 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4c26b364`
+- Built from commit: `2d5f4a73`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -116,8 +116,6 @@
 - Aircraft Wing with Engine - Combined Bending and Torsion
 - aircraft-main-landing-gear-buckling-side-stay/instructor-guide.qmd
 - Aircraft Main Landing Gear - Column Buckling and Side-Stay Loading
-- adjustable-shop-crane-boom-bending/instructor-guide.qmd
-- Adjustable Shop Crane Boom - Bending of a Telescoping Extension
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -137,7 +135,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (107 total, 5 thin omitted)
+## Communities (105 total, 5 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -523,16 +521,8 @@ Nodes (8): Assignment Options, Generated Question Set and Solutions, Instructor 
 Cohesion: 0.33
 Nodes (5): Aircraft Main Landing Gear - Column Buckling and Side-Stay Loading, Analysis Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal
 
-### Community 105 - "adjustable-shop-crane-boom-bending/instructor-guide.qmd"
-Cohesion: 0.20
-Nodes (7): Assignment Options, Generated Question Set and Solutions, Instructor Reference Idealization, Problem Context, Purpose, Scope, Sources and Provenance
-
-### Community 106 - "Adjustable Shop Crane Boom - Bending of a Telescoping Extension"
-Cohesion: 0.33
-Nodes (5): Adjustable Shop Crane Boom - Bending of a Telescoping Extension, Analysis Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal
-
 ## Knowledge Gaps
-- **585 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+580 more)
+- **575 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+570 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -542,7 +532,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _585 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _575 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**

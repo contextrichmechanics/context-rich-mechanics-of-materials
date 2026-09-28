@@ -1,0 +1,28 @@
+---
+title: "Adjustable Shop Crane Boom - Bending of a Telescoping Extension"
+description: "Analyze bending of the local projecting portion of an adjustable shop-crane telescoping extension."
+image: "assets/shop-crane-boom-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, analysis]
+mechanics_concepts: [cantilever beam, shear force, bending moment, rectangular hollow section, bending stress]
+course_topics: [bending, internal loadings, shear and moment diagrams]
+textbook_chapters: [Internal loadings, Shear and moment diagrams, Bending stress]
+problem_types: [load-path analysis, structural idealization, section-property calculation, stress calculation, engineering assessment]
+competencies: [load-path reasoning, free-body modeling, shear-moment analysis, section properties, flexure formula, engineering judgment]
+industries: [material handling, shop equipment, lifting equipment]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-SHOP-CRANE-BOOM-B-001"
+version: "0.1.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+::: {.callout-note title="Mechanics Focus"}
+Only the local projecting telescoping extension is idealized as a cantilever. This is not a complete crane-rating or structural-safety analysis.
+:::
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=adjustable-shop-crane-boom-bending){.btn .btn-secondary}

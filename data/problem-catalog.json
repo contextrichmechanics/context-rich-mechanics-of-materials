@@ -1,5 +1,493 @@
 [
   {
+    "id": "MOS-SHOP-CRANE-BOOM-B-001",
+    "slug": "adjustable-shop-crane-boom-bending",
+    "title": "Adjustable Shop Crane Boom - Bending of a Telescoping Extension",
+    "studentDocumentTitle": "Student Packet - Adjustable Shop Crane Boom - Bending of a Telescoping Extension",
+    "instructorDocumentTitle": "Instructor Guide - Adjustable Shop Crane Boom - Bending of a Telescoping Extension",
+    "summary": "Determine reactions, internal resultants, section properties, and maximum bending stress for the local projecting portion of a telescoping shop-crane boom.",
+    "textbookChapters": [
+      "Internal loadings",
+      "Shear and moment diagrams",
+      "Bending stress"
+    ],
+    "derivedPlaceholders": [
+      "crane_R_kN",
+      "crane_Vmax_kN",
+      "crane_Mmax_kNm",
+      "crane_Mmax_Nmm",
+      "crane_A_mm2",
+      "crane_I_mm4",
+      "crane_c_mm",
+      "crane_S_mm3",
+      "crane_sigma_MPa",
+      "crane_sigma_load25_MPa",
+      "crane_sigma_reach25_MPa",
+      "crane_assessment"
+    ],
+    "image": "problems/adjustable-shop-crane-boom-bending/assets/shop-crane-boom-industry-context.jpg",
+    "imageAttribution": "Professor-supplied focused shop-crane photograph. It provides context only; no model identity or analytical dimensions are inferred from it.",
+    "idealizedImage": "problems/adjustable-shop-crane-boom-bending/assets/shop-crane-boom-instructor-reference.jpg",
+    "idealizedImageAlt": "Instructor reference showing the local projecting telescoping extension as a cantilever, its rectangular hollow section, and its triangular bending-moment diagram.",
+    "source": "problems/adjustable-shop-crane-boom-bending/index.html",
+    "problemStatement": "<p>An adjustable shop crane uses a main boom, telescoping extension, mast pivot, hydraulic ram, hook, and base structure. This problem does not treat the complete boom as a cantilever. It isolates only the effective projecting portion of the telescoping extension beyond its support/retention section and represents that local projection as a straight prismatic cantilever carrying a downward hook load at its free end.</p><p>The hook load represents a nominal 1-ton-position teaching load. The effective local projection and rectangular hollow-section dimensions are instructor-assigned values, not measurements from the photograph or specifications of an identified crane model.</p>",
+    "engineeringGoal": "<p>Calculate the local fixed-section reactions, maximum shear and bending moment, rectangular hollow-section properties, and maximum bending stress. Use the model to explain why increased reach generally requires reduced allowable lifted load while recognizing that bending stress alone does not establish an actual crane rating.</p>",
+    "variables": [
+      {
+        "key": "crane_W_kN",
+        "symbol": "W",
+        "label": "Downward hook load",
+        "value": 8.896,
+        "unit": "kN",
+        "min": 1,
+        "max": 20,
+        "step": 0.1
+      },
+      {
+        "key": "crane_L_m",
+        "symbol": "L",
+        "label": "Effective local projecting length",
+        "value": 0.6,
+        "unit": "m",
+        "min": 0.1,
+        "max": 1.5,
+        "step": 0.01
+      },
+      {
+        "key": "crane_b_mm",
+        "symbol": "b",
+        "label": "Equivalent outer section width",
+        "value": 60,
+        "unit": "mm",
+        "min": 20,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "key": "crane_h_mm",
+        "symbol": "h",
+        "label": "Equivalent outer section height",
+        "value": 80,
+        "unit": "mm",
+        "min": 20,
+        "max": 250,
+        "step": 1
+      },
+      {
+        "key": "crane_t_mm",
+        "symbol": "t",
+        "label": "Uniform wall thickness",
+        "value": 4,
+        "unit": "mm",
+        "min": 1,
+        "max": 20,
+        "step": 0.5
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "function"
+        ],
+        "type": "conceptual",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Connect the extension to crane load transfer."
+        ],
+        "student": "<p>State the structural function of the adjustable boom and telescoping extension.</p>",
+        "instructor": "<p>The boom and extension position the hook and transfer the suspended load toward the mast-support system. The extension permits reach adjustment.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Loads",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "loads"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the assigned local load."
+        ],
+        "student": "<p>Identify the load relevant to the local extension model and where it acts.</p>",
+        "instructor": "<p>The assigned load is the downward hook load <em>W</em>, represented as concentrated at the free end of the effective local projection.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "support",
+          "cantilever"
+        ],
+        "type": "boundary condition",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Distinguish the real support system from the local fixed section."
+        ],
+        "student": "<p>Identify the real support path through the boom, pivot, and hydraulic ram. Explain the local fixed-section idealization.</p>",
+        "instructor": "<p>The real boom is supported by the mast pivot and hydraulic ram. Only the projecting extension beyond its support/retention section is isolated; that retention section supplies the local force and moment reactions.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path"
+        ],
+        "type": "load-path reasoning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Trace the suspended load to the floor."
+        ],
+        "student": "<p>Trace the suspended load through the hook, extension, main boom, mast/support system, base, and floor. Identify where shear and bending occur.</p>",
+        "instructor": "<p>The load passes from hook to extension, main boom, pivot/ram and mast, base, and floor. The local projection carries shear throughout and bending moment increasing toward its retained end.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Location",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "critical section"
+        ],
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Locate maximum local bending moment."
+        ],
+        "student": "<p>Identify the critical section for bending in the local cantilever idealization and explain why.</p>",
+        "instructor": "<p>The support/retention section is critical because the end load has its maximum lever arm there, producing maximum moment magnitude <em>WL</em>.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "bending stress"
+        ],
+        "type": "response identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Keep the problem focused on flexural stress."
+        ],
+        "student": "<p>Identify the primary mechanical response. Why are mast buckling and connection stresses excluded?</p>",
+        "instructor": "<p>The assigned response is longitudinal normal stress from local bending. Mast buckling and pin/bolt mechanics require different idealizations and are reserved for separate problems.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "parameters"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify all active inputs."
+        ],
+        "student": "<p>Identify <em>W</em>, <em>L</em>, <em>b</em>, <em>h</em>, and <em>t</em> and explain how each affects the calculation.</p>",
+        "instructor": "<p><em>W</em> and <em>L</em> determine moment; <em>b</em>, <em>h</em>, and <em>t</em> determine area, second moment, and section modulus. All dimensions are assigned model values.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "idealization",
+          "fbd"
+        ],
+        "type": "fbd/modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Create the local beam model before viewing the reference."
+        ],
+        "student": "<p>Draw only the effective projecting extension as a cantilever of length <em>L</em> with downward free-end load <em>W</em>. Show fixed-section reactions and the critical section.</p>",
+        "instructor": "<p>A complete diagram shows the local projection, fixed retention section, downward end load, vertical reaction, reaction moment, and rectangular hollow section. It must not label the complete boom as a cantilever.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "assumptions",
+          "scope"
+        ],
+        "type": "modeling assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Bound the local beam model."
+        ],
+        "student": "<p>State the assumptions used to reduce the real crane to the local beam model.</p>",
+        "instructor": "<p>Use static loading, a concentrated end load, a straight prismatic rectangular hollow projection, small-deformation linear-elastic beam stress, and assigned local geometry. Neglect self-weight, holes, welds, pins, mast and frame behavior, ram force, 3D effects, impact, swing, fatigue, vibration, and dynamics.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Plan equilibrium through interpretation."
+        ],
+        "student": "<p>State the calculation sequence from equilibrium through internal resultants, section properties, bending stress, sensitivities, and interpretation.</p>",
+        "instructor": "<p>Find reactions, <em>V</em><sub>max</sub>, and <em>M</em><sub>max</sub>; draw the moment diagram; calculate <em>A</em>, <em>I</em>, <em>c</em>, and <em>S</em>; calculate stress; evaluate load/reach/section sensitivity; and state limitations.</p>"
+      },
+      {
+        "id": "a1",
+        "title": "Boundary Conditions and Reactions",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "reactions"
+        ],
+        "type": "calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Calculate fixed-section reactions."
+        ],
+        "student": "<p>Determine the fixed-end reaction force and reaction moment generated by <em>W</em>.</p>",
+        "instructor": "<p><em>R</em> = <em>W</em> = <strong>{{crane_R_kN}} kN</strong>, and the reaction-moment magnitude is <em>WL</em> = <strong>{{crane_Mmax_kNm}} kN&middot;m</strong>.</p>"
+      },
+      {
+        "id": "a2",
+        "title": "Internal Shear and Bending Moment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "shear",
+          "moment"
+        ],
+        "type": "calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Calculate maximum resultants."
+        ],
+        "student": "<p>Determine <em>V</em><sub>max</sub> and <em>M</em><sub>max</sub>, including locations.</p>",
+        "instructor": "<p><em>V</em><sub>max</sub> = <strong>{{crane_Vmax_kN}} kN</strong> and <em>M</em><sub>max</sub> = <strong>{{crane_Mmax_kNm}} kN&middot;m = {{crane_Mmax_Nmm}} N&middot;mm</strong>. Both maxima occur at the local fixed section.</p>"
+      },
+      {
+        "id": "a3",
+        "title": "Bending-Moment Diagram",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "moment diagram"
+        ],
+        "type": "diagram",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Draw the cantilever moment diagram."
+        ],
+        "student": "<p>Sketch and label the bending-moment diagram for the local projection.</p>",
+        "instructor": "<p>The diagram is triangular: zero at the free end and maximum magnitude <strong>{{crane_Mmax_kNm}} kN&middot;m</strong> at the fixed section.</p>"
+      },
+      {
+        "id": "a4",
+        "title": "Cross-Section Properties",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "area",
+          "second moment",
+          "section modulus"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate rectangular hollow-section properties."
+        ],
+        "student": "<p>Calculate <em>A</em>, <em>I</em> about the horizontal centroidal axis, <em>c</em> = <em>h</em>/2, and <em>S</em> = <em>I/c</em>.</p>",
+        "instructor": "<p><em>A</em> = <strong>{{crane_A_mm2}} mm<sup>2</sup></strong>, <em>I</em> = <strong>{{crane_I_mm4}} mm<sup>4</sup></strong>, <em>c</em> = <strong>{{crane_c_mm}} mm</strong>, and <em>S</em> = <strong>{{crane_S_mm3}} mm<sup>3</sup></strong>.</p>"
+      },
+      {
+        "id": "a5",
+        "title": "Maximum Bending Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "flexure formula"
+        ],
+        "type": "stress calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Apply the flexure formula."
+        ],
+        "student": "<p>Calculate maximum bending-stress magnitude using &sigma;<sub>max</sub> = <em>M</em><sub>max</sub><em>c/I</em> = <em>M</em><sub>max</sub>/<em>S</em>.</p>",
+        "instructor": "<p>&sigma;<sub>max</sub> = <strong>{{crane_sigma_MPa}} MPa</strong> at the outer fibers of the fixed/support section.</p>"
+      },
+      {
+        "id": "a6",
+        "title": "Critical Fibers",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "tension",
+          "compression"
+        ],
+        "type": "interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Locate extreme-fiber stresses."
+        ],
+        "student": "<p>Identify the maximum tensile and compressive stress locations and explain what reverses if moment direction reverses.</p>",
+        "instructor": "<p>Maximum magnitudes occur at the outer top and bottom fibers, <em>y</em> = &plusmn;<em>h</em>/2. One face is tensile and the other compressive; reversing moment reverses their signs.</p>"
+      },
+      {
+        "id": "a7",
+        "title": "Load Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "load"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Use direct proportionality to load."
+        ],
+        "student": "<p>Holding geometry fixed, determine how stress changes if <em>W</em> increases by 25%.</p>",
+        "instructor": "<p>Because &sigma;<sub>max</sub> is proportional to <em>W</em>, the stress increases 25% to <strong>{{crane_sigma_load25_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "a8",
+        "title": "Reach Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "reach"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Use direct proportionality to reach."
+        ],
+        "student": "<p>Holding load and geometry fixed, determine how stress changes if <em>L</em> increases by 25%.</p>",
+        "instructor": "<p>Because &sigma;<sub>max</sub> is proportional to <em>L</em>, the stress increases 25% to <strong>{{crane_sigma_reach25_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "a9",
+        "title": "Section Sensitivity",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "section geometry"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Explain height sensitivity of bending resistance."
+        ],
+        "student": "<p>Explain why increasing section height is generally more effective than a comparable small width increase for reducing bending stress.</p>",
+        "instructor": "<p>Height appears cubed in the rectangular-section inertia terms and moves material farther from the neutral axis, strongly increasing <em>I</em> and section modulus.</p>"
+      },
+      {
+        "id": "a10",
+        "title": "Capacity-Mark Interpretation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "reach",
+          "capacity"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Connect <em>M=WL</em> to capacity markings."
+        ],
+        "student": "<p>Use <em>M=WL</em> to explain why longer reach generally requires lower allowable load. Why does this not establish a manufacturer rating?</p>",
+        "instructor": "<p>For controlled allowable bending demand, increasing <em>L</em> requires decreasing <em>W</em>. Actual ratings also depend on frame and mast behavior, hydraulic capacity, connections, local stresses, stability, material strength, dynamics, and manufacturer requirements.</p>"
+      },
+      {
+        "id": "a11",
+        "title": "Model Limitations",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "limitations"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Identify omitted real-system effects."
+        ],
+        "student": "<p>List at least four excluded effects and explain why this stress is not a complete crane assessment.</p>",
+        "instructor": "<p>Examples include frame reactions, ram force, pins, holes, welds, self-weight, mast behavior, tipping, material allowables, and dynamic lifting. Their exclusion limits the result to nominal local flexural stress.</p>"
+      },
+      {
+        "id": "a12",
+        "title": "Engineering Assessment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "engineering judgment"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "State a bounded mechanics recommendation."
+        ],
+        "student": "<p>Report the governing location and stress, explain the reach-capacity relation, and identify one section modification that reduces stress without claiming a full redesign.</p>",
+        "instructor": "<p>{{crane_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Faculty-approved local telescoping-extension bending baseline.",
+        "variables": {
+          "crane_W_kN": 8.896,
+          "crane_L_m": 0.6,
+          "crane_b_mm": 60,
+          "crane_h_mm": 80,
+          "crane_t_mm": 4
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "a6",
+          "a7",
+          "a8",
+          "a9",
+          "a10",
+          "a11",
+          "a12"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-GONDOLA-028",
     "slug": "aerial-gondola-suspension-hanger",
     "title": "Structural Stress Evaluation of an Aerial Gondola Suspension Hanger",

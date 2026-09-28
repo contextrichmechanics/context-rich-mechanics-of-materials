@@ -1,5 +1,15 @@
 [
   {
+    "id": "MOS-SHOP-CRANE-BOOM-B-001",
+    "slug": "adjustable-shop-crane-boom-bending",
+    "title": "Adjustable Shop Crane Boom - Bending of a Telescoping Extension",
+    "status": "OK",
+    "variables": 5,
+    "questions": 22,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-GONDOLA-028",
     "slug": "aerial-gondola-suspension-hanger",
     "title": "Structural Stress Evaluation of an Aerial Gondola Suspension Hanger",

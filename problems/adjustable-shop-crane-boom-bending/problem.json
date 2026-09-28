@@ -1,0 +1,17 @@
+{
+  "id": "MOS-SHOP-CRANE-BOOM-B-001",
+  "slug": "adjustable-shop-crane-boom-bending",
+  "title": "Adjustable Shop Crane Boom - Bending of a Telescoping Extension",
+  "studentDocumentTitle": "Student Packet - Adjustable Shop Crane Boom - Bending of a Telescoping Extension",
+  "instructorDocumentTitle": "Instructor Guide - Adjustable Shop Crane Boom - Bending of a Telescoping Extension",
+  "summary": "Determine reactions, internal resultants, section properties, and maximum bending stress for the local projecting portion of a telescoping shop-crane boom.",
+  "textbookChapters": ["Internal loadings", "Shear and moment diagrams", "Bending stress"],
+  "derivedPlaceholders": ["crane_R_kN","crane_Vmax_kN","crane_Mmax_kNm","crane_Mmax_Nmm","crane_A_mm2","crane_I_mm4","crane_c_mm","crane_S_mm3","crane_sigma_MPa","crane_sigma_load25_MPa","crane_sigma_reach25_MPa","crane_assessment"],
+  "image": "assets/shop-crane-boom-industry-context.jpg",
+  "imageAttribution": "Professor-supplied focused shop-crane photograph. It provides context only; no model identity or analytical dimensions are inferred from it.",
+  "idealizedImage": "assets/shop-crane-boom-instructor-reference.jpg",
+  "idealizedImageAlt": "Instructor reference showing the local projecting telescoping extension as a cantilever, its rectangular hollow section, and its triangular bending-moment diagram.",
+  "source": "index.html",
+  "problemStatement": "<p>An adjustable shop crane uses a main boom, telescoping extension, mast pivot, hydraulic ram, hook, and base structure. This problem does not treat the complete boom as a cantilever. It isolates only the effective projecting portion of the telescoping extension beyond its support/retention section and represents that local projection as a straight prismatic cantilever carrying a downward hook load at its free end.</p><p>The hook load represents a nominal 1-ton-position teaching load. The effective local projection and rectangular hollow-section dimensions are instructor-assigned values, not measurements from the photograph or specifications of an identified crane model.</p>",
+  "engineeringGoal": "<p>Calculate the local fixed-section reactions, maximum shear and bending moment, rectangular hollow-section properties, and maximum bending stress. Use the model to explain why increased reach generally requires reduced allowable lifted load while recognizing that bending stress alone does not establish an actual crane rating.</p>"
+}

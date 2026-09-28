@@ -1,0 +1,18 @@
+---
+title: "Student Packet - Adjustable Shop Crane Boom - Bending of a Telescoping Extension"
+subtitle: "Context, Student Idealization, and Local Beam-Bending Analysis"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="adjustable-shop-crane-boom-bending-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"adjustable-shop-crane-boom-bending",targetId:"adjustable-shop-crane-boom-bending-student-questions",type:"student"}));</script>
+```

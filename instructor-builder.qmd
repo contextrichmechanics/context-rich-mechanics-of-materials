@@ -1073,6 +1073,43 @@ function variableMap(problem) {
     }
   }
 
+  const craneLoadKN = numericValue(values, "crane_W_kN");
+  const craneLengthM = numericValue(values, "crane_L_m");
+  const craneWidthMm = numericValue(values, "crane_b_mm");
+  const craneHeightMm = numericValue(values, "crane_h_mm");
+  const craneThicknessMm = numericValue(values, "crane_t_mm");
+
+  if (
+    Number.isFinite(craneLoadKN) && craneLoadKN > 0 &&
+    Number.isFinite(craneLengthM) && craneLengthM > 0 &&
+    Number.isFinite(craneWidthMm) && craneWidthMm > 0 &&
+    Number.isFinite(craneHeightMm) && craneHeightMm > 0 &&
+    Number.isFinite(craneThicknessMm) && craneThicknessMm > 0 &&
+    craneWidthMm > 2 * craneThicknessMm && craneHeightMm > 2 * craneThicknessMm
+  ) {
+    const momentKNm = craneLoadKN * craneLengthM;
+    const momentNmm = momentKNm * 1e6;
+    const innerWidthMm = craneWidthMm - 2 * craneThicknessMm;
+    const innerHeightMm = craneHeightMm - 2 * craneThicknessMm;
+    const areaMm2 = craneWidthMm * craneHeightMm - innerWidthMm * innerHeightMm;
+    const inertiaMm4 = (craneWidthMm * craneHeightMm ** 3 - innerWidthMm * innerHeightMm ** 3) / 12;
+    const extremeFiberMm = craneHeightMm / 2;
+    const sectionModulusMm3 = inertiaMm4 / extremeFiberMm;
+    const stressMPa = momentNmm / sectionModulusMm3;
+    values.crane_R_kN = formatDerived(craneLoadKN, 3);
+    values.crane_Vmax_kN = formatDerived(craneLoadKN, 3);
+    values.crane_Mmax_kNm = formatDerived(momentKNm, 4);
+    values.crane_Mmax_Nmm = formatDerived(momentNmm, 0);
+    values.crane_A_mm2 = formatDerived(areaMm2, 2);
+    values.crane_I_mm4 = formatDerived(inertiaMm4, 2);
+    values.crane_c_mm = formatDerived(extremeFiberMm, 2);
+    values.crane_S_mm3 = formatDerived(sectionModulusMm3, 2);
+    values.crane_sigma_MPa = formatDerived(stressMPa, 2);
+    values.crane_sigma_load25_MPa = formatDerived(1.25 * stressMPa, 2);
+    values.crane_sigma_reach25_MPa = formatDerived(1.25 * stressMPa, 2);
+    values.crane_assessment = `The governing location is the support/retention section of the idealized local projection, where the maximum bending-stress magnitude is ${formatDerived(stressMPa, 2)} MPa. Since M = WL, increasing reach increases bending demand for the same load, so allowable load generally must decrease if an allowable moment is to remain controlled. Increasing section height or otherwise increasing section modulus reduces nominal bending stress. This local teaching model does not establish the actual crane rating because frame and mast behavior, the hydraulic system, connections, holes, welds, stability, material strength, dynamics, and manufacturer requirements are excluded.`;
+  }
+
   const gearMassEquivalentKg = numericValue(values, "gear_meq_kg");
   const gearLengthM = numericValue(values, "gear_L_m");
   const gearOuterDiameterMm = numericValue(values, "gear_D_mm");
