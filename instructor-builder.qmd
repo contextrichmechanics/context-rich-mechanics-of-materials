@@ -1073,6 +1073,55 @@ function variableMap(problem) {
     }
   }
 
+  const grinderPowerHp = numericValue(values, "grinder_shaft_P_hp");
+  const grinderSpeedRpm = numericValue(values, "grinder_shaft_n_rpm");
+  const grinderForceN = numericValue(values, "grinder_shaft_F_N");
+  const grinderLengthMm = numericValue(values, "grinder_shaft_L_mm");
+  const grinderModulusGPa = numericValue(values, "grinder_shaft_E_GPa");
+  const grinderDeflectionUm = numericValue(values, "grinder_shaft_delta_allow_um");
+
+  if ([grinderPowerHp, grinderSpeedRpm, grinderForceN, grinderLengthMm, grinderModulusGPa, grinderDeflectionUm].every(value => Number.isFinite(value) && value > 0)) {
+    const powerW = grinderPowerHp * 745.7;
+    const omegaRadS = 2 * Math.PI * grinderSpeedRpm / 60;
+    const torqueNm = powerW / omegaRadS;
+    const momentNm = grinderForceN * grinderLengthMm / 1000;
+    const modulusNmm2 = grinderModulusGPa * 1000;
+    const deflectionMm = grinderDeflectionUm / 1000;
+    const diameterMm = (64 * grinderForceN * grinderLengthMm ** 3 / (3 * Math.PI * modulusNmm2 * deflectionMm)) ** 0.25;
+    const inertiaMm4 = Math.PI * diameterMm ** 4 / 64;
+    const polarMm4 = Math.PI * diameterMm ** 4 / 32;
+    const bendingMPa = 32 * momentNm * 1000 / (Math.PI * diameterMm ** 3);
+    const torsionMPa = 16 * torqueNm * 1000 / (Math.PI * diameterMm ** 3);
+    const vonMisesMPa = Math.sqrt(bendingMPa ** 2 + 3 * torsionMPa ** 2);
+    const force25N = 1.25 * grinderForceN;
+    const momentF25Nm = force25N * grinderLengthMm / 1000;
+    const diameterF25Mm = (64 * force25N * grinderLengthMm ** 3 / (3 * Math.PI * modulusNmm2 * deflectionMm)) ** 0.25;
+    const length25Mm = 1.25 * grinderLengthMm;
+    const momentL25Nm = grinderForceN * length25Mm / 1000;
+    const diameterL25Mm = (64 * grinderForceN * length25Mm ** 3 / (3 * Math.PI * modulusNmm2 * deflectionMm)) ** 0.25;
+
+    values.grinder_shaft_P_W = formatDerived(powerW, 1);
+    values.grinder_shaft_omega_rad_s = formatDerived(omegaRadS, 3);
+    values.grinder_shaft_T_Nm = formatDerived(torqueNm, 3);
+    values.grinder_shaft_M_Nm = formatDerived(momentNm, 3);
+    values.grinder_shaft_d_min_mm = formatDerived(diameterMm, 3);
+    values.grinder_shaft_I_mm4 = formatDerived(inertiaMm4, 2);
+    values.grinder_shaft_J_mm4 = formatDerived(polarMm4, 2);
+    values.grinder_shaft_sigma_b_MPa = formatDerived(bendingMPa, 3);
+    values.grinder_shaft_tau_t_MPa = formatDerived(torsionMPa, 3);
+    values.grinder_shaft_sigma_VM_MPa = formatDerived(vonMisesMPa, 3);
+    values.grinder_shaft_F25_N = formatDerived(force25N, 1);
+    values.grinder_shaft_M_F25_Nm = formatDerived(momentF25Nm, 3);
+    values.grinder_shaft_d_F25_mm = formatDerived(diameterF25Mm, 3);
+    values.grinder_shaft_F25_percent = formatDerived((diameterF25Mm / diameterMm - 1) * 100, 2);
+    values.grinder_shaft_L25_mm = formatDerived(length25Mm, 1);
+    values.grinder_shaft_M_L25_Nm = formatDerived(momentL25Nm, 3);
+    values.grinder_shaft_d_L25_mm = formatDerived(diameterL25Mm, 3);
+    values.grinder_shaft_L25_percent = formatDerived((diameterL25Mm / diameterMm - 1) * 100, 2);
+    values.grinder_shaft_scaling_assessment = `Deflection varies directly with F, with L cubed, inversely with E, and inversely with d to the fourth power. Thus d_min scales with F^(1/4), L^(3/4), E^(-1/4), and delta_allow^(-1/4). Diameter and overhang provide especially strong deflection leverage in the approved local model.`;
+    values.grinder_shaft_assessment = `At these inputs, nominal torque is ${formatDerived(torqueNm, 3)} N m and base bending moment is ${formatDerived(momentNm, 3)} N m. The ${formatDerived(grinderDeflectionUm, 2)}-micrometer serviceability criterion gives a theoretical minimum diameter of ${formatDerived(diameterMm, 3)} mm. At that stiffness-sized diameter, bending stress is ${formatDerived(bendingMPa, 3)} MPa, torsional shear is ${formatDerived(torsionMPa, 3)} MPa, and von Mises stress is ${formatDerived(vonMisesMPa, 3)} MPa. Within this teaching model, stiffness controls the sizing calculation; reducing effective overhang or increasing diameter improves stiffness. This is not an actual Burr King shaft specification, material factor of safety, or certification.`;
+  }
+
   const cranePinForceKN = numericValue(values, "crane_pin_F_kN");
   const cranePinDiameterMm = numericValue(values, "crane_pin_d_mm");
   const cranePinBoomThicknessMm = numericValue(values, "crane_pin_tb_mm");

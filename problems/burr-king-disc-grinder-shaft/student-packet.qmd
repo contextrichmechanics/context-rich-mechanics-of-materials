@@ -1,0 +1,14 @@
+---
+title: "Student Packet - Burr King Disc Grinder Shaft"
+format: html
+---
+
+{{< include _student-problem.qmd >}}
+
+## Questions
+
+```{=html}
+<div id="burr-king-grinder-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"burr-king-disc-grinder-shaft",targetId:"burr-king-grinder-student-questions",type:"student"}));</script>
+```

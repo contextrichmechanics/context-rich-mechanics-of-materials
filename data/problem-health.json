@@ -90,6 +90,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-BURR-KING-DISC-GR-001",
+    "slug": "burr-king-disc-grinder-shaft",
+    "title": "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection",
+    "status": "OK",
+    "variables": 6,
+    "questions": 24,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-SEAT-023",
     "slug": "cantilevered-operator-seat-bending",
     "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",

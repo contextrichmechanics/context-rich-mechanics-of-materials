@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2526"
+      "source_location": "L2594"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2609"
+      "source_location": "L2677"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2505"
+      "source_location": "L2573"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2625"
+      "source_location": "L2693"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2470"
+      "source_location": "L2538"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2466"
+      "source_location": "L2534"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2575"
+      "source_location": "L2643"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2517"
+      "source_location": "L2585"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2550"
+      "source_location": "L2618"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2543"
+      "source_location": "L2611"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2484"
+      "source_location": "L2552"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2493"
+      "source_location": "L2561"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2556"
+      "source_location": "L2624"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2452"
+      "source_location": "L2520"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2442"
+      "source_location": "L2510"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2422"
+      "source_location": "L2490"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2407"
+      "source_location": "L2475"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2403"
+      "source_location": "L2471"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2438"
+      "source_location": "L2506"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2492"
+      "source_location": "L2560"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2485"
+      "source_location": "L2553"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2519"
+      "source_location": "L2587"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2476"
+      "source_location": "L2544"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2498"
+      "source_location": "L2566"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2454"
+      "source_location": "L2522"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2389"
+      "source_location": "L2457"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2380"
+      "source_location": "L2448"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2727"
+      "source_location": "L2795"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2714"
+      "source_location": "L2782"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2738"
+      "source_location": "L2806"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2728"
+      "source_location": "L2796"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2708"
+      "source_location": "L2776"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2460"
+      "source_location": "L2528"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2713"
+      "source_location": "L2781"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2715"
+      "source_location": "L2783"
     },
     {
       "id": "instructor_builder",
@@ -2509,6 +2509,224 @@
       "node_kind": "heading",
       "norm_label": "questions",
       "source_file": "problems/shop-crane-vertical-mast-buckling/student-packet.qmd",
+      "source_location": "L8"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide",
+      "label": "shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - Shop Crane Pin/Bolt Connection - Shear and Bearing",
+        "subtitle": "Equivalent Double-Shear Clevis Connection",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L23"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_instructor_reference_idealization",
+      "label": "Instructor Reference Idealization",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "instructor reference idealization",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L19"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L15"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L11"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_scope",
+      "label": "Scope",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L35"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_sources_and_provenance",
+      "label": "Sources and Provenance",
+      "_origin": "ast",
+      "community": 111,
+      "community_name": "shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sources and provenance",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L31"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_student_problem",
+      "label": "shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_student_problem_analysis_scope",
+      "label": "Analysis Scope",
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "analysis scope",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L17"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_student_problem_context_rich_solid_mechanics_problem",
+      "label": "Context-Rich Solid Mechanics Problem",
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context-rich solid mechanics problem",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L5"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_student_problem_main_engineering_goal",
+      "label": "Main Engineering Goal",
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "main engineering goal",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L13"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_student_problem_shop_crane_pin_bolt_connection_shear_and_bearing",
+      "label": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "shop crane pin/bolt connection - shear and bearing",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L3"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_index",
+      "label": "shop-crane-pin-connection-shear-bearing/index.qmd",
+      "_origin": "ast",
+      "community": 113,
+      "community_name": "shop-crane-pin-connection-shear-bearing/index.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
+        "image": "assets/shop-crane-pin-connection-industry-context.jpg",
+        "format": "html"
+      },
+      "node_kind": "page",
+      "norm_label": "shop-crane-pin-connection-shear-bearing/index.qmd",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_index_assigned_values",
+      "label": "Assigned Values",
+      "_origin": "ast",
+      "community": 113,
+      "community_name": "shop-crane-pin-connection-shear-bearing/index.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assigned values",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/index.qmd",
+      "source_location": "L9"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_student_packet",
+      "label": "shop-crane-pin-connection-shear-bearing/student-packet.qmd",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "shop-crane-pin-connection-shear-bearing/student-packet.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - Shop Crane Pin/Bolt Connection - Shear and Bearing",
+        "format": "html"
+      },
+      "node_kind": "page",
+      "norm_label": "shop-crane-pin-connection-shear-bearing/student-packet.qmd",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_shop_crane_pin_connection_shear_bearing_student_packet_questions",
+      "label": "Questions",
+      "_origin": "ast",
+      "community": 114,
+      "community_name": "shop-crane-pin-connection-shear-bearing/student-packet.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "questions",
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/student-packet.qmd",
       "source_location": "L8"
     },
     {
@@ -12441,7 +12659,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2439",
+      "source_location": "L2507",
       "weight": 1.0
     },
     {
@@ -12453,7 +12671,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2448",
+      "source_location": "L2516",
       "weight": 1.0
     },
     {
@@ -12465,7 +12683,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2493",
+      "source_location": "L2561",
       "weight": 1.0
     },
     {
@@ -12477,7 +12695,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2495",
+      "source_location": "L2563",
       "weight": 1.0
     },
     {
@@ -12489,7 +12707,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2489",
+      "source_location": "L2557",
       "weight": 1.0
     },
     {
@@ -12501,7 +12719,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2530",
+      "source_location": "L2598",
       "weight": 1.0
     },
     {
@@ -12513,7 +12731,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2535",
+      "source_location": "L2603",
       "weight": 1.0
     },
     {
@@ -12525,7 +12743,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2541",
+      "source_location": "L2609",
       "weight": 1.0
     },
     {
@@ -12537,7 +12755,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2543",
+      "source_location": "L2611",
       "weight": 1.0
     },
     {
@@ -12549,7 +12767,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2545",
+      "source_location": "L2613",
       "weight": 1.0
     },
     {
@@ -12561,7 +12779,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2546",
+      "source_location": "L2614",
       "weight": 1.0
     },
     {
@@ -12573,7 +12791,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2477",
+      "source_location": "L2545",
       "weight": 1.0
     },
     {
@@ -12585,7 +12803,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2482",
+      "source_location": "L2550",
       "weight": 1.0
     },
     {
@@ -12597,7 +12815,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2499",
+      "source_location": "L2567",
       "weight": 1.0
     },
     {
@@ -12609,7 +12827,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2509",
+      "source_location": "L2577",
       "weight": 1.0
     },
     {
@@ -12621,7 +12839,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2510",
+      "source_location": "L2578",
       "weight": 1.0
     },
     {
@@ -12633,7 +12851,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2511",
+      "source_location": "L2579",
       "weight": 1.0
     },
     {
@@ -12645,7 +12863,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2512",
+      "source_location": "L2580",
       "weight": 1.0
     },
     {
@@ -12657,7 +12875,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2457",
+      "source_location": "L2525",
       "weight": 1.0
     },
     {
@@ -12669,7 +12887,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2457",
+      "source_location": "L2525",
       "weight": 1.0
     },
     {
@@ -12681,7 +12899,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2457",
+      "source_location": "L2525",
       "weight": 1.0
     },
     {
@@ -12693,7 +12911,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2383",
+      "source_location": "L2451",
       "weight": 1.0
     },
     {
@@ -12705,7 +12923,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2385",
+      "source_location": "L2453",
       "weight": 1.0
     },
     {
@@ -12789,7 +13007,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2616",
+      "source_location": "L2684",
       "weight": 1.0
     },
     {
@@ -12801,7 +13019,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2617",
+      "source_location": "L2685",
       "weight": 1.0
     },
     {
@@ -12813,7 +13031,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2620",
+      "source_location": "L2688",
       "weight": 1.0
     },
     {
@@ -12837,7 +13055,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2632",
+      "source_location": "L2700",
       "weight": 1.0
     },
     {
@@ -12849,7 +13067,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2638",
+      "source_location": "L2706",
       "weight": 1.0
     },
     {
@@ -12861,7 +13079,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2646",
+      "source_location": "L2714",
       "weight": 1.0
     },
     {
@@ -12873,7 +13091,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2646",
+      "source_location": "L2714",
       "weight": 1.0
     },
     {
@@ -12885,7 +13103,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2646",
+      "source_location": "L2714",
       "weight": 1.0
     },
     {
@@ -12897,7 +13115,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2651",
+      "source_location": "L2719",
       "weight": 1.0
     },
     {
@@ -12909,7 +13127,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2651",
+      "source_location": "L2719",
       "weight": 1.0
     },
     {
@@ -12921,7 +13139,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2662",
+      "source_location": "L2730",
       "weight": 1.0
     },
     {
@@ -12933,7 +13151,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2668",
+      "source_location": "L2736",
       "weight": 1.0
     },
     {
@@ -12945,7 +13163,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2582",
+      "source_location": "L2650",
       "weight": 1.0
     },
     {
@@ -12957,7 +13175,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2588",
+      "source_location": "L2656",
       "weight": 1.0
     },
     {
@@ -12969,7 +13187,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2588",
+      "source_location": "L2656",
       "weight": 1.0
     },
     {
@@ -12981,7 +13199,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2588",
+      "source_location": "L2656",
       "weight": 1.0
     },
     {
@@ -12993,7 +13211,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2599",
+      "source_location": "L2667",
       "weight": 1.0
     },
     {
@@ -13005,7 +13223,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2601",
+      "source_location": "L2669",
       "weight": 1.0
     },
     {
@@ -13017,7 +13235,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2603",
+      "source_location": "L2671",
       "weight": 1.0
     },
     {
@@ -13029,7 +13247,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2523",
+      "source_location": "L2591",
       "weight": 1.0
     },
     {
@@ -13041,7 +13259,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2551",
+      "source_location": "L2619",
       "weight": 1.0
     },
     {
@@ -13053,7 +13271,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2553",
+      "source_location": "L2621",
       "weight": 1.0
     },
     {
@@ -13065,7 +13283,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2547",
+      "source_location": "L2615",
       "weight": 1.0
     },
     {
@@ -13077,7 +13295,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2485",
+      "source_location": "L2553",
       "weight": 1.0
     },
     {
@@ -13089,7 +13307,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2490",
+      "source_location": "L2558",
       "weight": 1.0
     },
     {
@@ -13101,7 +13319,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2494",
+      "source_location": "L2562",
       "weight": 1.0
     },
     {
@@ -13113,7 +13331,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2557",
+      "source_location": "L2625",
       "weight": 1.0
     },
     {
@@ -13125,7 +13343,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2567",
+      "source_location": "L2635",
       "weight": 1.0
     },
     {
@@ -13137,7 +13355,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2568",
+      "source_location": "L2636",
       "weight": 1.0
     },
     {
@@ -13149,7 +13367,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2569",
+      "source_location": "L2637",
       "weight": 1.0
     },
     {
@@ -13161,7 +13379,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2570",
+      "source_location": "L2638",
       "weight": 1.0
     },
     {
@@ -13173,7 +13391,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2443",
+      "source_location": "L2511",
       "weight": 1.0
     },
     {
@@ -13185,7 +13403,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2446",
+      "source_location": "L2514",
       "weight": 1.0
     },
     {
@@ -13197,7 +13415,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2448",
+      "source_location": "L2516",
       "weight": 1.0
     },
     {
@@ -19049,6 +19267,149 @@
       "weight": 1.0
     },
     {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_index",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_index_assigned_values",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/index.qmd",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_instructor_reference_idealization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_sources_and_provenance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_instructor_guide_scope",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/instructor-guide.qmd",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_student_packet",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_student_packet_questions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/student-packet.qmd",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_student_problem",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_student_problem_context_rich_solid_mechanics_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_student_problem_context_rich_solid_mechanics_problem",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_student_problem_shop_crane_pin_bolt_connection_shear_and_bearing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_student_problem_shop_crane_pin_bolt_connection_shear_and_bearing",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_student_problem_main_engineering_goal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_student_problem_shop_crane_pin_bolt_connection_shear_and_bearing",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_student_problem_analysis_scope",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_shop_crane_pin_connection_shear_bearing_student_problem_shop_crane_pin_bolt_connection_shear_and_bearing",
+      "target": "problems_shop_crane_pin_connection_shear_bearing_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/shop-crane-pin-connection-shear-bearing/_student-problem.qmd",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "problems_shop_crane_vertical_mast_buckling_index",
       "target": "problems_shop_crane_vertical_mast_buckling_index_assigned_values",
       "relation": "contains",
@@ -20942,28 +21303,6 @@
     },
     {
       "source": "scripts_packet_renderer",
-      "target": "scripts_packet_renderer_substitute",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2380",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_packet_renderer",
-      "target": "scripts_packet_renderer_selectedquestions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2389",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_packet_renderer",
       "target": "scripts_packet_renderer_symbolhtml",
       "relation": "contains",
       "_origin": "ast",
@@ -20975,13 +21314,35 @@
     },
     {
       "source": "scripts_packet_renderer",
+      "target": "scripts_packet_renderer_substitute",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L2448",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer",
+      "target": "scripts_packet_renderer_selectedquestions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L2457",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer",
       "target": "scripts_packet_renderer_questionsbysection",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2403",
+      "source_location": "L2471",
       "weight": 1.0
     },
     {
@@ -20992,7 +21353,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2407",
+      "source_location": "L2475",
       "weight": 1.0
     },
     {
@@ -21003,7 +21364,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2422",
+      "source_location": "L2490",
       "weight": 1.0
     },
     {
@@ -21014,7 +21375,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2438",
+      "source_location": "L2506",
       "weight": 1.0
     },
     {
@@ -21025,7 +21386,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2454",
+      "source_location": "L2522",
       "weight": 1.0
     },
     {
@@ -21036,7 +21397,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2476",
+      "source_location": "L2544",
       "weight": 1.0
     },
     {
@@ -21047,7 +21408,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2485",
+      "source_location": "L2553",
       "weight": 1.0
     },
     {
@@ -21058,7 +21419,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2492",
+      "source_location": "L2560",
       "weight": 1.0
     },
     {
@@ -21069,7 +21430,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2498",
+      "source_location": "L2566",
       "weight": 1.0
     },
     {
@@ -21080,7 +21441,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2519",
+      "source_location": "L2587",
       "weight": 1.0
     },
     {
@@ -21190,7 +21551,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2442",
+      "source_location": "L2510",
       "weight": 1.0
     },
     {
@@ -21201,7 +21562,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2452",
+      "source_location": "L2520",
       "weight": 1.0
     },
     {
@@ -21212,7 +21573,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2460",
+      "source_location": "L2528",
       "weight": 1.0
     },
     {
@@ -21223,7 +21584,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2466",
+      "source_location": "L2534",
       "weight": 1.0
     },
     {
@@ -21234,7 +21595,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2470",
+      "source_location": "L2538",
       "weight": 1.0
     },
     {
@@ -21245,7 +21606,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2484",
+      "source_location": "L2552",
       "weight": 1.0
     },
     {
@@ -21256,7 +21617,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2493",
+      "source_location": "L2561",
       "weight": 1.0
     },
     {
@@ -21267,7 +21628,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2505",
+      "source_location": "L2573",
       "weight": 1.0
     },
     {
@@ -21278,7 +21639,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2517",
+      "source_location": "L2585",
       "weight": 1.0
     },
     {
@@ -21289,7 +21650,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2526",
+      "source_location": "L2594",
       "weight": 1.0
     },
     {
@@ -21300,7 +21661,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2543",
+      "source_location": "L2611",
       "weight": 1.0
     },
     {
@@ -21311,7 +21672,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2550",
+      "source_location": "L2618",
       "weight": 1.0
     },
     {
@@ -21322,7 +21683,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2556",
+      "source_location": "L2624",
       "weight": 1.0
     },
     {
@@ -21333,7 +21694,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2575",
+      "source_location": "L2643",
       "weight": 1.0
     },
     {
@@ -21344,7 +21705,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2609",
+      "source_location": "L2677",
       "weight": 1.0
     },
     {
@@ -21355,7 +21716,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2625",
+      "source_location": "L2693",
       "weight": 1.0
     },
     {
@@ -21366,7 +21727,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2708",
+      "source_location": "L2776",
       "weight": 1.0
     },
     {
@@ -21377,7 +21738,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2713",
+      "source_location": "L2781",
       "weight": 1.0
     },
     {
@@ -21388,7 +21749,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2714",
+      "source_location": "L2782",
       "weight": 1.0
     },
     {
@@ -21399,7 +21760,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2715",
+      "source_location": "L2783",
       "weight": 1.0
     },
     {
@@ -21410,7 +21771,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2727",
+      "source_location": "L2795",
       "weight": 1.0
     },
     {
@@ -21421,18 +21782,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2728",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_outdir",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2738",
+      "source_location": "L2796",
       "weight": 1.0
     },
     {
@@ -21444,6 +21794,17 @@
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
       "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_outdir",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2806",
       "weight": 1.0
     },
     {
@@ -22592,5 +22953,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7801649e1faa793de9cd45568fdac8fb3b401a52"
+  "built_at_commit": "1e6b59b3a8a3dea59a2aa6c7b552a39ed2fb9efe"
 }

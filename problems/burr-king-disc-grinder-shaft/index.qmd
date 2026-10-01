@@ -1,0 +1,15 @@
+---
+title: "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection"
+image: "assets/burr-king-disc-grinder-industry-context.jpg"
+format: html
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assigned Values
+
+```{=html}
+<div id="burr-king-grinder-values"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"burr-king-disc-grinder-shaft",targetId:"burr-king-grinder-values",type:"student"}));</script>
+```

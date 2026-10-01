@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2594"
+      "source_location": "L2643"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2677"
+      "source_location": "L2726"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2573"
+      "source_location": "L2622"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2693"
+      "source_location": "L2742"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2538"
+      "source_location": "L2587"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2534"
+      "source_location": "L2583"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2643"
+      "source_location": "L2692"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2585"
+      "source_location": "L2634"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2618"
+      "source_location": "L2667"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2611"
+      "source_location": "L2660"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2552"
+      "source_location": "L2601"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2561"
+      "source_location": "L2610"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2624"
+      "source_location": "L2673"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2520"
+      "source_location": "L2569"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2510"
+      "source_location": "L2559"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2490"
+      "source_location": "L2539"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2475"
+      "source_location": "L2524"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2471"
+      "source_location": "L2520"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2506"
+      "source_location": "L2555"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2560"
+      "source_location": "L2609"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2553"
+      "source_location": "L2602"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2587"
+      "source_location": "L2636"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2544"
+      "source_location": "L2593"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2566"
+      "source_location": "L2615"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2522"
+      "source_location": "L2571"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2457"
+      "source_location": "L2506"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2448"
+      "source_location": "L2497"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2795"
+      "source_location": "L2844"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2782"
+      "source_location": "L2831"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2806"
+      "source_location": "L2855"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2796"
+      "source_location": "L2845"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2776"
+      "source_location": "L2825"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2528"
+      "source_location": "L2577"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2781"
+      "source_location": "L2830"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2783"
+      "source_location": "L2832"
     },
     {
       "id": "instructor_builder",
@@ -2727,6 +2727,224 @@
       "node_kind": "heading",
       "norm_label": "questions",
       "source_file": "problems/shop-crane-pin-connection-shear-bearing/student-packet.qmd",
+      "source_location": "L8"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_instructor_guide",
+      "label": "burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - Burr King Disc Grinder Shaft",
+        "subtitle": "Combined Bending, Torsion, and Deflection",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L23"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_instructor_guide_instructor_reference_idealization",
+      "label": "Instructor Reference Idealization",
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "instructor reference idealization",
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L19"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L15"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L11"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_instructor_guide_scope",
+      "label": "Scope",
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope",
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L35"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_instructor_guide_sources_and_provenance",
+      "label": "Sources and Provenance",
+      "_origin": "ast",
+      "community": 115,
+      "community_name": "burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sources and provenance",
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L31"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_student_problem",
+      "label": "burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 116,
+      "community_name": "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_student_problem_analysis_scope",
+      "label": "Analysis Scope",
+      "_origin": "ast",
+      "community": 116,
+      "community_name": "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "analysis scope",
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L17"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_student_problem_burr_king_disc_grinder_shaft_combined_bending_torsion_and_deflection",
+      "label": "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection",
+      "_origin": "ast",
+      "community": 116,
+      "community_name": "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "burr king disc grinder shaft - combined bending, torsion, and deflection",
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L3"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_student_problem_context_rich_solid_mechanics_problem",
+      "label": "Context-Rich Solid Mechanics Problem",
+      "_origin": "ast",
+      "community": 116,
+      "community_name": "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context-rich solid mechanics problem",
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 116,
+      "community_name": "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L5"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_student_problem_main_engineering_goal",
+      "label": "Main Engineering Goal",
+      "_origin": "ast",
+      "community": 116,
+      "community_name": "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "main engineering goal",
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L13"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_index",
+      "label": "burr-king-disc-grinder-shaft/index.qmd",
+      "_origin": "ast",
+      "community": 117,
+      "community_name": "burr-king-disc-grinder-shaft/index.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection",
+        "image": "assets/burr-king-disc-grinder-industry-context.jpg",
+        "format": "html"
+      },
+      "node_kind": "page",
+      "norm_label": "burr-king-disc-grinder-shaft/index.qmd",
+      "source_file": "problems/burr-king-disc-grinder-shaft/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_index_assigned_values",
+      "label": "Assigned Values",
+      "_origin": "ast",
+      "community": 117,
+      "community_name": "burr-king-disc-grinder-shaft/index.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assigned values",
+      "source_file": "problems/burr-king-disc-grinder-shaft/index.qmd",
+      "source_location": "L9"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_student_packet",
+      "label": "burr-king-disc-grinder-shaft/student-packet.qmd",
+      "_origin": "ast",
+      "community": 118,
+      "community_name": "burr-king-disc-grinder-shaft/student-packet.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - Burr King Disc Grinder Shaft",
+        "format": "html"
+      },
+      "node_kind": "page",
+      "norm_label": "burr-king-disc-grinder-shaft/student-packet.qmd",
+      "source_file": "problems/burr-king-disc-grinder-shaft/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_burr_king_disc_grinder_shaft_student_packet_questions",
+      "label": "Questions",
+      "_origin": "ast",
+      "community": 118,
+      "community_name": "burr-king-disc-grinder-shaft/student-packet.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "questions",
+      "source_file": "problems/burr-king-disc-grinder-shaft/student-packet.qmd",
       "source_location": "L8"
     },
     {
@@ -12659,7 +12877,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2507",
+      "source_location": "L2556",
       "weight": 1.0
     },
     {
@@ -12671,7 +12889,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2516",
+      "source_location": "L2565",
       "weight": 1.0
     },
     {
@@ -12683,7 +12901,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2561",
+      "source_location": "L2610",
       "weight": 1.0
     },
     {
@@ -12695,7 +12913,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2563",
+      "source_location": "L2612",
       "weight": 1.0
     },
     {
@@ -12707,7 +12925,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2557",
+      "source_location": "L2606",
       "weight": 1.0
     },
     {
@@ -12719,7 +12937,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2598",
+      "source_location": "L2647",
       "weight": 1.0
     },
     {
@@ -12731,7 +12949,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2603",
+      "source_location": "L2652",
       "weight": 1.0
     },
     {
@@ -12743,7 +12961,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2609",
+      "source_location": "L2658",
       "weight": 1.0
     },
     {
@@ -12755,7 +12973,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2611",
+      "source_location": "L2660",
       "weight": 1.0
     },
     {
@@ -12767,7 +12985,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2613",
+      "source_location": "L2662",
       "weight": 1.0
     },
     {
@@ -12779,7 +12997,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2614",
+      "source_location": "L2663",
       "weight": 1.0
     },
     {
@@ -12791,7 +13009,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2545",
+      "source_location": "L2594",
       "weight": 1.0
     },
     {
@@ -12803,7 +13021,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2550",
+      "source_location": "L2599",
       "weight": 1.0
     },
     {
@@ -12815,7 +13033,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2567",
+      "source_location": "L2616",
       "weight": 1.0
     },
     {
@@ -12827,7 +13045,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2577",
+      "source_location": "L2626",
       "weight": 1.0
     },
     {
@@ -12839,7 +13057,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2578",
+      "source_location": "L2627",
       "weight": 1.0
     },
     {
@@ -12851,7 +13069,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2579",
+      "source_location": "L2628",
       "weight": 1.0
     },
     {
@@ -12863,7 +13081,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2580",
+      "source_location": "L2629",
       "weight": 1.0
     },
     {
@@ -12875,7 +13093,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2525",
+      "source_location": "L2574",
       "weight": 1.0
     },
     {
@@ -12887,7 +13105,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2525",
+      "source_location": "L2574",
       "weight": 1.0
     },
     {
@@ -12899,7 +13117,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2525",
+      "source_location": "L2574",
       "weight": 1.0
     },
     {
@@ -12911,7 +13129,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2451",
+      "source_location": "L2500",
       "weight": 1.0
     },
     {
@@ -12923,7 +13141,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2453",
+      "source_location": "L2502",
       "weight": 1.0
     },
     {
@@ -13007,7 +13225,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2684",
+      "source_location": "L2733",
       "weight": 1.0
     },
     {
@@ -13019,7 +13237,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2685",
+      "source_location": "L2734",
       "weight": 1.0
     },
     {
@@ -13031,7 +13249,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2688",
+      "source_location": "L2737",
       "weight": 1.0
     },
     {
@@ -13055,7 +13273,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2700",
+      "source_location": "L2749",
       "weight": 1.0
     },
     {
@@ -13067,7 +13285,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2706",
+      "source_location": "L2755",
       "weight": 1.0
     },
     {
@@ -13079,7 +13297,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2714",
+      "source_location": "L2763",
       "weight": 1.0
     },
     {
@@ -13091,7 +13309,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2714",
+      "source_location": "L2763",
       "weight": 1.0
     },
     {
@@ -13103,7 +13321,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2714",
+      "source_location": "L2763",
       "weight": 1.0
     },
     {
@@ -13115,7 +13333,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2719",
+      "source_location": "L2768",
       "weight": 1.0
     },
     {
@@ -13127,7 +13345,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2719",
+      "source_location": "L2768",
       "weight": 1.0
     },
     {
@@ -13139,7 +13357,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2730",
+      "source_location": "L2779",
       "weight": 1.0
     },
     {
@@ -13151,7 +13369,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2736",
+      "source_location": "L2785",
       "weight": 1.0
     },
     {
@@ -13163,7 +13381,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2650",
+      "source_location": "L2699",
       "weight": 1.0
     },
     {
@@ -13175,7 +13393,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2656",
+      "source_location": "L2705",
       "weight": 1.0
     },
     {
@@ -13187,7 +13405,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2656",
+      "source_location": "L2705",
       "weight": 1.0
     },
     {
@@ -13199,7 +13417,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2656",
+      "source_location": "L2705",
       "weight": 1.0
     },
     {
@@ -13211,7 +13429,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2667",
+      "source_location": "L2716",
       "weight": 1.0
     },
     {
@@ -13223,7 +13441,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2669",
+      "source_location": "L2718",
       "weight": 1.0
     },
     {
@@ -13235,7 +13453,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2671",
+      "source_location": "L2720",
       "weight": 1.0
     },
     {
@@ -13247,7 +13465,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2591",
+      "source_location": "L2640",
       "weight": 1.0
     },
     {
@@ -13259,7 +13477,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2619",
+      "source_location": "L2668",
       "weight": 1.0
     },
     {
@@ -13271,7 +13489,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2621",
+      "source_location": "L2670",
       "weight": 1.0
     },
     {
@@ -13283,7 +13501,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2615",
+      "source_location": "L2664",
       "weight": 1.0
     },
     {
@@ -13295,7 +13513,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2553",
+      "source_location": "L2602",
       "weight": 1.0
     },
     {
@@ -13307,7 +13525,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2558",
+      "source_location": "L2607",
       "weight": 1.0
     },
     {
@@ -13319,7 +13537,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2562",
+      "source_location": "L2611",
       "weight": 1.0
     },
     {
@@ -13331,7 +13549,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2625",
+      "source_location": "L2674",
       "weight": 1.0
     },
     {
@@ -13343,7 +13561,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2635",
+      "source_location": "L2684",
       "weight": 1.0
     },
     {
@@ -13355,7 +13573,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2636",
+      "source_location": "L2685",
       "weight": 1.0
     },
     {
@@ -13367,7 +13585,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2637",
+      "source_location": "L2686",
       "weight": 1.0
     },
     {
@@ -13379,7 +13597,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2638",
+      "source_location": "L2687",
       "weight": 1.0
     },
     {
@@ -13391,7 +13609,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2511",
+      "source_location": "L2560",
       "weight": 1.0
     },
     {
@@ -13403,7 +13621,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2514",
+      "source_location": "L2563",
       "weight": 1.0
     },
     {
@@ -13415,7 +13633,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2516",
+      "source_location": "L2565",
       "weight": 1.0
     },
     {
@@ -16502,6 +16720,149 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/brass-bushing-thermal-contraction/_student-problem.qmd",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_index",
+      "target": "problems_burr_king_disc_grinder_shaft_index_assigned_values",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/index.qmd",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_instructor_guide",
+      "target": "problems_burr_king_disc_grinder_shaft_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_instructor_guide",
+      "target": "problems_burr_king_disc_grinder_shaft_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_instructor_guide",
+      "target": "problems_burr_king_disc_grinder_shaft_instructor_guide_instructor_reference_idealization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_instructor_guide",
+      "target": "problems_burr_king_disc_grinder_shaft_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_instructor_guide",
+      "target": "problems_burr_king_disc_grinder_shaft_instructor_guide_sources_and_provenance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_instructor_guide",
+      "target": "problems_burr_king_disc_grinder_shaft_instructor_guide_scope",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/instructor-guide.qmd",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_student_packet",
+      "target": "problems_burr_king_disc_grinder_shaft_student_packet_questions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/student-packet.qmd",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_student_problem",
+      "target": "problems_burr_king_disc_grinder_shaft_student_problem_context_rich_solid_mechanics_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_student_problem_burr_king_disc_grinder_shaft_combined_bending_torsion_and_deflection",
+      "target": "problems_burr_king_disc_grinder_shaft_student_problem_main_engineering_goal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_student_problem_burr_king_disc_grinder_shaft_combined_bending_torsion_and_deflection",
+      "target": "problems_burr_king_disc_grinder_shaft_student_problem_analysis_scope",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_student_problem_burr_king_disc_grinder_shaft_combined_bending_torsion_and_deflection",
+      "target": "problems_burr_king_disc_grinder_shaft_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_burr_king_disc_grinder_shaft_student_problem_context_rich_solid_mechanics_problem",
+      "target": "problems_burr_king_disc_grinder_shaft_student_problem_burr_king_disc_grinder_shaft_combined_bending_torsion_and_deflection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
       "source_location": "L3",
       "weight": 1.0
     },
@@ -21320,7 +21681,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2448",
+      "source_location": "L2497",
       "weight": 1.0
     },
     {
@@ -21331,7 +21692,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2457",
+      "source_location": "L2506",
       "weight": 1.0
     },
     {
@@ -21342,7 +21703,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2471",
+      "source_location": "L2520",
       "weight": 1.0
     },
     {
@@ -21353,7 +21714,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2475",
+      "source_location": "L2524",
       "weight": 1.0
     },
     {
@@ -21364,7 +21725,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2490",
+      "source_location": "L2539",
       "weight": 1.0
     },
     {
@@ -21375,7 +21736,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2506",
+      "source_location": "L2555",
       "weight": 1.0
     },
     {
@@ -21386,7 +21747,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2522",
+      "source_location": "L2571",
       "weight": 1.0
     },
     {
@@ -21397,7 +21758,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2544",
+      "source_location": "L2593",
       "weight": 1.0
     },
     {
@@ -21408,7 +21769,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2553",
+      "source_location": "L2602",
       "weight": 1.0
     },
     {
@@ -21419,7 +21780,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2560",
+      "source_location": "L2609",
       "weight": 1.0
     },
     {
@@ -21430,7 +21791,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2566",
+      "source_location": "L2615",
       "weight": 1.0
     },
     {
@@ -21441,7 +21802,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2587",
+      "source_location": "L2636",
       "weight": 1.0
     },
     {
@@ -21551,7 +21912,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2510",
+      "source_location": "L2559",
       "weight": 1.0
     },
     {
@@ -21562,7 +21923,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2520",
+      "source_location": "L2569",
       "weight": 1.0
     },
     {
@@ -21573,7 +21934,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2528",
+      "source_location": "L2577",
       "weight": 1.0
     },
     {
@@ -21584,7 +21945,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2534",
+      "source_location": "L2583",
       "weight": 1.0
     },
     {
@@ -21595,7 +21956,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2538",
+      "source_location": "L2587",
       "weight": 1.0
     },
     {
@@ -21606,7 +21967,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2552",
+      "source_location": "L2601",
       "weight": 1.0
     },
     {
@@ -21617,7 +21978,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2561",
+      "source_location": "L2610",
       "weight": 1.0
     },
     {
@@ -21628,7 +21989,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2573",
+      "source_location": "L2622",
       "weight": 1.0
     },
     {
@@ -21639,7 +22000,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2585",
+      "source_location": "L2634",
       "weight": 1.0
     },
     {
@@ -21650,7 +22011,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2594",
+      "source_location": "L2643",
       "weight": 1.0
     },
     {
@@ -21661,7 +22022,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2611",
+      "source_location": "L2660",
       "weight": 1.0
     },
     {
@@ -21672,7 +22033,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2618",
+      "source_location": "L2667",
       "weight": 1.0
     },
     {
@@ -21683,7 +22044,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2624",
+      "source_location": "L2673",
       "weight": 1.0
     },
     {
@@ -21694,7 +22055,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2643",
+      "source_location": "L2692",
       "weight": 1.0
     },
     {
@@ -21705,7 +22066,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2677",
+      "source_location": "L2726",
       "weight": 1.0
     },
     {
@@ -21716,73 +22077,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2693",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_problemkey",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2776",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_type",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2781",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_format",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2782",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_variantkey",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2783",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_catalog",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2795",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_problem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2796",
+      "source_location": "L2742",
       "weight": 1.0
     },
     {
@@ -21798,13 +22093,79 @@
     },
     {
       "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_problemkey",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2825",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_type",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2830",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_format",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2831",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_variantkey",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2832",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_catalog",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2844",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2845",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
       "target": "scripts_render_assignment_outdir",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2806",
+      "source_location": "L2855",
       "weight": 1.0
     },
     {
@@ -22953,5 +23314,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1e6b59b3a8a3dea59a2aa6c7b552a39ed2fb9efe"
+  "built_at_commit": "a0a51697b7fce23108c60e907508db2239214410"
 }

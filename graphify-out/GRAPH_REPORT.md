@@ -1,16 +1,16 @@
-# Graph Report - codex-crane-pin-20260928  (2026-09-28)
+# Graph Report - codex-burr-king-grinder-20260928  (2026-09-28)
 
 ## Corpus Check
-- 353 files · ~3,280,049 words
+- 361 files · ~3,296,118 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 966 nodes · 939 edges · 115 communities (106 shown, 9 thin omitted)
+- 983 nodes · 952 edges · 119 communities (108 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1e6b59b3`
+- Built from commit: `a0a51697`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -126,6 +126,10 @@
 - Shop Crane Pin/Bolt Connection - Shear and Bearing
 - shop-crane-pin-connection-shear-bearing/index.qmd
 - shop-crane-pin-connection-shear-bearing/student-packet.qmd
+- burr-king-disc-grinder-shaft/instructor-guide.qmd
+- Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection
+- burr-king-disc-grinder-shaft/index.qmd
+- burr-king-disc-grinder-shaft/student-packet.qmd
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -145,7 +149,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (115 total, 9 thin omitted)
+## Communities (119 total, 11 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -555,18 +559,26 @@ Nodes (6): Generated Question Set and Solutions, Instructor Reference Idealizati
 Cohesion: 0.33
 Nodes (5): Analysis Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Shop Crane Pin/Bolt Connection - Shear and Bearing
 
+### Community 115 - "burr-king-disc-grinder-shaft/instructor-guide.qmd"
+Cohesion: 0.29
+Nodes (6): Generated Question Set and Solutions, Instructor Reference Idealization, Problem Context, Purpose, Scope, Sources and Provenance
+
+### Community 116 - "Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection"
+Cohesion: 0.33
+Nodes (5): Analysis Scope, Burr King Disc Grinder Shaft - Combined Bending, Torsion, and Deflection, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal
+
 ## Knowledge Gaps
-- **607 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+602 more)
+- **618 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+613 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _607 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _618 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**
