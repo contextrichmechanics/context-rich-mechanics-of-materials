@@ -1,0 +1,14 @@
+---
+title: "Student Packet - Lathe Parting Tool Lateral Deflection"
+format: html
+---
+
+{{< include _student-problem.qmd >}}
+
+## Questions
+
+```{=html}
+<div id="lathe-parting-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"lathe-parting-tool-lateral-deflection",targetId:"lathe-parting-student-questions",type:"student"}));</script>
+```

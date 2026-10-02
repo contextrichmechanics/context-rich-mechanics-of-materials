@@ -1,0 +1,15 @@
+---
+title: "Lathe Parting Tool - Lead-Angle Lateral Deflection and Cut Clearance"
+image: "assets/lathe-parting-tool-industry-context.jpg"
+format: html
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assigned Values
+
+```{=html}
+<div id="lathe-parting-values"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"lathe-parting-tool-lateral-deflection",targetId:"lathe-parting-values",type:"student"}));</script>
+```

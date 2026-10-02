@@ -1073,6 +1073,44 @@ function variableMap(problem) {
     }
   }
 
+  const partingDiameterMm = numericValue(values, "parting_D_mm");
+  const partingCutWidthMm = numericValue(values, "parting_s_mm");
+  const partingBladeWidthMm = numericValue(values, "parting_b_mm");
+  const partingBladeHeightMm = numericValue(values, "parting_H_mm");
+  const partingMaxDepthMm = numericValue(values, "parting_Tmax_mm");
+  const partingLengthMm = numericValue(values, "parting_L_mm");
+  const partingModulusMPa = numericValue(values, "parting_E_MPa");
+  const partingForceN = numericValue(values, "parting_FL_N");
+
+  if ([partingDiameterMm, partingCutWidthMm, partingBladeWidthMm, partingBladeHeightMm, partingMaxDepthMm, partingLengthMm, partingModulusMPa, partingForceN].every(value => Number.isFinite(value) && value > 0) && partingCutWidthMm > partingBladeWidthMm) {
+    const clearanceMm = (partingCutWidthMm - partingBladeWidthMm) / 2;
+    const inertiaMm4 = partingBladeHeightMm * partingBladeWidthMm ** 3 / 12;
+    const deflectionMm = partingForceN * partingLengthMm ** 3 / (3 * partingModulusMPa * inertiaMm4);
+    const momentNmm = partingForceN * partingLengthMm;
+    const stressMPa = momentNmm * (partingBladeWidthMm / 2) / inertiaMm4;
+    const utilizationPct = deflectionMm / clearanceMm * 100;
+    const marginMm = clearanceMm - deflectionMm;
+    const maximumLengthMm = (3 * partingModulusMPa * inertiaMm4 * clearanceMm / partingForceN) ** (1 / 3);
+    const clears = deflectionMm < clearanceMm;
+    const equal = Math.abs(deflectionMm - clearanceMm) <= 1e-9 * Math.max(deflectionMm, clearanceMm);
+    const relation = equal ? "=" : (clears ? "<" : ">");
+    const depthFirst = partingMaxDepthMm < maximumLengthMm;
+    const radialReachMm = partingDiameterMm / 2;
+
+    values.parting_c_mm = formatDerived(clearanceMm, 3);
+    values.parting_Iy_mm4 = formatDerived(inertiaMm4, 3);
+    values.parting_delta_mm = formatDerived(deflectionMm, 4);
+    values.parting_clearance_relation = relation;
+    values.parting_acceptance = clears ? "The simplified static no-contact criterion is satisfied; the blade body remains within the nominal one-side clearance." : (equal ? "The calculated blade deflection exactly consumes the nominal one-side clearance in the simplified model." : "The simplified static no-contact criterion is not satisfied; the calculated blade deflection exceeds the nominal one-side clearance.");
+    values.parting_utilization_pct = formatDerived(utilizationPct, 1);
+    values.parting_margin_mm = formatDerived(marginMm, 4);
+    values.parting_M_Nmm = formatDerived(momentNmm, 1);
+    values.parting_sigma_MPa = formatDerived(stressMPa, 2);
+    values.parting_Lmax_mm = formatDerived(maximumLengthMm, 2);
+    values.parting_depth_comparison = depthFirst ? "the published maximum cutting depth is reached before the simplified clearance-deflection limit" : (partingMaxDepthMm > maximumLengthMm ? "the simplified clearance-deflection limit is reached before the published maximum cutting depth" : "the two limits coincide");
+    values.parting_assessment = `For the ${formatDerived(partingDiameterMm, 1)} mm representative workpiece, the radial reach is ${formatDerived(radialReachMm, 1)} mm and the modeled effective unsupported length is ${formatDerived(partingLengthMm, 1)} mm. The lateral deflection is ${formatDerived(deflectionMm, 4)} mm ${relation} the ${formatDerived(clearanceMm, 3)} mm one-side clearance, consuming ${formatDerived(utilizationPct, 1)}% and leaving ${formatDerived(marginMm, 4)} mm of signed margin. The clearance-controlled effective overhang is ${formatDerived(maximumLengthMm, 2)} mm; compared with T_max = ${formatDerived(partingMaxDepthMm, 1)} mm, ${depthFirst ? "the published maximum cutting depth is reached before the simplified clearance-deflection limit" : (partingMaxDepthMm > maximumLengthMm ? "the simplified clearance-deflection limit is reached before the published maximum cutting depth" : "the two limits coincide")}. This static elastic result does not establish chatter-free cutting, complete stability, absence of all rubbing, or a manufacturer-approved operating limit.`;
+  }
+
   const grinderPowerHp = numericValue(values, "grinder_shaft_P_hp");
   const grinderSpeedRpm = numericValue(values, "grinder_shaft_n_rpm");
   const grinderForceN = numericValue(values, "grinder_shaft_F_N");

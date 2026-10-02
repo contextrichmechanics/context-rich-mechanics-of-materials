@@ -10180,6 +10180,436 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-LATHE-PARTING-TO-001",
+    "slug": "lathe-parting-tool-lateral-deflection",
+    "title": "Lathe Parting Tool - Lead-Angle Lateral Deflection and Cut Clearance",
+    "studentDocumentTitle": "Student Packet - Lathe Parting Tool Lateral Deflection",
+    "instructorDocumentTitle": "Instructor Guide - Lathe Parting Tool Lateral Deflection",
+    "summary": "Evaluate weak-axis lateral deflection of an effective cantilevered parting blade and compare it with nominal one-side cut clearance.",
+    "textbookChapters": [
+      "Beam bending",
+      "Elastic deflection",
+      "Serviceability"
+    ],
+    "derivedPlaceholders": [
+      "parting_c_mm",
+      "parting_Iy_mm4",
+      "parting_delta_mm",
+      "parting_clearance_relation",
+      "parting_acceptance",
+      "parting_utilization_pct",
+      "parting_margin_mm",
+      "parting_M_Nmm",
+      "parting_sigma_MPa",
+      "parting_Lmax_mm",
+      "parting_depth_comparison",
+      "parting_assessment"
+    ],
+    "image": "problems/lathe-parting-tool-lateral-deflection/assets/lathe-parting-tool-industry-context.jpg",
+    "imageAttribution": "Instructor-supplied lathe parting photograph. Source/license attribution remains to be confirmed before public repository release; no dimensions or forces are inferred from it.",
+    "idealizedImage": "problems/lathe-parting-tool-lateral-deflection/assets/lathe-parting-tool-instructor-reference.jpg",
+    "idealizedImageAlt": "Instructor reference top view of an effective cantilevered parting blade, lateral force, exaggerated deflected shape, and cut clearance.",
+    "source": "problems/lathe-parting-tool-lateral-deflection/index.html",
+    "problemStatement": "<p>A lead-angle parting configuration produces a physically based equivalent lateral cutting-force component F_L at the insert. Model the effective unsupported segment of the thin rectangular blade as a weak-axis cantilever; do not model the complete tool as a literal bare cantilever.</p><p>The insert makes a cut wider than the centered blade body. Calculate the nominal one-side clearance, blade deflection, and whether the blade remains clear of the groove wall in this simplified static model.</p>",
+    "engineeringGoal": "<p>Compare dynamically calculated lateral tip deflection with available one-side clearance, quantify utilization and margin, evaluate secondary bending stress, determine the clearance-controlled maximum effective overhang, and state appropriate machining-model limitations.</p>",
+    "variables": [
+      {
+        "key": "parting_D_mm",
+        "symbol": "D",
+        "label": "Representative workpiece diameter",
+        "value": 60,
+        "unit": "mm",
+        "min": 10,
+        "max": 200,
+        "step": 5
+      },
+      {
+        "key": "parting_s_mm",
+        "symbol": "s",
+        "label": "Insert cutting width",
+        "value": 3,
+        "unit": "mm",
+        "min": 1,
+        "max": 10,
+        "step": 0.1
+      },
+      {
+        "key": "parting_b_mm",
+        "symbol": "b",
+        "label": "Blade body width (weak-axis thickness)",
+        "value": 2.4,
+        "unit": "mm",
+        "min": 0.5,
+        "max": 8,
+        "step": 0.1
+      },
+      {
+        "key": "parting_H_mm",
+        "symbol": "H",
+        "label": "Blade height",
+        "value": 32,
+        "unit": "mm",
+        "min": 5,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "key": "parting_Tmax_mm",
+        "symbol": "T_max",
+        "label": "Published maximum cutting depth",
+        "value": 45,
+        "unit": "mm",
+        "min": 5,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "key": "parting_L_mm",
+        "symbol": "L",
+        "label": "Effective unsupported blade length",
+        "value": 30,
+        "unit": "mm",
+        "min": 5,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "key": "parting_E_MPa",
+        "symbol": "E",
+        "label": "Representative blade elastic modulus",
+        "value": 210000,
+        "unit": "MPa",
+        "min": 50000,
+        "max": 300000,
+        "step": 5000
+      },
+      {
+        "key": "parting_FL_N",
+        "symbol": "F_L",
+        "label": "Derived lateral cutting-force component",
+        "value": 57,
+        "unit": "N",
+        "min": 1,
+        "max": 500,
+        "step": 1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "function"
+        ],
+        "type": "conceptual",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Connect parting function to lateral stiffness."
+        ],
+        "student": "<p>State the purpose of the parting tool and explain why the blade must remain laterally stiff while penetrating the workpiece.</p>",
+        "instructor": "<p>The insert parts the rotating workpiece while the thin blade supports it. Lateral stiffness helps keep the blade body within the wider groove and limits side contact or run-off.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Load and Constraint",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "loads"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Interpret the lead-angle lateral force."
+        ],
+        "student": "<p>The lead-angle configuration produces the given F_L at the cutting end. Identify its direction relative to blade length and the holder restraint. Explain why this component causes sideways weak-axis bending rather than representing the main tangential cutting force.</p>",
+        "instructor": "<p>F_L is the axial/lateral component associated with the inclined edge. It acts transverse to the blade's longitudinal axis in plan view; the holder supplies the fixed restraint, causing weak-axis bending.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "boundary conditions"
+        ],
+        "type": "boundary condition",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify cantilever boundaries."
+        ],
+        "student": "<p>Idealize the effectively unsupported blade segment as a cantilever and identify the fixed and free/cutting ends.</p>",
+        "instructor": "<p>The holder/clamp is the equivalent fixed end; the cutting insert is at the free end of the effective unsupported segment.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path"
+        ],
+        "type": "load-path reasoning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Trace lateral force transfer."
+        ],
+        "student": "<p>Trace the lateral load from the cutting insert through the thin blade body into the tool holder.</p>",
+        "instructor": "<p>The lead-angle lateral component enters at the insert, transfers through the blade as shear and bending, and is reacted by the clamped holder.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Component and Locations",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "critical section"
+        ],
+        "type": "component selection",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Distinguish stress and deflection locations."
+        ],
+        "student": "<p>Identify the critical component and locations for weak-axis bending stress and lateral deflection.</p>",
+        "instructor": "<p>The blade body is critical. Fixed-end moment and stress are largest at the holder section, while lateral displacement is largest at the cutting tip.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "deflection",
+          "serviceability"
+        ],
+        "type": "response identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Prioritize clearance serviceability."
+        ],
+        "student": "<p>Identify the primary response and explain why comparing lateral tip deflection with one-side cut clearance is the main engineering decision. Identify bending stress as a secondary response.</p>",
+        "instructor": "<p>The primary decision is whether delta_L remains below c. Weak-axis bending stress is also calculated, but it does not replace the clearance comparison.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "parameters"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify inputs controlling clearance and response."
+        ],
+        "student": "<p>Identify L, b, H, E, F_L, s, and c and state how each affects clearance, stiffness, deflection, or stress.</p>",
+        "instructor": "<p>s and b establish clearance; H and b establish I_y; F_L, L, E, and I_y control deflection; F_L and L also determine moment.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "idealization",
+          "FBD"
+        ],
+        "type": "fbd/modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Construct the plan-view beam model."
+        ],
+        "student": "<p>Draw a top/plan-view cantilever model showing the holder, L, F_L, b, H, s, c, and delta_L. Include an FBD.</p>",
+        "instructor": "<p>A complete model shows the equivalent fixed holder, straight blade, cutting tip, transverse F_L, weak-axis rectangular section, cut walls, and lateral tip displacement.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "assumptions"
+        ],
+        "type": "modeling assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Bound the static beam model."
+        ],
+        "student": "<p>State assumptions needed to reduce the real parting operation to the simplified beam and clearance model.</p>",
+        "instructor": "<p>Use a linearly elastic rectangular blade, small deformation, concentrated static equivalent F_L, centered cut, equal nominal side clearance, rigid holder, and effective unsupported length. Neglect holder/insert compliance, varying force, chatter, thermal effects, wear, chips, and nonlinear wall contact.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Plan clearance-first analysis."
+        ],
+        "student": "<p>Outline the sequence for clearance, weak-axis I_y, deflection, acceptance, utilization/margin, moment/stress, L_max, and final interpretation.</p>",
+        "instructor": "<p>Find c, compute I_y, calculate delta_L, compare delta_L with c, quantify utilization and margin, calculate moment/stress, solve delta_L=c for L_max, compare with T_max, and state limitations.</p>"
+      },
+      {
+        "id": "a1",
+        "title": "Available Side Clearance",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "clearance"
+        ],
+        "type": "calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Calculate centered one-side clearance."
+        ],
+        "student": "<p>Calculate c=(s-b)/2 and explain the centered-cut assumption.</p>",
+        "instructor": "<p>c = <strong>{{parting_c_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "a2",
+        "title": "Weak-Axis Section Property",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "second moment"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate weak-axis inertia."
+        ],
+        "student": "<p>Calculate I_y=Hb^3/12 and explain why the thin dimension strongly affects lateral stiffness.</p>",
+        "instructor": "<p>I_y = <strong>{{parting_Iy_mm4}} mm<sup>4</sup></strong>. The weak-axis thickness is cubed.</p>"
+      },
+      {
+        "id": "a3",
+        "title": "Lateral Tip Deflection",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "deflection"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate cantilever end deflection."
+        ],
+        "student": "<p>Calculate delta_L=F_L L^3/(3EI_y).</p>",
+        "instructor": "<p>delta_L = <strong>{{parting_delta_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "a4",
+        "title": "Clearance Assessment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "serviceability"
+        ],
+        "type": "comparison",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Make a dynamic no-contact decision."
+        ],
+        "student": "<p>Compare delta_L with c. State the relation and simplified acceptance result, then calculate clearance utilization and remaining margin.</p>",
+        "instructor": "<p>delta_L <strong>{{parting_clearance_relation}}</strong> c. <strong>{{parting_acceptance}}</strong> Utilization is <strong>{{parting_utilization_pct}}%</strong>; remaining margin is <strong>{{parting_margin_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "a5",
+        "title": "Fixed-End Bending Response",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "moment",
+          "stress"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate secondary bending response."
+        ],
+        "student": "<p>Calculate M_max=F_L L and sigma_max=M_max(b/2)/I_y. Keep the deflection-clearance comparison as the primary decision.</p>",
+        "instructor": "<p>M_max = <strong>{{parting_M_Nmm}} N mm</strong>; sigma_max = <strong>{{parting_sigma_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "a6",
+        "title": "Maximum Effective Overhang",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "design",
+          "overhang"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Solve clearance equality for length."
+        ],
+        "student": "<p>Set delta_L=c and calculate L_max=[3EI_yc/F_L]^(1/3). Interpret this as an effective overhang in the simplified model.</p>",
+        "instructor": "<p>L_max = <strong>{{parting_Lmax_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "a7",
+        "title": "Engineering Assessment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "engineering judgment"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "Compare clearance and published depth with limitations."
+        ],
+        "student": "<p>State the clearance result, compare L_max with T_max, and explain why this static check does not establish chatter-free operation, full machining stability, or a manufacturer-approved limit.</p>",
+        "instructor": "<p>{{parting_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Finalized faculty baseline for lateral parting-blade deflection and cut clearance.",
+        "variables": {
+          "parting_D_mm": 60,
+          "parting_s_mm": 3,
+          "parting_b_mm": 2.4,
+          "parting_H_mm": 32,
+          "parting_Tmax_mm": 45,
+          "parting_L_mm": 30,
+          "parting_E_MPa": 210000,
+          "parting_FL_N": 57
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "a6",
+          "a7"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-LATHE-TURNING-CUTT-001",
     "slug": "lathe-turning-cutting-tool-deflection",
     "title": "Lathe Turning — Cutting-Tool Deflection and Machining Tolerance",

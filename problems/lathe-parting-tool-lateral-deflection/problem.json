@@ -1,0 +1,17 @@
+{
+  "id":"MOS-LATHE-PARTING-TO-001",
+  "slug":"lathe-parting-tool-lateral-deflection",
+  "title":"Lathe Parting Tool - Lead-Angle Lateral Deflection and Cut Clearance",
+  "studentDocumentTitle":"Student Packet - Lathe Parting Tool Lateral Deflection",
+  "instructorDocumentTitle":"Instructor Guide - Lathe Parting Tool Lateral Deflection",
+  "summary":"Evaluate weak-axis lateral deflection of an effective cantilevered parting blade and compare it with nominal one-side cut clearance.",
+  "textbookChapters":["Beam bending","Elastic deflection","Serviceability"],
+  "derivedPlaceholders":["parting_c_mm","parting_Iy_mm4","parting_delta_mm","parting_clearance_relation","parting_acceptance","parting_utilization_pct","parting_margin_mm","parting_M_Nmm","parting_sigma_MPa","parting_Lmax_mm","parting_depth_comparison","parting_assessment"],
+  "image":"assets/lathe-parting-tool-industry-context.jpg",
+  "imageAttribution":"Instructor-supplied lathe parting photograph. Source/license attribution remains to be confirmed before public repository release; no dimensions or forces are inferred from it.",
+  "idealizedImage":"assets/lathe-parting-tool-instructor-reference.jpg",
+  "idealizedImageAlt":"Instructor reference top view of an effective cantilevered parting blade, lateral force, exaggerated deflected shape, and cut clearance.",
+  "source":"index.html",
+  "problemStatement":"<p>A lead-angle parting configuration produces a physically based equivalent lateral cutting-force component F_L at the insert. Model the effective unsupported segment of the thin rectangular blade as a weak-axis cantilever; do not model the complete tool as a literal bare cantilever.</p><p>The insert makes a cut wider than the centered blade body. Calculate the nominal one-side clearance, blade deflection, and whether the blade remains clear of the groove wall in this simplified static model.</p>",
+  "engineeringGoal":"<p>Compare dynamically calculated lateral tip deflection with available one-side clearance, quantify utilization and margin, evaluate secondary bending stress, determine the clearance-controlled maximum effective overhang, and state appropriate machining-model limitations.</p>"
+}

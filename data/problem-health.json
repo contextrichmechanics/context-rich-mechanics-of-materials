@@ -200,6 +200,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-LATHE-PARTING-TO-001",
+    "slug": "lathe-parting-tool-lateral-deflection",
+    "title": "Lathe Parting Tool - Lead-Angle Lateral Deflection and Cut Clearance",
+    "status": "OK",
+    "variables": 8,
+    "questions": 17,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-LATHE-TURNING-CUTT-001",
     "slug": "lathe-turning-cutting-tool-deflection",
     "title": "Lathe Turning — Cutting-Tool Deflection and Machining Tolerance",

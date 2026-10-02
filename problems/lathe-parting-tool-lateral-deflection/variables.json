@@ -1,0 +1,10 @@
+[
+ {"key":"parting_D_mm","symbol":"D","label":"Representative workpiece diameter","value":60,"unit":"mm","min":10,"max":200,"step":5},
+ {"key":"parting_s_mm","symbol":"s","label":"Insert cutting width","value":3.0,"unit":"mm","min":1,"max":10,"step":0.1},
+ {"key":"parting_b_mm","symbol":"b","label":"Blade body width (weak-axis thickness)","value":2.4,"unit":"mm","min":0.5,"max":8,"step":0.1},
+ {"key":"parting_H_mm","symbol":"H","label":"Blade height","value":32,"unit":"mm","min":5,"max":80,"step":1},
+ {"key":"parting_Tmax_mm","symbol":"T_max","label":"Published maximum cutting depth","value":45,"unit":"mm","min":5,"max":100,"step":1},
+ {"key":"parting_L_mm","symbol":"L","label":"Effective unsupported blade length","value":30,"unit":"mm","min":5,"max":80,"step":1},
+ {"key":"parting_E_MPa","symbol":"E","label":"Representative blade elastic modulus","value":210000,"unit":"MPa","min":50000,"max":300000,"step":5000},
+ {"key":"parting_FL_N","symbol":"F_L","label":"Derived lateral cutting-force component","value":57,"unit":"N","min":1,"max":500,"step":1}
+]
