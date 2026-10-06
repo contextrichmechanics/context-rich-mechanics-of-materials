@@ -1371,6 +1371,59 @@
     values.robot_cable_assessment = `${meetsRequirement ? "The specified routing geometry satisfies the stated minimum-radius criterion." : "The specified routing geometry fails the stated minimum-radius criterion and should not be recommended."} Increasing the inner radius lowers curvature and the equivalent geometric outer-fiber strain; a tighter route increases both and is outside the documented requirement. The calculated ${formatDerived(100 * maximumStrain, 4)}% is an equivalent geometric strain, not the strain in every conductor, shield, insulation layer, or jacket constituent. Strand slip, conductor lay, shielding, jacket and insulation behavior, torsion, contact, fatigue, and viscoelasticity are outside this model.`;
   }
 
+  const robotLinkPayloadMassKg = numericValue(values, "robot_link_mp_kg");
+  const robotLinkLengthMm = numericValue(values, "robot_link_L_mm");
+  const robotLinkMassKg = numericValue(values, "robot_link_mL_kg");
+  const robotLinkThicknessMm = numericValue(values, "robot_link_t_mm");
+  const robotLinkOuterDiameterMm = numericValue(values, "robot_link_Do_mm");
+  const robotLinkTorqueNm = numericValue(values, "robot_link_T_Nm");
+  const robotLinkYieldStrengthMPa = numericValue(values, "robot_link_Sy_MPa");
+
+  if (
+    Number.isFinite(robotLinkPayloadMassKg) && robotLinkPayloadMassKg > 0 &&
+    Number.isFinite(robotLinkLengthMm) && robotLinkLengthMm > 0 &&
+    Number.isFinite(robotLinkMassKg) && robotLinkMassKg > 0 &&
+    Number.isFinite(robotLinkThicknessMm) && robotLinkThicknessMm > 0 &&
+    Number.isFinite(robotLinkOuterDiameterMm) && robotLinkOuterDiameterMm > 2 * robotLinkThicknessMm &&
+    Number.isFinite(robotLinkTorqueNm) && robotLinkTorqueNm >= 0 &&
+    Number.isFinite(robotLinkYieldStrengthMPa) && robotLinkYieldStrengthMPa > 0
+  ) {
+    const gravityMPerS2 = 9.81;
+    const lengthM = robotLinkLengthMm / 1000;
+    const payloadForceN = robotLinkPayloadMassKg * gravityMPerS2;
+    const linkWeightN = robotLinkMassKg * gravityMPerS2;
+    const payloadMomentNm = payloadForceN * lengthM;
+    const linkWeightMomentNm = linkWeightN * lengthM / 2;
+    const rootMomentNm = payloadMomentNm + linkWeightMomentNm;
+    const innerDiameterMm = robotLinkOuterDiameterMm - 2 * robotLinkThicknessMm;
+    const extremeFiberMm = robotLinkOuterDiameterMm / 2;
+    const diameterDifferenceFourth = robotLinkOuterDiameterMm ** 4 - innerDiameterMm ** 4;
+    const inertiaMm4 = Math.PI * diameterDifferenceFourth / 64;
+    const polarInertiaMm4 = Math.PI * diameterDifferenceFourth / 32;
+    const bendingStressMPa = rootMomentNm * 1000 * extremeFiberMm / inertiaMm4;
+    const torsionalShearMPa = robotLinkTorqueNm * 1000 * extremeFiberMm / polarInertiaMm4;
+    const vonMisesMPa = Math.sqrt(bendingStressMPa ** 2 + 3 * torsionalShearMPa ** 2);
+    const strengthFactor = robotLinkYieldStrengthMPa / vonMisesMPa;
+    const torsionDominates = 3 * torsionalShearMPa ** 2 > bendingStressMPa ** 2;
+    const passes = strengthFactor >= 1;
+
+    values.robot_link_Fp_N = formatDerived(payloadForceN, 3);
+    values.robot_link_WL_N = formatDerived(linkWeightN, 3);
+    values.robot_link_Mp_Nm = formatDerived(payloadMomentNm, 3);
+    values.robot_link_ML_Nm = formatDerived(linkWeightMomentNm, 3);
+    values.robot_link_M_Nm = formatDerived(rootMomentNm, 3);
+    values.robot_link_Di_mm = formatDerived(innerDiameterMm, 3);
+    values.robot_link_c_mm = formatDerived(extremeFiberMm, 3);
+    values.robot_link_I_mm4 = formatDerived(inertiaMm4, 0);
+    values.robot_link_J_mm4 = formatDerived(polarInertiaMm4, 0);
+    values.robot_link_sigma_b_MPa = formatDerived(bendingStressMPa, 3);
+    values.robot_link_tau_t_MPa = formatDerived(torsionalShearMPa, 3);
+    values.robot_link_sigma_VM_MPa = formatDerived(vonMisesMPa, 3);
+    values.robot_link_n = formatDerived(strengthFactor, 2);
+    values.robot_link_dominant_contribution = `${torsionDominates ? "Torsional shear" : "Bending normal stress"} is the dominant contribution to the von Mises result.`;
+    values.robot_link_assessment = `The equivalent tube ${passes ? "passes" : "does not pass"} the assigned static-yield check with n = ${formatDerived(strengthFactor, 2)}. ${torsionDominates ? "Reducing transmitted torque directly reduces the dominant contribution; increasing outer diameter or wall thickness also increases section resistance." : "Reducing payload or link length directly reduces bending; increasing outer diameter or wall thickness also increases section resistance."} This result applies only to the static uniform-tube model and excludes stress concentrations, detailed sensor geometry, joint interfaces and compliance, dynamics, impact, fatigue, buckling, connector mechanics, and FEA.`;
+  }
+
 
   const craneLoadKN = numericValue(values, "crane_W_kN");
   const craneLengthM = numericValue(values, "crane_L_m");

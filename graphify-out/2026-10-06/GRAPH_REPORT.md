@@ -1,16 +1,16 @@
-# Graph Report - codex-cable-machine-pulley-20261005  (2026-10-05)
+# Graph Report - codex-industrial-robot-cable-20261006  (2026-10-06)
 
 ## Corpus Check
-- 385 files · ~3,362,293 words
+- 393 files · ~3,374,944 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1034 nodes · 991 edges · 131 communities (114 shown, 17 thin omitted)
+- 1051 nodes · 1004 edges · 135 communities (116 shown, 19 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `12a4cc75`
+- Built from commit: `55f4dadf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -142,6 +142,10 @@
 - Cable Machine Pulley Axle - Dead, Live, and Accidental Loading
 - cable-machine-pulley-axle-shear/index.qmd
 - cable-machine-pulley-axle-shear/student-packet.qmd
+- industrial-robot-cable-bending-curvature/instructor-guide.qmd
+- Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain
+- industrial-robot-cable-bending-curvature/index.qmd
+- industrial-robot-cable-bending-curvature/student-packet.qmd
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -161,7 +165,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (131 total, 17 thin omitted)
+## Communities (135 total, 19 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -603,20 +607,28 @@ Nodes (6): Generated Question Set and Solutions, Instructor Reference Idealizati
 Cohesion: 0.33
 Nodes (5): Analysis Scope, Cable Machine Pulley Axle - Dead, Live, and Accidental Loading, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal
 
+### Community 131 - "industrial-robot-cable-bending-curvature/instructor-guide.qmd"
+Cohesion: 0.29
+Nodes (6): Generated Question Set and Solutions, Instructor Reference Idealization, Problem Context, Purpose, Scope and Model Limitations, Sources and Value Provenance
+
+### Community 132 - "Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain"
+Cohesion: 0.33
+Nodes (5): Analysis Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain, Main Engineering Goal
+
 ## Knowledge Gaps
-- **651 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+646 more)
+- **662 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+657 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `15. Common Failure Modes` connect `15. Common Failure Modes` to `AI Agent Project Guide`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `8. Create The Package` connect `8. Create The Package` to `AI Agent Project Guide`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _651 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _662 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**

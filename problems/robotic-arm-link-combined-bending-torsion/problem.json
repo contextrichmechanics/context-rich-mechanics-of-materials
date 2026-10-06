@@ -1,0 +1,17 @@
+{
+  "id":"MOS-ROBOTIC-ARM-LINK-C-001",
+  "slug":"robotic-arm-link-combined-bending-torsion",
+  "title":"Robotic Arm Link - Combined Bending and Torsion",
+  "studentDocumentTitle":"Student Packet - Robotic Arm Link - Combined Bending and Torsion",
+  "instructorDocumentTitle":"Instructor Guide - Robotic Arm Link - Combined Bending and Torsion",
+  "summary":"Evaluate bending, torsion, von Mises stress, and static-yield margin at the root of an equivalent hollow circular robot-arm link.",
+  "textbookChapters":["Combined loading","Beam bending","Circular-shaft torsion","Failure theory"],
+  "derivedPlaceholders":["robot_link_Fp_N","robot_link_WL_N","robot_link_Mp_Nm","robot_link_ML_Nm","robot_link_M_Nm","robot_link_Di_mm","robot_link_c_mm","robot_link_I_mm4","robot_link_J_mm4","robot_link_sigma_b_MPa","robot_link_tau_t_MPa","robot_link_sigma_VM_MPa","robot_link_n","robot_link_dominant_contribution","robot_link_assessment"],
+  "image":"assets/robot-arm-link-industry-context.jpg",
+  "imageAttribution":"Nenad Stojković (Shixart1985), Robot arm works on a small component in a lab setting, Wikimedia Commons, CC BY 2.0. Visual context only; no numerical value is inferred from the photograph.",
+  "idealizedImage":"assets/robot-arm-link-instructor-reference.jpg",
+  "idealizedImageAlt":"Instructor reference equivalent hollow circular cantilever link under payload bending, self-weight bending, and applied torque.",
+  "source":"index.html",
+  "problemStatement":"<p>Model the selected robot-arm link as a uniform hollow circular cantilever. Use payload mass <strong>m<sub>p</sub> = {{robot_link_mp_kg}} {{robot_link_mp_kg_unit}}</strong>, length <strong>L = {{robot_link_L_mm}} {{robot_link_L_mm_unit}}</strong>, link mass <strong>m<sub>L</sub> = {{robot_link_mL_kg}} {{robot_link_mL_kg_unit}}</strong>, wall thickness <strong>t = {{robot_link_t_mm}} {{robot_link_t_mm_unit}}</strong>, equivalent outer diameter <strong>D<sub>o</sub> = {{robot_link_Do_mm}} {{robot_link_Do_mm_unit}}</strong>, torque <strong>T = {{robot_link_T_Nm}} {{robot_link_T_Nm_unit}}</strong>, and yield strength <strong>S<sub>y</sub> = {{robot_link_Sy_MPa}} {{robot_link_Sy_MPa_unit}}</strong>. Use fixed g = 9.81 m/s<sup>2</sup>.</p>",
+  "engineeringGoal":"<p>Determine the fixed-root bending and torsional stresses, von Mises equivalent stress, and static-yield factor of safety; identify the dominant contribution and make a bounded mechanics-based recommendation.</p>"
+}

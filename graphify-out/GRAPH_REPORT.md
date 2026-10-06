@@ -1,16 +1,16 @@
-# Graph Report - codex-industrial-robot-cable-20261006  (2026-10-06)
+# Graph Report - codex-robot-arm-link-20261006  (2026-10-06)
 
 ## Corpus Check
-- 393 files · ~3,374,944 words
+- 401 files · ~3,397,418 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1051 nodes · 1004 edges · 135 communities (116 shown, 19 thin omitted)
+- 1069 nodes · 1018 edges · 139 communities (118 shown, 21 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `55f4dadf`
+- Built from commit: `1b279d67`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -146,6 +146,10 @@
 - Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain
 - industrial-robot-cable-bending-curvature/index.qmd
 - industrial-robot-cable-bending-curvature/student-packet.qmd
+- robotic-arm-link-combined-bending-torsion/instructor-guide.qmd
+- Robotic Arm Link - Combined Bending and Torsion
+- robotic-arm-link-combined-bending-torsion/index.qmd
+- robotic-arm-link-combined-bending-torsion/student-packet.qmd
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -165,7 +169,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (135 total, 19 thin omitted)
+## Communities (139 total, 21 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -615,10 +619,18 @@ Nodes (6): Generated Question Set and Solutions, Instructor Reference Idealizati
 Cohesion: 0.33
 Nodes (5): Analysis Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain, Main Engineering Goal
 
+### Community 135 - "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd"
+Cohesion: 0.25
+Nodes (7): Generated Question Set and Solutions, Instructor Reference Idealization, Problem Context, Published Detailed-Model Context, Purpose, Scope and Model Limitations, Value Basis and Provenance
+
+### Community 136 - "Robotic Arm Link - Combined Bending and Torsion"
+Cohesion: 0.33
+Nodes (5): Analysis Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Robotic Arm Link - Combined Bending and Torsion
+
 ## Knowledge Gaps
-- **662 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+657 more)
+- **674 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+669 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -628,7 +640,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `8. Create The Package` connect `8. Create The Package` to `AI Agent Project Guide`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _662 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _674 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**

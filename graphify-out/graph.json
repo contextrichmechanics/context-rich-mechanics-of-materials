@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2819"
+      "source_location": "L2872"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2902"
+      "source_location": "L2955"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2798"
+      "source_location": "L2851"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2918"
+      "source_location": "L2971"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2763"
+      "source_location": "L2816"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2759"
+      "source_location": "L2812"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2868"
+      "source_location": "L2921"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2810"
+      "source_location": "L2863"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2843"
+      "source_location": "L2896"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2836"
+      "source_location": "L2889"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2777"
+      "source_location": "L2830"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2786"
+      "source_location": "L2839"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2849"
+      "source_location": "L2902"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2745"
+      "source_location": "L2798"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2735"
+      "source_location": "L2788"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2715"
+      "source_location": "L2768"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2700"
+      "source_location": "L2753"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2696"
+      "source_location": "L2749"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2731"
+      "source_location": "L2784"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2785"
+      "source_location": "L2838"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2778"
+      "source_location": "L2831"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2812"
+      "source_location": "L2865"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2769"
+      "source_location": "L2822"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2791"
+      "source_location": "L2844"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2747"
+      "source_location": "L2800"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2682"
+      "source_location": "L2735"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2673"
+      "source_location": "L2726"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3020"
+      "source_location": "L3073"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3007"
+      "source_location": "L3060"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3031"
+      "source_location": "L3084"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3021"
+      "source_location": "L3074"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3001"
+      "source_location": "L3054"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2753"
+      "source_location": "L2806"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3006"
+      "source_location": "L3059"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3008"
+      "source_location": "L3061"
     },
     {
       "id": "instructor_builder",
@@ -4033,6 +4033,236 @@
       "node_kind": "heading",
       "norm_label": "questions",
       "source_file": "problems/industrial-robot-cable-bending-curvature/student-packet.qmd",
+      "source_location": "L8"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide",
+      "label": "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - Robotic Arm Link - Combined Bending and Torsion",
+        "subtitle": "Equivalent Hollow-Tube Static Strength Model",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L25"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_instructor_reference_idealization",
+      "label": "Instructor Reference Idealization",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "instructor reference idealization",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L19"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L15"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_published_detailed_model_context",
+      "label": "Published Detailed-Model Context",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "published detailed-model context",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L39"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L11"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_scope_and_model_limitations",
+      "label": "Scope and Model Limitations",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope and model limitations",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L43"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_value_basis_and_provenance",
+      "label": "Value Basis and Provenance",
+      "_origin": "ast",
+      "community": 135,
+      "community_name": "robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "value basis and provenance",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L33"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_student_problem",
+      "label": "robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "Robotic Arm Link - Combined Bending and Torsion",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_student_problem_analysis_scope",
+      "label": "Analysis Scope",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "Robotic Arm Link - Combined Bending and Torsion",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "analysis scope",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L17"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_student_problem_context_rich_solid_mechanics_problem",
+      "label": "Context-Rich Solid Mechanics Problem",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "Robotic Arm Link - Combined Bending and Torsion",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context-rich solid mechanics problem",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "Robotic Arm Link - Combined Bending and Torsion",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L5"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_student_problem_main_engineering_goal",
+      "label": "Main Engineering Goal",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "Robotic Arm Link - Combined Bending and Torsion",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "main engineering goal",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L13"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_student_problem_robotic_arm_link_combined_bending_and_torsion",
+      "label": "Robotic Arm Link - Combined Bending and Torsion",
+      "_origin": "ast",
+      "community": 136,
+      "community_name": "Robotic Arm Link - Combined Bending and Torsion",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "robotic arm link - combined bending and torsion",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L3"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_index",
+      "label": "robotic-arm-link-combined-bending-torsion/index.qmd",
+      "_origin": "ast",
+      "community": 137,
+      "community_name": "robotic-arm-link-combined-bending-torsion/index.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Robotic Arm Link - Combined Bending and Torsion",
+        "image": "assets/robot-arm-link-industry-context.jpg",
+        "format": "html"
+      },
+      "node_kind": "page",
+      "norm_label": "robotic-arm-link-combined-bending-torsion/index.qmd",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_index_assigned_values",
+      "label": "Assigned Values",
+      "_origin": "ast",
+      "community": 137,
+      "community_name": "robotic-arm-link-combined-bending-torsion/index.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assigned values",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/index.qmd",
+      "source_location": "L9"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_student_packet",
+      "label": "robotic-arm-link-combined-bending-torsion/student-packet.qmd",
+      "_origin": "ast",
+      "community": 138,
+      "community_name": "robotic-arm-link-combined-bending-torsion/student-packet.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - Robotic Arm Link - Combined Bending and Torsion",
+        "format": "html"
+      },
+      "node_kind": "page",
+      "norm_label": "robotic-arm-link-combined-bending-torsion/student-packet.qmd",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_robotic_arm_link_combined_bending_torsion_student_packet_questions",
+      "label": "Questions",
+      "_origin": "ast",
+      "community": 138,
+      "community_name": "robotic-arm-link-combined-bending-torsion/student-packet.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "questions",
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/student-packet.qmd",
       "source_location": "L8"
     },
     {
@@ -13749,7 +13979,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2732",
+      "source_location": "L2785",
       "weight": 1.0
     },
     {
@@ -13761,7 +13991,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2741",
+      "source_location": "L2794",
       "weight": 1.0
     },
     {
@@ -13773,7 +14003,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2786",
+      "source_location": "L2839",
       "weight": 1.0
     },
     {
@@ -13785,7 +14015,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2788",
+      "source_location": "L2841",
       "weight": 1.0
     },
     {
@@ -13797,7 +14027,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2782",
+      "source_location": "L2835",
       "weight": 1.0
     },
     {
@@ -13809,7 +14039,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2823",
+      "source_location": "L2876",
       "weight": 1.0
     },
     {
@@ -13821,7 +14051,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2828",
+      "source_location": "L2881",
       "weight": 1.0
     },
     {
@@ -13833,7 +14063,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2834",
+      "source_location": "L2887",
       "weight": 1.0
     },
     {
@@ -13845,7 +14075,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2836",
+      "source_location": "L2889",
       "weight": 1.0
     },
     {
@@ -13857,7 +14087,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2838",
+      "source_location": "L2891",
       "weight": 1.0
     },
     {
@@ -13869,7 +14099,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2839",
+      "source_location": "L2892",
       "weight": 1.0
     },
     {
@@ -13881,7 +14111,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2770",
+      "source_location": "L2823",
       "weight": 1.0
     },
     {
@@ -13893,7 +14123,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2775",
+      "source_location": "L2828",
       "weight": 1.0
     },
     {
@@ -13905,7 +14135,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2792",
+      "source_location": "L2845",
       "weight": 1.0
     },
     {
@@ -13917,7 +14147,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2802",
+      "source_location": "L2855",
       "weight": 1.0
     },
     {
@@ -13929,7 +14159,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2803",
+      "source_location": "L2856",
       "weight": 1.0
     },
     {
@@ -13941,7 +14171,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2804",
+      "source_location": "L2857",
       "weight": 1.0
     },
     {
@@ -13953,7 +14183,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2805",
+      "source_location": "L2858",
       "weight": 1.0
     },
     {
@@ -13965,7 +14195,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2750",
+      "source_location": "L2803",
       "weight": 1.0
     },
     {
@@ -13977,7 +14207,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2750",
+      "source_location": "L2803",
       "weight": 1.0
     },
     {
@@ -13989,7 +14219,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2750",
+      "source_location": "L2803",
       "weight": 1.0
     },
     {
@@ -14001,7 +14231,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2676",
+      "source_location": "L2729",
       "weight": 1.0
     },
     {
@@ -14013,7 +14243,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2678",
+      "source_location": "L2731",
       "weight": 1.0
     },
     {
@@ -14097,7 +14327,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2909",
+      "source_location": "L2962",
       "weight": 1.0
     },
     {
@@ -14109,7 +14339,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2910",
+      "source_location": "L2963",
       "weight": 1.0
     },
     {
@@ -14121,7 +14351,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2913",
+      "source_location": "L2966",
       "weight": 1.0
     },
     {
@@ -14145,7 +14375,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2925",
+      "source_location": "L2978",
       "weight": 1.0
     },
     {
@@ -14157,7 +14387,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2931",
+      "source_location": "L2984",
       "weight": 1.0
     },
     {
@@ -14169,7 +14399,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2939",
+      "source_location": "L2992",
       "weight": 1.0
     },
     {
@@ -14181,7 +14411,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2939",
+      "source_location": "L2992",
       "weight": 1.0
     },
     {
@@ -14193,7 +14423,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2939",
+      "source_location": "L2992",
       "weight": 1.0
     },
     {
@@ -14205,7 +14435,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2944",
+      "source_location": "L2997",
       "weight": 1.0
     },
     {
@@ -14217,7 +14447,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2944",
+      "source_location": "L2997",
       "weight": 1.0
     },
     {
@@ -14229,7 +14459,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2955",
+      "source_location": "L3008",
       "weight": 1.0
     },
     {
@@ -14241,7 +14471,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2961",
+      "source_location": "L3014",
       "weight": 1.0
     },
     {
@@ -14253,7 +14483,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2875",
+      "source_location": "L2928",
       "weight": 1.0
     },
     {
@@ -14265,7 +14495,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2881",
+      "source_location": "L2934",
       "weight": 1.0
     },
     {
@@ -14277,7 +14507,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2881",
+      "source_location": "L2934",
       "weight": 1.0
     },
     {
@@ -14289,7 +14519,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2881",
+      "source_location": "L2934",
       "weight": 1.0
     },
     {
@@ -14301,7 +14531,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2892",
+      "source_location": "L2945",
       "weight": 1.0
     },
     {
@@ -14313,7 +14543,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2894",
+      "source_location": "L2947",
       "weight": 1.0
     },
     {
@@ -14325,7 +14555,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2896",
+      "source_location": "L2949",
       "weight": 1.0
     },
     {
@@ -14337,7 +14567,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2816",
+      "source_location": "L2869",
       "weight": 1.0
     },
     {
@@ -14349,7 +14579,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2844",
+      "source_location": "L2897",
       "weight": 1.0
     },
     {
@@ -14361,7 +14591,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2846",
+      "source_location": "L2899",
       "weight": 1.0
     },
     {
@@ -14373,7 +14603,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2840",
+      "source_location": "L2893",
       "weight": 1.0
     },
     {
@@ -14385,7 +14615,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2778",
+      "source_location": "L2831",
       "weight": 1.0
     },
     {
@@ -14397,7 +14627,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2783",
+      "source_location": "L2836",
       "weight": 1.0
     },
     {
@@ -14409,7 +14639,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2787",
+      "source_location": "L2840",
       "weight": 1.0
     },
     {
@@ -14421,7 +14651,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2850",
+      "source_location": "L2903",
       "weight": 1.0
     },
     {
@@ -14433,7 +14663,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2860",
+      "source_location": "L2913",
       "weight": 1.0
     },
     {
@@ -14445,7 +14675,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2861",
+      "source_location": "L2914",
       "weight": 1.0
     },
     {
@@ -14457,7 +14687,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2862",
+      "source_location": "L2915",
       "weight": 1.0
     },
     {
@@ -14469,7 +14699,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2863",
+      "source_location": "L2916",
       "weight": 1.0
     },
     {
@@ -14481,7 +14711,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2736",
+      "source_location": "L2789",
       "weight": 1.0
     },
     {
@@ -14493,7 +14723,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2739",
+      "source_location": "L2792",
       "weight": 1.0
     },
     {
@@ -14505,7 +14735,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2741",
+      "source_location": "L2794",
       "weight": 1.0
     },
     {
@@ -21072,6 +21302,160 @@
       "weight": 1.0
     },
     {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_index",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_index_assigned_values",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/index.qmd",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_instructor_reference_idealization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_value_basis_and_provenance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_published_detailed_model_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_instructor_guide_scope_and_model_limitations",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/instructor-guide.qmd",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_student_packet",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_student_packet_questions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/student-packet.qmd",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_student_problem",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_student_problem_context_rich_solid_mechanics_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_student_problem_context_rich_solid_mechanics_problem",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_student_problem_robotic_arm_link_combined_bending_and_torsion",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_student_problem_robotic_arm_link_combined_bending_and_torsion",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_student_problem_main_engineering_goal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_student_problem_robotic_arm_link_combined_bending_and_torsion",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_student_problem_analysis_scope",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_robotic_arm_link_combined_bending_torsion_student_problem_robotic_arm_link_combined_bending_and_torsion",
+      "target": "problems_robotic_arm_link_combined_bending_torsion_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/robotic-arm-link-combined-bending-torsion/_student-problem.qmd",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "problems_shop_crane_pin_connection_shear_bearing_index",
       "target": "problems_shop_crane_pin_connection_shear_bearing_index_assigned_values",
       "relation": "contains",
@@ -23125,7 +23509,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2673",
+      "source_location": "L2726",
       "weight": 1.0
     },
     {
@@ -23136,7 +23520,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2682",
+      "source_location": "L2735",
       "weight": 1.0
     },
     {
@@ -23147,7 +23531,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2696",
+      "source_location": "L2749",
       "weight": 1.0
     },
     {
@@ -23158,7 +23542,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2700",
+      "source_location": "L2753",
       "weight": 1.0
     },
     {
@@ -23169,7 +23553,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2715",
+      "source_location": "L2768",
       "weight": 1.0
     },
     {
@@ -23180,7 +23564,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2731",
+      "source_location": "L2784",
       "weight": 1.0
     },
     {
@@ -23191,7 +23575,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2747",
+      "source_location": "L2800",
       "weight": 1.0
     },
     {
@@ -23202,7 +23586,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2769",
+      "source_location": "L2822",
       "weight": 1.0
     },
     {
@@ -23213,7 +23597,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2778",
+      "source_location": "L2831",
       "weight": 1.0
     },
     {
@@ -23224,7 +23608,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2785",
+      "source_location": "L2838",
       "weight": 1.0
     },
     {
@@ -23235,7 +23619,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2791",
+      "source_location": "L2844",
       "weight": 1.0
     },
     {
@@ -23246,7 +23630,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2812",
+      "source_location": "L2865",
       "weight": 1.0
     },
     {
@@ -23356,78 +23740,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2735",
+      "source_location": "L2788",
       "weight": 1.0
     },
     {
       "source": "scripts_render_assignment",
       "target": "scripts_render_assignment_selectedquestions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2745",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_questionsections",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2753",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_questionsbysection",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2759",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_questionimagefile",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2763",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderquestionimagehtml",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2777",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderquestionimagemarkdown",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2786",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_problemimagemarkdown",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23449,13 +23767,79 @@
     },
     {
       "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_questionsections",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2806",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_questionsbysection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2812",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_questionimagefile",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2816",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_renderquestionimagehtml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2830",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_renderquestionimagemarkdown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2839",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_problemimagemarkdown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2851",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
       "target": "scripts_render_assignment_renderidealizedimagehtml",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2810",
+      "source_location": "L2863",
       "weight": 1.0
     },
     {
@@ -23466,7 +23850,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2819",
+      "source_location": "L2872",
       "weight": 1.0
     },
     {
@@ -23477,7 +23861,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2836",
+      "source_location": "L2889",
       "weight": 1.0
     },
     {
@@ -23488,7 +23872,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2843",
+      "source_location": "L2896",
       "weight": 1.0
     },
     {
@@ -23499,7 +23883,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2849",
+      "source_location": "L2902",
       "weight": 1.0
     },
     {
@@ -23510,7 +23894,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2868",
+      "source_location": "L2921",
       "weight": 1.0
     },
     {
@@ -23521,7 +23905,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2902",
+      "source_location": "L2955",
       "weight": 1.0
     },
     {
@@ -23532,7 +23916,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2918",
+      "source_location": "L2971",
       "weight": 1.0
     },
     {
@@ -23543,7 +23927,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3001",
+      "source_location": "L3054",
       "weight": 1.0
     },
     {
@@ -23554,7 +23938,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3006",
+      "source_location": "L3059",
       "weight": 1.0
     },
     {
@@ -23565,7 +23949,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3007",
+      "source_location": "L3060",
       "weight": 1.0
     },
     {
@@ -23576,7 +23960,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3008",
+      "source_location": "L3061",
       "weight": 1.0
     },
     {
@@ -23587,7 +23971,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3020",
+      "source_location": "L3073",
       "weight": 1.0
     },
     {
@@ -23598,7 +23982,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3021",
+      "source_location": "L3074",
       "weight": 1.0
     },
     {
@@ -23609,7 +23993,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3031",
+      "source_location": "L3084",
       "weight": 1.0
     },
     {
@@ -24758,5 +25142,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "55f4dadfcb4b5f92c2683078a2fffaafd4f368c5"
+  "built_at_commit": "1b279d67e3dbcdf493cd7d6b37a31d3869c34992"
 }

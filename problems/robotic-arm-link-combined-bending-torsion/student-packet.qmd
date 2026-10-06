@@ -1,0 +1,14 @@
+---
+title: "Student Packet - Robotic Arm Link - Combined Bending and Torsion"
+format: html
+---
+
+{{< include _student-problem.qmd >}}
+
+## Questions
+
+```{=html}
+<div id="robotic-arm-link-combined-bending-torsion-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"robotic-arm-link-combined-bending-torsion",targetId:"robotic-arm-link-combined-bending-torsion-student-questions",type:"student"}));</script>
+```

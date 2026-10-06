@@ -1,0 +1,15 @@
+---
+title: "Robotic Arm Link - Combined Bending and Torsion"
+image: "assets/robot-arm-link-industry-context.jpg"
+format: html
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assigned Values
+
+```{=html}
+<div id="robotic-arm-link-combined-bending-torsion-values"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"robotic-arm-link-combined-bending-torsion",targetId:"robotic-arm-link-combined-bending-torsion-values",type:"student"}));</script>
+```

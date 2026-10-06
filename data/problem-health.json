@@ -320,6 +320,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-ROBOTIC-ARM-LINK-C-001",
+    "slug": "robotic-arm-link-combined-bending-torsion",
+    "title": "Robotic Arm Link - Combined Bending and Torsion",
+    "status": "OK",
+    "variables": 7,
+    "questions": 17,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-SHOP-CRANE-PIN-CO-001",
     "slug": "shop-crane-pin-connection-shear-bearing",
     "title": "Shop Crane Pin/Bolt Connection - Shear and Bearing",
