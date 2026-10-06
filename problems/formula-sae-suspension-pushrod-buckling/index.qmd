@@ -1,0 +1,15 @@
+---
+title: "Formula SAE Suspension Pushrod - Axial Compression and Column Buckling"
+image: "assets/formula-sae-pushrod-industry-context.jpg"
+format: html
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assigned Values
+
+```{=html}
+<div id="formula-sae-suspension-pushrod-buckling-values"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"formula-sae-suspension-pushrod-buckling",targetId:"formula-sae-suspension-pushrod-buckling-values",type:"student"}));</script>
+```

@@ -1234,6 +1234,63 @@
     values.crane_mast_assessment = `The idealized weak-axis buckling mode is associated with ${governingAxis}, with P_cr = ${formatDerived(criticalLoadKN, 3)} kN and an Euler load ratio n_b = ${formatDerived(bucklingMargin, 2)}. The most influential modeled quantities are E, the governing I_min, and effective length KL; reducing effective length, improving equivalent restraint, or increasing weak-axis inertia increases the idealized resistance. This is not a crane certification or the real crane's factor of safety: the modeled KL/r is ${formatDerived(slenderness, 4)}, and real bracing, restraint, frame interaction, eccentricity, imperfections, residual stress, yielding or inelastic behavior, local wall buckling, connections, hydraulic/boom interaction, and dynamics are excluded.`;
   }
 
+
+  const pushrodLoadN = numericValue(values, "pushrod_P_N");
+  const pushrodOuterDiameterMm = numericValue(values, "pushrod_Do_mm");
+  const pushrodThicknessMm = numericValue(values, "pushrod_t_mm");
+  const pushrodLengthMm = numericValue(values, "pushrod_L_mm");
+  const pushrodModulusGPa = numericValue(values, "pushrod_E_GPa");
+  const pushrodYieldStrengthMPa = numericValue(values, "pushrod_Sy_MPa");
+  const pushrodEffectiveLengthFactor = numericValue(values, "pushrod_K");
+
+  if (
+    Number.isFinite(pushrodLoadN) && pushrodLoadN > 0 &&
+    Number.isFinite(pushrodOuterDiameterMm) && pushrodOuterDiameterMm > 0 &&
+    Number.isFinite(pushrodThicknessMm) && pushrodThicknessMm > 0 &&
+    pushrodOuterDiameterMm > 2 * pushrodThicknessMm &&
+    Number.isFinite(pushrodLengthMm) && pushrodLengthMm > 0 &&
+    Number.isFinite(pushrodModulusGPa) && pushrodModulusGPa > 0 &&
+    Number.isFinite(pushrodYieldStrengthMPa) && pushrodYieldStrengthMPa > 0 &&
+    Number.isFinite(pushrodEffectiveLengthFactor) && pushrodEffectiveLengthFactor > 0
+  ) {
+    const innerDiameterMm = pushrodOuterDiameterMm - 2 * pushrodThicknessMm;
+    const areaMm2 = Math.PI * (pushrodOuterDiameterMm ** 2 - innerDiameterMm ** 2) / 4;
+    const inertiaMm4 = Math.PI * (pushrodOuterDiameterMm ** 4 - innerDiameterMm ** 4) / 64;
+    const radiusMm = Math.sqrt(inertiaMm4 / areaMm2);
+    const stressMPa = pushrodLoadN / areaMm2;
+    const yieldMargin = pushrodYieldStrengthMPa / stressMPa;
+    const slenderness = pushrodEffectiveLengthFactor * pushrodLengthMm / radiusMm;
+    const criticalLoadN = Math.PI ** 2 * pushrodModulusGPa * 1000 * inertiaMm4 /
+      (pushrodEffectiveLengthFactor * pushrodLengthMm) ** 2;
+    const bucklingMargin = criticalLoadN / pushrodLoadN;
+    const tolerance = 1e-12;
+    const governingMode = Math.abs(yieldMargin - bucklingMargin) <= tolerance
+      ? "coincident yielding and buckling margins"
+      : bucklingMargin < yieldMargin ? "elastic column buckling" : "material yielding";
+    const governingRatio = Math.min(yieldMargin, bucklingMargin);
+    const bothChecksPass = yieldMargin >= 1 && bucklingMargin >= 1;
+    const recommendation = bucklingMargin < yieldMargin
+      ? "For the governing stability response, increasing outer diameter is especially effective because I depends strongly on diameter; increasing wall thickness, reducing effective length KL, or using a larger E also increases Euler capacity."
+      : yieldMargin < bucklingMargin
+        ? "For the governing yielding response, increasing tube area, increasing the assigned yield strength, or reducing applied load directly increases the nominal yield margin."
+        : "Because the two nominal margins coincide, changes should be checked against both strength and stability rather than optimizing only one mode.";
+
+    values.pushrod_Di_mm = formatDerived(innerDiameterMm, 3);
+    values.pushrod_A_mm2 = formatDerived(areaMm2, 3);
+    values.pushrod_I_mm4 = formatDerived(inertiaMm4, 1);
+    values.pushrod_r_mm = formatDerived(radiusMm, 3);
+    values.pushrod_N_N = formatDerived(pushrodLoadN, 0);
+    values.pushrod_sigma_MPa = formatDerived(stressMPa, 2);
+    values.pushrod_ny = formatDerived(yieldMargin, 2);
+    values.pushrod_slenderness = formatDerived(slenderness, 1);
+    values.pushrod_Pcr_kN = formatDerived(criticalLoadN / 1000, 2);
+    values.pushrod_nb = formatDerived(bucklingMargin, 2);
+    values.pushrod_governing_mode = governingMode;
+    values.pushrod_governing_ratio = formatDerived(governingRatio, 2);
+    values.pushrod_sensitivity_assessment = `${recommendation} Outer diameter, wall thickness, length, modulus, and end restraint must be evaluated through the complete section-property and Euler equations rather than treated as independent labels.`;
+    values.pushrod_assessment = `${bothChecksPass ? "Both assigned nominal checks pass" : "At least one assigned nominal check does not pass"}: n_y = ${formatDerived(yieldMargin, 2)} and n_b = ${formatDerived(bucklingMargin, 2)}. The governing response is ${governingMode}, with governing ratio ${formatDerived(governingRatio, 2)}. ${recommendation} This conclusion applies only to the straight, prismatic, centrally loaded, linearly elastic, pin-ended model; crookedness, eccentricity, joint compliance, threaded insert and rod-end stresses, bolt bending, weld effects, local bending, fatigue, impact amplification, and contact nonlinearities are excluded.`;
+  }
+
   const craneLoadKN = numericValue(values, "crane_W_kN");
   const craneLengthM = numericValue(values, "crane_L_m");
   const craneWidthMm = numericValue(values, "crane_b_mm");

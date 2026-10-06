@@ -1,16 +1,16 @@
-# Graph Report - codex-formula-sae-pushrod-20261005  (2026-10-05)
+# Graph Report - codex-lathe-parting-20261002  (2026-10-02)
 
 ## Corpus Check
-- 377 files · ~3,336,921 words
+- 369 files · ~3,310,734 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1017 nodes · 978 edges · 127 communities (112 shown, 15 thin omitted)
+- 1000 nodes · 965 edges · 123 communities (110 shown, 13 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b6263827`
+- Built from commit: `8d40257f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -134,10 +134,6 @@
 - Lathe Parting Tool - Lead-Angle Lateral Deflection and Cut Clearance
 - lathe-parting-tool-lateral-deflection/index.qmd
 - lathe-parting-tool-lateral-deflection/student-packet.qmd
-- formula-sae-suspension-pushrod-buckling/instructor-guide.qmd
-- Formula SAE Suspension Pushrod - Axial Compression and Column Buckling
-- formula-sae-suspension-pushrod-buckling/index.qmd
-- formula-sae-suspension-pushrod-buckling/student-packet.qmd
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -157,7 +153,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (127 total, 15 thin omitted)
+## Communities (123 total, 13 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -583,28 +579,18 @@ Nodes (6): Force Basis and Provenance, Generated Question Set and Solutions, Ins
 Cohesion: 0.33
 Nodes (5): Analysis Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Lathe Parting Tool - Lead-Angle Lateral Deflection and Cut Clearance, Main Engineering Goal
 
-### Community 123 - "formula-sae-suspension-pushrod-buckling/instructor-guide.qmd"
-Cohesion: 0.29
-Nodes (6): Generated Question Set and Solutions, Instructor Reference Idealization, Problem Context, Purpose, Scope and Model Limitations, Sources and Value Provenance
-
-### Community 124 - "Formula SAE Suspension Pushrod - Axial Compression and Column Buckling"
-Cohesion: 0.33
-Nodes (5): Analysis Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Formula SAE Suspension Pushrod - Axial Compression and Column Buckling, Main Engineering Goal
-
 ## Knowledge Gaps
-- **640 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+635 more)
+- **629 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+624 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `15. Common Failure Modes` connect `15. Common Failure Modes` to `AI Agent Project Guide`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _640 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _629 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**
@@ -613,3 +599,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
 - **Should `Supplemental Instructor Background` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
+- **Should `What You Must Do When Invoked` be split into smaller, more focused modules?**
+  _Cohesion score 0.08 - nodes in this community are weakly interconnected._

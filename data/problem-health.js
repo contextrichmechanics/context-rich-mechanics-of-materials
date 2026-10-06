@@ -140,6 +140,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-FORMULA-SAE-SUSPEN-001",
+    "slug": "formula-sae-suspension-pushrod-buckling",
+    "title": "Formula SAE Suspension Pushrod - Axial Compression and Column Buckling",
+    "status": "OK",
+    "variables": 7,
+    "questions": 21,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-PRESS-006",
     "slug": "hydraulic-press-punching-shear",
     "title": "Hydraulic Press Punching Shear and Bearing Stress Check",

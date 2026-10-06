@@ -6929,6 +6929,503 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-FORMULA-SAE-SUSPEN-001",
+    "slug": "formula-sae-suspension-pushrod-buckling",
+    "title": "Formula SAE Suspension Pushrod - Axial Compression and Column Buckling",
+    "studentDocumentTitle": "Student Packet - Formula SAE Suspension Pushrod - Axial Compression and Column Buckling",
+    "instructorDocumentTitle": "Instructor Guide - Formula SAE Suspension Pushrod - Axial Compression and Column Buckling",
+    "summary": "Evaluate direct compressive stress and Euler buckling of an idealized Formula SAE suspension pushrod, then identify the governing nominal response.",
+    "textbookChapters": [
+      "Axial loading and stress",
+      "Columns",
+      "Euler buckling",
+      "Factor of safety"
+    ],
+    "derivedPlaceholders": [
+      "pushrod_Di_mm",
+      "pushrod_A_mm2",
+      "pushrod_I_mm4",
+      "pushrod_r_mm",
+      "pushrod_N_N",
+      "pushrod_sigma_MPa",
+      "pushrod_ny",
+      "pushrod_slenderness",
+      "pushrod_Pcr_kN",
+      "pushrod_nb",
+      "pushrod_governing_mode",
+      "pushrod_governing_ratio",
+      "pushrod_sensitivity_assessment",
+      "pushrod_assessment"
+    ],
+    "image": "problems/formula-sae-suspension-pushrod-buckling/assets/formula-sae-pushrod-industry-context.jpg",
+    "imageAttribution": "User-supplied Formula SAE suspension photograph with the analyzed pushrod identified. No dimensions or material properties are inferred from the image.",
+    "idealizedImage": "problems/formula-sae-suspension-pushrod-buckling/assets/formula-sae-pushrod-instructor-reference.jpg",
+    "idealizedImageAlt": "Instructor reference showing the AISI 4130 hollow circular pushrod as a pinned-pinned two-force compression member.",
+    "source": "problems/formula-sae-suspension-pushrod-buckling/index.html",
+    "problemStatement": "<p>A Formula SAE vehicle uses a pushrod-actuated suspension to transfer wheel-side loading to an inboard rocker and spring-damper. The highlighted black diagonal pushrod is analyzed for a published maximum compression load of <strong>P = {{pushrod_P_N}} {{pushrod_P_N_unit}}</strong>.</p><p>Idealize the pushrod as a straight, prismatic hollow circular two-force member with pin-connected ends. Use <strong>D<sub>o</sub> = {{pushrod_Do_mm}} {{pushrod_Do_mm_unit}}</strong>, <strong>t = {{pushrod_t_mm}} {{pushrod_t_mm_unit}}</strong>, <strong>L = {{pushrod_L_mm}} {{pushrod_L_mm_unit}}</strong>, <strong>E = {{pushrod_E_GPa}} {{pushrod_E_GPa_unit}}</strong>, <strong>S<sub>y</sub> = {{pushrod_Sy_MPa}} {{pushrod_Sy_MPa_unit}}</strong>, and <strong>K = {{pushrod_K}}</strong>. Compare nominal yielding and Euler buckling within this simplified model.</p>",
+    "engineeringGoal": "<p>Determine the tube section properties, direct compressive stress, yield factor of safety, slenderness ratio, Euler critical load, and buckling factor of safety; identify the smaller nominal margin; and recommend a mechanics-based change while recognizing the model limitations.</p>",
+    "variables": [
+      {
+        "key": "pushrod_P_N",
+        "symbol": "P",
+        "label": "Maximum pushrod compression load",
+        "value": 5358,
+        "unit": "N",
+        "min": 500,
+        "max": 30000,
+        "step": 1
+      },
+      {
+        "key": "pushrod_Do_mm",
+        "symbol": "D_o",
+        "label": "Tube outer diameter",
+        "value": 19.05,
+        "unit": "mm",
+        "min": 8,
+        "max": 50,
+        "step": 0.01
+      },
+      {
+        "key": "pushrod_t_mm",
+        "symbol": "t",
+        "label": "Tube wall thickness",
+        "value": 0.889,
+        "unit": "mm",
+        "min": 0.3,
+        "max": 5,
+        "step": 0.001
+      },
+      {
+        "key": "pushrod_L_mm",
+        "symbol": "L",
+        "label": "Pushrod column length",
+        "value": 520,
+        "unit": "mm",
+        "min": 150,
+        "max": 1200,
+        "step": 1
+      },
+      {
+        "key": "pushrod_E_GPa",
+        "symbol": "E",
+        "label": "Young's modulus",
+        "value": 205,
+        "unit": "GPa",
+        "min": 50,
+        "max": 250,
+        "step": 1
+      },
+      {
+        "key": "pushrod_Sy_MPa",
+        "symbol": "S_y",
+        "label": "Yield strength",
+        "value": 650,
+        "unit": "MPa",
+        "min": 100,
+        "max": 1500,
+        "step": 1
+      },
+      {
+        "key": "pushrod_K",
+        "symbol": "K",
+        "label": "Effective-length factor",
+        "value": 1,
+        "unit": "-",
+        "min": 0.5,
+        "max": 2,
+        "step": 0.05
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "function",
+          "suspension"
+        ],
+        "type": "conceptual",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Connect suspension hardware to pushrod force transfer."
+        ],
+        "student": "<p>State the structural function of the pushrod within the pushrod-actuated suspension.</p>",
+        "instructor": "<p>The pushrod transfers force and motion from the wheel-side suspension to the inboard rocker, which redirects motion to the spring-damper.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Loads",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "loads",
+          "compression"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the assigned critical pushrod load."
+        ],
+        "student": "<p>Identify the load transmitted through the pushrod and state whether the assigned critical load places the member in tension or compression.</p>",
+        "instructor": "<p>The selected obstacle load case places the pushrod in axial compression. The assigned maximum force acts along the member's axis.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "boundary conditions",
+          "pins"
+        ],
+        "type": "boundary condition",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Relate rod ends to the pin-ended model."
+        ],
+        "student": "<p>Describe how spherical rod-end or pin connections motivate an idealized pinned-pinned column model.</p>",
+        "instructor": "<p>Rod ends permit relative rotation and transmit force primarily through their centers, motivating an idealized pin at each end and K = 1.0.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path"
+        ],
+        "type": "load-path reasoning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Trace suspension-force transfer."
+        ],
+        "student": "<p>Trace the load path from the wheel-side suspension assembly through the pushrod to the rocker and spring-damper.</p>",
+        "instructor": "<p>Road and wheel-side suspension demand passes through the upright and suspension links into the pushrod, then to the rocker and finally to the spring-damper and chassis attachments.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Component or Location",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "slender member",
+          "instability"
+        ],
+        "type": "mechanics reasoning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Recognize instability risk."
+        ],
+        "student": "<p>Explain why the long, thin pushrod is a candidate for instability even when its average compressive stress is below yield.</p>",
+        "instructor": "<p>A slender compression member can lose lateral stability at an Euler load below the load required to cause uniform material yielding.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "yielding",
+          "buckling"
+        ],
+        "type": "response identification",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Identify the competing nominal checks."
+        ],
+        "student": "<p>Rank direct yielding and elastic buckling as possible responses and state what calculations are required to determine which governs.</p>",
+        "instructor": "<p>Both must be evaluated. Compare the yield factor of safety from average compression with the Euler buckling factor of safety; the smaller nominal margin governs the simplified model.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "parameters"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify all assigned model inputs."
+        ],
+        "student": "<p>Identify the load, tube geometry, member length, elastic modulus, yield strength, and effective-length factor needed for the analysis.</p>",
+        "instructor": "<p>The inputs are P, D<sub>o</sub>, t, L, E, S<sub>y</sub>, and K. The inner diameter is derived rather than independently assigned.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "idealization",
+          "two-force member"
+        ],
+        "type": "fbd/modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Construct the pushrod column model."
+        ],
+        "student": "<p>Convert the highlighted pushrod into a straight hollow circular two-force member with pin-connected ends. Show equal and opposite compressive end forces, member length, and cross section.</p>",
+        "instructor": "<p>A complete idealization shows a straight prismatic hollow tube, collinear equal and opposite compressive forces, pinned ends, length L, and circular annular cross section.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "assumptions",
+          "scope"
+        ],
+        "type": "modeling assumptions",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Bound the simplified model."
+        ],
+        "student": "<p>State the assumptions used to obtain the simplified axial-column model.</p>",
+        "instructor": "<p>Assume central axial loading, pin-ended restraint, an initially straight prismatic member, constant hollow circular section, linear elasticity, and small deformation before buckling. Neglect crookedness, eccentricity, joint compliance, thread and insert stresses, bolt bending, weld effects, fatigue, impact amplification, and contact nonlinearities.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Plan the strength and stability checks."
+        ],
+        "student": "<p>Outline the calculation sequence before numerical work.</p>",
+        "instructor": "<p>Determine D<sub>i</sub>, A, I, and r; calculate average compressive stress and yield factor of safety; calculate KL/r, Euler critical load, and buckling factor of safety; compare the two margins; then assess adequacy and limitations.</p>"
+      },
+      {
+        "id": "a1",
+        "title": "Boundary Conditions",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "effective length"
+        ],
+        "type": "boundary condition",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "State the pin-ended idealization and K."
+        ],
+        "student": "<p>Identify the idealized end conditions and effective-length factor K.</p>",
+        "instructor": "<p>The assigned model is pinned-pinned with K = <strong>{{pushrod_K}}</strong>.</p>"
+      },
+      {
+        "id": "a2",
+        "title": "Internal Axial Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "internal load"
+        ],
+        "type": "internal-load calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Determine the pushrod axial force."
+        ],
+        "student": "<p>For the critical obstacle load case, determine the internal axial force N and state whether it is tension or compression.</p>",
+        "instructor": "<p>N = <strong>{{pushrod_N_N}} N</strong> in compression.</p>"
+      },
+      {
+        "id": "a3",
+        "title": "Cross-Section Properties",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "section properties"
+        ],
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate annular tube properties."
+        ],
+        "student": "<p>Calculate D<sub>i</sub>, A, I, and radius of gyration r for the hollow circular tube.</p>",
+        "instructor": "<p>D<sub>i</sub> = <strong>{{pushrod_Di_mm}} mm</strong>, A = <strong>{{pushrod_A_mm2}} mm<sup>2</sup></strong>, I = <strong>{{pushrod_I_mm4}} mm<sup>4</sup></strong>, and r = <strong>{{pushrod_r_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "a4",
+        "title": "Direct Compressive Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "axial stress"
+        ],
+        "type": "stress calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Calculate average compression stress."
+        ],
+        "student": "<p>Calculate the average direct compressive stress sigma = P/A.</p>",
+        "instructor": "<p>sigma = <strong>{{pushrod_sigma_MPa}} MPa</strong> in compression.</p>"
+      },
+      {
+        "id": "a5",
+        "title": "Yielding Factor of Safety",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "yielding",
+          "factor of safety"
+        ],
+        "type": "strength calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the nominal yield margin."
+        ],
+        "student": "<p>Using the assigned yield strength, calculate n<sub>y</sub> = S<sub>y</sub>/sigma.</p>",
+        "instructor": "<p>n<sub>y</sub> = <strong>{{pushrod_ny}}</strong>.</p>"
+      },
+      {
+        "id": "a6",
+        "title": "Slenderness Evaluation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "slenderness"
+        ],
+        "type": "calculation and interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate effective slenderness."
+        ],
+        "student": "<p>Calculate KL/r using consistent units and explain why member length and radius of gyration affect buckling susceptibility.</p>",
+        "instructor": "<p>KL/r = <strong>{{pushrod_slenderness}}</strong>. Greater effective length increases susceptibility, while a larger radius of gyration reduces it.</p>"
+      },
+      {
+        "id": "a7",
+        "title": "Euler Buckling Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "Euler buckling"
+        ],
+        "type": "stability calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate Euler critical load."
+        ],
+        "student": "<p>Calculate P<sub>cr</sub> = pi<sup>2</sup>EI/(KL)<sup>2</sup>.</p>",
+        "instructor": "<p>P<sub>cr</sub> = <strong>{{pushrod_Pcr_kN}} kN</strong>.</p>"
+      },
+      {
+        "id": "a8",
+        "title": "Buckling Factor of Safety",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "buckling",
+          "factor of safety"
+        ],
+        "type": "stability calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the nominal buckling margin."
+        ],
+        "student": "<p>Calculate n<sub>b</sub> = P<sub>cr</sub>/P.</p>",
+        "instructor": "<p>n<sub>b</sub> = <strong>{{pushrod_nb}}</strong>.</p>"
+      },
+      {
+        "id": "a9",
+        "title": "Governing Response",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "governing mode"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Compare yielding and buckling margins."
+        ],
+        "student": "<p>Compare n<sub>y</sub> and n<sub>b</sub>. Which mode provides the smaller nominal margin, and do both assigned checks pass?</p>",
+        "instructor": "<p>The governing nominal response is <strong>{{pushrod_governing_mode}}</strong>, with governing ratio <strong>{{pushrod_governing_ratio}}</strong>. {{pushrod_assessment}}</p>"
+      },
+      {
+        "id": "a10",
+        "title": "Sensitivity and Design Modification",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "design"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Relate design variables to nominal capacity."
+        ],
+        "student": "<p>Explain how larger tube diameter, larger wall thickness, shorter unsupported length, larger E, or altered end restraint affect Euler capacity. Recommend a change appropriate to the governing response.</p>",
+        "instructor": "<p>{{pushrod_sensitivity_assessment}}</p>"
+      },
+      {
+        "id": "a11",
+        "title": "Engineering Assessment and Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "engineering judgment",
+          "limitations"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "State a bounded adequacy assessment."
+        ],
+        "student": "<p>State whether the baseline pushrod passes the two nominal checks, identify the governing response, quote both safety factors, recommend one mechanics-based change if needed, and state at least one important limitation of the model.</p>",
+        "instructor": "<p>{{pushrod_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Faculty-approved Formula SAE pushrod axial-compression and Euler-buckling baseline.",
+        "variables": {
+          "pushrod_P_N": 5358,
+          "pushrod_Do_mm": 19.05,
+          "pushrod_t_mm": 0.889,
+          "pushrod_L_mm": 520,
+          "pushrod_E_GPa": 205,
+          "pushrod_Sy_MPa": 650,
+          "pushrod_K": 1
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "a6",
+          "a7",
+          "a8",
+          "a9",
+          "a10",
+          "a11"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-PRESS-006",
     "slug": "hydraulic-press-punching-shear",
     "title": "Hydraulic Press Punching Shear and Bearing Stress Check",

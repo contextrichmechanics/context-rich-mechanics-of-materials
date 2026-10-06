@@ -1,0 +1,17 @@
+{
+  "id": "MOS-FORMULA-SAE-SUSPEN-001",
+  "slug": "formula-sae-suspension-pushrod-buckling",
+  "title": "Formula SAE Suspension Pushrod - Axial Compression and Column Buckling",
+  "studentDocumentTitle": "Student Packet - Formula SAE Suspension Pushrod - Axial Compression and Column Buckling",
+  "instructorDocumentTitle": "Instructor Guide - Formula SAE Suspension Pushrod - Axial Compression and Column Buckling",
+  "summary": "Evaluate direct compressive stress and Euler buckling of an idealized Formula SAE suspension pushrod, then identify the governing nominal response.",
+  "textbookChapters": ["Axial loading and stress", "Columns", "Euler buckling", "Factor of safety"],
+  "derivedPlaceholders": ["pushrod_Di_mm","pushrod_A_mm2","pushrod_I_mm4","pushrod_r_mm","pushrod_N_N","pushrod_sigma_MPa","pushrod_ny","pushrod_slenderness","pushrod_Pcr_kN","pushrod_nb","pushrod_governing_mode","pushrod_governing_ratio","pushrod_sensitivity_assessment","pushrod_assessment"],
+  "image": "assets/formula-sae-pushrod-industry-context.jpg",
+  "imageAttribution": "User-supplied Formula SAE suspension photograph with the analyzed pushrod identified. No dimensions or material properties are inferred from the image.",
+  "idealizedImage": "assets/formula-sae-pushrod-instructor-reference.jpg",
+  "idealizedImageAlt": "Instructor reference showing the AISI 4130 hollow circular pushrod as a pinned-pinned two-force compression member.",
+  "source": "index.html",
+  "problemStatement": "<p>A Formula SAE vehicle uses a pushrod-actuated suspension to transfer wheel-side loading to an inboard rocker and spring-damper. The highlighted black diagonal pushrod is analyzed for a published maximum compression load of <strong>P = {{pushrod_P_N}} {{pushrod_P_N_unit}}</strong>.</p><p>Idealize the pushrod as a straight, prismatic hollow circular two-force member with pin-connected ends. Use <strong>D<sub>o</sub> = {{pushrod_Do_mm}} {{pushrod_Do_mm_unit}}</strong>, <strong>t = {{pushrod_t_mm}} {{pushrod_t_mm_unit}}</strong>, <strong>L = {{pushrod_L_mm}} {{pushrod_L_mm_unit}}</strong>, <strong>E = {{pushrod_E_GPa}} {{pushrod_E_GPa_unit}}</strong>, <strong>S<sub>y</sub> = {{pushrod_Sy_MPa}} {{pushrod_Sy_MPa_unit}}</strong>, and <strong>K = {{pushrod_K}}</strong>. Compare nominal yielding and Euler buckling within this simplified model.</p>",
+  "engineeringGoal": "<p>Determine the tube section properties, direct compressive stress, yield factor of safety, slenderness ratio, Euler critical load, and buckling factor of safety; identify the smaller nominal margin; and recommend a mechanics-based change while recognizing the model limitations.</p>"
+}
