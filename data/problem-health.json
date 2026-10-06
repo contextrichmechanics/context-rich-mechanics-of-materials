@@ -200,6 +200,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-INDUSTRIAL-ROBOT-C-001",
+    "slug": "industrial-robot-cable-bending-curvature",
+    "title": "Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain",
+    "status": "OK",
+    "variables": 2,
+    "questions": 17,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-JIB-001",
     "slug": "jib-crane-battery-pack",
     "title": "Wall-Mounted Swing-Jib Crane for Battery-Pack Handling",

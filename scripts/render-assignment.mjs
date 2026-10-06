@@ -1415,6 +1415,34 @@ function variableMap(problem, currentValues) {
     values.pulley_assessment = `The calculated average double-shear demands are ${formatDerived(deadShearMPa, 4)} MPa for dead load, ${formatDerived(liveShearMPa, 3)} MPa for live load, and ${formatDerived(accidentalShearMPa, 3)} MPa for accidental/transient load, so ${governing.name} governs the included scenarios. This comparison does not establish that the real connection is safe because axle material and allowable strength are not assigned. A real assessment also requires bearing stress, axle bending, bracket spacing and deformation, local thread or retaining-feature stresses, fatigue, impact history, clearances, stress concentrations, and complete-machine load-path verification.`;
   }
 
+  const robotCableDiameterMm = numericValue(values, "robot_cable_d_mm");
+  const robotCableInnerRadiusMm = numericValue(values, "robot_cable_Ri_mm");
+
+  if (
+    Number.isFinite(robotCableDiameterMm) && robotCableDiameterMm > 0 &&
+    Number.isFinite(robotCableInnerRadiusMm) && robotCableInnerRadiusMm > 0
+  ) {
+    const neutralAxisRadiusMm = robotCableInnerRadiusMm + robotCableDiameterMm / 2;
+    const curvaturePerMm = 1 / neutralAxisRadiusMm;
+    const curvaturePerM = curvaturePerMm * 1000;
+    const maximumStrain = (robotCableDiameterMm / 2) / neutralAxisRadiusMm;
+    const radiusRatio = robotCableInnerRadiusMm / robotCableDiameterMm;
+    const requiredInnerRadiusMm = 10 * robotCableDiameterMm;
+    const toleranceMm = 1e-9;
+    const meetsRequirement = robotCableInnerRadiusMm + toleranceMm >= requiredInnerRadiusMm;
+    const equality = Math.abs(robotCableInnerRadiusMm - requiredInnerRadiusMm) <= toleranceMm;
+
+    values.robot_cable_Rn_mm = formatDerived(neutralAxisRadiusMm, 3);
+    values.robot_cable_kappa_per_mm = formatDerived(curvaturePerMm, 7);
+    values.robot_cable_kappa_per_m = formatDerived(curvaturePerM, 4);
+    values.robot_cable_epsilon_max = formatDerived(maximumStrain, 6);
+    values.robot_cable_epsilon_percent = formatDerived(100 * maximumStrain, 4);
+    values.robot_cable_beta = formatDerived(radiusRatio, 4);
+    values.robot_cable_beta_expression = `|epsilon_max| = 1/[2(beta + 1/2)] = 1/[2(${formatDerived(radiusRatio, 4)} + 1/2)] = ${formatDerived(maximumStrain, 6)}`;
+    values.robot_cable_radius_check = `The specified inner radius is ${formatDerived(robotCableInnerRadiusMm, 3)} mm and the 10d minimum is ${formatDerived(requiredInnerRadiusMm, 3)} mm, so the route ${meetsRequirement ? (equality ? "meets the documented minimum exactly" : "exceeds the documented minimum") : "does not meet the documented minimum"}.`;
+    values.robot_cable_assessment = `${meetsRequirement ? "The specified routing geometry satisfies the stated minimum-radius criterion." : "The specified routing geometry fails the stated minimum-radius criterion and should not be recommended."} Increasing the inner radius lowers curvature and the equivalent geometric outer-fiber strain; a tighter route increases both and is outside the documented requirement. The calculated ${formatDerived(100 * maximumStrain, 4)}% is an equivalent geometric strain, not the strain in every conductor, shield, insulation layer, or jacket constituent. Strand slip, conductor lay, shielding, jacket and insulation behavior, torsion, contact, fatigue, and viscoelasticity are outside this model.`;
+  }
+
 
   const craneLoadKN = numericValue(values, "crane_W_kN");
   const craneLengthM = numericValue(values, "crane_L_m");

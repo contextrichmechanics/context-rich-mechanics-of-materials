@@ -1,0 +1,15 @@
+---
+title: "Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain"
+image: "assets/industrial-robot-cable-industry-context.jpg"
+format: html
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assigned Values
+
+```{=html}
+<div id="industrial-robot-cable-bending-curvature-values"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"industrial-robot-cable-bending-curvature",targetId:"industrial-robot-cable-bending-curvature-values",type:"student"}));</script>
+```

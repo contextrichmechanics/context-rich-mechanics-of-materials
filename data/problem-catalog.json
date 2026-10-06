@@ -9928,6 +9928,377 @@
     ]
   },
   {
+    "id": "MOS-INDUSTRIAL-ROBOT-C-001",
+    "slug": "industrial-robot-cable-bending-curvature",
+    "title": "Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain",
+    "studentDocumentTitle": "Student Packet - Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain",
+    "instructorDocumentTitle": "Instructor Guide - Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain",
+    "summary": "Evaluate cable centerline curvature and equivalent outer-fiber geometric strain at a specified inner routing radius.",
+    "textbookChapters": [
+      "Bending",
+      "Curvature",
+      "Normal strain",
+      "Engineering idealization"
+    ],
+    "derivedPlaceholders": [
+      "robot_cable_Rn_mm",
+      "robot_cable_kappa_per_mm",
+      "robot_cable_kappa_per_m",
+      "robot_cable_epsilon_max",
+      "robot_cable_epsilon_percent",
+      "robot_cable_beta",
+      "robot_cable_beta_expression",
+      "robot_cable_radius_check",
+      "robot_cable_assessment"
+    ],
+    "image": "problems/industrial-robot-cable-bending-curvature/assets/industrial-robot-cable-industry-context.jpg",
+    "imageAttribution": "User-provided industrial robot photograph used only for visual context. No numerical value is inferred from it.",
+    "idealizedImage": "problems/industrial-robot-cable-bending-curvature/assets/industrial-robot-cable-instructor-reference.jpg",
+    "idealizedImageAlt": "Instructor reference circular-arc cable model distinguishing inner bend radius from neutral-axis radius.",
+    "source": "problems/industrial-robot-cable-bending-curvature/index.html",
+    "problemStatement": "<p>An industrial robot dress pack guides a flexible robotic cable through a local bend. Model the cable locally as an equivalent circular cable following a circular arc. Use cable diameter <strong>d = {{robot_cable_d_mm}} {{robot_cable_d_mm_unit}}</strong> and specified inner bend radius <strong>R<sub>i</sub> = {{robot_cable_Ri_mm}} {{robot_cable_Ri_mm_unit}}</strong>.</p>",
+    "engineeringGoal": "<p>Determine the neutral-axis radius, centerline curvature, and maximum equivalent geometric longitudinal bending strain; then assess the route against the documented minimum inner bend-radius factor without claiming constituent stress or fatigue life.</p>",
+    "variables": [
+      {
+        "key": "robot_cable_d_mm",
+        "symbol": "d",
+        "label": "Equivalent cable outer diameter",
+        "value": 9.5,
+        "unit": "mm",
+        "min": 1,
+        "max": 50,
+        "step": 0.1
+      },
+      {
+        "key": "robot_cable_Ri_mm",
+        "symbol": "R_i",
+        "label": "Specified inner bend radius",
+        "value": 95,
+        "unit": "mm",
+        "min": 1,
+        "max": 1000,
+        "step": 1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "function",
+          "dress pack"
+        ],
+        "type": "conceptual",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Connect cable guidance to robot motion."
+        ],
+        "student": "<p>State the function of the robot dress pack and explain why controlling cable routing is mechanically important.</p>",
+        "instructor": "<p>The dress pack guides and protects moving power, data, and control cables. Controlling the route limits local curvature and the associated longitudinal bending strain as robot joints move.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "Source of Mechanical Demand",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "imposed curvature",
+          "robot motion"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Recognize curvature imposed by motion without an assigned transverse load."
+        ],
+        "student": "<p>Identify what robot motion produces the local cable bend. Explain why the problem can be analyzed through imposed curvature even though no external transverse force is specified.</p>",
+        "instructor": "<p>Relative motion of robot links and routing guides imposes a changing cable path. Curvature is a kinematic input here, so no transverse force is needed to calculate the geometric strain distribution.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Routing Constraint",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "minimum bend radius",
+          "manufacturer"
+        ],
+        "type": "constraint identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Interpret the documented radius as an inner bend radius."
+        ],
+        "student": "<p>State the documented minimum dynamic bend-radius requirement for the selected robotic cable and identify where that radius is measured.</p>",
+        "instructor": "<p>The selected cable requires a minimum dynamic inner bend radius of 10d. For the baseline diameter this is 95 mm, measured at the inner curvature rather than at the cable centerline.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "curvature",
+          "strain"
+        ],
+        "type": "response identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Distinguish curvature from longitudinal strain."
+        ],
+        "student": "<p>Identify the dominant response evaluated and distinguish curvature from longitudinal bending strain.</p>",
+        "instructor": "<p>Curvature describes how rapidly the cable centerline changes direction per unit arc length. Longitudinal strain varies through the equivalent diameter according to distance from the neutral axis.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Location",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "outer fiber",
+          "critical location"
+        ],
+        "type": "response identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Locate maximum strain magnitude."
+        ],
+        "student": "<p>For a cable bent into a circular arc, identify where the magnitude of longitudinal bending strain is greatest.</p>",
+        "instructor": "<p>The magnitude is greatest at the inner and outer cable surfaces because they are farthest from the centerline neutral axis, at y = plus or minus d/2.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "geometry",
+          "parameters"
+        ],
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify independent geometric inputs."
+        ],
+        "student": "<p>Identify the independent geometric quantities needed to evaluate curvature and maximum bending strain.</p>",
+        "instructor": "<p>The independent inputs are equivalent cable diameter d and specified inner bend radius R_i. The centerline radius R_n and radius ratio beta are derived.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Model Limitation",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "composite cable",
+          "limitations"
+        ],
+        "type": "engineering interpretation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Avoid an unsupported homogeneous stress model."
+        ],
+        "student": "<p>Explain why the calculated geometric strain should not automatically be converted to cable stress using one value of E for the complete cable.</p>",
+        "instructor": "<p>A real cable is a composite assembly with conductors, strand lay, shielding, insulation, jacket, interfaces, and slip. A single homogeneous modulus would not represent those constituent responses.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "idealization",
+          "circular arc"
+        ],
+        "type": "fbd/modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Construct the local circular-arc cable model."
+        ],
+        "student": "<p>Sketch a local cable segment as a circular annulus bent into an arc. Show the inner bend radius R_i, cable diameter d, neutral-axis or centerline radius R_n, center of curvature, and the inner and outer surfaces.</p>",
+        "instructor": "<p>A complete model shows R_i to the inner surface, d across the cable, R_n = R_i + d/2 to the cable centerline, and the inner and outer fibers at y = minus or plus d/2 under a stated convention.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "assumptions"
+        ],
+        "type": "modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Bound the equivalent-cable model."
+        ],
+        "student": "<p>State the assumptions used to obtain the simplified curvature-strain model.</p>",
+        "instructor": "<p>Assume a local circular arc of constant curvature, an equivalent circular diameter, a neutral axis at the geometric centerline, and plane-section kinematics only for geometric strain. Treat the documented bend radius as the inner radius. Exclude strand slip, lay, shielding, jacket and insulation behavior, torsion, contact, fatigue, and viscoelastic effects.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Sequence the curvature-strain calculation."
+        ],
+        "student": "<p>Outline the calculation sequence before substituting numbers.</p>",
+        "instructor": "<p>Obtain d and R_i; convert to R_n; calculate curvature; apply epsilon_x = -y kappa; evaluate the magnitude at y = plus or minus d/2; derive the radius-ratio sensitivity; and make a bounded routing recommendation.</p>"
+      },
+      {
+        "id": "a1",
+        "title": "Convert Inner Radius to Neutral-Axis Radius",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "neutral axis",
+          "radius"
+        ],
+        "type": "calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Convert the manufacturer's inner radius to centerline radius."
+        ],
+        "student": "<p>Determine the cable neutral-axis or centerline radius R_n from the specified inner bend radius and cable diameter.</p>",
+        "instructor": "<p>R_n = R_i + d/2 = <strong>{{robot_cable_Rn_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "a2",
+        "title": "Cable Curvature",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "curvature"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate curvature in two unit systems."
+        ],
+        "student": "<p>Calculate centerline curvature kappa = 1/R_n in mm<sup>-1</sup> and m<sup>-1</sup>.</p>",
+        "instructor": "<p>kappa = 1/R_n = <strong>{{robot_cable_kappa_per_mm}} mm<sup>-1</sup></strong> = <strong>{{robot_cable_kappa_per_m}} m<sup>-1</sup></strong>.</p>"
+      },
+      {
+        "id": "a3",
+        "title": "Longitudinal Strain Distribution",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "strain distribution"
+        ],
+        "type": "derivation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Apply the curvature-strain relation."
+        ],
+        "student": "<p>Using epsilon_x = -y kappa, write the longitudinal geometric strain distribution through the equivalent cable diameter and identify the neutral axis.</p>",
+        "instructor": "<p>epsilon_x(y) = -y/R_n. The strain is zero at the cable centerline y = 0 and varies linearly to equal-and-opposite extreme values at y = plus or minus d/2.</p>"
+      },
+      {
+        "id": "a4",
+        "title": "Maximum Bending Strain",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "maximum strain",
+          "outer fiber"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate maximum geometric strain magnitude."
+        ],
+        "student": "<p>Calculate the magnitude of maximum longitudinal geometric bending strain at y = plus or minus d/2. Report the result as a decimal and percentage.</p>",
+        "instructor": "<p>|epsilon_max| = (d/2)/R_n = <strong>{{robot_cable_epsilon_max}}</strong> = <strong>{{robot_cable_epsilon_percent}}%</strong>.</p>"
+      },
+      {
+        "id": "a5",
+        "title": "Radius-Ratio Form",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "radius ratio",
+          "derivation"
+        ],
+        "type": "derivation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Derive the dimensionless strain form."
+        ],
+        "student": "<p>Let beta = R_i/d. Derive |epsilon_max| in terms of beta and explain why cable diameter cancels when bend radius is specified as a multiple of diameter.</p>",
+        "instructor": "<p>For beta = <strong>{{robot_cable_beta}}</strong>, {{robot_cable_beta_expression}}. Diameter cancels because both the extreme-fiber distance and centerline radius scale linearly with d.</p>"
+      },
+      {
+        "id": "a6",
+        "title": "Sensitivity to Routing Radius",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "sensitivity",
+          "routing radius"
+        ],
+        "type": "derivation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Relate larger radius ratio to lower strain."
+        ],
+        "student": "<p>For two inner bend-radius factors beta_1 and beta_2, derive epsilon_max,2/epsilon_max,1 without assigning another arbitrary radius. State what happens to strain as beta increases.</p>",
+        "instructor": "<p>epsilon_max,2/epsilon_max,1 = (beta_1 + 1/2)/(beta_2 + 1/2). Therefore increasing beta decreases curvature and maximum geometric strain magnitude.</p>"
+      },
+      {
+        "id": "a7",
+        "title": "Engineering Assessment and Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "routing check",
+          "limitations"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "Assess the documented routing criterion without overstating the model."
+        ],
+        "student": "<p>Assess whether the specified route satisfies the documented minimum inner bend-radius factor of 10d. Explain why a tighter route should not be recommended using this model and state the principal limitations.</p>",
+        "instructor": "<p>{{robot_cable_radius_check}} {{robot_cable_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Faculty-approved industrial robot cable bending-curvature baseline.",
+        "variables": {
+          "robot_cable_d_mm": 9.5,
+          "robot_cable_Ri_mm": 95
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "a1",
+          "a2",
+          "a3",
+          "a4",
+          "a5",
+          "a6",
+          "a7"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-JIB-001",
     "slug": "jib-crane-battery-pack",
     "title": "Wall-Mounted Swing-Jib Crane for Battery-Pack Handling",

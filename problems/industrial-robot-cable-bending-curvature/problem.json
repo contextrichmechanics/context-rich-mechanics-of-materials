@@ -1,0 +1,17 @@
+{
+  "id":"MOS-INDUSTRIAL-ROBOT-C-001",
+  "slug":"industrial-robot-cable-bending-curvature",
+  "title":"Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain",
+  "studentDocumentTitle":"Student Packet - Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain",
+  "instructorDocumentTitle":"Instructor Guide - Industrial Robot Cable Dress Pack - Bending Curvature and Outer-Fiber Strain",
+  "summary":"Evaluate cable centerline curvature and equivalent outer-fiber geometric strain at a specified inner routing radius.",
+  "textbookChapters":["Bending","Curvature","Normal strain","Engineering idealization"],
+  "derivedPlaceholders":["robot_cable_Rn_mm","robot_cable_kappa_per_mm","robot_cable_kappa_per_m","robot_cable_epsilon_max","robot_cable_epsilon_percent","robot_cable_beta","robot_cable_beta_expression","robot_cable_radius_check","robot_cable_assessment"],
+  "image":"assets/industrial-robot-cable-industry-context.jpg",
+  "imageAttribution":"User-provided industrial robot photograph used only for visual context. No numerical value is inferred from it.",
+  "idealizedImage":"assets/industrial-robot-cable-instructor-reference.jpg",
+  "idealizedImageAlt":"Instructor reference circular-arc cable model distinguishing inner bend radius from neutral-axis radius.",
+  "source":"index.html",
+  "problemStatement":"<p>An industrial robot dress pack guides a flexible robotic cable through a local bend. Model the cable locally as an equivalent circular cable following a circular arc. Use cable diameter <strong>d = {{robot_cable_d_mm}} {{robot_cable_d_mm_unit}}</strong> and specified inner bend radius <strong>R<sub>i</sub> = {{robot_cable_Ri_mm}} {{robot_cable_Ri_mm_unit}}</strong>.</p>",
+  "engineeringGoal":"<p>Determine the neutral-axis radius, centerline curvature, and maximum equivalent geometric longitudinal bending strain; then assess the route against the documented minimum inner bend-radius factor without claiming constituent stress or fatigue life.</p>"
+}
