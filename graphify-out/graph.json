@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2738"
+      "source_location": "L2791"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2821"
+      "source_location": "L2874"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2717"
+      "source_location": "L2770"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2837"
+      "source_location": "L2890"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2682"
+      "source_location": "L2735"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2678"
+      "source_location": "L2731"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2787"
+      "source_location": "L2840"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2729"
+      "source_location": "L2782"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2762"
+      "source_location": "L2815"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2755"
+      "source_location": "L2808"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2696"
+      "source_location": "L2749"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2705"
+      "source_location": "L2758"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2768"
+      "source_location": "L2821"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2664"
+      "source_location": "L2717"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2654"
+      "source_location": "L2707"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2634"
+      "source_location": "L2687"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2619"
+      "source_location": "L2672"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2615"
+      "source_location": "L2668"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2650"
+      "source_location": "L2703"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2704"
+      "source_location": "L2757"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2697"
+      "source_location": "L2750"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2731"
+      "source_location": "L2784"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2688"
+      "source_location": "L2741"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2710"
+      "source_location": "L2763"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2666"
+      "source_location": "L2719"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2601"
+      "source_location": "L2654"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2592"
+      "source_location": "L2645"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2939"
+      "source_location": "L2992"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2926"
+      "source_location": "L2979"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2950"
+      "source_location": "L3003"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2940"
+      "source_location": "L2993"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2920"
+      "source_location": "L2973"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2672"
+      "source_location": "L2725"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2925"
+      "source_location": "L2978"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2927"
+      "source_location": "L2980"
     },
     {
       "id": "instructor_builder",
@@ -3492,6 +3492,196 @@
       "source_location": "L8"
     },
     {
+      "id": "problems_cable_machine_pulley_axle_shear_instructor_guide",
+      "label": "cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 127,
+      "community_name": "cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+        "subtitle": "Vector Resultant and Average Double-Shear Analysis",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 127,
+      "community_name": "cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L25"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_instructor_guide_instructor_reference_idealization",
+      "label": "Instructor Reference Idealization",
+      "_origin": "ast",
+      "community": 127,
+      "community_name": "cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "instructor reference idealization",
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L19"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 127,
+      "community_name": "cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L15"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 127,
+      "community_name": "cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L11"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_instructor_guide_scope_and_model_limitations",
+      "label": "Scope and Model Limitations",
+      "_origin": "ast",
+      "community": 127,
+      "community_name": "cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope and model limitations",
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L41"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_instructor_guide_sources_and_value_provenance",
+      "label": "Sources and Value Provenance",
+      "_origin": "ast",
+      "community": 127,
+      "community_name": "cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sources and value provenance",
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L33"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_student_problem",
+      "label": "cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_student_problem_analysis_scope",
+      "label": "Analysis Scope",
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "analysis scope",
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_location": "L17"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_student_problem_cable_machine_pulley_axle_dead_live_and_accidental_loading",
+      "label": "Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "cable machine pulley axle - dead, live, and accidental loading",
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_location": "L3"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_student_problem_context_rich_solid_mechanics_problem",
+      "label": "Context-Rich Solid Mechanics Problem",
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context-rich solid mechanics problem",
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_location": "L5"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_student_problem_main_engineering_goal",
+      "label": "Main Engineering Goal",
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "main engineering goal",
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_location": "L13"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_index",
+      "label": "cable-machine-pulley-axle-shear/index.qmd",
+      "_origin": "ast",
+      "community": 129,
+      "community_name": "cable-machine-pulley-axle-shear/index.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+        "image": "assets/cable-machine-pulley-industry-context.jpg",
+        "format": "html"
+      },
+      "node_kind": "page",
+      "norm_label": "cable-machine-pulley-axle-shear/index.qmd",
+      "source_file": "problems/cable-machine-pulley-axle-shear/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_index_assigned_values",
+      "label": "Assigned Values",
+      "_origin": "ast",
+      "community": 129,
+      "community_name": "cable-machine-pulley-axle-shear/index.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assigned values",
+      "source_file": "problems/cable-machine-pulley-axle-shear/index.qmd",
+      "source_location": "L9"
+    },
+    {
       "id": "ai_agent_8_create_the_package",
       "label": "8. Create The Package",
       "_origin": "ast",
@@ -3598,6 +3788,34 @@
       "norm_label": "variants",
       "source_file": "ai_agent.md",
       "source_location": "L375"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_student_packet",
+      "label": "cable-machine-pulley-axle-shear/student-packet.qmd",
+      "_origin": "ast",
+      "community": 130,
+      "community_name": "cable-machine-pulley-axle-shear/student-packet.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+        "format": "html"
+      },
+      "node_kind": "page",
+      "norm_label": "cable-machine-pulley-axle-shear/student-packet.qmd",
+      "source_file": "problems/cable-machine-pulley-axle-shear/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_cable_machine_pulley_axle_shear_student_packet_questions",
+      "label": "Questions",
+      "_origin": "ast",
+      "community": 130,
+      "community_name": "cable-machine-pulley-axle-shear/student-packet.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "questions",
+      "source_file": "problems/cable-machine-pulley-axle-shear/student-packet.qmd",
+      "source_location": "L8"
     },
     {
       "id": "codex_skills_graphify_references_exports",
@@ -13313,7 +13531,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2651",
+      "source_location": "L2704",
       "weight": 1.0
     },
     {
@@ -13325,7 +13543,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2660",
+      "source_location": "L2713",
       "weight": 1.0
     },
     {
@@ -13337,7 +13555,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2705",
+      "source_location": "L2758",
       "weight": 1.0
     },
     {
@@ -13349,7 +13567,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2707",
+      "source_location": "L2760",
       "weight": 1.0
     },
     {
@@ -13361,7 +13579,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2701",
+      "source_location": "L2754",
       "weight": 1.0
     },
     {
@@ -13373,7 +13591,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2742",
+      "source_location": "L2795",
       "weight": 1.0
     },
     {
@@ -13385,7 +13603,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2747",
+      "source_location": "L2800",
       "weight": 1.0
     },
     {
@@ -13397,7 +13615,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2753",
+      "source_location": "L2806",
       "weight": 1.0
     },
     {
@@ -13409,7 +13627,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2755",
+      "source_location": "L2808",
       "weight": 1.0
     },
     {
@@ -13421,7 +13639,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2757",
+      "source_location": "L2810",
       "weight": 1.0
     },
     {
@@ -13433,7 +13651,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2758",
+      "source_location": "L2811",
       "weight": 1.0
     },
     {
@@ -13445,7 +13663,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2689",
+      "source_location": "L2742",
       "weight": 1.0
     },
     {
@@ -13457,7 +13675,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2694",
+      "source_location": "L2747",
       "weight": 1.0
     },
     {
@@ -13469,7 +13687,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2711",
+      "source_location": "L2764",
       "weight": 1.0
     },
     {
@@ -13481,7 +13699,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2721",
+      "source_location": "L2774",
       "weight": 1.0
     },
     {
@@ -13493,7 +13711,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2722",
+      "source_location": "L2775",
       "weight": 1.0
     },
     {
@@ -13505,7 +13723,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2723",
+      "source_location": "L2776",
       "weight": 1.0
     },
     {
@@ -13517,7 +13735,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2724",
+      "source_location": "L2777",
       "weight": 1.0
     },
     {
@@ -13529,7 +13747,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2669",
+      "source_location": "L2722",
       "weight": 1.0
     },
     {
@@ -13541,7 +13759,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2669",
+      "source_location": "L2722",
       "weight": 1.0
     },
     {
@@ -13553,7 +13771,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2669",
+      "source_location": "L2722",
       "weight": 1.0
     },
     {
@@ -13565,7 +13783,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2595",
+      "source_location": "L2648",
       "weight": 1.0
     },
     {
@@ -13577,7 +13795,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2597",
+      "source_location": "L2650",
       "weight": 1.0
     },
     {
@@ -13661,7 +13879,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2828",
+      "source_location": "L2881",
       "weight": 1.0
     },
     {
@@ -13673,7 +13891,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2829",
+      "source_location": "L2882",
       "weight": 1.0
     },
     {
@@ -13685,7 +13903,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2832",
+      "source_location": "L2885",
       "weight": 1.0
     },
     {
@@ -13709,7 +13927,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2844",
+      "source_location": "L2897",
       "weight": 1.0
     },
     {
@@ -13721,7 +13939,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2850",
+      "source_location": "L2903",
       "weight": 1.0
     },
     {
@@ -13733,7 +13951,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2858",
+      "source_location": "L2911",
       "weight": 1.0
     },
     {
@@ -13745,7 +13963,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2858",
+      "source_location": "L2911",
       "weight": 1.0
     },
     {
@@ -13757,7 +13975,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2858",
+      "source_location": "L2911",
       "weight": 1.0
     },
     {
@@ -13769,7 +13987,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2863",
+      "source_location": "L2916",
       "weight": 1.0
     },
     {
@@ -13781,7 +13999,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2863",
+      "source_location": "L2916",
       "weight": 1.0
     },
     {
@@ -13793,7 +14011,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2874",
+      "source_location": "L2927",
       "weight": 1.0
     },
     {
@@ -13805,7 +14023,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2880",
+      "source_location": "L2933",
       "weight": 1.0
     },
     {
@@ -13817,7 +14035,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2794",
+      "source_location": "L2847",
       "weight": 1.0
     },
     {
@@ -13829,7 +14047,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2800",
+      "source_location": "L2853",
       "weight": 1.0
     },
     {
@@ -13841,7 +14059,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2800",
+      "source_location": "L2853",
       "weight": 1.0
     },
     {
@@ -13853,7 +14071,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2800",
+      "source_location": "L2853",
       "weight": 1.0
     },
     {
@@ -13865,7 +14083,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2811",
+      "source_location": "L2864",
       "weight": 1.0
     },
     {
@@ -13877,7 +14095,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2813",
+      "source_location": "L2866",
       "weight": 1.0
     },
     {
@@ -13889,7 +14107,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2815",
+      "source_location": "L2868",
       "weight": 1.0
     },
     {
@@ -13901,7 +14119,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2735",
+      "source_location": "L2788",
       "weight": 1.0
     },
     {
@@ -13913,7 +14131,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2763",
+      "source_location": "L2816",
       "weight": 1.0
     },
     {
@@ -13925,7 +14143,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2765",
+      "source_location": "L2818",
       "weight": 1.0
     },
     {
@@ -13937,7 +14155,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2759",
+      "source_location": "L2812",
       "weight": 1.0
     },
     {
@@ -13949,7 +14167,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2697",
+      "source_location": "L2750",
       "weight": 1.0
     },
     {
@@ -13961,7 +14179,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2702",
+      "source_location": "L2755",
       "weight": 1.0
     },
     {
@@ -13973,7 +14191,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2706",
+      "source_location": "L2759",
       "weight": 1.0
     },
     {
@@ -13985,7 +14203,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2769",
+      "source_location": "L2822",
       "weight": 1.0
     },
     {
@@ -13997,7 +14215,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2779",
+      "source_location": "L2832",
       "weight": 1.0
     },
     {
@@ -14009,7 +14227,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2780",
+      "source_location": "L2833",
       "weight": 1.0
     },
     {
@@ -14021,7 +14239,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2781",
+      "source_location": "L2834",
       "weight": 1.0
     },
     {
@@ -14033,7 +14251,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2782",
+      "source_location": "L2835",
       "weight": 1.0
     },
     {
@@ -14045,7 +14263,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2655",
+      "source_location": "L2708",
       "weight": 1.0
     },
     {
@@ -14057,7 +14275,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2658",
+      "source_location": "L2711",
       "weight": 1.0
     },
     {
@@ -14069,7 +14287,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2660",
+      "source_location": "L2713",
       "weight": 1.0
     },
     {
@@ -17299,6 +17517,149 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/burr-king-disc-grinder-shaft/_student-problem.qmd",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_index",
+      "target": "problems_cable_machine_pulley_axle_shear_index_assigned_values",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/index.qmd",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_instructor_guide",
+      "target": "problems_cable_machine_pulley_axle_shear_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_instructor_guide",
+      "target": "problems_cable_machine_pulley_axle_shear_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_instructor_guide",
+      "target": "problems_cable_machine_pulley_axle_shear_instructor_guide_instructor_reference_idealization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_instructor_guide",
+      "target": "problems_cable_machine_pulley_axle_shear_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_instructor_guide",
+      "target": "problems_cable_machine_pulley_axle_shear_instructor_guide_sources_and_value_provenance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_instructor_guide",
+      "target": "problems_cable_machine_pulley_axle_shear_instructor_guide_scope_and_model_limitations",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/instructor-guide.qmd",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_student_packet",
+      "target": "problems_cable_machine_pulley_axle_shear_student_packet_questions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/student-packet.qmd",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_student_problem",
+      "target": "problems_cable_machine_pulley_axle_shear_student_problem_context_rich_solid_mechanics_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_student_problem_cable_machine_pulley_axle_dead_live_and_accidental_loading",
+      "target": "problems_cable_machine_pulley_axle_shear_student_problem_main_engineering_goal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_student_problem_cable_machine_pulley_axle_dead_live_and_accidental_loading",
+      "target": "problems_cable_machine_pulley_axle_shear_student_problem_analysis_scope",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_student_problem_cable_machine_pulley_axle_dead_live_and_accidental_loading",
+      "target": "problems_cable_machine_pulley_axle_shear_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_cable_machine_pulley_axle_shear_student_problem_context_rich_solid_mechanics_problem",
+      "target": "problems_cable_machine_pulley_axle_shear_student_problem_cable_machine_pulley_axle_dead_live_and_accidental_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/cable-machine-pulley-axle-shear/_student-problem.qmd",
       "source_location": "L3",
       "weight": 1.0
     },
@@ -22403,7 +22764,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2592",
+      "source_location": "L2645",
       "weight": 1.0
     },
     {
@@ -22414,7 +22775,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2601",
+      "source_location": "L2654",
       "weight": 1.0
     },
     {
@@ -22425,7 +22786,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2615",
+      "source_location": "L2668",
       "weight": 1.0
     },
     {
@@ -22436,7 +22797,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2619",
+      "source_location": "L2672",
       "weight": 1.0
     },
     {
@@ -22447,7 +22808,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2634",
+      "source_location": "L2687",
       "weight": 1.0
     },
     {
@@ -22458,7 +22819,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2650",
+      "source_location": "L2703",
       "weight": 1.0
     },
     {
@@ -22469,7 +22830,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2666",
+      "source_location": "L2719",
       "weight": 1.0
     },
     {
@@ -22480,7 +22841,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2688",
+      "source_location": "L2741",
       "weight": 1.0
     },
     {
@@ -22491,7 +22852,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2697",
+      "source_location": "L2750",
       "weight": 1.0
     },
     {
@@ -22502,7 +22863,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2704",
+      "source_location": "L2757",
       "weight": 1.0
     },
     {
@@ -22513,7 +22874,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2710",
+      "source_location": "L2763",
       "weight": 1.0
     },
     {
@@ -22524,7 +22885,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2731",
+      "source_location": "L2784",
       "weight": 1.0
     },
     {
@@ -22634,7 +22995,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2654",
+      "source_location": "L2707",
       "weight": 1.0
     },
     {
@@ -22645,7 +23006,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2664",
+      "source_location": "L2717",
       "weight": 1.0
     },
     {
@@ -22656,7 +23017,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2672",
+      "source_location": "L2725",
       "weight": 1.0
     },
     {
@@ -22667,7 +23028,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2678",
+      "source_location": "L2731",
       "weight": 1.0
     },
     {
@@ -22678,7 +23039,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2682",
+      "source_location": "L2735",
       "weight": 1.0
     },
     {
@@ -22689,7 +23050,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2696",
+      "source_location": "L2749",
       "weight": 1.0
     },
     {
@@ -22700,7 +23061,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2705",
+      "source_location": "L2758",
       "weight": 1.0
     },
     {
@@ -22711,7 +23072,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2717",
+      "source_location": "L2770",
       "weight": 1.0
     },
     {
@@ -22722,7 +23083,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2729",
+      "source_location": "L2782",
       "weight": 1.0
     },
     {
@@ -22733,51 +23094,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2738",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderlearningobjectives",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2755",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderinstructorsupport",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2762",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderquestionsectionhtml",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2768",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderbody",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2787",
+      "source_location": "L2791",
       "weight": 1.0
     },
     {
@@ -22793,7 +23110,29 @@
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_fullhtml",
+      "target": "scripts_render_assignment_renderlearningobjectives",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2808",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_renderinstructorsupport",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2815",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_renderquestionsectionhtml",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -22804,13 +23143,35 @@
     },
     {
       "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_renderbody",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2840",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_fullhtml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2874",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
       "target": "scripts_render_assignment_qmddocument",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2837",
+      "source_location": "L2890",
       "weight": 1.0
     },
     {
@@ -22821,7 +23182,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2920",
+      "source_location": "L2973",
       "weight": 1.0
     },
     {
@@ -22832,7 +23193,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2925",
+      "source_location": "L2978",
       "weight": 1.0
     },
     {
@@ -22843,7 +23204,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2926",
+      "source_location": "L2979",
       "weight": 1.0
     },
     {
@@ -22854,7 +23215,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2927",
+      "source_location": "L2980",
       "weight": 1.0
     },
     {
@@ -22865,7 +23226,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2939",
+      "source_location": "L2992",
       "weight": 1.0
     },
     {
@@ -22876,7 +23237,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2940",
+      "source_location": "L2993",
       "weight": 1.0
     },
     {
@@ -22887,7 +23248,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2950",
+      "source_location": "L3003",
       "weight": 1.0
     },
     {
@@ -24036,5 +24397,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b6263827e7ff320fba3ce94f8b867ef2eb6524fd"
+  "built_at_commit": "12a4cc75e9c1f2a42f03966d54fb1704c0d6b54c"
 }

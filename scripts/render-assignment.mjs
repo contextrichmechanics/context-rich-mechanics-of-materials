@@ -1363,6 +1363,59 @@ function variableMap(problem, currentValues) {
     values.pushrod_assessment = `${bothChecksPass ? "Both assigned nominal checks pass" : "At least one assigned nominal check does not pass"}: n_y = ${formatDerived(yieldMargin, 2)} and n_b = ${formatDerived(bucklingMargin, 2)}. The governing response is ${governingMode}, with governing ratio ${formatDerived(governingRatio, 2)}. ${recommendation} This conclusion applies only to the straight, prismatic, centrally loaded, linearly elastic, pin-ended model; crookedness, eccentricity, joint compliance, threaded insert and rod-end stresses, bolt bending, weld effects, local bending, fatigue, impact amplification, and contact nonlinearities are excluded.`;
   }
 
+  const pulleyStackMassKg = numericValue(values, "pulley_m_s_kg");
+  const pulleyRatio = numericValue(values, "pulley_r");
+  const pulleyMassKg = numericValue(values, "pulley_m_p_kg");
+  const pulleyAxleDiameterMm = numericValue(values, "pulley_d_mm");
+  const pulleyIncludedAngleDeg = numericValue(values, "pulley_theta_deg");
+  const pulleyDynamicCoefficient = numericValue(values, "pulley_k_d");
+
+  if (
+    Number.isFinite(pulleyStackMassKg) && pulleyStackMassKg > 0 &&
+    Number.isFinite(pulleyRatio) && pulleyRatio > 0 &&
+    Number.isFinite(pulleyMassKg) && pulleyMassKg > 0 &&
+    Number.isFinite(pulleyAxleDiameterMm) && pulleyAxleDiameterMm > 0 &&
+    Number.isFinite(pulleyIncludedAngleDeg) && pulleyIncludedAngleDeg > 0 && pulleyIncludedAngleDeg < 180 &&
+    Number.isFinite(pulleyDynamicCoefficient) && pulleyDynamicCoefficient > 0
+  ) {
+    const gravityMPerS2 = 9.81;
+    const includedAngleRad = pulleyIncludedAngleDeg * Math.PI / 180;
+    const resultantFactor = Math.sqrt(2 + 2 * Math.cos(includedAngleRad));
+    const deadLoadN = pulleyMassKg * gravityMPerS2;
+    const liveTensionN = pulleyStackMassKg * gravityMPerS2 / pulleyRatio;
+    const liveResultantN = liveTensionN * resultantFactor;
+    const accidentalTensionN = pulleyDynamicCoefficient * liveTensionN;
+    const accidentalResultantN = accidentalTensionN * resultantFactor;
+    const axleAreaMm2 = Math.PI * pulleyAxleDiameterMm ** 2 / 4;
+    const doubleShearAreaMm2 = 2 * axleAreaMm2;
+    const deadShearMPa = deadLoadN / doubleShearAreaMm2;
+    const liveShearMPa = liveResultantN / doubleShearAreaMm2;
+    const accidentalShearMPa = accidentalResultantN / doubleShearAreaMm2;
+    const cases = [
+      { name: "dead load", stress: deadShearMPa },
+      { name: "live load", stress: liveShearMPa },
+      { name: "accidental/transient load", stress: accidentalShearMPa }
+    ];
+    const governing = cases.reduce((best, current) => current.stress > best.stress ? current : best);
+
+    values.pulley_Wp_N = formatDerived(deadLoadN, 3);
+    values.pulley_TL_N = formatDerived(liveTensionN, 2);
+    values.pulley_RL_N = formatDerived(liveResultantN, 2);
+    values.pulley_TA_N = formatDerived(accidentalTensionN, 2);
+    values.pulley_RA_N = formatDerived(accidentalResultantN, 2);
+    values.pulley_A_mm2 = formatDerived(axleAreaMm2, 3);
+    values.pulley_As_mm2 = formatDerived(doubleShearAreaMm2, 3);
+    values.pulley_tauD_MPa = formatDerived(deadShearMPa, 4);
+    values.pulley_tauL_MPa = formatDerived(liveShearMPa, 3);
+    values.pulley_tauA_MPa = formatDerived(accidentalShearMPa, 3);
+    values.pulley_resultant_direction = `The resultant lies along the bisector of the ${formatDerived(pulleyIncludedAngleDeg, 1)} degree included angle between the two equal tension vectors.`;
+    values.pulley_governing_case = governing.name;
+    values.pulley_governing_tau_MPa = formatDerived(governing.stress, 3);
+    values.pulley_dynamic_ratio = formatDerived(accidentalShearMPa / liveShearMPa, 3);
+    values.pulley_assessment = `The calculated average double-shear demands are ${formatDerived(deadShearMPa, 4)} MPa for dead load, ${formatDerived(liveShearMPa, 3)} MPa for live load, and ${formatDerived(accidentalShearMPa, 3)} MPa for accidental/transient load, so ${governing.name} governs the included scenarios. This comparison does not establish that the real connection is safe because axle material and allowable strength are not assigned. A real assessment also requires bearing stress, axle bending, bracket spacing and deformation, local thread or retaining-feature stresses, fatigue, impact history, clearances, stress concentrations, and complete-machine load-path verification.`;
+  }
+
+
   const craneLoadKN = numericValue(values, "crane_W_kN");
   const craneLengthM = numericValue(values, "crane_L_m");
   const craneWidthMm = numericValue(values, "crane_b_mm");

@@ -1,0 +1,17 @@
+{
+  "id":"MOS-CABLE-MACHINE-PULL-001",
+  "slug":"cable-machine-pulley-axle-shear",
+  "title":"Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+  "studentDocumentTitle":"Student Packet - Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+  "instructorDocumentTitle":"Instructor Guide - Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+  "summary":"Compare average double-shear demand in a cable-machine pulley axle under dead, live, and accidental loading.",
+  "textbookChapters":["Connections","Average shear stress","Vector force resultants","Load paths"],
+  "derivedPlaceholders":["pulley_Wp_N","pulley_TL_N","pulley_RL_N","pulley_TA_N","pulley_RA_N","pulley_A_mm2","pulley_As_mm2","pulley_tauD_MPa","pulley_tauL_MPa","pulley_tauA_MPa","pulley_resultant_direction","pulley_governing_case","pulley_governing_tau_MPa","pulley_dynamic_ratio","pulley_assessment"],
+  "image":"assets/cable-machine-pulley-industry-context.jpg",
+  "imageAttribution":"Temporary user-supplied development image associated with the ATX Cable Pull Tower CPT-800 source page. Visual context only: no numerical value, geometry, material property, cable ratio, capacity, or angle is inferred from the photograph. Replace with an author-owned, open-license, or otherwise publication-approved image before public release.",
+  "idealizedImage":"assets/cable-machine-pulley-axle-instructor-reference.jpg",
+  "idealizedImageAlt":"Instructor reference showing a 90-degree cable redirection and circular pulley axle in idealized double shear between two bracket plates.",
+  "source":"index.html",
+  "problemStatement":"<p>A commercial selectorized cable machine redirects two equal cable tensions through an adjustable pulley. Analyze the circular axle that transfers the pulley load into two supporting bracket plates.</p><p>Use stack mass <strong>m<sub>s</sub> = {{pulley_m_s_kg}} {{pulley_m_s_kg_unit}}</strong>, ideal cable ratio <strong>r = {{pulley_r}}</strong>, pulley mass <strong>m<sub>p</sub> = {{pulley_m_p_kg}} {{pulley_m_p_kg_unit}}</strong>, axle diameter <strong>d = {{pulley_d_mm}} {{pulley_d_mm_unit}}</strong>, included cable-force angle <strong>theta = {{pulley_theta_deg}} {{pulley_theta_deg_unit}}</strong>, and accidental dynamic coefficient <strong>k<sub>d</sub> = {{pulley_k_d}}</strong>. Use fixed g = 9.81 m/s<sup>2</sup>.</p>",
+  "engineeringGoal":"<p>Determine average axle double-shear stress for pulley dead load, normal full-stack live load, and the simplified accidental/transient case; identify the governing scenario; and state what the average-stress comparison does and does not establish.</p>"
+}

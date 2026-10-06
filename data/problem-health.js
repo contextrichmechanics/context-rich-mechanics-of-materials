@@ -100,6 +100,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-CABLE-MACHINE-PULL-001",
+    "slug": "cable-machine-pulley-axle-shear",
+    "title": "Cable Machine Pulley Axle - Dead, Live, and Accidental Loading",
+    "status": "OK",
+    "variables": 6,
+    "questions": 21,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-SEAT-023",
     "slug": "cantilevered-operator-seat-bending",
     "title": "Bending Stress in a Cantilevered Industrial Operator-Seat Support",

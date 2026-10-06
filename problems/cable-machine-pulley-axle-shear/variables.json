@@ -1,0 +1,8 @@
+[
+  {"key":"pulley_m_s_kg","symbol":"m_s","label":"Maximum selected stack mass","value":90,"unit":"kg","min":5,"max":200,"step":1},
+  {"key":"pulley_r","symbol":"r","label":"Ideal cable ratio","value":2,"unit":"-","min":1,"max":6,"step":0.1},
+  {"key":"pulley_m_p_kg","symbol":"m_p","label":"Pulley mass","value":0.186,"unit":"kg","min":0.02,"max":2,"step":0.001},
+  {"key":"pulley_d_mm","symbol":"d","label":"Axle diameter","value":9.525,"unit":"mm","min":3,"max":30,"step":0.025},
+  {"key":"pulley_theta_deg","symbol":"theta","label":"Included angle between cable tension vectors","value":90,"unit":"deg","min":1,"max":179,"step":1},
+  {"key":"pulley_k_d","symbol":"k_d","label":"Accidental dynamic coefficient","value":1.5,"unit":"-","min":1,"max":3,"step":0.05}
+]
