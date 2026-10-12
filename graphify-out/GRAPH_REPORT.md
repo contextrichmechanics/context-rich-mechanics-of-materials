@@ -1,16 +1,16 @@
-# Graph Report - codex-projector-support-20261011  (2026-10-11)
+# Graph Report - codex-steel-frame-chair-20261012  (2026-10-12)
 
 ## Corpus Check
-- 409 files · ~3,407,047 words
+- 417 files · ~3,418,016 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1087 nodes · 1034 edges · 141 communities (120 shown, 21 thin omitted)
+- 1104 nodes · 1049 edges · 143 communities (122 shown, 21 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `330aaf67`
+- Built from commit: `cfc8f5ff`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -152,6 +152,8 @@
 - robotic-arm-link-combined-bending-torsion/student-packet.qmd
 - ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd
 - Axial Stress and Elongation of a Ceiling-Mounted Projector Support
+- steel-frame-chair-accidental-fall-loading/instructor-guide.qmd
+- Steel-Frame Chair - Accidental Fall Loading
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -171,7 +173,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (141 total, 21 thin omitted)
+## Communities (143 total, 21 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -637,8 +639,16 @@ Nodes (8): Assignment Options, Generated Question Set and Solutions, Instructor 
 Cohesion: 0.29
 Nodes (6): Axial Stress and Elongation of a Ceiling-Mounted Projector Support, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Scope of the Model, System Components
 
+### Community 141 - "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd"
+Cohesion: 0.20
+Nodes (7): Assignment Options, Generated Question Set and Solutions, Instructor Reference Idealization, Problem Context, Purpose, Scope and Instructor Context, Supplemental Assessment Structure
+
+### Community 142 - "Steel-Frame Chair - Accidental Fall Loading"
+Cohesion: 0.29
+Nodes (6): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Scope of the Model, Steel-Frame Chair - Accidental Fall Loading, System Components
+
 ## Knowledge Gaps
-- **685 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+680 more)
+- **696 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+691 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -646,11 +656,9 @@ Nodes (6): Axial Stress and Elongation of a Ceiling-Mounted Projector Support, C
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `8. Create The Package` connect `8. Create The Package` to `AI Agent Project Guide`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _685 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _696 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**
@@ -659,3 +667,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
 - **Should `Supplemental Instructor Background` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
+- **Should `What You Must Do When Invoked` be split into smaller, more focused modules?**
+  _Cohesion score 0.08 - nodes in this community are weakly interconnected._

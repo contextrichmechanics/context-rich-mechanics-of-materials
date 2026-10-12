@@ -390,6 +390,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-STEEL-FRAME-CHAIR-001",
+    "slug": "steel-frame-chair-accidental-fall-loading",
+    "title": "Steel-Frame Chair - Accidental Fall Loading",
+    "status": "OK",
+    "variables": 9,
+    "questions": 20,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-CABLE-008",
     "slug": "suspended-equipment-cable-system",
     "title": "Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables",

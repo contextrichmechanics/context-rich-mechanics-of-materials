@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "description": "Baseline 6.0 kN accidental-load chair rail assignment.",
+  "variables": {"chair_WD_N":150,"chair_m_kg":90,"chair_g_m_s2":9.81,"chair_PA_kN":6.0,"chair_L_mm":500,"chair_B_mm":25,"chair_t_mm":2.0,"chair_Sy_MPa":250,"chair_n_req":2.0},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18","q19","q20"]
+}

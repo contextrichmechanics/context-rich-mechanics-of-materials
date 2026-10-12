@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2923"
+      "source_location": "L2985"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3006"
+      "source_location": "L3068"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2902"
+      "source_location": "L2964"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3022"
+      "source_location": "L3084"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2867"
+      "source_location": "L2929"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2863"
+      "source_location": "L2925"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2972"
+      "source_location": "L3034"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2914"
+      "source_location": "L2976"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2947"
+      "source_location": "L3009"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2940"
+      "source_location": "L3002"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2881"
+      "source_location": "L2943"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2890"
+      "source_location": "L2952"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2953"
+      "source_location": "L3015"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2849"
+      "source_location": "L2911"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2839"
+      "source_location": "L2901"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2819"
+      "source_location": "L2881"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2804"
+      "source_location": "L2866"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2800"
+      "source_location": "L2862"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2835"
+      "source_location": "L2897"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2889"
+      "source_location": "L2951"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2882"
+      "source_location": "L2944"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2916"
+      "source_location": "L2978"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2873"
+      "source_location": "L2935"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2895"
+      "source_location": "L2957"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2851"
+      "source_location": "L2913"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2786"
+      "source_location": "L2848"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2777"
+      "source_location": "L2839"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3124"
+      "source_location": "L3186"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3111"
+      "source_location": "L3173"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3135"
+      "source_location": "L3197"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3125"
+      "source_location": "L3187"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3105"
+      "source_location": "L3167"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2857"
+      "source_location": "L2919"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3110"
+      "source_location": "L3172"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3112"
+      "source_location": "L3174"
     },
     {
       "id": "instructor_builder",
@@ -4613,6 +4613,236 @@
       "norm_label": "system components",
       "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
       "source_location": "L23"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_student_packet",
+      "label": "steel-frame-chair-accidental-fall-loading/student-packet.qmd",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - Steel-Frame Chair Accidental Fall Loading",
+        "subtitle": "Load Classification, Idealization, and Beam Bending",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "steel-frame-chair-accidental-fall-loading/student-packet.qmd",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide",
+      "label": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - Steel-Frame Chair Accidental Fall Loading",
+        "subtitle": "Representative Solutions for Fixed-Fixed Rail Bending and Strength Assessment",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_index",
+      "label": "steel-frame-chair-accidental-fall-loading/index.qmd",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Steel-Frame Chair - Accidental Fall Loading",
+        "description": "Classify chair load cases and analyze bending, strength, and allowable accidental load for one idealized fixed-fixed square-tube seat-support rail.",
+        "image": "assets/steel-frame-chair-industry-image-placeholder.svg",
+        "categories": "[context-rich, mechanics-of-materials, furniture, beam bending]",
+        "mechanics_concepts": "[dead load, live load, accidental load, fixed-fixed beam, reactions, bending moment, square hollow section, second moment of area, flexure formula, factor of safety, allowable load]",
+        "course_topics": "[beam bending, flexural normal stress, load cases, strength design]",
+        "textbook_chapters": "[Internal loadings in structural members, Bending moment, Centroidal moment of inertia, The flexure formula, Factor of safety]",
+        "problem_types": "[load classification, load-path analysis, free-body diagram, beam analysis, section-property calculation, stress calculation, strength evaluation]",
+        "competencies": "[load classification, load-path identification, beam idealization, equilibrium, bending moment, section properties, flexure formula, factor of safety, engineering judgment]",
+        "industries": "[furniture, consumer products, structural frames]",
+        "difficulty": "Intermediate",
+        "status": "Published with image-replacement TODO",
+        "problem_id": "MOS-STEEL-FRAME-CHAIR-001",
+        "version": "1.0.0"
+      },
+      "node_kind": "page",
+      "norm_label": "steel-frame-chair-accidental-fall-loading/index.qmd",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_index_assignment_options",
+      "label": "Assignment Options",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assignment options",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/index.qmd",
+      "source_location": "L24"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L27"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_instructor_reference_idealization",
+      "label": "Instructor Reference Idealization",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "instructor reference idealization",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L21"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L17"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L9"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_scope_and_instructor_context",
+      "label": "Scope and Instructor Context",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope and instructor context",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L40"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_supplemental_assessment_structure",
+      "label": "Supplemental Assessment Structure",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "supplemental assessment structure",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L46"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_student_problem",
+      "label": "steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "Steel-Frame Chair - Accidental Fall Loading",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_student_problem_context_rich_solid_mechanics_problem",
+      "label": "Context-Rich Solid Mechanics Problem",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "Steel-Frame Chair - Accidental Fall Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context-rich solid mechanics problem",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "Steel-Frame Chair - Accidental Fall Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L5"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_student_problem_main_engineering_goal",
+      "label": "Main Engineering Goal",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "Steel-Frame Chair - Accidental Fall Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "main engineering goal",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L17"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_student_problem_scope_of_the_model",
+      "label": "Scope of the Model",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "Steel-Frame Chair - Accidental Fall Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope of the model",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L29"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_student_problem_steel_frame_chair_accidental_fall_loading",
+      "label": "Steel-Frame Chair - Accidental Fall Loading",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "Steel-Frame Chair - Accidental Fall Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "steel-frame chair - accidental fall loading",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L3"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_student_problem_system_components",
+      "label": "System Components",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "Steel-Frame Chair - Accidental Fall Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "system components",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L21"
     },
     {
       "id": "problems_axial_rod_tube_assembly_student_packet",
@@ -14220,7 +14450,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2836",
+      "source_location": "L2898",
       "weight": 1.0
     },
     {
@@ -14232,7 +14462,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2845",
+      "source_location": "L2907",
       "weight": 1.0
     },
     {
@@ -14244,7 +14474,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2890",
+      "source_location": "L2952",
       "weight": 1.0
     },
     {
@@ -14256,7 +14486,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2892",
+      "source_location": "L2954",
       "weight": 1.0
     },
     {
@@ -14268,7 +14498,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2886",
+      "source_location": "L2948",
       "weight": 1.0
     },
     {
@@ -14280,7 +14510,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2927",
+      "source_location": "L2989",
       "weight": 1.0
     },
     {
@@ -14292,7 +14522,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2932",
+      "source_location": "L2994",
       "weight": 1.0
     },
     {
@@ -14304,7 +14534,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2938",
+      "source_location": "L3000",
       "weight": 1.0
     },
     {
@@ -14316,7 +14546,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2940",
+      "source_location": "L3002",
       "weight": 1.0
     },
     {
@@ -14328,7 +14558,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2942",
+      "source_location": "L3004",
       "weight": 1.0
     },
     {
@@ -14340,7 +14570,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2943",
+      "source_location": "L3005",
       "weight": 1.0
     },
     {
@@ -14352,7 +14582,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2874",
+      "source_location": "L2936",
       "weight": 1.0
     },
     {
@@ -14364,7 +14594,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2879",
+      "source_location": "L2941",
       "weight": 1.0
     },
     {
@@ -14376,7 +14606,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2896",
+      "source_location": "L2958",
       "weight": 1.0
     },
     {
@@ -14388,7 +14618,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2906",
+      "source_location": "L2968",
       "weight": 1.0
     },
     {
@@ -14400,7 +14630,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2907",
+      "source_location": "L2969",
       "weight": 1.0
     },
     {
@@ -14412,7 +14642,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2908",
+      "source_location": "L2970",
       "weight": 1.0
     },
     {
@@ -14424,7 +14654,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2909",
+      "source_location": "L2971",
       "weight": 1.0
     },
     {
@@ -14436,7 +14666,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2854",
+      "source_location": "L2916",
       "weight": 1.0
     },
     {
@@ -14448,7 +14678,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2854",
+      "source_location": "L2916",
       "weight": 1.0
     },
     {
@@ -14460,7 +14690,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2854",
+      "source_location": "L2916",
       "weight": 1.0
     },
     {
@@ -14472,7 +14702,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2780",
+      "source_location": "L2842",
       "weight": 1.0
     },
     {
@@ -14484,7 +14714,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2782",
+      "source_location": "L2844",
       "weight": 1.0
     },
     {
@@ -14568,7 +14798,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3013",
+      "source_location": "L3075",
       "weight": 1.0
     },
     {
@@ -14580,7 +14810,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3014",
+      "source_location": "L3076",
       "weight": 1.0
     },
     {
@@ -14592,7 +14822,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3017",
+      "source_location": "L3079",
       "weight": 1.0
     },
     {
@@ -14616,7 +14846,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3029",
+      "source_location": "L3091",
       "weight": 1.0
     },
     {
@@ -14628,7 +14858,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3035",
+      "source_location": "L3097",
       "weight": 1.0
     },
     {
@@ -14640,7 +14870,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3043",
+      "source_location": "L3105",
       "weight": 1.0
     },
     {
@@ -14652,7 +14882,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3043",
+      "source_location": "L3105",
       "weight": 1.0
     },
     {
@@ -14664,7 +14894,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3043",
+      "source_location": "L3105",
       "weight": 1.0
     },
     {
@@ -14676,7 +14906,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3048",
+      "source_location": "L3110",
       "weight": 1.0
     },
     {
@@ -14688,7 +14918,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3048",
+      "source_location": "L3110",
       "weight": 1.0
     },
     {
@@ -14700,7 +14930,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3059",
+      "source_location": "L3121",
       "weight": 1.0
     },
     {
@@ -14712,7 +14942,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3065",
+      "source_location": "L3127",
       "weight": 1.0
     },
     {
@@ -14724,7 +14954,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2979",
+      "source_location": "L3041",
       "weight": 1.0
     },
     {
@@ -14736,7 +14966,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2985",
+      "source_location": "L3047",
       "weight": 1.0
     },
     {
@@ -14748,7 +14978,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2985",
+      "source_location": "L3047",
       "weight": 1.0
     },
     {
@@ -14760,7 +14990,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2985",
+      "source_location": "L3047",
       "weight": 1.0
     },
     {
@@ -14772,7 +15002,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2996",
+      "source_location": "L3058",
       "weight": 1.0
     },
     {
@@ -14784,7 +15014,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2998",
+      "source_location": "L3060",
       "weight": 1.0
     },
     {
@@ -14796,7 +15026,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3000",
+      "source_location": "L3062",
       "weight": 1.0
     },
     {
@@ -14808,7 +15038,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2920",
+      "source_location": "L2982",
       "weight": 1.0
     },
     {
@@ -14820,7 +15050,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2948",
+      "source_location": "L3010",
       "weight": 1.0
     },
     {
@@ -14832,7 +15062,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2950",
+      "source_location": "L3012",
       "weight": 1.0
     },
     {
@@ -14844,7 +15074,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2944",
+      "source_location": "L3006",
       "weight": 1.0
     },
     {
@@ -14856,7 +15086,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2882",
+      "source_location": "L2944",
       "weight": 1.0
     },
     {
@@ -14868,7 +15098,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2887",
+      "source_location": "L2949",
       "weight": 1.0
     },
     {
@@ -14880,7 +15110,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2891",
+      "source_location": "L2953",
       "weight": 1.0
     },
     {
@@ -14892,7 +15122,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2954",
+      "source_location": "L3016",
       "weight": 1.0
     },
     {
@@ -14904,7 +15134,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2964",
+      "source_location": "L3026",
       "weight": 1.0
     },
     {
@@ -14916,7 +15146,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2965",
+      "source_location": "L3027",
       "weight": 1.0
     },
     {
@@ -14928,7 +15158,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2966",
+      "source_location": "L3028",
       "weight": 1.0
     },
     {
@@ -14940,7 +15170,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2967",
+      "source_location": "L3029",
       "weight": 1.0
     },
     {
@@ -14952,7 +15182,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2840",
+      "source_location": "L2902",
       "weight": 1.0
     },
     {
@@ -14964,7 +15194,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2843",
+      "source_location": "L2905",
       "weight": 1.0
     },
     {
@@ -14976,7 +15206,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2845",
+      "source_location": "L2907",
       "weight": 1.0
     },
     {
@@ -22478,6 +22708,149 @@
       "weight": 1.0
     },
     {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_index",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_index_assignment_options",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/index.qmd",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_instructor_reference_idealization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_scope_and_instructor_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_supplemental_assessment_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_student_problem",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_student_problem_context_rich_solid_mechanics_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_student_problem_context_rich_solid_mechanics_problem",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_student_problem_steel_frame_chair_accidental_fall_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_student_problem_steel_frame_chair_accidental_fall_loading",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_student_problem_main_engineering_goal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_student_problem_steel_frame_chair_accidental_fall_loading",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_student_problem_system_components",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_student_problem_steel_frame_chair_accidental_fall_loading",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_student_problem_scope_of_the_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_student_problem_steel_frame_chair_accidental_fall_loading",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "problems_suspended_equipment_cable_system_index",
       "target": "problems_suspended_equipment_cable_system_index_assignment_options",
       "relation": "contains",
@@ -23904,7 +24277,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2777",
+      "source_location": "L2839",
       "weight": 1.0
     },
     {
@@ -23915,7 +24288,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2786",
+      "source_location": "L2848",
       "weight": 1.0
     },
     {
@@ -23926,7 +24299,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2800",
+      "source_location": "L2862",
       "weight": 1.0
     },
     {
@@ -23937,7 +24310,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2804",
+      "source_location": "L2866",
       "weight": 1.0
     },
     {
@@ -23948,7 +24321,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2819",
+      "source_location": "L2881",
       "weight": 1.0
     },
     {
@@ -23959,7 +24332,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2835",
+      "source_location": "L2897",
       "weight": 1.0
     },
     {
@@ -23970,7 +24343,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2851",
+      "source_location": "L2913",
       "weight": 1.0
     },
     {
@@ -23981,7 +24354,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2873",
+      "source_location": "L2935",
       "weight": 1.0
     },
     {
@@ -23992,7 +24365,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2882",
+      "source_location": "L2944",
       "weight": 1.0
     },
     {
@@ -24003,7 +24376,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2889",
+      "source_location": "L2951",
       "weight": 1.0
     },
     {
@@ -24014,7 +24387,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2895",
+      "source_location": "L2957",
       "weight": 1.0
     },
     {
@@ -24025,7 +24398,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2916",
+      "source_location": "L2978",
       "weight": 1.0
     },
     {
@@ -24146,7 +24519,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2839",
+      "source_location": "L2901",
       "weight": 1.0
     },
     {
@@ -24157,7 +24530,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2849",
+      "source_location": "L2911",
       "weight": 1.0
     },
     {
@@ -24168,7 +24541,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2857",
+      "source_location": "L2919",
       "weight": 1.0
     },
     {
@@ -24179,7 +24552,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2863",
+      "source_location": "L2925",
       "weight": 1.0
     },
     {
@@ -24190,7 +24563,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2867",
+      "source_location": "L2929",
       "weight": 1.0
     },
     {
@@ -24201,7 +24574,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2881",
+      "source_location": "L2943",
       "weight": 1.0
     },
     {
@@ -24212,7 +24585,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2890",
+      "source_location": "L2952",
       "weight": 1.0
     },
     {
@@ -24223,7 +24596,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2902",
+      "source_location": "L2964",
       "weight": 1.0
     },
     {
@@ -24234,7 +24607,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2914",
+      "source_location": "L2976",
       "weight": 1.0
     },
     {
@@ -24245,7 +24618,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2923",
+      "source_location": "L2985",
       "weight": 1.0
     },
     {
@@ -24256,7 +24629,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2940",
+      "source_location": "L3002",
       "weight": 1.0
     },
     {
@@ -24267,7 +24640,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2947",
+      "source_location": "L3009",
       "weight": 1.0
     },
     {
@@ -24278,7 +24651,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2953",
+      "source_location": "L3015",
       "weight": 1.0
     },
     {
@@ -24289,7 +24662,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2972",
+      "source_location": "L3034",
       "weight": 1.0
     },
     {
@@ -24300,7 +24673,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3006",
+      "source_location": "L3068",
       "weight": 1.0
     },
     {
@@ -24311,7 +24684,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3022",
+      "source_location": "L3084",
       "weight": 1.0
     },
     {
@@ -24322,7 +24695,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3105",
+      "source_location": "L3167",
       "weight": 1.0
     },
     {
@@ -24333,7 +24706,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3110",
+      "source_location": "L3172",
       "weight": 1.0
     },
     {
@@ -24344,7 +24717,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3111",
+      "source_location": "L3173",
       "weight": 1.0
     },
     {
@@ -24355,7 +24728,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3112",
+      "source_location": "L3174",
       "weight": 1.0
     },
     {
@@ -24366,7 +24739,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3124",
+      "source_location": "L3186",
       "weight": 1.0
     },
     {
@@ -24377,7 +24750,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3125",
+      "source_location": "L3187",
       "weight": 1.0
     },
     {
@@ -24388,7 +24761,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3135",
+      "source_location": "L3197",
       "weight": 1.0
     },
     {
@@ -25338,6 +25711,28 @@
       "weight": 1.0
     },
     {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_index",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_student_packet",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/index.qmd",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_index",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_instructor_guide",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/index.qmd",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
       "source": "problems_suspended_equipment_cable_system_index",
       "target": "problems_suspended_equipment_cable_system_student_packet",
       "relation": "references",
@@ -25559,5 +25954,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "330aaf676345dcc751f6237932ad8bb025b82d5d"
+  "built_at_commit": "cfc8f5ff597d16042b23726e7664b97fde7d922c"
 }

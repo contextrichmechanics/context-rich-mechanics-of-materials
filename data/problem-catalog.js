@@ -19782,6 +19782,549 @@ window.PROBLEM_CATALOG = [
     ]
   },
   {
+    "id": "MOS-STEEL-FRAME-CHAIR-001",
+    "slug": "steel-frame-chair-accidental-fall-loading",
+    "title": "Steel-Frame Chair - Accidental Fall Loading",
+    "studentDocumentTitle": "Student Packet - Steel-Frame Chair Accidental Fall Loading",
+    "instructorDocumentTitle": "Instructor Guide - Steel-Frame Chair Accidental Fall Loading",
+    "summary": "Classify dead, live, and accidental chair loads, then analyze bending, flexural stress, factor of safety, and allowable accidental load for one idealized fixed-fixed seat-support rail.",
+    "primaryTopics": [
+      "Beam Bending",
+      "Flexural Normal Stress",
+      "Load Cases",
+      "Factor of Safety"
+    ],
+    "courseTopic": "Load classification, fixed-fixed beam bending, flexural normal stress, and allowable load",
+    "targetLevel": "Intermediate MEEN 305 context-rich problem",
+    "primaryMechanicsCompetencies": [
+      "Load classification",
+      "Load-path identification",
+      "Beam idealization",
+      "Fixed-fixed beam bending",
+      "Square hollow-section properties",
+      "Flexure formula",
+      "Factor of safety",
+      "Allowable-load calculation",
+      "Engineering judgment"
+    ],
+    "expectedStudentDeliverable": "Load classification, load path, student-generated one-rail idealization and free-body diagram, bending calculations, strength assessment, allowable accidental load, and design recommendation.",
+    "difficultyLevel": 3,
+    "geometryComplexity": "One fixed-fixed prismatic beam with a square hollow cross-section and centered point load",
+    "problemDeliverableType": "Context reasoning, free-body diagram, calculation set, pass/fail assessment, allowable-load comparison, and engineering recommendation.",
+    "textbookChapters": [
+      "Internal loadings in structural members",
+      "Bending moment",
+      "Centroidal moment of inertia",
+      "The flexure formula",
+      "Factor of safety and allowable load"
+    ],
+    "derivedPlaceholders": [
+      "chair_live_load_N",
+      "chair_accidental_ratio",
+      "chair_rail_load_N",
+      "chair_rail_load_kN",
+      "chair_reaction_N",
+      "chair_reaction_kN",
+      "chair_inside_dimension_mm",
+      "chair_I_mm4",
+      "chair_c_mm",
+      "chair_Mmax_Nmm",
+      "chair_Mmax_Nm",
+      "chair_sigma_max_MPa",
+      "chair_fos",
+      "chair_allowable_stress_MPa",
+      "chair_Mallow_Nmm",
+      "chair_total_allowable_load_N",
+      "chair_total_allowable_load_kN",
+      "chair_strength_assessment",
+      "chair_capacity_assessment",
+      "chair_engineering_assessment"
+    ],
+    "image": "problems/steel-frame-chair-accidental-fall-loading/assets/steel-frame-chair-industry-image-placeholder.svg",
+    "imageAlt": "Placeholder marking where a redistributable steel-frame chair industry photograph will be added.",
+    "imagePublicationStatus": "TODO: VERIFY OR REPLACE INDUSTRY IMAGE. The supplied photograph is not committed because its creator, source, redistribution license, and attribution could not be verified.",
+    "idealizedImage": "problems/steel-frame-chair-accidental-fall-loading/assets/steel-frame-chair-instructor-reference.jpg",
+    "idealizedImageAlt": "Instructor-only fixed-fixed seat-support rail with a centered 3.0 kN load, 500 mm span, equal reactions, and fixed-end moment magnitudes.",
+    "source": "problems/steel-frame-chair-accidental-fall-loading/index.html",
+    "problemStatement": "<p>A steel-frame chair carries dead load from its own weight, live load from an ordinarily seated occupant, and accidental load when a person lands heavily on the seat. The accidental case is represented by a given 6.0 kN equivalent-static vertical design load; students do not derive it from impact kinematics.</p><p>The seat is idealized as transferring load equally to two equivalent transverse rails. One rail is modeled as a fixed-fixed beam with a centered point load and an instructor-assigned square hollow steel section. These details are teaching assumptions, not measurements or verified construction features of a photographed chair.</p>",
+    "engineeringGoal": "<p>Use the specified 6.0 kN accidental vertical seat load to determine the bending stress in one idealized rail, calculate factor of safety, determine the maximum allowable total accidental load, and assess whether the rail meets the required strength criterion.</p>",
+    "variables": [
+      {
+        "key": "chair_WD_N",
+        "symbol": "W_D",
+        "label": "Chair dead load",
+        "value": 150,
+        "unit": "N",
+        "min": 50,
+        "max": 500,
+        "step": 10
+      },
+      {
+        "key": "chair_m_kg",
+        "symbol": "m",
+        "label": "Seated occupant mass",
+        "value": 90,
+        "unit": "kg",
+        "min": 40,
+        "max": 180,
+        "step": 1
+      },
+      {
+        "key": "chair_g_m_s2",
+        "symbol": "g",
+        "label": "Gravitational acceleration",
+        "value": 9.81,
+        "unit": "m/s^2",
+        "min": 9.7,
+        "max": 9.9,
+        "step": 0.01
+      },
+      {
+        "key": "chair_PA_kN",
+        "symbol": "P_A",
+        "label": "Given equivalent-static accidental seat load",
+        "value": 6,
+        "unit": "kN",
+        "min": 1,
+        "max": 15,
+        "step": 0.1
+      },
+      {
+        "key": "chair_L_mm",
+        "symbol": "L",
+        "label": "Analyzed rail span",
+        "value": 500,
+        "unit": "mm",
+        "min": 200,
+        "max": 1000,
+        "step": 10
+      },
+      {
+        "key": "chair_B_mm",
+        "symbol": "B",
+        "label": "Square-tube outside dimension",
+        "value": 25,
+        "unit": "mm",
+        "min": 15,
+        "max": 80,
+        "step": 1
+      },
+      {
+        "key": "chair_t_mm",
+        "symbol": "t",
+        "label": "Square-tube wall thickness",
+        "value": 2,
+        "unit": "mm",
+        "min": 0.5,
+        "max": 8,
+        "step": 0.1
+      },
+      {
+        "key": "chair_Sy_MPa",
+        "symbol": "S_y",
+        "label": "Idealized steel yield strength",
+        "value": 250,
+        "unit": "MPa",
+        "min": 100,
+        "max": 800,
+        "step": 10
+      },
+      {
+        "key": "chair_n_req",
+        "symbol": "n_req",
+        "label": "Required factor of safety",
+        "value": 2,
+        "unit": "-",
+        "min": 1,
+        "max": 5,
+        "step": 0.1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function of the System",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "function",
+          "chair"
+        ],
+        "type": "conceptual",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the structural function of the chair and seat-support rails."
+        ],
+        "student": "<p>State the primary function of the chair and the structural role of the transverse seat-support rails.</p>",
+        "instructor": "<p>The chair supports a seated person and transfers vertical load to the floor. The transverse rails support the seat and carry its load into the side frames.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "Load Classification",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "dead load",
+          "live load",
+          "accidental load"
+        ],
+        "type": "load identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Classify the three specified load cases."
+        ],
+        "student": "<p>Classify the chair self-weight, ordinarily seated occupant, and person landing heavily on the seat as dead, live, or accidental loading.</p>",
+        "instructor": "<p>The chair self-weight is dead load, the ordinarily seated occupant is live load, and landing heavily on the seat is the accidental load case.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Why the Falling Case Is Different",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "accidental load",
+          "equivalent static"
+        ],
+        "type": "conceptual",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Distinguish the given equivalent-static accidental load from an impact derivation."
+        ],
+        "student": "<p>Explain why a person landing heavily on the chair can produce greater demand than ordinary sitting. State how that event is represented in this problem.</p>",
+        "instructor": "<p>A landing event can produce a larger, short-duration force than body weight alone. Here it is represented by the given 6.0 kN equivalent-static design load; students do not derive an impact force.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "External Load Path",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "load path",
+          "rails"
+        ],
+        "type": "load-path reasoning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Trace vertical chair load to the floor."
+        ],
+        "student": "<p>Trace the vertical load path from the occupant through the seat, rails, side frames, legs, and floor.</p>",
+        "instructor": "<p>Occupant load enters the seat, is shared by the two transverse rails, transfers through the idealized rigid rail-to-frame joints into the side frames and legs, and is finally reacted by the floor.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Component",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "critical component",
+          "rail"
+        ],
+        "type": "component selection",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Identify the selected rail as the analysis component."
+        ],
+        "student": "<p>Identify the component selected for detailed analysis and explain why bending is relevant.</p>",
+        "instructor": "<p>One transverse seat-support rail is selected. Its share of the centered vertical seat load produces shear and bending between the side frames.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Restraint Interpretation",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "fixed-fixed",
+          "restraint"
+        ],
+        "type": "boundary condition",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Interpret the instructor-assigned fixed-fixed idealization."
+        ],
+        "student": "<p>Describe the assigned end restraint for the selected rail and what it implies about end rotation and moment transfer.</p>",
+        "instructor": "<p>Both rail ends are idealized as fixed, so translation and rotation are restrained and end moments can be transferred. This is an instructor-assigned idealization, not a verified description of photographed joints.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "tags": [
+          "bending",
+          "flexural stress"
+        ],
+        "type": "response identification",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Select bending and flexural stress as the target response."
+        ],
+        "student": "<p>Identify the principal internal loading and stress response evaluated for the rail. Name important responses excluded from this model.</p>",
+        "instructor": "<p>The assigned check evaluates beam bending and extreme-fiber flexural normal stress. It excludes weld stress, local buckling, fatigue, local contact, tipping, sliding, vibration, and impact dynamics.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "FBD",
+          "fixed-fixed beam"
+        ],
+        "type": "fbd/modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Construct the one-rail fixed-fixed beam model."
+        ],
+        "student": "<p>Draw one rail as a fixed-fixed beam. Show its span, centered rail load, reactions, end moments, and square hollow cross-section.</p>",
+        "instructor": "<p>A complete model shows span L, centered P_rail = P_A/2, equal vertical reactions, fixed-end moments of opposing sense, and the square hollow section defined by B and t.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "assumptions",
+          "scope"
+        ],
+        "type": "modeling",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "State the assumptions that bound the teaching model."
+        ],
+        "student": "<p>State the assumptions used to reduce the real chair to the assigned one-rail beam model.</p>",
+        "instructor": "<p>Assume a given equivalent-static accidental load, equal sharing by two equivalent rails, one straight prismatic fixed-fixed rail, centered point loading, rigid joints, a square hollow section, linear-elastic flexure through first yield, and small deformation. Exclude detailed impact, welds, local buckling, fatigue, contact, tipping, sliding, and vibration.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "tags": [
+          "analysis plan"
+        ],
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Sequence the rail-strength analysis."
+        ],
+        "student": "<p>Outline the calculation sequence from the load cases through rail loading, bending moment, section property, stress, factor of safety, allowable accidental load, and assessment.</p>",
+        "instructor": "<p>Calculate the live load and compare load cases; divide the accidental load between rails; determine fixed-fixed reactions and M_max; calculate inside dimension, I, and c; calculate stress and factor of safety; then back-calculate allowable total load and assess the design.</p>"
+      },
+      {
+        "id": "q11",
+        "title": "Load Classification and Magnitudes",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "dead load",
+          "live load",
+          "accidental load"
+        ],
+        "type": "calculation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Calculate and compare the three specified load magnitudes."
+        ],
+        "student": "<p>List the dead, live, and accidental load magnitudes. Calculate the seated-person live load and compare the accidental design load with it.</p>",
+        "instructor": "<p>W_D is the specified dead load. W_L = mg = <strong>{{chair_live_load_N}} N</strong>. P_A is the given accidental load, which is <strong>{{chair_accidental_ratio}}</strong> times the calculated live load.</p>"
+      },
+      {
+        "id": "q12",
+        "title": "Given Accidental Design Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "equivalent static",
+          "scope"
+        ],
+        "type": "interpretation",
+        "difficulty": "introductory",
+        "learningObjectives": [
+          "Use the accidental load as a given input without deriving impact."
+        ],
+        "student": "<p>State how the 6.0 kN accidental load is used and why no impact-force calculation is performed.</p>",
+        "instructor": "<p>The 6.0 kN value is an instructor-specified equivalent-static total seat load used directly in the bending model. No fall height, stopping distance, contact duration, or dynamic amplification is supplied or derived.</p>"
+      },
+      {
+        "id": "q13",
+        "title": "Rail Load Sharing",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "load sharing",
+          "reaction"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Determine one rail's load and reactions."
+        ],
+        "student": "<p>Using equal load sharing between two rails, calculate the centered load on one rail and its two vertical reactions.</p>",
+        "instructor": "<p>P_rail = P_A/2 = <strong>{{chair_rail_load_N}} N ({{chair_rail_load_kN}} kN)</strong>. Symmetry gives R_A = R_B = P_rail/2 = <strong>{{chair_reaction_N}} N ({{chair_reaction_kN}} kN)</strong>.</p>"
+      },
+      {
+        "id": "q14",
+        "title": "Critical Bending Moment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "fixed-fixed beam",
+          "moment"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the maximum bending-moment magnitude."
+        ],
+        "student": "<p>For the centered point load on the fixed-fixed rail, determine the maximum bending-moment magnitude and identify where it occurs.</p>",
+        "instructor": "<p>The support and midspan moment magnitudes are equal for this loading: |M|max = P_rail L/8 = <strong>{{chair_Mmax_Nmm}} N*mm = {{chair_Mmax_Nm}} N*m</strong>. The support moments are hogging and the midspan moment is sagging.</p>"
+      },
+      {
+        "id": "q15",
+        "title": "Square Hollow-Section Property",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "moment of inertia",
+          "SHS"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the inside dimension, I, and c."
+        ],
+        "student": "<p>Calculate the inside dimension, centroidal second moment of area, and extreme-fiber distance for the square hollow rail.</p>",
+        "instructor": "<p>b = B - 2t = <strong>{{chair_inside_dimension_mm}} mm</strong>; I = (B<sup>4</sup>-b<sup>4</sup>)/12 = <strong>{{chair_I_mm4}} mm<sup>4</sup></strong>; c = B/2 = <strong>{{chair_c_mm}} mm</strong>.</p>"
+      },
+      {
+        "id": "q16",
+        "title": "Maximum Bending Stress",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "flexure formula",
+          "stress"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Calculate the maximum flexural normal stress."
+        ],
+        "student": "<p>Calculate the maximum bending-stress magnitude in the rail using the flexure formula.</p>",
+        "instructor": "<p>sigma_max = M_max c/I = <strong>{{chair_sigma_max_MPa}} MPa</strong>.</p>"
+      },
+      {
+        "id": "q17",
+        "title": "Strength Factor of Safety",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "factor of safety",
+          "pass fail"
+        ],
+        "type": "calculation",
+        "difficulty": "intermediate",
+        "learningObjectives": [
+          "Compare calculated and required factors of safety."
+        ],
+        "student": "<p>Calculate the strength factor of safety against first yield and compare it with the required value.</p>",
+        "instructor": "<p>n = S_y/sigma_max = <strong>{{chair_fos}}</strong>. The allowable stress based on the requirement is S_y/n_req = <strong>{{chair_allowable_stress_MPa}} MPa</strong>. <strong>{{chair_strength_assessment}}</strong></p>"
+      },
+      {
+        "id": "q18",
+        "title": "Maximum Allowable Accidental Load",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "allowable load",
+          "inverse calculation"
+        ],
+        "type": "calculation",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "Back-calculate the maximum total accidental load."
+        ],
+        "student": "<p>Using the required factor of safety, determine the maximum allowable total accidental seat load for this idealized two-rail system.</p>",
+        "instructor": "<p>M_allow = (S_y/n_req)I/c = <strong>{{chair_Mallow_Nmm}} N*mm</strong>. Reversing M = (P_A/2)L/8 gives P_A,allow = <strong>{{chair_total_allowable_load_N}} N = {{chair_total_allowable_load_kN}} kN</strong>. <strong>{{chair_capacity_assessment}}</strong></p>"
+      },
+      {
+        "id": "q19",
+        "title": "Capacity Comparison and Design Improvement",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "capacity",
+          "design improvement"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "Compare demand with capacity and propose a mechanics-based improvement."
+        ],
+        "student": "<p>Compare the given accidental load with the calculated allowable load. Recommend one direct mechanics-based change that would improve the rail strength margin.</p>",
+        "instructor": "<p><strong>{{chair_capacity_assessment}}</strong> Increasing B or t increases I and section modulus; reducing span or rail load reduces bending moment. Joint rigidity and load sharing must also be verified before treating the beam-model result as assembly capacity.</p>"
+      },
+      {
+        "id": "q20",
+        "title": "Engineering Assessment",
+        "section": "analysis",
+        "selected": true,
+        "tags": [
+          "assessment",
+          "limitations"
+        ],
+        "type": "engineering assessment",
+        "difficulty": "advanced",
+        "learningObjectives": [
+          "State the result and limitations without overstating the model."
+        ],
+        "student": "<p>Prepare a concise engineering assessment stating the governing load case, rail stress, factor of safety, pass/fail result, allowable total accidental load, one recommended change, and the model limitations.</p>",
+        "instructor": "<p>{{chair_engineering_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Baseline 6.0 kN accidental-load chair rail assignment.",
+        "variables": {
+          "chair_WD_N": 150,
+          "chair_m_kg": 90,
+          "chair_g_m_s2": 9.81,
+          "chair_PA_kN": 6,
+          "chair_L_mm": 500,
+          "chair_B_mm": 25,
+          "chair_t_mm": 2,
+          "chair_Sy_MPa": 250,
+          "chair_n_req": 2
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-CABLE-008",
     "slug": "suspended-equipment-cable-system",
     "title": "Suspended Industrial Equipment Pod Supported by Two Inclined Steel Cables",

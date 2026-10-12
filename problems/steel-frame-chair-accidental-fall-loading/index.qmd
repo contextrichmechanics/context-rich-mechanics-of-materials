@@ -1,0 +1,28 @@
+---
+title: "Steel-Frame Chair - Accidental Fall Loading"
+description: "Classify chair load cases and analyze bending, strength, and allowable accidental load for one idealized fixed-fixed square-tube seat-support rail."
+image: "assets/steel-frame-chair-industry-image-placeholder.svg"
+categories: [context-rich, mechanics-of-materials, furniture, beam bending]
+mechanics_concepts: [dead load, live load, accidental load, fixed-fixed beam, reactions, bending moment, square hollow section, second moment of area, flexure formula, factor of safety, allowable load]
+course_topics: [beam bending, flexural normal stress, load cases, strength design]
+textbook_chapters: [Internal loadings in structural members, Bending moment, Centroidal moment of inertia, The flexure formula, Factor of safety]
+problem_types: [load classification, load-path analysis, free-body diagram, beam analysis, section-property calculation, stress calculation, strength evaluation]
+competencies: [load classification, load-path identification, beam idealization, equilibrium, bending moment, section properties, flexure formula, factor of safety, engineering judgment]
+industries: [furniture, consumer products, structural frames]
+difficulty: "Intermediate"
+status: "Published with image-replacement TODO"
+problem_id: "MOS-STEEL-FRAME-CHAIR-001"
+version: "1.0.0"
+---
+
+::: {.callout-warning title="TODO: VERIFY OR REPLACE INDUSTRY IMAGE"}
+The supplied industry photograph is excluded because its creator, source, redistribution license, and attribution could not be verified. Replace the placeholder only with an original or verified redistributable image and document its provenance.
+:::
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=steel-frame-chair-accidental-fall-loading){.btn .btn-secondary}

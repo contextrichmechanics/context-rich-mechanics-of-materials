@@ -1565,6 +1565,68 @@ function variableMap(problem) {
     values.crane_assessment = `The governing location is the support/retention section of the idealized local projection, where the maximum bending-stress magnitude is ${formatDerived(stressMPa, 2)} MPa. Since M = WL, increasing reach increases bending demand for the same load, so allowable load generally must decrease if an allowable moment is to remain controlled. Increasing section height or otherwise increasing section modulus reduces nominal bending stress. This local teaching model does not establish the actual crane rating because frame and mast behavior, the hydraulic system, connections, holes, welds, stability, material strength, dynamics, and manufacturer requirements are excluded.`;
   }
 
+  const chairDeadLoadN = numericValue(values, "chair_WD_N");
+  const chairOccupantMassKg = numericValue(values, "chair_m_kg");
+  const chairGravityMPerS2 = numericValue(values, "chair_g_m_s2");
+  const chairAccidentalLoadKN = numericValue(values, "chair_PA_kN");
+  const chairSpanMm = numericValue(values, "chair_L_mm");
+  const chairOutsideDimensionMm = numericValue(values, "chair_B_mm");
+  const chairWallThicknessMm = numericValue(values, "chair_t_mm");
+  const chairYieldStrengthMPa = numericValue(values, "chair_Sy_MPa");
+  const chairRequiredFactor = numericValue(values, "chair_n_req");
+
+  if (
+    Number.isFinite(chairDeadLoadN) && chairDeadLoadN >= 0 &&
+    Number.isFinite(chairOccupantMassKg) && chairOccupantMassKg > 0 &&
+    Number.isFinite(chairGravityMPerS2) && chairGravityMPerS2 > 0 &&
+    Number.isFinite(chairAccidentalLoadKN) && chairAccidentalLoadKN > 0 &&
+    Number.isFinite(chairSpanMm) && chairSpanMm > 0 &&
+    Number.isFinite(chairOutsideDimensionMm) && chairOutsideDimensionMm > 0 &&
+    Number.isFinite(chairWallThicknessMm) && chairWallThicknessMm > 0 &&
+    chairOutsideDimensionMm > 2 * chairWallThicknessMm &&
+    Number.isFinite(chairYieldStrengthMPa) && chairYieldStrengthMPa > 0 &&
+    Number.isFinite(chairRequiredFactor) && chairRequiredFactor > 0
+  ) {
+    const liveLoadN = chairOccupantMassKg * chairGravityMPerS2;
+    const accidentalLoadN = 1000 * chairAccidentalLoadKN;
+    const accidentalRatio = accidentalLoadN / liveLoadN;
+    const railLoadN = accidentalLoadN / 2;
+    const reactionN = railLoadN / 2;
+    const insideDimensionMm = chairOutsideDimensionMm - 2 * chairWallThicknessMm;
+    const inertiaMm4 = (chairOutsideDimensionMm ** 4 - insideDimensionMm ** 4) / 12;
+    const extremeFiberMm = chairOutsideDimensionMm / 2;
+    const maximumMomentNmm = railLoadN * chairSpanMm / 8;
+    const maximumStressMPa = maximumMomentNmm * extremeFiberMm / inertiaMm4;
+    const strengthFactor = chairYieldStrengthMPa / maximumStressMPa;
+    const allowableStressMPa = chairYieldStrengthMPa / chairRequiredFactor;
+    const allowableMomentNmm = allowableStressMPa * inertiaMm4 / extremeFiberMm;
+    const allowableRailLoadN = 8 * allowableMomentNmm / chairSpanMm;
+    const allowableTotalLoadN = 2 * allowableRailLoadN;
+    const passes = strengthFactor + 1e-12 >= chairRequiredFactor;
+
+    values.chair_live_load_N = formatDerived(liveLoadN, 1);
+    values.chair_accidental_ratio = formatDerived(accidentalRatio, 2);
+    values.chair_rail_load_N = formatDerived(railLoadN, 1);
+    values.chair_rail_load_kN = formatDerived(railLoadN / 1000, 3);
+    values.chair_reaction_N = formatDerived(reactionN, 1);
+    values.chair_reaction_kN = formatDerived(reactionN / 1000, 3);
+    values.chair_inside_dimension_mm = formatDerived(insideDimensionMm, 2);
+    values.chair_I_mm4 = formatDerived(inertiaMm4, 1);
+    values.chair_c_mm = formatDerived(extremeFiberMm, 2);
+    values.chair_Mmax_Nmm = formatDerived(maximumMomentNmm, 0);
+    values.chair_Mmax_Nm = formatDerived(maximumMomentNmm / 1000, 2);
+    values.chair_sigma_max_MPa = formatDerived(maximumStressMPa, 2);
+    values.chair_fos = formatDerived(strengthFactor, 2);
+    values.chair_allowable_stress_MPa = formatDerived(allowableStressMPa, 1);
+    values.chair_Mallow_Nmm = formatDerived(allowableMomentNmm, 0);
+    values.chair_total_allowable_load_N = formatDerived(allowableTotalLoadN, 0);
+    values.chair_total_allowable_load_kN = formatDerived(allowableTotalLoadN / 1000, 3);
+    values.chair_strength_assessment = `The idealized rail ${passes ? "passes" : "does not pass"} the assigned requirement because n = ${formatDerived(strengthFactor, 2)} is ${passes ? "at least" : "less than"} n_req = ${formatDerived(chairRequiredFactor, 2)}.`;
+    values.chair_capacity_assessment = `The given total accidental load is ${formatDerived(accidentalLoadN / 1000, 3)} kN, while the maximum total load allowed by the assigned rail first-yield criterion is ${formatDerived(allowableTotalLoadN / 1000, 3)} kN; therefore the idealized rail ${passes ? "has adequate" : "does not have adequate"} strength margin for the specified accidental case.`;
+    values.chair_engineering_assessment = `The given accidental case governs the assigned beam check. One rail carries ${formatDerived(railLoadN / 1000, 3)} kN and reaches ${formatDerived(maximumStressMPa, 2)} MPa, giving n = ${formatDerived(strengthFactor, 2)} versus n_req = ${formatDerived(chairRequiredFactor, 2)}; the result is ${passes ? "PASS" : "FAIL"}. The maximum allowable total accidental load is ${formatDerived(allowableTotalLoadN / 1000, 3)} kN. Increasing B or t, shortening L, or reducing rail load would improve the idealized rail margin. This is a preliminary rail-bending check, not the capacity of the complete chair; actual load sharing, joint rigidity, welds, local buckling, contact, stability, fatigue, and impact dynamics are excluded.`;
+  }
+
+
   const gearMassEquivalentKg = numericValue(values, "gear_meq_kg");
   const gearLengthM = numericValue(values, "gear_L_m");
   const gearOuterDiameterMm = numericValue(values, "gear_D_mm");
