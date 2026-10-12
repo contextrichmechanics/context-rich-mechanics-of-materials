@@ -901,6 +901,57 @@
         : `The ${formatDerived(hitchDiameterMm, 1)} mm equivalent section provides FS = ${formatDerived(actualFos, 2)}, below the required ${formatDerived(hitchRequiredFos, 1)}; increase the equivalent diameter to at least ${formatDerived(recommendedDiameterMm, 0)} mm for this prescribed static model.`;
     }
 
+    const projectorMassKg = numericValue(values, "projector_m_kg");
+    const projectorGravity = numericValue(values, "projector_g_m_s2");
+    const projectorLengthMm = numericValue(values, "projector_L_mm");
+    const projectorOutsideDiameterMm = numericValue(values, "projector_D_mm");
+    const projectorWallThicknessMm = numericValue(values, "projector_t_mm");
+    const projectorElasticModulusGpa = numericValue(values, "projector_E_GPa");
+    const projectorYieldStrengthMpa = numericValue(values, "projector_S_y_MPa");
+    const projectorRequiredFos = numericValue(values, "projector_n_req");
+
+    if (
+      Number.isFinite(projectorMassKg) && projectorMassKg > 0 &&
+      Number.isFinite(projectorGravity) && projectorGravity > 0 &&
+      Number.isFinite(projectorLengthMm) && projectorLengthMm > 0 &&
+      Number.isFinite(projectorOutsideDiameterMm) && projectorOutsideDiameterMm > 0 &&
+      Number.isFinite(projectorWallThicknessMm) && projectorWallThicknessMm > 0 &&
+      projectorOutsideDiameterMm > 2 * projectorWallThicknessMm &&
+      Number.isFinite(projectorElasticModulusGpa) && projectorElasticModulusGpa > 0 &&
+      Number.isFinite(projectorYieldStrengthMpa) && projectorYieldStrengthMpa > 0 &&
+      Number.isFinite(projectorRequiredFos) && projectorRequiredFos > 0
+    ) {
+      const weightN = projectorMassKg * projectorGravity;
+      const insideDiameterMm = projectorOutsideDiameterMm - 2 * projectorWallThicknessMm;
+      const areaMm2 = Math.PI / 4 * (projectorOutsideDiameterMm ** 2 - insideDiameterMm ** 2);
+      const stressMpa = weightN / areaMm2;
+      const elasticModulusMpa = projectorElasticModulusGpa * 1000;
+      const elongationMm = weightN * projectorLengthMm / (areaMm2 * elasticModulusMpa);
+      const actualFos = projectorYieldStrengthMpa / stressMpa;
+      const allowableStressMpa = projectorYieldStrengthMpa / projectorRequiredFos;
+      const maximumWeightN = allowableStressMpa * areaMm2;
+      const maximumMassKg = maximumWeightN / projectorGravity;
+      const passes = actualFos >= projectorRequiredFos * (1 - 1e-10);
+
+      values.projector_weight_N = formatDerived(weightN, 1);
+      values.projector_inside_diameter_mm = formatDerived(insideDiameterMm, 2);
+      values.projector_area_mm2 = formatDerived(areaMm2, 2);
+      values.projector_axial_force_N = formatDerived(weightN, 1);
+      values.projector_stress_MPa = formatDerived(stressMpa, 3);
+      values.projector_E_MPa = formatDerived(elasticModulusMpa, 0);
+      values.projector_elongation_mm = formatDerived(elongationMm, 5);
+      values.projector_fos = formatDerived(actualFos, 1);
+      values.projector_allowable_stress_MPa = formatDerived(allowableStressMpa, 1);
+      values.projector_max_weight_N = formatDerived(maximumWeightN, 0);
+      values.projector_max_mass_kg = formatDerived(maximumMassKg, 0);
+      values.projector_strength_assessment = passes
+        ? "The tube satisfies the required yield-based factor of safety in the ideal axial model."
+        : "The tube does not satisfy the required yield-based factor of safety in the ideal axial model.";
+      values.projector_engineering_assessment = passes
+        ? `The tube satisfies the assigned axial-yield criterion. Its elongation is ${formatDerived(elongationMm, 5)} mm and its yield-based factor of safety is ${formatDerived(actualFos, 1)}, exceeding the required ${formatDerived(projectorRequiredFos, 1)}. The calculated ${formatDerived(maximumMassKg, 0)} kg equivalent is only the idealized gross-tube axial capacity; it is not the allowable capacity of the complete projector mounting assembly.`
+        : `The tube does not satisfy the assigned axial-yield criterion. Its yield-based factor of safety is ${formatDerived(actualFos, 1)}, below the required ${formatDerived(projectorRequiredFos, 1)}. This tube-only calculation does not establish the allowable capacity of the complete projector mounting assembly.`;
+    }
+
     const millDiameterMm = numericValue(values, "mill_D_mm");
     const millOverhangMm = numericValue(values, "mill_L_mm");
     const millForceN = numericValue(values, "mill_F_N");

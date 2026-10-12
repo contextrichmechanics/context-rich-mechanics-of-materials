@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2872"
+      "source_location": "L2923"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2955"
+      "source_location": "L3006"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2851"
+      "source_location": "L2902"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2971"
+      "source_location": "L3022"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2816"
+      "source_location": "L2867"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2812"
+      "source_location": "L2863"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2921"
+      "source_location": "L2972"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2863"
+      "source_location": "L2914"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2896"
+      "source_location": "L2947"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2889"
+      "source_location": "L2940"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2830"
+      "source_location": "L2881"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2839"
+      "source_location": "L2890"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2902"
+      "source_location": "L2953"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2798"
+      "source_location": "L2849"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2788"
+      "source_location": "L2839"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -385,7 +385,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2768"
+      "source_location": "L2819"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -397,7 +397,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2753"
+      "source_location": "L2804"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -409,7 +409,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2749"
+      "source_location": "L2800"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2784"
+      "source_location": "L2835"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2838"
+      "source_location": "L2889"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2831"
+      "source_location": "L2882"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2865"
+      "source_location": "L2916"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2822"
+      "source_location": "L2873"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2844"
+      "source_location": "L2895"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2800"
+      "source_location": "L2851"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2735"
+      "source_location": "L2786"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2726"
+      "source_location": "L2777"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -731,7 +731,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3073"
+      "source_location": "L3124"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +753,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3060"
+      "source_location": "L3111"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +764,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3084"
+      "source_location": "L3135"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +775,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3074"
+      "source_location": "L3125"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +786,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3054"
+      "source_location": "L3105"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -797,7 +797,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2806"
+      "source_location": "L2857"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -819,7 +819,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3059"
+      "source_location": "L3110"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +830,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3061"
+      "source_location": "L3112"
     },
     {
       "id": "instructor_builder",
@@ -4266,6 +4266,163 @@
       "source_location": "L8"
     },
     {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_student_packet",
+      "label": "ceiling-mounted-projector-support-axial-loading/student-packet.qmd",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+        "subtitle": "Context, Idealization, and Mechanics Analysis",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "ceiling-mounted-projector-support-axial-loading/student-packet.qmd",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide",
+      "label": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+        "subtitle": "Representative Answers and Evaluation Guidance",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_index",
+      "label": "ceiling-mounted-projector-support-axial-loading/index.qmd",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+        "description": "Evaluate axial stress, elongation, strength factor of safety, and gross-tube axial capacity for a concentric hollow-tube projector support while distinguishing tube capacity from complete-assembly capacity.",
+        "image": "assets/projector-support-industry-image-placeholder.svg",
+        "categories": "[context-rich, mechanics-of-materials, audiovisual systems, structural support]",
+        "course_topics": "[axial loading, normal stress, axial deformation, strength design]",
+        "textbook_chapters": "[Axial loading, Average normal stress, Axial deformation, Factor of safety]",
+        "problem_types": "[context interpretation, free-body diagram, axial analysis, strength evaluation]",
+        "competencies": "[load-path identification, engineering idealization, section-property calculation, axial-stress calculation, deformation calculation, engineering judgment]",
+        "industries": "[building equipment, audiovisual systems, structural support]",
+        "difficulty": "Introductory-Intermediate",
+        "status": "Published with image-replacement TODO",
+        "problem_id": "MOS-CEILING-MOUNTED-PR-001",
+        "version": "1.0.0"
+      },
+      "node_kind": "page",
+      "norm_label": "ceiling-mounted-projector-support-axial-loading/index.qmd",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_index_assignment_options",
+      "label": "Assignment Options",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assignment options",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/index.qmd",
+      "source_location": "L30"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L23"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_instructor_reference_idealization",
+      "label": "Instructor Reference Idealization",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "instructor reference idealization",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L25"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L19"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L11"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_scope_of_the_base_problem",
+      "label": "Scope of the Base Problem",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope of the base problem",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L44"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_supplemental_assessment_structure",
+      "label": "Supplemental Assessment Structure",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "supplemental assessment structure",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L55"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_value_basis_and_references",
+      "label": "Value Basis and References",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "value basis and references",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L48"
+    },
+    {
       "id": "codex_skills_graphify_references_exports",
       "label": "exports.md",
       "_origin": "ast",
@@ -4372,6 +4529,90 @@
       "norm_label": "step 8 - token reduction benchmark (only if total_words > 5000)",
       "source_file": ".codex/skills/graphify/references/exports.md",
       "source_location": "L79"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_student_problem",
+      "label": "ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_axial_stress_and_elongation_of_a_ceiling_mounted_projector_support",
+      "label": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "axial stress and elongation of a ceiling-mounted projector support",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L3"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_context_rich_solid_mechanics_problem",
+      "label": "Context-Rich Solid Mechanics Problem",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context-rich solid mechanics problem",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L5"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_main_engineering_goal",
+      "label": "Main Engineering Goal",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "main engineering goal",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L19"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_scope_of_the_model",
+      "label": "Scope of the Model",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope of the model",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L30"
+    },
+    {
+      "id": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_system_components",
+      "label": "System Components",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "system components",
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L23"
     },
     {
       "id": "problems_axial_rod_tube_assembly_student_packet",
@@ -13979,7 +14220,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2785",
+      "source_location": "L2836",
       "weight": 1.0
     },
     {
@@ -13991,7 +14232,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2794",
+      "source_location": "L2845",
       "weight": 1.0
     },
     {
@@ -14003,7 +14244,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2839",
+      "source_location": "L2890",
       "weight": 1.0
     },
     {
@@ -14015,7 +14256,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2841",
+      "source_location": "L2892",
       "weight": 1.0
     },
     {
@@ -14027,7 +14268,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2835",
+      "source_location": "L2886",
       "weight": 1.0
     },
     {
@@ -14039,7 +14280,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2876",
+      "source_location": "L2927",
       "weight": 1.0
     },
     {
@@ -14051,7 +14292,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2881",
+      "source_location": "L2932",
       "weight": 1.0
     },
     {
@@ -14063,7 +14304,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2887",
+      "source_location": "L2938",
       "weight": 1.0
     },
     {
@@ -14075,7 +14316,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2889",
+      "source_location": "L2940",
       "weight": 1.0
     },
     {
@@ -14087,7 +14328,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2891",
+      "source_location": "L2942",
       "weight": 1.0
     },
     {
@@ -14099,7 +14340,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2892",
+      "source_location": "L2943",
       "weight": 1.0
     },
     {
@@ -14111,7 +14352,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2823",
+      "source_location": "L2874",
       "weight": 1.0
     },
     {
@@ -14123,7 +14364,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2828",
+      "source_location": "L2879",
       "weight": 1.0
     },
     {
@@ -14135,7 +14376,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2845",
+      "source_location": "L2896",
       "weight": 1.0
     },
     {
@@ -14147,7 +14388,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2855",
+      "source_location": "L2906",
       "weight": 1.0
     },
     {
@@ -14159,7 +14400,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2856",
+      "source_location": "L2907",
       "weight": 1.0
     },
     {
@@ -14171,7 +14412,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2857",
+      "source_location": "L2908",
       "weight": 1.0
     },
     {
@@ -14183,7 +14424,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2858",
+      "source_location": "L2909",
       "weight": 1.0
     },
     {
@@ -14195,7 +14436,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2803",
+      "source_location": "L2854",
       "weight": 1.0
     },
     {
@@ -14207,7 +14448,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2803",
+      "source_location": "L2854",
       "weight": 1.0
     },
     {
@@ -14219,7 +14460,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2803",
+      "source_location": "L2854",
       "weight": 1.0
     },
     {
@@ -14231,7 +14472,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2729",
+      "source_location": "L2780",
       "weight": 1.0
     },
     {
@@ -14243,7 +14484,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2731",
+      "source_location": "L2782",
       "weight": 1.0
     },
     {
@@ -14327,7 +14568,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2962",
+      "source_location": "L3013",
       "weight": 1.0
     },
     {
@@ -14339,7 +14580,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2963",
+      "source_location": "L3014",
       "weight": 1.0
     },
     {
@@ -14351,7 +14592,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2966",
+      "source_location": "L3017",
       "weight": 1.0
     },
     {
@@ -14375,7 +14616,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2978",
+      "source_location": "L3029",
       "weight": 1.0
     },
     {
@@ -14387,7 +14628,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2984",
+      "source_location": "L3035",
       "weight": 1.0
     },
     {
@@ -14399,7 +14640,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2992",
+      "source_location": "L3043",
       "weight": 1.0
     },
     {
@@ -14411,7 +14652,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2992",
+      "source_location": "L3043",
       "weight": 1.0
     },
     {
@@ -14423,7 +14664,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2992",
+      "source_location": "L3043",
       "weight": 1.0
     },
     {
@@ -14435,7 +14676,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2997",
+      "source_location": "L3048",
       "weight": 1.0
     },
     {
@@ -14447,7 +14688,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2997",
+      "source_location": "L3048",
       "weight": 1.0
     },
     {
@@ -14459,7 +14700,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3008",
+      "source_location": "L3059",
       "weight": 1.0
     },
     {
@@ -14471,7 +14712,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3014",
+      "source_location": "L3065",
       "weight": 1.0
     },
     {
@@ -14483,7 +14724,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2928",
+      "source_location": "L2979",
       "weight": 1.0
     },
     {
@@ -14495,7 +14736,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2934",
+      "source_location": "L2985",
       "weight": 1.0
     },
     {
@@ -14507,7 +14748,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2934",
+      "source_location": "L2985",
       "weight": 1.0
     },
     {
@@ -14519,7 +14760,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2934",
+      "source_location": "L2985",
       "weight": 1.0
     },
     {
@@ -14531,7 +14772,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2945",
+      "source_location": "L2996",
       "weight": 1.0
     },
     {
@@ -14543,7 +14784,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2947",
+      "source_location": "L2998",
       "weight": 1.0
     },
     {
@@ -14555,7 +14796,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2949",
+      "source_location": "L3000",
       "weight": 1.0
     },
     {
@@ -14567,7 +14808,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2869",
+      "source_location": "L2920",
       "weight": 1.0
     },
     {
@@ -14579,7 +14820,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2897",
+      "source_location": "L2948",
       "weight": 1.0
     },
     {
@@ -14591,7 +14832,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2899",
+      "source_location": "L2950",
       "weight": 1.0
     },
     {
@@ -14603,7 +14844,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2893",
+      "source_location": "L2944",
       "weight": 1.0
     },
     {
@@ -14615,7 +14856,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2831",
+      "source_location": "L2882",
       "weight": 1.0
     },
     {
@@ -14627,7 +14868,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2836",
+      "source_location": "L2887",
       "weight": 1.0
     },
     {
@@ -14639,7 +14880,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2840",
+      "source_location": "L2891",
       "weight": 1.0
     },
     {
@@ -14651,7 +14892,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2903",
+      "source_location": "L2954",
       "weight": 1.0
     },
     {
@@ -14663,7 +14904,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2913",
+      "source_location": "L2964",
       "weight": 1.0
     },
     {
@@ -14675,7 +14916,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2914",
+      "source_location": "L2965",
       "weight": 1.0
     },
     {
@@ -14687,7 +14928,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2915",
+      "source_location": "L2966",
       "weight": 1.0
     },
     {
@@ -14699,7 +14940,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2916",
+      "source_location": "L2967",
       "weight": 1.0
     },
     {
@@ -14711,7 +14952,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2789",
+      "source_location": "L2840",
       "weight": 1.0
     },
     {
@@ -14723,7 +14964,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2792",
+      "source_location": "L2843",
       "weight": 1.0
     },
     {
@@ -14735,7 +14976,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2794",
+      "source_location": "L2845",
       "weight": 1.0
     },
     {
@@ -18229,6 +18470,160 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/cantilevered-operator-seat-bending/_student-problem.qmd",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_index",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_index_assignment_options",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/index.qmd",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_scope_of_the_base_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_value_basis_and_references",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_supplemental_assessment_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_generated_question_set_and_solutions",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide_instructor_reference_idealization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_student_problem",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_context_rich_solid_mechanics_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_axial_stress_and_elongation_of_a_ceiling_mounted_projector_support",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_main_engineering_goal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_axial_stress_and_elongation_of_a_ceiling_mounted_projector_support",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_system_components",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_axial_stress_and_elongation_of_a_ceiling_mounted_projector_support",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_scope_of_the_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_axial_stress_and_elongation_of_a_ceiling_mounted_projector_support",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_context_rich_solid_mechanics_problem",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_student_problem_axial_stress_and_elongation_of_a_ceiling_mounted_projector_support",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/_student-problem.qmd",
       "source_location": "L3",
       "weight": 1.0
     },
@@ -23509,7 +23904,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2726",
+      "source_location": "L2777",
       "weight": 1.0
     },
     {
@@ -23520,7 +23915,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2735",
+      "source_location": "L2786",
       "weight": 1.0
     },
     {
@@ -23531,7 +23926,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2749",
+      "source_location": "L2800",
       "weight": 1.0
     },
     {
@@ -23542,7 +23937,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2753",
+      "source_location": "L2804",
       "weight": 1.0
     },
     {
@@ -23553,7 +23948,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2768",
+      "source_location": "L2819",
       "weight": 1.0
     },
     {
@@ -23564,7 +23959,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2784",
+      "source_location": "L2835",
       "weight": 1.0
     },
     {
@@ -23575,7 +23970,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2800",
+      "source_location": "L2851",
       "weight": 1.0
     },
     {
@@ -23586,7 +23981,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2822",
+      "source_location": "L2873",
       "weight": 1.0
     },
     {
@@ -23597,7 +23992,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2831",
+      "source_location": "L2882",
       "weight": 1.0
     },
     {
@@ -23608,7 +24003,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2838",
+      "source_location": "L2889",
       "weight": 1.0
     },
     {
@@ -23619,7 +24014,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2844",
+      "source_location": "L2895",
       "weight": 1.0
     },
     {
@@ -23630,7 +24025,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2865",
+      "source_location": "L2916",
       "weight": 1.0
     },
     {
@@ -23734,28 +24129,6 @@
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_substitute",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2788",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_selectedquestions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2798",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
       "target": "scripts_render_assignment_escapehtml",
       "relation": "contains",
       "_origin": "ast",
@@ -23767,51 +24140,7 @@
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_questionsections",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2806",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_questionsbysection",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2812",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_questionimagefile",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2816",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderquestionimagehtml",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2830",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderquestionimagemarkdown",
+      "target": "scripts_render_assignment_substitute",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23822,18 +24151,29 @@
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_problemimagemarkdown",
+      "target": "scripts_render_assignment_selectedquestions",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2851",
+      "source_location": "L2849",
       "weight": 1.0
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderidealizedimagehtml",
+      "target": "scripts_render_assignment_questionsections",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2857",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_questionsbysection",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23844,40 +24184,40 @@
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_documentstyles",
+      "target": "scripts_render_assignment_questionimagefile",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2872",
+      "source_location": "L2867",
       "weight": 1.0
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderlearningobjectives",
+      "target": "scripts_render_assignment_renderquestionimagehtml",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2889",
+      "source_location": "L2881",
       "weight": 1.0
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderinstructorsupport",
+      "target": "scripts_render_assignment_renderquestionimagemarkdown",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2896",
+      "source_location": "L2890",
       "weight": 1.0
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_renderquestionsectionhtml",
+      "target": "scripts_render_assignment_problemimagemarkdown",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -23888,13 +24228,68 @@
     },
     {
       "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_renderidealizedimagehtml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2914",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_documentstyles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2923",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_renderlearningobjectives",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2940",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_renderinstructorsupport",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2947",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_renderquestionsectionhtml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2953",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
       "target": "scripts_render_assignment_renderbody",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2921",
+      "source_location": "L2972",
       "weight": 1.0
     },
     {
@@ -23905,7 +24300,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2955",
+      "source_location": "L3006",
       "weight": 1.0
     },
     {
@@ -23916,7 +24311,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2971",
+      "source_location": "L3022",
       "weight": 1.0
     },
     {
@@ -23927,7 +24322,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3054",
+      "source_location": "L3105",
       "weight": 1.0
     },
     {
@@ -23938,7 +24333,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3059",
+      "source_location": "L3110",
       "weight": 1.0
     },
     {
@@ -23949,7 +24344,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3060",
+      "source_location": "L3111",
       "weight": 1.0
     },
     {
@@ -23960,7 +24355,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3061",
+      "source_location": "L3112",
       "weight": 1.0
     },
     {
@@ -23971,7 +24366,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3073",
+      "source_location": "L3124",
       "weight": 1.0
     },
     {
@@ -23982,7 +24377,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3074",
+      "source_location": "L3125",
       "weight": 1.0
     },
     {
@@ -23993,7 +24388,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3084",
+      "source_location": "L3135",
       "weight": 1.0
     },
     {
@@ -24467,6 +24862,28 @@
       "confidence_score": 1.0,
       "source_file": "problems/cantilevered-operator-seat-bending/index.qmd",
       "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_index",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_student_packet",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/index.qmd",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_ceiling_mounted_projector_support_axial_loading_index",
+      "target": "problems_ceiling_mounted_projector_support_axial_loading_instructor_guide",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/ceiling-mounted-projector-support-axial-loading/index.qmd",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -25142,5 +25559,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1b279d67e3dbcdf493cd7d6b37a31d3869c34992"
+  "built_at_commit": "330aaf676345dcc751f6237932ad8bb025b82d5d"
 }

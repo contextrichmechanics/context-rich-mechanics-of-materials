@@ -120,6 +120,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-CEILING-MOUNTED-PR-001",
+    "slug": "ceiling-mounted-projector-support-axial-loading",
+    "title": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
+    "status": "OK",
+    "variables": 8,
+    "questions": 18,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-CLEVIS-007",
     "slug": "clevis-pin-tensile-linkage",
     "title": "Industrial Clevis-Pin Linkage Under Tensile Load",

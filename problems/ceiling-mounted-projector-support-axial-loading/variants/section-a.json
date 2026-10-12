@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "description": "Baseline 18 kg ceiling-mounted projector support axial-loading assignment.",
+  "variables": {"projector_m_kg":18,"projector_g_m_s2":9.81,"projector_L_mm":750,"projector_D_mm":48.3,"projector_t_mm":3.91,"projector_E_GPa":200,"projector_S_y_MPa":250,"projector_n_req":2},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17","q18"]
+}

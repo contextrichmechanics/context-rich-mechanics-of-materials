@@ -1,0 +1,26 @@
+---
+title: "Student Packet - Axial Stress and Elongation of a Ceiling-Mounted Projector Support"
+subtitle: "Context, Idealization, and Mechanics Analysis"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="ceiling-mounted-projector-support-axial-loading-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({
+    slug: "ceiling-mounted-projector-support-axial-loading",
+    targetId: "ceiling-mounted-projector-support-axial-loading-student-questions",
+    type: "student"
+  });
+});
+</script>
+```

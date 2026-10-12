@@ -1,16 +1,16 @@
-# Graph Report - codex-robot-arm-link-20261006  (2026-10-06)
+# Graph Report - codex-projector-support-20261011  (2026-10-11)
 
 ## Corpus Check
-- 401 files · ~3,397,418 words
+- 409 files · ~3,407,047 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1069 nodes · 1018 edges · 139 communities (118 shown, 21 thin omitted)
+- 1087 nodes · 1034 edges · 141 communities (120 shown, 21 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1b279d67`
+- Built from commit: `330aaf67`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -150,6 +150,8 @@
 - Robotic Arm Link - Combined Bending and Torsion
 - robotic-arm-link-combined-bending-torsion/index.qmd
 - robotic-arm-link-combined-bending-torsion/student-packet.qmd
+- ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd
+- Axial Stress and Elongation of a Ceiling-Mounted Projector Support
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -169,7 +171,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (139 total, 21 thin omitted)
+## Communities (141 total, 21 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.11
@@ -627,8 +629,16 @@ Nodes (7): Generated Question Set and Solutions, Instructor Reference Idealizati
 Cohesion: 0.33
 Nodes (5): Analysis Scope, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Robotic Arm Link - Combined Bending and Torsion
 
+### Community 139 - "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd"
+Cohesion: 0.18
+Nodes (8): Assignment Options, Generated Question Set and Solutions, Instructor Reference Idealization, Problem Context, Purpose, Scope of the Base Problem, Supplemental Assessment Structure, Value Basis and References
+
+### Community 140 - "Axial Stress and Elongation of a Ceiling-Mounted Projector Support"
+Cohesion: 0.29
+Nodes (6): Axial Stress and Elongation of a Ceiling-Mounted Projector Support, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Scope of the Model, System Components
+
 ## Knowledge Gaps
-- **674 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+669 more)
+- **685 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+680 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -640,7 +650,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `8. Create The Package` connect `8. Create The Package` to `AI Agent Project Guide`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _674 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _685 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**

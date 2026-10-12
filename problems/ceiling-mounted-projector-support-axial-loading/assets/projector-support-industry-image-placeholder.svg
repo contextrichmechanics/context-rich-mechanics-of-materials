@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Industry image replacement placeholder</title>
+  <desc id="desc">Placeholder for a future redistributable photograph of a ceiling-mounted projector support.</desc>
+  <rect width="1200" height="675" fill="#f4f6f8"/>
+  <rect x="36" y="36" width="1128" height="603" rx="18" fill="none" stroke="#6b7280" stroke-width="6" stroke-dasharray="20 14"/>
+  <g fill="#1f2937" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="600" y="270" font-size="52" font-weight="700">TODO: REPLACE INDUSTRY IMAGE</text>
+    <text x="600" y="345" font-size="30">Ceiling-Mounted Projector Support</text>
+    <text x="600" y="405" font-size="24">Use only an original or verified redistributable image.</text>
+    <text x="600" y="445" font-size="24">Document license and attribution before replacement.</text>
+  </g>
+</svg>

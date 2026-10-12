@@ -1,0 +1,34 @@
+---
+title: "Axial Stress and Elongation of a Ceiling-Mounted Projector Support"
+description: "Evaluate axial stress, elongation, strength factor of safety, and gross-tube axial capacity for a concentric hollow-tube projector support while distinguishing tube capacity from complete-assembly capacity."
+image: "assets/projector-support-industry-image-placeholder.svg"
+categories: [context-rich, mechanics-of-materials, audiovisual systems, structural support]
+mechanics_concepts:
+  - axial loading
+  - average normal stress
+  - axial deformation
+  - hollow circular cross-section
+  - factor of safety
+  - allowable load
+course_topics: [axial loading, normal stress, axial deformation, strength design]
+textbook_chapters: [Axial loading, Average normal stress, Axial deformation, Factor of safety]
+problem_types: [context interpretation, free-body diagram, axial analysis, strength evaluation]
+competencies: [load-path identification, engineering idealization, section-property calculation, axial-stress calculation, deformation calculation, engineering judgment]
+industries: [building equipment, audiovisual systems, structural support]
+difficulty: "Introductory-Intermediate"
+status: "Published with image-replacement TODO"
+problem_id: "MOS-CEILING-MOUNTED-PR-001"
+version: "1.0.0"
+---
+
+::: {.callout-warning title="TODO: REPLACE INDUSTRY IMAGE"}
+The supplied industry photograph is not cleared for public redistribution and is not included in this repository. Replace the placeholder only with an original or verified redistributable image, and document its license and attribution.
+:::
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=ceiling-mounted-projector-support-axial-loading){.btn .btn-secondary}

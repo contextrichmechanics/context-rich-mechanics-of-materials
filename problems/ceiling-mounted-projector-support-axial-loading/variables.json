@@ -1,0 +1,10 @@
+[
+  {"key":"projector_m_kg","symbol":"m","label":"Combined projector and mount mass","value":18,"unit":"kg","min":5,"max":80,"step":1},
+  {"key":"projector_g_m_s2","symbol":"g","label":"Gravitational acceleration","value":9.81,"unit":"m/s^2","min":9.7,"max":9.9,"step":0.01},
+  {"key":"projector_L_mm","symbol":"L","label":"Vertical support length","value":750,"unit":"mm","min":200,"max":2000,"step":25},
+  {"key":"projector_D_mm","symbol":"D","label":"Tube outside diameter","value":48.3,"unit":"mm","min":20,"max":100,"step":0.1},
+  {"key":"projector_t_mm","symbol":"t","label":"Tube wall thickness","value":3.91,"unit":"mm","min":1,"max":10,"step":0.01},
+  {"key":"projector_E_GPa","symbol":"E","label":"Elastic modulus of steel","value":200,"unit":"GPa","min":100,"max":220,"step":5},
+  {"key":"projector_S_y_MPa","symbol":"S_y","label":"Tube material yield strength","value":250,"unit":"MPa","min":150,"max":700,"step":10},
+  {"key":"projector_n_req","symbol":"n_req","label":"Required strength factor of safety","value":2,"unit":"-","min":1,"max":5,"step":0.1}
+]
