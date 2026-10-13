@@ -12,6 +12,14 @@ A steel-frame chair experiences dead loading from its own weight, live loading f
 The supplied chair photograph is not included because its original creator, source, redistribution license, and correct attribution could not be verified. Replace this placeholder only with an original or verified redistributable image and document its provenance.
 :::
 
+### Seat-Support Arrangement
+
+![CAD view of the chair with the seat-support panel above the highlighted rails.](assets/steel-frame-chair-seat-support-cad.png){fig-alt="CAD visualization of a steel chair with a seat-support panel above two highlighted transverse rails." width=46%}
+
+![Exposed-frame CAD view highlighting the two seat-support rails and the assumed downward loading.](assets/steel-frame-chair-exposed-frame-cad.png){fig-alt="Exposed steel chair frame with two orange transverse seat-support rails and downward red load arrows." width=58%}
+
+The idealized model assumes that the 6 kN accidental seat load transfers equally to the two highlighted rails, giving a 3 kN midpoint load on each rail. Load sharing through other frame members is neglected. The CAD views illustrate the assigned model; they do not establish or prove the assumed load distribution.
+
 The chair dead load is 150 N. A 90 kg seated occupant produces the normal live load. Detailed bending calculations focus exclusively on the given 6.0 kN accidental design case.
 
 ### Main Engineering Goal

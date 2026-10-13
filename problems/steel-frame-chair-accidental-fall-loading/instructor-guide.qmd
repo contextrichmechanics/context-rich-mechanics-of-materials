@@ -20,9 +20,9 @@ The supplied chair photograph is intentionally excluded because its creator, sou
 
 # Instructor Reference Idealization
 
-![Instructor-only structural idealization of one fixed-fixed seat-support rail.](assets/steel-frame-chair-instructor-reference.jpg){fig-alt="Instructor-only fixed-fixed rail with a centered 3.0 kN downward load, 500 mm span, equal upward reactions, and fixed-end moment magnitudes P rail L over 8." width=94%}
+![Instructor-only mechanics model of one fixed-fixed seat-support rail.](assets/steel-frame-chair-instructor-reference.png){fig-alt="Instructor-only mechanics visualization of a 500 mm fixed-fixed hollow square rail with a centered 3 kN downward load and a 25 by 25 by 2 mm cross-section." width=94%}
 
-The displayed rail load is (P_{rail}=P_A/2=3.0\text{ kN}). Each vertical reaction has magnitude (P_{rail}/2=1.5\text{ kN}), and each fixed-end moment has magnitude (P_{rail}L/8=187.5\text{ N m}). The circular arrows indicate the opposing support-moment senses required for the symmetric fixed-fixed solution; the labels intentionally report magnitudes.
+The displayed rail load is $P_{\mathrm{rail}}=P_A/2=3.0\ \mathrm{kN}$. Although the new visualization does not show them, each vertical reaction has magnitude $P_{\mathrm{rail}}/2=1.5\ \mathrm{kN}$, and each fixed-end moment has magnitude $P_{\mathrm{rail}}L/8=187.5\ \mathrm{N\,m}$. The two support moments have opposing senses in the symmetric fixed-fixed solution.
 
 # Generated Question Set and Solutions
 
