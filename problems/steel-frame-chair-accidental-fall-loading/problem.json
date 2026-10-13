@@ -18,6 +18,22 @@
   "image": "assets/steel-frame-chair-industry-image-placeholder.svg",
   "imageAlt": "Placeholder marking where a redistributable steel-frame chair industry photograph will be added.",
   "imagePublicationStatus": "TODO: VERIFY OR REPLACE INDUSTRY IMAGE. The supplied photograph is not committed because its creator, source, redistribution license, and attribution could not be verified.",
+  "supplementaryImages": [
+    {
+      "path": "assets/steel-frame-chair-seat-support-cad.png",
+      "caption": "CAD view of the chair with the seat-support panel above the highlighted rails.",
+      "alt": "CAD visualization of a steel chair with a seat-support panel above two highlighted transverse rails.",
+      "order": 1,
+      "widthPercent": 46
+    },
+    {
+      "path": "assets/steel-frame-chair-exposed-frame-cad.png",
+      "caption": "Exposed-frame CAD view highlighting the two seat-support rails and the assumed downward loading.",
+      "alt": "Exposed steel chair frame with two orange transverse seat-support rails and downward red load arrows.",
+      "order": 2,
+      "widthPercent": 58
+    }
+  ],
   "idealizedImage": "assets/steel-frame-chair-instructor-reference.png",
   "idealizedImageAlt": "Instructor-only mechanics visualization of a 500 mm fixed-fixed hollow square seat-support rail with a centered 3.0 kN load.",
   "source": "index.html",

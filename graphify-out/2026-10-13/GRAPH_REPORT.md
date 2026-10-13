@@ -1,16 +1,16 @@
-# Graph Report - codex-steel-frame-chair-20261012  (2026-10-12)
+# Graph Report - codex-steel-chair-images-20261013  (2026-10-13)
 
 ## Corpus Check
-- 417 files · ~3,418,016 words
+- 417 files · ~3,566,352 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1104 nodes · 1049 edges · 143 communities (122 shown, 21 thin omitted)
+- 1105 nodes · 1050 edges · 143 communities (122 shown, 21 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cfc8f5ff`
+- Built from commit: `74c30763`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -644,11 +644,11 @@ Cohesion: 0.20
 Nodes (7): Assignment Options, Generated Question Set and Solutions, Instructor Reference Idealization, Problem Context, Purpose, Scope and Instructor Context, Supplemental Assessment Structure
 
 ### Community 142 - "Steel-Frame Chair - Accidental Fall Loading"
-Cohesion: 0.29
-Nodes (6): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Scope of the Model, Steel-Frame Chair - Accidental Fall Loading, System Components
+Cohesion: 0.25
+Nodes (7): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Scope of the Model, Seat-Support Arrangement, Steel-Frame Chair - Accidental Fall Loading, System Components
 
 ## Knowledge Gaps
-- **696 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+691 more)
+- **697 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+692 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -658,7 +658,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _696 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _697 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**

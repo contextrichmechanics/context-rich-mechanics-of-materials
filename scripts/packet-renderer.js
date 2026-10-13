@@ -2910,6 +2910,31 @@
     `;
   }
 
+  function renderSupplementaryImages(problem) {
+    const images = Array.isArray(problem.supplementaryImages)
+      ? [...problem.supplementaryImages].sort((a, b) => a.order - b.order)
+      : [];
+    const existingSources = new Set(
+      [...document.images]
+        .map((image) => image.currentSrc || image.src)
+        .filter(Boolean)
+    );
+    const figures = images.map((image) => {
+      const src = problemImagePath(problem, image.path);
+      const absoluteSrc = src ? new URL(src, window.location.href).href : "";
+      if (!src || existingSources.has(absoluteSrc)) {
+        return "";
+      }
+      const alt = image.alt || image.caption || `${problem.title} supplementary image`;
+      const width = Number.isFinite(image.widthPercent)
+        ? ` style="width: ${image.widthPercent}%;"`
+        : "";
+      const caption = image.caption ? `<figcaption>${escapeHtml(image.caption)}</figcaption>` : "";
+      return `<figure class="supplementary-image"><img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}"${width}>${caption}</figure>`;
+    }).filter(Boolean).join("");
+    return figures ? `<section class="packet-supplementary-images">${figures}</section>` : "";
+  }
+
   function renderVariableTable(problem, values) {
     const rows = (problem.variables || []).map((variable) => {
       const value = values[variable.key] ?? variable.value;
@@ -3001,6 +3026,7 @@
         <h1>${title}</h1>
         ${renderQuestionSection(problem, questions, questionSections[0], isInstructor, values, numberById)}
         ${renderQuestionSection(problem, questions, questionSections[1], isInstructor, values, numberById)}
+        ${renderSupplementaryImages(problem)}
         ${showIdealizedImage ? renderIdealizedImage(problem) : ""}
         ${renderVariableTable(problem, values)}
         ${renderQuestionSection(problem, questions, questionSections[2], isInstructor, values, numberById)}

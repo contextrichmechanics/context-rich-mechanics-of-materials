@@ -32,6 +32,7 @@
     "source": "problems/adjustable-shop-crane-boom-bending/index.html",
     "problemStatement": "<p>An adjustable shop crane uses a main boom, telescoping extension, mast pivot, hydraulic ram, hook, and base structure. This problem does not treat the complete boom as a cantilever. It isolates only the effective projecting portion of the telescoping extension beyond its support/retention section and represents that local projection as a straight prismatic cantilever carrying a downward hook load at its free end.</p><p>The hook load represents a nominal 1-ton-position teaching load. The effective local projection and rectangular hollow-section dimensions are instructor-assigned values, not measurements from the photograph or specifications of an identified crane model.</p>",
     "engineeringGoal": "<p>Calculate the local fixed-section reactions, maximum shear and bending moment, rectangular hollow-section properties, and maximum bending stress. Use the model to explain why increased reach generally requires reduced allowable lifted load while recognizing that bending stress alone does not establish an actual crane rating.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "crane_W_kN",
@@ -540,6 +541,7 @@
     "source": "problems/aerial-gondola-suspension-hanger/index.html",
     "problemStatement": "<p>Aerial gondola cabins are suspended from an overhead cable carriage through a structural hanger. The hanger must transfer the weight of the cabin and passengers to the carriage while providing sufficient clearance between the cabin roof, cable, grip mechanism, and carriage hardware. For this reason, the hanger is often shaped or offset rather than being a single straight member.</p><p>The offset is useful for packaging and clearance, but it introduces an important structural tradeoff. A portion of the hanger that lies directly on the load line carries mainly axial tension, while a portion located away from that load line carries the same tensile force through an eccentric path. That eccentricity creates an additional bending moment and can greatly increase the tensile stress at one side of the cross-section.</p><p>For this MEEN 305 analysis, the hanger is idealized as a pin-connected offset member with a uniform square cross-section. The engineering objective is to compare the normal stress in an aligned region with the normal stress in an offset region and determine how strongly the hanger geometry influences the maximum tensile demand.</p>",
     "engineeringGoal": "<p>Determine the largest tensile normal stress in the aligned and offset hanger regions, identify the governing region and mechanical cause, and recommend one geometry change that would reduce the governing stress.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "hanger_W",
@@ -1012,6 +1014,7 @@
     "source": "problems/aircraft-main-landing-gear-buckling-side-stay/index.html",
     "problemStatement": "<p>A commercial-aircraft main landing gear transfers vertical load to the runway through its main strut, while a diagonal side stay provides lateral restraint. Analyze two linked teaching idealizations: a pin-jointed side-stay equilibrium model under parked and lateral ground loading, and an equivalent hollow circular main strut treated as a pinned-pinned Euler column after the side stay is hypothetically removed.</p><p>The published maximum static main-gear ground load per strut and a representative compressed gear length supply context. The equivalent tube dimensions, elastic modulus, effective-length factor, side-stay angle, and lateral load are instructor-assigned teaching values; they are not measured aircraft geometry or certification loads.</p>",
     "engineeringGoal": "<p>Determine the parked and lateral-load member forces, calculate the equivalent column section properties and slenderness, evaluate the Euler critical load and parked-load buckling margin, and explain the side stay's structural role and the limits of this simplified analysis.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "gear_meq_kg",
@@ -1556,6 +1559,7 @@
     "source": "problems/aircraft-wing-engine-combined-bending-torsion/index.html",
     "problemStatement": "<p>A large under-wing turbofan engine applies its weight to the wing through the pylon. For a simplified Strength of Materials analysis, one wing is modeled as a tapered cantilever wing box fixed at the fuselage. The engine/pylon assembly is represented by a concentrated mass at its center of mass, located a spanwise distance <em>L</em><sub>e</sub> from the root and a chordwise eccentricity <em>e</em> from the idealized wing-box shear/reference axis. The same engine weight therefore produces bending and torsion in the inboard wing.</p><p>This problem isolates the static engine-weight contribution. The published GEnx-1B dry mass supplies context for <em>m</em><sub>e</sub>; the wing-box dimensions, engine station, eccentricity, and equivalent wall thickness are instructor-assigned teaching values and are not proprietary or measured aircraft geometry.</p>",
     "engineeringGoal": "<p>Determine the engine weight, internal bending moment and torque, tapered section geometry, hollow-section second moment of area, maximum bending normal stress, and thin-walled closed-section torsional shear stress at the root and at <em>x</em> = <em>L</em><sub>e</sub>/2. Compare the two sections and state a bounded engineering assessment of this engine-weight-only model.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "wing_me_kg",
@@ -2072,6 +2076,7 @@
     "source": "problems/axial-rod-tube-assembly/index.html",
     "problemStatement": "<p>Tie-rod assemblies are widely used in mechanical systems to transfer axial force while controlling the relative position of connected parts. Familiar applications include vehicle steering linkages, machine frames, actuator supports, clamping assemblies, and structural fixtures. The industrial image provides a real example of a tie-rod assembly; the mechanics model used in this problem isolates the axial load-transfer behavior needed for a Solid Mechanics analysis.</p><p>In the assembly considered for analysis, a steel tie rod passes through an aluminum spacer tube. A rigid collar attached to the rod bears against one end of the tube, while the opposite end of the tube bears against a rigid support. When the exposed end of the rod is pulled, the steel rod elongates and the aluminum tube shortens. The final movement of the loaded end therefore depends on the deformation of both members rather than on the elongation of the steel rod alone.</p>",
     "engineeringGoal": "<p>Determine the displacement of the loaded end of the tie rod relative to the fixed supporting structure by accounting for both the elongation of the steel rod and the shortening of the aluminum tube.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "P",
@@ -2610,6 +2615,7 @@
     "source": "problems/baseball-bat-impact-bending/index.html",
     "problemStatement": "<p>When a baseball is struck, the ball exerts a short-duration contact force on the barrel of the bat. This force is transmitted through the bat toward the player's grip. The bat therefore develops internal shear force and bending moment during the contact event.</p><p>To keep the problem within introductory Mechanics of Materials, the transient collision is not derived from ball speed, contact duration, coefficient of restitution, or detailed bat vibration. Instead, the ball-bat interaction is represented by an instructor-specified equivalent transverse force <em>P</em> acting at the ball-contact location. The grip region is idealized as a restrained end.</p>",
     "engineeringGoal": "<p>Determine the bending and transverse shear stresses at the critical handle section of the idealized bat and assess whether the section satisfies the specified factor-of-safety requirement under the assigned equivalent ball-contact load.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "bat_P",
@@ -3069,6 +3075,7 @@
     "source": "problems/basketball-hoop-bolted-connection/index.html",
     "problemStatement": "<p>A design team is reviewing the four bolts that connect a basketball backboard mounting plate to its horizontal support arm. A short-duration dunk load is represented by an equivalent static downward connection shear <strong>V = {{bolt_V}} {{bolt_V_unit}}</strong>. The <strong>{{bolt_n_b}}</strong> identical bolts are assumed to share that direct shear equally, with <strong>{{bolt_n_s}}</strong> shear plane per bolt through the smooth shank. The mounting bolts are idealized as loose, clearance-fit connectors, so the connected brackets bear against the bolt shanks and transfer the assigned transverse load directly to the bolts in shear. Frictional load transfer from bolt clamping or preload is neglected.</p><p>This introductory connector check intentionally excludes eccentric bolt-group moment, bolt tension, bearing failure, tear-out, prying, thread-root reduction, fatigue, and local plate deformation.</p>",
     "engineeringGoal": "<p>Determine the average bolt shear stress, shear-yield factor of safety, minimum nominal bolt diameter, and allowable group load. Decide whether the proposed <strong>{{bolt_d}} {{bolt_d_unit}}</strong> bolts satisfy the required factor of safety <strong>{{bolt_FS_req}}</strong> within the stated direct-shear model.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "bolt_V",
@@ -3545,6 +3552,7 @@
     "source": "problems/basketball-hoop-support-arm-bending/index.html",
     "problemStatement": "<p>Wall-mounted basketball goals use a horizontal structural arm to position the backboard and rim away from the supporting wall. During a forceful dunk, load from the rim passes through the backboard/frame assembly into the horizontal arm and then into the wall-mounted bracket.</p><p>The actual short-duration interaction is not derived from player mass, velocity, impact duration, or rim compliance. Instead, the transferred demand is represented by an instructor-specified equivalent downward design load <em>P</em> at point B. The horizontal arm is modeled as a straight, prismatic cantilever with an equivalent solid rectangular section so its internal shear, bending moment, stress, and end deflection can be evaluated.</p>",
     "engineeringGoal": "<p>Determine whether the idealized support arm satisfies both the required first-yield bending factor of safety and the allowable free-end deflection. If either criterion is not met, determine a practical section-height modification and state a limitation of the model.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "hoop_P",
@@ -4097,6 +4105,7 @@
     "source": "problems/brass-bushing-thermal-contraction/index.html",
     "problemStatement": "<p>A maintenance engineer must install a replacement brass sleeve bushing into an existing steel housing. At room temperature, the bushing outside diameter is intentionally slightly larger than the housing bore, creating an interference fit after assembly. For installation, only the bushing is cooled so thermal contraction temporarily reduces its outside diameter enough to provide a specified diametral clearance; the steel housing remains at room temperature.</p><p>The industry image is representative only. Its product dimensions and material condition are not analytical inputs. The assigned coefficient of thermal expansion is a representative published value for C26000 cartridge brass; the remaining dimensions and initial temperature are instructor-assigned teaching values.</p>",
     "engineeringGoal": "<p>Determine the room-temperature interference, required cooled diameter, necessary temperature change, and final bushing temperature for installation. Interpret the signs and assess the simplified uniform thermal-contraction model without extending the analysis to press-fit contact stresses.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "bushing_Db_mm",
@@ -4525,6 +4534,7 @@
     "source": "problems/burr-king-disc-grinder-shaft/index.html",
     "problemStatement": "<p>Analyze the horizontal disc spindle/shaft using an instructor-assigned local overhung solid-circular cantilever idealization. The actual bearing-supported spindle is not claimed to be a literal bare cantilever.</p><p>Use the assigned power and speed to determine torque, the assigned transverse force and effective overhang to determine bending, and the assigned modulus and deflection criterion to calculate the theoretical minimum diameter.</p>",
     "engineeringGoal": "<p>Determine the stiffness-sized theoretical shaft diameter, calculate bending, torsional, and von Mises stresses at that diameter, evaluate force and overhang sensitivities, and state a limited assessment without claiming an actual Burr King shaft size, safety factor, or certification.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "grinder_shaft_P_hp",
@@ -5059,6 +5069,7 @@
     "source": "problems/cable-machine-pulley-axle-shear/index.html",
     "problemStatement": "<p>A commercial selectorized cable machine redirects two equal cable tensions through an adjustable pulley. Analyze the circular axle that transfers the pulley load into two supporting bracket plates.</p><p>Use stack mass <strong>m<sub>s</sub> = {{pulley_m_s_kg}} {{pulley_m_s_kg_unit}}</strong>, ideal cable ratio <strong>r = {{pulley_r}}</strong>, pulley mass <strong>m<sub>p</sub> = {{pulley_m_p_kg}} {{pulley_m_p_kg_unit}}</strong>, axle diameter <strong>d = {{pulley_d_mm}} {{pulley_d_mm_unit}}</strong>, included cable-force angle <strong>theta = {{pulley_theta_deg}} {{pulley_theta_deg_unit}}</strong>, and accidental dynamic coefficient <strong>k<sub>d</sub> = {{pulley_k_d}}</strong>. Use fixed g = 9.81 m/s<sup>2</sup>.</p>",
     "engineeringGoal": "<p>Determine average axle double-shear stress for pulley dead load, normal full-stack live load, and the simplified accidental/transient case; identify the governing scenario; and state what the average-stress comparison does and does not establish.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "pulley_m_s_kg",
@@ -5544,6 +5555,7 @@
     "source": "problems/cantilevered-operator-seat-bending/index.html",
     "problemStatement": "<p>Industrial machines sometimes use side-mounted operator seats so that the floor area beneath the seat remains clear for access, tooling, material movement, or machine components. The seat is supported from the machine frame by a projecting structural arm, so the weight of the operator acts at a horizontal offset from the machine structure and creates bending in the arm.</p><p>Hollow rectangular tubing is a practical choice for this type of support because it places material away from the neutral axis, providing good bending stiffness and strength without the mass of a solid section. The bending demand increases as the seat is moved farther from the machine frame, while the tube geometry controls how effectively the arm resists that bending.</p><p>For this MEEN 305 analysis, the seat support is treated as a cantilevered beam under a static occupant load. The engineering objective is to determine the bending stress in the hollow tube and identify how the seat offset and cross-sectional geometry influence the structural demand.</p>",
     "engineeringGoal": "<p>Determine the maximum normal bending stress in the hollow rectangular support arm, identify the extreme fibers where the largest tensile and compressive stresses occur, and explain which geometric changes would most effectively reduce the bending demand.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "seat_P",
@@ -6045,6 +6057,7 @@
     "source": "problems/ceiling-mounted-projector-support-axial-loading/index.html",
     "problemStatement": "<p>Ceiling-mounted projectors are commonly suspended below a structural ceiling using a vertical support tube and mounting bracket. Under normal service conditions, the combined projector-and-mount weight is assumed to act through the centroidal axis of the vertical tube, so the tube is modeled as a prismatic hollow circular member in axial tension.</p><p>The 16.3 kg projector mass and extension-column geometry are anchored in published manufacturer documentation. The 1.7 kg accessory allowance, 750 mm length, steel properties, and required factor of safety are instructional assumptions. None are inferred from a photograph, and the model does not identify or certify a photographed installation.</p>",
     "engineeringGoal": "<p>Determine whether the idealized vertical hollow tube satisfies the assigned axial-yield criterion, quantify its axial elongation, and calculate its gross-tube axial capacity. Explicitly distinguish that calculated tube capacity from the allowable capacity of the complete projector mounting assembly.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "projector_m_kg",
@@ -6548,6 +6561,7 @@
     "source": "problems/clevis-pin-tensile-linkage/index.html",
     "problemStatement": "<p>A mechanical design team is reviewing a clevis-and-pin linkage used in an industrial actuator assembly. The linkage transfers a tensile force between two cylindrical rod members through a forked yoke and a transverse pin. This type of connection is common in hydraulic actuators, lifting mechanisms, automated machinery, and mechanical test fixtures.</p><p>Because the connection is part of a load path, the team must verify which components carry axial tension and which connector carries shear. For this introductory Solid Mechanics analysis, the rods are checked using average normal stress, and the pin is checked using average shear stress assuming double shear. More detailed effects such as bearing stress, stress concentration near holes, bending of the pin, contact pressure, fatigue, and manufacturing tolerances are noted as limitations but are not required for the basic calculation.</p>",
     "engineeringGoal": "<p>Determine the average normal stress in each rod and the average shear stress in the pin at A. Use the results to identify which idealized component has the largest average stress demand and make a limited mechanics-based recommendation about what additional information would be needed before accepting the connection for service.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "P",
@@ -7075,6 +7089,7 @@
     "source": "problems/end-milling-combined-bending-torsion/index.html",
     "problemStatement": "<p>A manufacturing engineer is reviewing a light end-milling operation on an Aluminum 6061 workpiece. The rotating end mill experiences a transverse cutting force that bends the exposed tool and a tangential force component that produces torque about the cutter axis. For this Mechanics of Materials assessment, the exposed cutter is modeled as a prismatic solid circular cantilever fixed at the holder face.</p><p>The assigned case uses a {{mill_D_mm}} {{mill_D_mm_unit}} HSS end mill represented for the static strength check by heat-treated M2 high-speed steel with yield strength {{mill_Sy_MPa}} {{mill_Sy_MPa_unit}}. Suraidah et al. (2020) supports the Aluminum 6061 end-milling context, the 10 mm HSS cutter, and measured cutting-force-component context; it does not establish the assigned M2 material condition. The forces are representative light-cutting design loads, the effective overhang is instructor selected, and the required factor of safety is an instructor-specified static requirement.</p>",
     "engineeringGoal": "<p>Determine the maximum bending moment and applied torque, calculate nominal bending and torsional stresses at the critical outer surface, combine them using the von Mises criterion, and assess whether the simplified cutter model meets the required static factor of safety. Then determine the transverse force that would reduce the static factor of safety to the requirement while keeping F<sub>t</sub>/F = 2/3.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "mill_D_mm",
@@ -7536,6 +7551,7 @@
     "source": "problems/flanged-shaft-coupling/index.html",
     "problemStatement": "<p>Flanged shaft couplings are widely used in industrial power-transmission systems to connect rotating equipment such as electric motors, gearboxes, pumps, compressors, mixers, conveyors, and process machinery. The coupling allows torque produced by the driving machine to pass from one shaft to the other while maintaining rotational continuity between the connected machines.</p><p>In a rigid flanged coupling, each shaft is connected to a flange and the two flanges are joined by a circular group of bolts. As torque is transmitted through the connection, the shaft is subjected to torsional shear stress. At the same time, the bolts develop tangential shear forces that collectively provide the resisting moment required to transfer torque from one flange to the other.</p><p>The engineering question is intentionally limited to the mechanics of torque transfer. Students compare the torsional shear stress in the solid shaft with the average direct shear stress in the coupling bolts and use that prescribed comparison to determine a suitable bolt count. Detailed effects such as bolt preload, frictional torque transfer, bearing stress, flange flexibility, fatigue, fit, and coupling standards are outside the base analysis.</p>",
     "engineeringGoal": "<p>Determine the minimum practical bolt-group configuration required to transmit the shaft torque under the prescribed stress-comparison criterion, and explain how shaft size, bolt size, and bolt-circle radius influence the required number of bolts.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "T",
@@ -7979,6 +7995,7 @@
     "source": "problems/formula-sae-suspension-pushrod-buckling/index.html",
     "problemStatement": "<p>A Formula SAE vehicle uses a pushrod-actuated suspension to transfer wheel-side loading to an inboard rocker and spring-damper. The highlighted black diagonal pushrod is analyzed for a published maximum compression load of <strong>P = {{pushrod_P_N}} {{pushrod_P_N_unit}}</strong>.</p><p>Idealize the pushrod as a straight, prismatic hollow circular two-force member with pin-connected ends. Use <strong>D<sub>o</sub> = {{pushrod_Do_mm}} {{pushrod_Do_mm_unit}}</strong>, <strong>t = {{pushrod_t_mm}} {{pushrod_t_mm_unit}}</strong>, <strong>L = {{pushrod_L_mm}} {{pushrod_L_mm_unit}}</strong>, <strong>E = {{pushrod_E_GPa}} {{pushrod_E_GPa_unit}}</strong>, <strong>S<sub>y</sub> = {{pushrod_Sy_MPa}} {{pushrod_Sy_MPa_unit}}</strong>, and <strong>K = {{pushrod_K}}</strong>. Compare nominal yielding and Euler buckling within this simplified model.</p>",
     "engineeringGoal": "<p>Determine the tube section properties, direct compressive stress, yield factor of safety, slenderness ratio, Euler critical load, and buckling factor of safety; identify the smaller nominal margin; and recommend a mechanics-based change while recognizing the model limitations.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "pushrod_P_N",
@@ -8472,6 +8489,7 @@
     "source": "problems/hydraulic-press-punching-shear/index.html",
     "problemStatement": "<p>A manufacturing engineering team is evaluating a hydraulic press fixture used to apply a vertical compressive load through a cylindrical ram onto a flat metal plate. The plate is supported by two fixture blocks with an opening beneath the loaded region. This type of setup appears in pressing operations, material testing, tooling qualification, and shop-floor fixtures where concentrated loads are introduced into relatively thin plates.</p><p>As a junior mechanical or manufacturing engineer, you must identify how the load is transferred from the ram into the supported plate and determine the average stress quantities that are relevant to the simplified Solid Mechanics model. The analysis focuses on two different average-stress mechanisms: bearing stress under the ram and punching shear stress through the plate along sections AC and BD.</p>",
     "engineeringGoal": "<p>Determine the average punching shear stress developed in the plate along sections AC and BD, and determine the average bearing stress on the plate surface under the cylindrical ram. Use these results to identify which simplified stress quantity is larger and state what additional material data would be needed before accepting the fixture for service.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "P",
@@ -8972,6 +8990,7 @@
     "source": "problems/industrial-line-shaft-shear-moment/index.html",
     "problemStatement": "<p>Industrial line shafts and belt-driven shaft systems are used to distribute rotational power from a common drive to multiple machines or auxiliary components. Pulleys mounted along the shaft transfer power through belts, while bearings support and align the rotating shaft. Similar arrangements are found in machine shops, conveyors, packaging systems, process equipment, and older centralized power-transmission systems.</p><p>Although the shaft's main purpose is to transmit torque, the belts also apply transverse forces to the pulleys. These forces are transferred into the shaft and then into the bearings, producing vertical shear force and bending moment along the shaft. The magnitude of the bending depends on both the pulley-force resultants and their locations relative to the bearings. A pulley mounted outside a bearing creates an overhung load, which can significantly increase bending demand in the adjacent shaft region.</p><p>Before selecting a shaft diameter or performing a later bending-stress or fatigue calculation, engineers first determine the bearing reactions and construct the complete shear-force and bending-moment diagrams. These diagrams reveal where the shaft experiences its largest bending moment and therefore identify the shaft station that should be examined first in a subsequent strength analysis. The present problem isolates this transverse-bending behavior; torsional power transmission is part of the industrial context but is not included in the assigned calculations.</p>",
     "engineeringGoal": "<p>Determine the vertical bearing reactions, construct the shear-force and bending-moment diagrams for the shaft, and identify the location and magnitude of the absolute maximum bending moment.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "line_F1",
@@ -9459,6 +9478,7 @@
     "source": "problems/industrial-maintenance-access-beam-combined-stress/index.html",
     "problemStatement": "<p>Industrial plants often contain service pits, sumps, trenches, and changes in floor elevation that technicians must cross during inspection or maintenance. During a shutdown or short-duration service task, a temporary inclined access member may be used to reach equipment on the opposite side without installing a permanent stair or platform. The member must support the technician while transferring the load into the surrounding plant structure.</p><p>Because the access member is inclined while the technician's weight acts vertically, the load is not purely perpendicular to the member. Relative to the member axis, part of the loading acts along the member and part acts transverse to it. The member therefore develops a combination of axial force, transverse shear force, and bending moment. This makes an inclined access member a useful example of how a single external load can create several internal resultants at the same section.</p><p>For this MEEN 305 analysis, the temporary access member is represented by a straight prismatic beam supported at its two ends, with the technician modeled as a concentrated load. The engineering objective is to determine the combined normal and shear stress at a selected point in the member, compare the contributions from axial loading, bending, and transverse shear, and identify which response dominates the local stress state.</p>",
     "engineeringGoal": "<p>Determine the state of stress at the selected point on the access member, identify the relative contributions of axial load, bending, and transverse shear, and recommend one mechanics-based change that would reduce the dominant stress contribution.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "beam_m",
@@ -9985,6 +10005,7 @@
     "source": "problems/industrial-robot-arm-shear-moment/index.html",
     "problemStatement": "<p>Industrial robots lift, position, and manipulate parts during material handling, machine tending, assembly, welding, and other manufacturing operations. When an arm reaches outward while holding a component, the payload, end-effector, and arm self-weight must be transferred through the robot joints and ultimately into the robot body and floor-mounted base.</p><p>For this analysis, the actual articulated robot is replaced by an equivalent horizontal beam carrying a uniform downward load and a concentrated end load. The beam is supported by a pin and an inclined two-force actuator. The actuator is an equivalent mechanics model and is not intended to reproduce the actual actuation architecture of the robot shown in the industry image.</p>",
     "engineeringGoal": "<p>Determine the actuator force and support reactions required for static equilibrium, construct the shear-force and bending-moment diagrams for the equivalent robot arm, and identify the location and magnitude of the absolute maximum bending moment for subsequent strength analysis.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "robot_a",
@@ -10481,6 +10502,7 @@
     "source": "problems/industrial-robot-cable-bending-curvature/index.html",
     "problemStatement": "<p>An industrial robot dress pack guides a flexible robotic cable through a local bend. Model the cable locally as an equivalent circular cable following a circular arc. Use cable diameter <strong>d = {{robot_cable_d_mm}} {{robot_cable_d_mm_unit}}</strong> and specified inner bend radius <strong>R<sub>i</sub> = {{robot_cable_Ri_mm}} {{robot_cable_Ri_mm_unit}}</strong>.</p>",
     "engineeringGoal": "<p>Determine the neutral-axis radius, centerline curvature, and maximum equivalent geometric longitudinal bending strain; then assess the route against the documented minimum inner bend-radius factor without claiming constituent stress or fatigue life.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "robot_cable_d_mm",
@@ -10878,6 +10900,7 @@
     "source": "problems/jib-crane-battery-pack/index.html",
     "problemStatement": "<p>You are a manufacturing engineer responsible for the preliminary design of a compact, wall-mounted swing-jib crane for an automotive assembly line. The crane will lift battery packs from a staging fixture, move them through a restricted workstation, and position them for installation into vehicle frames.</p><p>The crane will operate repeatedly throughout each production shift. During a typical cycle, the battery pack is lifted, translated along the boom, rotated about the wall-mounted support, stopped, positioned, and lowered into the vehicle frame. The crane must therefore provide adequate strength, stiffness, stability, fatigue resistance, positioning accuracy, and operational safety.</p><p>Only a preliminary concept image and variable-based geometry are currently available. The final dimensions, structural materials, connection details, operating speed, allowable deflection, and design load have not yet been fully specified.</p>",
     "engineeringGoal": "<p>Determine whether the proposed swing-jib crane configuration can be developed into a safe and practical system for lifting automotive battery packs.</p><p>Your recommendation should identify a defensible design load, critical dimensions and materials, an appropriate two-dimensional structural model, forces transmitted through major members and connections, governing strength and serviceability criteria, likely controlling failure modes, and whether the concept should be accepted for detailed design, modified, or rejected.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "L",
@@ -11519,6 +11542,7 @@
     "source": "problems/ladder-platform-system/index.html",
     "problemStatement": "<p>You are a product-development engineer working for a manufacturer of commercial access equipment. The company is evaluating an elevated work-platform system used by maintenance personnel, painters, inspectors, and construction workers. The system consists of two aluminum extension ladders supporting a horizontal work platform. A worker stands on the platform while carrying tools, equipment, and construction materials.</p><p>The product must be portable, lightweight, easy to assemble, compatible with common commercial ladders, stable during use, sufficiently strong and stiff, resistant to repeated loading, and economical to manufacture and maintain. The system may be used outdoors and may be exposed to uneven ground, wind, rain, corrosion, accidental impact, repeated assembly, improper installation, worker movement, and eccentric loading.</p><p>Only product photographs and a preliminary concept are initially available. Detailed load ratings, dimensions, material properties, attachment conditions, allowable deflections, and service-life requirements must be established by the design team.</p>",
     "engineeringGoal": "<p>Determine whether the proposed ladder-platform system can be developed into a safe, stable, and commercially practical product for repeated use in building-maintenance operations.</p><p>The assessment must identify governing operating conditions, establish the complete load path, identify strength-, stiffness-, stability-, and fatigue-critical components, determine important material and geometric properties, select numerical acceptance criteria, decide whether hand calculations, SolidWorks, or finite element analysis are appropriate, develop a simplified structural idealization, identify a critical component for detailed analysis, and recommend whether the concept should be accepted for detailed design, modified, or rejected.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "L",
@@ -12095,6 +12119,7 @@
     "source": "problems/lathe-parting-tool-lateral-deflection/index.html",
     "problemStatement": "<p>A lead-angle parting configuration produces a physically based equivalent lateral cutting-force component F_L at the insert. Model the effective unsupported segment of the thin rectangular blade as a weak-axis cantilever; do not model the complete tool as a literal bare cantilever.</p><p>The insert makes a cut wider than the centered blade body. Calculate the nominal one-side clearance, blade deflection, and whether the blade remains clear of the groove wall in this simplified static model.</p>",
     "engineeringGoal": "<p>Compare dynamically calculated lateral tip deflection with available one-side clearance, quantify utilization and margin, evaluate secondary bending stress, determine the clearance-controlled maximum effective overhang, and state appropriate machining-model limitations.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "parting_D_mm",
@@ -12532,6 +12557,7 @@
     "machiningDataSource": "Ojal, N., Copenhaver, R., Cherukuri, H. P., Schmitz, T. L., Devlugt, K. T., and Jaycox, A. W. (2022). A Realistic Full-Scale 3D Modeling of Turning Using Coupled Smoothed Particle Hydrodynamics and Finite Element Method for Predicting Cutting Forces. Journal of Manufacturing and Materials Processing, 6(2), 33. https://doi.org/10.3390/jmmp6020033",
     "problemStatement": "<p>A machinist is performing an external turning operation on an Al 6061 cylindrical workpiece. The machining condition uses radial depth of cut <strong>a<sub>p</sub> = {{lathe_a_p_mm}} {{lathe_a_p_mm_unit}}</strong> and feed <strong>f = {{lathe_f_mm_rev}} {{lathe_f_mm_rev_unit}}</strong>. The measured passive/radial cutting-force component is <strong>F<sub>p</sub> = {{lathe_F_p_N}} {{lathe_F_p_N_unit}}</strong>.</p><p>The exposed square steel tool-holder shank is idealized as a prismatic cantilever fixed at the tool post. The radial force acts transversely at the cutting edge and deflects it away from the workpiece, reducing the achieved radial depth of cut and producing an oversized finished diameter. Only elastic radial bending of the idealized holder is included.</p>",
     "engineeringGoal": "<p>Determine whether elastic radial deflection of the tool holder is small enough to maintain the assigned <strong>{{lathe_D_target_mm}} ± {{lathe_tolerance_mm}} mm</strong> finished-diameter requirement, and determine the maximum allowable effective tool overhang for this serviceability limit.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "lathe_D0_mm",
@@ -13053,6 +13079,7 @@
     "source": "problems/motor-driven-shaft-torsion/index.html",
     "problemStatement": "<p>Industrial facilities commonly use electric motors and belt-drive systems to transmit mechanical power to rotating equipment such as conveyors, pumps, fans, mixers, and production machinery. In a typical installation, the motor rotates a steel drive shaft carrying a pulley. The pulley transfers power through one or more belts to the driven machine. Bearings support the rotating shaft and maintain alignment while allowing the shaft to rotate freely.</p><p>The shaft is a critical load-carrying component because all mechanical power delivered from the motor to the pulley must pass through it as torque. For a given transmitted power, the required torque depends on rotational speed: lower-speed drives must transmit more torque than higher-speed drives carrying the same power. The shaft diameter therefore has a direct influence on the torsional shear stress and on whether the drive can safely transmit the required power.</p><p>In industrial design, shafts are commonly selected from available standard stock sizes rather than manufactured to an arbitrary theoretical diameter. The engineering task is therefore to determine the minimum diameter required by the allowable torsional shear stress and then select and verify an appropriate standard shaft size.</p><p>The base MEEN 305 analysis isolates steady torsion in the solid circular shaft. Belt-induced bending, stress concentrations, startup and shock torque, and fatigue are intentionally excluded so that power, speed, torque, torsional shear stress, and shaft diameter remain the primary mechanics objective.</p>",
     "engineeringGoal": "<p>Determine the minimum safe diameter of the solid steel drive shaft for the specified motor power and operating speed, select the next appropriate standard shaft size, and verify that the selected shaft does not exceed the specified allowable torsional shear stress.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "P",
@@ -13542,6 +13569,7 @@
     "source": "problems/motorcycle-chain-drive-rear-axle-bending/Khaosaming, Honda VTR250 2009 Sprocket.JPG, Wikimedia Commons, CC BY-SA 3.0",
     "problemStatement": "<p>A motorcycle roller chain transfers power from the gearbox/front sprocket to the rear sprocket and wheel. During steady driving, the chain has a higher tight-side tension and a lower slack-side tension. Their difference produces the specified rear-sprocket torque, while their sum produces the transverse load used in the equivalent rear-axle model.</p><p>The real wheel, sprocket carrier, bearings, axle, and swingarm are reduced to a planar teaching model. The rear axle is represented as a simply supported solid circular beam of diameter <strong>d = {{chain_d_mm}} {{chain_d_mm_unit}}</strong> over span <strong>L = {{chain_L_mm}} {{chain_L_mm_unit}}</strong>. The sprocket-load plane is <strong>a = {{chain_a_mm}} {{chain_a_mm_unit}}</strong> from support A. The equivalent axle is assigned normalized AISI 4140 steel with <strong>S<sub>y</sub> = {{chain_S_y_MPa}} {{chain_S_y_MPa_unit}}</strong>, a published representative yield strength for that material condition. This is an instructor-assigned material model, not a claim about the actual axle material of the motorcycle shown. All assigned values are representative teaching/design inputs and are not specifications of the photographed motorcycle.</p>",
     "engineeringGoal": "<p>Determine the chain-induced transverse load, support reactions, and maximum rear-axle bending moment; evaluate the baseline section against the required first-yield factor of safety; and determine the minimum equivalent axle diameter permitted by the assigned strength criterion.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "chain_T_Nm",
@@ -14031,6 +14059,7 @@
     "source": "problems/mountain-bike-suspension-pin/index.html",
     "problemStatement": "<p>A mountain-bike or lightweight e-bike product team is reviewing the rear suspension linkage that supports rider load through a seat support member and shock absorber linkage. During riding, a vertical load from the rider is transmitted through the saddle into a curved support member, then into frame-mounted pins and the shock/link assembly.</p><p>As a junior mechanical engineer, you must simplify the real suspension assembly into a mechanics model and determine whether the pins at B and C have adequate resistance against shear failure under the specified design load. The analysis is limited to static equilibrium and average double-shear stress in the pins. Detailed dynamic loading, fatigue, bearing pressure, bushing wear, and frame deformation are outside the base problem.</p>",
     "engineeringGoal": "<p>Determine the forces transmitted through the suspension linkage and evaluate the factor of safety of pins B and C against shear failure. Identify the governing pin and make a limited mechanics-based recommendation for the specified static load case.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "P",
@@ -14625,6 +14654,7 @@
     "source": "problems/multi-gear-drive-shaft/index.html",
     "problemStatement": "<p>Multi-gear shafts are used in industrial gearboxes and transmission systems to distribute rotational power between different stages of machinery. Typical applications include speed reducers, conveyor drives, rolling and processing equipment, mixers, machine tools, and other systems in which several gears are mounted along a common shaft. A gear may receive torque from another shaft or deliver torque to a downstream stage, so the torque carried by the common shaft can change as the load path passes from one gear location to the next.</p><p>Because the applied torques can act in different directions and at different positions, the internal torque is not necessarily uniform along the shaft. Even when the shaft diameter is constant, some portions of the shaft may therefore experience much higher torsional shear stress than others. Identifying the governing shaft region requires a segment-by-segment torque analysis rather than assuming that the entire shaft carries one torque value.</p><p>The engineering team is also considering whether an existing solid shaft can be replaced by a hollow shaft having the same outer diameter. A hollow shaft can reduce material usage, rotating mass, and rotational inertia while retaining substantial torsional capacity because material near the shaft center contributes relatively little to the polar moment of inertia.</p>",
     "engineeringGoal": "<p>Determine how torque is distributed along the multi-gear shaft, identify the shaft region with the largest torsional demand, evaluate the corresponding shear stress in the existing solid shaft, and select the minimum whole-millimeter wall thickness for a hollow replacement shaft with the same outer diameter that satisfies the allowable shear-stress criterion.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "gear_T_B",
@@ -15193,6 +15223,7 @@
     "source": "problems/piston-ring-elastic-closure-contact-pressure/index.html",
     "problemStatement": "<p>An engineering team is reviewing a representative single-piece cast-iron compression piston ring for an automotive internal-combustion engine. The ring is manufactured with a free end gap <em>m</em>. During installation it is compressed into a nominally circular cylinder bore, reducing the gap to <em>s</em> and producing outward contact with the cylinder wall.</p><p>For this simplified MEEN 305 model, the tangential closing force <em>F</em><sub>t</sub> is a specified piston-ring parameter. Use it to determine the mean/equivalent cylinder-wall pressure; do not derive it from <em>m</em> − <em>s</em> with a straight-beam equation. The context photograph is representative and is not claimed to show the assigned numerical ring.</p>",
     "engineeringGoal": "<p>Determine the free-to-installed gap closure, rectangular-section properties, mean/equivalent cylinder-wall pressure, and equivalent total normal contact force, then explain how the simplified result relates to sealing and why it does not describe the complete local contact-pressure distribution.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "piston_d_mm",
@@ -15645,6 +15676,7 @@
     "source": "problems/precast-concrete-column-transport/index.html",
     "problemStatement": "<p>A precast-concrete manufacturer must transport a long, uniform column from the casting yard to a construction site. Two timber or elastomeric support blocks carry the member on a flatbed trailer. The column self-weight acts continuously over its length, and poor support placement can create excessive transport-induced bending.</p><p>Model the column as a prismatic beam of total length <em>L</em> under uniform load <em>w</em>, with two simple supports placed at equal offsets <em>a</em> from the ends.</p>",
     "engineeringGoal": "<p>Determine the equal support offset that minimizes the absolute maximum bending moment, construct the corresponding shear-force and bending-moment diagrams, and identify the governing positive and negative moment locations.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "column_L",
@@ -16136,6 +16168,7 @@
     "source": "problems/pump-drive-shaft-torsion/index.html",
     "problemStatement": "<p>An electric motor drives a centrifugal pump through aligned shafts connected by a shaft coupling. During steady operation, the motor supplies <strong>P = {{pump_P_kW}} {{pump_P_kW_unit}}</strong> at <strong>n = {{pump_n_rpm}} {{pump_n_rpm_unit}}</strong>. The coupling transfers the resulting torque from the solid circular motor shaft to the pump shaft without slip.</p><p>The motor-side critical section has diameter <strong>d = {{pump_d_mm}} {{pump_d_mm_unit}}</strong>. Evaluate it using a torsion-only model with allowable shear stress <strong>&tau;<sub>allow</sub> = {{pump_tau_allow_MPa}} {{pump_tau_allow_MPa_unit}}</strong>. Do not include bending, axial load, fatigue, startup transients, stress concentrations, or coupling-internal stresses.</p>",
     "engineeringGoal": "<p>Determine angular velocity and transmitted torque, calculate the polar moment and maximum torsional shear stress at the motor-side critical section, assess the specified diameter against the allowable stress, and determine the minimum acceptable solid-shaft diameter.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "pump_P_kW",
@@ -16579,6 +16612,7 @@
     "source": "problems/robotic-arm-link-combined-bending-torsion/index.html",
     "problemStatement": "<p>Model the selected robot-arm link as a uniform hollow circular cantilever. Use payload mass <strong>m<sub>p</sub> = {{robot_link_mp_kg}} {{robot_link_mp_kg_unit}}</strong>, length <strong>L = {{robot_link_L_mm}} {{robot_link_L_mm_unit}}</strong>, link mass <strong>m<sub>L</sub> = {{robot_link_mL_kg}} {{robot_link_mL_kg_unit}}</strong>, wall thickness <strong>t = {{robot_link_t_mm}} {{robot_link_t_mm_unit}}</strong>, equivalent outer diameter <strong>D<sub>o</sub> = {{robot_link_Do_mm}} {{robot_link_Do_mm_unit}}</strong>, torque <strong>T = {{robot_link_T_Nm}} {{robot_link_T_Nm_unit}}</strong>, and yield strength <strong>S<sub>y</sub> = {{robot_link_Sy_MPa}} {{robot_link_Sy_MPa_unit}}</strong>. Use fixed g = 9.81 m/s<sup>2</sup>.</p>",
     "engineeringGoal": "<p>Determine the fixed-root bending and torsional stresses, von Mises equivalent stress, and static-yield factor of safety; identify the dominant contribution and make a bounded mechanics-based recommendation.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "robot_link_mp_kg",
@@ -17028,6 +17062,7 @@
     "source": "problems/shop-crane-pin-connection-shear-bearing/index.html",
     "problemStatement": "<p>Analyze only the large upper boom-to-mast pivot pin, where the adjustable boom rotates relative to the mast assembly. Do not analyze the smaller lower hydraulic-ram pin or another fastener.</p><p>Replace the selected connection with an instructor-assigned symmetric double-shear clevis: one central boom lug carries the full equivalent transverse force F, two outer mast-clevis plates carry F/2 each, and the pin has two shear planes. The force, geometry, and allowables are teaching inputs, not measurements or manufacturer data.</p>",
     "engineeringGoal": "<p>Calculate average pin double-shear stress and central/outer plate bearing stresses, compare each with its assigned allowable, identify the dynamically governing included mode, evaluate load, diameter, and thickness sensitivities, and state a limited connection assessment without claiming crane certification.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "crane_pin_F_kN",
@@ -17564,6 +17599,7 @@
     "source": "problems/shop-crane-vertical-mast-buckling/index.html",
     "problemStatement": "<p>A portable shop crane transfers lifting demand through its boom, hydraulic system, vertical mast, diagonal braces, connections, base, and floor. The real mast is part of a braced frame and is not literally an isolated pinned-pinned column.</p><p>For this teaching problem, isolate the vertical mast and replace its interaction with the real frame by an equivalent straight prismatic column carrying an instructor-defined axial compressive load. The assigned length and rectangular hollow-section dimensions are teaching-model values, not measurements from the photograph.</p>",
     "engineeringGoal": "<p>Calculate section properties about both centroidal axes, identify the weak axis, determine radius of gyration and slenderness, calculate the Euler critical load and idealized Euler load ratio, evaluate load, length, restraint, and section sensitivities, and explain why this equivalent model is not a prediction or certification of the real crane.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "crane_mast_P_kN",
@@ -18106,6 +18142,7 @@
     "source": "problems/spoked-wheel-load-sharing/index.html",
     "problemStatement": "<p>A product engineering team is evaluating a lightweight three-spoke wheel used in a mobility device, small robotic platform, or compact ground-support vehicle. A vertical axle load is transferred from the hub into the spoke network and then into the rigid outer rim and ground contact region.</p><p>Because the rim is much stiffer than the spokes, the first-order mechanics model treats the rim as rigid. The spokes are modeled as axial members made from the same material and having the same cross-sectional area. The engineering task is to determine how the axle load is shared among the three spokes and to identify which spoke force has the largest magnitude before a later stress or safety-factor check is performed.</p>",
     "engineeringGoal": "<p>Determine the axial force in each of the three spokes under the applied axle load. Use the result to identify which spoke is in tension, which spokes are in compression, and what additional information would be required to perform a complete stress or factor-of-safety check.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "P",
@@ -18580,6 +18617,7 @@
     "source": "problems/spring-loaded-coupling-rod/index.html",
     "problemStatement": "<p>Automotive suspension systems support the vehicle body while allowing controlled relative motion between the wheel-side suspension and the chassis as the vehicle travels over road irregularities. The coil spring provides elastic support and compliance, while the shock absorber or damper controls oscillatory motion. Suspension links and mounting structures transfer the resulting forces between the wheel assembly and the vehicle body.</p><p>For this MEEN 305 problem, the complete suspension geometry is not analyzed directly. Instead, the real suspension is used to motivate a simplified equivalent axial model that isolates spring compression and elastic deformation of load-carrying members. This allows the deformation compatibility of a compliant mechanical assembly to be studied using standard Mechanics of Materials concepts.</p>",
     "engineeringGoal": "<p>Use a simplified equivalent mechanics model to determine how an applied load changes the separation between two reference locations, identify the dominant deformation contribution, and interpret what the result means for the compliance of the modeled suspension system.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "P",
@@ -19231,6 +19269,7 @@
     "source": "problems/steam-pipe-thermal-expansion/index.html",
     "problemStatement": "<p>High-temperature steam piping is commonly connected to turbines, compressors, pumps, and other process equipment in power-generation and industrial facilities. During startup, the pipe temperature can rise substantially above the installation temperature, causing the pipe to expand.</p><p>If the connected equipment and its supports were perfectly rigid, this thermal expansion would be strongly restrained and could generate large axial forces. In practice, the connected machinery and its mounting system have some flexibility, so part of the thermal expansion can be accommodated by movement of the equipment attachment locations.</p><p>Engineers must estimate the resulting thermal force because excessive piping loads can increase pipe stress and transmit large loads into equipment connections. The present analysis focuses on one-dimensional thermal expansion and axial restraint rather than a complete piping-code or flange-design assessment.</p>",
     "engineeringGoal": "<p>Determine the axial force developed in the heated pipe due to restrained thermal expansion, determine the resulting pipe stress, and evaluate how flexibility of the connected equipment affects the thermal load.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "L",
@@ -19843,6 +19882,22 @@
     "image": "problems/steel-frame-chair-accidental-fall-loading/assets/steel-frame-chair-industry-image-placeholder.svg",
     "imageAlt": "Placeholder marking where a redistributable steel-frame chair industry photograph will be added.",
     "imagePublicationStatus": "TODO: VERIFY OR REPLACE INDUSTRY IMAGE. The supplied photograph is not committed because its creator, source, redistribution license, and attribution could not be verified.",
+    "supplementaryImages": [
+      {
+        "path": "problems/steel-frame-chair-accidental-fall-loading/assets/steel-frame-chair-seat-support-cad.png",
+        "caption": "CAD view of the chair with the seat-support panel above the highlighted rails.",
+        "alt": "CAD visualization of a steel chair with a seat-support panel above two highlighted transverse rails.",
+        "order": 1,
+        "widthPercent": 46
+      },
+      {
+        "path": "problems/steel-frame-chair-accidental-fall-loading/assets/steel-frame-chair-exposed-frame-cad.png",
+        "caption": "Exposed-frame CAD view highlighting the two seat-support rails and the assumed downward loading.",
+        "alt": "Exposed steel chair frame with two orange transverse seat-support rails and downward red load arrows.",
+        "order": 2,
+        "widthPercent": 58
+      }
+    ],
     "idealizedImage": "problems/steel-frame-chair-accidental-fall-loading/assets/steel-frame-chair-instructor-reference.png",
     "idealizedImageAlt": "Instructor-only mechanics visualization of a 500 mm fixed-fixed hollow square seat-support rail with a centered 3.0 kN load.",
     "source": "problems/steel-frame-chair-accidental-fall-loading/index.html",
@@ -20366,6 +20421,7 @@
     "source": "problems/suspended-equipment-cable-system/index.html",
     "problemStatement": "<p>An industrial facility is installing a compact sensor or inspection equipment pod in a maintenance bay. The pod is suspended above the floor using two steel wire cables connected to wall-mounted brackets on opposite structural columns. The cable angles are not symmetric, so the load is not shared equally between the two cables.</p><p>As a junior facilities or mechanical engineer, evaluate whether the cable support arrangement can safely carry the equipment weight. The goal is not to redesign the full support structure, but to use Mechanics of Materials tools to determine cable tensions, cable tensile stresses, and the required cable diameters or factors of safety.</p>",
     "engineeringGoal": "<p>Determine whether the two inclined steel cables can safely support the suspended equipment pod under the specified static loading. Identify the cable with the larger tensile demand and determine either the minimum required cable diameter for a specified factor of safety or the actual factor of safety for selected cable diameters.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "m",
@@ -20891,6 +20947,7 @@
     "source": "problems/suspended-equipment-platform/index.html",
     "problemStatement": "<p>Suspended work platforms are used in construction and maintenance operations to provide temporary elevated access or to position workers, tools, and equipment. During lifting or suspension, the platform load is transferred through cables, slings, or similar tensile members to an overhead lifting or supporting system.</p><p>If the supported load is not centered, the suspension members may carry different tensile forces. Because these members deform elastically, unequal elongation can cause the platform to move vertically and tilt. Engineers therefore need to estimate how load position and suspension-member stiffness affect the position and orientation of the suspended platform.</p>",
     "engineeringGoal": "<p>Determine how elastic elongation of the suspension members affects the vertical displacement and tilt of the suspended platform under an eccentric load, and identify which suspension member has the greatest influence on the motion.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "P",
@@ -21525,6 +21582,7 @@
     "source": "problems/trailer-hitch-ball-mount-combined-loading/index.html",
     "problemStatement": "<p>A towing-systems engineering team is evaluating the ball mount that transfers trailer loads through the hitch ball into a vehicle receiver. Represent the real curved or forged mount by the supplied straight inclined-member load-path idealization. At hitch-ball point A, a horizontal towing/braking force <strong>P = {{hitch_P_kN}} {{hitch_P_kN_unit}}</strong> acts to the left and a vertical tongue load <strong>W = {{hitch_W_kN}} {{hitch_W_kN_unit}}</strong> acts downward. Point A is horizontally offset by <strong>L = {{hitch_L_mm}} {{hitch_L_mm_unit}}</strong> and vertically offset by <strong>h = {{hitch_h_mm}} {{hitch_h_mm_unit}}</strong> from receiver-side critical section C.</p><p>For this instructional model, C is an equivalent solid circular section of diameter <strong>d = {{hitch_d_mm}} {{hitch_d_mm_unit}}</strong>, oriented normal to the horizontal receiver axis. Thus P is the section's normal-force resultant and W is its transverse-shear resultant, while both loads contribute to bending moment. The analysis is a simplified equivalent-section first-yield check, not a trailer-hitch certification.</p>",
     "engineeringGoal": "<p>Determine the support actions and internal resultants at C, calculate the governing combined axial-plus-bending normal stress, and compare its factor of safety with <strong>n<sub>req</sub> = {{hitch_n_req}}</strong>. If the assigned section is inadequate, determine the minimum equivalent diameter and make a recommendation bounded by the model assumptions.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "hitch_P_kN",
@@ -21997,6 +22055,7 @@
     "source": "problems/turbine-shaft-distributed-torque/index.html",
     "problemStatement": "<p>Multi-stage steam turbines and gas turbines convert fluid energy into rotating shaft power through several rows of blades mounted along a common rotor. Fluid forces on successive turbine stages transfer torque through the blade roots and rotor disks into the central shaft and ultimately to connected drivetrain equipment such as a generator.</p><p>For this assessment, the detailed blade-by-blade loading is replaced by an equivalent distributed torque intensity acting over the active turbine-stage region. The intensity varies linearly from zero at the restrained section to its maximum value at the end of the loaded region, producing a nonuniform internal-torque field.</p>",
     "engineeringGoal": "<p>Determine the torsional reaction required to balance the distributed turbine-stage loading, construct the internal torque distribution, calculate the maximum torsional shear stress and relative angle of twist, identify the governing shaft section, and explain which geometric or material changes would most effectively reduce the torsional response.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "turbine_d",
@@ -22525,6 +22584,7 @@
     "source": "problems/v-belt-tension-factory-ventilation-blower-drive/index.html",
     "problemStatement": "<p>A factory ventilation system uses an electric motor to drive a centrifugal blower through a V-belt and pulley arrangement. The belt carries unequal tensile forces on its tight and slack sides so that their difference produces the torque required at the motor pulley.</p><p>All numerical operating conditions, dimensions, equivalent belt area, and allowable stress are instructor-assigned representative teaching values and are not specifications extracted from the photograph.</p>",
     "engineeringGoal": "<p>Determine the tight-side and slack-side V-belt tensions required to transmit the specified motor power. Then, as an instructor-defined Solid Mechanics extension, model the belt as an equivalent tensile member and compare its tight-side average normal stress with the assigned allowable stress.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "v_belt_P_kW",
@@ -23045,6 +23105,7 @@
     "source": "problems/variable-radius-tapered-shaft/index.html",
     "problemStatement": "<p>Variable-section shafts are used in machine tools and industrial rotating equipment because different regions serve bearings, pulleys, couplings, or tooling interfaces while other regions can be smaller to reduce material and rotating mass.</p><p>The detailed industrial spindle is simplified as a smooth variable-radius shaft. Its radius is <em>r</em>(<em>x</em>) = {{taper_r_A_m}}[1 + 0.8(<em>x</em>/<em>L</em>)<sup>3/2</sup> + 0.4(<em>x</em>/<em>L</em>)<sup>5/2</sup>] m. The shaft transmits a constant internal torque, but its local torsional rigidity varies strongly with radius.</p>",
     "engineeringGoal": "<p>Determine the angular rotation of the torque-input end relative to the restrained machine interface, identify the region that contributes most strongly to torsional compliance, evaluate the maximum torsional shear stress, and determine whether the shaft satisfies the specified 1.0&deg; rotational serviceability limit.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "taper_T",
@@ -23552,6 +23613,7 @@
     "source": "problems/weight-stack-selector-pin-double-shear/index.html",
     "problemStatement": "<p>A fitness-equipment engineering team is checking the horizontal selector pin that connects a cable-driven selector stem to a selected portion of a lat-pulldown weight stack. The selected stack setting is <strong>W<sub>s</sub> = {{selector_W_lb}} {{selector_W_lb_unit}}</strong>. During controlled constant-speed lifting, the pin is idealized as a circular connector in symmetric double shear, with the central selector stem loading the pin and the selected plate supporting it on two sides. The removable selector pin is assumed to have a loose clearance fit in the selector-stem and plate holes, so the load transfers to the pin through bearing contact and the two supporting sides produce the idealized double-shear condition.</p><p>This introductory check assumes two equally loaded shear planes through the smooth pin shank. It neglects pin bending, bearing failure and tear-out, fatigue, wear, clearance-induced impact, friction, cable/pulley losses, and local stress concentrations.</p>",
     "engineeringGoal": "<p>Determine the average double-shear stress and factor of safety against shear yielding for the <strong>{{selector_d_mm}} {{selector_d_mm_unit}}</strong> pin, then determine the minimum diameter required to satisfy <strong>FS<sub>req</sub> = {{selector_FS_req}}</strong> and make a bounded engineering recommendation.</p>",
+    "supplementaryImages": [],
     "variables": [
       {
         "key": "selector_W_lb",

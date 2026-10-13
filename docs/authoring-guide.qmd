@@ -102,6 +102,22 @@ Replace both with the supplied problem images, give the files clear stable names
 
 The context image appears in the library card, builder preview, student document, instructor document, and exported DOC/PDF.
 
+Use `supplementaryImages` for ordered student-facing educational figures that should also appear in catalog-driven previews and exports:
+
+```json
+"supplementaryImages": [
+  {
+    "path": "assets/system-overview.png",
+    "caption": "Overview of the components used in the teaching model.",
+    "alt": "Annotated overview of the modeled components.",
+    "order": 1,
+    "widthPercent": 65
+  }
+]
+```
+
+`path` must be a relative path to a file inside the problem package, and `order` must be a unique integer within the list. `caption`, `alt`, and `widthPercent` are optional; `widthPercent` must be greater than 0 and at most 100. Supplementary images are student-visible and appear in both student and instructor Builder previews and generated exports. Problems without this field render as before. If a direct Quarto page already contains the same image, the browser packet renderer suppresses the duplicate.
+
 If the problem has an instructor/reference idealized diagram with dimensions, labels, geometry, or the model students need for numerical analysis, store it as a problem-level image:
 
 ```json

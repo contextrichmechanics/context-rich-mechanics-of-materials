@@ -135,6 +135,41 @@ const catalog = problemPackages().flatMap((slug) => {
       throw new Error(`${path.relative(root, problemPath)} references missing idealized image: ${problem.idealizedImage}`);
     }
   }
+  const supplementaryImages = problem.supplementaryImages || [];
+  if (!Array.isArray(supplementaryImages)) {
+    throw new Error(`${path.relative(root, problemPath)} supplementaryImages must be an array`);
+  }
+  const supplementaryImageOrders = new Set();
+  supplementaryImages.forEach((image, index) => {
+    const field = `supplementaryImages[${index}]`;
+    if (!image || typeof image !== "object" || Array.isArray(image)) {
+      throw new Error(`${path.relative(root, problemPath)} ${field} must be an object`);
+    }
+    requireFields(image, ["path", "order"], `${problemPath}#${field}`);
+    if (typeof image.path !== "string" || /^(?:[a-z]+:|\/|\\)/i.test(image.path) || image.path.split(/[\\/]+/).includes("..")) {
+      throw new Error(`${path.relative(root, problemPath)} ${field}.path must be a relative in-package asset path`);
+    }
+    if (!Number.isInteger(image.order)) {
+      throw new Error(`${path.relative(root, problemPath)} ${field}.order must be an integer`);
+    }
+    if (supplementaryImageOrders.has(image.order)) {
+      throw new Error(`${path.relative(root, problemPath)} has duplicate supplementary image order: ${image.order}`);
+    }
+    supplementaryImageOrders.add(image.order);
+    if (image.caption !== undefined && typeof image.caption !== "string") {
+      throw new Error(`${path.relative(root, problemPath)} ${field}.caption must be a string`);
+    }
+    if (image.alt !== undefined && typeof image.alt !== "string") {
+      throw new Error(`${path.relative(root, problemPath)} ${field}.alt must be a string`);
+    }
+    if (image.widthPercent !== undefined && (!Number.isFinite(image.widthPercent) || image.widthPercent <= 0 || image.widthPercent > 100)) {
+      throw new Error(`${path.relative(root, problemPath)} ${field}.widthPercent must be greater than 0 and at most 100`);
+    }
+    const supplementaryImagePath = path.join(packageDir, image.path);
+    if (!existsSync(supplementaryImagePath)) {
+      throw new Error(`${path.relative(root, problemPath)} references missing supplementary image: ${image.path}`);
+    }
+  });
 
   ["index.qmd", "student-packet.qmd", "instructor-guide.qmd"].forEach((fileName) => {
     const filePath = path.join(packageDir, fileName);
@@ -185,6 +220,12 @@ const catalog = problemPackages().flatMap((slug) => {
     idealizedImage: problem.idealizedImage
       ? normalizeSitePath("problems", slug, problem.idealizedImage)
       : "",
+    supplementaryImages: supplementaryImages
+      .map((image) => ({
+        ...image,
+        path: normalizeSitePath("problems", slug, image.path)
+      }))
+      .sort((a, b) => a.order - b.order),
     source: normalizeSitePath("problems", slug, problem.source || "index.html"),
     variables,
     questions,

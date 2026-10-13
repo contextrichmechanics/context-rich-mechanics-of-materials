@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2985"
+      "source_location": "L3018"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3068"
+      "source_location": "L3102"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -112,6 +112,18 @@
       "source_location": "L118"
     },
     {
+      "id": "scripts_render_assignment_orderedsupplementaryimages",
+      "label": "orderedSupplementaryImages()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "render-assignment.mjs",
+      "file_type": "code",
+      "norm_label": "orderedsupplementaryimages()",
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2985"
+    },
+    {
       "id": "scripts_render_assignment_problemimagemarkdown",
       "label": "problemImageMarkdown()",
       "_callable": true,
@@ -133,7 +145,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3084"
+      "source_location": "L3118"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -169,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3034"
+      "source_location": "L3067"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -193,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3009"
+      "source_location": "L3042"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -205,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3002"
+      "source_location": "L3035"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -241,7 +253,31 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3015"
+      "source_location": "L3048"
+    },
+    {
+      "id": "scripts_render_assignment_rendersupplementaryimageshtml",
+      "label": "renderSupplementaryImagesHtml()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "render-assignment.mjs",
+      "file_type": "code",
+      "norm_label": "rendersupplementaryimageshtml()",
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2991"
+    },
+    {
+      "id": "scripts_render_assignment_rendersupplementaryimagesmarkdown",
+      "label": "renderSupplementaryImagesMarkdown()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "render-assignment.mjs",
+      "file_type": "code",
+      "norm_label": "rendersupplementaryimagesmarkdown()",
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L3004"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -433,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2951"
+      "source_location": "L2976"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -445,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2944"
+      "source_location": "L2969"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -457,7 +493,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2978"
+      "source_location": "L3003"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -469,7 +505,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2935"
+      "source_location": "L2960"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -481,7 +517,19 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2957"
+      "source_location": "L2982"
+    },
+    {
+      "id": "scripts_packet_renderer_rendersupplementaryimages",
+      "label": "renderSupplementaryImages()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "packet-renderer.js",
+      "file_type": "code",
+      "norm_label": "rendersupplementaryimages()",
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L2913"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -493,7 +541,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2913"
+      "source_location": "L2938"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -731,7 +779,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3186"
+      "source_location": "L3223"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -753,7 +801,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3173"
+      "source_location": "L3210"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -764,7 +812,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3197"
+      "source_location": "L3234"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -775,7 +823,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3187"
+      "source_location": "L3224"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -786,7 +834,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3167"
+      "source_location": "L3204"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -819,7 +867,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3172"
+      "source_location": "L3209"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -830,7 +878,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3174"
+      "source_location": "L3211"
     },
     {
       "id": "instructor_builder",
@@ -914,7 +962,7 @@
       "node_kind": "heading",
       "norm_label": "export assignments from the command line",
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L304"
+      "source_location": "L320"
     },
     {
       "id": "docs_authoring_guide_images",
@@ -950,7 +998,7 @@
       "node_kind": "heading",
       "norm_label": "problem health",
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L254"
+      "source_location": "L270"
     },
     {
       "id": "docs_authoring_guide_purpose",
@@ -974,7 +1022,7 @@
       "node_kind": "heading",
       "norm_label": "question design",
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L208"
+      "source_location": "L224"
     },
     {
       "id": "docs_authoring_guide_questions",
@@ -986,7 +1034,7 @@
       "node_kind": "heading",
       "norm_label": "questions",
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L168"
+      "source_location": "L184"
     },
     {
       "id": "docs_authoring_guide_rebuild_the_catalog",
@@ -998,7 +1046,7 @@
       "node_kind": "heading",
       "norm_label": "rebuild the catalog",
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L265"
+      "source_location": "L281"
     },
     {
       "id": "docs_authoring_guide_recommended_writing_pattern",
@@ -1010,7 +1058,7 @@
       "node_kind": "heading",
       "norm_label": "recommended writing pattern",
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L337"
+      "source_location": "L353"
     },
     {
       "id": "docs_authoring_guide_starting_a_new_problem",
@@ -1034,7 +1082,7 @@
       "node_kind": "heading",
       "norm_label": "validation",
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L289"
+      "source_location": "L305"
     },
     {
       "id": "docs_authoring_guide_variables",
@@ -1046,7 +1094,7 @@
       "node_kind": "heading",
       "norm_label": "variables",
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L130"
+      "source_location": "L146"
     },
     {
       "id": "docs_authoring_guide_variants",
@@ -1058,7 +1106,7 @@
       "node_kind": "heading",
       "norm_label": "variants",
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L230"
+      "source_location": "L246"
     },
     {
       "id": "readme",
@@ -5543,582 +5591,6 @@
       "norm_label": "supplemental assessment structure",
       "source_file": "problems/industrial-robot-arm-shear-moment/instructor-guide.qmd",
       "source_location": "L34"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "label": "MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1.md",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_10_faculty_authoring_guidance",
-      "label": "10. Faculty Authoring Guidance",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "10. faculty authoring guidance",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L126"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_11_prompt_format_for_automated_problem_generation",
-      "label": "11. Prompt Format for Automated Problem Generation",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "11. prompt format for automated problem generation",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L137"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_1_problem_identification_and_instructor_setup",
-      "label": "1. Problem Identification and Instructor Setup",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. problem identification and instructor setup",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_2_system_components",
-      "label": "2. System Components",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. system components",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L17"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_3_engineering_context_and_main_goal",
-      "label": "3. Engineering Context and Main Goal",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. engineering context and main goal",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L20"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_4_context_and_mechanics_reasoning_questions",
-      "label": "4. Context and Mechanics Reasoning Questions",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "4. context and mechanics reasoning questions",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L33"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_5_transition_to_a_mechanics_model",
-      "label": "5. Transition to a Mechanics Model",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "5. transition to a mechanics model",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L49"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_6_instructor_reference_idealization_and_input_variables_instructor_only",
-      "label": "6. Instructor Reference Idealization and Input Variables (Instructor Only)",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "6. instructor reference idealization and input variables (instructor only)",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L74"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "label": "7. Mechanics Analysis Questions",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "7. mechanics analysis questions",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L85"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_8_suggested_assessment_structure",
-      "label": "8. Suggested Assessment Structure",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "8. suggested assessment structure",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L112"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_9_instructor_authoring_checklist",
-      "label": "9. Instructor Authoring Checklist",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "9. instructor authoring checklist",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L113"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_constrain_open_ended_questions",
-      "label": "Constrain open-ended questions",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "constrain open-ended questions",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L129"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_difficulty_level",
-      "label": "Difficulty Level",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "difficulty level",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L79"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_end_with_judgment_not_full_redesign",
-      "label": "End with judgment, not full redesign",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "end with judgment, not full redesign",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L133"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_engineering_context",
-      "label": "Engineering Context",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "engineering context",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L23"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_geometry_complexity",
-      "label": "Geometry Complexity",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "geometry complexity",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L81"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_image_placeholder_a_real_application_field_image",
-      "label": "Image Placeholder A \u2014 Real Application / Field Image",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "image placeholder a \u2014 real application / field image",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L21"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_image_placeholder_b_instructor_reference_simplified_model",
-      "label": "Image Placeholder B \u2014 Instructor Reference Simplified Model",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "image placeholder b \u2014 instructor reference simplified model",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L75"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_instructor_input_variables",
-      "label": "Instructor Input Variables",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "instructor input variables",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L77"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_keep_the_mechanics_central",
-      "label": "Keep the mechanics central",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "keep the mechanics central",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L127"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_main_engineering_goal",
-      "label": "Main Engineering Goal",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "main engineering goal",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L30"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_problem_deliverable_type",
-      "label": "Problem Deliverable Type",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "problem deliverable type",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L83"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_purpose",
-      "label": "Purpose",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "purpose",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L5"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q10_connector_based_modification",
-      "label": "Q10. Connector-Based Modification",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q10. connector-based modification",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L106"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q10_mechanics_analysis_plan",
-      "label": "Q10. Mechanics Analysis Plan",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q10. mechanics analysis plan",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L66"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q11_stability_or_buckling_check",
-      "label": "Q11. Stability or Buckling Check",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q11. stability or buckling check",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L108"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q12_engineering_assessment_and_recommendation",
-      "label": "Q12. Engineering Assessment and Recommendation",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q12. engineering assessment and recommendation",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L110"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q1_boundary_conditions",
-      "label": "Q1. Boundary Conditions",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q1. boundary conditions",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L88"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q1_primary_function_of_the_system",
-      "label": "Q1. Primary Function of the System",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q1. primary function of the system",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L35"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q2_external_loads",
-      "label": "Q2. External Loads",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q2. external loads",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L37"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q2_unknown_constraint_loads",
-      "label": "Q2. Unknown Constraint Loads",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q2. unknown constraint loads",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L90"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q3_solve_for_unknown_constraint_loads",
-      "label": "Q3. Solve for Unknown Constraint Loads",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q3. solve for unknown constraint loads",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L92"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q3_supports_and_boundary_conditions",
-      "label": "Q3. Supports and Boundary Conditions",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q3. supports and boundary conditions",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L39"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q4_load_path",
-      "label": "Q4. Load Path",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q4. load path",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q4_stiffness_evaluation",
-      "label": "Q4. Stiffness Evaluation",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q4. stiffness evaluation",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L94"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q5_critical_components_or_locations",
-      "label": "Q5. Critical Components or Locations",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q5. critical components or locations",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L43"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q5_stiffness_based_modification",
-      "label": "Q5. Stiffness-Based Modification",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q5. stiffness-based modification",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L96"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q6_relevant_mechanical_response_or_failure_mechanism",
-      "label": "Q6. Relevant Mechanical Response or Failure Mechanism",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q6. relevant mechanical response or failure mechanism",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L45"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q6_strength_factor_of_safety",
-      "label": "Q6. Strength Factor of Safety",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q6. strength factor of safety",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L98"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q7_relevant_geometric_and_material_parameters",
-      "label": "Q7. Relevant Geometric and Material Parameters",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q7. relevant geometric and material parameters",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L47"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q7_strength_based_modification",
-      "label": "Q7. Strength-Based Modification",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q7. strength-based modification",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L100"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q8_connector_load_analysis",
-      "label": "Q8. Connector Load Analysis",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q8. connector load analysis",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L102"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q8_student_generated_structural_idealization",
-      "label": "Q8. Student-Generated Structural Idealization",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q8. student-generated structural idealization",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L50"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q9_connector_factor_of_safety",
-      "label": "Q9. Connector Factor of Safety",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q9. connector factor of safety",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L104"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q9_modeling_assumptions",
-      "label": "Q9. Modeling Assumptions",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q9. modeling assumptions",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L56"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_use_selective_depth",
-      "label": "Use selective depth",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "use selective depth",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L131"
-    },
-    {
-      "id": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_use_the_mechanics_question_bank_modularly",
-      "label": "Use the mechanics question bank modularly",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "7. Mechanics Analysis Questions",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "use the mechanics question bank modularly",
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L135"
     },
     {
       "id": "problems_industrial_line_shaft_shear_moment_student_packet",
@@ -11609,7 +11081,7 @@
       "file_type": "code",
       "norm_label": "duplicateproblemids",
       "source_file": "scripts/build-catalog.mjs",
-      "source_location": "L195"
+      "source_location": "L236"
     },
     {
       "id": "scripts_build_catalog_duplicateproblemslugs",
@@ -11620,7 +11092,7 @@
       "file_type": "code",
       "norm_label": "duplicateproblemslugs",
       "source_file": "scripts/build-catalog.mjs",
-      "source_location": "L200"
+      "source_location": "L241"
     },
     {
       "id": "scripts_build_catalog_health",
@@ -11631,7 +11103,7 @@
       "file_type": "code",
       "norm_label": "health",
       "source_file": "scripts/build-catalog.mjs",
-      "source_location": "L208"
+      "source_location": "L249"
     },
     {
       "id": "scripts_build_catalog_problemsdir",
@@ -14366,7 +13838,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/build-catalog.mjs",
-      "source_location": "L159",
+      "source_location": "L194",
       "weight": 1.0
     },
     {
@@ -14378,7 +13850,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/build-catalog.mjs",
-      "source_location": "L175",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -14390,7 +13862,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/build-catalog.mjs",
-      "source_location": "L184",
+      "source_location": "L219",
       "weight": 1.0
     },
     {
@@ -14486,7 +13958,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2952",
+      "source_location": "L2977",
       "weight": 1.0
     },
     {
@@ -14498,7 +13970,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2954",
+      "source_location": "L2979",
       "weight": 1.0
     },
     {
@@ -14510,7 +13982,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2948",
+      "source_location": "L2973",
       "weight": 1.0
     },
     {
@@ -14522,7 +13994,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2989",
+      "source_location": "L3014",
       "weight": 1.0
     },
     {
@@ -14534,7 +14006,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2994",
+      "source_location": "L3019",
       "weight": 1.0
     },
     {
@@ -14546,7 +14018,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3000",
+      "source_location": "L3025",
       "weight": 1.0
     },
     {
@@ -14558,7 +14030,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3002",
+      "source_location": "L3027",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer_renderpacket",
+      "target": "scripts_packet_renderer_rendersupplementaryimages",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L3029",
       "weight": 1.0
     },
     {
@@ -14570,7 +14054,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3004",
+      "source_location": "L3030",
       "weight": 1.0
     },
     {
@@ -14582,7 +14066,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3005",
+      "source_location": "L3031",
       "weight": 1.0
     },
     {
@@ -14594,7 +14078,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2936",
+      "source_location": "L2961",
       "weight": 1.0
     },
     {
@@ -14606,7 +14090,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2941",
+      "source_location": "L2966",
       "weight": 1.0
     },
     {
@@ -14618,7 +14102,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2958",
+      "source_location": "L2983",
       "weight": 1.0
     },
     {
@@ -14630,7 +14114,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2968",
+      "source_location": "L2993",
       "weight": 1.0
     },
     {
@@ -14642,7 +14126,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2969",
+      "source_location": "L2994",
       "weight": 1.0
     },
     {
@@ -14654,7 +14138,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2970",
+      "source_location": "L2995",
       "weight": 1.0
     },
     {
@@ -14666,7 +14150,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2971",
+      "source_location": "L2996",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer_rendersupplementaryimages",
+      "target": "scripts_packet_renderer_problemimagepath",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L2923",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer_rendersupplementaryimages",
+      "target": "scripts_packet_renderer_escapehtml",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L2932",
       "weight": 1.0
     },
     {
@@ -14678,7 +14186,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2916",
+      "source_location": "L2941",
       "weight": 1.0
     },
     {
@@ -14690,7 +14198,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2916",
+      "source_location": "L2941",
       "weight": 1.0
     },
     {
@@ -14702,7 +14210,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2916",
+      "source_location": "L2941",
       "weight": 1.0
     },
     {
@@ -14810,7 +14318,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3075",
+      "source_location": "L3109",
       "weight": 1.0
     },
     {
@@ -14822,7 +14330,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3076",
+      "source_location": "L3110",
       "weight": 1.0
     },
     {
@@ -14834,7 +14342,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3079",
+      "source_location": "L3113",
       "weight": 1.0
     },
     {
@@ -14858,7 +14366,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3091",
+      "source_location": "L3125",
       "weight": 1.0
     },
     {
@@ -14870,7 +14378,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3097",
+      "source_location": "L3131",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment_qmddocument",
+      "target": "scripts_render_assignment_rendersupplementaryimagesmarkdown",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L3137",
       "weight": 1.0
     },
     {
@@ -14882,7 +14402,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3105",
+      "source_location": "L3140",
       "weight": 1.0
     },
     {
@@ -14894,7 +14414,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3105",
+      "source_location": "L3140",
       "weight": 1.0
     },
     {
@@ -14906,7 +14426,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3105",
+      "source_location": "L3140",
       "weight": 1.0
     },
     {
@@ -14918,7 +14438,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3110",
+      "source_location": "L3145",
       "weight": 1.0
     },
     {
@@ -14930,7 +14450,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3110",
+      "source_location": "L3145",
       "weight": 1.0
     },
     {
@@ -14942,7 +14462,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3121",
+      "source_location": "L3156",
       "weight": 1.0
     },
     {
@@ -14954,7 +14474,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3127",
+      "source_location": "L3162",
       "weight": 1.0
     },
     {
@@ -14966,7 +14486,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3041",
+      "source_location": "L3074",
       "weight": 1.0
     },
     {
@@ -14978,7 +14498,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3047",
+      "source_location": "L3080",
       "weight": 1.0
     },
     {
@@ -14990,7 +14510,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3047",
+      "source_location": "L3080",
       "weight": 1.0
     },
     {
@@ -15002,7 +14522,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3047",
+      "source_location": "L3080",
       "weight": 1.0
     },
     {
@@ -15014,7 +14534,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3058",
+      "source_location": "L3091",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment_renderbody",
+      "target": "scripts_render_assignment_rendersupplementaryimageshtml",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L3092",
       "weight": 1.0
     },
     {
@@ -15026,7 +14558,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3060",
+      "source_location": "L3094",
       "weight": 1.0
     },
     {
@@ -15038,7 +14570,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3062",
+      "source_location": "L3096",
       "weight": 1.0
     },
     {
@@ -15062,7 +14594,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3010",
+      "source_location": "L3043",
       "weight": 1.0
     },
     {
@@ -15074,7 +14606,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3012",
+      "source_location": "L3045",
       "weight": 1.0
     },
     {
@@ -15086,7 +14618,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3006",
+      "source_location": "L3039",
       "weight": 1.0
     },
     {
@@ -15134,7 +14666,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3016",
+      "source_location": "L3049",
       "weight": 1.0
     },
     {
@@ -15146,7 +14678,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3026",
+      "source_location": "L3059",
       "weight": 1.0
     },
     {
@@ -15158,7 +14690,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3027",
+      "source_location": "L3060",
       "weight": 1.0
     },
     {
@@ -15170,7 +14702,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3028",
+      "source_location": "L3061",
       "weight": 1.0
     },
     {
@@ -15182,7 +14714,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3029",
+      "source_location": "L3062",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment_rendersupplementaryimageshtml",
+      "target": "scripts_render_assignment_orderedsupplementaryimages",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2992",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment_rendersupplementaryimageshtml",
+      "target": "scripts_render_assignment_escapehtml",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2998",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment_rendersupplementaryimagesmarkdown",
+      "target": "scripts_render_assignment_orderedsupplementaryimages",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L3005",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment_rendersupplementaryimagesmarkdown",
+      "target": "scripts_render_assignment_problemimagemarkdown",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L3006",
       "weight": 1.0
     },
     {
@@ -16479,7 +16059,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L130",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -16490,7 +16070,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L168",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -16501,7 +16081,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L208",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -16512,7 +16092,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L230",
+      "source_location": "L246",
       "weight": 1.0
     },
     {
@@ -16523,7 +16103,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L254",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -16534,18 +16114,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L265",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_authoring_guide",
-      "target": "docs_authoring_guide_validation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L289",
+      "source_location": "L281",
       "weight": 1.0
     },
     {
@@ -16561,13 +16130,24 @@
     },
     {
       "source": "docs_authoring_guide",
+      "target": "docs_authoring_guide_validation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/authoring-guide.qmd",
+      "source_location": "L305",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_authoring_guide",
       "target": "docs_authoring_guide_export_assignments_from_the_command_line",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L304",
+      "source_location": "L320",
       "weight": 1.0
     },
     {
@@ -16578,7 +16158,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/authoring-guide.qmd",
-      "source_location": "L337",
+      "source_location": "L353",
       "weight": 1.0
     },
     {
@@ -16612,523 +16192,6 @@
       "confidence_score": 1.0,
       "source_file": "docs/authoring-guide.qmd",
       "source_location": "L86",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_8_suggested_assessment_structure",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L112",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_9_instructor_authoring_checklist",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L113",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_10_faculty_authoring_guidance",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L126",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_11_prompt_format_for_automated_problem_generation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L137",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_2_system_components",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_3_engineering_context_and_main_goal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L20",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_4_context_and_mechanics_reasoning_questions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L33",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_5_transition_to_a_mechanics_model",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L49",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_purpose",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_6_instructor_reference_idealization_and_input_variables_instructor_only",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L74",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L85",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_1_problem_identification_and_instructor_setup",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L9",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_10_faculty_authoring_guidance",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_keep_the_mechanics_central",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L127",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_10_faculty_authoring_guidance",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_constrain_open_ended_questions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L129",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_10_faculty_authoring_guidance",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_use_selective_depth",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L131",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_10_faculty_authoring_guidance",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_end_with_judgment_not_full_redesign",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L133",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_10_faculty_authoring_guidance",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_use_the_mechanics_question_bank_modularly",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L135",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_3_engineering_context_and_main_goal",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_image_placeholder_a_real_application_field_image",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L21",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_3_engineering_context_and_main_goal",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_engineering_context",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L23",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_3_engineering_context_and_main_goal",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_main_engineering_goal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L30",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_4_context_and_mechanics_reasoning_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q1_primary_function_of_the_system",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_4_context_and_mechanics_reasoning_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q2_external_loads",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L37",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_4_context_and_mechanics_reasoning_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q3_supports_and_boundary_conditions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L39",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_4_context_and_mechanics_reasoning_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q4_load_path",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L41",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_4_context_and_mechanics_reasoning_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q5_critical_components_or_locations",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L43",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_4_context_and_mechanics_reasoning_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q6_relevant_mechanical_response_or_failure_mechanism",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L45",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_4_context_and_mechanics_reasoning_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q7_relevant_geometric_and_material_parameters",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L47",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_5_transition_to_a_mechanics_model",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q8_student_generated_structural_idealization",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L50",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_5_transition_to_a_mechanics_model",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q9_modeling_assumptions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L56",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_5_transition_to_a_mechanics_model",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q10_mechanics_analysis_plan",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L66",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_6_instructor_reference_idealization_and_input_variables_instructor_only",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_image_placeholder_b_instructor_reference_simplified_model",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L75",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_6_instructor_reference_idealization_and_input_variables_instructor_only",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_instructor_input_variables",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L77",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_6_instructor_reference_idealization_and_input_variables_instructor_only",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_difficulty_level",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L79",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_6_instructor_reference_idealization_and_input_variables_instructor_only",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_geometry_complexity",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L81",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_6_instructor_reference_idealization_and_input_variables_instructor_only",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_problem_deliverable_type",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L83",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q7_strength_based_modification",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L100",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q8_connector_load_analysis",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L102",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q9_connector_factor_of_safety",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L104",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q10_connector_based_modification",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L106",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q11_stability_or_buckling_check",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L108",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q12_engineering_assessment_and_recommendation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L110",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q1_boundary_conditions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L88",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q2_unknown_constraint_loads",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L90",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q3_solve_for_unknown_constraint_loads",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L92",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q4_stiffness_evaluation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L94",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q5_stiffness_based_modification",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L96",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_7_mechanics_analysis_questions",
-      "target": "graphify_out_converted_meen_305_context_rich_solid_mechanics_template_faculty_corrected_ffed16e1_q6_strength_factor_of_safety",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/converted/MEEN_305_Context_Rich_Solid_Mechanics_Template_Faculty_Corrected_ffed16e1.md",
-      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -23942,13 +23005,24 @@
     },
     {
       "source": "scripts_build_catalog",
+      "target": "scripts_build_catalog_normalizesitepath",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/build-catalog.mjs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_catalog",
       "target": "scripts_build_catalog_duplicateproblemids",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/build-catalog.mjs",
-      "source_location": "L195",
+      "source_location": "L236",
       "weight": 1.0
     },
     {
@@ -23959,7 +23033,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/build-catalog.mjs",
-      "source_location": "L200",
+      "source_location": "L241",
       "weight": 1.0
     },
     {
@@ -23970,18 +23044,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/build-catalog.mjs",
-      "source_location": "L208",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_build_catalog",
-      "target": "scripts_build_catalog_normalizesitepath",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/build-catalog.mjs",
-      "source_location": "L21",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
@@ -24360,7 +23423,7 @@
     },
     {
       "source": "scripts_packet_renderer",
-      "target": "scripts_packet_renderer_rendervariabletable",
+      "target": "scripts_packet_renderer_rendersupplementaryimages",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24371,13 +23434,24 @@
     },
     {
       "source": "scripts_packet_renderer",
+      "target": "scripts_packet_renderer_rendervariabletable",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/packet-renderer.js",
+      "source_location": "L2938",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_packet_renderer",
       "target": "scripts_packet_renderer_renderquestionimage",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2935",
+      "source_location": "L2960",
       "weight": 1.0
     },
     {
@@ -24388,7 +23462,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2944",
+      "source_location": "L2969",
       "weight": 1.0
     },
     {
@@ -24399,7 +23473,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2951",
+      "source_location": "L2976",
       "weight": 1.0
     },
     {
@@ -24410,7 +23484,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2957",
+      "source_location": "L2982",
       "weight": 1.0
     },
     {
@@ -24421,7 +23495,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2978",
+      "source_location": "L3003",
       "weight": 1.0
     },
     {
@@ -24635,7 +23709,7 @@
     },
     {
       "source": "scripts_render_assignment",
-      "target": "scripts_render_assignment_documentstyles",
+      "target": "scripts_render_assignment_orderedsupplementaryimages",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24646,13 +23720,46 @@
     },
     {
       "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_rendersupplementaryimageshtml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L2991",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_rendersupplementaryimagesmarkdown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L3004",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
+      "target": "scripts_render_assignment_documentstyles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/render-assignment.mjs",
+      "source_location": "L3018",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_render_assignment",
       "target": "scripts_render_assignment_renderlearningobjectives",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3002",
+      "source_location": "L3035",
       "weight": 1.0
     },
     {
@@ -24663,7 +23770,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3009",
+      "source_location": "L3042",
       "weight": 1.0
     },
     {
@@ -24674,7 +23781,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3015",
+      "source_location": "L3048",
       "weight": 1.0
     },
     {
@@ -24685,7 +23792,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3034",
+      "source_location": "L3067",
       "weight": 1.0
     },
     {
@@ -24696,7 +23803,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3068",
+      "source_location": "L3102",
       "weight": 1.0
     },
     {
@@ -24707,7 +23814,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3084",
+      "source_location": "L3118",
       "weight": 1.0
     },
     {
@@ -24718,7 +23825,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3167",
+      "source_location": "L3204",
       "weight": 1.0
     },
     {
@@ -24729,7 +23836,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3172",
+      "source_location": "L3209",
       "weight": 1.0
     },
     {
@@ -24740,7 +23847,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3173",
+      "source_location": "L3210",
       "weight": 1.0
     },
     {
@@ -24751,7 +23858,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3174",
+      "source_location": "L3211",
       "weight": 1.0
     },
     {
@@ -24762,7 +23869,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3186",
+      "source_location": "L3223",
       "weight": 1.0
     },
     {
@@ -24773,7 +23880,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3187",
+      "source_location": "L3224",
       "weight": 1.0
     },
     {
@@ -24784,7 +23891,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3197",
+      "source_location": "L3234",
       "weight": 1.0
     },
     {
@@ -25977,5 +25084,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "74c307630e625caf4a98e54a0a6be24a29fef4e9"
+  "built_at_commit": "88f1cf31998203cef23b0f3043d36680518d9b1d"
 }

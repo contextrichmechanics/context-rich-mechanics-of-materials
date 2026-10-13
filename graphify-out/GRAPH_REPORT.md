@@ -1,23 +1,22 @@
-# Graph Report - codex-steel-chair-images-20261013  (2026-10-13)
+# Graph Report - codex-supplementary-images-20261013  (2026-10-13)
 
 ## Corpus Check
-- 417 files · ~3,566,352 words
+- 416 files · ~3,565,117 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1105 nodes · 1050 edges · 143 communities (122 shown, 21 thin omitted)
+- 1061 nodes · 1016 edges · 142 communities (121 shown, 21 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `74c30763`
+- Built from commit: `88f1cf31`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - render-assignment.mjs
 - authoring-guide.qmd
-- 7. Mechanics Analysis Questions
 - Supplemental Instructor Background
 - What You Must Do When Invoked
 - packet-renderer.js
@@ -159,13 +158,13 @@
 1. `Supplemental Instructor Background` - 35 edges
 2. `AI Agent Project Guide` - 19 edges
 3. `Context-Rich Mechanics of Materials` - 14 edges
-4. `7. Mechanics Analysis Questions` - 13 edges
-5. `What You Must Do When Invoked` - 12 edges
-6. `escapeHtml()` - 11 edges
-7. `escapeHtml()` - 11 edges
-8. `qmdDocument()` - 10 edges
+4. `escapeHtml()` - 12 edges
+5. `escapeHtml()` - 12 edges
+6. `What You Must Do When Invoked` - 12 edges
+7. `qmdDocument()` - 11 edges
+8. `renderBody()` - 10 edges
 9. `/graphify` - 10 edges
-10. `renderBody()` - 9 edges
+10. `8. Create The Package` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -173,19 +172,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (143 total, 21 thin omitted)
+## Communities (142 total, 21 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
-Cohesion: 0.11
-Nodes (35): catalog, catalogPath, decodeEntities(), documentStyles(), escapeHtml(), format, formatDerived(), fullHtml() (+27 more)
+Cohesion: 0.10
+Nodes (38): catalog, catalogPath, decodeEntities(), documentStyles(), escapeHtml(), format, formatDerived(), fullHtml() (+30 more)
 
 ### Community 1 - "authoring-guide.qmd"
 Cohesion: 0.06
 Nodes (31): Catalog Metadata, Export Assignments From The Command Line, Images, Package Structure, Problem Health, Purpose, Question Design, Questions (+23 more)
-
-### Community 2 - "7. Mechanics Analysis Questions"
-Cohesion: 0.04
-Nodes (47): 10. Faculty Authoring Guidance, 11. Prompt Format for Automated Problem Generation, 1. Problem Identification and Instructor Setup, 2. System Components, 3. Engineering Context and Main Goal, 4. Context and Mechanics Reasoning Questions, 5. Transition to a Mechanics Model, 6. Instructor Reference Idealization and Input Variables (Instructor Only) (+39 more)
 
 ### Community 3 - "Supplemental Instructor Background"
 Cohesion: 0.04
@@ -197,7 +192,7 @@ Nodes (24): For /graphify add and --watch, For /graphify query, For the commit h
 
 ### Community 5 - "packet-renderer.js"
 Cohesion: 0.25
-Nodes (19): escapeHtml(), formatDerived(), numericValue(), problemImagePath(), questionImagePath(), questionsBySection(), renderIdealizedImage(), renderInstructorSupport() (+11 more)
+Nodes (20): escapeHtml(), formatDerived(), numericValue(), problemImagePath(), questionImagePath(), questionsBySection(), renderIdealizedImage(), renderInstructorSupport() (+12 more)
 
 ### Community 6 - "Preliminary Engineering Questions"
 Cohesion: 0.12
@@ -648,7 +643,7 @@ Cohesion: 0.25
 Nodes (7): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Scope of the Model, Seat-Support Arrangement, Steel-Frame Chair - Accidental Fall Loading, System Components
 
 ## Knowledge Gaps
-- **697 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+692 more)
+- **656 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+651 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -656,15 +651,15 @@ Nodes (7): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engin
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `15. Common Failure Modes` connect `15. Common Failure Modes` to `AI Agent Project Guide`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _697 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _656 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
-  _Cohesion score 0.10796221322537113 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10336817653890824 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
-- **Should `7. Mechanics Analysis Questions` be split into smaller, more focused modules?**
-  _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
 - **Should `Supplemental Instructor Background` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
 - **Should `What You Must Do When Invoked` be split into smaller, more focused modules?**

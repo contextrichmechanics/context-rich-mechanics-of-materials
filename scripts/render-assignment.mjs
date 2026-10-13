@@ -2982,6 +2982,39 @@ function renderIdealizedImageHtml(problem) {
   return `<section><h2>Instructor Reference Idealization and Input Variables</h2><figure><img src="${escapeHtml(imagePath)}" alt="${escapeHtml(alt)}"></figure></section>`;
 }
 
+function orderedSupplementaryImages(problem) {
+  return Array.isArray(problem.supplementaryImages)
+    ? [...problem.supplementaryImages].sort((a, b) => a.order - b.order)
+    : [];
+}
+
+function renderSupplementaryImagesHtml(problem) {
+  const figures = orderedSupplementaryImages(problem).map((image) => {
+    const imagePath = path.join(root, image.path);
+    const alt = image.alt || image.caption || `${problem.title} supplementary image`;
+    const width = Number.isFinite(image.widthPercent)
+      ? ` style="width: ${image.widthPercent}%;"`
+      : "";
+    const caption = image.caption ? `<figcaption>${escapeHtml(image.caption)}</figcaption>` : "";
+    return `<figure class="supplementary-image"><img src="${escapeHtml(imagePath)}" alt="${escapeHtml(alt)}"${width}>${caption}</figure>`;
+  }).join("");
+  return figures ? `<section class="packet-supplementary-images">${figures}</section>` : "";
+}
+
+function renderSupplementaryImagesMarkdown(problem, outDir) {
+  return orderedSupplementaryImages(problem).map((image) => {
+    const markdownImage = problemImageMarkdown(
+      problem,
+      image.path,
+      image.alt || image.caption || `${problem.title} supplementary image`,
+      outDir
+    );
+    const width = Number.isFinite(image.widthPercent) ? `{width=${image.widthPercent}%}` : "";
+    const caption = image.caption ? `\n\n*${String(image.caption).replace(/\*/g, "\\*")}*` : "";
+    return `${markdownImage}${width}${caption}`;
+  }).join("\n\n");
+}
+
 function documentStyles() {
   return `
 body { color: #343a40; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.5; margin: 2rem auto; max-width: 850px; padding: 0 1rem; }
@@ -3056,6 +3089,7 @@ function renderBody(problem, variant, type) {
   </header>
   <figure><img src="${escapeHtml(imagePath)}" alt="${escapeHtml(problem.title)} problem image"></figure>
   <section><h2>Main Problem Statement</h2>${substitute(problem.problemStatement, problem, values)}</section>
+  ${renderSupplementaryImagesHtml(problem)}
   <section><h2>Engineering Design Goal</h2>${substitute(problem.engineeringGoal, problem, values)}</section>
   ${renderQuestionSectionHtml(problem, questions, questionSections[0], isInstructor, values, numberById)}
   ${renderQuestionSectionHtml(problem, questions, questionSections[1], isInstructor, values, numberById)}
@@ -3100,6 +3134,7 @@ function qmdDocument(problem, variant, type, outDir) {
     problem.idealizedImageAlt || `${problem.title} instructor reference idealization`,
     outDir
   );
+  const supplementaryImages = renderSupplementaryImagesMarkdown(problem, outDir);
   const rows = problem.variables.map((variable) => {
     const value = values[variable.key] ?? variable.value;
     return `| ${tableCell(symbolHtml(variable.symbol))} | ${tableCell(variable.label)} | ${tableCell(valueWithUnitHtml(value, variable.unit))} |`;
@@ -3145,6 +3180,8 @@ format:
 ## Main Problem Statement
 
 ${htmlToMarkdown(substitute(problem.problemStatement, problem, values))}
+
+${supplementaryImages}
 
 ## Engineering Design Goal
 

@@ -4806,7 +4806,7 @@
       "node_kind": "heading",
       "norm_label": "main engineering goal",
       "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
-      "source_location": "L17"
+      "source_location": "L25"
     },
     {
       "id": "problems_steel_frame_chair_accidental_fall_loading_student_problem_scope_of_the_model",
@@ -4818,7 +4818,19 @@
       "node_kind": "heading",
       "norm_label": "scope of the model",
       "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
-      "source_location": "L29"
+      "source_location": "L37"
+    },
+    {
+      "id": "problems_steel_frame_chair_accidental_fall_loading_student_problem_seat_support_arrangement",
+      "label": "Seat-Support Arrangement",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "Steel-Frame Chair - Accidental Fall Loading",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "seat-support arrangement",
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L15"
     },
     {
       "id": "problems_steel_frame_chair_accidental_fall_loading_student_problem_steel_frame_chair_accidental_fall_loading",
@@ -4842,7 +4854,7 @@
       "node_kind": "heading",
       "norm_label": "system components",
       "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
-      "source_location": "L21"
+      "source_location": "L29"
     },
     {
       "id": "problems_axial_rod_tube_assembly_student_packet",
@@ -22808,13 +22820,24 @@
     },
     {
       "source": "problems_steel_frame_chair_accidental_fall_loading_student_problem_steel_frame_chair_accidental_fall_loading",
+      "target": "problems_steel_frame_chair_accidental_fall_loading_student_problem_seat_support_arrangement",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_steel_frame_chair_accidental_fall_loading_student_problem_steel_frame_chair_accidental_fall_loading",
       "target": "problems_steel_frame_chair_accidental_fall_loading_student_problem_main_engineering_goal",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
-      "source_location": "L17",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -22825,7 +22848,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
-      "source_location": "L21",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -22836,7 +22859,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/steel-frame-chair-accidental-fall-loading/_student-problem.qmd",
-      "source_location": "L29",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -25954,5 +25977,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "cfc8f5ff597d16042b23726e7664b97fde7d922c"
+  "built_at_commit": "74c307630e625caf4a98e54a0a6be24a29fef4e9"
 }

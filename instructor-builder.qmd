@@ -3013,6 +3013,26 @@ function renderIdealizedImage(problem, embeddedImages = {}) {
   `;
 }
 
+function renderSupplementaryImages(problem, embeddedImages = {}) {
+  const images = Array.isArray(problem.supplementaryImages)
+    ? [...problem.supplementaryImages].sort((a, b) => a.order - b.order)
+    : [];
+  const figures = images.map((image) => {
+    const alt = image.alt || image.caption || `${problem.title} supplementary image`;
+    const width = Number.isFinite(image.widthPercent)
+      ? ` style="width: ${image.widthPercent}%;"`
+      : "";
+    const caption = image.caption ? `<figcaption>${escapeHtml(image.caption)}</figcaption>` : "";
+    return `
+      <figure class="supplementary-image">
+        <img src="${escapeHtml(embeddedImageSource(problem, image.path, embeddedImages))}" alt="${escapeHtml(alt)}"${width}>
+        ${caption}
+      </figure>
+    `;
+  }).join("");
+  return figures ? `<section class="packet-supplementary-images">${figures}</section>` : "";
+}
+
 function renderLearningObjectives(question) {
   if (!Array.isArray(question.learningObjectives) || question.learningObjectives.length === 0) {
     return "";
@@ -3116,6 +3136,8 @@ function renderDocumentBody(type, embeddedImages = {}) {
         <h2>Main Problem Statement</h2>
         ${substitute(problem.problemStatement, problem)}
       </section>
+
+      ${renderSupplementaryImages(problem, embeddedImages)}
 
       <section>
         <h2>Engineering Design Goal</h2>
@@ -3234,6 +3256,7 @@ async function embeddedPacketImages(problem, questions, type) {
   const sources = [
     packetImageUrl(problem, problem.image),
     showIdealizedImage ? packetImageUrl(problem, problem.idealizedImage) : "",
+    ...(problem.supplementaryImages || []).map((image) => packetImageUrl(problem, image.path)),
     ...questions.map((question) => questionImagePath(problem, question))
   ].filter(Boolean);
   const uniqueSources = [...new Set(sources)];
