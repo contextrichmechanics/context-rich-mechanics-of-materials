@@ -1647,6 +1647,59 @@ function variableMap(problem, currentValues) {
   }
 
 
+  const engineStandMassKg = numericValue(values, "engine_stand_m_kg");
+  const engineStandGravity = numericValue(values, "engine_stand_g_m_s2");
+  const engineStandEccentricityM = numericValue(values, "engine_stand_e_m");
+  const engineStandHeightM = numericValue(values, "engine_stand_H_m");
+  const engineStandYieldMPa = numericValue(values, "engine_stand_Fy_MPa");
+  const engineStandModulusGPa = numericValue(values, "engine_stand_E_GPa");
+  const engineStandRequiredFactor = numericValue(values, "engine_stand_n_req");
+  const engineStandBA = numericValue(values, "engine_stand_bA_mm");
+  const engineStandTA = numericValue(values, "engine_stand_tA_mm");
+  const engineStandBB = numericValue(values, "engine_stand_bB_mm");
+  const engineStandTB = numericValue(values, "engine_stand_tB_mm");
+
+  if ([engineStandMassKg, engineStandGravity, engineStandEccentricityM, engineStandHeightM,
+      engineStandYieldMPa, engineStandModulusGPa, engineStandRequiredFactor, engineStandBA,
+      engineStandTA, engineStandBB, engineStandTB].every((value) => Number.isFinite(value) && value > 0) &&
+      engineStandBA > 2 * engineStandTA && engineStandBB > 2 * engineStandTB) {
+    const weightN = engineStandMassKg * engineStandGravity;
+    const momentNm = weightN * engineStandEccentricityM;
+    const candidate = (b, t) => {
+      const inner = b - 2 * t;
+      const area = b ** 2 - inner ** 2;
+      const inertia = (b ** 4 - inner ** 4) / 12;
+      const axial = weightN / area;
+      const bending = momentNm * 1000 * (b / 2) / inertia;
+      const maximum = axial + bending;
+      return { inner, area, inertia, axial, bending, maximum, fos: engineStandYieldMPa / maximum };
+    };
+    const a = candidate(engineStandBA, engineStandTA);
+    const b = candidate(engineStandBB, engineStandTB);
+    const aPass = a.fos + 1e-12 >= engineStandRequiredFactor;
+    const bPass = b.fos + 1e-12 >= engineStandRequiredFactor;
+    values.engine_stand_W_N = formatDerived(weightN, 1);
+    values.engine_stand_Rx_N = formatDerived(0, 1);
+    values.engine_stand_Ry_N = formatDerived(weightN, 1);
+    values.engine_stand_M_Nm = formatDerived(momentNm, 2);
+    [["A", a], ["B", b]].forEach(([label, item]) => {
+      values[`engine_stand_${label}_inner_mm`] = formatDerived(item.inner, 2);
+      values[`engine_stand_${label}_area_mm2`] = formatDerived(item.area, 2);
+      values[`engine_stand_${label}_I_mm4`] = formatDerived(item.inertia, 2);
+      values[`engine_stand_${label}_axial_MPa`] = formatDerived(item.axial, 6);
+      values[`engine_stand_${label}_bending_MPa`] = formatDerived(item.bending, 6);
+      values[`engine_stand_${label}_max_MPa`] = formatDerived(item.maximum, 6);
+      values[`engine_stand_${label}_fos`] = formatDerived(item.fos, 4);
+      values[`engine_stand_${label}_check`] = item.fos + 1e-12 >= engineStandRequiredFactor ? "PASS" : "FAIL";
+    });
+    values.engine_stand_recommendation = bPass
+      ? "Recommend Candidate B for the assigned gross-section yield criterion."
+      : "Neither candidate meets the assigned gross-section yield criterion.";
+    values.engine_stand_assessment = `Candidate A ${aPass ? "passes" : "fails"} and Candidate B ${bPass ? "passes" : "fails"} the required n = ${formatDerived(engineStandRequiredFactor, 2)}. This is a first-order gross-section stress comparison only; it does not verify buckling, welds, bolts, mounting-head details, local stresses, tipping, casters, dynamic handling, fatigue, or complete-stand capacity. H and E are retained as contextual inputs but do not enter this strength-only calculation.`;
+  }
+
+
+
   const curvedTailRadiusM = numericValue(values, "curved_tail_R_m");
   const curvedTailTipAngleRad = numericValue(values, "curved_tail_theta_t_rad");
   const curvedTailCutAngleRad = numericValue(values, "curved_tail_theta_S_rad");

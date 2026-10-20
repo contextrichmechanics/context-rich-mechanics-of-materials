@@ -2026,6 +2026,495 @@
     ]
   },
   {
+    "id": "MOS-AUTOMOTIVE-ENGINE-001",
+    "slug": "automotive-engine-stand-combined-loading",
+    "title": "Combined Compression and Bending in an Automotive Engine Stand",
+    "studentDocumentTitle": "Student Packet - Combined Compression and Bending in an Automotive Engine Stand",
+    "instructorDocumentTitle": "Instructor Guide - Combined Compression and Bending in an Automotive Engine Stand",
+    "summary": "Compare two square hollow-steel engine-stand columns under eccentric engine weight using axial stress, bending stress, and a yield factor of safety.",
+    "primaryTopics": [
+      "Combined Loading",
+      "Axial Stress",
+      "Bending Stress",
+      "Factor of Safety"
+    ],
+    "courseTopic": "Combined axial compression and bending of a prismatic member",
+    "targetLevel": "Intermediate MEEN 305 context-rich problem",
+    "difficultyLevel": 3,
+    "textbookChapters": [
+      "Internal loadings",
+      "Average normal stress",
+      "Flexure formula",
+      "Combined loadings",
+      "Factor of safety"
+    ],
+    "derivedPlaceholders": [
+      "engine_stand_W_N",
+      "engine_stand_Rx_N",
+      "engine_stand_Ry_N",
+      "engine_stand_M_Nm",
+      "engine_stand_A_inner_mm",
+      "engine_stand_A_area_mm2",
+      "engine_stand_A_I_mm4",
+      "engine_stand_A_axial_MPa",
+      "engine_stand_A_bending_MPa",
+      "engine_stand_A_max_MPa",
+      "engine_stand_A_fos",
+      "engine_stand_A_check",
+      "engine_stand_B_inner_mm",
+      "engine_stand_B_area_mm2",
+      "engine_stand_B_I_mm4",
+      "engine_stand_B_axial_MPa",
+      "engine_stand_B_bending_MPa",
+      "engine_stand_B_max_MPa",
+      "engine_stand_B_fos",
+      "engine_stand_B_check",
+      "engine_stand_recommendation",
+      "engine_stand_assessment"
+    ],
+    "image": "problems/automotive-engine-stand-combined-loading/assets/context-placeholder.png",
+    "imageAlt": "Placeholder for a future properly licensed automotive engine stand photograph.",
+    "imageSourceUrl": "https://www.amazon.com/dp/B0FVXKHCB3",
+    "imageLicenseStatus": "Unverified; the temporary Amazon product image is excluded from the repository.",
+    "imageLicenseTodo": "TODO — IMAGE LICENSE: Replace the temporary Amazon product image with a properly licensed photograph or obtain written redistribution permission before public publication.",
+    "idealizedImage": "problems/automotive-engine-stand-combined-loading/assets/engine-stand-instructor-reference.png",
+    "idealizedImageAlt": "Instructor-only idealization of an eccentrically loaded engine-stand column fixed at its base.",
+    "source": "problems/automotive-engine-stand-combined-loading/index.html",
+    "problemStatement": "<p>An automotive engine stand supports an assigned engine mass through a rotating mounting head. The gravity force acts at a horizontal eccentricity from the vertical square hollow-steel column, so the column carries axial compression and bending simultaneously. All values are instructional assumptions; none are verified specifications of the product shown in the excluded temporary photograph.</p><p>Compare Candidate A, {{engine_stand_bA_mm}} × {{engine_stand_bA_mm}} × {{engine_stand_tA_mm}} mm, with Candidate B, {{engine_stand_bB_mm}} × {{engine_stand_bB_mm}} × {{engine_stand_tB_mm}} mm.</p>",
+    "engineeringGoal": "<p>Determine reactions, section properties, maximum combined normal stress, and yield factor of safety for both candidate columns, then recommend which satisfies the assigned requirement without implying certification of a complete engine stand.</p>",
+    "supplementaryImages": [],
+    "variables": [
+      {
+        "key": "engine_stand_m_kg",
+        "symbol": "m",
+        "label": "Assigned engine mass",
+        "value": 250,
+        "unit": "kg",
+        "min": 1,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "key": "engine_stand_g_m_s2",
+        "symbol": "g",
+        "label": "Gravitational acceleration",
+        "value": 9.81,
+        "unit": "m/s^2",
+        "min": 1,
+        "max": 20,
+        "step": 0.01
+      },
+      {
+        "key": "engine_stand_e_m",
+        "symbol": "e",
+        "label": "Horizontal load eccentricity",
+        "value": 0.3,
+        "unit": "m",
+        "min": 0.01,
+        "max": 2,
+        "step": 0.01
+      },
+      {
+        "key": "engine_stand_H_m",
+        "symbol": "H",
+        "label": "Column height",
+        "value": 0.85,
+        "unit": "m",
+        "min": 0.1,
+        "max": 3,
+        "step": 0.01
+      },
+      {
+        "key": "engine_stand_Fy_MPa",
+        "symbol": "F_y",
+        "label": "Assigned steel yield strength",
+        "value": 250,
+        "unit": "MPa",
+        "min": 50,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "key": "engine_stand_E_GPa",
+        "symbol": "E",
+        "label": "Assigned steel elastic modulus",
+        "value": 200,
+        "unit": "GPa",
+        "min": 50,
+        "max": 300,
+        "step": 1
+      },
+      {
+        "key": "engine_stand_n_req",
+        "symbol": "n_req",
+        "label": "Required yield factor of safety",
+        "value": 2,
+        "unit": "-",
+        "min": 1,
+        "max": 10,
+        "step": 0.1
+      },
+      {
+        "key": "engine_stand_bA_mm",
+        "symbol": "b_A",
+        "label": "Candidate A outside width",
+        "value": 50,
+        "unit": "mm",
+        "min": 10,
+        "max": 300,
+        "step": 1
+      },
+      {
+        "key": "engine_stand_tA_mm",
+        "symbol": "t_A",
+        "label": "Candidate A wall thickness",
+        "value": 2,
+        "unit": "mm",
+        "min": 0.5,
+        "max": 30,
+        "step": 0.1
+      },
+      {
+        "key": "engine_stand_bB_mm",
+        "symbol": "b_B",
+        "label": "Candidate B outside width",
+        "value": 60,
+        "unit": "mm",
+        "min": 10,
+        "max": 300,
+        "step": 1
+      },
+      {
+        "key": "engine_stand_tB_mm",
+        "symbol": "t_B",
+        "label": "Candidate B wall thickness",
+        "value": 3,
+        "unit": "mm",
+        "min": 0.5,
+        "max": 30,
+        "step": 0.1
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Engineering Purpose",
+        "section": "context",
+        "selected": true,
+        "student": "<p>What is the purpose of an automotive engine stand, and why must its frame resist more than the engine's vertical weight?</p>",
+        "instructor": "<p>It supports and positions an engine for service. The offset mounting head transmits gravity force and an eccentric moment to the column and base.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the engineering purpose task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q2",
+        "title": "Components",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Identify the principal load-carrying components from engine to floor.</p>",
+        "instructor": "<p>Engine â†’ adjustable mounting arms/rotating head â†’ vertical column â†’ column-base joint â†’ wheeled base â†’ casters â†’ floor.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the components task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q3",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Trace the gravity load path and identify where the load becomes eccentric to the column.</p>",
+        "instructor": "<p>The engine weight enters the mounting arms and head, whose reach places the line of action a distance e from the column centerline.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the load path task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q4",
+        "title": "Likely Column Loading",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Predict the internal loadings in the vertical column.</p>",
+        "instructor": "<p>The idealized column carries axial compression W and bending moment We; the assigned vertical load produces no horizontal reaction.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the likely column loading task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q5",
+        "title": "Critical Location",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Predict where the first-order bending stress is largest.</p>",
+        "instructor": "<p>The constant eccentric moment is carried through the column, while the fixed base is the natural evaluation section and connection region.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the critical location task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q6",
+        "title": "Candidate Geometry",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Explain how increasing outside width and wall thickness changes axial and bending resistance.</p>",
+        "instructor": "<p>Both increase area; increasing outside width especially increases second moment of area and reduces flexural stress.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the candidate geometry task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q7",
+        "title": "Evidence Limits",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Which assigned quantities may not be inferred from an engine-stand photograph?</p>",
+        "instructor": "<p>Mass, eccentricity, dimensions, properties, restraint, and required safety factor are instructional assumptions, not measurements or product specifications.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the evidence limits task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q8",
+        "title": "Idealization",
+        "section": "transition",
+        "selected": true,
+        "student": "<p>Draw a planar idealization showing a fixed-base vertical column, the eccentric engine weight, e, H, and base reactions.</p>",
+        "instructor": "<p>The model shows W=mg acting downward at offset e, with Rx=0, Ry=W upward, and a counterclockwise base reaction moment We.</p>",
+        "type": "modeling and idealization",
+        "difficulty": "intermediate",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the idealization task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q9",
+        "title": "Assumptions",
+        "section": "transition",
+        "selected": true,
+        "student": "<p>State assumptions required for the combined axial-plus-bending model.</p>",
+        "instructor": "<p>Static load, prismatic square tube, linear elasticity, small deformation, fixed base, centroidal axial force plus first-order moment, and no buckling, connection, tipping, caster, dynamic, fatigue, or local-stress checks.</p>",
+        "type": "modeling and idealization",
+        "difficulty": "intermediate",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the assumptions task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q10",
+        "title": "Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "student": "<p>Outline the analysis sequence for comparing the two candidates.</p>",
+        "instructor": "<p>Find W and reactions; calculate A, I, and c; calculate W/A and Mc/I; add compression-side magnitudes; calculate Fy/Ïƒmax and compare with nreq.</p>",
+        "type": "modeling and idealization",
+        "difficulty": "intermediate",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the analysis plan task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q11",
+        "title": "Weight and Moment",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Calculate engine weight and the eccentric bending moment.</p>",
+        "instructor": "<p><em>W</em> = <strong>{{engine_stand_W_N}} N</strong>; <em>M</em> = <strong>{{engine_stand_M_Nm}} NÂ·m</strong>.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the weight and moment task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q12",
+        "title": "Support Reactions",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Use equilibrium to determine the horizontal reaction, vertical reaction, and base reaction moment.</p>",
+        "instructor": "<p><em>R</em><sub>x</sub> = <strong>{{engine_stand_Rx_N}} N</strong>; <em>R</em><sub>y</sub> = <strong>{{engine_stand_Ry_N}} N</strong> upward; base reaction moment = <strong>{{engine_stand_M_Nm}} NÂ·m</strong> counterclockwise.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the support reactions task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q13",
+        "title": "Section Properties",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>For each square tube calculate inner width, A=bÂ²âˆ’(bâˆ’2t)Â², I=[bâ´âˆ’(bâˆ’2t)â´]/12, and c=b/2.</p>",
+        "instructor": "<p>A: inner <strong>{{engine_stand_A_inner_mm}} mm</strong>, A=<strong>{{engine_stand_A_area_mm2}} mmÂ²</strong>, I=<strong>{{engine_stand_A_I_mm4}} mmâ´</strong>. B: inner <strong>{{engine_stand_B_inner_mm}} mm</strong>, A=<strong>{{engine_stand_B_area_mm2}} mmÂ²</strong>, I=<strong>{{engine_stand_B_I_mm4}} mmâ´</strong>.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the section properties task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q14",
+        "title": "Axial Stresses",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Calculate the average compressive stress W/A for each candidate.</p>",
+        "instructor": "<p>A: <strong>{{engine_stand_A_axial_MPa}} MPa</strong>; B: <strong>{{engine_stand_B_axial_MPa}} MPa</strong>.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the axial stresses task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q15",
+        "title": "Bending Stresses",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Convert M to NÂ·mm and calculate the extreme-fiber bending stress Mc/I for each candidate.</p>",
+        "instructor": "<p>A: <strong>{{engine_stand_A_bending_MPa}} MPa</strong>; B: <strong>{{engine_stand_B_bending_MPa}} MPa</strong>.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the bending stresses task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q16",
+        "title": "Combined Stress and Safety",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Calculate the maximum compressive normal stress and yield factor of safety for each candidate. Compare each with the required value.</p>",
+        "instructor": "<p>A: Ïƒmax=<strong>{{engine_stand_A_max_MPa}} MPa</strong>, n=<strong>{{engine_stand_A_fos}}</strong> â€” <strong>{{engine_stand_A_check}}</strong>. B: Ïƒmax=<strong>{{engine_stand_B_max_MPa}} MPa</strong>, n=<strong>{{engine_stand_B_fos}}</strong> â€” <strong>{{engine_stand_B_check}}</strong>.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the combined stress and safety task using a defensible mechanics model."
+        ]
+      },
+      {
+        "id": "q17",
+        "title": "Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Recommend a candidate and explain what additional checks are required before evaluating a complete engine stand.</p>",
+        "instructor": "<p><strong>{{engine_stand_recommendation}}</strong> {{engine_stand_assessment}}</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "engine stand",
+          "combined compression and bending"
+        ],
+        "learningObjectives": [
+          "Complete the recommendation task using a defensible mechanics model."
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "baseline",
+        "title": "Baseline",
+        "description": "Faculty-template baseline values and all questions.",
+        "variables": {},
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-AXIAL-009",
     "slug": "axial-rod-tube-assembly",
     "title": "Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly",

@@ -1,0 +1,22 @@
+---
+title: "Combined Compression and Bending in an Automotive Engine Stand"
+description: "Compare two square hollow-steel columns under eccentric engine weight."
+image: "assets/context-placeholder.png"
+categories: [context-rich, mechanics-of-materials, automotive, combined-loading]
+difficulty: "Intermediate"
+status: "Development - image license TODO"
+problem_id: "MOS-AUTOMOTIVE-ENGINE-001"
+version: "1.0.0"
+---
+
+::: {.callout-warning title="TODO — IMAGE LICENSE"}
+Replace the temporary Amazon product image with a properly licensed photograph or obtain written redistribution permission before public publication. The restricted image is not included. Development reference: <https://www.amazon.com/dp/B0FVXKHCB3> (license unverified).
+:::
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=automotive-engine-stand-combined-loading){.btn .btn-secondary}

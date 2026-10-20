@@ -40,6 +40,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-AUTOMOTIVE-ENGINE-001",
+    "slug": "automotive-engine-stand-combined-loading",
+    "title": "Combined Compression and Bending in an Automotive Engine Stand",
+    "status": "OK",
+    "variables": 11,
+    "questions": 17,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-AXIAL-009",
     "slug": "axial-rod-tube-assembly",
     "title": "Axial Displacement of a Steel Tie-Rod and Aluminum Tube Assembly",

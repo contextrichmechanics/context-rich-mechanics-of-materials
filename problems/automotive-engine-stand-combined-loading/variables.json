@@ -1,0 +1,13 @@
+[
+  {"key":"engine_stand_m_kg","symbol":"m","label":"Assigned engine mass","value":250,"unit":"kg","min":1,"max":1000,"step":1},
+  {"key":"engine_stand_g_m_s2","symbol":"g","label":"Gravitational acceleration","value":9.81,"unit":"m/s^2","min":1,"max":20,"step":0.01},
+  {"key":"engine_stand_e_m","symbol":"e","label":"Horizontal load eccentricity","value":0.30,"unit":"m","min":0.01,"max":2,"step":0.01},
+  {"key":"engine_stand_H_m","symbol":"H","label":"Column height","value":0.85,"unit":"m","min":0.1,"max":3,"step":0.01},
+  {"key":"engine_stand_Fy_MPa","symbol":"F_y","label":"Assigned steel yield strength","value":250,"unit":"MPa","min":50,"max":1000,"step":1},
+  {"key":"engine_stand_E_GPa","symbol":"E","label":"Assigned steel elastic modulus","value":200,"unit":"GPa","min":50,"max":300,"step":1},
+  {"key":"engine_stand_n_req","symbol":"n_req","label":"Required yield factor of safety","value":2.0,"unit":"-","min":1,"max":10,"step":0.1},
+  {"key":"engine_stand_bA_mm","symbol":"b_A","label":"Candidate A outside width","value":50,"unit":"mm","min":10,"max":300,"step":1},
+  {"key":"engine_stand_tA_mm","symbol":"t_A","label":"Candidate A wall thickness","value":2,"unit":"mm","min":0.5,"max":30,"step":0.1},
+  {"key":"engine_stand_bB_mm","symbol":"b_B","label":"Candidate B outside width","value":60,"unit":"mm","min":10,"max":300,"step":1},
+  {"key":"engine_stand_tB_mm","symbol":"t_B","label":"Candidate B wall thickness","value":3,"unit":"mm","min":0.5,"max":30,"step":0.1}
+]

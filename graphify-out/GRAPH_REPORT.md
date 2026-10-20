@@ -1,16 +1,16 @@
-# Graph Report - codex-curved-dinosaur-tail-20261020  (2026-10-20)
+# Graph Report - codex-engine-stand-20261020  (2026-10-20)
 
 ## Corpus Check
-- 432 files · ~3,705,192 words
+- 442 files · ~3,716,862 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1091 nodes · 1042 edges · 146 communities (125 shown, 21 thin omitted)
+- 1152 nodes · 1099 edges · 150 communities (127 shown, 23 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5a8b8562`
+- Built from commit: `4441227b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -157,18 +157,22 @@
 - Concealed Steel Armature for a Sauropod Dinosaur Tail
 - curved-steel-armature-sauropod-tail/instructor-guide.qmd
 - curved-steel-armature-sauropod-tail/_student-problem.qmd
+- 7. Mechanics Analysis Questions
+- automotive-engine-stand-combined-loading/index.qmd
+- automotive-engine-stand-combined-loading/_student-problem.qmd
+- IMAGE_LICENSE_TODO.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
 2. `AI Agent Project Guide` - 19 edges
 3. `Context-Rich Mechanics of Materials` - 14 edges
-4. `escapeHtml()` - 12 edges
+4. `7. Mechanics Analysis Questions` - 13 edges
 5. `escapeHtml()` - 12 edges
-6. `What You Must Do When Invoked` - 12 edges
-7. `qmdDocument()` - 11 edges
-8. `renderBody()` - 10 edges
-9. `/graphify` - 10 edges
-10. `8. Create The Package` - 9 edges
+6. `escapeHtml()` - 12 edges
+7. `What You Must Do When Invoked` - 12 edges
+8. `qmdDocument()` - 11 edges
+9. `renderBody()` - 10 edges
+10. `/graphify` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -176,7 +180,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (146 total, 21 thin omitted)
+## Communities (150 total, 23 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.10
@@ -662,20 +666,28 @@ Nodes (6): Assignment Options, Generated Question Set and Solutions, Instructor 
 Cohesion: 0.40
 Nodes (4): Assigned Mechanics Model, Components and Load Path, Engineering Context, Scope and Provenance
 
+### Community 146 - "7. Mechanics Analysis Questions"
+Cohesion: 0.04
+Nodes (47): 10. Faculty Authoring Guidance, 11. Prompt Format for Automated Problem Generation, 1. Problem Identification and Instructor Setup, 2. System Components, 3. Engineering Context and Main Goal, 4. Context and Mechanics Reasoning Questions, 5. Transition to a Mechanics Model, 6. Instructor Reference Idealization and Input Variables (Instructor Only) (+39 more)
+
+### Community 147 - "automotive-engine-stand-combined-loading/index.qmd"
+Cohesion: 0.25
+Nodes (5): Assignment Options, Generated Questions and Solutions, Instructor Reference Idealization, Model Scope and Value Basis, Purpose
+
 ## Knowledge Gaps
-- **676 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+671 more)
+- **724 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+719 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `AI Agent Project Guide` connect `AI Agent Project Guide` to `6. Mechanics Accuracy Protocol`, `authoring-guide.qmd`, `12. Verification Checklist`, `10. Packet Separation`, `15. Common Failure Modes`, `8. Create The Package`, `4. System Architecture`, `5. Intake And Discovery`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `15. Common Failure Modes` connect `15. Common Failure Modes` to `AI Agent Project Guide`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _676 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _724 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10336817653890824 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**

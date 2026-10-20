@@ -1,0 +1,291 @@
+[
+    {
+        "id":  "q1",
+        "title":  "Engineering Purpose",
+        "section":  "context",
+        "selected":  true,
+        "student":  "\u003cp\u003eWhat is the purpose of an automotive engine stand, and why must its frame resist more than the engine\u0027s vertical weight?\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eIt supports and positions an engine for service. The offset mounting head transmits gravity force and an eccentric moment to the column and base.\u003c/p\u003e",
+        "type":  "context and load-path reasoning",
+        "difficulty":  "introductory",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the engineering purpose task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q2",
+        "title":  "Components",
+        "section":  "context",
+        "selected":  true,
+        "student":  "\u003cp\u003eIdentify the principal load-carrying components from engine to floor.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eEngine â†’ adjustable mounting arms/rotating head â†’ vertical column â†’ column-base joint â†’ wheeled base â†’ casters â†’ floor.\u003c/p\u003e",
+        "type":  "context and load-path reasoning",
+        "difficulty":  "introductory",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the components task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q3",
+        "title":  "Load Path",
+        "section":  "context",
+        "selected":  true,
+        "student":  "\u003cp\u003eTrace the gravity load path and identify where the load becomes eccentric to the column.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eThe engine weight enters the mounting arms and head, whose reach places the line of action a distance e from the column centerline.\u003c/p\u003e",
+        "type":  "context and load-path reasoning",
+        "difficulty":  "introductory",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the load path task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q4",
+        "title":  "Likely Column Loading",
+        "section":  "context",
+        "selected":  true,
+        "student":  "\u003cp\u003ePredict the internal loadings in the vertical column.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eThe idealized column carries axial compression W and bending moment We; the assigned vertical load produces no horizontal reaction.\u003c/p\u003e",
+        "type":  "context and load-path reasoning",
+        "difficulty":  "introductory",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the likely column loading task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q5",
+        "title":  "Critical Location",
+        "section":  "context",
+        "selected":  true,
+        "student":  "\u003cp\u003ePredict where the first-order bending stress is largest.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eThe constant eccentric moment is carried through the column, while the fixed base is the natural evaluation section and connection region.\u003c/p\u003e",
+        "type":  "context and load-path reasoning",
+        "difficulty":  "introductory",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the critical location task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q6",
+        "title":  "Candidate Geometry",
+        "section":  "context",
+        "selected":  true,
+        "student":  "\u003cp\u003eExplain how increasing outside width and wall thickness changes axial and bending resistance.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eBoth increase area; increasing outside width especially increases second moment of area and reduces flexural stress.\u003c/p\u003e",
+        "type":  "context and load-path reasoning",
+        "difficulty":  "introductory",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the candidate geometry task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q7",
+        "title":  "Evidence Limits",
+        "section":  "context",
+        "selected":  true,
+        "student":  "\u003cp\u003eWhich assigned quantities may not be inferred from an engine-stand photograph?\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eMass, eccentricity, dimensions, properties, restraint, and required safety factor are instructional assumptions, not measurements or product specifications.\u003c/p\u003e",
+        "type":  "context and load-path reasoning",
+        "difficulty":  "introductory",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the evidence limits task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q8",
+        "title":  "Idealization",
+        "section":  "transition",
+        "selected":  true,
+        "student":  "\u003cp\u003eDraw a planar idealization showing a fixed-base vertical column, the eccentric engine weight, e, H, and base reactions.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eThe model shows W=mg acting downward at offset e, with Rx=0, Ry=W upward, and a counterclockwise base reaction moment We.\u003c/p\u003e",
+        "type":  "modeling and idealization",
+        "difficulty":  "intermediate",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the idealization task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q9",
+        "title":  "Assumptions",
+        "section":  "transition",
+        "selected":  true,
+        "student":  "\u003cp\u003eState assumptions required for the combined axial-plus-bending model.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eStatic load, prismatic square tube, linear elasticity, small deformation, fixed base, centroidal axial force plus first-order moment, and no buckling, connection, tipping, caster, dynamic, fatigue, or local-stress checks.\u003c/p\u003e",
+        "type":  "modeling and idealization",
+        "difficulty":  "intermediate",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the assumptions task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q10",
+        "title":  "Analysis Plan",
+        "section":  "transition",
+        "selected":  true,
+        "student":  "\u003cp\u003eOutline the analysis sequence for comparing the two candidates.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eFind W and reactions; calculate A, I, and c; calculate W/A and Mc/I; add compression-side magnitudes; calculate Fy/Ïƒmax and compare with nreq.\u003c/p\u003e",
+        "type":  "modeling and idealization",
+        "difficulty":  "intermediate",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the analysis plan task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q11",
+        "title":  "Weight and Moment",
+        "section":  "analysis",
+        "selected":  true,
+        "student":  "\u003cp\u003eCalculate engine weight and the eccentric bending moment.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003e\u003cem\u003eW\u003c/em\u003e = \u003cstrong\u003e{{engine_stand_W_N}} N\u003c/strong\u003e; \u003cem\u003eM\u003c/em\u003e = \u003cstrong\u003e{{engine_stand_M_Nm}} NÂ·m\u003c/strong\u003e.\u003c/p\u003e",
+        "type":  "mechanics calculation and judgment",
+        "difficulty":  "intermediate",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the weight and moment task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q12",
+        "title":  "Support Reactions",
+        "section":  "analysis",
+        "selected":  true,
+        "student":  "\u003cp\u003eUse equilibrium to determine the horizontal reaction, vertical reaction, and base reaction moment.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003e\u003cem\u003eR\u003c/em\u003e\u003csub\u003ex\u003c/sub\u003e = \u003cstrong\u003e{{engine_stand_Rx_N}} N\u003c/strong\u003e; \u003cem\u003eR\u003c/em\u003e\u003csub\u003ey\u003c/sub\u003e = \u003cstrong\u003e{{engine_stand_Ry_N}} N\u003c/strong\u003e upward; base reaction moment = \u003cstrong\u003e{{engine_stand_M_Nm}} NÂ·m\u003c/strong\u003e counterclockwise.\u003c/p\u003e",
+        "type":  "mechanics calculation and judgment",
+        "difficulty":  "intermediate",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the support reactions task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q13",
+        "title":  "Section Properties",
+        "section":  "analysis",
+        "selected":  true,
+        "student":  "\u003cp\u003eFor each square tube calculate inner width, A=bÂ²âˆ’(bâˆ’2t)Â², I=[bâ´âˆ’(bâˆ’2t)â´]/12, and c=b/2.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eA: inner \u003cstrong\u003e{{engine_stand_A_inner_mm}} mm\u003c/strong\u003e, A=\u003cstrong\u003e{{engine_stand_A_area_mm2}} mmÂ²\u003c/strong\u003e, I=\u003cstrong\u003e{{engine_stand_A_I_mm4}} mmâ´\u003c/strong\u003e. B: inner \u003cstrong\u003e{{engine_stand_B_inner_mm}} mm\u003c/strong\u003e, A=\u003cstrong\u003e{{engine_stand_B_area_mm2}} mmÂ²\u003c/strong\u003e, I=\u003cstrong\u003e{{engine_stand_B_I_mm4}} mmâ´\u003c/strong\u003e.\u003c/p\u003e",
+        "type":  "mechanics calculation and judgment",
+        "difficulty":  "intermediate",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the section properties task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q14",
+        "title":  "Axial Stresses",
+        "section":  "analysis",
+        "selected":  true,
+        "student":  "\u003cp\u003eCalculate the average compressive stress W/A for each candidate.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eA: \u003cstrong\u003e{{engine_stand_A_axial_MPa}} MPa\u003c/strong\u003e; B: \u003cstrong\u003e{{engine_stand_B_axial_MPa}} MPa\u003c/strong\u003e.\u003c/p\u003e",
+        "type":  "mechanics calculation and judgment",
+        "difficulty":  "intermediate",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the axial stresses task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q15",
+        "title":  "Bending Stresses",
+        "section":  "analysis",
+        "selected":  true,
+        "student":  "\u003cp\u003eConvert M to NÂ·mm and calculate the extreme-fiber bending stress Mc/I for each candidate.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eA: \u003cstrong\u003e{{engine_stand_A_bending_MPa}} MPa\u003c/strong\u003e; B: \u003cstrong\u003e{{engine_stand_B_bending_MPa}} MPa\u003c/strong\u003e.\u003c/p\u003e",
+        "type":  "mechanics calculation and judgment",
+        "difficulty":  "intermediate",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the bending stresses task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q16",
+        "title":  "Combined Stress and Safety",
+        "section":  "analysis",
+        "selected":  true,
+        "student":  "\u003cp\u003eCalculate the maximum compressive normal stress and yield factor of safety for each candidate. Compare each with the required value.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003eA: Ïƒmax=\u003cstrong\u003e{{engine_stand_A_max_MPa}} MPa\u003c/strong\u003e, n=\u003cstrong\u003e{{engine_stand_A_fos}}\u003c/strong\u003e â€” \u003cstrong\u003e{{engine_stand_A_check}}\u003c/strong\u003e. B: Ïƒmax=\u003cstrong\u003e{{engine_stand_B_max_MPa}} MPa\u003c/strong\u003e, n=\u003cstrong\u003e{{engine_stand_B_fos}}\u003c/strong\u003e â€” \u003cstrong\u003e{{engine_stand_B_check}}\u003c/strong\u003e.\u003c/p\u003e",
+        "type":  "mechanics calculation and judgment",
+        "difficulty":  "intermediate",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the combined stress and safety task using a defensible mechanics model."
+                               ]
+    },
+    {
+        "id":  "q17",
+        "title":  "Recommendation",
+        "section":  "analysis",
+        "selected":  true,
+        "student":  "\u003cp\u003eRecommend a candidate and explain what additional checks are required before evaluating a complete engine stand.\u003c/p\u003e",
+        "instructor":  "\u003cp\u003e\u003cstrong\u003e{{engine_stand_recommendation}}\u003c/strong\u003e {{engine_stand_assessment}}\u003c/p\u003e",
+        "type":  "mechanics calculation and judgment",
+        "difficulty":  "intermediate",
+        "tags":  [
+                     "engine stand",
+                     "combined compression and bending"
+                 ],
+        "learningObjectives":  [
+                                   "Complete the recommendation task using a defensible mechanics model."
+                               ]
+    }
+]

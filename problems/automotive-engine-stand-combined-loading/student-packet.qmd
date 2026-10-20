@@ -1,0 +1,12 @@
+---
+title: "Student Packet - Combined Compression and Bending in an Automotive Engine Stand"
+format: {html: {toc: true, number-sections: true}}
+---
+
+{{< include _student-problem.qmd >}}
+
+```{=html}
+<div id="automotive-engine-stand-combined-loading-student-questions"></div>
+<script src="../../data/problem-catalog.js"></script><script src="../../scripts/packet-renderer.js"></script>
+<script>document.addEventListener("DOMContentLoaded",()=>window.renderProblemPacket({slug:"automotive-engine-stand-combined-loading",targetId:"automotive-engine-stand-combined-loading-student-questions",type:"student"}));</script>
+```
