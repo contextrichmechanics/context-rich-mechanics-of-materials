@@ -1,6 +1,7 @@
 {
   "0": "render-assignment.mjs",
   "1": "authoring-guide.qmd",
+  "2": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
   "3": "Supplemental Instructor Background",
   "4": "What You Must Do When Invoked",
   "5": "packet-renderer.js",
@@ -140,5 +141,6 @@
   "139": "ceiling-mounted-projector-support-axial-loading/instructor-guide.qmd",
   "140": "Axial Stress and Elongation of a Ceiling-Mounted Projector Support",
   "141": "steel-frame-chair-accidental-fall-loading/instructor-guide.qmd",
-  "142": "Steel-Frame Chair - Accidental Fall Loading"
+  "142": "Steel-Frame Chair - Accidental Fall Loading",
+  "143": "Concealed Steel Armature for a Sauropod Dinosaur Tail"
 }

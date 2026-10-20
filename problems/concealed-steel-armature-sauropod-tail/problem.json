@@ -1,0 +1,22 @@
+{
+  "id": "MOS-CONCEALED-STEEL-AR-001",
+  "slug": "concealed-steel-armature-sauropod-tail",
+  "title": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+  "studentDocumentTitle": "Student Packet - Concealed Steel Armature for a Sauropod Dinosaur Tail",
+  "instructorDocumentTitle": "Instructor Guide - Concealed Steel Armature for a Sauropod Dinosaur Tail",
+  "summary": "Compare two instructor-assigned rectangular hollow steel armatures for bending strength, self-weight, and cantilever tip deflection in a simplified museum-tail support model.",
+  "textbookChapters": ["Internal loadings in structural members", "Centroidal moment of inertia", "The flexure formula", "Elastic curve for beams", "Factor of safety"],
+  "derivedPlaceholders": [
+    "armature_tA_mm", "armature_AA_mm2", "armature_AA_m2", "armature_IA_mm4", "armature_IA_m4", "armature_wsA_N_m", "armature_wA_N_m", "armature_VA_N", "armature_MA_Nm", "armature_sigmaA_MPa", "armature_nA", "armature_deltaA_mm", "armature_strengthA", "armature_deflectionA", "armature_envelopeA", "armature_overallA",
+    "armature_tB_mm", "armature_AB_mm2", "armature_AB_m2", "armature_IB_mm4", "armature_IB_m4", "armature_wsB_N_m", "armature_wB_N_m", "armature_VB_N", "armature_MB_Nm", "armature_sigmaB_MPa", "armature_nB", "armature_deltaB_mm", "armature_strengthB", "armature_deflectionB", "armature_envelopeB", "armature_overallB",
+    "armature_recommendation", "armature_engineering_assessment"
+  ],
+  "image": "assets/dinosaur-tail-industry-context.png",
+  "imageAlt": "Museum gallery containing mounted dinosaur skeletons; the elevated tail of the background Diplodocus provides application context.",
+  "imageAttribution": "Cropped and resized from ‘Diplodocus tail.jpg’ by Lee Ruk (Flickr user gardener41), Wikimedia Commons, CC BY-SA 2.0. The supplied derivative changes the framing and file format. https://commons.wikimedia.org/wiki/File:Diplodocus_tail.jpg",
+  "idealizedImage": "assets/dinosaur-tail-instructor-reference.png",
+  "idealizedImageAlt": "Instructor-only reference idealization of a straight 4.00 m fixed-free armature carrying a uniform downward load equal to exhibit load plus steel self-weight.",
+  "source": "index.html",
+  "problemStatement": "<p>You are assisting a museum exhibit engineering team preparing a mounted sauropod skeleton. For a preliminary Mechanics of Materials assessment, a tail-support segment is represented as a straight horizontal steel cantilever of length <strong>{{armature_L_m}} {{armature_L_m_unit}}</strong>, rigidly fixed to an equivalent pelvis-region mounting frame.</p><p>The supported exhibit elements apply an instructor-assigned uniform downward load of <strong>{{armature_we_N_m}} {{armature_we_N_m_unit}}</strong>, excluding the steel armature's self-weight. Compare two instructor-assigned rectangular hollow sections. Candidate A is {{armature_HA_mm}} × {{armature_BA_mm}} × {{armature_tnomA_mm}} mm nominal; Candidate B is {{armature_HB_mm}} × {{armature_BB_mm}} × {{armature_tnomB_mm}} mm nominal. Use the simplified sharp-corner design thickness <em>t</em> = {{armature_t_factor}}<em>t</em><sub>nom</sub>. These are teaching geometries, not dimensions inferred from the photograph or verified stocked products.</p>",
+  "engineeringGoal": "<p>Determine which candidate, if either, fits within the assigned concealment envelope, meets the minimum bending-yield factor of safety, and limits downward free-end deflection to the assigned value after including steel self-weight. Identify the governing response and make a preliminary mechanics-based recommendation without presenting it as certification of a museum installation.</p>"
+}

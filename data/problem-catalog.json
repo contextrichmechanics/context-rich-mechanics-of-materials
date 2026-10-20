@@ -7053,6 +7053,592 @@
     ]
   },
   {
+    "id": "MOS-CONCEALED-STEEL-AR-001",
+    "slug": "concealed-steel-armature-sauropod-tail",
+    "title": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+    "studentDocumentTitle": "Student Packet - Concealed Steel Armature for a Sauropod Dinosaur Tail",
+    "instructorDocumentTitle": "Instructor Guide - Concealed Steel Armature for a Sauropod Dinosaur Tail",
+    "summary": "Compare two instructor-assigned rectangular hollow steel armatures for bending strength, self-weight, and cantilever tip deflection in a simplified museum-tail support model.",
+    "textbookChapters": [
+      "Internal loadings in structural members",
+      "Centroidal moment of inertia",
+      "The flexure formula",
+      "Elastic curve for beams",
+      "Factor of safety"
+    ],
+    "derivedPlaceholders": [
+      "armature_tA_mm",
+      "armature_AA_mm2",
+      "armature_AA_m2",
+      "armature_IA_mm4",
+      "armature_IA_m4",
+      "armature_wsA_N_m",
+      "armature_wA_N_m",
+      "armature_VA_N",
+      "armature_MA_Nm",
+      "armature_sigmaA_MPa",
+      "armature_nA",
+      "armature_deltaA_mm",
+      "armature_strengthA",
+      "armature_deflectionA",
+      "armature_envelopeA",
+      "armature_overallA",
+      "armature_tB_mm",
+      "armature_AB_mm2",
+      "armature_AB_m2",
+      "armature_IB_mm4",
+      "armature_IB_m4",
+      "armature_wsB_N_m",
+      "armature_wB_N_m",
+      "armature_VB_N",
+      "armature_MB_Nm",
+      "armature_sigmaB_MPa",
+      "armature_nB",
+      "armature_deltaB_mm",
+      "armature_strengthB",
+      "armature_deflectionB",
+      "armature_envelopeB",
+      "armature_overallB",
+      "armature_recommendation",
+      "armature_engineering_assessment"
+    ],
+    "image": "problems/concealed-steel-armature-sauropod-tail/assets/dinosaur-tail-industry-context.png",
+    "imageAlt": "Museum gallery containing mounted dinosaur skeletons; the elevated tail of the background Diplodocus provides application context.",
+    "imageAttribution": "Cropped and resized from ‘Diplodocus tail.jpg’ by Lee Ruk (Flickr user gardener41), Wikimedia Commons, CC BY-SA 2.0. The supplied derivative changes the framing and file format. https://commons.wikimedia.org/wiki/File:Diplodocus_tail.jpg",
+    "idealizedImage": "problems/concealed-steel-armature-sauropod-tail/assets/dinosaur-tail-instructor-reference.png",
+    "idealizedImageAlt": "Instructor-only reference idealization of a straight 4.00 m fixed-free armature carrying a uniform downward load equal to exhibit load plus steel self-weight.",
+    "source": "problems/concealed-steel-armature-sauropod-tail/index.html",
+    "problemStatement": "<p>You are assisting a museum exhibit engineering team preparing a mounted sauropod skeleton. For a preliminary Mechanics of Materials assessment, a tail-support segment is represented as a straight horizontal steel cantilever of length <strong>{{armature_L_m}} {{armature_L_m_unit}}</strong>, rigidly fixed to an equivalent pelvis-region mounting frame.</p><p>The supported exhibit elements apply an instructor-assigned uniform downward load of <strong>{{armature_we_N_m}} {{armature_we_N_m_unit}}</strong>, excluding the steel armature's self-weight. Compare two instructor-assigned rectangular hollow sections. Candidate A is {{armature_HA_mm}} × {{armature_BA_mm}} × {{armature_tnomA_mm}} mm nominal; Candidate B is {{armature_HB_mm}} × {{armature_BB_mm}} × {{armature_tnomB_mm}} mm nominal. Use the simplified sharp-corner design thickness <em>t</em> = {{armature_t_factor}}<em>t</em><sub>nom</sub>. These are teaching geometries, not dimensions inferred from the photograph or verified stocked products.</p>",
+    "engineeringGoal": "<p>Determine which candidate, if either, fits within the assigned concealment envelope, meets the minimum bending-yield factor of safety, and limits downward free-end deflection to the assigned value after including steel self-weight. Identify the governing response and make a preliminary mechanics-based recommendation without presenting it as certification of a museum installation.</p>",
+    "supplementaryImages": [],
+    "variables": [
+      {
+        "key": "armature_L_m",
+        "symbol": "L",
+        "label": "Equivalent cantilever span",
+        "value": 4,
+        "unit": "m",
+        "min": 0.5,
+        "max": 10,
+        "step": 0.05
+      },
+      {
+        "key": "armature_we_N_m",
+        "symbol": "w_e",
+        "label": "Exhibit load excluding steel self-weight",
+        "value": 150,
+        "unit": "N/m",
+        "min": 1,
+        "max": 2000,
+        "step": 1
+      },
+      {
+        "key": "armature_E_GPa",
+        "symbol": "E",
+        "label": "Steel elastic modulus",
+        "value": 200,
+        "unit": "GPa",
+        "min": 100,
+        "max": 250,
+        "step": 1
+      },
+      {
+        "key": "armature_rho_kg_m3",
+        "symbol": "rho",
+        "label": "Steel mass density",
+        "value": 7850,
+        "unit": "kg/m^3",
+        "min": 1000,
+        "max": 10000,
+        "step": 10
+      },
+      {
+        "key": "armature_g_m_s2",
+        "symbol": "g",
+        "label": "Gravitational acceleration",
+        "value": 9.81,
+        "unit": "m/s^2",
+        "min": 1,
+        "max": 20,
+        "step": 0.01
+      },
+      {
+        "key": "armature_Fy_MPa",
+        "symbol": "F_y",
+        "label": "Assigned steel yield strength",
+        "value": 345,
+        "unit": "MPa",
+        "min": 50,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "key": "armature_n_req",
+        "symbol": "n_req",
+        "label": "Required bending-yield factor of safety",
+        "value": 2,
+        "unit": "-",
+        "min": 1,
+        "max": 10,
+        "step": 0.1
+      },
+      {
+        "key": "armature_delta_allow_mm",
+        "symbol": "delta_allow",
+        "label": "Allowable downward tip deflection",
+        "value": 20,
+        "unit": "mm",
+        "min": 1,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "key": "armature_H_env_mm",
+        "symbol": "H_env",
+        "label": "Concealment-envelope height",
+        "value": 150,
+        "unit": "mm",
+        "min": 1,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "key": "armature_B_env_mm",
+        "symbol": "B_env",
+        "label": "Concealment-envelope width",
+        "value": 80,
+        "unit": "mm",
+        "min": 1,
+        "max": 1000,
+        "step": 1
+      },
+      {
+        "key": "armature_HA_mm",
+        "symbol": "H_A",
+        "label": "Candidate A outside height",
+        "value": 100,
+        "unit": "mm",
+        "min": 10,
+        "max": 500,
+        "step": 1
+      },
+      {
+        "key": "armature_BA_mm",
+        "symbol": "B_A",
+        "label": "Candidate A outside width",
+        "value": 50,
+        "unit": "mm",
+        "min": 10,
+        "max": 500,
+        "step": 1
+      },
+      {
+        "key": "armature_tnomA_mm",
+        "symbol": "t_nom,A",
+        "label": "Candidate A nominal wall thickness",
+        "value": 4,
+        "unit": "mm",
+        "min": 0.5,
+        "max": 30,
+        "step": 0.1
+      },
+      {
+        "key": "armature_HB_mm",
+        "symbol": "H_B",
+        "label": "Candidate B outside height",
+        "value": 125,
+        "unit": "mm",
+        "min": 10,
+        "max": 500,
+        "step": 1
+      },
+      {
+        "key": "armature_BB_mm",
+        "symbol": "B_B",
+        "label": "Candidate B outside width",
+        "value": 60,
+        "unit": "mm",
+        "min": 10,
+        "max": 500,
+        "step": 1
+      },
+      {
+        "key": "armature_tnomB_mm",
+        "symbol": "t_nom,B",
+        "label": "Candidate B nominal wall thickness",
+        "value": 5,
+        "unit": "mm",
+        "min": 0.5,
+        "max": 30,
+        "step": 0.1
+      },
+      {
+        "key": "armature_t_factor",
+        "symbol": "k_t",
+        "label": "Nominal-to-design thickness factor",
+        "value": 0.93,
+        "unit": "-",
+        "min": 0.5,
+        "max": 1,
+        "step": 0.01
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function",
+        "section": "context",
+        "selected": true,
+        "type": "context interpretation",
+        "difficulty": "introductory",
+        "tags": [
+          "museum exhibit",
+          "structural function",
+          "concealment"
+        ],
+        "learningObjectives": [
+          "Relate the museum application to the armature's structural function."
+        ],
+        "student": "<p>What is the structural purpose of the concealed armature, and why is appearance a design constraint?</p>",
+        "instructor": "<p>The armature supports the mounted tail elements and transfers their gravity load to the exhibit mounting frame. It must remain visually unobtrusive so the support does not distract from the displayed skeleton.</p>"
+      },
+      {
+        "id": "q2",
+        "title": "External Loads",
+        "section": "context",
+        "selected": true,
+        "type": "load identification",
+        "difficulty": "introductory",
+        "tags": [
+          "distributed load",
+          "self-weight",
+          "gravity"
+        ],
+        "learningObjectives": [
+          "Identify both distributed gravity-load components."
+        ],
+        "student": "<p>Identify the supported exhibit load and armature self-weight. State their directions and how they enter the beam model.</p>",
+        "instructor": "<p>Both act vertically downward and are modeled as uniform loads. The assigned exhibit load is independent of section choice; steel self-weight is calculated from density, gravity, and section area, then added to the exhibit load.</p>"
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "type": "boundary conditions",
+        "difficulty": "introductory",
+        "tags": [
+          "fixed support",
+          "restraints",
+          "anchorage"
+        ],
+        "learningObjectives": [
+          "Describe the equivalent fixed support."
+        ],
+        "student": "<p>Locate the assumed fixed support and explain what translations and rotation it restrains.</p>",
+        "instructor": "<p>The equivalent fixed support is at the pelvis-region mounting frame. In the two-dimensional beam idealization it restrains horizontal translation, vertical translation, and rotation.</p>"
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "type": "load path",
+        "difficulty": "introductory",
+        "tags": [
+          "tail elements",
+          "armature",
+          "foundation"
+        ],
+        "learningObjectives": [
+          "Trace force transfer through the exhibit system."
+        ],
+        "student": "<p>Trace the load path from the tail elements through the armature and anchorage to the museum support structure and foundation. Identify the principal internal actions in the armature.</p>",
+        "instructor": "<p>Tail elements &rarr; concealed armature &rarr; pelvis-region anchorage &rarr; primary exhibit support &rarr; foundation. The simplified armature carries transverse shear and bending moment.</p>"
+      },
+      {
+        "id": "q5",
+        "title": "Critical Location",
+        "section": "context",
+        "selected": true,
+        "type": "mechanics reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "maximum shear",
+          "maximum moment",
+          "cantilever"
+        ],
+        "learningObjectives": [
+          "Identify the critical cantilever location."
+        ],
+        "student": "<p>Where do the maximum shear-force and bending-moment magnitudes occur in the idealized cantilever?</p>",
+        "instructor": "<p>Both maximum magnitudes occur at the fixed support. The bending stress is therefore evaluated at that section.</p>"
+      },
+      {
+        "id": "q6",
+        "title": "Mechanical Response",
+        "section": "context",
+        "selected": true,
+        "type": "mechanics selection",
+        "difficulty": "introductory",
+        "tags": [
+          "yield",
+          "deflection",
+          "serviceability"
+        ],
+        "learningObjectives": [
+          "Distinguish strength and serviceability checks."
+        ],
+        "student": "<p>Explain why both bending yield and elastic tip deflection must be checked, and which may govern a visually constrained exhibit.</p>",
+        "instructor": "<p>Yield is a strength limit, while deflection is a serviceability and appearance limit. A section can remain far below yield yet deflect too much; that is the baseline outcome for Candidate A.</p>"
+      },
+      {
+        "id": "q7",
+        "title": "Relevant Parameters",
+        "section": "context",
+        "selected": true,
+        "type": "parameter identification",
+        "difficulty": "introductory",
+        "tags": [
+          "beam parameters",
+          "section properties",
+          "material properties"
+        ],
+        "learningObjectives": [
+          "Identify parameters controlling stress and deflection."
+        ],
+        "student": "<p>Identify how <em>L</em>, <em>w</em>, <em>E</em>, <em>F</em><sub>y</sub>, <em>H</em>, <em>B</em>, <em>t</em>, and <em>I</em> influence the bending-stress and deflection checks.</p>",
+        "instructor": "<p>For the uniform-load cantilever, moment varies with <em>wL</em><sup>2</sup>, stress varies with <em>Mc/I</em>, and tip deflection varies with <em>wL</em><sup>4</sup>/(<em>EI</em>). Section dimensions determine area, self-weight, <em>I</em>, and <em>c</em>; yield strength controls the strength margin.</p>"
+      },
+      {
+        "id": "q8",
+        "title": "Student-Generated Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "type": "free-body diagram",
+        "difficulty": "intermediate",
+        "tags": [
+          "cantilever",
+          "distributed load",
+          "free-body diagram"
+        ],
+        "learningObjectives": [
+          "Translate the application into a beam model."
+        ],
+        "gradingNotes": "<p>Do not show students the instructor reference image until after this modeling task.</p>",
+        "student": "<p>Sketch the armature as a horizontal cantilever with fixed and free ends. Show the exhibit load and steel self-weight separately (or combine them after calculating self-weight), support reactions, coordinate, and cross-section orientation. Do not infer dimensions from the photograph.</p>",
+        "instructor": "<p>A complete model shows a straight fixed-free beam, downward uniform exhibit and self-weight loads, a vertical fixed-end reaction and resisting moment, and the rectangular tube with <em>H</em> vertical for strong-axis bending.</p>"
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "type": "assumptions",
+        "difficulty": "intermediate",
+        "tags": [
+          "linear elasticity",
+          "small deflection",
+          "model limitations"
+        ],
+        "learningObjectives": [
+          "State the assumptions defining the teaching model."
+        ],
+        "student": "<p>State the assumptions required to reduce the museum exhibit to the assigned beam model, and explain how they limit real-world applicability.</p>",
+        "instructor": "<p>Uniform static gravity loading; straight prismatic armature; ideal fixed support; strong-axis planar bending; linear elasticity and small deflection; constant <em>E</em>; sharp-corner hollow-section approximation; self-weight included. Torsion, local buckling, lateral instability, joint flexibility, connection stresses, visitor impact, vibration, fatigue, construction loads, and detailed bone/cradle load paths are excluded.</p>"
+      },
+      {
+        "id": "q10",
+        "title": "Mechanics Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "type": "analysis planning",
+        "difficulty": "intermediate",
+        "tags": [
+          "section properties",
+          "equilibrium",
+          "design checks"
+        ],
+        "learningObjectives": [
+          "Plan the comparison before calculating."
+        ],
+        "student": "<p>Outline the calculation sequence needed to compare the two candidates and make a recommendation.</p>",
+        "instructor": "<p>For each candidate: calculate design thickness, area, and strong-axis <em>I</em>; calculate steel self-weight and total distributed load; solve fixed-end shear and moment; calculate bending stress, yield factor of safety, and tip deflection; check envelope, strength, and deflection; compare overall outcomes.</p>"
+      },
+      {
+        "id": "q11",
+        "title": "Boundary Conditions and Constraint Loads",
+        "section": "analysis",
+        "selected": true,
+        "type": "boundary-condition interpretation",
+        "difficulty": "intermediate",
+        "tags": [
+          "fixed end",
+          "reaction force",
+          "reaction moment"
+        ],
+        "learningObjectives": [
+          "Interpret the instructor reference model."
+        ],
+        "student": "<p>Using the instructor reference idealization, identify the fixed-end constraints and unknown reaction components. Why is the horizontal reaction zero for the assigned load case?</p>",
+        "instructor": "<p>The fixed end supplies vertical reaction <em>V</em><sub>0</sub> and reaction moment <em>M</em><sub>0</sub>. A horizontal reaction is available as a constraint but equals zero because the assigned loading has no horizontal component.</p>"
+      },
+      {
+        "id": "q12",
+        "title": "Section Properties and Self-Weight",
+        "section": "analysis",
+        "selected": true,
+        "type": "section-property calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "rectangular hollow section",
+          "area",
+          "self-weight"
+        ],
+        "learningObjectives": [
+          "Calculate design thickness, area, inertia, and self-weight."
+        ],
+        "student": "<p>For each candidate use <em>t</em> = {{armature_t_factor}}<em>t</em><sub>nom</sub>. Calculate area <em>A</em> = <em>BH</em> − (<em>B</em> − 2<em>t</em>)(<em>H</em> − 2<em>t</em>), strong-axis <em>I</em>, steel self-weight <em>w</em><sub>s</sub> = &rho;<em>gA</em>, and total load <em>w</em> = <em>w</em><sub>e</sub> + <em>w</em><sub>s</sub>.</p>",
+        "instructor": "<p>Candidate A: <em>t</em> = <strong>{{armature_tA_mm}} mm</strong>, <em>A</em> = <strong>{{armature_AA_mm2}} mm<sup>2</sup></strong>, <em>I</em> = <strong>{{armature_IA_mm4}} mm<sup>4</sup></strong>, <em>w</em><sub>s</sub> = <strong>{{armature_wsA_N_m}} N/m</strong>, total <em>w</em> = <strong>{{armature_wA_N_m}} N/m</strong>. Candidate B: <em>t</em> = <strong>{{armature_tB_mm}} mm</strong>, <em>A</em> = <strong>{{armature_AB_mm2}} mm<sup>2</sup></strong>, <em>I</em> = <strong>{{armature_IB_mm4}} mm<sup>4</sup></strong>, <em>w</em><sub>s</sub> = <strong>{{armature_wsB_N_m}} N/m</strong>, total <em>w</em> = <strong>{{armature_wB_N_m}} N/m</strong>.</p>"
+      },
+      {
+        "id": "q13",
+        "title": "Fixed-End Reactions",
+        "section": "analysis",
+        "selected": true,
+        "type": "reaction calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "equilibrium",
+          "support shear",
+          "fixed-end moment"
+        ],
+        "learningObjectives": [
+          "Apply cantilever equilibrium under uniform load."
+        ],
+        "student": "<p>For each candidate calculate the vertical reaction <em>V</em><sub>0</sub> = <em>wL</em> and fixed-end moment magnitude <em>M</em><sub>0</sub> = <em>wL</em><sup>2</sup>/2.</p>",
+        "instructor": "<p>Candidate A: <em>V</em><sub>0</sub> = <strong>{{armature_VA_N}} N</strong>, |<em>M</em><sub>0</sub>| = <strong>{{armature_MA_Nm}} N&middot;m</strong>. Candidate B: <em>V</em><sub>0</sub> = <strong>{{armature_VB_N}} N</strong>, |<em>M</em><sub>0</sub>| = <strong>{{armature_MB_Nm}} N&middot;m</strong>.</p>"
+      },
+      {
+        "id": "q14",
+        "title": "Elastic Tip Deflection",
+        "section": "analysis",
+        "selected": true,
+        "type": "deflection calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "cantilever deflection",
+          "flexural rigidity",
+          "serviceability"
+        ],
+        "learningObjectives": [
+          "Evaluate serviceability for both candidates."
+        ],
+        "student": "<p>Calculate downward free-end deflection &delta; = <em>wL</em><sup>4</sup>/(8<em>EI</em>) for both candidates and compare with &delta;<sub>allow</sub> = {{armature_delta_allow_mm}} mm.</p>",
+        "instructor": "<p>Candidate A: &delta; = <strong>{{armature_deltaA_mm}} mm</strong> — <strong>{{armature_deflectionA}}</strong>. Candidate B: &delta; = <strong>{{armature_deltaB_mm}} mm</strong> — <strong>{{armature_deflectionB}}</strong>.</p>"
+      },
+      {
+        "id": "q15",
+        "title": "Stiffness-Based Modification",
+        "section": "analysis",
+        "selected": true,
+        "type": "sensitivity reasoning",
+        "difficulty": "intermediate",
+        "tags": [
+          "section height",
+          "second moment of area",
+          "self-weight"
+        ],
+        "learningObjectives": [
+          "Explain a mechanics-based stiffness modification."
+        ],
+        "student": "<p>If a candidate fails deflection, explain how increasing section height or <em>I</em> could improve stiffness. Include the counteracting effect of increased self-weight.</p>",
+        "instructor": "<p>Increasing section height is generally efficient because strong-axis <em>I</em> grows rapidly with height, reducing deflection. Added material also increases area and self-weight, so the benefit must be evaluated using the updated total load rather than holding <em>w</em> fixed.</p>"
+      },
+      {
+        "id": "q16",
+        "title": "Bending Stress and Yield Margin",
+        "section": "analysis",
+        "selected": true,
+        "type": "strength calculation",
+        "difficulty": "intermediate",
+        "tags": [
+          "flexure formula",
+          "factor of safety",
+          "yield"
+        ],
+        "learningObjectives": [
+          "Evaluate bending strength for both candidates."
+        ],
+        "student": "<p>For each candidate calculate maximum elastic flexural stress &sigma;<sub>max</sub> = <em>M</em><sub>0</sub>(<em>H</em>/2)/<em>I</em> and bending-yield factor of safety <em>n</em> = <em>F</em><sub>y</sub>/&sigma;<sub>max</sub>. Compare with <em>n</em><sub>req</sub> = {{armature_n_req}}.</p>",
+        "instructor": "<p>Candidate A: &sigma;<sub>max</sub> = <strong>{{armature_sigmaA_MPa}} MPa</strong>, <em>n</em> = <strong>{{armature_nA}}</strong> — <strong>{{armature_strengthA}}</strong>. Candidate B: &sigma;<sub>max</sub> = <strong>{{armature_sigmaB_MPa}} MPa</strong>, <em>n</em> = <strong>{{armature_nB}}</strong> — <strong>{{armature_strengthB}}</strong>.</p>"
+      },
+      {
+        "id": "q17",
+        "title": "Engineering Assessment and Recommendation",
+        "section": "analysis",
+        "selected": true,
+        "type": "engineering judgment",
+        "difficulty": "intermediate",
+        "tags": [
+          "concealment envelope",
+          "governing criterion",
+          "recommendation"
+        ],
+        "learningObjectives": [
+          "Integrate strength, serviceability, geometry, and limitations."
+        ],
+        "student": "<p>Compare strength, deflection, and the {{armature_H_env_mm}} × {{armature_B_env_mm}} mm concealment envelope. Recommend Candidate A or B, identify the governing criterion, and state at least two limitations of the model. Do not present the result as certification of a museum installation.</p>",
+        "instructor": "<p>{{armature_engineering_assessment}}</p>"
+      }
+    ],
+    "variants": [
+      {
+        "id": "section-a",
+        "title": "Section A baseline",
+        "description": "Baseline museum-tail armature comparison from the completed faculty template.",
+        "variables": {
+          "armature_L_m": 4,
+          "armature_we_N_m": 150,
+          "armature_E_GPa": 200,
+          "armature_rho_kg_m3": 7850,
+          "armature_g_m_s2": 9.81,
+          "armature_Fy_MPa": 345,
+          "armature_n_req": 2,
+          "armature_delta_allow_mm": 20,
+          "armature_H_env_mm": 150,
+          "armature_B_env_mm": 80,
+          "armature_HA_mm": 100,
+          "armature_BA_mm": 50,
+          "armature_tnomA_mm": 4,
+          "armature_HB_mm": 125,
+          "armature_BB_mm": 60,
+          "armature_tnomB_mm": 5,
+          "armature_t_factor": 0.93
+        },
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-END-MILLING-COMBIN-001",
     "slug": "end-milling-combined-bending-torsion",
     "title": "End Milling — Combined Bending and Torsion of an End Mill",

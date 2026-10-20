@@ -1,0 +1,24 @@
+---
+title: "Concealed Steel Armature for a Sauropod Dinosaur Tail"
+description: "Compare two instructor-assigned rectangular hollow steel armatures for bending strength, self-weight, and cantilever tip deflection in a simplified museum-tail support model."
+image: "assets/dinosaur-tail-industry-context.png"
+categories: [context-rich, mechanics-of-materials, museum engineering, beam deflection]
+mechanics_concepts: [distributed load, cantilever beam, bending stress, beam deflection, factor of safety]
+course_topics: [beam bending, elastic deflection, section properties, engineering design checks]
+textbook_chapters: [Internal loadings in structural members, Centroidal moment of inertia, The flexure formula, Elastic curve for beams, Factor of safety]
+problem_types: [load-path analysis, free-body diagram, section-property calculation, beam analysis, strength and serviceability comparison]
+competencies: [load-path reasoning, beam idealization, equilibrium, section properties, flexure formula, elastic deflection, engineering judgment]
+industries: [museums, exhibit engineering, structural support systems]
+difficulty: "Intermediate"
+status: "Published"
+problem_id: "MOS-CONCEALED-STEEL-AR-001"
+version: "1.0.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=concealed-steel-armature-sauropod-tail){.btn .btn-secondary}

@@ -1,0 +1,7 @@
+{
+  "id": "section-a",
+  "title": "Section A baseline",
+  "description": "Baseline museum-tail armature comparison from the completed faculty template.",
+  "variables": {"armature_L_m":4.00,"armature_we_N_m":150,"armature_E_GPa":200,"armature_rho_kg_m3":7850,"armature_g_m_s2":9.81,"armature_Fy_MPa":345,"armature_n_req":2.0,"armature_delta_allow_mm":20,"armature_H_env_mm":150,"armature_B_env_mm":80,"armature_HA_mm":100,"armature_BA_mm":50,"armature_tnomA_mm":4,"armature_HB_mm":125,"armature_BB_mm":60,"armature_tnomB_mm":5,"armature_t_factor":0.93},
+  "selectedQuestions": ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16","q17"]
+}

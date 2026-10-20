@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3018"
+      "source_location": "L3105"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3102"
+      "source_location": "L3189"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "orderedsupplementaryimages()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2985"
+      "source_location": "L3072"
     },
     {
       "id": "scripts_render_assignment_problemimagemarkdown",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2964"
+      "source_location": "L3051"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3118"
+      "source_location": "L3205"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2929"
+      "source_location": "L3016"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2925"
+      "source_location": "L3012"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3067"
+      "source_location": "L3154"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2976"
+      "source_location": "L3063"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3042"
+      "source_location": "L3129"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3035"
+      "source_location": "L3122"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2943"
+      "source_location": "L3030"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2952"
+      "source_location": "L3039"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3048"
+      "source_location": "L3135"
     },
     {
       "id": "scripts_render_assignment_rendersupplementaryimageshtml",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "rendersupplementaryimageshtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2991"
+      "source_location": "L3078"
     },
     {
       "id": "scripts_render_assignment_rendersupplementaryimagesmarkdown",
@@ -277,7 +277,7 @@
       "file_type": "code",
       "norm_label": "rendersupplementaryimagesmarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3004"
+      "source_location": "L3091"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -289,7 +289,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2911"
+      "source_location": "L2998"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -301,7 +301,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2901"
+      "source_location": "L2988"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2881"
+      "source_location": "L2968"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2866"
+      "source_location": "L2953"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2862"
+      "source_location": "L2949"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2897"
+      "source_location": "L2984"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2976"
+      "source_location": "L3063"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2969"
+      "source_location": "L3056"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3003"
+      "source_location": "L3090"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2960"
+      "source_location": "L3047"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2982"
+      "source_location": "L3069"
     },
     {
       "id": "scripts_packet_renderer_rendersupplementaryimages",
@@ -529,7 +529,7 @@
       "file_type": "code",
       "norm_label": "rendersupplementaryimages()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2913"
+      "source_location": "L3000"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -541,7 +541,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2938"
+      "source_location": "L3025"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -553,7 +553,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2848"
+      "source_location": "L2935"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -565,7 +565,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2839"
+      "source_location": "L2926"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -779,7 +779,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3223"
+      "source_location": "L3310"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -801,7 +801,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3210"
+      "source_location": "L3297"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -812,7 +812,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3234"
+      "source_location": "L3321"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -823,7 +823,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3224"
+      "source_location": "L3311"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -834,7 +834,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3204"
+      "source_location": "L3291"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -845,7 +845,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2919"
+      "source_location": "L3006"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -867,7 +867,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3209"
+      "source_location": "L3296"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -878,7 +878,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3211"
+      "source_location": "L3298"
     },
     {
       "id": "instructor_builder",
@@ -4905,6 +4905,90 @@
       "source_location": "L29"
     },
     {
+      "id": "problems_concealed_steel_armature_sauropod_tail_student_problem",
+      "label": "concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_student_problem_concealed_steel_armature_for_a_sauropod_dinosaur_tail",
+      "label": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "concealed steel armature for a sauropod dinosaur tail",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L3"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_student_problem_context_rich_solid_mechanics_problem",
+      "label": "Context-Rich Solid Mechanics Problem",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context-rich solid mechanics problem",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L5"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_student_problem_main_engineering_goal",
+      "label": "Main Engineering Goal",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "main engineering goal",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L17"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_student_problem_scope_and_provenance",
+      "label": "Scope and Provenance",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope and provenance",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L29"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_student_problem_system_components",
+      "label": "System Components",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "system components",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L21"
+    },
+    {
       "id": "problems_axial_rod_tube_assembly_student_packet",
       "label": "axial-rod-tube-assembly/student-packet.qmd",
       "_origin": "ast",
@@ -5591,6 +5675,140 @@
       "norm_label": "supplemental assessment structure",
       "source_file": "problems/industrial-robot-arm-shear-moment/instructor-guide.qmd",
       "source_location": "L34"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_student_packet",
+      "label": "concealed-steel-armature-sauropod-tail/student-packet.qmd",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - Concealed Steel Armature for a Sauropod Dinosaur Tail",
+        "subtitle": "Distributed Loading, Bending Strength, and Elastic Deflection",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "concealed-steel-armature-sauropod-tail/student-packet.qmd",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_instructor_guide",
+      "label": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - Concealed Steel Armature for a Sauropod Dinosaur Tail",
+        "subtitle": "Representative Solutions for Cantilever Bending and Deflection",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_index",
+      "label": "concealed-steel-armature-sauropod-tail/index.qmd",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Concealed Steel Armature for a Sauropod Dinosaur Tail",
+        "description": "Compare two instructor-assigned rectangular hollow steel armatures for bending strength, self-weight, and cantilever tip deflection in a simplified museum-tail support model.",
+        "image": "assets/dinosaur-tail-industry-context.png",
+        "categories": "[context-rich, mechanics-of-materials, museum engineering, beam deflection]",
+        "mechanics_concepts": "[distributed load, cantilever beam, bending stress, beam deflection, factor of safety]",
+        "course_topics": "[beam bending, elastic deflection, section properties, engineering design checks]",
+        "textbook_chapters": "[Internal loadings in structural members, Centroidal moment of inertia, The flexure formula, Elastic curve for beams, Factor of safety]",
+        "problem_types": "[load-path analysis, free-body diagram, section-property calculation, beam analysis, strength and serviceability comparison]",
+        "competencies": "[load-path reasoning, beam idealization, equilibrium, section properties, flexure formula, elastic deflection, engineering judgment]",
+        "industries": "[museums, exhibit engineering, structural support systems]",
+        "difficulty": "Intermediate",
+        "status": "Published",
+        "problem_id": "MOS-CONCEALED-STEEL-AR-001",
+        "version": "1.0.0"
+      },
+      "node_kind": "page",
+      "norm_label": "concealed-steel-armature-sauropod-tail/index.qmd",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_index_assignment_options",
+      "label": "Assignment Options",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assignment options",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/index.qmd",
+      "source_location": "L20"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L17"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_instructor_guide_instructor_scope_notes",
+      "label": "Instructor Scope Notes",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "instructor scope notes",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L30"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L13"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L9"
+    },
+    {
+      "id": "problems_concealed_steel_armature_sauropod_tail_instructor_guide_supplemental_assessment_structure",
+      "label": "Supplemental Assessment Structure",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "supplemental assessment structure",
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L38"
     },
     {
       "id": "problems_industrial_line_shaft_shear_moment_student_packet",
@@ -13934,7 +14152,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2898",
+      "source_location": "L2985",
       "weight": 1.0
     },
     {
@@ -13946,7 +14164,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2907",
+      "source_location": "L2994",
       "weight": 1.0
     },
     {
@@ -13958,7 +14176,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2977",
+      "source_location": "L3064",
       "weight": 1.0
     },
     {
@@ -13970,7 +14188,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2979",
+      "source_location": "L3066",
       "weight": 1.0
     },
     {
@@ -13982,7 +14200,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2973",
+      "source_location": "L3060",
       "weight": 1.0
     },
     {
@@ -13994,7 +14212,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3014",
+      "source_location": "L3101",
       "weight": 1.0
     },
     {
@@ -14006,7 +14224,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3019",
+      "source_location": "L3106",
       "weight": 1.0
     },
     {
@@ -14018,7 +14236,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3025",
+      "source_location": "L3112",
       "weight": 1.0
     },
     {
@@ -14030,7 +14248,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3027",
+      "source_location": "L3114",
       "weight": 1.0
     },
     {
@@ -14042,7 +14260,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3029",
+      "source_location": "L3116",
       "weight": 1.0
     },
     {
@@ -14054,7 +14272,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3030",
+      "source_location": "L3117",
       "weight": 1.0
     },
     {
@@ -14066,7 +14284,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3031",
+      "source_location": "L3118",
       "weight": 1.0
     },
     {
@@ -14078,7 +14296,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2961",
+      "source_location": "L3048",
       "weight": 1.0
     },
     {
@@ -14090,7 +14308,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2966",
+      "source_location": "L3053",
       "weight": 1.0
     },
     {
@@ -14102,7 +14320,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2983",
+      "source_location": "L3070",
       "weight": 1.0
     },
     {
@@ -14114,7 +14332,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2993",
+      "source_location": "L3080",
       "weight": 1.0
     },
     {
@@ -14126,7 +14344,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2994",
+      "source_location": "L3081",
       "weight": 1.0
     },
     {
@@ -14138,7 +14356,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2995",
+      "source_location": "L3082",
       "weight": 1.0
     },
     {
@@ -14150,7 +14368,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2996",
+      "source_location": "L3083",
       "weight": 1.0
     },
     {
@@ -14162,7 +14380,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2923",
+      "source_location": "L3010",
       "weight": 1.0
     },
     {
@@ -14174,7 +14392,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2932",
+      "source_location": "L3019",
       "weight": 1.0
     },
     {
@@ -14186,7 +14404,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2941",
+      "source_location": "L3028",
       "weight": 1.0
     },
     {
@@ -14198,7 +14416,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2941",
+      "source_location": "L3028",
       "weight": 1.0
     },
     {
@@ -14210,7 +14428,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2941",
+      "source_location": "L3028",
       "weight": 1.0
     },
     {
@@ -14222,7 +14440,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2842",
+      "source_location": "L2929",
       "weight": 1.0
     },
     {
@@ -14234,7 +14452,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2844",
+      "source_location": "L2931",
       "weight": 1.0
     },
     {
@@ -14318,7 +14536,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3109",
+      "source_location": "L3196",
       "weight": 1.0
     },
     {
@@ -14330,7 +14548,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3110",
+      "source_location": "L3197",
       "weight": 1.0
     },
     {
@@ -14342,7 +14560,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3113",
+      "source_location": "L3200",
       "weight": 1.0
     },
     {
@@ -14366,7 +14584,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3125",
+      "source_location": "L3212",
       "weight": 1.0
     },
     {
@@ -14378,7 +14596,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3131",
+      "source_location": "L3218",
       "weight": 1.0
     },
     {
@@ -14390,7 +14608,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3137",
+      "source_location": "L3224",
       "weight": 1.0
     },
     {
@@ -14402,7 +14620,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3140",
+      "source_location": "L3227",
       "weight": 1.0
     },
     {
@@ -14414,7 +14632,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3140",
+      "source_location": "L3227",
       "weight": 1.0
     },
     {
@@ -14426,7 +14644,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3140",
+      "source_location": "L3227",
       "weight": 1.0
     },
     {
@@ -14438,7 +14656,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3145",
+      "source_location": "L3232",
       "weight": 1.0
     },
     {
@@ -14450,7 +14668,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3145",
+      "source_location": "L3232",
       "weight": 1.0
     },
     {
@@ -14462,7 +14680,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3156",
+      "source_location": "L3243",
       "weight": 1.0
     },
     {
@@ -14474,7 +14692,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3162",
+      "source_location": "L3249",
       "weight": 1.0
     },
     {
@@ -14486,7 +14704,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3074",
+      "source_location": "L3161",
       "weight": 1.0
     },
     {
@@ -14498,7 +14716,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3080",
+      "source_location": "L3167",
       "weight": 1.0
     },
     {
@@ -14510,7 +14728,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3080",
+      "source_location": "L3167",
       "weight": 1.0
     },
     {
@@ -14522,7 +14740,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3080",
+      "source_location": "L3167",
       "weight": 1.0
     },
     {
@@ -14534,7 +14752,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3091",
+      "source_location": "L3178",
       "weight": 1.0
     },
     {
@@ -14546,7 +14764,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3092",
+      "source_location": "L3179",
       "weight": 1.0
     },
     {
@@ -14558,7 +14776,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3094",
+      "source_location": "L3181",
       "weight": 1.0
     },
     {
@@ -14570,7 +14788,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3096",
+      "source_location": "L3183",
       "weight": 1.0
     },
     {
@@ -14582,7 +14800,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2982",
+      "source_location": "L3069",
       "weight": 1.0
     },
     {
@@ -14594,7 +14812,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3043",
+      "source_location": "L3130",
       "weight": 1.0
     },
     {
@@ -14606,7 +14824,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3045",
+      "source_location": "L3132",
       "weight": 1.0
     },
     {
@@ -14618,7 +14836,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3039",
+      "source_location": "L3126",
       "weight": 1.0
     },
     {
@@ -14630,7 +14848,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2944",
+      "source_location": "L3031",
       "weight": 1.0
     },
     {
@@ -14642,7 +14860,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2949",
+      "source_location": "L3036",
       "weight": 1.0
     },
     {
@@ -14654,7 +14872,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2953",
+      "source_location": "L3040",
       "weight": 1.0
     },
     {
@@ -14666,7 +14884,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3049",
+      "source_location": "L3136",
       "weight": 1.0
     },
     {
@@ -14678,7 +14896,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3059",
+      "source_location": "L3146",
       "weight": 1.0
     },
     {
@@ -14690,7 +14908,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3060",
+      "source_location": "L3147",
       "weight": 1.0
     },
     {
@@ -14702,7 +14920,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3061",
+      "source_location": "L3148",
       "weight": 1.0
     },
     {
@@ -14714,7 +14932,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3062",
+      "source_location": "L3149",
       "weight": 1.0
     },
     {
@@ -14726,7 +14944,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2992",
+      "source_location": "L3079",
       "weight": 1.0
     },
     {
@@ -14738,7 +14956,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2998",
+      "source_location": "L3085",
       "weight": 1.0
     },
     {
@@ -14750,7 +14968,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3005",
+      "source_location": "L3092",
       "weight": 1.0
     },
     {
@@ -14762,7 +14980,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3006",
+      "source_location": "L3093",
       "weight": 1.0
     },
     {
@@ -14774,7 +14992,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2902",
+      "source_location": "L2989",
       "weight": 1.0
     },
     {
@@ -14786,7 +15004,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2905",
+      "source_location": "L2992",
       "weight": 1.0
     },
     {
@@ -14798,7 +15016,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2907",
+      "source_location": "L2994",
       "weight": 1.0
     },
     {
@@ -18029,6 +18247,138 @@
       "confidence_score": 1.0,
       "source_file": "problems/clevis-pin-tensile-linkage/_student-problem.qmd",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_index",
+      "target": "problems_concealed_steel_armature_sauropod_tail_index_assignment_options",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/index.qmd",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_instructor_guide",
+      "target": "problems_concealed_steel_armature_sauropod_tail_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_instructor_guide",
+      "target": "problems_concealed_steel_armature_sauropod_tail_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_instructor_guide",
+      "target": "problems_concealed_steel_armature_sauropod_tail_instructor_guide_instructor_scope_notes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_instructor_guide",
+      "target": "problems_concealed_steel_armature_sauropod_tail_instructor_guide_supplemental_assessment_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_instructor_guide",
+      "target": "problems_concealed_steel_armature_sauropod_tail_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_student_problem",
+      "target": "problems_concealed_steel_armature_sauropod_tail_student_problem_context_rich_solid_mechanics_problem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_student_problem_concealed_steel_armature_for_a_sauropod_dinosaur_tail",
+      "target": "problems_concealed_steel_armature_sauropod_tail_student_problem_main_engineering_goal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_student_problem_concealed_steel_armature_for_a_sauropod_dinosaur_tail",
+      "target": "problems_concealed_steel_armature_sauropod_tail_student_problem_system_components",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_student_problem_concealed_steel_armature_for_a_sauropod_dinosaur_tail",
+      "target": "problems_concealed_steel_armature_sauropod_tail_student_problem_scope_and_provenance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_student_problem_concealed_steel_armature_for_a_sauropod_dinosaur_tail",
+      "target": "problems_concealed_steel_armature_sauropod_tail_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_student_problem_context_rich_solid_mechanics_problem",
+      "target": "problems_concealed_steel_armature_sauropod_tail_student_problem_concealed_steel_armature_for_a_sauropod_dinosaur_tail",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -23363,7 +23713,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2839",
+      "source_location": "L2926",
       "weight": 1.0
     },
     {
@@ -23374,7 +23724,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2848",
+      "source_location": "L2935",
       "weight": 1.0
     },
     {
@@ -23385,7 +23735,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2862",
+      "source_location": "L2949",
       "weight": 1.0
     },
     {
@@ -23396,7 +23746,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2866",
+      "source_location": "L2953",
       "weight": 1.0
     },
     {
@@ -23407,7 +23757,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2881",
+      "source_location": "L2968",
       "weight": 1.0
     },
     {
@@ -23418,7 +23768,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2897",
+      "source_location": "L2984",
       "weight": 1.0
     },
     {
@@ -23429,7 +23779,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2913",
+      "source_location": "L3000",
       "weight": 1.0
     },
     {
@@ -23440,7 +23790,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2938",
+      "source_location": "L3025",
       "weight": 1.0
     },
     {
@@ -23451,7 +23801,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2960",
+      "source_location": "L3047",
       "weight": 1.0
     },
     {
@@ -23462,7 +23812,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2969",
+      "source_location": "L3056",
       "weight": 1.0
     },
     {
@@ -23473,7 +23823,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2976",
+      "source_location": "L3063",
       "weight": 1.0
     },
     {
@@ -23484,7 +23834,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2982",
+      "source_location": "L3069",
       "weight": 1.0
     },
     {
@@ -23495,7 +23845,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3003",
+      "source_location": "L3090",
       "weight": 1.0
     },
     {
@@ -23616,7 +23966,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2901",
+      "source_location": "L2988",
       "weight": 1.0
     },
     {
@@ -23627,7 +23977,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2911",
+      "source_location": "L2998",
       "weight": 1.0
     },
     {
@@ -23638,7 +23988,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2919",
+      "source_location": "L3006",
       "weight": 1.0
     },
     {
@@ -23649,7 +23999,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2925",
+      "source_location": "L3012",
       "weight": 1.0
     },
     {
@@ -23660,7 +24010,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2929",
+      "source_location": "L3016",
       "weight": 1.0
     },
     {
@@ -23671,7 +24021,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2943",
+      "source_location": "L3030",
       "weight": 1.0
     },
     {
@@ -23682,7 +24032,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2952",
+      "source_location": "L3039",
       "weight": 1.0
     },
     {
@@ -23693,7 +24043,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2964",
+      "source_location": "L3051",
       "weight": 1.0
     },
     {
@@ -23704,7 +24054,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2976",
+      "source_location": "L3063",
       "weight": 1.0
     },
     {
@@ -23715,7 +24065,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2985",
+      "source_location": "L3072",
       "weight": 1.0
     },
     {
@@ -23726,7 +24076,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2991",
+      "source_location": "L3078",
       "weight": 1.0
     },
     {
@@ -23737,7 +24087,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3004",
+      "source_location": "L3091",
       "weight": 1.0
     },
     {
@@ -23748,7 +24098,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3018",
+      "source_location": "L3105",
       "weight": 1.0
     },
     {
@@ -23759,7 +24109,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3035",
+      "source_location": "L3122",
       "weight": 1.0
     },
     {
@@ -23770,7 +24120,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3042",
+      "source_location": "L3129",
       "weight": 1.0
     },
     {
@@ -23781,7 +24131,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3048",
+      "source_location": "L3135",
       "weight": 1.0
     },
     {
@@ -23792,7 +24142,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3067",
+      "source_location": "L3154",
       "weight": 1.0
     },
     {
@@ -23803,7 +24153,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3102",
+      "source_location": "L3189",
       "weight": 1.0
     },
     {
@@ -23814,7 +24164,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3118",
+      "source_location": "L3205",
       "weight": 1.0
     },
     {
@@ -23825,7 +24175,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3204",
+      "source_location": "L3291",
       "weight": 1.0
     },
     {
@@ -23836,7 +24186,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3209",
+      "source_location": "L3296",
       "weight": 1.0
     },
     {
@@ -23847,7 +24197,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3210",
+      "source_location": "L3297",
       "weight": 1.0
     },
     {
@@ -23858,7 +24208,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3211",
+      "source_location": "L3298",
       "weight": 1.0
     },
     {
@@ -23869,7 +24219,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3223",
+      "source_location": "L3310",
       "weight": 1.0
     },
     {
@@ -23880,7 +24230,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3224",
+      "source_location": "L3311",
       "weight": 1.0
     },
     {
@@ -23891,7 +24241,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3234",
+      "source_location": "L3321",
       "weight": 1.0
     },
     {
@@ -24409,6 +24759,28 @@
       "confidence_score": 1.0,
       "source_file": "problems/clevis-pin-tensile-linkage/index.qmd",
       "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_index",
+      "target": "problems_concealed_steel_armature_sauropod_tail_student_packet",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/index.qmd",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_concealed_steel_armature_sauropod_tail_index",
+      "target": "problems_concealed_steel_armature_sauropod_tail_instructor_guide",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/concealed-steel-armature-sauropod-tail/index.qmd",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -25084,5 +25456,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "88f1cf31998203cef23b0f3043d36680518d9b1d"
+  "built_at_commit": "46a4235f0b20a1ba39902fcbbd4dd44afa243d8b"
 }

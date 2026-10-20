@@ -1,0 +1,44 @@
+---
+title: "Instructor Guide - Concealed Steel Armature for a Sauropod Dinosaur Tail"
+subtitle: "Representative Solutions for Cantilever Bending and Deflection"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+# Purpose
+
+Award credit for a defensible load path, an appropriate distributed-load cantilever idealization, correct hollow-section properties, inclusion of section-dependent steel self-weight, equilibrium, flexural stress, yield margin, tip deflection, and a recommendation that distinguishes a classroom check from a museum-installation design.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="dinosaur-tail-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "concealed-steel-armature-sauropod-tail", targetId: "dinosaur-tail-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Instructor Scope Notes
+
+The supplied instructor diagram is the official reference idealization and is intentionally excluded from student-facing output. It represents a uniform load equal to exhibit load plus armature self-weight; because area differs between candidates, total load must be recalculated for each candidate.
+
+Candidate A (100 × 50 × 4 mm nominal) resembles a commonly listed metric RHS size, but neither its availability nor its material certification is asserted here. Candidate B (125 × 60 × 5 mm nominal) remains an illustrative instructor-assigned geometry and must not be described as a verified commercial product. The sharp-corner formulas and 0.93 nominal-thickness factor intentionally omit actual corner radii and manufacturer-published properties.
+
+The baseline conclusion is Candidate B ACCEPT and Candidate A REJECT because serviceability governs. Do not reinterpret the calculated bending-yield ratio as certification of the complete armature, anchorage, skeleton mount, or exhibit.
+
+# Supplemental Assessment Structure
+
+- context, function, and load path: 20%;
+- student idealization and assumptions: 20%;
+- section properties, self-weight, and equilibrium: 20%;
+- bending stress, factor of safety, and deflection: 25%;
+- comparison, recommendation, and limitations: 15%.

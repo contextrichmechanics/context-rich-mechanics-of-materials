@@ -1575,6 +1575,93 @@
   }
 
 
+  const armatureLengthM = numericValue(values, "armature_L_m");
+  const armatureExhibitLoadNPerM = numericValue(values, "armature_we_N_m");
+  const armatureModulusGPa = numericValue(values, "armature_E_GPa");
+  const armatureDensityKgPerM3 = numericValue(values, "armature_rho_kg_m3");
+  const armatureGravityMPerS2 = numericValue(values, "armature_g_m_s2");
+  const armatureYieldStrengthMPa = numericValue(values, "armature_Fy_MPa");
+  const armatureRequiredFactor = numericValue(values, "armature_n_req");
+  const armatureAllowableDeflectionMm = numericValue(values, "armature_delta_allow_mm");
+  const armatureEnvelopeHeightMm = numericValue(values, "armature_H_env_mm");
+  const armatureEnvelopeWidthMm = numericValue(values, "armature_B_env_mm");
+  const armatureHeightAMm = numericValue(values, "armature_HA_mm");
+  const armatureWidthAMm = numericValue(values, "armature_BA_mm");
+  const armatureNominalThicknessAMm = numericValue(values, "armature_tnomA_mm");
+  const armatureHeightBMm = numericValue(values, "armature_HB_mm");
+  const armatureWidthBMm = numericValue(values, "armature_BB_mm");
+  const armatureNominalThicknessBMm = numericValue(values, "armature_tnomB_mm");
+  const armatureThicknessFactor = numericValue(values, "armature_t_factor");
+
+  if (
+    Number.isFinite(armatureLengthM) && armatureLengthM > 0 &&
+    Number.isFinite(armatureExhibitLoadNPerM) && armatureExhibitLoadNPerM >= 0 &&
+    Number.isFinite(armatureModulusGPa) && armatureModulusGPa > 0 &&
+    Number.isFinite(armatureDensityKgPerM3) && armatureDensityKgPerM3 > 0 &&
+    Number.isFinite(armatureGravityMPerS2) && armatureGravityMPerS2 > 0 &&
+    Number.isFinite(armatureYieldStrengthMPa) && armatureYieldStrengthMPa > 0 &&
+    Number.isFinite(armatureRequiredFactor) && armatureRequiredFactor > 0 &&
+    Number.isFinite(armatureAllowableDeflectionMm) && armatureAllowableDeflectionMm > 0 &&
+    Number.isFinite(armatureEnvelopeHeightMm) && armatureEnvelopeHeightMm > 0 &&
+    Number.isFinite(armatureEnvelopeWidthMm) && armatureEnvelopeWidthMm > 0 &&
+    Number.isFinite(armatureHeightAMm) && armatureHeightAMm > 0 &&
+    Number.isFinite(armatureWidthAMm) && armatureWidthAMm > 0 &&
+    Number.isFinite(armatureNominalThicknessAMm) && armatureNominalThicknessAMm > 0 &&
+    Number.isFinite(armatureHeightBMm) && armatureHeightBMm > 0 &&
+    Number.isFinite(armatureWidthBMm) && armatureWidthBMm > 0 &&
+    Number.isFinite(armatureNominalThicknessBMm) && armatureNominalThicknessBMm > 0 &&
+    Number.isFinite(armatureThicknessFactor) && armatureThicknessFactor > 0
+  ) {
+    const calculateArmatureCandidate = (heightMm, widthMm, nominalThicknessMm) => {
+      const thicknessMm = armatureThicknessFactor * nominalThicknessMm;
+      if (heightMm <= 2 * thicknessMm || widthMm <= 2 * thicknessMm) return null;
+      const innerHeightMm = heightMm - 2 * thicknessMm;
+      const innerWidthMm = widthMm - 2 * thicknessMm;
+      const areaMm2 = widthMm * heightMm - innerWidthMm * innerHeightMm;
+      const inertiaMm4 = (widthMm * heightMm ** 3 - innerWidthMm * innerHeightMm ** 3) / 12;
+      const areaM2 = areaMm2 * 1e-6;
+      const inertiaM4 = inertiaMm4 * 1e-12;
+      const selfWeightNPerM = armatureDensityKgPerM3 * armatureGravityMPerS2 * areaM2;
+      const totalLoadNPerM = armatureExhibitLoadNPerM + selfWeightNPerM;
+      const supportReactionN = totalLoadNPerM * armatureLengthM;
+      const supportMomentNm = totalLoadNPerM * armatureLengthM ** 2 / 2;
+      const stressMPa = supportMomentNm * (heightMm / 2000) / inertiaM4 / 1e6;
+      const strengthFactor = armatureYieldStrengthMPa / stressMPa;
+      const deflectionMm = totalLoadNPerM * armatureLengthM ** 4 / (8 * armatureModulusGPa * 1e9 * inertiaM4) * 1000;
+      const strengthPass = strengthFactor + 1e-12 >= armatureRequiredFactor;
+      const deflectionPass = deflectionMm <= armatureAllowableDeflectionMm + 1e-12;
+      const envelopePass = heightMm <= armatureEnvelopeHeightMm && widthMm <= armatureEnvelopeWidthMm;
+      return {thicknessMm, areaMm2, areaM2, inertiaMm4, inertiaM4, selfWeightNPerM, totalLoadNPerM, supportReactionN, supportMomentNm, stressMPa, strengthFactor, deflectionMm, strengthPass, deflectionPass, envelopePass, overallPass: strengthPass && deflectionPass && envelopePass};
+    };
+    const candidateA = calculateArmatureCandidate(armatureHeightAMm, armatureWidthAMm, armatureNominalThicknessAMm);
+    const candidateB = calculateArmatureCandidate(armatureHeightBMm, armatureWidthBMm, armatureNominalThicknessBMm);
+    if (candidateA && candidateB) {
+      const publishCandidate = (candidate, suffix) => {
+        values[`armature_t${suffix}_mm`] = formatDerived(candidate.thicknessMm, 2);
+        values[`armature_A${suffix}_mm2`] = formatDerived(candidate.areaMm2, 4);
+        values[`armature_A${suffix}_m2`] = formatDerived(candidate.areaM2, 10);
+        values[`armature_I${suffix}_mm4`] = formatDerived(candidate.inertiaMm4, 2);
+        values[`armature_I${suffix}_m4`] = formatDerived(candidate.inertiaM4, 10);
+        values[`armature_ws${suffix}_N_m`] = formatDerived(candidate.selfWeightNPerM, 2);
+        values[`armature_w${suffix}_N_m`] = formatDerived(candidate.totalLoadNPerM, 2);
+        values[`armature_V${suffix}_N`] = formatDerived(candidate.supportReactionN, 2);
+        values[`armature_M${suffix}_Nm`] = formatDerived(candidate.supportMomentNm, 2);
+        values[`armature_sigma${suffix}_MPa`] = formatDerived(candidate.stressMPa, 2);
+        values[`armature_n${suffix}`] = formatDerived(candidate.strengthFactor, 2);
+        values[`armature_delta${suffix}_mm`] = formatDerived(candidate.deflectionMm, 2);
+        values[`armature_strength${suffix}`] = candidate.strengthPass ? "PASS" : "FAIL";
+        values[`armature_deflection${suffix}`] = candidate.deflectionPass ? "PASS" : "FAIL";
+        values[`armature_envelope${suffix}`] = candidate.envelopePass ? "PASS" : "FAIL";
+        values[`armature_overall${suffix}`] = candidate.overallPass ? "ACCEPT" : "REJECT";
+      };
+      publishCandidate(candidateA, "A");
+      publishCandidate(candidateB, "B");
+      const passing = [{name: "Candidate A", data: candidateA}, {name: "Candidate B", data: candidateB}].filter((item) => item.data.overallPass).sort((a, b) => a.data.areaMm2 - b.data.areaMm2);
+      values.armature_recommendation = passing.length ? passing[0].name : "Neither candidate";
+      values.armature_engineering_assessment = `Candidate A: strength ${candidateA.strengthPass ? "PASS" : "FAIL"}, deflection ${candidateA.deflectionPass ? "PASS" : "FAIL"}, envelope ${candidateA.envelopePass ? "PASS" : "FAIL"}, overall ${candidateA.overallPass ? "ACCEPT" : "REJECT"}. Candidate B: strength ${candidateB.strengthPass ? "PASS" : "FAIL"}, deflection ${candidateB.deflectionPass ? "PASS" : "FAIL"}, envelope ${candidateB.envelopePass ? "PASS" : "FAIL"}, overall ${candidateB.overallPass ? "ACCEPT" : "REJECT"}. Recommend ${values.armature_recommendation}. ${candidateA.strengthPass && candidateB.strengthPass && (!candidateA.deflectionPass || !candidateB.deflectionPass) ? "Elastic tip deflection is the governing design discriminator." : "The recommendation follows the combined strength, deflection, and envelope checks."} This is a simplified preliminary beam-model result, not certification of the complete museum armature, anchorage, skeleton mount, or exhibit.`;
+    }
+  }
+
   const gearMassEquivalentKg = numericValue(values, "gear_meq_kg");
   const gearLengthM = numericValue(values, "gear_L_m");
   const gearOuterDiameterMm = numericValue(values, "gear_D_mm");

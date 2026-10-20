@@ -1,22 +1,23 @@
-# Graph Report - codex-supplementary-images-20261013  (2026-10-13)
+# Graph Report - codex-dinosaur-tail-20261019  (2026-10-19)
 
 ## Corpus Check
-- 416 files · ~3,565,117 words
+- 424 files · ~3,635,001 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1061 nodes · 1016 edges · 142 communities (121 shown, 21 thin omitted)
+- 1077 nodes · 1030 edges · 144 communities (123 shown, 21 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `88f1cf31`
+- Built from commit: `46a4235f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - render-assignment.mjs
 - authoring-guide.qmd
+- concealed-steel-armature-sauropod-tail/instructor-guide.qmd
 - Supplemental Instructor Background
 - What You Must Do When Invoked
 - packet-renderer.js
@@ -153,6 +154,7 @@
 - Axial Stress and Elongation of a Ceiling-Mounted Projector Support
 - steel-frame-chair-accidental-fall-loading/instructor-guide.qmd
 - Steel-Frame Chair - Accidental Fall Loading
+- Concealed Steel Armature for a Sauropod Dinosaur Tail
 
 ## God Nodes (most connected - your core abstractions)
 1. `Supplemental Instructor Background` - 35 edges
@@ -172,7 +174,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (142 total, 21 thin omitted)
+## Communities (144 total, 21 thin omitted)
 
 ### Community 0 - "render-assignment.mjs"
 Cohesion: 0.10
@@ -181,6 +183,10 @@ Nodes (38): catalog, catalogPath, decodeEntities(), documentStyles(), escapeHtml
 ### Community 1 - "authoring-guide.qmd"
 Cohesion: 0.06
 Nodes (31): Catalog Metadata, Export Assignments From The Command Line, Images, Package Structure, Problem Health, Purpose, Question Design, Questions (+23 more)
+
+### Community 2 - "concealed-steel-armature-sauropod-tail/instructor-guide.qmd"
+Cohesion: 0.22
+Nodes (6): Assignment Options, Generated Question Set and Solutions, Instructor Scope Notes, Problem Context, Purpose, Supplemental Assessment Structure
 
 ### Community 3 - "Supplemental Instructor Background"
 Cohesion: 0.04
@@ -642,8 +648,12 @@ Nodes (7): Assignment Options, Generated Question Set and Solutions, Instructor 
 Cohesion: 0.25
 Nodes (7): Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Scope of the Model, Seat-Support Arrangement, Steel-Frame Chair - Accidental Fall Loading, System Components
 
+### Community 143 - "Concealed Steel Armature for a Sauropod Dinosaur Tail"
+Cohesion: 0.29
+Nodes (6): Concealed Steel Armature for a Sauropod Dinosaur Tail, Context-Rich Solid Mechanics Problem, Engineering Context, Main Engineering Goal, Scope and Provenance, System Components
+
 ## Knowledge Gaps
-- **656 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+651 more)
+- **666 isolated node(s):** `root`, `problemsDir`, `dataDir`, `allowedQuestionSections`, `duplicateProblemIds` (+661 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -655,7 +665,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `15. Common Failure Modes` connect `15. Common Failure Modes` to `AI Agent Project Guide`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `root`, `problemsDir`, `dataDir` to the rest of the system?**
-  _656 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _666 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render-assignment.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.10336817653890824 - nodes in this community are weakly interconnected._
 - **Should `authoring-guide.qmd` be split into smaller, more focused modules?**
