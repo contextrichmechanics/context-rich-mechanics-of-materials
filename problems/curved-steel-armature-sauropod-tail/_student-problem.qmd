@@ -1,0 +1,32 @@
+## Engineering Context
+
+![Museum dinosaur exhibit providing application context only. The assigned armature geometry and loading are not inferred from this photograph.](assets/dinosaur-tail-curved-industry-context.png){fig-alt="Museum gallery containing mounted dinosaur skeletons; an elevated dinosaur tail appears in the background." width="92%"}
+
+*Image attribution: cropped and resized from “Diplodocus tail.jpg” by Lee Ruk (Flickr user gardener41), via Wikimedia Commons, licensed [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). [Source](https://commons.wikimedia.org/wiki/File:Diplodocus_tail.jpg).*
+
+A museum engineering team must conceal a curved steel armature within an elevated sauropod tail. Vertebrae and mounting cradles diminish toward the tip, so the assigned total gravity intensity decreases linearly along the armature. The model represents a preliminary teaching analysis, not the photographed skeleton or a certified exhibit design.
+
+## Components and Load Path
+
+- mounted vertebrae and cradles transfer gravity load into the concealed armature;
+- the curved hollow steel armature carries axial force, shear, and bending;
+- an equivalent fixed pelvis-region mounting frame restrains the root;
+- the main exhibit support and floor carry the root reactions into the building.
+
+## Assigned Mechanics Model
+
+Use a planar circular-arc centerline with
+
+$$x(\theta)=R\sin\theta,\qquad y(\theta)=R(1-\cos\theta),\qquad s=R\theta,$$
+
+from $\theta=0$ at the fixed root to $\theta=\theta_t$ at the free tip. Analyze section S at $\theta=\theta_S$. The total downward load per unit **arc length** is
+
+$$q(\theta)=q_0+\frac{q_t-q_0}{\theta_t}\theta,$$
+
+and already includes steel self-weight. Therefore, do not add self-weight again.
+
+For the required integrations, use $ds=R\,d\theta$ and the formulas supplied in the mechanics questions. At S, the local unit vectors are $\mathbf e_t=(\cos\theta,\sin\theta)$ and $\mathbf e_n=(-\sin\theta,\cos\theta)$.
+
+## Scope and Provenance
+
+The radius, angles, load intensities, tube geometry, material properties, and required factor of safety are physically reasoned instructional assumptions. They were not measured from the photograph. The section is a teaching geometry, not a verified stocked product. Use curved-centerline equilibrium and an ordinary axial-plus-flexure stress approximation appropriate to a slender member. Do not apply classical tight-radius curved-beam theory or a straight-cantilever deflection formula.

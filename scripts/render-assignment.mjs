@@ -1647,6 +1647,104 @@ function variableMap(problem, currentValues) {
   }
 
 
+  const curvedTailRadiusM = numericValue(values, "curved_tail_R_m");
+  const curvedTailTipAngleRad = numericValue(values, "curved_tail_theta_t_rad");
+  const curvedTailCutAngleRad = numericValue(values, "curved_tail_theta_S_rad");
+  const curvedTailRootLoadNPerM = numericValue(values, "curved_tail_q0_N_m");
+  const curvedTailTipLoadNPerM = numericValue(values, "curved_tail_qt_N_m");
+  const curvedTailHeightMm = numericValue(values, "curved_tail_H_mm");
+  const curvedTailWidthMm = numericValue(values, "curved_tail_B_mm");
+  const curvedTailNominalThicknessMm = numericValue(values, "curved_tail_tnom_mm");
+  const curvedTailThicknessFactor = numericValue(values, "curved_tail_t_factor");
+  const curvedTailModulusGPa = numericValue(values, "curved_tail_E_GPa");
+  const curvedTailYieldStrengthMPa = numericValue(values, "curved_tail_Fy_MPa");
+  const curvedTailDensityKgPerM3 = numericValue(values, "curved_tail_rho_kg_m3");
+  const curvedTailGravityMPerS2 = numericValue(values, "curved_tail_g_m_s2");
+  const curvedTailRequiredFactor = numericValue(values, "curved_tail_n_req");
+
+  if (
+    Number.isFinite(curvedTailRadiusM) && curvedTailRadiusM > 0 &&
+    Number.isFinite(curvedTailTipAngleRad) && curvedTailTipAngleRad > 0 &&
+    Number.isFinite(curvedTailCutAngleRad) && curvedTailCutAngleRad >= 0 && curvedTailCutAngleRad <= curvedTailTipAngleRad &&
+    Number.isFinite(curvedTailRootLoadNPerM) && curvedTailRootLoadNPerM >= 0 &&
+    Number.isFinite(curvedTailTipLoadNPerM) && curvedTailTipLoadNPerM >= 0 &&
+    Number.isFinite(curvedTailHeightMm) && curvedTailHeightMm > 0 &&
+    Number.isFinite(curvedTailWidthMm) && curvedTailWidthMm > 0 &&
+    Number.isFinite(curvedTailNominalThicknessMm) && curvedTailNominalThicknessMm > 0 &&
+    Number.isFinite(curvedTailThicknessFactor) && curvedTailThicknessFactor > 0 &&
+    Number.isFinite(curvedTailModulusGPa) && curvedTailModulusGPa > 0 &&
+    Number.isFinite(curvedTailYieldStrengthMPa) && curvedTailYieldStrengthMPa > 0 &&
+    Number.isFinite(curvedTailDensityKgPerM3) && curvedTailDensityKgPerM3 > 0 &&
+    Number.isFinite(curvedTailGravityMPerS2) && curvedTailGravityMPerS2 > 0 &&
+    Number.isFinite(curvedTailRequiredFactor) && curvedTailRequiredFactor > 0
+  ) {
+    const designThicknessMm = curvedTailThicknessFactor * curvedTailNominalThicknessMm;
+    if (curvedTailHeightMm > 2 * designThicknessMm && curvedTailWidthMm > 2 * designThicknessMm) {
+      const loadSlope = (curvedTailTipLoadNPerM - curvedTailRootLoadNPerM) / curvedTailTipAngleRad;
+      const loadIntegral = (angle) => curvedTailRootLoadNPerM * angle + loadSlope * angle ** 2 / 2;
+      const sineLoadIntegral = (angle) => -curvedTailRootLoadNPerM * Math.cos(angle) + loadSlope * (-angle * Math.cos(angle) + Math.sin(angle));
+      const loadBetween = (start, end) => curvedTailRadiusM * (loadIntegral(end) - loadIntegral(start));
+      const sineMomentBetween = (start, end) => curvedTailRadiusM ** 2 * (sineLoadIntegral(end) - sineLoadIntegral(start));
+      const arcLengthM = curvedTailRadiusM * curvedTailTipAngleRad;
+      const tipXM = curvedTailRadiusM * Math.sin(curvedTailTipAngleRad);
+      const tipYM = curvedTailRadiusM * (1 - Math.cos(curvedTailTipAngleRad));
+      const cutXM = curvedTailRadiusM * Math.sin(curvedTailCutAngleRad);
+      const cutYM = curvedTailRadiusM * (1 - Math.cos(curvedTailCutAngleRad));
+      const totalLoadN = loadBetween(0, curvedTailTipAngleRad);
+      const rootMomentNm = sineMomentBetween(0, curvedTailTipAngleRad);
+      const outboardLoadN = loadBetween(curvedTailCutAngleRad, curvedTailTipAngleRad);
+      const axialForceN = -outboardLoadN * Math.sin(curvedTailCutAngleRad);
+      const shearForceN = outboardLoadN * Math.cos(curvedTailCutAngleRad);
+      const cutMomentNm = sineMomentBetween(curvedTailCutAngleRad, curvedTailTipAngleRad) - curvedTailRadiusM * Math.sin(curvedTailCutAngleRad) * outboardLoadN;
+      const innerHeightMm = curvedTailHeightMm - 2 * designThicknessMm;
+      const innerWidthMm = curvedTailWidthMm - 2 * designThicknessMm;
+      const areaMm2 = curvedTailWidthMm * curvedTailHeightMm - innerWidthMm * innerHeightMm;
+      const inertiaMm4 = (curvedTailWidthMm * curvedTailHeightMm ** 3 - innerWidthMm * innerHeightMm ** 3) / 12;
+      const selfWeightNPerM = curvedTailDensityKgPerM3 * curvedTailGravityMPerS2 * areaMm2 * 1e-6;
+      const steelWeightN = selfWeightNPerM * arcLengthM;
+      const exhibitWeightN = totalLoadN - steelWeightN;
+      const exhibitMassKg = exhibitWeightN / curvedTailGravityMPerS2;
+      const axialStressMPa = Math.abs(axialForceN) / areaMm2;
+      const cutBendingStressMPa = Math.abs(cutMomentNm) * 1000 * (curvedTailHeightMm / 2) / inertiaMm4;
+      const cutStressMPa = axialStressMPa + cutBendingStressMPa;
+      const rootStressMPa = Math.abs(rootMomentNm) * 1000 * (curvedTailHeightMm / 2) / inertiaMm4;
+      const rootGoverns = rootStressMPa >= cutStressMPa;
+      const governingStressMPa = rootGoverns ? rootStressMPa : cutStressMPa;
+      const safetyFactor = curvedTailYieldStrengthMPa / governingStressMPa;
+      const strengthPass = safetyFactor + 1e-12 >= curvedTailRequiredFactor;
+      values.curved_tail_L_m = formatDerived(arcLengthM, 3);
+      values.curved_tail_xt_m = formatDerived(tipXM, 6);
+      values.curved_tail_yt_m = formatDerived(tipYM, 6);
+      values.curved_tail_xS_m = formatDerived(cutXM, 6);
+      values.curved_tail_yS_m = formatDerived(cutYM, 6);
+      values.curved_tail_t_mm = formatDerived(designThicknessMm, 2);
+      values.curved_tail_A_mm2 = formatDerived(areaMm2, 4);
+      values.curved_tail_I_mm4 = formatDerived(inertiaMm4, 2);
+      values.curved_tail_ws_N_m = formatDerived(selfWeightNPerM, 2);
+      values.curved_tail_Wsteel_N = formatDerived(steelWeightN, 2);
+      values.curved_tail_Wexhibit_N = formatDerived(exhibitWeightN, 2);
+      values.curved_tail_mexhibit_kg = formatDerived(exhibitMassKg, 2);
+      values.curved_tail_W_N = formatDerived(totalLoadN, 3);
+      values.curved_tail_H0_N = formatDerived(0, 3);
+      values.curved_tail_V0_N = formatDerived(totalLoadN, 3);
+      values.curved_tail_M0_Nm = formatDerived(rootMomentNm, 6);
+      values.curved_tail_WS_N = formatDerived(outboardLoadN, 3);
+      values.curved_tail_NS_N = formatDerived(axialForceN, 6);
+      values.curved_tail_VS_N = formatDerived(Math.abs(shearForceN), 6);
+      values.curved_tail_MS_Nm = formatDerived(Math.abs(cutMomentNm), 6);
+      values.curved_tail_sigma_axial_S_MPa = formatDerived(axialStressMPa, 6);
+      values.curved_tail_sigma_bending_S_MPa = formatDerived(cutBendingStressMPa, 6);
+      values.curved_tail_sigma_S_MPa = formatDerived(cutStressMPa, 6);
+      values.curved_tail_sigma_root_MPa = formatDerived(rootStressMPa, 6);
+      values.curved_tail_governing_location = rootGoverns ? "Fixed root" : "Section S";
+      values.curved_tail_sigma_governing_MPa = formatDerived(governingStressMPa, 6);
+      values.curved_tail_n_min = formatDerived(safetyFactor, 4);
+      values.curved_tail_strength_check = strengthPass ? "PASS" : "FAIL";
+      values.curved_tail_engineering_assessment = "The " + values.curved_tail_governing_location + " controls the two evaluated sections with |sigma| = " + values.curved_tail_sigma_governing_MPa + " MPa and n = " + values.curved_tail_n_min + ", so the assigned elastic-yield criterion " + (strengthPass ? "is met" : "is not met") + ". The slenderness ratio R/H = " + formatDerived(curvedTailRadiusM * 1000 / curvedTailHeightMm, 1) + " supports the ordinary axial-plus-flexure approximation, but the result is not a classical curved-beam, deflection, buckling, connection, fatigue, impact, fabrication, or complete exhibit certification check. " + (exhibitWeightN < 0 ? "The selected inputs make the inferred exhibit-only load negative, so that provenance interpretation is physically inconsistent even though total-load equilibrium remains defined." : "The total load implies approximately " + values.curved_tail_Wexhibit_N + " N (" + values.curved_tail_mexhibit_kg + " kg equivalent) of exhibit/cradle load after subtracting calculated steel self-weight.");
+    }
+  }
+
+
   const armatureLengthM = numericValue(values, "armature_L_m");
   const armatureExhibitLoadNPerM = numericValue(values, "armature_we_N_m");
   const armatureModulusGPa = numericValue(values, "armature_E_GPa");

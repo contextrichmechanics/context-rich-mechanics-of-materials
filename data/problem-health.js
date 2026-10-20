@@ -150,6 +150,16 @@ window.PROBLEM_HEALTH = [
     "warnings": []
   },
   {
+    "id": "MOS-CURVED-STEEL-ARMAT-001",
+    "slug": "curved-steel-armature-sauropod-tail",
+    "title": "Curved Steel Armature for a Sauropod Dinosaur Tail",
+    "status": "OK",
+    "variables": 14,
+    "questions": 17,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-END-MILLING-COMBIN-001",
     "slug": "end-milling-combined-bending-torsion",
     "title": "End Milling — Combined Bending and Torsion of an End Mill",

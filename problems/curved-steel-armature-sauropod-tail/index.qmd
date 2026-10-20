@@ -1,0 +1,24 @@
+---
+title: "Curved Steel Armature for a Sauropod Dinosaur Tail"
+description: "Curved-centerline equilibrium and combined normal stress under a linearly decreasing gravity load."
+image: "assets/dinosaur-tail-curved-industry-context.png"
+categories: [context-rich, mechanics-of-materials, museum engineering, curved members]
+mechanics_concepts: [distributed load, curved-member equilibrium, axial force, shear force, bending moment, combined normal stress]
+course_topics: [free-body diagrams, internal loadings, flexure formula, combined loading, factor of safety]
+textbook_chapters: [Internal loadings in structural members, Centroidal moment of inertia, The flexure formula, Combined loadings, Factor of safety]
+problem_types: [load-path analysis, free-body diagram, distributed-load integration, section-cut analysis, strength assessment]
+competencies: [load-path reasoning, curved-centerline idealization, equilibrium, local-axis resolution, section properties, combined stress, engineering judgment]
+industries: [museums, exhibit engineering, structural support systems]
+difficulty: "Intermediate-Advanced"
+status: "Published"
+problem_id: "MOS-CURVED-STEEL-ARMAT-001"
+version: "1.0.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=curved-steel-armature-sauropod-tail){.btn .btn-secondary}

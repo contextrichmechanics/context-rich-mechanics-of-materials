@@ -1,0 +1,44 @@
+---
+title: "Instructor Guide - Curved Steel Armature for a Sauropod Dinosaur Tail"
+subtitle: "Representative Solutions for Curved-Member Equilibrium and Combined Stress"
+author: "Context-Rich Mechanics of Materials Library"
+format:
+  html: {toc: true, number-sections: true}
+---
+
+# Purpose
+
+Award credit for a defensible load path, a correct circular-arc idealization, integration of the varying load per arc length, root equilibrium, local section-resultant resolution, hollow-section properties, combined axial-plus-flexure stress, and a carefully scoped yield assessment.
+
+# Problem Context
+
+{{< include _student-problem.qmd >}}
+
+# Generated Question Set and Solutions
+
+```{=html}
+<div id="curved-dinosaur-tail-instructor-questions"></div>
+<script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/packet-renderer.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  window.renderProblemPacket({slug: "curved-steel-armature-sauropod-tail", targetId: "curved-dinosaur-tail-instructor-questions", type: "instructor"});
+});
+</script>
+```
+
+# Instructor Scope Notes
+
+The supplied diagram is instructor-only. The load intensity is total gravity load per arc length and already includes the calculated baseline steel self-weight. Density and gravity are retained to expose that physical interpretation; changing them changes the inferred exhibit-only share, not the assigned total load intensity.
+
+The baseline ratio $R/H=60$ supports the slender-member straight-beam stress approximation for this classroom check. This is not classical curved-beam neutral-axis theory, a deflection analysis, finite-element analysis, or certification of the complete armature, anchorage, skeleton mount, or exhibit.
+
+The 100 × 50 × 4 mm section is an instructor-assigned teaching geometry and must not be described as a verified stocked commercial product. The 0.93 design-thickness factor and 345 MPa assigned yield strength are consistent with the referenced ASTM A500 teaching convention, but actual material certification and fabricated curved-section properties remain outside scope.
+
+# Supplemental Assessment Structure
+
+- context, function, and load path: 20%;
+- student idealization, free-body diagrams, and assumptions: 20%;
+- distributed-load equilibrium and section resultants: 30%;
+- section properties, combined stress, and factor of safety: 20%;
+- engineering assessment and limitations: 10%.

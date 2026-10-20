@@ -37,7 +37,7 @@
       "file_type": "code",
       "norm_label": "documentstyles()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3105"
+      "source_location": "L3203"
     },
     {
       "id": "scripts_render_assignment_escapehtml",
@@ -73,7 +73,7 @@
       "file_type": "code",
       "norm_label": "fullhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3189"
+      "source_location": "L3287"
     },
     {
       "id": "scripts_render_assignment_hasflag",
@@ -121,7 +121,7 @@
       "file_type": "code",
       "norm_label": "orderedsupplementaryimages()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3072"
+      "source_location": "L3170"
     },
     {
       "id": "scripts_render_assignment_problemimagemarkdown",
@@ -133,7 +133,7 @@
       "file_type": "code",
       "norm_label": "problemimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3051"
+      "source_location": "L3149"
     },
     {
       "id": "scripts_render_assignment_qmddocument",
@@ -145,7 +145,7 @@
       "file_type": "code",
       "norm_label": "qmddocument()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3205"
+      "source_location": "L3303"
     },
     {
       "id": "scripts_render_assignment_questionimagefile",
@@ -157,7 +157,7 @@
       "file_type": "code",
       "norm_label": "questionimagefile()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3016"
+      "source_location": "L3114"
     },
     {
       "id": "scripts_render_assignment_questionsbysection",
@@ -169,7 +169,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3012"
+      "source_location": "L3110"
     },
     {
       "id": "scripts_render_assignment_renderbody",
@@ -181,7 +181,7 @@
       "file_type": "code",
       "norm_label": "renderbody()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3154"
+      "source_location": "L3252"
     },
     {
       "id": "scripts_render_assignment_renderidealizedimagehtml",
@@ -193,7 +193,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3063"
+      "source_location": "L3161"
     },
     {
       "id": "scripts_render_assignment_renderinstructorsupport",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3129"
+      "source_location": "L3227"
     },
     {
       "id": "scripts_render_assignment_renderlearningobjectives",
@@ -217,7 +217,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3122"
+      "source_location": "L3220"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagehtml",
@@ -229,7 +229,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagehtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3030"
+      "source_location": "L3128"
     },
     {
       "id": "scripts_render_assignment_renderquestionimagemarkdown",
@@ -241,7 +241,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimagemarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3039"
+      "source_location": "L3137"
     },
     {
       "id": "scripts_render_assignment_renderquestionsectionhtml",
@@ -253,7 +253,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsectionhtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3135"
+      "source_location": "L3233"
     },
     {
       "id": "scripts_render_assignment_rendersupplementaryimageshtml",
@@ -265,7 +265,7 @@
       "file_type": "code",
       "norm_label": "rendersupplementaryimageshtml()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3078"
+      "source_location": "L3176"
     },
     {
       "id": "scripts_render_assignment_rendersupplementaryimagesmarkdown",
@@ -277,7 +277,7 @@
       "file_type": "code",
       "norm_label": "rendersupplementaryimagesmarkdown()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3091"
+      "source_location": "L3189"
     },
     {
       "id": "scripts_render_assignment_selectedquestions",
@@ -289,7 +289,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2998"
+      "source_location": "L3096"
     },
     {
       "id": "scripts_render_assignment_substitute",
@@ -301,7 +301,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2988"
+      "source_location": "L3086"
     },
     {
       "id": "scripts_render_assignment_symbolhtml",
@@ -421,7 +421,7 @@
       "file_type": "code",
       "norm_label": "problemimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2968"
+      "source_location": "L3066"
     },
     {
       "id": "scripts_packet_renderer_questionimagepath",
@@ -433,7 +433,7 @@
       "file_type": "code",
       "norm_label": "questionimagepath()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2953"
+      "source_location": "L3051"
     },
     {
       "id": "scripts_packet_renderer_questionsbysection",
@@ -445,7 +445,7 @@
       "file_type": "code",
       "norm_label": "questionsbysection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2949"
+      "source_location": "L3047"
     },
     {
       "id": "scripts_packet_renderer_renderidealizedimage",
@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "renderidealizedimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2984"
+      "source_location": "L3082"
     },
     {
       "id": "scripts_packet_renderer_renderinstructorsupport",
@@ -469,7 +469,7 @@
       "file_type": "code",
       "norm_label": "renderinstructorsupport()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3063"
+      "source_location": "L3161"
     },
     {
       "id": "scripts_packet_renderer_renderlearningobjectives",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "renderlearningobjectives()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3056"
+      "source_location": "L3154"
     },
     {
       "id": "scripts_packet_renderer_renderpacket",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "renderpacket()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3090"
+      "source_location": "L3188"
     },
     {
       "id": "scripts_packet_renderer_renderquestionimage",
@@ -505,7 +505,7 @@
       "file_type": "code",
       "norm_label": "renderquestionimage()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3047"
+      "source_location": "L3145"
     },
     {
       "id": "scripts_packet_renderer_renderquestionsection",
@@ -517,7 +517,7 @@
       "file_type": "code",
       "norm_label": "renderquestionsection()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3069"
+      "source_location": "L3167"
     },
     {
       "id": "scripts_packet_renderer_rendersupplementaryimages",
@@ -529,7 +529,7 @@
       "file_type": "code",
       "norm_label": "rendersupplementaryimages()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3000"
+      "source_location": "L3098"
     },
     {
       "id": "scripts_packet_renderer_rendervariabletable",
@@ -541,7 +541,7 @@
       "file_type": "code",
       "norm_label": "rendervariabletable()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3025"
+      "source_location": "L3123"
     },
     {
       "id": "scripts_packet_renderer_selectedquestions",
@@ -553,7 +553,7 @@
       "file_type": "code",
       "norm_label": "selectedquestions()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2935"
+      "source_location": "L3033"
     },
     {
       "id": "scripts_packet_renderer_substitute",
@@ -565,7 +565,7 @@
       "file_type": "code",
       "norm_label": "substitute()",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2926"
+      "source_location": "L3024"
     },
     {
       "id": "scripts_packet_renderer_symbolhtml",
@@ -779,7 +779,7 @@
       "file_type": "code",
       "norm_label": "catalog",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3310"
+      "source_location": "L3408"
     },
     {
       "id": "scripts_render_assignment_catalogpath",
@@ -801,7 +801,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3297"
+      "source_location": "L3395"
     },
     {
       "id": "scripts_render_assignment_outdir",
@@ -812,7 +812,7 @@
       "file_type": "code",
       "norm_label": "outdir",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3321"
+      "source_location": "L3419"
     },
     {
       "id": "scripts_render_assignment_problem",
@@ -823,7 +823,7 @@
       "file_type": "code",
       "norm_label": "problem",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3311"
+      "source_location": "L3409"
     },
     {
       "id": "scripts_render_assignment_problemkey",
@@ -834,7 +834,7 @@
       "file_type": "code",
       "norm_label": "problemkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3291"
+      "source_location": "L3389"
     },
     {
       "id": "scripts_render_assignment_questionsections",
@@ -845,7 +845,7 @@
       "file_type": "code",
       "norm_label": "questionsections",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3006"
+      "source_location": "L3104"
     },
     {
       "id": "scripts_render_assignment_root",
@@ -867,7 +867,7 @@
       "file_type": "code",
       "norm_label": "type",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3296"
+      "source_location": "L3394"
     },
     {
       "id": "scripts_render_assignment_variantkey",
@@ -878,7 +878,7 @@
       "file_type": "code",
       "norm_label": "variantkey",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3298"
+      "source_location": "L3396"
     },
     {
       "id": "instructor_builder",
@@ -4987,6 +4987,200 @@
       "norm_label": "system components",
       "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
       "source_location": "L21"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_student_packet",
+      "label": "curved-steel-armature-sauropod-tail/student-packet.qmd",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Student Packet - Curved Steel Armature for a Sauropod Dinosaur Tail",
+        "subtitle": "Curved-Centerline Equilibrium and Combined Normal Stress",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "curved-steel-armature-sauropod-tail/student-packet.qmd",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/student-packet.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_instructor_guide",
+      "label": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Instructor Guide - Curved Steel Armature for a Sauropod Dinosaur Tail",
+        "subtitle": "Representative Solutions for Curved-Member Equilibrium and Combined Stress",
+        "author": "Context-Rich Mechanics of Materials Library"
+      },
+      "node_kind": "page",
+      "norm_label": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_index",
+      "label": "curved-steel-armature-sauropod-tail/index.qmd",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "frontmatter": {
+        "title": "Curved Steel Armature for a Sauropod Dinosaur Tail",
+        "description": "Curved-centerline equilibrium and combined normal stress under a linearly decreasing gravity load.",
+        "image": "assets/dinosaur-tail-curved-industry-context.png",
+        "categories": "[context-rich, mechanics-of-materials, museum engineering, curved members]",
+        "mechanics_concepts": "[distributed load, curved-member equilibrium, axial force, shear force, bending moment, combined normal stress]",
+        "course_topics": "[free-body diagrams, internal loadings, flexure formula, combined loading, factor of safety]",
+        "textbook_chapters": "[Internal loadings in structural members, Centroidal moment of inertia, The flexure formula, Combined loadings, Factor of safety]",
+        "problem_types": "[load-path analysis, free-body diagram, distributed-load integration, section-cut analysis, strength assessment]",
+        "competencies": "[load-path reasoning, curved-centerline idealization, equilibrium, local-axis resolution, section properties, combined stress, engineering judgment]",
+        "industries": "[museums, exhibit engineering, structural support systems]",
+        "difficulty": "Intermediate-Advanced",
+        "status": "Published",
+        "problem_id": "MOS-CURVED-STEEL-ARMAT-001",
+        "version": "1.0.0"
+      },
+      "node_kind": "page",
+      "norm_label": "curved-steel-armature-sauropod-tail/index.qmd",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/index.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_index_assignment_options",
+      "label": "Assignment Options",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assignment options",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/index.qmd",
+      "source_location": "L20"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_instructor_guide_generated_question_set_and_solutions",
+      "label": "Generated Question Set and Solutions",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "generated question set and solutions",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L17"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_instructor_guide_instructor_scope_notes",
+      "label": "Instructor Scope Notes",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "instructor scope notes",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L30"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_instructor_guide_problem_context",
+      "label": "Problem Context",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "problem context",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L13"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_instructor_guide_purpose",
+      "label": "Purpose",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L9"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_instructor_guide_supplemental_assessment_structure",
+      "label": "Supplemental Assessment Structure",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "supplemental assessment structure",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L38"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_student_problem",
+      "label": "curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_student_problem_assigned_mechanics_model",
+      "label": "Assigned Mechanics Model",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assigned mechanics model",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L16"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_student_problem_components_and_load_path",
+      "label": "Components and Load Path",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "components and load path",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L9"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_student_problem_engineering_context",
+      "label": "Engineering Context",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "engineering context",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L1"
+    },
+    {
+      "id": "problems_curved_steel_armature_sauropod_tail_student_problem_scope_and_provenance",
+      "label": "Scope and Provenance",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scope and provenance",
+      "source_file": "problems/curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L30"
     },
     {
       "id": "problems_axial_rod_tube_assembly_student_packet",
@@ -14152,7 +14346,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2985",
+      "source_location": "L3083",
       "weight": 1.0
     },
     {
@@ -14164,7 +14358,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2994",
+      "source_location": "L3092",
       "weight": 1.0
     },
     {
@@ -14176,7 +14370,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3064",
+      "source_location": "L3162",
       "weight": 1.0
     },
     {
@@ -14188,7 +14382,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3066",
+      "source_location": "L3164",
       "weight": 1.0
     },
     {
@@ -14200,7 +14394,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3060",
+      "source_location": "L3158",
       "weight": 1.0
     },
     {
@@ -14212,7 +14406,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3101",
+      "source_location": "L3199",
       "weight": 1.0
     },
     {
@@ -14224,7 +14418,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3106",
+      "source_location": "L3204",
       "weight": 1.0
     },
     {
@@ -14236,7 +14430,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3112",
+      "source_location": "L3210",
       "weight": 1.0
     },
     {
@@ -14248,7 +14442,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3114",
+      "source_location": "L3212",
       "weight": 1.0
     },
     {
@@ -14260,7 +14454,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3116",
+      "source_location": "L3214",
       "weight": 1.0
     },
     {
@@ -14272,7 +14466,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3117",
+      "source_location": "L3215",
       "weight": 1.0
     },
     {
@@ -14284,7 +14478,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3118",
+      "source_location": "L3216",
       "weight": 1.0
     },
     {
@@ -14296,7 +14490,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3048",
+      "source_location": "L3146",
       "weight": 1.0
     },
     {
@@ -14308,7 +14502,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3053",
+      "source_location": "L3151",
       "weight": 1.0
     },
     {
@@ -14320,7 +14514,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3070",
+      "source_location": "L3168",
       "weight": 1.0
     },
     {
@@ -14332,7 +14526,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3080",
+      "source_location": "L3178",
       "weight": 1.0
     },
     {
@@ -14344,7 +14538,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3081",
+      "source_location": "L3179",
       "weight": 1.0
     },
     {
@@ -14356,7 +14550,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3082",
+      "source_location": "L3180",
       "weight": 1.0
     },
     {
@@ -14368,7 +14562,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3083",
+      "source_location": "L3181",
       "weight": 1.0
     },
     {
@@ -14380,7 +14574,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3010",
+      "source_location": "L3108",
       "weight": 1.0
     },
     {
@@ -14392,7 +14586,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3019",
+      "source_location": "L3117",
       "weight": 1.0
     },
     {
@@ -14404,7 +14598,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3028",
+      "source_location": "L3126",
       "weight": 1.0
     },
     {
@@ -14416,7 +14610,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3028",
+      "source_location": "L3126",
       "weight": 1.0
     },
     {
@@ -14428,7 +14622,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3028",
+      "source_location": "L3126",
       "weight": 1.0
     },
     {
@@ -14440,7 +14634,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2929",
+      "source_location": "L3027",
       "weight": 1.0
     },
     {
@@ -14452,7 +14646,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2931",
+      "source_location": "L3029",
       "weight": 1.0
     },
     {
@@ -14536,7 +14730,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3196",
+      "source_location": "L3294",
       "weight": 1.0
     },
     {
@@ -14548,7 +14742,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3197",
+      "source_location": "L3295",
       "weight": 1.0
     },
     {
@@ -14560,7 +14754,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3200",
+      "source_location": "L3298",
       "weight": 1.0
     },
     {
@@ -14584,7 +14778,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3212",
+      "source_location": "L3310",
       "weight": 1.0
     },
     {
@@ -14596,7 +14790,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3218",
+      "source_location": "L3316",
       "weight": 1.0
     },
     {
@@ -14608,7 +14802,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3224",
+      "source_location": "L3322",
       "weight": 1.0
     },
     {
@@ -14620,7 +14814,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3227",
+      "source_location": "L3325",
       "weight": 1.0
     },
     {
@@ -14632,7 +14826,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3227",
+      "source_location": "L3325",
       "weight": 1.0
     },
     {
@@ -14644,7 +14838,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3227",
+      "source_location": "L3325",
       "weight": 1.0
     },
     {
@@ -14656,7 +14850,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3232",
+      "source_location": "L3330",
       "weight": 1.0
     },
     {
@@ -14668,7 +14862,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3232",
+      "source_location": "L3330",
       "weight": 1.0
     },
     {
@@ -14680,7 +14874,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3243",
+      "source_location": "L3341",
       "weight": 1.0
     },
     {
@@ -14692,7 +14886,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3249",
+      "source_location": "L3347",
       "weight": 1.0
     },
     {
@@ -14704,7 +14898,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3161",
+      "source_location": "L3259",
       "weight": 1.0
     },
     {
@@ -14716,7 +14910,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3167",
+      "source_location": "L3265",
       "weight": 1.0
     },
     {
@@ -14728,7 +14922,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3167",
+      "source_location": "L3265",
       "weight": 1.0
     },
     {
@@ -14740,7 +14934,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3167",
+      "source_location": "L3265",
       "weight": 1.0
     },
     {
@@ -14752,7 +14946,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3178",
+      "source_location": "L3276",
       "weight": 1.0
     },
     {
@@ -14764,7 +14958,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3179",
+      "source_location": "L3277",
       "weight": 1.0
     },
     {
@@ -14776,7 +14970,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3181",
+      "source_location": "L3279",
       "weight": 1.0
     },
     {
@@ -14788,7 +14982,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3183",
+      "source_location": "L3281",
       "weight": 1.0
     },
     {
@@ -14800,7 +14994,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3069",
+      "source_location": "L3167",
       "weight": 1.0
     },
     {
@@ -14812,7 +15006,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3130",
+      "source_location": "L3228",
       "weight": 1.0
     },
     {
@@ -14824,7 +15018,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3132",
+      "source_location": "L3230",
       "weight": 1.0
     },
     {
@@ -14836,7 +15030,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3126",
+      "source_location": "L3224",
       "weight": 1.0
     },
     {
@@ -14848,7 +15042,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3031",
+      "source_location": "L3129",
       "weight": 1.0
     },
     {
@@ -14860,7 +15054,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3036",
+      "source_location": "L3134",
       "weight": 1.0
     },
     {
@@ -14872,7 +15066,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3040",
+      "source_location": "L3138",
       "weight": 1.0
     },
     {
@@ -14884,7 +15078,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3136",
+      "source_location": "L3234",
       "weight": 1.0
     },
     {
@@ -14896,7 +15090,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3146",
+      "source_location": "L3244",
       "weight": 1.0
     },
     {
@@ -14908,7 +15102,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3147",
+      "source_location": "L3245",
       "weight": 1.0
     },
     {
@@ -14920,7 +15114,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3148",
+      "source_location": "L3246",
       "weight": 1.0
     },
     {
@@ -14932,7 +15126,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3149",
+      "source_location": "L3247",
       "weight": 1.0
     },
     {
@@ -14944,7 +15138,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3079",
+      "source_location": "L3177",
       "weight": 1.0
     },
     {
@@ -14956,7 +15150,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3085",
+      "source_location": "L3183",
       "weight": 1.0
     },
     {
@@ -14968,7 +15162,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3092",
+      "source_location": "L3190",
       "weight": 1.0
     },
     {
@@ -14980,7 +15174,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3093",
+      "source_location": "L3191",
       "weight": 1.0
     },
     {
@@ -14992,7 +15186,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2989",
+      "source_location": "L3087",
       "weight": 1.0
     },
     {
@@ -15004,7 +15198,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2992",
+      "source_location": "L3090",
       "weight": 1.0
     },
     {
@@ -15016,7 +15210,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2994",
+      "source_location": "L3092",
       "weight": 1.0
     },
     {
@@ -18379,6 +18573,116 @@
       "confidence_score": 1.0,
       "source_file": "problems/concealed-steel-armature-sauropod-tail/_student-problem.qmd",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_index",
+      "target": "problems_curved_steel_armature_sauropod_tail_index_assignment_options",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/index.qmd",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_instructor_guide",
+      "target": "problems_curved_steel_armature_sauropod_tail_instructor_guide_problem_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_instructor_guide",
+      "target": "problems_curved_steel_armature_sauropod_tail_instructor_guide_generated_question_set_and_solutions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_instructor_guide",
+      "target": "problems_curved_steel_armature_sauropod_tail_instructor_guide_instructor_scope_notes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_instructor_guide",
+      "target": "problems_curved_steel_armature_sauropod_tail_instructor_guide_supplemental_assessment_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_instructor_guide",
+      "target": "problems_curved_steel_armature_sauropod_tail_instructor_guide_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/instructor-guide.qmd",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_student_problem",
+      "target": "problems_curved_steel_armature_sauropod_tail_student_problem_engineering_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_student_problem",
+      "target": "problems_curved_steel_armature_sauropod_tail_student_problem_assigned_mechanics_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_student_problem",
+      "target": "problems_curved_steel_armature_sauropod_tail_student_problem_scope_and_provenance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_student_problem",
+      "target": "problems_curved_steel_armature_sauropod_tail_student_problem_components_and_load_path",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/_student-problem.qmd",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -23713,7 +24017,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2926",
+      "source_location": "L3024",
       "weight": 1.0
     },
     {
@@ -23724,7 +24028,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2935",
+      "source_location": "L3033",
       "weight": 1.0
     },
     {
@@ -23735,7 +24039,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2949",
+      "source_location": "L3047",
       "weight": 1.0
     },
     {
@@ -23746,7 +24050,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2953",
+      "source_location": "L3051",
       "weight": 1.0
     },
     {
@@ -23757,7 +24061,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2968",
+      "source_location": "L3066",
       "weight": 1.0
     },
     {
@@ -23768,7 +24072,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L2984",
+      "source_location": "L3082",
       "weight": 1.0
     },
     {
@@ -23779,7 +24083,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3000",
+      "source_location": "L3098",
       "weight": 1.0
     },
     {
@@ -23790,7 +24094,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3025",
+      "source_location": "L3123",
       "weight": 1.0
     },
     {
@@ -23801,7 +24105,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3047",
+      "source_location": "L3145",
       "weight": 1.0
     },
     {
@@ -23812,7 +24116,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3056",
+      "source_location": "L3154",
       "weight": 1.0
     },
     {
@@ -23823,7 +24127,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3063",
+      "source_location": "L3161",
       "weight": 1.0
     },
     {
@@ -23834,7 +24138,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3069",
+      "source_location": "L3167",
       "weight": 1.0
     },
     {
@@ -23845,7 +24149,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/packet-renderer.js",
-      "source_location": "L3090",
+      "source_location": "L3188",
       "weight": 1.0
     },
     {
@@ -23966,7 +24270,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2988",
+      "source_location": "L3086",
       "weight": 1.0
     },
     {
@@ -23977,7 +24281,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L2998",
+      "source_location": "L3096",
       "weight": 1.0
     },
     {
@@ -23988,7 +24292,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3006",
+      "source_location": "L3104",
       "weight": 1.0
     },
     {
@@ -23999,7 +24303,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3012",
+      "source_location": "L3110",
       "weight": 1.0
     },
     {
@@ -24010,7 +24314,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3016",
+      "source_location": "L3114",
       "weight": 1.0
     },
     {
@@ -24021,7 +24325,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3030",
+      "source_location": "L3128",
       "weight": 1.0
     },
     {
@@ -24032,7 +24336,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3039",
+      "source_location": "L3137",
       "weight": 1.0
     },
     {
@@ -24043,7 +24347,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3051",
+      "source_location": "L3149",
       "weight": 1.0
     },
     {
@@ -24054,7 +24358,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3063",
+      "source_location": "L3161",
       "weight": 1.0
     },
     {
@@ -24065,7 +24369,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3072",
+      "source_location": "L3170",
       "weight": 1.0
     },
     {
@@ -24076,7 +24380,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3078",
+      "source_location": "L3176",
       "weight": 1.0
     },
     {
@@ -24087,7 +24391,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3091",
+      "source_location": "L3189",
       "weight": 1.0
     },
     {
@@ -24098,7 +24402,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3105",
+      "source_location": "L3203",
       "weight": 1.0
     },
     {
@@ -24109,7 +24413,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3122",
+      "source_location": "L3220",
       "weight": 1.0
     },
     {
@@ -24120,7 +24424,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3129",
+      "source_location": "L3227",
       "weight": 1.0
     },
     {
@@ -24131,7 +24435,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3135",
+      "source_location": "L3233",
       "weight": 1.0
     },
     {
@@ -24142,7 +24446,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3154",
+      "source_location": "L3252",
       "weight": 1.0
     },
     {
@@ -24153,7 +24457,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3189",
+      "source_location": "L3287",
       "weight": 1.0
     },
     {
@@ -24164,7 +24468,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3205",
+      "source_location": "L3303",
       "weight": 1.0
     },
     {
@@ -24175,7 +24479,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3291",
+      "source_location": "L3389",
       "weight": 1.0
     },
     {
@@ -24186,7 +24490,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3296",
+      "source_location": "L3394",
       "weight": 1.0
     },
     {
@@ -24197,7 +24501,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3297",
+      "source_location": "L3395",
       "weight": 1.0
     },
     {
@@ -24208,7 +24512,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3298",
+      "source_location": "L3396",
       "weight": 1.0
     },
     {
@@ -24219,7 +24523,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3310",
+      "source_location": "L3408",
       "weight": 1.0
     },
     {
@@ -24230,7 +24534,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3311",
+      "source_location": "L3409",
       "weight": 1.0
     },
     {
@@ -24241,7 +24545,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/render-assignment.mjs",
-      "source_location": "L3321",
+      "source_location": "L3419",
       "weight": 1.0
     },
     {
@@ -24780,6 +25084,28 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "problems/concealed-steel-armature-sauropod-tail/index.qmd",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_index",
+      "target": "problems_curved_steel_armature_sauropod_tail_student_packet",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/index.qmd",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "problems_curved_steel_armature_sauropod_tail_index",
+      "target": "problems_curved_steel_armature_sauropod_tail_instructor_guide",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "problems/curved-steel-armature-sauropod-tail/index.qmd",
       "source_location": "L23",
       "weight": 1.0
     },
@@ -25456,5 +25782,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "46a4235f0b20a1ba39902fcbbd4dd44afa243d8b"
+  "built_at_commit": "5a8b8562e402b3156aba32b04db5a319332e026b"
 }
