@@ -330,6 +330,16 @@
     "warnings": []
   },
   {
+    "id": "MOS-OVERHANGING-BOOK-D-001",
+    "slug": "overhanging-book-display-rack-bending-deflection",
+    "title": "Overhanging Book-Display Rack — Distributed Loading, Bending, and Deflection",
+    "status": "OK",
+    "variables": 22,
+    "questions": 17,
+    "variants": 1,
+    "warnings": []
+  },
+  {
     "id": "MOS-PISTON-RING-ELASTI-001",
     "slug": "piston-ring-elastic-closure-contact-pressure",
     "title": "Piston Ring — Elastic Closure and Cylinder-Wall Contact Pressure",

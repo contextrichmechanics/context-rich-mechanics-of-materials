@@ -1,0 +1,18 @@
+---
+title: "Overhanging Book-Display Rack — Distributed Loading, Bending, and Deflection"
+description: "Analyze a book-display rail under self-weight and three piecewise uniform book loads."
+image: "assets/bookshelf-industry-context.jpg"
+categories: [context-rich, mechanics-of-materials, distributed-loading, beam-deflection]
+difficulty: "Advanced"
+status: "Ready"
+problem_id: "MOS-OVERHANGING-BOOK-D-001"
+version: "1.0.0"
+---
+
+{{< include _student-problem.qmd >}}
+
+## Assignment Options
+
+[Student packet](student-packet.qmd){.btn .btn-primary}
+[Instructor guide](instructor-guide.qmd){.btn .btn-secondary}
+[Customize in Builder](../../instructor-builder.html?problem=overhanging-book-display-rack-bending-deflection){.btn .btn-secondary}

@@ -1575,6 +1575,141 @@
   }
 
 
+
+
+  const bookRackL = numericValue(values, "book_rack_L_m");
+  const bookRackSupportA = numericValue(values, "book_rack_support_A_m");
+  const bookRackSupportB = numericValue(values, "book_rack_support_B_m");
+  const bookRackWidth = numericValue(values, "book_rack_width_m");
+  const bookRackThickness = numericValue(values, "book_rack_thickness_m");
+  const bookRackDensity = numericValue(values, "book_rack_density_kg_m3");
+  const bookRackModulusGPa = numericValue(values, "book_rack_E_GPa");
+  const bookRackGravity = numericValue(values, "book_rack_g_m_s2");
+  const bookRackAllowableMPa = numericValue(values, "book_rack_sigma_allow_MPa");
+  const bookRackDeflectionRatio = numericValue(values, "book_rack_deflection_ratio");
+  const bookRackGroups = ["A", "B", "C"].map((label) => ({
+    label,
+    count: numericValue(values, `book_rack_${label}_count`),
+    mass: numericValue(values, `book_rack_${label}_mass_kg`),
+    start: numericValue(values, `book_rack_${label}_start_m`),
+    end: numericValue(values, `book_rack_${label}_end_m`)
+  }));
+
+  if (
+    [bookRackL, bookRackSupportA, bookRackSupportB, bookRackWidth, bookRackThickness,
+      bookRackDensity, bookRackModulusGPa, bookRackGravity, bookRackAllowableMPa,
+      bookRackDeflectionRatio].every((value) => Number.isFinite(value) && value > 0) &&
+    bookRackSupportA < bookRackSupportB && bookRackSupportB < bookRackL &&
+    bookRackGroups.every((group) =>
+      [group.count, group.mass].every((value) => Number.isFinite(value) && value > 0) &&
+      Number.isFinite(group.start) && Number.isFinite(group.end) &&
+      group.start >= 0 && group.start < group.end && group.end <= bookRackL
+    )
+  ) {
+    const selfWeight = bookRackDensity * bookRackWidth * bookRackThickness * bookRackGravity;
+    const distributedLoads = [
+      { label: "self", q: selfWeight, start: 0, end: bookRackL },
+      ...bookRackGroups.map((group) => ({
+        label: group.label,
+        q: group.count * group.mass * bookRackGravity / (group.end - group.start),
+        start: group.start,
+        end: group.end
+      }))
+    ];
+    const totalForce = distributedLoads.reduce((sum, load) => sum + load.q * (load.end - load.start), 0);
+    const momentAboutA = distributedLoads.reduce(
+      (sum, load) => sum + load.q * (load.end - load.start) * ((load.start + load.end) / 2 - bookRackSupportA),
+      0
+    );
+    const reactionB = momentAboutA / (bookRackSupportB - bookRackSupportA);
+    const reactionA = totalForce - reactionB;
+    const bracket = (x, c, power) => x >= c ? (x - c) ** power : 0;
+    const shear = (x) =>
+      reactionA * (x >= bookRackSupportA ? 1 : 0) +
+      reactionB * (x >= bookRackSupportB ? 1 : 0) -
+      distributedLoads.reduce((sum, load) => sum + load.q * (bracket(x, load.start, 1) - bracket(x, load.end, 1)), 0);
+    const moment = (x) =>
+      reactionA * bracket(x, bookRackSupportA, 1) +
+      reactionB * bracket(x, bookRackSupportB, 1) -
+      distributedLoads.reduce((sum, load) => sum + load.q * (bracket(x, load.start, 2) - bracket(x, load.end, 2)) / 2, 0);
+    const integratedMoment = (x) =>
+      reactionA * bracket(x, bookRackSupportA, 3) / 6 +
+      reactionB * bracket(x, bookRackSupportB, 3) / 6 -
+      distributedLoads.reduce((sum, load) => sum + load.q * (bracket(x, load.start, 4) - bracket(x, load.end, 4)) / 24, 0);
+    const integratedSlope = (x) =>
+      reactionA * bracket(x, bookRackSupportA, 2) / 2 +
+      reactionB * bracket(x, bookRackSupportB, 2) / 2 -
+      distributedLoads.reduce((sum, load) => sum + load.q * (bracket(x, load.start, 3) - bracket(x, load.end, 3)) / 6, 0);
+    const c1 = -(integratedMoment(bookRackSupportB) - integratedMoment(bookRackSupportA)) /
+      (bookRackSupportB - bookRackSupportA);
+    const c2 = -integratedMoment(bookRackSupportA) - c1 * bookRackSupportA;
+    const inertia = bookRackWidth * bookRackThickness ** 3 / 12;
+    const sectionModulus = bookRackWidth * bookRackThickness ** 2 / 6;
+    const flexuralRigidity = bookRackModulusGPa * 1e9 * inertia;
+    const deflection = (x) => (integratedMoment(x) + c1 * x + c2) / flexuralRigidity;
+    const slope = (x) => (integratedSlope(x) + c1) / flexuralRigidity;
+    const roots = (fn) => {
+      const result = [];
+      const count = 6000;
+      let left = 0;
+      let leftValue = fn(left);
+      for (let index = 1; index <= count; index += 1) {
+        let right = bookRackL * index / count;
+        const rightValue = fn(right);
+        if (Number.isFinite(leftValue) && Number.isFinite(rightValue) && leftValue * rightValue < 0) {
+          let lo = left;
+          let hi = right;
+          for (let iteration = 0; iteration < 60; iteration += 1) {
+            const mid = (lo + hi) / 2;
+            if (fn(lo) * fn(mid) <= 0) hi = mid;
+            else lo = mid;
+          }
+          result.push((lo + hi) / 2);
+        }
+        left = right;
+        leftValue = rightValue;
+      }
+      return result;
+    };
+    const boundaries = [0, bookRackL, bookRackSupportA, bookRackSupportB,
+      ...distributedLoads.flatMap((load) => [load.start, load.end])];
+    const momentCandidates = [...boundaries, ...roots(shear)].map((x) => ({ x, value: moment(x) }));
+    const positiveMoment = momentCandidates.reduce((best, item) => item.value > best.value ? item : best);
+    const governingMoment = momentCandidates.reduce((best, item) => Math.abs(item.value) > Math.abs(best.value) ? item : best);
+    const deflectionCandidates = [...boundaries, ...roots(slope)].map((x) => ({ x, value: deflection(x) }));
+    const downwardDeflection = deflectionCandidates.reduce((best, item) => item.value < best.value ? item : best);
+    const maximumAbsoluteDeflection = deflectionCandidates.reduce((best, item) => Math.abs(item.value) > Math.abs(best.value) ? item : best);
+    const maximumStressMPa = Math.abs(governingMoment.value) / sectionModulus / 1e6;
+    const allowableDeflectionMm = bookRackL * 1000 / bookRackDeflectionRatio;
+    const strengthPass = maximumStressMPa <= bookRackAllowableMPa + 1e-12;
+    const deflectionPass = Math.abs(maximumAbsoluteDeflection.value) * 1000 <= allowableDeflectionMm + 1e-12;
+
+    values.book_rack_w_self_N_m = formatDerived(selfWeight, 5);
+    distributedLoads.slice(1).forEach((load) => {
+      values[`book_rack_w_${load.label}_N_m`] = formatDerived(load.q, 5);
+    });
+    values.book_rack_W_total_N = formatDerived(totalForce, 5);
+    values.book_rack_RA_N = formatDerived(reactionA, 5);
+    values.book_rack_RB_N = formatDerived(reactionB, 5);
+    values.book_rack_M_positive_Nm = formatDerived(positiveMoment.value, 5);
+    values.book_rack_x_M_positive_m = formatDerived(positiveMoment.x, 5);
+    values.book_rack_M_A_Nm = formatDerived(moment(bookRackSupportA), 5);
+    values.book_rack_M_B_Nm = formatDerived(moment(bookRackSupportB), 5);
+    values.book_rack_M_abs_Nm = formatDerived(Math.abs(governingMoment.value), 5);
+    values.book_rack_I_m4 = formatDerived(inertia, 10);
+    values.book_rack_S_m3 = formatDerived(sectionModulus, 10);
+    values.book_rack_sigma_max_MPa = formatDerived(maximumStressMPa, 5);
+    values.book_rack_strength_ratio = formatDerived(bookRackAllowableMPa / maximumStressMPa, 2);
+    values.book_rack_strength_check = strengthPass ? "PASS" : "FAIL";
+    values.book_rack_v_down_mm = formatDerived(Math.abs(downwardDeflection.value) * 1000, 5);
+    values.book_rack_x_v_down_m = formatDerived(downwardDeflection.x, 5);
+    values.book_rack_v_left_mm = formatDerived(deflection(0) * 1000, 5);
+    values.book_rack_v_right_mm = formatDerived(deflection(bookRackL) * 1000, 5);
+    values.book_rack_v_allow_mm = formatDerived(allowableDeflectionMm, 3);
+    values.book_rack_deflection_check = deflectionPass ? "PASS" : "FAIL";
+    values.book_rack_assessment = `The idealized rail ${strengthPass ? "passes" : "does not pass"} the assigned bending-stress criterion and ${deflectionPass ? "passes" : "does not pass"} the assigned instantaneous-deflection criterion. The result is not certification of the complete rack; local hangers, joints, three-dimensional frame action, torsion, uplift restraint, tipping, and long-term creep remain unverified.`;
+  }
+
   const engineStandMassKg = numericValue(values, "engine_stand_m_kg");
   const engineStandGravity = numericValue(values, "engine_stand_g_m_s2");
   const engineStandEccentricityM = numericValue(values, "engine_stand_e_m");

@@ -16806,6 +16806,594 @@
     ]
   },
   {
+    "id": "MOS-OVERHANGING-BOOK-D-001",
+    "slug": "overhanging-book-display-rack-bending-deflection",
+    "title": "Overhanging Book-Display Rack — Distributed Loading, Bending, and Deflection",
+    "studentDocumentTitle": "Student Packet — Overhanging Book-Display Rack",
+    "instructorDocumentTitle": "Instructor Guide — Overhanging Book-Display Rack",
+    "summary": "Analyze an overhanging book-display rail under self-weight and three equivalent distributed book loads, then check bending strength and deflection.",
+    "primaryTopics": [
+      "Distributed Loading",
+      "Beam Equilibrium",
+      "Shear and Moment",
+      "Bending Stress",
+      "Beam Deflection"
+    ],
+    "courseTopic": "Overhanging beams under piecewise distributed loads",
+    "targetLevel": "Advanced MEEN 305 context-rich problem",
+    "difficultyLevel": 4,
+    "textbookChapters": [
+      "Equilibrium of rigid bodies",
+      "Internal loadings",
+      "Bending moment diagrams",
+      "Flexure formula",
+      "Elastic curve"
+    ],
+    "derivedPlaceholders": [
+      "book_rack_w_self_N_m",
+      "book_rack_w_A_N_m",
+      "book_rack_w_B_N_m",
+      "book_rack_w_C_N_m",
+      "book_rack_W_total_N",
+      "book_rack_RA_N",
+      "book_rack_RB_N",
+      "book_rack_M_positive_Nm",
+      "book_rack_x_M_positive_m",
+      "book_rack_M_A_Nm",
+      "book_rack_M_B_Nm",
+      "book_rack_M_abs_Nm",
+      "book_rack_I_m4",
+      "book_rack_S_m3",
+      "book_rack_sigma_max_MPa",
+      "book_rack_strength_ratio",
+      "book_rack_strength_check",
+      "book_rack_v_down_mm",
+      "book_rack_x_v_down_m",
+      "book_rack_v_left_mm",
+      "book_rack_v_right_mm",
+      "book_rack_v_allow_mm",
+      "book_rack_deflection_check",
+      "book_rack_assessment"
+    ],
+    "image": "problems/overhanging-book-display-rack-bending-deflection/assets/bookshelf-industry-context.jpg",
+    "imageAlt": "A freestanding book-display rack with books suspended from a longitudinal rail.",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Knihovni%C4%8Dka_se_z%C3%A1v%C4%9Bsem_na_knihy.jpg",
+    "imageAttribution": "Dobroš, Knihovnička se závěsem na knihy, own work, CC BY-SA 4.0.",
+    "imageLicenseStatus": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).",
+    "idealizedImage": "problems/overhanging-book-display-rack-bending-deflection/assets/book-rack-corrected-loading.png",
+    "idealizedImageAlt": "Corrected instructor-only overhanging-beam loading diagram with supports, rail self-weight, and three book-load intervals.",
+    "source": "problems/overhanging-book-display-rack-bending-deflection/index.html",
+    "problemStatement": "<p>A furniture maker is evaluating a freestanding rack whose longitudinal rail projects beyond two interior supports. Model the rail as a prismatic overhanging Euler–Bernoulli beam carrying its uniform self-weight and three equivalent uniformly distributed book loads. The values are assigned instructional data, not measurements from the photograph.</p>",
+    "engineeringGoal": "<p>Determine reactions, shear and moment response, extreme-fiber bending stress, and the maximum absolute vertical deflection; then compare the rail with the assigned strength and serviceability criteria without treating this beam check as certification of the complete furniture.</p>",
+    "supplementaryImages": [],
+    "variables": [
+      {
+        "key": "book_rack_L_m",
+        "symbol": "L",
+        "label": "Overall rail length",
+        "value": 1.5,
+        "unit": "m",
+        "min": 0.5,
+        "max": 4,
+        "step": 0.01
+      },
+      {
+        "key": "book_rack_support_A_m",
+        "symbol": "a",
+        "label": "Left support position",
+        "value": 0.25,
+        "unit": "m",
+        "min": 0.05,
+        "max": 1,
+        "step": 0.01
+      },
+      {
+        "key": "book_rack_support_B_m",
+        "symbol": "b",
+        "label": "Right support position",
+        "value": 1.25,
+        "unit": "m",
+        "min": 0.5,
+        "max": 3.9,
+        "step": 0.01
+      },
+      {
+        "key": "book_rack_width_m",
+        "symbol": "B",
+        "label": "Rail width",
+        "value": 0.24,
+        "unit": "m",
+        "min": 0.05,
+        "max": 0.6,
+        "step": 0.001
+      },
+      {
+        "key": "book_rack_thickness_m",
+        "symbol": "h",
+        "label": "Rail thickness",
+        "value": 0.018,
+        "unit": "m",
+        "min": 0.005,
+        "max": 0.08,
+        "step": 0.001
+      },
+      {
+        "key": "book_rack_density_kg_m3",
+        "symbol": "ρ",
+        "label": "Assigned material density",
+        "value": 650,
+        "unit": "kg/m^3",
+        "min": 100,
+        "max": 2000,
+        "step": 10
+      },
+      {
+        "key": "book_rack_E_GPa",
+        "symbol": "E",
+        "label": "Effective elastic modulus",
+        "value": 3,
+        "unit": "GPa",
+        "min": 0.5,
+        "max": 30,
+        "step": 0.1
+      },
+      {
+        "key": "book_rack_g_m_s2",
+        "symbol": "g",
+        "label": "Gravitational acceleration",
+        "value": 9.81,
+        "unit": "m/s^2",
+        "min": 1,
+        "max": 20,
+        "step": 0.01
+      },
+      {
+        "key": "book_rack_sigma_allow_MPa",
+        "symbol": "σ_allow",
+        "label": "Assigned allowable flexural stress",
+        "value": 9,
+        "unit": "MPa",
+        "min": 0.1,
+        "max": 100,
+        "step": 0.1
+      },
+      {
+        "key": "book_rack_deflection_ratio",
+        "symbol": "L/v_allow",
+        "label": "Deflection-limit denominator",
+        "value": 240,
+        "unit": "-",
+        "min": 50,
+        "max": 1000,
+        "step": 10
+      },
+      {
+        "key": "book_rack_A_count",
+        "symbol": "n_A",
+        "label": "Group A book count",
+        "value": 5,
+        "unit": "books",
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "key": "book_rack_A_mass_kg",
+        "symbol": "m_A",
+        "label": "Group A mass per book",
+        "value": 0.8,
+        "unit": "kg",
+        "min": 0.1,
+        "max": 5,
+        "step": 0.1
+      },
+      {
+        "key": "book_rack_A_start_m",
+        "symbol": "x_A1",
+        "label": "Group A interval start",
+        "value": 0.1,
+        "unit": "m",
+        "min": 0,
+        "max": 3.8,
+        "step": 0.01
+      },
+      {
+        "key": "book_rack_A_end_m",
+        "symbol": "x_A2",
+        "label": "Group A interval end",
+        "value": 0.25,
+        "unit": "m",
+        "min": 0.01,
+        "max": 3.9,
+        "step": 0.01
+      },
+      {
+        "key": "book_rack_B_count",
+        "symbol": "n_B",
+        "label": "Group B book count",
+        "value": 5,
+        "unit": "books",
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "key": "book_rack_B_mass_kg",
+        "symbol": "m_B",
+        "label": "Group B mass per book",
+        "value": 1.2,
+        "unit": "kg",
+        "min": 0.1,
+        "max": 5,
+        "step": 0.1
+      },
+      {
+        "key": "book_rack_B_start_m",
+        "symbol": "x_B1",
+        "label": "Group B interval start",
+        "value": 0.5,
+        "unit": "m",
+        "min": 0,
+        "max": 3.8,
+        "step": 0.01
+      },
+      {
+        "key": "book_rack_B_end_m",
+        "symbol": "x_B2",
+        "label": "Group B interval end",
+        "value": 0.7,
+        "unit": "m",
+        "min": 0.01,
+        "max": 3.9,
+        "step": 0.01
+      },
+      {
+        "key": "book_rack_C_count",
+        "symbol": "n_C",
+        "label": "Group C book count",
+        "value": 5,
+        "unit": "books",
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "key": "book_rack_C_mass_kg",
+        "symbol": "m_C",
+        "label": "Group C mass per book",
+        "value": 1,
+        "unit": "kg",
+        "min": 0.1,
+        "max": 5,
+        "step": 0.1
+      },
+      {
+        "key": "book_rack_C_start_m",
+        "symbol": "x_C1",
+        "label": "Group C interval start",
+        "value": 1.2,
+        "unit": "m",
+        "min": 0,
+        "max": 3.8,
+        "step": 0.01
+      },
+      {
+        "key": "book_rack_C_end_m",
+        "symbol": "x_C2",
+        "label": "Group C interval end",
+        "value": 1.35,
+        "unit": "m",
+        "min": 0.01,
+        "max": 3.9,
+        "step": 0.01
+      }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "title": "Primary Function",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Describe the role of the longitudinal rail in supporting the suspended books.</p>",
+        "instructor": "<p>The rail receives vertical forces from the book hangers, spans between the two interior frame supports, and transfers loading into the frame and floor.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "book rack",
+          "load path"
+        ],
+        "learningObjectives": [
+          "Explain the member function."
+        ]
+      },
+      {
+        "id": "q2",
+        "title": "External Loads",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Identify the gravity loads acting on the rail and explain how the books transfer force to it.</p>",
+        "instructor": "<p>The rail carries uniform self-weight and three groups of downward book weight transmitted by hangers over assigned intervals.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "distributed loading"
+        ],
+        "learningObjectives": [
+          "Identify external loads."
+        ]
+      },
+      {
+        "id": "q3",
+        "title": "Supports and Boundary Conditions",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Identify the restraints at the two interior supports and the boundary condition at each overhanging end.</p>",
+        "instructor": "<p>The ideal supports prevent vertical translation but impose no moment; both beam ends are free overhangs.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "supports",
+          "overhang"
+        ],
+        "learningObjectives": [
+          "Interpret support conditions."
+        ]
+      },
+      {
+        "id": "q4",
+        "title": "Load Path",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Trace a book load through the rail, frame, and floor.</p>",
+        "instructor": "<p>Book weight passes through its hanger to the rail, through support reactions to the frame legs and feet, and into the floor.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "load path"
+        ],
+        "learningObjectives": [
+          "Trace a load path."
+        ]
+      },
+      {
+        "id": "q5",
+        "title": "Critical Locations",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Before calculating, predict where positive moment, negative support moment, and maximum displacement may occur.</p>",
+        "instructor": "<p>Negative moments are expected at the interior supports; positive moment and greatest downward displacement are expected between supports, with exact locations set by the unequal loads.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "prediction"
+        ],
+        "learningObjectives": [
+          "Predict beam response."
+        ]
+      },
+      {
+        "id": "q6",
+        "title": "Strength and Serviceability",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Explain why bending stress and vertical deflection require separate checks.</p>",
+        "instructor": "<p>Stress addresses the assigned flexural-strength limit, while deflection addresses stiffness and usability; either may govern independently.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "strength",
+          "serviceability"
+        ],
+        "learningObjectives": [
+          "Distinguish strength and serviceability."
+        ]
+      },
+      {
+        "id": "q7",
+        "title": "Influential Inputs",
+        "section": "context",
+        "selected": true,
+        "student": "<p>Explain how span, overhang, section thickness, width, modulus, and load locations influence response.</p>",
+        "instructor": "<p>Geometry and load locations set reactions and moments; B and especially h control section properties; E and I control elastic deflection.</p>",
+        "type": "context and load-path reasoning",
+        "difficulty": "introductory",
+        "tags": [
+          "design variables"
+        ],
+        "learningObjectives": [
+          "Relate inputs to behavior."
+        ]
+      },
+      {
+        "id": "q8",
+        "title": "Structural Idealization",
+        "section": "transition",
+        "selected": true,
+        "student": "<p>Draw a 1.50 m overhanging beam with supports, the three occupied intervals, and rail self-weight. Derive one equivalent uniform load for each group; do not draw fifteen separate loads.</p>",
+        "instructor": "<p>Use supports at x=0.25 and 1.25 m, self-weight over 0–1.50 m, and group UDLs over 0.10–0.25, 0.50–0.70, and 1.20–1.35 m.</p>",
+        "type": "modeling and idealization",
+        "difficulty": "intermediate",
+        "tags": [
+          "idealization"
+        ],
+        "learningObjectives": [
+          "Construct a beam idealization."
+        ]
+      },
+      {
+        "id": "q9",
+        "title": "Modeling Assumptions",
+        "section": "transition",
+        "selected": true,
+        "student": "<p>State the assumptions needed for this one-dimensional linear-elastic beam model.</p>",
+        "instructor": "<p>Use uniformly transmitted group loads, a prismatic Euler–Bernoulli beam, small deflection, linear elasticity, simple vertical supports, and included self-weight. Exclude local hangers, joints, torsion, uplift details, frame stability, and creep.</p>",
+        "type": "modeling and idealization",
+        "difficulty": "intermediate",
+        "tags": [
+          "assumptions"
+        ],
+        "learningObjectives": [
+          "State modeling assumptions."
+        ]
+      },
+      {
+        "id": "q10",
+        "title": "Analysis Plan",
+        "section": "transition",
+        "selected": true,
+        "student": "<p>Outline a calculation sequence from equivalent loads through the engineering recommendation.</p>",
+        "instructor": "<p>Calculate four UDLs, solve reactions, form V and M, locate extrema, compute I and S, check stress, integrate curvature with two support conditions, locate deflection extrema, and assess both criteria.</p>",
+        "type": "modeling and idealization",
+        "difficulty": "intermediate",
+        "tags": [
+          "analysis plan"
+        ],
+        "learningObjectives": [
+          "Organize the analysis."
+        ]
+      },
+      {
+        "id": "q11",
+        "title": "Equivalent Loading",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Calculate rail self-weight and the three equivalent group-load intensities. Explain why fifteen separate load calculations are unnecessary.</p>",
+        "instructor": "<p>w<sub>self</sub>=<strong>{{book_rack_w_self_N_m}} N/m</strong>; w<sub>A</sub>=<strong>{{book_rack_w_A_N_m}} N/m</strong>; w<sub>B</sub>=<strong>{{book_rack_w_B_N_m}} N/m</strong>; w<sub>C</sub>=<strong>{{book_rack_w_C_N_m}} N/m</strong>. One statically equivalent UDL represents each uniform group.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "distributed loading"
+        ],
+        "learningObjectives": [
+          "Calculate equivalent UDLs."
+        ]
+      },
+      {
+        "id": "q12",
+        "title": "Support Reactions",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Draw the complete FBD and calculate A<sub>y</sub> and B<sub>y</sub>. Verify force and moment equilibrium.</p>",
+        "instructor": "<p>Total downward force=<strong>{{book_rack_W_total_N}} N</strong>; A<sub>y</sub>=<strong>{{book_rack_RA_N}} N</strong>; B<sub>y</sub>=<strong>{{book_rack_RB_N}} N</strong>. Positive reported values act upward.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "equilibrium"
+        ],
+        "learningObjectives": [
+          "Solve beam reactions."
+        ]
+      },
+      {
+        "id": "q13",
+        "title": "Shear Diagram",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Write V(x) in bracket notation and draw the SFD, marking support jumps and loaded intervals.</p>",
+        "instructor": "<p>Use V(x)=A<sub>y</sub>⟨x−a⟩⁰+B<sub>y</sub>⟨x−b⟩⁰−Σq[⟨x−l⟩¹−⟨x−r⟩¹]. The baseline plot is instructor-only.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "shear diagram"
+        ],
+        "learningObjectives": [
+          "Construct shear response."
+        ]
+      },
+      {
+        "id": "q14",
+        "title": "Moment Diagram",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Integrate shear to obtain M(x), plot the BMD, and identify positive, negative, and governing absolute extrema.</p>",
+        "instructor": "<p>M<sub>max,+</sub>=<strong>{{book_rack_M_positive_Nm}} N·m</strong> at x=<strong>{{book_rack_x_M_positive_m}} m</strong>. M(a)=<strong>{{book_rack_M_A_Nm}} N·m</strong>; M(b)=<strong>{{book_rack_M_B_Nm}} N·m</strong>. Governing |M|=<strong>{{book_rack_M_abs_Nm}} N·m</strong>.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "moment diagram"
+        ],
+        "learningObjectives": [
+          "Locate moment extrema."
+        ]
+      },
+      {
+        "id": "q15",
+        "title": "Bending Strength",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Calculate I and S, then calculate maximum extreme-fiber bending stress and compare it with the assigned allowable.</p>",
+        "instructor": "<p>I=<strong>{{book_rack_I_m4}} m⁴</strong>; S=<strong>{{book_rack_S_m3}} m³</strong>; σ<sub>max</sub>=<strong>{{book_rack_sigma_max_MPa}} MPa</strong>. Allowable/stress=<strong>{{book_rack_strength_ratio}}</strong>; <strong>{{book_rack_strength_check}}</strong>.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "bending stress"
+        ],
+        "learningObjectives": [
+          "Check bending strength."
+        ]
+      },
+      {
+        "id": "q16",
+        "title": "Guided Deflection",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Use the supplied integrated-curvature expression and v(a)=v(b)=0 to find the greatest absolute vertical deflection. Numerical root finding or a spreadsheet is permitted.</p>",
+        "instructor": "<p>Maximum downward=<strong>{{book_rack_v_down_mm}} mm</strong> at x=<strong>{{book_rack_x_v_down_m}} m</strong>. Left end=<strong>{{book_rack_v_left_mm}} mm upward</strong>; right end=<strong>{{book_rack_v_right_mm}} mm upward</strong>. Limit=<strong>{{book_rack_v_allow_mm}} mm</strong>; <strong>{{book_rack_deflection_check}}</strong>.</p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "deflection"
+        ],
+        "learningObjectives": [
+          "Find deflection extrema."
+        ]
+      },
+      {
+        "id": "q17",
+        "title": "Engineering Assessment",
+        "section": "analysis",
+        "selected": true,
+        "student": "<p>Check both criteria. Explain whether passing them proves the complete rack safe and identify one omitted behavior.</p>",
+        "instructor": "<p><strong>{{book_rack_assessment}}</strong></p>",
+        "type": "mechanics calculation and judgment",
+        "difficulty": "advanced",
+        "tags": [
+          "engineering judgment"
+        ],
+        "learningObjectives": [
+          "Make a scoped recommendation."
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "baseline",
+        "title": "Baseline",
+        "description": "Revised faculty-template three-group baseline values and all questions.",
+        "variables": {},
+        "selectedQuestions": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17"
+        ]
+      }
+    ]
+  },
+  {
     "id": "MOS-PISTON-RING-ELASTI-001",
     "slug": "piston-ring-elastic-closure-contact-pressure",
     "title": "Piston Ring — Elastic Closure and Cylinder-Wall Contact Pressure",
