@@ -10074,41 +10074,60 @@
   {
     "id": "MOS-PRESS-006",
     "slug": "hydraulic-press-punching-shear",
-    "title": "Hydraulic Press Punching Shear and Bearing Stress Check",
+    "title": "Hydraulic Press Fixture: Nominal Circular Punch-Through and Bearing Checks",
     "studentDocumentTitle": "Student Homework Questions",
     "instructorDocumentTitle": "Instructor Answers",
-    "summary": "A context-rich mechanics problem on average bearing stress and punching shear stress in a press-loaded plate.",
+    "summary": "Evaluate two local average-stress demands in a press-loaded plate against illustrative allowable criteria, while distinguishing a nominal local check from complete fixture assessment.",
     "textbookChapters": [
       "Stress and strain",
       "Shear stress",
       "Bearing stress",
-      "Factor of safety"
+      "Allowable stress and design assessment"
     ],
     "derivedPlaceholders": [
       "press_load_N",
-      "press_bearing_area_mm2",
+      "press_shear_perimeter_mm",
       "press_punching_area_mm2",
-      "press_bearing_stress_MPa",
+      "press_bearing_area_mm2",
       "press_punching_shear_MPa",
+      "press_bearing_stress_MPa",
       "press_larger_stress",
       "press_larger_stress_MPa",
-      "press_fos_shear",
-      "press_fos_bearing",
-      "press_governing_fos_mode",
-      "press_governing_fos"
+      "press_shear_reserve",
+      "press_bearing_reserve",
+      "press_shear_utilization",
+      "press_bearing_utilization",
+      "press_shear_utilization_percent",
+      "press_bearing_utilization_percent",
+      "press_min_reserve",
+      "press_max_utilization",
+      "press_controlling_check",
+      "press_criteria_assessment",
+      "press_edge_gap_mm",
+      "press_support_contact_length_mm"
     ],
     "image": "problems/hydraulic-press-punching-shear/assets/press-industry-context.png",
-    "idealizedImage": "problems/hydraulic-press-punching-shear/assets/press-instructor-idealization.png",
-    "idealizedImageAlt": "Instructor idealization showing the press ram, plate, bearing area, and punching shear sections.",
+    "idealizedImage": "problems/hydraulic-press-punching-shear/assets/press-instructor-reference.png",
+    "idealizedImageAlt": "Front, plan, and imaginary-core views showing the complete hypothetical cylindrical wall and circular contact disk on an intact plate supported by two separate blocks. Schematic; current dimensions accompany the image.",
     "source": "problems/hydraulic-press-punching-shear/index.html",
-    "problemStatement": "<p>A manufacturing engineering team is evaluating a hydraulic press fixture used to apply a vertical compressive load through a cylindrical ram onto a flat metal plate. The plate is supported by two fixture blocks with an opening beneath the loaded region. This type of setup appears in pressing operations, material testing, tooling qualification, and shop-floor fixtures where concentrated loads are introduced into relatively thin plates.</p><p>As a junior mechanical or manufacturing engineer, you must identify how the load is transferred from the ram into the supported plate and determine the average stress quantities that are relevant to the simplified Solid Mechanics model. The analysis focuses on two different average-stress mechanisms: bearing stress under the ram and punching shear stress through the plate along sections AC and BD.</p>",
-    "engineeringGoal": "<p>Determine the average punching shear stress developed in the plate along sections AC and BD, and determine the average bearing stress on the plate surface under the cylindrical ram. Use these results to identify which simplified stress quantity is larger and state what additional material data would be needed before accepting the fixture for service.</p>",
-    "supplementaryImages": [],
+    "problemStatement": "<p>A manufacturing engineering team is reviewing a hydraulic press fixture used to apply a prescribed vertical compressive load to a metal plate. A flat-ended cylindrical ram contacts the upper plate surface. Two separate, parallel support blocks carry the plate from below and transfer its load to the press table. The plate is intended to remain intact during this load case.</p>\n<p>The ram is centered over the clear opening between the blocks. Let d be the ram-face diameter, t the plate thickness, s the horizontal clear distance between the blocks' inner faces, and b the overall plate extent in that same horizontal direction. The blocks support the plate on the two sides outside the opening. The plate and both block contact regions extend sufficiently far into the page that the entire ram footprint and an imaginary cylinder of diameter d lie within the plate. The blocks extend across the plate depth. No numerical dimension into the page is assigned because a global plate analysis is outside this exercise.</p>\n<p>The Given Data table supplies the prescribed load P and the geometry. These values are instructional assumptions, provisionally retained for this exercise; they are not documented measurements or manufacturer specifications. The two listed allowable criteria are also illustrative assignments, with no established material-grade or design-standard basis.</p>\n<p>As a preliminary local assessment, consider (1) average compressive contact pressure on the plate under the circular ram face and (2) nominal circular punch-through shear demand on the vertical cylindrical surface passing through the plate around the edge of that footprint. This second surface is hypothetical: the plate has not been cut or separated. Its lower circular face lies over the unsupported opening.</p>\n<p>Identify the complete stress-evaluation surfaces before calculating their areas. Compare the resulting demands with the two illustrative allowable criteria using reserve and utilization. State a limited engineering recommendation and identify what remains unverified. The prescribed load is a fixture load case; this exercise does not determine the force required to manufacture a hole.</p>\n<h3>System components</h3><ul><li>Flat-ended cylindrical press ram.</li><li>Intact metal plate.</li><li>Left and right support blocks, separated by an open span.</li><li>Press table or fixture base supporting both blocks.</li></ul>\n<h3>Engineering assumptions</h3><ol><li>Loading is quasi-static, vertical, centered, and normal to a flat ram face. P is the prescribed force transmitted to the plate.</li><li>The initially intact plate has uniform thickness t and is represented by its undeformed geometry for these nominal checks. Ram and block deformation are excluded.</li><li>The entire circular ram face remains in contact with the plate. Calculate mean contact pressure from the net normal force and full contact area; a uniform real pressure distribution is not established.</li><li>The blocks provide upward normal contact reactions outside the clear opening. The plate is unbonded and unclamped at the blocks; omit friction and do not infer fixed plate ends from fixed block bases.</li><li>The centered geometry satisfies 0&lt;d&lt;s&lt;b. Plate material extends beyond the full circle in the into-page direction, and the blocks span that depth. The imaginary core's lower face has no contact with blocks, the table, or other objects.</li><li>For the hypothetical local shear check, use a vertical cylindrical surface of diameter d through thickness t, coincident in plan with the ram footprint perimeter. Its circumferential mean vertical shear traction is a nominal demand. Its real distribution need not be uniform.</li><li>Ignore self-weight and any other load directly on the imaginary core. This permits its vertical load balance to use P.</li><li>Bending, plate deflection, edge concentrations, multiaxial yielding, indentation, contact redistribution, loss of contact, large deformation, support/ram/base capacity, fatigue, and alignment are outside the two numerical checks. Their effects are unverified rather than demonstrated negligible.</li><li>The two allowables are illustrative criteria for these respective nominal demand measures. They do not identify a material's yield/fracture strength, an actual safety factor, or an approved operating limit.</li></ol>",
+    "engineeringGoal": "<p>Develop a transparent local average-stress model; calculate mean circular-face contact pressure and nominal circular punch-through shear demand; evaluate each against its illustrative allowable criterion; and explain why those two checks alone cannot establish the actual failure mode or approve the complete fixture.</p>",
+    "supplementaryImages": [
+      {
+        "path": "problems/hydraulic-press-punching-shear/assets/press-student-geometry.png",
+        "caption": "Geometry supplied for constructing your model. Use the current Given Data; this schematic is not to scale.",
+        "alt": "Unsolved front and plan geometry of a cylindrical ram over two separate plate supports, labeled P, d, t, s, b. Plate and block depth extends beyond the full ram footprint.",
+        "order": 1,
+        "widthPercent": 100
+      }
+    ],
+    "packetLayout": "geometry-first",
+    "showIdealizedImageInStudentPacket": false,
     "variables": [
       {
         "key": "P",
         "symbol": "P",
-        "label": "Applied compressive load",
+        "label": "Prescribed quasi-static compressive load",
         "value": 40,
         "unit": "kN",
         "min": 1,
@@ -10118,7 +10137,7 @@
       {
         "key": "d",
         "symbol": "d",
-        "label": "Ram / shaft diameter",
+        "label": "Diameter of flat circular ram face",
         "value": 50,
         "unit": "mm",
         "min": 5,
@@ -10138,7 +10157,7 @@
       {
         "key": "s",
         "symbol": "s",
-        "label": "Support opening distance",
+        "label": "Clear opening between block inner faces",
         "value": 60,
         "unit": "mm",
         "min": 10,
@@ -10148,7 +10167,7 @@
       {
         "key": "b",
         "symbol": "b",
-        "label": "Overall plate/support width in idealized view",
+        "label": "Overall plate extent in the front-view span direction",
         "value": 120,
         "unit": "mm",
         "min": 20,
@@ -10158,7 +10177,7 @@
       {
         "key": "tau_allow",
         "symbol": "tau_allow",
-        "label": "Optional allowable punching shear stress",
+        "label": "Illustrative allowable criterion for nominal circular shear demand",
         "value": 80,
         "unit": "MPa",
         "min": 5,
@@ -10168,7 +10187,7 @@
       {
         "key": "sigma_bearing_allow",
         "symbol": "sigma_bearing_allow",
-        "label": "Optional allowable bearing stress",
+        "label": "Illustrative allowable criterion for mean ram-face contact pressure",
         "value": 120,
         "unit": "MPa",
         "min": 5,
@@ -10179,360 +10198,334 @@
     "questions": [
       {
         "id": "q1",
-        "title": "Primary Function of the System",
+        "title": "Fixture function and assessment objective",
         "selected": true,
         "tags": [
           "context",
-          "load transfer",
-          "fixture"
+          "hydraulic fixture"
         ],
         "type": "conceptual",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Connect the physical press setup to load transfer",
-          "Identify local plate stress concerns"
+          "Connect application, load transfer, and the intended limited assessment."
         ],
-        "student": "<p>What is the primary structural function of the press fixture system?</p>",
-        "instructor": "<p>The system transfers a compressive load from a hydraulic press ram into a flat metal plate and then into the support blocks and press table. The plate must resist local contact/bearing stress under the ram and possible punching shear through its thickness.</p><p>Students should connect the physical setup to load transfer, not describe the entire press machine in broad terms.</p>",
+        "student": "<p>What is the structural function of the fixture, and is the plate intended to remain intact or to be intentionally pierced in this load case?</p>",
+        "instructor": "<p>The fixture transfers the prescribed compressive load from the ram into the plate, through the plate to the two support blocks, and then into the press table/base. The plate is intended to remain intact. Circular punch-through is a hypothetical local shear check; the task is not a hole-manufacturing or cutting-force calculation.</p>",
         "section": "context"
       },
       {
         "id": "q2",
-        "title": "External Load",
+        "title": "Applied load",
         "selected": true,
         "tags": [
-          "loading",
-          "ram"
+          "context",
+          "hydraulic fixture"
         ],
         "type": "conceptual",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Identify where the load is applied",
-          "Relate the press ram to the idealized load"
+          "Identify force location, direction, and basis."
         ],
-        "student": "<p>Where is the external load applied, and what is its direction?</p>",
-        "instructor": "<p>The external load <em>P</em> is applied vertically downward through the cylindrical ram onto the top surface of the flat plate.</p><p>The industry image has no labels; students should use the problem statement and idealized diagram to identify the load.</p>",
+        "student": "<p>Where is P applied, in what direction, and what does its assigned value represent?</p>",
+        "instructor": "<p>P = {{P}} {{P_unit}} acts vertically downward through the centered flat-ended cylindrical ram onto the plate. It is a prescribed quasi-static instructional load. It is not a validated manufacturing cutting force or a documented press rating.</p>",
         "section": "context"
       },
       {
         "id": "q3",
-        "title": "Supports and Boundary Conditions",
+        "title": "Supports and boundary conditions",
         "selected": true,
         "tags": [
-          "supports",
-          "boundary conditions"
+          "context",
+          "hydraulic fixture"
         ],
         "type": "conceptual",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Identify simplified supports",
-          "Distinguish local stress checks from beam bending analysis"
+          "Distinguish support contact from clamping and define the unsupported region."
         ],
-        "student": "<p>Identify the supports or boundary constraints in the idealized fixture model.</p>",
-        "instructor": "<p>The plate is supported from below by two support blocks on either side of the opening. In the simplified model, the supports provide upward reaction forces to the plate while the central region between the supports is unsupported.</p><p>This is not a fixed-end beam problem for the base analysis; the focus is average bearing and punching shear.</p>",
+        "student": "<p>Describe how the two blocks constrain the plate. Which region is unsupported, and are the plate ends clamped?</p>",
+        "instructor": "<p>The two blocks provide upward normal contact reactions on the outer plate strips, outside the clear opening s = {{s}} {{s_unit}}. The central strip between their inner faces is unsupported from below. The plate is unbonded and unclamped, with friction omitted; fixing the block bases does not create fixed plate ends. The model assumes the blocks extend across the plate depth.</p>",
         "section": "context"
       },
       {
         "id": "q4",
-        "title": "Load Path",
+        "title": "Load path",
         "selected": true,
         "tags": [
-          "load path",
-          "bearing",
-          "punching shear"
+          "context",
+          "hydraulic fixture"
         ],
         "type": "conceptual",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Trace load from ram to fixture base",
-          "Name the contact and shear-transfer regions"
+          "Explain load transfer without prescribing a demonstrated failure path."
         ],
-        "student": "<p>Using the component list, trace the load path from the press ram to the fixture base.</p>",
-        "instructor": "<p>One acceptable load path is: hydraulic ram &rarr; bearing contact region on top of the plate &rarr; plate material around the loaded region &rarr; punching shear sections AC and BD &rarr; support blocks &rarr; press table/fixture base.</p><p>The key point is that the load does not vanish at the plate; it must transfer through contact and shear regions into the supports.</p>",
+        "student": "<p>Trace the load path through the ram, plate, two blocks, and press table/base. Distinguish an internal analysis surface from a physical component.</p>",
+        "instructor": "<p>Load passes from the ram through its contact footprint into plate stresses, then through the support contact regions into the blocks and base. The hypothetical circular shear wall is an internal surface used to evaluate a nominal demand; it is not an extra component or a pre-existing cut. The plate can transfer load through bending and other stress components even though only two local average demands are calculated here.</p>",
         "section": "context"
       },
       {
         "id": "q5",
-        "title": "Critical Components and Locations",
+        "title": "Selected locations and excluded checks",
         "selected": true,
         "tags": [
-          "critical locations",
-          "plate"
+          "context",
+          "hydraulic fixture"
         ],
         "type": "conceptual",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Identify critical locations for average stress checks",
-          "Separate included and excluded components"
+          "Separate chosen local checks from a complete capacity assessment."
         ],
-        "student": "<p>Which components or locations are likely to be critical for this simplified problem?</p>",
-        "instructor": "<p>The flat plate is the critical component. The important locations are the contact area directly under the ram and the potential punching shear sections AC and BD through the plate thickness.</p><p>Students may mention support blocks, but the base problem provides geometry for the plate stress checks only.</p>",
+        "student": "<p>Identify the two plate regions selected for numerical checks. Name at least one other region or response that could matter to the real fixture but is not assessed by these checks.</p>",
+        "instructor": "<p>The selected regions are the circular contact footprint under the ram and the hypothetical vertical cylindrical wall around that footprint through the plate thickness. Other potentially important items include plate bending/deflection, local indentation, plate-to-block contact, and block, ram, or base capacity. Selecting two checks does not establish that those locations govern the complete fixture.</p>",
         "section": "context"
       },
       {
         "id": "q6",
-        "title": "Critical Mechanical Response",
+        "title": "Meaning of the two stress demands",
         "selected": true,
         "tags": [
-          "bearing stress",
-          "punching shear"
+          "context",
+          "hydraulic fixture"
         ],
         "type": "conceptual",
         "difficulty": "introductory to intermediate",
         "learningObjectives": [
-          "Distinguish bearing stress from punching shear stress",
-          "Identify the relevant stress mechanism at each location"
+          "Distinguish contact pressure, nominal shear demand, and failure prediction."
         ],
-        "student": "<p>For each critical location, identify the relevant mechanical response or failure mechanism considered in this problem.</p>",
-        "instructor": "<p>At the top surface under the ram, the relevant response is average bearing/compressive contact stress. Along sections AC and BD, the relevant response is average punching shear stress through the plate thickness.</p><p>Bending, contact nonlinearity, local yielding, and plastic deformation are not included in the simplified calculation.</p>",
+        "student": "<p>What physical stress quantity is evaluated at each selected region? Does either average demand establish that a particular failure mode occurs?</p>",
+        "instructor": "<p>The top disk carries normal compressive contact pressure; the calculation gives its mean magnitude. The cylindrical wall carries a vertical shear-traction resultant; the calculation gives its nominal circumferential mean over the wall area. Neither average establishes a real peak stress, a crack, a completed cut, or the actual governing failure mode.</p>",
         "section": "context"
       },
       {
         "id": "q7",
-        "title": "Relevant Geometric and Load Parameters",
+        "title": "Inputs and their roles",
         "selected": true,
         "tags": [
-          "geometry",
-          "area",
-          "average stress"
+          "context",
+          "hydraulic fixture"
         ],
         "type": "conceptual",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Identify variables controlling bearing and punching shear",
-          "Connect area definitions to stress definitions"
+          "Distinguish computational inputs, layout constraints, and allowable criteria."
         ],
-        "student": "<p>Identify the geometric and load parameters that control the bearing stress and punching shear stress.</p>",
-        "instructor": "<p>The relevant parameters are applied load <em>P</em>, ram diameter <em>d</em>, plate thickness <em>t</em>, support opening distance <em>s</em>, and overall plate/support width <em>b</em>. For the simplified calculations here, bearing stress is controlled by the contact area under the ram, and punching shear is controlled by the shear area through sections AC and BD.</p><p>Students should connect area definitions to stress definitions rather than simply listing dimensions.</p>",
+        "student": "<p>Which inputs enter the two local stress formulas, which describe layout and model feasibility, and which define the assigned comparison criteria?</p>",
+        "instructor": "<p>P and d determine mean circular-face contact pressure. P, d, and t determine nominal circular shear demand. s and b define the support opening and plate extent and must be geometrically compatible with d; they do not enter these two local P/A formulas. The two illustrative allowable criteria are {{tau_allow}} {{tau_allow_unit}} for nominal shear and {{sigma_bearing_allow}} {{sigma_bearing_allow_unit}} for mean contact pressure. Their assigned values have no documented material basis.</p>",
         "section": "context"
       },
       {
         "id": "q8",
-        "title": "Student-Generated Structural Idealization",
+        "title": "Student structural idealization",
         "selected": true,
         "tags": [
-          "idealization",
-          "stress surfaces",
-          "modeling"
+          "modeling",
+          "hydraulic fixture"
         ],
         "type": "fbd/modeling",
         "difficulty": "introductory to intermediate",
         "learningObjectives": [
-          "Translate a press setup into an average-stress model",
-          "Identify bearing and punching shear surfaces"
+          "Construct a consistent 3D interpretation from supplied geometry."
         ],
-        "student": "<p>Convert the real hydraulic press fixture into a simplified Mechanics of Materials model. Your sketch should show the cylindrical ram, flat plate, support blocks, applied load <em>P</em>, plate thickness <em>t</em>, ram diameter <em>d</em>, support opening <em>s</em>, total plate/support width <em>b</em>, and the potential punching shear sections AC and BD.</p><p>Student model placeholder: insert or draw the simplified model and load-transfer/stress-surface diagram here.</p>",
-        "instructor": "<p>A correct idealization shows a vertical load <em>P</em> applied through the ram onto the plate, bearing stress distributed over the ram contact area, and two vertical punching shear sections AC and BD through the plate thickness at the loaded region.</p><p>For the student packet, provide a blank sketch space first. The instructor reference diagram can be shown after students attempt their own model if desired.</p>",
+        "student": "<p>Using the student geometry schematic and Given Data, draw your own model. Show the cylinder and circular footprint, plate thickness, separate blocks, P, d, t, s, and b. Add a plan or perspective view identifying the complete hypothetical shear surface through the plate. Distinguish that surface from the contact footprint and show the load-transfer directions you would use.</p><div class=\"model-sketch-space\" style=\"min-height:80mm;break-inside:avoid;page-break-inside:avoid;border:1px solid #aaa;margin:1em 0;padding:0.5em\" aria-label=\"Space for your structural idealization\">Your model sketch</div>",
+        "instructor": "<p>A satisfactory sketch has centered downward P, the plate on two unbonded blocks, a full circular ram footprint inside the opening, and a vertical cylindrical candidate surface through thickness t around that circle. A section view may show two wall traces, but the plan/perspective view must identify one continuous cylindrical wall. The contact disk and wall are distinct areas. The sketch must show separate ram edges and block inner edges and adequate plate depth beyond the circle. The plate remains intact.</p>",
         "section": "transition"
       },
       {
         "id": "q9",
-        "title": "Modeling Assumptions",
+        "title": "Assumptions and limitations",
         "selected": true,
         "tags": [
-          "assumptions",
-          "average stress"
+          "modeling",
+          "hydraulic fixture"
         ],
         "type": "conceptual",
         "difficulty": "introductory to intermediate",
         "learningObjectives": [
-          "State simplifying assumptions for average stress",
-          "Identify excluded effects"
+          "State assumptions without confusing omission with physical insignificance."
         ],
-        "student": "<p>State the assumptions used to convert the real press setup into the simplified Solid Mechanics model.</p>",
-        "instructor": "<p>Assumptions may include static vertical load; ram is rigid relative to the plate; plate is checked using average stress; bearing stress is uniformly distributed over the idealized contact footprint; punching shear is uniformly distributed over sections AC and BD; support blocks are rigid; and stress concentrations, plate bending, plasticity, contact nonlinearity, and friction are neglected.</p><p>Expected answers do not need every assumption but should include the average-stress idealization.</p>",
+        "student": "<p>State the assumptions needed for these two nominal checks. Identify two real effects excluded from the calculations and explain whether exclusion establishes that they are negligible.</p>",
+        "instructor": "<p>Relevant assumptions include prescribed centered quasi-static loading, full flat circular contact, uniform plate thickness, adequate into-page extent, a free lower core face, and rigid support/ram idealizations. The core sidewall is an imaginary cylindrical surface and self-weight is omitted. Mean stresses do not require proof of uniform actual distributions. Bending, deflection, contact redistribution, indentation, and other effects are unverified. Excluding them from the exercise does not show they are negligible or non-governing.</p>",
         "section": "transition"
       },
       {
         "id": "q10",
-        "title": "Mechanics Analysis Plan",
+        "title": "Analysis plan",
         "selected": true,
         "tags": [
-          "analysis plan",
-          "area",
-          "stress"
+          "modeling",
+          "hydraulic fixture"
         ],
         "type": "calculation planning",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Plan the average-stress calculation sequence",
-          "Select the correct areas before applying stress formulas"
+          "Plan a surface-first calculation and criterion-based assessment."
         ],
-        "student": "<p>Before calculating, describe the analysis sequence needed to determine punching shear stress and bearing stress.</p>",
-        "instructor": "<p>The analysis sequence is: identify the load <em>P</em>; identify the contact/bearing area under the ram; identify the punching shear area along sections AC and BD; calculate &tau;<sub>p</sub> = <em>P</em>/<em>A</em><sub>p</sub> for punching shear; calculate &sigma;<sub>b</sub> = <em>P</em>/<em>A</em><sub>b</sub> for bearing stress; compare the stress magnitudes; and state what material allowables would be needed for a design decision.</p><p>This helps students organize the calculation before substituting values.</p>",
+        "student": "<p>Before substituting values, outline the sequence for checking the two nominal demands against the illustrative criteria.</p>",
+        "instructor": "<p>Confirm the geometry and units; identify the full contact disk and cylindrical sidewall; determine their areas; convert P from kN to N; calculate both average demands; compare their magnitudes; calculate allowable-to-demand reserve and demand-to-allowable utilization for each; identify the more highly utilized nominal check; and give a recommendation limited to those results and their assumptions. Use unrounded internal values until final display.</p>",
         "section": "transition"
       },
       {
         "id": "q11",
-        "title": "Boundary and Loading Conditions from Instructor Diagram",
+        "title": "Equilibrium of the imaginary circular core",
         "selected": true,
         "tags": [
-          "loading",
-          "supports",
-          "diagram interpretation"
+          "nominal local checks",
+          "hydraulic fixture"
         ],
-        "type": "conceptual",
+        "type": "fbd/modeling",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Read load and support conditions from the idealized diagram",
-          "Focus on local stress instead of support reactions"
+          "Justify the selected local shear resultant by equilibrium."
         ],
-        "student": "<p>From the instructor diagram, identify the loading and support conditions used in the simplified model.</p>",
-        "instructor": "<p>The cylindrical ram applies a downward compressive load <em>P</em> to the plate. The plate is supported below by two rigid support blocks on either side of the opening. The model focuses on local bearing under the ram and punching shear through sections AC and BD.</p><p>This replaces a full support-reaction analysis because the base learning goal is average stress, not beam bending.</p>",
+        "student": "<p>Explain why the lower face of the imaginary circular core is unsupported in the selected geometry. For a free body of that core, identify how the applied load is balanced. What does this equilibrium argument establish, and what does it not establish?</p>",
+        "instructor": "<p>The ram/core diameter is {{d}} {{d_unit}} and the clear opening is {{s}} {{s_unit}}, with d &lt; s. Centering gives a horizontal ram-edge to block-inner-edge offset (s − d)/2 = {{press_edge_gap_mm}} mm on each side. With the assumed plate depth, the entire lower core disk lies over the opening. Downward P on the upper disk is balanced by an upward vertical shear-traction resultant on the cylindrical wall; its integrated value is P. This justifies using P as the nominal shear resultant on that selected wall. It does not prove uniform shear, a fracture shape, or that bending is non-governing.</p>",
         "section": "analysis"
       },
       {
         "id": "q12",
-        "title": "Potential Failure or Stress Surfaces",
+        "title": "Stress-evaluation surfaces",
         "selected": true,
         "tags": [
-          "stress surfaces",
-          "bearing",
-          "punching shear"
+          "nominal local checks",
+          "hydraulic fixture"
         ],
         "type": "conceptual",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Identify the surfaces over which stresses are evaluated",
-          "Distinguish contact area from shear-through-thickness area"
+          "Identify the complete surfaces before selecting area equations."
         ],
-        "student": "<p>Identify the surfaces over which bearing stress and punching shear stress are evaluated.</p>",
-        "instructor": "<p>Bearing stress is evaluated over the idealized contact footprint under the ram. Punching shear stress is evaluated through the plate thickness along sections AC and BD.</p><p>Students should distinguish a surface contact area from a shear-through-thickness area.</p>",
+        "student": "<p>Describe the full contact surface and the full hypothetical shear surface. Explain why two traces of the wall in a section drawing are insufficient to determine its area by counting planes.</p>",
+        "instructor": "<p>Contact is evaluated over the horizontal circular disk beneath the flat ram face. The candidate shear surface is the vertical cylindrical sidewall of diameter d and height t around that disk. The two section traces are intersections with one cylindrical wall, not two rectangular planes of area dt. The wall area must use the complete circumference multiplied by thickness.</p>",
         "section": "analysis"
       },
       {
         "id": "q13",
-        "title": "Bearing Area Under the Ram",
+        "title": "Circular contact area",
         "selected": true,
         "tags": [
-          "bearing area",
-          "contact area"
+          "nominal local checks",
+          "hydraulic fixture"
         ],
         "type": "calculation",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Compute circular contact area",
-          "Use the stated bearing-area convention"
+          "Compute the area of the actual assumed contact footprint."
         ],
-        "student": "<p>Determine the idealized contact area used to calculate average bearing stress under the cylindrical ram.</p>",
-        "instructor": "<p>Using a circular contact footprint, <em>A</em><sub>b</sub> = &pi;<em>d</em><sup>2</sup>/4. With <em>d</em> = {{d}} {{d_unit}}, <em>A</em><sub>b</sub> = &pi;({{d}} mm)<sup>2</sup>/4 = {{press_bearing_area_mm2}} mm<sup>2</sup>.</p><p>If an instructor wants a projected rectangular bearing area instead, that convention should be stated explicitly. This filled example uses the circular footprint area.</p>",
+        "student": "<p>Determine the full circular contact area used for the mean compressive pressure.</p>",
+        "instructor": "<p>A<sub>b</sub>=π d<sup>2</sup>/4=π({{d}} mm)<sup>2</sup>/4={{press_bearing_area_mm2}} mm<sup>2</sup>. This uses the full flat circular face. A projected rectangle would describe a different contact model; it is not an alternative convention for this disk.</p>",
         "section": "analysis"
       },
       {
         "id": "q14",
-        "title": "Punching Shear Area Along Sections AC and BD",
+        "title": "Cylindrical shear surface area",
         "selected": true,
         "tags": [
-          "punching shear area",
-          "through-thickness shear"
+          "nominal local checks",
+          "hydraulic fixture"
         ],
         "type": "calculation",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Compute the two-section punching shear area",
-          "Use plate thickness in the shear area"
+          "Derive the cylindrical area from its complete perimeter."
         ],
-        "student": "<p>Determine the total idealized punching shear area through sections AC and BD.</p>",
-        "instructor": "<p>Each punching shear section has idealized area <em>dt</em>. Since there are two sections, <em>A</em><sub>p</sub> = 2<em>dt</em>. With <em>d</em> = {{d}} {{d_unit}} and <em>t</em> = {{t}} {{t_unit}}, <em>A</em><sub>p</sub> = 2({{d}})({{t}}) = {{press_punching_area_mm2}} mm<sup>2</sup>.</p><p>This calculation uses the simplified two-section punching shear idealization shown in the instructor diagram.</p>",
+        "student": "<p>Determine the nominal circular punch-through shear area. Show how the surface follows from the footprint perimeter and plate thickness.</p>",
+        "instructor": "<p>The complete perimeter is L=π d={{press_shear_perimeter_mm}} mm. The wall area is A<sub>s</sub>=Lt=π dt=π({{d}} mm)({{t}} mm)={{press_punching_area_mm2}} mm<sup>2</sup>. Do not replace the circumference by twice the diameter. The calculated wall is hypothetical; the plate has not been cut.</p>",
         "section": "analysis"
       },
       {
         "id": "q15",
-        "title": "Average Punching Shear Stress",
+        "title": "Nominal circular shear demand",
         "selected": true,
         "tags": [
-          "punching shear stress",
-          "average stress"
+          "nominal local checks",
+          "hydraulic fixture"
         ],
         "type": "calculation",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Calculate average punching shear stress",
-          "Use N and mm units to obtain MPa"
+          "Calculate nominal shear demand with consistent units and interpretation."
         ],
-        "student": "<p>Calculate the average punching shear stress developed in the plate along sections AC and BD.</p>",
-        "instructor": "<p>Convert the load to N: <em>P</em> = {{press_load_N}} N. Then &tau;<sub>p</sub> = <em>P</em>/<em>A</em><sub>p</sub> = {{press_load_N}}/{{press_punching_area_mm2}} = {{press_punching_shear_MPa}} MPa.</p><p>Use N and mm units so N/mm<sup>2</sup> = MPa.</p>",
+        "student": "<p>Calculate the nominal circular punch-through shear demand and state its units.</p>",
+        "instructor": "<p>P={{P}} kN={{press_load_N}} N. Then τ<sub>nom</sub>=P/A<sub>s</sub>={{press_load_N}} N/({{press_punching_area_mm2}} mm<sup>2</sup>)={{press_punching_shear_MPa}} MPa. Internally use the unrounded area; displayed substitutions are rounded. N/mm² = MPa. This is a nominal average demand on the selected wall, not an established maximum or failure stress.</p>",
         "section": "analysis"
       },
       {
         "id": "q16",
-        "title": "Average Bearing Stress Under the Ram",
+        "title": "Mean circular-face contact pressure",
         "selected": true,
         "tags": [
-          "bearing stress",
-          "contact stress"
+          "nominal local checks",
+          "hydraulic fixture"
         ],
         "type": "calculation",
         "difficulty": "introductory",
         "learningObjectives": [
-          "Calculate average bearing stress",
-          "Interpret bearing as compressive contact stress"
+          "Calculate and interpret mean normal contact pressure."
         ],
-        "student": "<p>Calculate the average bearing stress developed on the plate surface under the cylindrical ram.</p>",
-        "instructor": "<p>&sigma;<sub>b</sub> = <em>P</em>/<em>A</em><sub>b</sub> = {{press_load_N}}/{{press_bearing_area_mm2}} = {{press_bearing_stress_MPa}} MPa.</p><p>This is an average compressive contact stress, not a tensile stress.</p>",
+        "student": "<p>Calculate the average compressive contact pressure on the plate under the ram.</p>",
+        "instructor": "<p>σ<sub>b</sub>=P/A<sub>b</sub>={{press_load_N}} N/({{press_bearing_area_mm2}} mm<sup>2</sup>)={{press_bearing_stress_MPa}} MPa. Report the positive compressive magnitude and use the unrounded area internally. This is mean pressure beneath the ram, not plate-to-block bearing, tensile stress, or a verified resistance to local indentation.</p>",
         "section": "analysis"
       },
       {
         "id": "q17",
-        "title": "Compare Stress Magnitudes",
+        "title": "Stress magnitude versus criterion control",
         "selected": true,
         "tags": [
-          "comparison",
-          "engineering interpretation"
+          "nominal local checks",
+          "hydraulic fixture"
         ],
         "type": "calculation",
         "difficulty": "introductory to intermediate",
         "learningObjectives": [
-          "Compare average stress magnitudes",
-          "Avoid declaring failure without allowables"
+          "Distinguish comparison of unlike stress magnitudes from normalized assessment."
         ],
-        "student": "<p>Compare the calculated average punching shear stress and average bearing stress. Which stress quantity is larger?</p>",
-        "instructor": "<p>Using the stated idealization, &tau;<sub>p</sub> = {{press_punching_shear_MPa}} MPa and &sigma;<sub>b</sub> = {{press_bearing_stress_MPa}} MPa. The larger average stress quantity is {{press_larger_stress}} = {{press_larger_stress_MPa}} MPa.</p><p>Larger stress magnitude does not automatically mean governing failure unless shear and bearing allowables are known.</p>",
+        "student": "<p>Compare the two nominal stress magnitudes. Does the larger numerical stress necessarily identify the more critical allowable-criterion check?</p>",
+        "instructor": "<p>τ<sub>nom</sub>={{press_punching_shear_MPa}} MPa and σ<sub>b</sub>={{press_bearing_stress_MPa}} MPa. The largest nominal magnitude is {{press_larger_stress_MPa}} MPa, associated with {{press_larger_stress}}. A larger number alone does not identify the controlling comparison because shear and contact pressure use different allowable criteria. Compare normalized utilization or reserve in q18.</p>",
         "section": "analysis"
       },
       {
         "id": "q18",
-        "title": "Strength Factor of Safety and Mechanics-Based Modification",
+        "title": "Allowable reserve, utilization, and a mechanics-based change",
         "selected": true,
         "tags": [
-          "factor of safety",
-          "design modification"
+          "allowable reserve",
+          "utilization",
+          "design assessment"
         ],
         "type": "decision",
         "difficulty": "introductory to intermediate",
         "learningObjectives": [
-          "Compute optional factors of safety",
-          "Recommend modifications based on stress-area relationships"
+          "Evaluate assigned criteria and connect a design change to the correct demand relationship."
         ],
-        "student": "<p>If allowable bearing and shear stresses are provided by the instructor, determine the factor of safety for bearing and punching shear. If the plate does not meet the required strength criterion, identify a mechanics-based modification that would reduce bearing stress or punching shear stress.</p>",
-        "instructor": "<p>Using the optional allowables in the current input set, FOS<sub>shear</sub> = &tau;<sub>allow</sub>/&tau;<sub>p</sub> = {{tau_allow}}/{{press_punching_shear_MPa}} = {{press_fos_shear}}, and FOS<sub>bearing</sub> = &sigma;<sub>bearing,allow</sub>/&sigma;<sub>b</sub> = {{sigma_bearing_allow}}/{{press_bearing_stress_MPa}} = {{press_fos_bearing}}. The smaller simplified factor of safety is {{press_governing_fos}} for {{press_governing_fos_mode}}.</p><p>Possible modifications include increasing plate thickness <em>t</em> to reduce punching shear stress, increasing ram diameter <em>d</em> or using a load-spreading pad to reduce bearing stress, reducing load <em>P</em>, using a stronger plate material, or changing the support geometry to reduce local failure risk.</p>",
+        "student": "<p>For each nominal check, calculate allowable-to-demand reserve R and utilization U, and express U as a percentage. Identify the more highly utilized check, or state that they are tied and state whether each assigned criterion is met. Propose one change that would reduce a specified nominal demand at fixed geometry or with an explicitly rechecked geometry; explain the limitation of that proposal.</p>",
+        "instructor": "<p>Use R<sub>s</sub>=τ<sub>allow</sub>/τ<sub>nom</sub>={{press_shear_reserve}} and U<sub>s</sub>=τ<sub>nom</sub>/τ<sub>allow</sub>={{press_shear_utilization}}={{press_shear_utilization_percent}}%. Use R<sub>b</sub>=σ<sub>bearing,allow</sub>/σ<sub>b</sub>={{press_bearing_reserve}} and U<sub>b</sub>=σ<sub>b</sub>/σ<sub>bearing,allow</sub>={{press_bearing_utilization}}={{press_bearing_utilization_percent}}%. The minimum reserve is {{press_min_reserve}}, the maximum utilization is {{press_max_utilization}}, and the controlling comparison among these two checks is {{press_controlling_check}}. {{press_criteria_assessment}}</p>\n<p>A criterion is met when its unrounded U ≤ 1, equivalently R ≥ 1. These are allowable reserves, not demonstrated material-strength factors of safety. Reducing P reduces both demands. Increasing t at fixed P,d reduces the nominal shear demand but does not change the mean contact pressure. Increasing d at fixed P,t reduces both nominal demands, provided d remains below s and the complete footprint remains within the plate. A spreading pad changes the contact/shear geometry and requires a new model. A stronger material might justify a different allowable but does not itself reduce P/A. No suggested change establishes complete fixture acceptability.</p><p>Increasing thickness lowers only the specified nominal shear demand at fixed P and d; it does not automatically improve overall fixture safety.</p>",
         "section": "analysis"
       },
       {
         "id": "q19",
-        "title": "Engineering Assessment and Recommendation",
+        "title": "Limited engineering recommendation",
         "selected": true,
         "tags": [
-          "recommendation",
-          "limitations",
-          "missing data"
+          "nominal local checks",
+          "hydraulic fixture"
         ],
         "type": "decision",
         "difficulty": "introductory to intermediate",
         "learningObjectives": [
-          "Make a limited mechanics-based recommendation",
-          "State missing material data and excluded checks"
+          "Make a scoped recommendation supported by calculations and explicit evidence limits."
         ],
-        "student": "<p>Use the mechanics results to make a limited engineering recommendation. Identify the larger calculated average stress and state what additional information is needed before accepting the fixture for service.</p>",
-        "instructor": "<p>For the stated data and idealization, &tau;<sub>p</sub> = {{press_punching_shear_MPa}} MPa and &sigma;<sub>b</sub> = {{press_bearing_stress_MPa}} MPa. The larger average stress is {{press_larger_stress}}.</p><p>However, accepting the fixture requires allowable shear stress, allowable bearing/compressive stress, required factor of safety, and possibly checks for plate bending, yielding, plastic indentation, contact nonlinearity, support deformation, and fixture alignment. The final recommendation should not overclaim safety without material allowables.</p>",
+        "student": "<p>Write a concise recommendation that reports the outcome of the two illustrative checks, identifies the more highly utilized check or a tie, and states what remains necessary before making a real service-acceptance decision. Explain why this exercise neither validates a cutting force nor establishes complete fixture safety.</p>",
+        "instructor": "<p>{{press_criteria_assessment}} The controlling utilization comparison among these two is {{press_controlling_check}}, with minimum reserve {{press_min_reserve}}. These conclusions apply only to the stated nominal model, full-contact/core-clearance assumptions, and illustrative criteria. The assigned values and allowable basis require documentation. A real decision also requires material/condition data, actual plate and support geometry, the operating load envelope, and suitable checks of plate bending/deflection, contact/indentation, yielding, supports, ram/base capacity, alignment, and repeated loading as applicable. The model does not identify the actual governing failure mechanism. P is an assigned fixture load; no manufacturing cutting force has been validated.</p>",
         "section": "analysis"
       }
     ],
     "variants": [
       {
         "id": "section-a",
-        "title": "Homework Version A - punching shear and bearing",
-        "description": "Default MEEN 305-style sequence for bearing area, punching shear area, average stresses, and interpretation.",
+        "title": "Homework Version A — nominal circular shear and contact-pressure checks",
+        "description": "Nineteen-question fixture assessment using assigned geometry/load and illustrative allowable criteria, reserves, and utilization; not a cutting-force or complete safety calculation.",
         "selectedQuestions": [
           "q1",
           "q2",

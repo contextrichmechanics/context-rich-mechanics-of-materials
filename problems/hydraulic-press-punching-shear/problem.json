@@ -1,33 +1,53 @@
 {
   "id": "MOS-PRESS-006",
   "slug": "hydraulic-press-punching-shear",
-  "title": "Hydraulic Press Punching Shear and Bearing Stress Check",
+  "title": "Hydraulic Press Fixture: Nominal Circular Punch-Through and Bearing Checks",
   "studentDocumentTitle": "Student Homework Questions",
   "instructorDocumentTitle": "Instructor Answers",
-  "summary": "A context-rich mechanics problem on average bearing stress and punching shear stress in a press-loaded plate.",
+  "summary": "Evaluate two local average-stress demands in a press-loaded plate against illustrative allowable criteria, while distinguishing a nominal local check from complete fixture assessment.",
   "textbookChapters": [
     "Stress and strain",
     "Shear stress",
     "Bearing stress",
-    "Factor of safety"
+    "Allowable stress and design assessment"
   ],
   "derivedPlaceholders": [
     "press_load_N",
-    "press_bearing_area_mm2",
+    "press_shear_perimeter_mm",
     "press_punching_area_mm2",
-    "press_bearing_stress_MPa",
+    "press_bearing_area_mm2",
     "press_punching_shear_MPa",
+    "press_bearing_stress_MPa",
     "press_larger_stress",
     "press_larger_stress_MPa",
-    "press_fos_shear",
-    "press_fos_bearing",
-    "press_governing_fos_mode",
-    "press_governing_fos"
+    "press_shear_reserve",
+    "press_bearing_reserve",
+    "press_shear_utilization",
+    "press_bearing_utilization",
+    "press_shear_utilization_percent",
+    "press_bearing_utilization_percent",
+    "press_min_reserve",
+    "press_max_utilization",
+    "press_controlling_check",
+    "press_criteria_assessment",
+    "press_edge_gap_mm",
+    "press_support_contact_length_mm"
   ],
   "image": "assets/press-industry-context.png",
-  "idealizedImage": "assets/press-instructor-idealization.png",
-  "idealizedImageAlt": "Instructor idealization showing the press ram, plate, bearing area, and punching shear sections.",
+  "idealizedImage": "assets/press-instructor-reference.png",
+  "idealizedImageAlt": "Front, plan, and imaginary-core views showing the complete hypothetical cylindrical wall and circular contact disk on an intact plate supported by two separate blocks. Schematic; current dimensions accompany the image.",
   "source": "index.html",
-  "problemStatement": "<p>A manufacturing engineering team is evaluating a hydraulic press fixture used to apply a vertical compressive load through a cylindrical ram onto a flat metal plate. The plate is supported by two fixture blocks with an opening beneath the loaded region. This type of setup appears in pressing operations, material testing, tooling qualification, and shop-floor fixtures where concentrated loads are introduced into relatively thin plates.</p><p>As a junior mechanical or manufacturing engineer, you must identify how the load is transferred from the ram into the supported plate and determine the average stress quantities that are relevant to the simplified Solid Mechanics model. The analysis focuses on two different average-stress mechanisms: bearing stress under the ram and punching shear stress through the plate along sections AC and BD.</p>",
-  "engineeringGoal": "<p>Determine the average punching shear stress developed in the plate along sections AC and BD, and determine the average bearing stress on the plate surface under the cylindrical ram. Use these results to identify which simplified stress quantity is larger and state what additional material data would be needed before accepting the fixture for service.</p>"
+  "problemStatement": "<p>A manufacturing engineering team is reviewing a hydraulic press fixture used to apply a prescribed vertical compressive load to a metal plate. A flat-ended cylindrical ram contacts the upper plate surface. Two separate, parallel support blocks carry the plate from below and transfer its load to the press table. The plate is intended to remain intact during this load case.</p>\n<p>The ram is centered over the clear opening between the blocks. Let d be the ram-face diameter, t the plate thickness, s the horizontal clear distance between the blocks' inner faces, and b the overall plate extent in that same horizontal direction. The blocks support the plate on the two sides outside the opening. The plate and both block contact regions extend sufficiently far into the page that the entire ram footprint and an imaginary cylinder of diameter d lie within the plate. The blocks extend across the plate depth. No numerical dimension into the page is assigned because a global plate analysis is outside this exercise.</p>\n<p>The Given Data table supplies the prescribed load P and the geometry. These values are instructional assumptions, provisionally retained for this exercise; they are not documented measurements or manufacturer specifications. The two listed allowable criteria are also illustrative assignments, with no established material-grade or design-standard basis.</p>\n<p>As a preliminary local assessment, consider (1) average compressive contact pressure on the plate under the circular ram face and (2) nominal circular punch-through shear demand on the vertical cylindrical surface passing through the plate around the edge of that footprint. This second surface is hypothetical: the plate has not been cut or separated. Its lower circular face lies over the unsupported opening.</p>\n<p>Identify the complete stress-evaluation surfaces before calculating their areas. Compare the resulting demands with the two illustrative allowable criteria using reserve and utilization. State a limited engineering recommendation and identify what remains unverified. The prescribed load is a fixture load case; this exercise does not determine the force required to manufacture a hole.</p>\n<h3>System components</h3><ul><li>Flat-ended cylindrical press ram.</li><li>Intact metal plate.</li><li>Left and right support blocks, separated by an open span.</li><li>Press table or fixture base supporting both blocks.</li></ul>\n<h3>Engineering assumptions</h3><ol><li>Loading is quasi-static, vertical, centered, and normal to a flat ram face. P is the prescribed force transmitted to the plate.</li><li>The initially intact plate has uniform thickness t and is represented by its undeformed geometry for these nominal checks. Ram and block deformation are excluded.</li><li>The entire circular ram face remains in contact with the plate. Calculate mean contact pressure from the net normal force and full contact area; a uniform real pressure distribution is not established.</li><li>The blocks provide upward normal contact reactions outside the clear opening. The plate is unbonded and unclamped at the blocks; omit friction and do not infer fixed plate ends from fixed block bases.</li><li>The centered geometry satisfies 0&lt;d&lt;s&lt;b. Plate material extends beyond the full circle in the into-page direction, and the blocks span that depth. The imaginary core's lower face has no contact with blocks, the table, or other objects.</li><li>For the hypothetical local shear check, use a vertical cylindrical surface of diameter d through thickness t, coincident in plan with the ram footprint perimeter. Its circumferential mean vertical shear traction is a nominal demand. Its real distribution need not be uniform.</li><li>Ignore self-weight and any other load directly on the imaginary core. This permits its vertical load balance to use P.</li><li>Bending, plate deflection, edge concentrations, multiaxial yielding, indentation, contact redistribution, loss of contact, large deformation, support/ram/base capacity, fatigue, and alignment are outside the two numerical checks. Their effects are unverified rather than demonstrated negligible.</li><li>The two allowables are illustrative criteria for these respective nominal demand measures. They do not identify a material's yield/fracture strength, an actual safety factor, or an approved operating limit.</li></ol>",
+  "engineeringGoal": "<p>Develop a transparent local average-stress model; calculate mean circular-face contact pressure and nominal circular punch-through shear demand; evaluate each against its illustrative allowable criterion; and explain why those two checks alone cannot establish the actual failure mode or approve the complete fixture.</p>",
+  "supplementaryImages": [
+    {
+      "path": "assets/press-student-geometry.png",
+      "caption": "Geometry supplied for constructing your model. Use the current Given Data; this schematic is not to scale.",
+      "alt": "Unsolved front and plan geometry of a cylindrical ram over two separate plate supports, labeled P, d, t, s, b. Plate and block depth extends beyond the full ram footprint.",
+      "order": 1,
+      "widthPercent": 100
+    }
+  ],
+  "packetLayout": "geometry-first",
+  "showIdealizedImageInStudentPacket": false
 }

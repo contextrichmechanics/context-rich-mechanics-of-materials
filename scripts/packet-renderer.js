@@ -463,53 +463,8 @@
       }
     }
 
-    const pressLoad = numericValue(values, "P");
-    const pressDiameter = numericValue(values, "d");
-    const pressThickness = numericValue(values, "t");
-    const pressShearAllowable = numericValue(values, "tau_allow");
-    const pressBearingAllowable = numericValue(values, "sigma_bearing_allow");
-
-    if (
-      Number.isFinite(pressLoad) &&
-      Number.isFinite(pressDiameter) &&
-      pressDiameter > 0 &&
-      Number.isFinite(pressThickness) &&
-      pressThickness > 0
-    ) {
-      const loadN = pressLoad * 1000;
-      const bearingArea = Math.PI * pressDiameter ** 2 / 4;
-      const punchingArea = 2 * pressDiameter * pressThickness;
-      const bearingStress = loadN / bearingArea;
-      const punchingStress = loadN / punchingArea;
-      values.press_load_N = formatDerived(loadN);
-      values.press_bearing_area_mm2 = formatDerived(bearingArea, 1);
-      values.press_punching_area_mm2 = formatDerived(punchingArea, 1);
-      values.press_bearing_stress_MPa = formatDerived(bearingStress, 2);
-      values.press_punching_shear_MPa = formatDerived(punchingStress, 2);
-      if (punchingStress >= bearingStress) {
-        values.press_larger_stress = "average punching shear stress";
-        values.press_larger_stress_MPa = formatDerived(punchingStress, 2);
-      } else {
-        values.press_larger_stress = "average bearing stress";
-        values.press_larger_stress_MPa = formatDerived(bearingStress, 2);
-      }
-
-      const fosValues = [];
-      if (Number.isFinite(pressShearAllowable) && pressShearAllowable > 0) {
-        const fosShear = pressShearAllowable / punchingStress;
-        values.press_fos_shear = formatDerived(fosShear, 2);
-        fosValues.push(["punching shear", fosShear]);
-      }
-      if (Number.isFinite(pressBearingAllowable) && pressBearingAllowable > 0) {
-        const fosBearing = pressBearingAllowable / bearingStress;
-        values.press_fos_bearing = formatDerived(fosBearing, 2);
-        fosValues.push(["bearing", fosBearing]);
-      }
-      const governingFos = fosValues.sort((left, right) => left[1] - right[1])[0];
-      if (governingFos) {
-        values.press_governing_fos_mode = governingFos[0];
-        values.press_governing_fos = formatDerived(governingFos[1], 2);
-      }
+    if (problem.slug === "hydraulic-press-punching-shear") {
+      Object.assign(values, window.PressFixtureModel.evaluate(problem, overrides).display);
     }
 
     const boltLoad = numericValue(values, "bolt_V");
@@ -3373,6 +3328,12 @@
     `;
   }
 
+  function renderPressPacket(problem,variant,type,overrides){
+ const model=window.PressFixtureModel;const result=model.evaluate(problem,overrides);const values=variableMap(problem,overrides);const isInstructor=type==='instructor';
+ const questions=selectedQuestions(problem,variant,type);const numbers=new Map(questions.map((q,i)=>[q.id,i+1]));const key=`<p class="current-input-dimensions">${escapeHtml(model.dimensionKey(problem,overrides))}</p>`;
+ return `<section class="generated-packet"><p class="packet-kicker">${escapeHtml(isInstructor?problem.instructorDocumentTitle:problem.studentDocumentTitle)}</p><h1>${isInstructor?'Selected Questions and Answers':'Selected Homework Questions'}</h1>${renderSupplementaryImages(problem)}${key}${renderVariableTable(problem,values)}<p>All seven values are provisional instructional assumptions; both allowable criteria have an unverified material basis.</p>${renderQuestionSection(problem,questions,questionSections[0],isInstructor,values,numbers)}${renderQuestionSection(problem,questions,questionSections[1],isInstructor,values,numbers)}${isInstructor?renderIdealizedImage(problem)+key+'<p>The cylindrical surface is hypothetical; real stress distributions and complete fixture capacity remain unverified.</p>':''}${renderQuestionSection(problem,questions,questionSections[2],isInstructor,values,numbers)}</section>`;
+}
+
   function renderPacket(options) {
     const target = document.getElementById(options.targetId);
     const catalog = window.PROBLEM_CATALOG || [];
@@ -3384,6 +3345,14 @@
     const variant = options.variant
       ? (problem.variants || []).find((item) => item.id === options.variant)
       : null;
+    if (problem.slug === "hydraulic-press-punching-shear") {
+      try {
+        target.innerHTML = renderPressPacket(problem, variant, options.type, { ...(variant?.variables || {}), ...(options.overrides || {}) });
+      } catch (error) {
+        target.innerHTML = `<p class="packet-error" role="alert">${escapeHtml(error.message)}</p>`;
+      }
+      return;
+    }
     const values = variableMap(problem, variant?.variables || {});
     const isInstructor = options.type === "instructor";
     const showIdealizedImage =

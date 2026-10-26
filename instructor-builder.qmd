@@ -48,6 +48,7 @@ toc: false
 </div>
 
 <script src="data/problem-catalog.js"></script>
+<script src="scripts/press-fixture-model.js"></script>
 <script>
 let problemCatalog = window.PROBLEM_CATALOG || [];
 const problemSelect = document.getElementById("problem-select");
@@ -515,53 +516,8 @@ function variableMap(problem) {
     }
   }
 
-  const pressLoad = numericValue(values, "P");
-  const pressDiameter = numericValue(values, "d");
-  const pressThickness = numericValue(values, "t");
-  const pressShearAllowable = numericValue(values, "tau_allow");
-  const pressBearingAllowable = numericValue(values, "sigma_bearing_allow");
-
-  if (
-    Number.isFinite(pressLoad) &&
-    Number.isFinite(pressDiameter) &&
-    pressDiameter > 0 &&
-    Number.isFinite(pressThickness) &&
-    pressThickness > 0
-  ) {
-    const loadN = pressLoad * 1000;
-    const bearingArea = Math.PI * pressDiameter ** 2 / 4;
-    const punchingArea = 2 * pressDiameter * pressThickness;
-    const bearingStress = loadN / bearingArea;
-    const punchingStress = loadN / punchingArea;
-    values.press_load_N = formatDerived(loadN);
-    values.press_bearing_area_mm2 = formatDerived(bearingArea, 1);
-    values.press_punching_area_mm2 = formatDerived(punchingArea, 1);
-    values.press_bearing_stress_MPa = formatDerived(bearingStress, 2);
-    values.press_punching_shear_MPa = formatDerived(punchingStress, 2);
-    if (punchingStress >= bearingStress) {
-      values.press_larger_stress = "average punching shear stress";
-      values.press_larger_stress_MPa = formatDerived(punchingStress, 2);
-    } else {
-      values.press_larger_stress = "average bearing stress";
-      values.press_larger_stress_MPa = formatDerived(bearingStress, 2);
-    }
-
-    const fosValues = [];
-    if (Number.isFinite(pressShearAllowable) && pressShearAllowable > 0) {
-      const fosShear = pressShearAllowable / punchingStress;
-      values.press_fos_shear = formatDerived(fosShear, 2);
-      fosValues.push(["punching shear", fosShear]);
-    }
-    if (Number.isFinite(pressBearingAllowable) && pressBearingAllowable > 0) {
-      const fosBearing = pressBearingAllowable / bearingStress;
-      values.press_fos_bearing = formatDerived(fosBearing, 2);
-      fosValues.push(["bearing", fosBearing]);
-    }
-    const governingFos = fosValues.sort((left, right) => left[1] - right[1])[0];
-    if (governingFos) {
-      values.press_governing_fos_mode = governingFos[0];
-      values.press_governing_fos = formatDerived(governingFos[1], 2);
-    }
+  if (problem.slug === "hydraulic-press-punching-shear") {
+    Object.assign(values, window.PressFixtureModel.evaluate(problem, currentValues).display);
   }
 
   const boltLoad = numericValue(values, "bolt_V");
@@ -3483,7 +3439,13 @@ function renderQuestionImage(problem, question, embeddedImages = {}) {
   `;
 }
 
+function renderPressBuilder(type,embeddedImages={}){
+ const problem=selectedProblem(),model=window.PressFixtureModel;model.evaluate(problem,currentValues);const instructor=type==='instructor';const questions=selectedQuestions(problem,type),numbers=new Map(questions.map((q,i)=>[q.id,i+1]));const key=`<p class="current-input-dimensions">${escapeHtml(model.dimensionKey(problem,currentValues))}</p>`;
+ return `<article class="generated-packet"><header><p class="packet-kicker">${escapeHtml(instructor?problem.instructorDocumentTitle:problem.studentDocumentTitle)}</p><h1>${escapeHtml(problem.title)}</h1><p>${escapeHtml(problem.summary)}</p></header><figure><img src="${escapeHtml(imagePath(problem,embeddedImages))}" alt="Illustrative press fixture"><figcaption>Generated context illustration; dimensions and teaching assumptions are assigned.</figcaption></figure><section><h2>Main Problem Statement</h2>${substitute(problem.problemStatement,problem)}</section><section><h2>Engineering Goal</h2>${substitute(problem.engineeringGoal,problem)}</section>${renderSupplementaryImages(problem,embeddedImages)}${key}<section class="packet-given-data"><h2>Given Data</h2><table><thead><tr><th>Symbol</th><th>Quantity</th><th>Value</th></tr></thead><tbody>${variableRows(problem)}</tbody></table><p>All seven values are provisional instructional assumptions; both criteria have an unverified material basis.</p></section>${renderQuestionSection(problem,questions,questionSections[0],instructor,numbers,embeddedImages)}${renderQuestionSection(problem,questions,questionSections[1],instructor,numbers,embeddedImages)}${instructor?renderIdealizedImage(problem,embeddedImages)+key+'<p>The cylindrical surface is hypothetical; real stress distributions and complete fixture capacity remain unverified.</p>':''}${renderQuestionSection(problem,questions,questionSections[2],instructor,numbers,embeddedImages)}</article>`;
+}
+
 function renderDocumentBody(type, embeddedImages = {}) {
+  if (selectedProblem()?.slug === "hydraulic-press-punching-shear") return renderPressBuilder(type, embeddedImages);
   const problem = selectedProblem();
   const isInstructor = type === "instructor";
   const showIdealizedImage =
@@ -3550,7 +3512,16 @@ function renderPreview() {
     return;
   }
 
-  packetPreview.innerHTML = renderDocumentBody(activePreview);
+  try {
+    packetPreview.innerHTML = renderDocumentBody(activePreview);
+    ["download-student-doc", "download-instructor-doc", "print-student-pdf", "print-instructor-pdf"].forEach(id => { document.getElementById(id).disabled = false; });
+  } catch (error) {
+    if (selectedProblem()?.slug !== "hydraulic-press-punching-shear") throw error;
+    packetPreview.innerHTML = `<p class="packet-error" role="alert">${escapeHtml(error.message)}</p>`;
+    statusText.textContent = "Correct the fixture inputs.";
+    ["download-student-doc", "download-instructor-doc", "print-student-pdf", "print-instructor-pdf"].forEach(id => { document.getElementById(id).disabled = true; });
+    return;
+  }
   statusText.textContent = "Updated";
   studentPreviewTab.classList.toggle("active", activePreview === "student");
   instructorPreviewTab.classList.toggle("active", activePreview === "instructor");
@@ -3641,6 +3612,7 @@ async function embeddedPacketImages(problem, questions, type) {
 }
 
 async function fullHtmlDocument(type) {
+  if (selectedProblem()?.slug === "hydraulic-press-punching-shear") window.PressFixtureModel.evaluate(selectedProblem(), currentValues);
   const problem = selectedProblem();
   const questions = selectedQuestions(problem, type);
   const embeddedImages = await embeddedPacketImages(problem, questions, type);
@@ -3698,6 +3670,9 @@ async function waitForDocumentImages(targetDocument) {
 }
 
 async function printDocument(type) {
+  if (selectedProblem()?.slug === "hydraulic-press-punching-shear") {
+    try { window.PressFixtureModel.evaluate(selectedProblem(), currentValues); } catch { renderPreview(); return; }
+  }
   const newWindow = window.open("", "_blank");
   if (!newWindow) {
     statusText.textContent = "Popup blocked";

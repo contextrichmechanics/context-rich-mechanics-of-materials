@@ -202,7 +202,7 @@ window.PROBLEM_HEALTH = [
   {
     "id": "MOS-PRESS-006",
     "slug": "hydraulic-press-punching-shear",
-    "title": "Hydraulic Press Punching Shear and Bearing Stress Check",
+    "title": "Hydraulic Press Fixture: Nominal Circular Punch-Through and Bearing Checks",
     "status": "OK",
     "variables": 7,
     "questions": 19,

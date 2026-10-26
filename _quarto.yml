@@ -6,6 +6,7 @@ project:
     - data/problem-catalog.js
     - data/problem-health.json
     - data/problem-health.js
+    - scripts/press-fixture-model.js
     - scripts/packet-renderer.js
     - "problems/*/assets/*"
 

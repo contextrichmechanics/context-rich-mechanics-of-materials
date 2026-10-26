@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import PressFixtureModel from "./press-fixture-model.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const problemsDir = path.join(root, "problems");
@@ -192,6 +193,15 @@ const catalog = problemPackages().flatMap((slug) => {
 
   const questionIds = new Set(questions.map((question) => question.id));
   const variants = readVariants(packageDir, slug, variableKeys, questionIds);
+  if (problem.packetLayout !== undefined && problem.packetLayout !== "geometry-first") throw new Error(`${slug} has an unknown packetLayout`);
+  if (PressFixtureModel.isPress(problem)) {
+    if (problem.packetLayout !== "geometry-first") throw new Error(`${slug} requires geometry-first layout`);
+    if (problem.showIdealizedImageInStudentPacket === true) throw new Error(`${slug} instructor figure must remain instructor-only`);
+    if (JSON.stringify([...(problem.derivedPlaceholders || [])].sort()) !== JSON.stringify([...PressFixtureModel.registry].sort())) throw new Error(`${slug} requires the 20 nominal-check placeholders`);
+    const modelProblem = { ...problem, variables };
+    PressFixtureModel.evaluate(modelProblem);
+    variants.forEach(variant => PressFixtureModel.evaluate(modelProblem, variant.variables || {}));
+  }
   const duplicateVariantIds = duplicateValues(variants.map((variant) => variant.id));
   if (duplicateVariantIds.length > 0) {
     throw new Error(`${slug} has duplicate variant id(s): ${duplicateVariantIds.join(", ")}`);

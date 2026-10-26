@@ -1,23 +1,23 @@
 ---
-title: "Hydraulic Press Punching Shear and Bearing Stress Check"
-description: "A context-rich mechanics problem on average bearing stress and punching shear stress in a press-loaded plate."
+title: "Hydraulic Press Fixture: Nominal Circular Punch-Through and Bearing Checks"
+description: "Evaluate two local average-stress demands in a press-loaded plate against illustrative allowable criteria, while distinguishing a nominal local check from complete fixture assessment."
 image: "assets/press-industry-context.png"
 categories:
   - context-rich
   - mechanics-of-materials
   - manufacturing
-mechanics_concepts: [bearing stress, punching shear, average stress, factor of safety]
+mechanics_concepts: [bearing stress, punching shear, average stress, allowable reserve and utilization]
 course_topics:
   - stress
   - shear
   - bearing
   - punching shear
-  - factor of safety
+  - allowable reserve and utilization
 textbook_chapters:
   - Stress and strain
   - Shear stress
   - Bearing stress
-  - Factor of safety
+  - Allowable stress and design assessment
 problem_types:
   - free-body diagram
   - average stress
@@ -36,7 +36,7 @@ industries:
 difficulty: "Introductory to intermediate"
 status: "Published"
 problem_id: "MOS-PRESS-006"
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 {{< include _student-problem.qmd >}}
@@ -44,7 +44,7 @@ version: "0.1.0"
 ## Assignment Options
 
 ::: {.callout-note title="Recommended Starting Point"}
-Use the default packet for an average bearing stress and punching shear stress assignment. The optional allowable stresses let instructors turn the final question into a factor-of-safety check.
+Use the default nineteen-question packet for nominal circular shear and mean contact-pressure checks with illustrative allowable reserve and utilization. All seven inputs are provisional instructional assumptions. These checks do not establish complete fixture safety.
 :::
 
 [Student packet](student-packet.qmd){.btn .btn-primary}

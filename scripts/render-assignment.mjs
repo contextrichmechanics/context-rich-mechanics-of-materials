@@ -1,7 +1,8 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import PressFixtureModel from "./press-fixture-model.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const catalogPath = path.join(root, "data", "problem-catalog.json");
@@ -535,53 +536,8 @@ function variableMap(problem, currentValues) {
     }
   }
 
-  const pressLoad = numericValue(values, "P");
-  const pressDiameter = numericValue(values, "d");
-  const pressThickness = numericValue(values, "t");
-  const pressShearAllowable = numericValue(values, "tau_allow");
-  const pressBearingAllowable = numericValue(values, "sigma_bearing_allow");
-
-  if (
-    Number.isFinite(pressLoad) &&
-    Number.isFinite(pressDiameter) &&
-    pressDiameter > 0 &&
-    Number.isFinite(pressThickness) &&
-    pressThickness > 0
-  ) {
-    const loadN = pressLoad * 1000;
-    const bearingArea = Math.PI * pressDiameter ** 2 / 4;
-    const punchingArea = 2 * pressDiameter * pressThickness;
-    const bearingStress = loadN / bearingArea;
-    const punchingStress = loadN / punchingArea;
-    values.press_load_N = formatDerived(loadN);
-    values.press_bearing_area_mm2 = formatDerived(bearingArea, 1);
-    values.press_punching_area_mm2 = formatDerived(punchingArea, 1);
-    values.press_bearing_stress_MPa = formatDerived(bearingStress, 2);
-    values.press_punching_shear_MPa = formatDerived(punchingStress, 2);
-    if (punchingStress >= bearingStress) {
-      values.press_larger_stress = "average punching shear stress";
-      values.press_larger_stress_MPa = formatDerived(punchingStress, 2);
-    } else {
-      values.press_larger_stress = "average bearing stress";
-      values.press_larger_stress_MPa = formatDerived(bearingStress, 2);
-    }
-
-    const fosValues = [];
-    if (Number.isFinite(pressShearAllowable) && pressShearAllowable > 0) {
-      const fosShear = pressShearAllowable / punchingStress;
-      values.press_fos_shear = formatDerived(fosShear, 2);
-      fosValues.push(["punching shear", fosShear]);
-    }
-    if (Number.isFinite(pressBearingAllowable) && pressBearingAllowable > 0) {
-      const fosBearing = pressBearingAllowable / bearingStress;
-      values.press_fos_bearing = formatDerived(fosBearing, 2);
-      fosValues.push(["bearing", fosBearing]);
-    }
-    const governingFos = fosValues.sort((left, right) => left[1] - right[1])[0];
-    if (governingFos) {
-      values.press_governing_fos_mode = governingFos[0];
-      values.press_governing_fos = formatDerived(governingFos[1], 2);
-    }
+  if (problem.slug === "hydraulic-press-punching-shear") {
+    Object.assign(values, PressFixtureModel.evaluate(problem, currentValues).display);
   }
 
   const boltLoad = numericValue(values, "bolt_V");
@@ -3350,7 +3306,7 @@ function renderIdealizedImageHtml(problem) {
   if (!problem.idealizedImage) {
     return "";
   }
-  const imagePath = path.join(root, problem.idealizedImage);
+  const imagePath = PressFixtureModel.isPress(problem) ? pathToFileURL(path.join(root, problem.idealizedImage)).href : path.join(root, problem.idealizedImage);
   const alt = problem.idealizedImageAlt || `${problem.title} instructor reference idealization`;
   return `<section><h2>Instructor Reference Idealization and Input Variables</h2><figure><img src="${escapeHtml(imagePath)}" alt="${escapeHtml(alt)}"></figure></section>`;
 }
@@ -3363,7 +3319,7 @@ function orderedSupplementaryImages(problem) {
 
 function renderSupplementaryImagesHtml(problem) {
   const figures = orderedSupplementaryImages(problem).map((image) => {
-    const imagePath = path.join(root, image.path);
+    const imagePath = PressFixtureModel.isPress(problem) ? pathToFileURL(path.join(root, image.path)).href : path.join(root, image.path);
     const alt = image.alt || image.caption || `${problem.title} supplementary image`;
     const width = Number.isFinite(image.widthPercent)
       ? ` style="width: ${image.widthPercent}%;"`
@@ -3437,7 +3393,14 @@ function renderQuestionSectionHtml(problem, questions, section, isInstructor, va
   </section>`;
 }
 
+function renderPressBody(problem,variant,type){
+ const overrides=variant?.variables||{},model=PressFixtureModel;model.evaluate(problem,overrides);const instructor=type==='instructor';const questions=selectedQuestions(problem,variant,type),numbers=new Map(questions.map((q,i)=>[q.id,i+1]));const key=`<p class="current-input-dimensions">${escapeHtml(model.dimensionKey(problem,overrides))}</p>`;
+ const rows=problem.variables.map(v=>`<tr><td>${symbolHtml(v.symbol)}</td><td>${escapeHtml(v.label)}</td><td>${valueWithUnitHtml(overrides[v.key]??v.value,v.unit)}</td></tr>`).join('');
+ return `<article class="generated-packet"><header><p class="packet-kicker">${escapeHtml(instructor?problem.instructorDocumentTitle:problem.studentDocumentTitle)}</p><h1>${escapeHtml(problem.title)}</h1><p>${escapeHtml(problem.summary)}</p></header><figure><img src="${escapeHtml(pathToFileURL(path.join(root,problem.image)).href)}" alt="Illustrative press fixture"><figcaption>Generated context illustration; dimensions and teaching assumptions are assigned.</figcaption></figure><section><h2>Main Problem Statement</h2>${substitute(problem.problemStatement,problem,overrides)}</section><section><h2>Engineering Goal</h2>${substitute(problem.engineeringGoal,problem,overrides)}</section>${renderSupplementaryImagesHtml(problem)}${key}<section class="packet-given-data"><h2>Given Data</h2><table><thead><tr><th>Symbol</th><th>Quantity</th><th>Value</th></tr></thead><tbody>${rows}</tbody></table><p>All seven values are provisional instructional assumptions; both criteria have an unverified material basis.</p></section>${renderQuestionSectionHtml(problem,questions,questionSections[0],instructor,overrides,numbers)}${renderQuestionSectionHtml(problem,questions,questionSections[1],instructor,overrides,numbers)}${instructor?renderIdealizedImageHtml(problem)+key+'<p>The cylindrical surface is hypothetical; real stress distributions and complete fixture capacity remain unverified.</p>':''}${renderQuestionSectionHtml(problem,questions,questionSections[2],instructor,overrides,numbers)}</article>`;
+}
+
 function renderBody(problem, variant, type) {
+  if (PressFixtureModel.isPress(problem)) return renderPressBody(problem, variant, type);
   const isInstructor = type === "instructor";
   const showIdealizedImage =
     isInstructor ||
@@ -3488,7 +3451,24 @@ ${renderBody(problem, variant, type)}
 </html>`;
 }
 
+function renderPressQmd(problem,variant,type,outDir){
+ const overrides=variant?.variables||{};PressFixtureModel.evaluate(problem,overrides);
+ const instructor=type==='instructor',questions=selectedQuestions(problem,variant,type),numbers=new Map(questions.map((q,i)=>[q.id,i+1]));
+ const key=PressFixtureModel.dimensionKey(problem,overrides);
+ const rows=problem.variables.map(v=>`| ${tableCell(symbolHtml(v.symbol))} | ${tableCell(v.label)} | ${tableCell(valueWithUnitHtml(overrides[v.key]??v.value,v.unit))} |`).join('\n');
+ const sketch='\n\n```{=typst}\n#block(height: 80mm, width: 100%, breakable: false, stroke: 0.4pt + gray)[]\n```\n\n```{=html}\n<div style="height:80mm;border:1px solid #aaa;break-inside:avoid"></div>\n```\n\n```{=latex}\n\\vspace{80mm}\n```\n\n```{=openxml}\n<w:p><w:pPr><w:keepLines/><w:spacing w:before="0" w:after="0" w:line="4535" w:lineRule="exact"/></w:pPr><w:r><w:t xml:space="preserve"> </w:t></w:r></w:p>\n```';
+ const renderQuestion=q=>{
+  let content=`### ${q.displayNumber||numbers.get(q.id)}. ${q.title}\n\n${htmlToMarkdown(substitute(q.student,problem,overrides))}`;
+  if(q.id==='q8')content='```{=typst}\n#block(breakable: false)[\n```\n\n'+content+sketch+'\n\n```{=typst}\n]\n```';
+  if(instructor)content+='\n\n#### Representative Instructor Answer\n\n'+htmlToMarkdown(substitute(q.instructor,problem,overrides))+'\n\n**Learning objective:** '+(q.learningObjectives||[]).join('; ');
+  return content;
+ };
+ const section=group=>`## ${group.title}\n\n`+questionsBySection(questions,group.id).map(renderQuestion).join('\n\n');
+ return `---\ntitle: ${JSON.stringify(problem.title)}\nsubtitle: ${JSON.stringify(instructor?problem.instructorDocumentTitle:problem.studentDocumentTitle)}\nformat:\n  html: default\n  docx: default\n  typst:\n    fontsize: 10.5pt\n  pdf:\n    documentclass: scrartcl\n---\n\n${problemImageMarkdown(problem,problem.image,'Illustrative press fixture',outDir)}\n\n*Generated context illustration; dimensions and teaching assumptions are assigned.*\n\n## Main Problem Statement\n\n${htmlToMarkdown(substitute(problem.problemStatement,problem,overrides))}\n\n## Engineering Goal\n\n${htmlToMarkdown(substitute(problem.engineeringGoal,problem,overrides))}\n\n${renderSupplementaryImagesMarkdown(problem,outDir)}\n\n${key}\n\n## Given Data\n\n| Symbol | Quantity | Value |\n|---|---|---:|\n${rows}\n\nAll seven values are provisional instructional assumptions; both criteria have an unverified material basis.\n\n${section(questionSections[0])}\n\n${section(questionSections[1])}\n\n${instructor?'## Instructor Reference Idealization\n\n'+problemImageMarkdown(problem,problem.idealizedImage,problem.idealizedImageAlt,outDir)+'\n\n'+key+'\n\nThe cylindrical surface is hypothetical; real stress distributions and complete fixture capacity remain unverified.\n\n':''}${section(questionSections[2])}\n`;
+}
+
 function qmdDocument(problem, variant, type, outDir) {
+  if (PressFixtureModel.isPress(problem)) return renderPressQmd(problem, variant, type, outDir);
   const title = type === "instructor" ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
   const isInstructor = type === "instructor";
   const showIdealizedImage =
@@ -3604,6 +3584,8 @@ if (variantKey && !variant) {
   throw new Error(`Variant not found for ${problem.slug}: ${variantKey}`);
 }
 
+if (PressFixtureModel.isPress(problem)) PressFixtureModel.evaluate(problem, variant?.variables || {});
+
 const outDir = path.join(root, "exports", problem.slug, variant?.id || "default");
 mkdirSync(outDir, { recursive: true });
 
@@ -3623,7 +3605,9 @@ if (format === "html") {
   if (format === "qmd") {
     console.log(path.relative(root, qmdPath));
   } else {
-    const result = spawnSync("quarto", ["render", qmdPath, "--to", format], {
+    // Use Quarto's bundled Typst for this package; other packages retain their PDF engine.
+    const quartoFormat = PressFixtureModel.isPress(problem) && format === "pdf" ? "typst" : format;
+    const result = spawnSync("quarto", ["render", qmdPath, "--to", quartoFormat], {
       cwd: root,
       encoding: "utf8",
       stdio: "inherit"

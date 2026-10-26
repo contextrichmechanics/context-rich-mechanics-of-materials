@@ -1,6 +1,6 @@
 ---
 title: "Student Packet — Hydraulic Press Fixture"
-subtitle: "Punching Shear and Bearing Stress"
+subtitle: "Nominal Circular Shear and Contact Pressure with Illustrative Criteria"
 author: "Context-Rich Mechanics of Materials Library"
 format:
   html:
@@ -13,6 +13,7 @@ format:
 ```{=html}
 <div id="press-student-questions"></div>
 <script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/press-fixture-model.js"></script>
 <script src="../../scripts/packet-renderer.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
