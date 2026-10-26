@@ -1,0 +1,1326 @@
+{
+  "head": "2d999e914ea94361ef09f42ab21372608cf77e00",
+  "excluded": "suspended-equipment-platform",
+  "problems": [
+    {
+      "slug": "adjustable-shop-crane-boom-bending",
+      "catalogHash": "3e0dd9888ca22fa67f1a669496ab095753bd113dd6a1b65d88886b084e61ef49",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "08a693a89a3a49aa8db23183c8097f88e19e7c331abc93b08dafdd5b42bc58e7"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "de61af99a708e031f7779e4e6973aa87258dfdffa37aa650436290e9edec7913"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "08a693a89a3a49aa8db23183c8097f88e19e7c331abc93b08dafdd5b42bc58e7"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "de61af99a708e031f7779e4e6973aa87258dfdffa37aa650436290e9edec7913"
+        }
+      ]
+    },
+    {
+      "slug": "aerial-gondola-suspension-hanger",
+      "catalogHash": "42ee50b68626c7783f703d9e68ecd1ab6008047786ed247612d4d81792d33fcf",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "2f4e98d9dc789eb43fd45dd7fe01d5b312afc2650c7de4fc59d63d7c8bf11889"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "0a2bece016f0a1605f8214b2f341548952703c4463ea41cf3bb7cfb1db542684"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "2f4e98d9dc789eb43fd45dd7fe01d5b312afc2650c7de4fc59d63d7c8bf11889"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "0a2bece016f0a1605f8214b2f341548952703c4463ea41cf3bb7cfb1db542684"
+        }
+      ]
+    },
+    {
+      "slug": "aircraft-main-landing-gear-buckling-side-stay",
+      "catalogHash": "1eb0f557f5a616a8c4b8535b502519a5ceaf07e094b421b29382665ccc4b7240",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "42797ad42b1441aad3f14f69b332d86e47167c41707580edff34969aab0e2921"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "e30df556496df99dcaef9dc86f6cb09811ca1c980032dd543bbd93fe7851aeb8"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "42797ad42b1441aad3f14f69b332d86e47167c41707580edff34969aab0e2921"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "e30df556496df99dcaef9dc86f6cb09811ca1c980032dd543bbd93fe7851aeb8"
+        }
+      ]
+    },
+    {
+      "slug": "aircraft-wing-engine-combined-bending-torsion",
+      "catalogHash": "58f4d2aafb0f8c75b79f96629b5caa7d8469863512d0769143616e991b71e571",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "f0affd0a673bedb3a2378ab4bf5751df8c44be8938ef8dfa4b1049713674fb19"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "451b3da5c664a07c8d2db78ecd7859efe78f0140559e4bd1921d86381c7a3618"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "f0affd0a673bedb3a2378ab4bf5751df8c44be8938ef8dfa4b1049713674fb19"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "451b3da5c664a07c8d2db78ecd7859efe78f0140559e4bd1921d86381c7a3618"
+        }
+      ]
+    },
+    {
+      "slug": "automotive-engine-stand-combined-loading",
+      "catalogHash": "1946a67070dc90d37b627b6dba612431c29b76274780ecc1f2509ecabe0c4460",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "7f9a9b93524e7e651ddcb3247f4aeb2783345315fa6a44030bfaaddab66650e6"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "1c9b40beda70ce455566748cb0c595810b76a4ae424ad8b480a8810fbe5513c6"
+        },
+        {
+          "variant": "baseline",
+          "type": "student",
+          "hash": "7f9a9b93524e7e651ddcb3247f4aeb2783345315fa6a44030bfaaddab66650e6"
+        },
+        {
+          "variant": "baseline",
+          "type": "instructor",
+          "hash": "1c9b40beda70ce455566748cb0c595810b76a4ae424ad8b480a8810fbe5513c6"
+        }
+      ]
+    },
+    {
+      "slug": "axial-rod-tube-assembly",
+      "catalogHash": "10f74b7f59da0729c008b3957c90c4a1f64820f5651ee32756d09b7ffd6d9cd4",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "40a6ebcdc13f5cd459ec44ffaf28a497823c415b747a659ca5b0c87b20aef4e1"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "69f7a2c87245b820a5dd3b9a26dfb18145be2a9f610ecb45e00a1630339a6b59"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "40a6ebcdc13f5cd459ec44ffaf28a497823c415b747a659ca5b0c87b20aef4e1"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "69f7a2c87245b820a5dd3b9a26dfb18145be2a9f610ecb45e00a1630339a6b59"
+        }
+      ]
+    },
+    {
+      "slug": "baseball-bat-impact-bending",
+      "catalogHash": "ae56eee377c8a584ea06b0f3a5e96f47da137790cd1b61e25e0233a26effb330",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "4667509dfb6688fcd93c8879b3285f6a782d444f6853c62df427ca311782c4cb"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "874f41e877afc438109f7366b7b5ebca72c8a00dd8b1184e774b99b82d2489d8"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "4667509dfb6688fcd93c8879b3285f6a782d444f6853c62df427ca311782c4cb"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "874f41e877afc438109f7366b7b5ebca72c8a00dd8b1184e774b99b82d2489d8"
+        }
+      ]
+    },
+    {
+      "slug": "basketball-hoop-bolted-connection",
+      "catalogHash": "cf7b171e8500ed460b27f18ec8c414a6b3a1a3832ed575f65076cfe24abd787a",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "99d5a722e0d2af1980ddc83f7d18da621067761631ed88646ea9789505d1df6f"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "43d19457beb463b56e0936421bc15ec3f76e579c0cd47fd6733c44de624041b3"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "99d5a722e0d2af1980ddc83f7d18da621067761631ed88646ea9789505d1df6f"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "43d19457beb463b56e0936421bc15ec3f76e579c0cd47fd6733c44de624041b3"
+        }
+      ]
+    },
+    {
+      "slug": "basketball-hoop-support-arm-bending",
+      "catalogHash": "e7d2b8fc9dc0d2af1b70aed6a01f330278467e4011d40b99adc062f475a447fb",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "e2ffe4034ce52a027b4719e97f9f435a2ae4754386db3356c124791c9cf323fc"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "20e0545c84f244eb4514137a039f5f18aca59ece56a97866dbbb8d75f3e95607"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "e2ffe4034ce52a027b4719e97f9f435a2ae4754386db3356c124791c9cf323fc"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "20e0545c84f244eb4514137a039f5f18aca59ece56a97866dbbb8d75f3e95607"
+        }
+      ]
+    },
+    {
+      "slug": "brass-bushing-thermal-contraction",
+      "catalogHash": "ccf94cdea55e8d9086c49193f76ddd717d2213b1314191790787eb8512d0312e",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "84f679531a9e2466d86ea95d0294df26a82a42a03d30690a4a92a110ca795a80"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "49117a63c87cb4971c9c12bb9ef5827507b49ee80eb5ae2094b1262bba15ff14"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "84f679531a9e2466d86ea95d0294df26a82a42a03d30690a4a92a110ca795a80"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "49117a63c87cb4971c9c12bb9ef5827507b49ee80eb5ae2094b1262bba15ff14"
+        }
+      ]
+    },
+    {
+      "slug": "burr-king-disc-grinder-shaft",
+      "catalogHash": "0e8657438767fa25db8bb94cab3b4c88b4ee94fe88bbd60c12db0becf4950724",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "4a4bebb9fbe0c3434b03cd19e6b72aafaa4e7d21025368de6b6e8083875abd6e"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "f2a2cdcf784487279347cadf049089435542e8000ea5a40d79648a84c849281c"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "4a4bebb9fbe0c3434b03cd19e6b72aafaa4e7d21025368de6b6e8083875abd6e"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "f2a2cdcf784487279347cadf049089435542e8000ea5a40d79648a84c849281c"
+        }
+      ]
+    },
+    {
+      "slug": "cable-machine-pulley-axle-shear",
+      "catalogHash": "4346cd60e4dd34c78e82e77f865123428d19f7cdf61a5be498f3a18f840e43c6",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "4038cef99e73147efc0c89acd74e63f1a8a9ec58f99b3a502b37f10988c07c1f"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "d4a5d3833ccff859fad8f5de84aa27679bef0c2da1538b8c1763aeb28d182b60"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "4038cef99e73147efc0c89acd74e63f1a8a9ec58f99b3a502b37f10988c07c1f"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "d4a5d3833ccff859fad8f5de84aa27679bef0c2da1538b8c1763aeb28d182b60"
+        }
+      ]
+    },
+    {
+      "slug": "cantilevered-operator-seat-bending",
+      "catalogHash": "bea833d83f14548613875a50802a3668490bf31e0e62981d7498a52771890df1",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "c27b460d25a4fffe5368fb02c2cb2ac8383602085bdb57aaeec1af2a276db54f"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "d4f54701c77d1805d0677b0755ad3824bc0c643ba42e0a5db78ba5febe2cb47b"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "c27b460d25a4fffe5368fb02c2cb2ac8383602085bdb57aaeec1af2a276db54f"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "d4f54701c77d1805d0677b0755ad3824bc0c643ba42e0a5db78ba5febe2cb47b"
+        }
+      ]
+    },
+    {
+      "slug": "ceiling-mounted-projector-support-axial-loading",
+      "catalogHash": "a112cbcc9779eafac1a6e48a0dd3a1b2d276275a2e9ecd25876ded5103035ab8",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "6d64806e985cb629a7b5a4d507e716ef02b488fb2769eb2f1d95fb3a4237bc44"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "069cc04daf5a4627583b25aae92dc8d444425af9ae15a0795e743c2b52db0d4f"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "6d64806e985cb629a7b5a4d507e716ef02b488fb2769eb2f1d95fb3a4237bc44"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "069cc04daf5a4627583b25aae92dc8d444425af9ae15a0795e743c2b52db0d4f"
+        }
+      ]
+    },
+    {
+      "slug": "clevis-pin-tensile-linkage",
+      "catalogHash": "b7dd0a382db71b0397e34757ef0ee555ce73aab561664a632dcf194dc9eb652d",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "a60f3e38ef11593e9543c5027d94fa3c6409e2b6a90a1c4e62c51708ad593ca0"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "b4f0c18603ba7cd314d1e4ec96ee0c5da45758e4c85877fddec615251911d0cd"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "a60f3e38ef11593e9543c5027d94fa3c6409e2b6a90a1c4e62c51708ad593ca0"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "b4f0c18603ba7cd314d1e4ec96ee0c5da45758e4c85877fddec615251911d0cd"
+        }
+      ]
+    },
+    {
+      "slug": "concealed-steel-armature-sauropod-tail",
+      "catalogHash": "fd64b20271fc6fb44494b9d65ad0e915fe306163481f27d41e8622583d50ea5b",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "33c77d538c77b295766e29510a020136897613aa9e35e40dc7c9d63ee3cd524e"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "0542825281fdcafcec793eecd68e23ffab20cc5d8999d603b0996b4b63bba519"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "33c77d538c77b295766e29510a020136897613aa9e35e40dc7c9d63ee3cd524e"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "0542825281fdcafcec793eecd68e23ffab20cc5d8999d603b0996b4b63bba519"
+        }
+      ]
+    },
+    {
+      "slug": "curved-steel-armature-sauropod-tail",
+      "catalogHash": "e048c4f8402fac0c515c1d006463b7dfd75e93606f1f8660e38a0826cc042f54",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "cfd47bfd3338a33a0bf5910bfc36038ec31d2ab4f2f05fbb49641928692af37e"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "cbdb6129c9655d8af77312ba1ad2b783920903cc15e088854203b4d05fc85ab2"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "cfd47bfd3338a33a0bf5910bfc36038ec31d2ab4f2f05fbb49641928692af37e"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "cbdb6129c9655d8af77312ba1ad2b783920903cc15e088854203b4d05fc85ab2"
+        }
+      ]
+    },
+    {
+      "slug": "end-milling-combined-bending-torsion",
+      "catalogHash": "8d06ba4affb39309c6b23b2192ecd48853c396f123f368e8ed4e8e04daec0cba",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "916478e0baded4196bdc886e2691e04a1fef13305f3dca64e9ff75c24b252822"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "abe59a7750ab1dcdbec74da5ddf2e0e13b0f7fdfd9ae48e53072eb54853d939a"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "916478e0baded4196bdc886e2691e04a1fef13305f3dca64e9ff75c24b252822"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "abe59a7750ab1dcdbec74da5ddf2e0e13b0f7fdfd9ae48e53072eb54853d939a"
+        }
+      ]
+    },
+    {
+      "slug": "flanged-shaft-coupling",
+      "catalogHash": "c131c3efeafc7807cfd0f625c7f2f75fb79a9f8b9e7c66cce8894049087c1b9f",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "ed65135857c86face19fccc71aae72ae50cbf30d2683956f16fdef74623ef58c"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "de8a8e23861e23837f2a581e26e79b0c74799196a756bd12eb4d3a93943df440"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "ed65135857c86face19fccc71aae72ae50cbf30d2683956f16fdef74623ef58c"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "de8a8e23861e23837f2a581e26e79b0c74799196a756bd12eb4d3a93943df440"
+        }
+      ]
+    },
+    {
+      "slug": "formula-sae-suspension-pushrod-buckling",
+      "catalogHash": "3aeb40c8d940d0d4cff9b25218eb432cf0a2c6cef00c2721116d454ecea9df05",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "19c6306e1097daba64254ba5f7d3417ab9f02033cb9422aa174548d965672e21"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "2b2181fdee721e45d187c1d45341a2df22d84b1a0fc1af3d12ef52598d5f2a7c"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "19c6306e1097daba64254ba5f7d3417ab9f02033cb9422aa174548d965672e21"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "2b2181fdee721e45d187c1d45341a2df22d84b1a0fc1af3d12ef52598d5f2a7c"
+        }
+      ]
+    },
+    {
+      "slug": "hydraulic-press-punching-shear",
+      "catalogHash": "ccf2bd13a2eca1ca7f6bbdca781bd4f89a49ae999dc669af22a0f96e6438d795",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "e938f5a21a93486ebf9a618c72a2bf49b840c3ec1fa7bd27a6c67e68efc08a25"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "6fa382a9ef141638a67198b66fa0b1ba4999e61bee4031f3a03f12958b3b6263"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "e938f5a21a93486ebf9a618c72a2bf49b840c3ec1fa7bd27a6c67e68efc08a25"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "6fa382a9ef141638a67198b66fa0b1ba4999e61bee4031f3a03f12958b3b6263"
+        }
+      ]
+    },
+    {
+      "slug": "industrial-line-shaft-shear-moment",
+      "catalogHash": "3215abf82af8e1d6d9beee0205f65cdf503ffd42a58ff435cf2d478c1e228611",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "af6ea631cdbfb376a51220cdd8f4cc78bf612a5ce7c4c6b20e67122c6f45de59"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "5418a0171e0faa9df47a7994110ec5689ca6087631734ec132149f76d3cafca5"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "af6ea631cdbfb376a51220cdd8f4cc78bf612a5ce7c4c6b20e67122c6f45de59"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "5418a0171e0faa9df47a7994110ec5689ca6087631734ec132149f76d3cafca5"
+        }
+      ]
+    },
+    {
+      "slug": "industrial-maintenance-access-beam-combined-stress",
+      "catalogHash": "8fdfeecfeee651f3d43e027db8935192439c12c4166158f7c27be836c4454453",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "57340b5fda291b981873a78318a7ab9fc532ef889cdd87ca3fafb653b8a3895a"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "0829747bdbbdd20d35507013e6bb0483f30785fa7315bda64bd61b5f9db50bf4"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "57340b5fda291b981873a78318a7ab9fc532ef889cdd87ca3fafb653b8a3895a"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "0829747bdbbdd20d35507013e6bb0483f30785fa7315bda64bd61b5f9db50bf4"
+        }
+      ]
+    },
+    {
+      "slug": "industrial-robot-arm-shear-moment",
+      "catalogHash": "678914661089da66866b2450747949e41b1fab53dbb140c0cf182348277f30a4",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "dea22fc492a7f7443b34b8ab6ba778dcee8624f8b4cf12339a349c5c2ca57577"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "87930d6283f62a3ce123468ab38cb969ab31cf5caea62e6370887c441f31d293"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "dea22fc492a7f7443b34b8ab6ba778dcee8624f8b4cf12339a349c5c2ca57577"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "87930d6283f62a3ce123468ab38cb969ab31cf5caea62e6370887c441f31d293"
+        }
+      ]
+    },
+    {
+      "slug": "industrial-robot-cable-bending-curvature",
+      "catalogHash": "117f4469ed4cd90ef49675fbf3816de82d14960aa3fb0d3f5f64f805ca83bd63",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "e5e7d88d2e7e363daa59f6656279526d705ce6ab273abdf110c2e543def266ff"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "cd66034c4bbd2deaa66b9f65df4f0c00fd965d1b3b865a650550c1d23218608f"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "e5e7d88d2e7e363daa59f6656279526d705ce6ab273abdf110c2e543def266ff"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "cd66034c4bbd2deaa66b9f65df4f0c00fd965d1b3b865a650550c1d23218608f"
+        }
+      ]
+    },
+    {
+      "slug": "jib-crane-battery-pack",
+      "catalogHash": "3ba458299704092db5218096297c80afacba1488f157f7fb1d486f2b6da568f8",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "14fe723c1cbfa75a5746dcde372fca42296045155f586ea3be47bedf7dc29208"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "79803d9adbb21be4697764873390b7a38ece42dd124bd481e842cd3d67451a66"
+        },
+        {
+          "variant": "context-rich-project",
+          "type": "student",
+          "hash": "14fe723c1cbfa75a5746dcde372fca42296045155f586ea3be47bedf7dc29208"
+        },
+        {
+          "variant": "context-rich-project",
+          "type": "instructor",
+          "hash": "79803d9adbb21be4697764873390b7a38ece42dd124bd481e842cd3d67451a66"
+        },
+        {
+          "variant": "exam-version",
+          "type": "student",
+          "hash": "54358f5a65de6101f31778f5f820d6ea77e570440d051a6d0e014b95923ec175"
+        },
+        {
+          "variant": "exam-version",
+          "type": "instructor",
+          "hash": "69704bedbabc722936c476455e3cdba0d39f090f74a1d989719db95ced62bf0b"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "2903765c01a81f2499e2c67f99a33085fd4240c054a4770295ef30c4bb6ce7f9"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "a0d759926325eb406dcbb18d9a095b4c702363a7743f0c89d1bc0c89efe2700b"
+        }
+      ]
+    },
+    {
+      "slug": "ladder-platform-system",
+      "catalogHash": "dcaf0796d001310b3083e8358a5ff853e1a7c1041bdcb802457d3b54877fb4ad",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "b5c026441d0e84dd798486a373d02877b30ff96798e8e438255e33d1c438a5b5"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "af4383540cb7f1271260a76686fde4ff1a843320a7a591579656bc0bcccf1998"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "b5c026441d0e84dd798486a373d02877b30ff96798e8e438255e33d1c438a5b5"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "af4383540cb7f1271260a76686fde4ff1a843320a7a591579656bc0bcccf1998"
+        }
+      ]
+    },
+    {
+      "slug": "lathe-parting-tool-lateral-deflection",
+      "catalogHash": "794c6b5da59ad00c8326baa798d8cd1398c05bd6ea7c58b465d0f6636fc4fd79",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "f009a251bc0c375e7b87e80560da5ae8ceed88767a408ac8c961f28f1e161542"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "50f5474995be9a222127312bbef8d0e788678b9a3c47754b1f34089dac07e90e"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "f009a251bc0c375e7b87e80560da5ae8ceed88767a408ac8c961f28f1e161542"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "50f5474995be9a222127312bbef8d0e788678b9a3c47754b1f34089dac07e90e"
+        }
+      ]
+    },
+    {
+      "slug": "lathe-turning-cutting-tool-deflection",
+      "catalogHash": "80be986025464d18a87ccc7b4c627b92136517a86dab4deea09e2560b7322c3c",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "98b45adfef4e4547407d255e863c605a380ae2040710bb9f4a1989795e0e4709"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "31d35d364b30ebb604bdd1b08b14b1d7a032cecb6323273352f97a9e8977b66c"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "98b45adfef4e4547407d255e863c605a380ae2040710bb9f4a1989795e0e4709"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "31d35d364b30ebb604bdd1b08b14b1d7a032cecb6323273352f97a9e8977b66c"
+        }
+      ]
+    },
+    {
+      "slug": "motor-driven-shaft-torsion",
+      "catalogHash": "236c3cc818e965d4f060993d4e3d909640ae616f68988eb301f5e5d140b7c5c4",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "1106dd8d27b97e32dff12d2c713749a02c801bd8512b78499be9b826d1630e22"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "8117acc4bfa2e389f95354e7f6db56bb74ab210a75b320137e9c90889e1a1971"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "1106dd8d27b97e32dff12d2c713749a02c801bd8512b78499be9b826d1630e22"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "8117acc4bfa2e389f95354e7f6db56bb74ab210a75b320137e9c90889e1a1971"
+        }
+      ]
+    },
+    {
+      "slug": "motorcycle-chain-drive-rear-axle-bending",
+      "catalogHash": "b87254dee7e563a91048c8b3d4a2cb4d28774b17f4241e2fb37d65d20e936cfa",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "4ad70ed67442dd99f72e5801acd5a9cefb6b8e27d25c81518bbdc305f5830ae5"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "113ac94c443862788bf018a3759a38bed8ae2e94b231bff75e5920c8fbf45c5e"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "4ad70ed67442dd99f72e5801acd5a9cefb6b8e27d25c81518bbdc305f5830ae5"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "113ac94c443862788bf018a3759a38bed8ae2e94b231bff75e5920c8fbf45c5e"
+        }
+      ]
+    },
+    {
+      "slug": "mountain-bike-suspension-pin",
+      "catalogHash": "f7c9cb8329a63af1282b7eec9f909e6c494570de9144c3955b455f60ad3b5072",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "e8d1a28e52182e941e1ee5b94dbbea5c512ef521b421727d0cd5a5f3cb2bca67"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "621ef8505c5ba304ba7e27d665a72334d943f8be6da7c484c07876707d8eab80"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "e8d1a28e52182e941e1ee5b94dbbea5c512ef521b421727d0cd5a5f3cb2bca67"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "621ef8505c5ba304ba7e27d665a72334d943f8be6da7c484c07876707d8eab80"
+        }
+      ]
+    },
+    {
+      "slug": "multi-gear-drive-shaft",
+      "catalogHash": "1ff1c91dd868d2396fcab3558bfc1a4dbaa9107c918381d044225cea3afb6c4f",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "eb340637a5047f88280baa3a440b3a31e2b03c8400a4077ddbf7875af3e6766b"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "3f3f7f4d027ccce1d9e9ec18f9024989eff7b44d9d85328b5d26538fc50f443d"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "eb340637a5047f88280baa3a440b3a31e2b03c8400a4077ddbf7875af3e6766b"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "3f3f7f4d027ccce1d9e9ec18f9024989eff7b44d9d85328b5d26538fc50f443d"
+        }
+      ]
+    },
+    {
+      "slug": "overhanging-book-display-rack-bending-deflection",
+      "catalogHash": "d98d3a555bd8fe978b6ee6d88e1645369742f286259c3227e17d42254079f910",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "424c20daa4e8d5966675856464b8bb2aebeb7d10ef8e12b3793b755981e2593b"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "0f8d9a605fd7f8d6868dd48b21d50bcdebf66e0085541ce8615fd204000c026f"
+        },
+        {
+          "variant": "baseline",
+          "type": "student",
+          "hash": "424c20daa4e8d5966675856464b8bb2aebeb7d10ef8e12b3793b755981e2593b"
+        },
+        {
+          "variant": "baseline",
+          "type": "instructor",
+          "hash": "0f8d9a605fd7f8d6868dd48b21d50bcdebf66e0085541ce8615fd204000c026f"
+        }
+      ]
+    },
+    {
+      "slug": "piston-ring-elastic-closure-contact-pressure",
+      "catalogHash": "d63273772aa518fc0ccd6507422de26aeb3feccd2ef38cd71e134169cff32230",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "c670f181ab76101006380c4707efe05f0225f1fa3dec392853a921e91312f844"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "a13cddb83bd87f28c6ce7a1d717b1b68779f0cc0436ffef1270716fabf59733a"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "c670f181ab76101006380c4707efe05f0225f1fa3dec392853a921e91312f844"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "a13cddb83bd87f28c6ce7a1d717b1b68779f0cc0436ffef1270716fabf59733a"
+        }
+      ]
+    },
+    {
+      "slug": "precast-concrete-column-transport",
+      "catalogHash": "8085b873ae604fef434d8ed2cf5950a5a8fdd8c26277f6a21dc205b277b54138",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "6ac8f4ae22748e87c8b7481e4fa9d1c7fcb519af291dc8f673b4025d85505290"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "dfb500a35ecc7428ad10cd72461280eac0796d72adfedb840b52495187b3cf43"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "6ac8f4ae22748e87c8b7481e4fa9d1c7fcb519af291dc8f673b4025d85505290"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "dfb500a35ecc7428ad10cd72461280eac0796d72adfedb840b52495187b3cf43"
+        }
+      ]
+    },
+    {
+      "slug": "pump-drive-shaft-torsion",
+      "catalogHash": "4d4929680892f8cfd1f80903d917732764e1bcf103f8b845c074fc41787585c9",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "9701df25c5a1c079e1d1d4712d25ef256c4137abbe1764382d5aeda5b6d06d28"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "40104842dfd0c3d43fef21a0e31cf8b0b63cee79f5ab2eb7db44bdca0df52c8e"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "9701df25c5a1c079e1d1d4712d25ef256c4137abbe1764382d5aeda5b6d06d28"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "40104842dfd0c3d43fef21a0e31cf8b0b63cee79f5ab2eb7db44bdca0df52c8e"
+        }
+      ]
+    },
+    {
+      "slug": "robotic-arm-link-combined-bending-torsion",
+      "catalogHash": "6c82d8d3d0e527cb3b7a4a81025621b248eee9547ae1a9b5e243e876e4ff9a35",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "cdb413e641f345670aa55e0b373665f75d03cb9a39d5cb9a36a62604d678f5ac"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "b4c5fee80b2599a9a6e83670a0458a57a66e54bf89cf1508036ebbd388f7e483"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "cdb413e641f345670aa55e0b373665f75d03cb9a39d5cb9a36a62604d678f5ac"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "b4c5fee80b2599a9a6e83670a0458a57a66e54bf89cf1508036ebbd388f7e483"
+        }
+      ]
+    },
+    {
+      "slug": "shop-crane-pin-connection-shear-bearing",
+      "catalogHash": "427b34084c0e4ccf66665dcd605962dc566a96c878c2ae2249841a1ff703e908",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "145d74cb1b39bb7aefbc5ec4857a80533a843caa5d715632dda355d85fbdb836"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "e513cb8a36c2bb249b79d203437e05d09114d55d2eaf8d4c6aa28a5b557646ff"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "145d74cb1b39bb7aefbc5ec4857a80533a843caa5d715632dda355d85fbdb836"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "e513cb8a36c2bb249b79d203437e05d09114d55d2eaf8d4c6aa28a5b557646ff"
+        }
+      ]
+    },
+    {
+      "slug": "shop-crane-vertical-mast-buckling",
+      "catalogHash": "1b7573329ceac260eadd77eaa43a729ae3059fe6c911e94ff5322a182015a778",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "f09d99668f326e6d29a7c334540e550ec6049a193f5dfdd9c839ba8a6348211a"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "7a91320e3fa31bd9014469711078244633d541ffb58c4de2369fa303722f1e5c"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "f09d99668f326e6d29a7c334540e550ec6049a193f5dfdd9c839ba8a6348211a"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "7a91320e3fa31bd9014469711078244633d541ffb58c4de2369fa303722f1e5c"
+        }
+      ]
+    },
+    {
+      "slug": "spoked-wheel-load-sharing",
+      "catalogHash": "467e198f378fe03a37d6b2497ad08da83c85d14745e9b625e15ca40d62c0ef54",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "d47e93ac69d4b09ee2fb7a6b124137a82d576f5d6585d499c7742c803d55673c"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "24c66f0a83b0d447dc7af39a7f806a41ea1c9446cc29733dc0f720bc7e7148b4"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "d47e93ac69d4b09ee2fb7a6b124137a82d576f5d6585d499c7742c803d55673c"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "24c66f0a83b0d447dc7af39a7f806a41ea1c9446cc29733dc0f720bc7e7148b4"
+        }
+      ]
+    },
+    {
+      "slug": "spring-loaded-coupling-rod",
+      "catalogHash": "2e2dc1aa3c8e7333210a415555943bcf2949317037aee5baa67c8d62b811ff38",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "5ab8c46071c270102beed649d06ab72121266a031227f01aa150034e68521713"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "231893581898bdcf496742fd764eafd6810598f242614c440506f9ac5f6dade9"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "5ab8c46071c270102beed649d06ab72121266a031227f01aa150034e68521713"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "231893581898bdcf496742fd764eafd6810598f242614c440506f9ac5f6dade9"
+        }
+      ]
+    },
+    {
+      "slug": "steam-pipe-thermal-expansion",
+      "catalogHash": "930c385e84528dd09f623f8f120bc1e9e6aed9d3b248e640951079c7478561bd",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "d7e64f9952f78520da1e76445422a0f1d09536e50788debe9561f3f820eecd2b"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "cf53f22bceaec691b5f6b4d363d5e7d2bafc8037e0409c6d1a1c1c6f917d0e9b"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "d7e64f9952f78520da1e76445422a0f1d09536e50788debe9561f3f820eecd2b"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "cf53f22bceaec691b5f6b4d363d5e7d2bafc8037e0409c6d1a1c1c6f917d0e9b"
+        }
+      ]
+    },
+    {
+      "slug": "steel-frame-chair-accidental-fall-loading",
+      "catalogHash": "23a9d03940e2b34a791e7e56719065c53b8ec5e109eceebf72e594781908cd39",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "a0ab90a49d0da20034f5ca4f5ffab845f5f1171b8d663bbca64e3ac9801605d4"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "c8d5545d1efdbe5d6936fa38ae94396c36a903bb79db20d314613f521e97357b"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "a0ab90a49d0da20034f5ca4f5ffab845f5f1171b8d663bbca64e3ac9801605d4"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "c8d5545d1efdbe5d6936fa38ae94396c36a903bb79db20d314613f521e97357b"
+        }
+      ]
+    },
+    {
+      "slug": "suspended-equipment-cable-system",
+      "catalogHash": "c6c4975b525862ce6c964c351d6061489fba750fad83837e455cc8627dadcd19",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "7b85bd0ae1c3e79bb3b7d82dc1dd9773e2a4ead19ec94f06689f7a3a95e0ae77"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "e82c0f8fa51d4d58bab00044850f72341cb07b5c29334f707b243baf207d9ff4"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "7b85bd0ae1c3e79bb3b7d82dc1dd9773e2a4ead19ec94f06689f7a3a95e0ae77"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "e82c0f8fa51d4d58bab00044850f72341cb07b5c29334f707b243baf207d9ff4"
+        }
+      ]
+    },
+    {
+      "slug": "trailer-hitch-ball-mount-combined-loading",
+      "catalogHash": "835d223113c183d8d421d9e0d4294e4bbf82931449f7f0b00aa339732e7e16f3",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "bfc70adc195c4546b8e766ebbfb69e51f27d4cce6d70122c9c7e97b59fa569ad"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "de0c877e3b220d8338962ffa8468cade0aec1ebfda1087441b8a926a33f6ff44"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "bfc70adc195c4546b8e766ebbfb69e51f27d4cce6d70122c9c7e97b59fa569ad"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "de0c877e3b220d8338962ffa8468cade0aec1ebfda1087441b8a926a33f6ff44"
+        }
+      ]
+    },
+    {
+      "slug": "turbine-shaft-distributed-torque",
+      "catalogHash": "4dcc02af22ee16cc0dc52c1548ef281707f1e4562c199af4e0c3444ceb88f6c7",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "555f9698805a7f04b5706f7c32c8edf9919134c3e9306bcae3fffa3d701a4b5c"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "06dc280d5e1b1bc2c46606dba5cd654c7653c2c56549a2f6c0a2c9805a116bab"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "555f9698805a7f04b5706f7c32c8edf9919134c3e9306bcae3fffa3d701a4b5c"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "06dc280d5e1b1bc2c46606dba5cd654c7653c2c56549a2f6c0a2c9805a116bab"
+        }
+      ]
+    },
+    {
+      "slug": "v-belt-tension-factory-ventilation-blower-drive",
+      "catalogHash": "67aa038420b4a8817675ef484c27affbaa70dfd8e7e5e3035c4a5f89183cb009",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "f138f26f8f2c1a08086dc0aa68a082b84fae20586c4959a98eed683b9d986a09"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "8434dbfb3fa15b872724d7689cda7a6e35ffd21db73c126c55c9d176df487a05"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "f138f26f8f2c1a08086dc0aa68a082b84fae20586c4959a98eed683b9d986a09"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "8434dbfb3fa15b872724d7689cda7a6e35ffd21db73c126c55c9d176df487a05"
+        }
+      ]
+    },
+    {
+      "slug": "variable-radius-tapered-shaft",
+      "catalogHash": "ec7e638e3ab40c64eb8378ba8fdcda4866b693cb384061dc3395189ff5126d6d",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "a3baba9c81ed4385aeaa4ccdcf59743de5e6a5c9b7afa105971d60e9ac8a4392"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "400efa0ff9d86b60d75261210c6bbeafec6812ac2df72b36c1088c6978fe82d7"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "a3baba9c81ed4385aeaa4ccdcf59743de5e6a5c9b7afa105971d60e9ac8a4392"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "400efa0ff9d86b60d75261210c6bbeafec6812ac2df72b36c1088c6978fe82d7"
+        }
+      ]
+    },
+    {
+      "slug": "weight-stack-selector-pin-double-shear",
+      "catalogHash": "e3d7986eadaf0af7e9541b523fa8e142256a359c630039369708503455bbf506",
+      "cases": [
+        {
+          "variant": "",
+          "type": "student",
+          "hash": "4d69b2167831c72991df35e89901eedf2cf5b2255fdce9bc29cd5769a9d8abcd"
+        },
+        {
+          "variant": "",
+          "type": "instructor",
+          "hash": "2d62edfbbbc1922611af8f399dda694963d4de26fac59992239c6507699ffb49"
+        },
+        {
+          "variant": "section-a",
+          "type": "student",
+          "hash": "4d69b2167831c72991df35e89901eedf2cf5b2255fdce9bc29cd5769a9d8abcd"
+        },
+        {
+          "variant": "section-a",
+          "type": "instructor",
+          "hash": "2d62edfbbbc1922611af8f399dda694963d4de26fac59992239c6507699ffb49"
+        }
+      ]
+    }
+  ]
+}

@@ -7,6 +7,8 @@ project:
     - data/problem-health.json
     - data/problem-health.js
     - scripts/press-fixture-model.js
+    - scripts/platform-model.js
+    - scripts/platform-packet.js
     - scripts/packet-renderer.js
     - "problems/*/assets/*"
 

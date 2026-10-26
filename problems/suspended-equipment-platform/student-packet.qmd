@@ -13,6 +13,8 @@ format:
 ```{=html}
 <div id="platform-student-questions"></div>
 <script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/platform-model.js"></script>
+<script src="../../scripts/platform-packet.js"></script>
 <script src="../../scripts/packet-renderer.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {

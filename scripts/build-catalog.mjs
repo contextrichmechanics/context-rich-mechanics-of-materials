@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import PressFixtureModel from "./press-fixture-model.js";
+import PlatformModel from "./platform-model.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const problemsDir = path.join(root, "problems");
@@ -193,7 +194,7 @@ const catalog = problemPackages().flatMap((slug) => {
 
   const questionIds = new Set(questions.map((question) => question.id));
   const variants = readVariants(packageDir, slug, variableKeys, questionIds);
-  if (problem.packetLayout !== undefined && problem.packetLayout !== "geometry-first") throw new Error(`${slug} has an unknown packetLayout`);
+  if (problem.packetLayout !== undefined && problem.packetLayout !== "geometry-first" && !(PlatformModel.isPlatform(problem) && problem.packetLayout === "platform-common-model")) throw new Error(`${slug} has an unknown packetLayout`);
   if (PressFixtureModel.isPress(problem)) {
     if (problem.packetLayout !== "geometry-first") throw new Error(`${slug} requires geometry-first layout`);
     if (problem.showIdealizedImageInStudentPacket === true) throw new Error(`${slug} instructor figure must remain instructor-only`);
@@ -201,6 +202,19 @@ const catalog = problemPackages().flatMap((slug) => {
     const modelProblem = { ...problem, variables };
     PressFixtureModel.evaluate(modelProblem);
     variants.forEach(variant => PressFixtureModel.evaluate(modelProblem, variant.variables || {}));
+  }
+  if (PlatformModel.isPlatform(problem)) {
+    if (problem.packetLayout !== "platform-common-model" || problem.showIdealizedImageInStudentPacket !== false) throw new Error(slug + " requires the platform common-model layout and instructor-only free bodies");
+    if (JSON.stringify([...(problem.derivedPlaceholders || [])].sort()) !== JSON.stringify([...PlatformModel.registry].sort())) throw new Error(slug + " requires the exact 61-key registry");
+    requireFields(problem, ["commonModelStatement", "commonModelAssumptions", "modelValidityPolicy", "idealizedImageCaption", "contextImageNote"], problemPath);
+    if (!Array.isArray(problem.commonModelAssumptions) || problem.commonModelAssumptions.length !== 11) throw new Error(slug + " requires eleven common-model assumptions");
+    if (supplementaryImages.filter(i => i.role === "common-model-geometry").length !== 1) throw new Error(slug + " requires one unsolved common geometry");
+    const commonFields = [problem.commonModelStatement, ...problem.commonModelAssumptions, ...supplementaryImages.flatMap(i => [i.alt, i.caption])];
+    if (commonFields.some(text => placeholders(text).some(key => !variableKeys.has(key) && ![...variableKeys].some(k => key === k + "_unit" || key === k + "_label")))) throw new Error(slug + " common geometry/assumptions may not expose solved placeholders");
+    if (typeof problem.nativeContextImage !== "string" || /^(?:[a-z]+:|\/|\\)/i.test(problem.nativeContextImage) || problem.nativeContextImage.split(/[\\/]+/).includes("..") || !existsSync(path.join(packageDir, problem.nativeContextImage))) throw new Error(slug + " requires the format-correct context delivery copy");
+    const modelProblem = { ...problem, variables };
+    PlatformModel.assertPacket(PlatformModel.evaluate(modelProblem));
+    variants.forEach(variant => PlatformModel.assertPacket(PlatformModel.evaluate(modelProblem, variant.variables || {})));
   }
   const duplicateVariantIds = duplicateValues(variants.map((variant) => variant.id));
   if (duplicateVariantIds.length > 0) {
@@ -226,6 +240,7 @@ const catalog = problemPackages().flatMap((slug) => {
 
   return [{
     ...problem,
+    ...(PlatformModel.isPlatform(problem) ? {nativeContextImage: normalizeSitePath("problems", slug, problem.nativeContextImage)} : {}),
     image: normalizeSitePath("problems", slug, problem.image),
     idealizedImage: problem.idealizedImage
       ? normalizeSitePath("problems", slug, problem.idealizedImage)
@@ -258,6 +273,7 @@ mkdirSync(dataDir, { recursive: true });
 const json = `${JSON.stringify(catalog, null, 2)}\n`;
 const health = catalog.map((problem) => {
   const warnings = [];
+  if (PlatformModel.isPlatform(problem) && PlatformModel.evaluate(problem).status === "unassessed") warnings.push("Quantitative strain/rotation screening is unassessed; values and axial stiffness are instructional assignments, not documented industrial specifications.");
   const questionsWithoutTags = problem.questions.filter((question) => !Array.isArray(question.tags) || question.tags.length === 0);
   const questionsWithoutType = problem.questions.filter((question) => !question.type);
   const questionsWithoutDifficulty = problem.questions.filter((question) => !question.difficulty);

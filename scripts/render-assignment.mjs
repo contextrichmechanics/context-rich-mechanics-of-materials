@@ -3,6 +3,8 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import PressFixtureModel from "./press-fixture-model.js";
+import PlatformModel from "./platform-model.js";
+import PlatformPacket from "./platform-packet.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const catalogPath = path.join(root, "data", "problem-catalog.json");
@@ -132,6 +134,7 @@ function formatDerived(value, digits = 0) {
 }
 
 function variableMap(problem, currentValues) {
+  if (PlatformModel.isPlatform(problem)) return PlatformPacket.values(problem, currentValues);
   const values = {};
   problem.variables.forEach((variable) => {
     values[variable.key] = currentValues[variable.key] ?? variable.value;
@@ -2751,82 +2754,6 @@ function variableMap(problem, currentValues) {
     values.thermal_dominant_compliance = pipeCompliance >= supportCompliance ? "pipe axial compliance" : "combined turbine-attachment compliance";
   }
 
-  const platformLoad = numericValue(values, "P");
-  const platformWireArea = numericValue(values, "A_w");
-  const platformWireModulus = numericValue(values, "E_w");
-  const platformUpperWireLength = numericValue(values, "L_u");
-  const platformLowerWireLength = numericValue(values, "L_l");
-  const platformUpperSpan = numericValue(values, "L_DC");
-  const platformLowerSpan = numericValue(values, "L_AB");
-  const platformHLocation = numericValue(values, "x_DH");
-  const platformLoadLocation = numericValue(values, "x_P");
-
-  if (
-    Number.isFinite(platformLoad) && platformLoad > 0 &&
-    Number.isFinite(platformWireArea) && platformWireArea > 0 &&
-    Number.isFinite(platformWireModulus) && platformWireModulus > 0 &&
-    Number.isFinite(platformUpperWireLength) && platformUpperWireLength > 0 &&
-    Number.isFinite(platformLowerWireLength) && platformLowerWireLength > 0 &&
-    Number.isFinite(platformUpperSpan) && platformUpperSpan > 0 &&
-    Number.isFinite(platformLowerSpan) && platformLowerSpan > 0 &&
-    Number.isFinite(platformHLocation) && platformHLocation > 0 && platformHLocation < platformUpperSpan &&
-    Number.isFinite(platformLoadLocation) && platformLoadLocation > 0 && platformLoadLocation < platformLowerSpan
-  ) {
-    const modulusPsi = platformWireModulus * 1000;
-    const upperLengthIn = platformUpperWireLength * 12;
-    const lowerLengthIn = platformLowerWireLength * 12;
-    const upperSpanIn = platformUpperSpan * 12;
-    const lowerSpanIn = platformLowerSpan * 12;
-    const forceBC = platformLoad * platformLoadLocation / platformLowerSpan;
-    const forceAH = platformLoad - forceBC;
-    const forceFC = (forceAH * platformHLocation + forceBC * platformUpperSpan) / platformUpperSpan;
-    const forceED = platformLoad - forceFC;
-    const elongationAH = forceAH * lowerLengthIn / (platformWireArea * modulusPsi);
-    const elongationBC = forceBC * lowerLengthIn / (platformWireArea * modulusPsi);
-    const elongationED = forceED * upperLengthIn / (platformWireArea * modulusPsi);
-    const elongationFC = forceFC * upperLengthIn / (platformWireArea * modulusPsi);
-    const displacementH = elongationED + (elongationFC - elongationED) * platformHLocation / platformUpperSpan;
-    const displacementA = displacementH + elongationAH;
-    const displacementB = elongationFC + elongationBC;
-    const loadDisplacement = displacementA + (displacementB - displacementA) * platformLoadLocation / platformLowerSpan;
-    const thetaAB = (displacementB - displacementA) / lowerSpanIn;
-    const thetaDC = (elongationFC - elongationED) / upperSpanIn;
-    const forceEntries = [["AH", forceAH], ["BC", forceBC], ["ED", forceED], ["FC", forceFC]];
-    const elongationEntries = [["AH", elongationAH], ["BC", elongationBC], ["ED", elongationED], ["FC", elongationFC]];
-    const governingForce = forceEntries.sort((left, right) => right[1] - left[1])[0];
-    const governingElongation = elongationEntries.sort((left, right) => right[1] - left[1])[0];
-    values.platform_x_HC_ft = formatDerived(platformUpperSpan - platformHLocation, 2);
-    values.platform_E_w_psi = formatDerived(modulusPsi, 0);
-    values.platform_L_u_in = formatDerived(upperLengthIn, 2);
-    values.platform_L_l_in = formatDerived(lowerLengthIn, 2);
-    values.platform_L_DC_in = formatDerived(upperSpanIn, 2);
-    values.platform_L_AB_in = formatDerived(lowerSpanIn, 2);
-    values.platform_T_AH_lb = formatDerived(forceAH, 1);
-    values.platform_T_BC_lb = formatDerived(forceBC, 1);
-    values.platform_T_ED_lb = formatDerived(forceED, 1);
-    values.platform_T_FC_lb = formatDerived(forceFC, 1);
-    values.platform_delta_AH_in = formatDerived(elongationAH, 5);
-    values.platform_delta_BC_in = formatDerived(elongationBC, 5);
-    values.platform_delta_ED_in = formatDerived(elongationED, 5);
-    values.platform_delta_FC_in = formatDerived(elongationFC, 5);
-    values.platform_delta_H_in = formatDerived(displacementH, 5);
-    values.platform_delta_A_in = formatDerived(displacementA, 5);
-    values.platform_delta_B_in = formatDerived(displacementB, 5);
-    values.platform_delta_load_in = formatDerived(loadDisplacement, 5);
-    values.platform_theta_AB_rad = formatDerived(Math.abs(thetaAB), 7);
-    values.platform_theta_AB_deg = formatDerived(Math.abs(thetaAB) * 180 / Math.PI, 4);
-    values.platform_theta_DC_rad = formatDerived(Math.abs(thetaDC), 8);
-    values.platform_theta_DC_deg = formatDerived(Math.abs(thetaDC) * 180 / Math.PI, 5);
-    values.platform_lower_tilt_direction = thetaAB < 0 ? "downward toward A" : "downward toward B";
-    values.platform_upper_tilt_direction = thetaDC < 0 ? "downward toward D" : "downward toward C";
-    values.platform_governing_wire = governingForce[0];
-    values.platform_governing_force_lb = formatDerived(governingForce[1], 1);
-    values.platform_dominant_wire = governingElongation[0];
-    values.platform_dominant_force_lb = formatDerived(forceEntries.find(([wire]) => wire === governingElongation[0])[1], 1);
-    values.platform_dominant_length_ft = formatDerived(["AH", "BC"].includes(governingElongation[0]) ? platformLowerWireLength : platformUpperWireLength, 2);
-    values.platform_dominant_elongation_in = formatDerived(governingElongation[1], 5);
-  }
-
   const cableMass = numericValue(values, "m");
   const cableGravity = numericValue(values, "g");
   const cableThetaAB = numericValue(values, "theta_AB");
@@ -3400,6 +3327,10 @@ function renderPressBody(problem,variant,type){
 }
 
 function renderBody(problem, variant, type) {
+  if (PlatformModel.isPlatform(problem)) return PlatformPacket.renderHtml(problem, variant?.variables || {}, type, {
+    questions: selectedQuestions(problem, variant, type),
+    imageUrl: src => pathToFileURL(path.join(root, src)).href
+  });
   if (PressFixtureModel.isPress(problem)) return renderPressBody(problem, variant, type);
   const isInstructor = type === "instructor";
   const showIdealizedImage =
@@ -3468,6 +3399,11 @@ function renderPressQmd(problem,variant,type,outDir){
 }
 
 function qmdDocument(problem, variant, type, outDir) {
+  if (PlatformModel.isPlatform(problem)) return PlatformPacket.renderQmd(problem, variant?.variables || {}, type, {
+    questions: selectedQuestions(problem, variant, type),
+    imageUrl: src => path.relative(outDir, path.join(root, src)).split(path.sep).join("/"),
+    toMarkdown: htmlToMarkdown
+  });
   if (PressFixtureModel.isPress(problem)) return renderPressQmd(problem, variant, type, outDir);
   const title = type === "instructor" ? problem.instructorDocumentTitle : problem.studentDocumentTitle;
   const isInstructor = type === "instructor";
@@ -3586,6 +3522,8 @@ if (variantKey && !variant) {
 
 if (PressFixtureModel.isPress(problem)) PressFixtureModel.evaluate(problem, variant?.variables || {});
 
+if (PlatformModel.isPlatform(problem)) PlatformModel.assertPacket(PlatformModel.evaluate(problem, variant?.variables || {}));
+
 const outDir = path.join(root, "exports", problem.slug, variant?.id || "default");
 mkdirSync(outDir, { recursive: true });
 
@@ -3605,9 +3543,11 @@ if (format === "html") {
   if (format === "qmd") {
     console.log(path.relative(root, qmdPath));
   } else {
-    // Use Quarto's bundled Typst for this package; other packages retain their PDF engine.
-    const quartoFormat = PressFixtureModel.isPress(problem) && format === "pdf" ? "typst" : format;
-    const result = spawnSync("quarto", ["render", qmdPath, "--to", quartoFormat], {
+    // Use bundled Typst for the press/platform packages; other PDF engines remain unchanged.
+    const quartoFormat = (PressFixtureModel.isPress(problem) || PlatformModel.isPlatform(problem)) && format === "pdf" ? "typst" : format;
+    const quartoArgs = ["render", qmdPath, "--to", quartoFormat];
+    if (PlatformModel.isPlatform(problem)) quartoArgs.push("--no-clean");
+    const result = spawnSync("quarto", quartoArgs, {
       cwd: root,
       encoding: "utf8",
       stdio: "inherit"

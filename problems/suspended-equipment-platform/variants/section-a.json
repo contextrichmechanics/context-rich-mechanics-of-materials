@@ -1,10 +1,29 @@
 {
   "id": "section-a",
-  "title": "Homework Version A - baseline suspended platform assembly",
-  "description": "Default sequence from physical interpretation through equilibrium, wire elongation, displacement compatibility, vertical displacement, tilt, and engineering assessment.",
+  "title": "Homework Version A - endpoint-supported platform and weighted displacement contributions",
+  "description": "Twenty-one questions from independent physical idealization to a supplied two-level common model, equilibrium, wire extension, signed motion and weighted load-displacement assessment using assigned values.",
   "selectedQuestions": [
-    "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10",
-    "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q20", "q21"
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15",
+    "q16",
+    "q17",
+    "q18",
+    "q19",
+    "q20",
+    "q21"
   ],
   "variables": {
     "P": 800,

@@ -2,7 +2,7 @@
   {
     "key": "P",
     "symbol": "P",
-    "label": "Applied suspended load",
+    "label": "Assigned downward point force (lb means lbf)",
     "value": 800,
     "unit": "lb",
     "min": 10,
@@ -12,7 +12,7 @@
   {
     "key": "A_w",
     "symbol": "A_w",
-    "label": "Cross-sectional area of each wire",
+    "label": "Assigned ideal axial area, each of four wires",
     "value": 0.05,
     "unit": "in^2",
     "min": 0.001,
@@ -22,7 +22,7 @@
   {
     "key": "E_w",
     "symbol": "E_w",
-    "label": "Elastic modulus of wire material",
+    "label": "Assigned modulus for the ideal axial EA model",
     "value": 28000,
     "unit": "ksi",
     "min": 1000,
@@ -32,7 +32,7 @@
   {
     "key": "L_u",
     "symbol": "L_u",
-    "label": "Length of each upper wire ED and FC",
+    "label": "Assigned initial free length, upper wires ED and FC",
     "value": 4,
     "unit": "ft",
     "min": 0.25,
@@ -42,7 +42,7 @@
   {
     "key": "L_l",
     "symbol": "L_l",
-    "label": "Length of each lower wire AH and BC",
+    "label": "Assigned initial free length, lower wires AH and BC",
     "value": 4.5,
     "unit": "ft",
     "min": 0.25,
@@ -52,7 +52,7 @@
   {
     "key": "L_DC",
     "symbol": "L_DC",
-    "label": "Length of upper rigid member DC",
+    "label": "Assigned D-to-C attachment-node span",
     "value": 7,
     "unit": "ft",
     "min": 0.5,
@@ -62,7 +62,7 @@
   {
     "key": "L_AB",
     "symbol": "L_AB",
-    "label": "Length of lower rigid member AB",
+    "label": "Assigned A-to-B attachment-node span; must equal x_HC",
     "value": 5,
     "unit": "ft",
     "min": 0.5,
@@ -72,7 +72,7 @@
   {
     "key": "x_DH",
     "symbol": "x_DH",
-    "label": "Distance from D to lower-wire point H",
+    "label": "Assigned D-to-H distance",
     "value": 2,
     "unit": "ft",
     "min": 0.1,
@@ -82,7 +82,7 @@
   {
     "key": "x_HC",
     "symbol": "x_HC",
-    "label": "Distance from H to C",
+    "label": "Assigned H-to-C span; must equal L_AB",
     "value": 5,
     "unit": "ft",
     "min": 0.1,
@@ -92,7 +92,7 @@
   {
     "key": "x_P",
     "symbol": "x_P",
-    "label": "Distance from A to applied load",
+    "label": "Assigned A-to-load distance; strictly inside AB",
     "value": 1,
     "unit": "ft",
     "min": 0.1,

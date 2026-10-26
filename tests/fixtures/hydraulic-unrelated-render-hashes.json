@@ -1168,27 +1168,27 @@
     },
     {
       "slug": "suspended-equipment-platform",
-      "catalogHash": "ced4711ca1151bc43735b7ac2675ff5c829c8937311bdd160c0612514ae6a91b",
+      "catalogHash": "561f61cadbd4611683aad9c5ff0af9bbd8393e66f7492c21b71b72d8eaa6e334",
       "cases": [
         {
           "variant": null,
           "type": "student",
-          "hash": "500eee20cca66977a9907950b1ac60c837f13f9ad28212c1606f6ad10f0849e5"
+          "hash": "ab999e6f5c99ea23b15532224369a84bfa291ca3e0cb073e29af5c5126d584d8"
         },
         {
           "variant": null,
           "type": "instructor",
-          "hash": "d3d7c059ff21f5a7f93e1dccea3ffca74691c5d559b74699d2cab8a75b649bd3"
+          "hash": "4b365e78c9721d5cbaa437c219403e6b47ad0d5389dff17913853f7bf8ce6855"
         },
         {
           "variant": "section-a",
           "type": "student",
-          "hash": "500eee20cca66977a9907950b1ac60c837f13f9ad28212c1606f6ad10f0849e5"
+          "hash": "ab999e6f5c99ea23b15532224369a84bfa291ca3e0cb073e29af5c5126d584d8"
         },
         {
           "variant": "section-a",
           "type": "instructor",
-          "hash": "d3d7c059ff21f5a7f93e1dccea3ffca74691c5d559b74699d2cab8a75b649bd3"
+          "hash": "4b365e78c9721d5cbaa437c219403e6b47ad0d5389dff17913853f7bf8ce6855"
         }
       ]
     },

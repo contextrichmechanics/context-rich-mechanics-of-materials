@@ -49,6 +49,8 @@ toc: false
 
 <script src="data/problem-catalog.js"></script>
 <script src="scripts/press-fixture-model.js"></script>
+<script src="scripts/platform-model.js"></script>
+<script src="scripts/platform-packet.js"></script>
 <script>
 let problemCatalog = window.PROBLEM_CATALOG || [];
 const problemSelect = document.getElementById("problem-select");
@@ -111,6 +113,7 @@ function formatDerived(value, digits = 0) {
 }
 
 function variableMap(problem) {
+  if (problem.slug === "suspended-equipment-platform") return window.PlatformPacket.values(problem, currentValues);
   const values = {};
   problem.variables.forEach((variable) => {
     values[variable.key] = currentValues[variable.key] ?? variable.value;
@@ -2695,82 +2698,6 @@ function variableMap(problem) {
     values.thermal_dominant_compliance = pipeCompliance >= supportCompliance ? "pipe axial compliance" : "combined turbine-attachment compliance";
   }
 
-  const platformLoad = numericValue(values, "P");
-  const platformWireArea = numericValue(values, "A_w");
-  const platformWireModulus = numericValue(values, "E_w");
-  const platformUpperWireLength = numericValue(values, "L_u");
-  const platformLowerWireLength = numericValue(values, "L_l");
-  const platformUpperSpan = numericValue(values, "L_DC");
-  const platformLowerSpan = numericValue(values, "L_AB");
-  const platformHLocation = numericValue(values, "x_DH");
-  const platformLoadLocation = numericValue(values, "x_P");
-
-  if (
-    Number.isFinite(platformLoad) && platformLoad > 0 &&
-    Number.isFinite(platformWireArea) && platformWireArea > 0 &&
-    Number.isFinite(platformWireModulus) && platformWireModulus > 0 &&
-    Number.isFinite(platformUpperWireLength) && platformUpperWireLength > 0 &&
-    Number.isFinite(platformLowerWireLength) && platformLowerWireLength > 0 &&
-    Number.isFinite(platformUpperSpan) && platformUpperSpan > 0 &&
-    Number.isFinite(platformLowerSpan) && platformLowerSpan > 0 &&
-    Number.isFinite(platformHLocation) && platformHLocation > 0 && platformHLocation < platformUpperSpan &&
-    Number.isFinite(platformLoadLocation) && platformLoadLocation > 0 && platformLoadLocation < platformLowerSpan
-  ) {
-    const modulusPsi = platformWireModulus * 1000;
-    const upperLengthIn = platformUpperWireLength * 12;
-    const lowerLengthIn = platformLowerWireLength * 12;
-    const upperSpanIn = platformUpperSpan * 12;
-    const lowerSpanIn = platformLowerSpan * 12;
-    const forceBC = platformLoad * platformLoadLocation / platformLowerSpan;
-    const forceAH = platformLoad - forceBC;
-    const forceFC = (forceAH * platformHLocation + forceBC * platformUpperSpan) / platformUpperSpan;
-    const forceED = platformLoad - forceFC;
-    const elongationAH = forceAH * lowerLengthIn / (platformWireArea * modulusPsi);
-    const elongationBC = forceBC * lowerLengthIn / (platformWireArea * modulusPsi);
-    const elongationED = forceED * upperLengthIn / (platformWireArea * modulusPsi);
-    const elongationFC = forceFC * upperLengthIn / (platformWireArea * modulusPsi);
-    const displacementH = elongationED + (elongationFC - elongationED) * platformHLocation / platformUpperSpan;
-    const displacementA = displacementH + elongationAH;
-    const displacementB = elongationFC + elongationBC;
-    const loadDisplacement = displacementA + (displacementB - displacementA) * platformLoadLocation / platformLowerSpan;
-    const thetaAB = (displacementB - displacementA) / lowerSpanIn;
-    const thetaDC = (elongationFC - elongationED) / upperSpanIn;
-    const forceEntries = [["AH", forceAH], ["BC", forceBC], ["ED", forceED], ["FC", forceFC]];
-    const elongationEntries = [["AH", elongationAH], ["BC", elongationBC], ["ED", elongationED], ["FC", elongationFC]];
-    const governingForce = forceEntries.sort((left, right) => right[1] - left[1])[0];
-    const governingElongation = elongationEntries.sort((left, right) => right[1] - left[1])[0];
-    values.platform_x_HC_ft = formatDerived(platformUpperSpan - platformHLocation, 2);
-    values.platform_E_w_psi = formatDerived(modulusPsi, 0);
-    values.platform_L_u_in = formatDerived(upperLengthIn, 2);
-    values.platform_L_l_in = formatDerived(lowerLengthIn, 2);
-    values.platform_L_DC_in = formatDerived(upperSpanIn, 2);
-    values.platform_L_AB_in = formatDerived(lowerSpanIn, 2);
-    values.platform_T_AH_lb = formatDerived(forceAH, 1);
-    values.platform_T_BC_lb = formatDerived(forceBC, 1);
-    values.platform_T_ED_lb = formatDerived(forceED, 1);
-    values.platform_T_FC_lb = formatDerived(forceFC, 1);
-    values.platform_delta_AH_in = formatDerived(elongationAH, 5);
-    values.platform_delta_BC_in = formatDerived(elongationBC, 5);
-    values.platform_delta_ED_in = formatDerived(elongationED, 5);
-    values.platform_delta_FC_in = formatDerived(elongationFC, 5);
-    values.platform_delta_H_in = formatDerived(displacementH, 5);
-    values.platform_delta_A_in = formatDerived(displacementA, 5);
-    values.platform_delta_B_in = formatDerived(displacementB, 5);
-    values.platform_delta_load_in = formatDerived(loadDisplacement, 5);
-    values.platform_theta_AB_rad = formatDerived(Math.abs(thetaAB), 7);
-    values.platform_theta_AB_deg = formatDerived(Math.abs(thetaAB) * 180 / Math.PI, 4);
-    values.platform_theta_DC_rad = formatDerived(Math.abs(thetaDC), 8);
-    values.platform_theta_DC_deg = formatDerived(Math.abs(thetaDC) * 180 / Math.PI, 5);
-    values.platform_lower_tilt_direction = thetaAB < 0 ? "downward toward A" : "downward toward B";
-    values.platform_upper_tilt_direction = thetaDC < 0 ? "downward toward D" : "downward toward C";
-    values.platform_governing_wire = governingForce[0];
-    values.platform_governing_force_lb = formatDerived(governingForce[1], 1);
-    values.platform_dominant_wire = governingElongation[0];
-    values.platform_dominant_force_lb = formatDerived(forceEntries.find(([wire]) => wire === governingElongation[0])[1], 1);
-    values.platform_dominant_length_ft = formatDerived(["AH", "BC"].includes(governingElongation[0]) ? platformLowerWireLength : platformUpperWireLength, 2);
-    values.platform_dominant_elongation_in = formatDerived(governingElongation[1], 5);
-  }
-
   const cableMass = numericValue(values, "m");
   const cableGravity = numericValue(values, "g");
   const cableThetaAB = numericValue(values, "theta_AB");
@@ -3246,7 +3173,7 @@ function renderVariableInputs() {
   currentValues = {};
 
   variableInputs.innerHTML = problem.variables.map((variable) => {
-    const value = overrides[variable.key] ?? variable.value;
+    const value = problem.slug === "suspended-equipment-platform" ? (Object.prototype.hasOwnProperty.call(overrides, variable.key) ? overrides[variable.key] : variable.value) : overrides[variable.key] ?? variable.value;
     currentValues[variable.key] = value;
     return `
       <label class="builder-variable">
@@ -3259,7 +3186,7 @@ function renderVariableInputs() {
             value="${escapeHtml(value)}"
             min="${escapeHtml(variable.min ?? "")}"
             max="${escapeHtml(variable.max ?? "")}"
-            step="${escapeHtml(variable.step ?? "any")}"
+            step="${escapeHtml(problem.slug === "suspended-equipment-platform" ? "any" : variable.step ?? "any")}"
           >
           <span>${unitHtml(variable.unit)}</span>
         </span>
@@ -3445,6 +3372,13 @@ function renderPressBuilder(type,embeddedImages={}){
 }
 
 function renderDocumentBody(type, embeddedImages = {}) {
+  if (selectedProblem()?.slug === "suspended-equipment-platform") {
+    const problem = selectedProblem();
+    return window.PlatformPacket.renderHtml(problem, currentValues, type, {
+      questions: selectedQuestions(problem, type),
+      imageUrl: src => { const url = packetImageUrl(problem, src); return embeddedImages[url] || url; }
+    });
+  }
   if (selectedProblem()?.slug === "hydraulic-press-punching-shear") return renderPressBuilder(type, embeddedImages);
   const problem = selectedProblem();
   const isInstructor = type === "instructor";
@@ -3516,9 +3450,9 @@ function renderPreview() {
     packetPreview.innerHTML = renderDocumentBody(activePreview);
     ["download-student-doc", "download-instructor-doc", "print-student-pdf", "print-instructor-pdf"].forEach(id => { document.getElementById(id).disabled = false; });
   } catch (error) {
-    if (selectedProblem()?.slug !== "hydraulic-press-punching-shear") throw error;
-    packetPreview.innerHTML = `<p class="packet-error" role="alert">${escapeHtml(error.message)}</p>`;
-    statusText.textContent = "Correct the fixture inputs.";
+    if (!["hydraulic-press-punching-shear", "suspended-equipment-platform"].includes(selectedProblem()?.slug)) throw error;
+    packetPreview.innerHTML = selectedProblem()?.slug === "suspended-equipment-platform" ? window.PlatformPacket.diagnosticHtml(error, activePreview) : `<p class="packet-error" role="alert">${escapeHtml(error.message)}</p>`;
+    statusText.textContent = selectedProblem()?.slug === "suspended-equipment-platform" ? (error.code === "model-warning" ? "Outside the assigned model; standard exports blocked." : "Correct the platform inputs.") : "Correct the fixture inputs.";
     ["download-student-doc", "download-instructor-doc", "print-student-pdf", "print-instructor-pdf"].forEach(id => { document.getElementById(id).disabled = true; });
     return;
   }
@@ -3593,6 +3527,7 @@ async function fetchEmbeddedImage(source) {
 }
 
 async function embeddedPacketImages(problem, questions, type) {
+  if (problem.slug === "suspended-equipment-platform") window.PlatformModel.assertPacket(window.PlatformModel.evaluate(problem, currentValues));
   const isInstructor = type === "instructor";
   const showIdealizedImage =
     isInstructor ||
@@ -3612,6 +3547,7 @@ async function embeddedPacketImages(problem, questions, type) {
 }
 
 async function fullHtmlDocument(type) {
+  if (selectedProblem()?.slug === "suspended-equipment-platform") window.PlatformModel.assertPacket(window.PlatformModel.evaluate(selectedProblem(), currentValues));
   if (selectedProblem()?.slug === "hydraulic-press-punching-shear") window.PressFixtureModel.evaluate(selectedProblem(), currentValues);
   const problem = selectedProblem();
   const questions = selectedQuestions(problem, type);
@@ -3670,6 +3606,9 @@ async function waitForDocumentImages(targetDocument) {
 }
 
 async function printDocument(type) {
+  if (selectedProblem()?.slug === "suspended-equipment-platform") {
+    try { window.PlatformModel.assertPacket(window.PlatformModel.evaluate(selectedProblem(), currentValues)); } catch { renderPreview(); return; }
+  }
   if (selectedProblem()?.slug === "hydraulic-press-punching-shear") {
     try { window.PressFixtureModel.evaluate(selectedProblem(), currentValues); } catch { renderPreview(); return; }
   }

@@ -361,3 +361,17 @@ For context-rich mechanics problems, structure the problem package so generated 
 5. Instructor answers, only in instructor output.
 
 The main statement should describe the engineering role, physical system, operating context, and uncertainty. The questions should then ask students to reason, model, calculate, and make a defensible recommendation.
+
+## Suspended platform common model
+
+MOS-PLATFORM-011 uses `packetLayout: platform-common-model`, the pure `scripts/platform-model.js` helper and the audience-aware `scripts/platform-packet.js` layout. This layout applies only to `suspended-equipment-platform`; the hydraulic press keeps its existing geometry-first layout and 20-key model.
+
+Keep Q1-Q10 as the physical-context and independent idealization phase. Supply `commonModelStatement`, eleven `commonModelAssumptions`, the supplementary image with role `common-model-geometry`, a current-input dimension key and Given Data between Q10 and M1. Keep completed instructor free bodies after M1 and before M2, and include them only in instructor packets. Q8 uses a renderer-managed 80 mm drawing region, including native-export equivalents.
+
+Retain the ten compatible input keys. Enforce `L_DC = x_DH + x_HC`, `L_AB = x_HC`, strict interior load location, positive finite range-checked inputs and all four positive wire tensions. Omitted overrides inherit defaults; explicit invalid values do not. Authoring increments are stepping controls, not a ban on valid off-grid rational values.
+
+The 61-key registry includes signed rotations, numerical zero/tie interpretation and weighted wire-elongation contributions to the load-point displacement. Raw extension, maximum force and maximum weighted contribution are separate rankings. All inputs are assigned instructional values.
+
+Initial-input errors block numerical answers and exports. A gross predicted finite-segment inconsistency or an exceeded configured approximation screen is a distinct model warning and blocks standard exports. With both strain/rotation limits null, a normal packet is explicitly unassessed; passing the gross check is not proof of small-deformation validity, material strength or service fitness. No strain, rotation, strength or serviceability threshold is inferred from modulus. Update source first, then regenerate catalog/health artifacts and run platform plus unchanged hydraulic regression tests.
+
+The preserved platform context file contains JPEG bytes despite its historical PNG filename. `nativeContextImage` selects the byte-identical `.jpg` delivery copy for native output; retain the original context and historical instructor files unchanged. The new SVG/PNG diagram pairs are independent student/instructor assets and use symbolic dimensions alongside a current-input key.

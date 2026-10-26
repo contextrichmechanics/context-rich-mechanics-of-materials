@@ -42,7 +42,7 @@ industries:
 difficulty: "Intermediate to advanced"
 status: "Faculty review"
 problem_id: "MOS-PLATFORM-011"
-version: "0.2.0"
+version: "0.3.0"
 ---
 
 {{< include _student-problem.qmd >}}
@@ -50,7 +50,7 @@ version: "0.2.0"
 ## Assignment Options
 
 ::: {.callout-note title="Recommended Starting Point"}
-Use the default packet for rigid-body equilibrium, axial wire elongation, displacement compatibility, vertical displacement, and tilt.
+Use the default packet for independent idealization followed by the assigned common model, equilibrium, axial extension, signed displacement/tilt and weighted load-displacement contributions. All numerical values are instructional assignments; status remains Faculty review.
 :::
 
 [Student packet](student-packet.qmd){.btn .btn-primary}

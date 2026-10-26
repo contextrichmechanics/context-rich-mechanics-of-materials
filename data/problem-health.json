@@ -453,11 +453,13 @@
     "id": "MOS-PLATFORM-011",
     "slug": "suspended-equipment-platform",
     "title": "Suspended Platform Assembly - Wire Elongation, Vertical Displacement, and Tilt",
-    "status": "OK",
+    "status": "Review",
     "variables": 10,
     "questions": 21,
     "variants": 1,
-    "warnings": []
+    "warnings": [
+      "Quantitative strain/rotation screening is unassessed; values and axial stiffness are instructional assignments, not documented industrial specifications."
+    ]
   },
   {
     "id": "MOS-TRAILER-HITCH-BALL-001",
