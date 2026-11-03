@@ -654,47 +654,47 @@
     },
     {
       "slug": "jib-crane-battery-pack",
-      "catalogHash": "3ba458299704092db5218096297c80afacba1488f157f7fb1d486f2b6da568f8",
+      "catalogHash": "2b0bf038e5adca0bc13258a0cfa4644a9144ddc8c68a7da43a3a0d2388b5f444",
       "cases": [
         {
           "variant": "",
           "type": "student",
-          "hash": "14fe723c1cbfa75a5746dcde372fca42296045155f586ea3be47bedf7dc29208"
+          "hash": "724a6061514e6635d23ed187f3377b67abc432744a906d95e8022c6709b25e61"
         },
         {
           "variant": "",
           "type": "instructor",
-          "hash": "79803d9adbb21be4697764873390b7a38ece42dd124bd481e842cd3d67451a66"
+          "hash": "879977a02653fdd5a4c16e54af212688a3ff1fcea6363e4a844076344e652cb6"
         },
         {
           "variant": "context-rich-project",
           "type": "student",
-          "hash": "14fe723c1cbfa75a5746dcde372fca42296045155f586ea3be47bedf7dc29208"
+          "hash": "724a6061514e6635d23ed187f3377b67abc432744a906d95e8022c6709b25e61"
         },
         {
           "variant": "context-rich-project",
           "type": "instructor",
-          "hash": "79803d9adbb21be4697764873390b7a38ece42dd124bd481e842cd3d67451a66"
+          "hash": "879977a02653fdd5a4c16e54af212688a3ff1fcea6363e4a844076344e652cb6"
         },
         {
           "variant": "exam-version",
           "type": "student",
-          "hash": "54358f5a65de6101f31778f5f820d6ea77e570440d051a6d0e014b95923ec175"
+          "hash": "ad548af4db056bdf0e0dbc23ce766d3bd96b1a2e99e964018ef9dbd89655640e"
         },
         {
           "variant": "exam-version",
           "type": "instructor",
-          "hash": "69704bedbabc722936c476455e3cdba0d39f090f74a1d989719db95ced62bf0b"
+          "hash": "8cb1f21508bd2df3f201864249ae0335501f4d4c6f99b2acb35c32e5276f0c6c"
         },
         {
           "variant": "section-a",
           "type": "student",
-          "hash": "2903765c01a81f2499e2c67f99a33085fd4240c054a4770295ef30c4bb6ce7f9"
+          "hash": "91b00a66b59f2d9684b686e0f88af262767aac6f09a928cef0ea34a376bd8422"
         },
         {
           "variant": "section-a",
           "type": "instructor",
-          "hash": "a0d759926325eb406dcbb18d9a095b4c702363a7743f0c89d1bc0c89efe2700b"
+          "hash": "1d7831eaeb0e9bdadb166d1dff7f6c4e1ce453380497756b4f477a8a6e122e00"
         }
       ]
     },

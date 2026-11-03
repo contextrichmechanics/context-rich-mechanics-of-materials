@@ -56,6 +56,7 @@
   }
 
   function variableMap(problem, overrides = {}) {
+    if (problem.id === "MOS-JIB-001") return window.JibCranePacket.values(problem, overrides);
     if (problem.slug === "suspended-equipment-platform") return window.PlatformPacket.values(problem, overrides);
     const values = {};
     (problem.variables || []).forEach((variable) => {
@@ -3270,6 +3271,14 @@
     const variant = options.variant
       ? (problem.variants || []).find((item) => item.id === options.variant)
       : null;
+    if (problem.id === "MOS-JIB-001") {
+      try {
+        target.innerHTML = window.JibCranePacket.renderHtml(problem, { ...(variant?.variables || {}), ...(options.overrides || {}) }, options.type, {
+          questions: selectedQuestions(problem, variant, options.type), imageUrl: src => problemImagePath(problem, src)
+        });
+      } catch (error) { target.innerHTML = window.JibCranePacket.diagnosticHtml(error); }
+      return;
+    }
     if (problem.slug === "hydraulic-press-punching-shear") {
       try {
         target.innerHTML = renderPressPacket(problem, variant, options.type, { ...(variant?.variables || {}), ...(options.overrides || {}) });

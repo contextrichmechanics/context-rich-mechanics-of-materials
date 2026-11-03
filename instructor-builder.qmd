@@ -51,6 +51,8 @@ toc: false
 <script src="scripts/press-fixture-model.js"></script>
 <script src="scripts/platform-model.js"></script>
 <script src="scripts/platform-packet.js"></script>
+<script src="scripts/jib-crane-model.js"></script>
+<script src="scripts/jib-crane-packet.js"></script>
 <script>
 let problemCatalog = window.PROBLEM_CATALOG || [];
 const problemSelect = document.getElementById("problem-select");
@@ -113,6 +115,7 @@ function formatDerived(value, digits = 0) {
 }
 
 function variableMap(problem) {
+  if (problem.id === "MOS-JIB-001") return window.JibCranePacket.values(problem, currentValues);
   if (problem.slug === "suspended-equipment-platform") return window.PlatformPacket.values(problem, currentValues);
   const values = {};
   problem.variables.forEach((variable) => {
@@ -3173,7 +3176,7 @@ function renderVariableInputs() {
   currentValues = {};
 
   variableInputs.innerHTML = problem.variables.map((variable) => {
-    const value = problem.slug === "suspended-equipment-platform" ? (Object.prototype.hasOwnProperty.call(overrides, variable.key) ? overrides[variable.key] : variable.value) : overrides[variable.key] ?? variable.value;
+    const value = (problem.slug === "suspended-equipment-platform" || problem.id === "MOS-JIB-001") ? (Object.prototype.hasOwnProperty.call(overrides, variable.key) ? overrides[variable.key] : variable.value) : overrides[variable.key] ?? variable.value;
     currentValues[variable.key] = value;
     return `
       <label class="builder-variable">
@@ -3186,7 +3189,7 @@ function renderVariableInputs() {
             value="${escapeHtml(value)}"
             min="${escapeHtml(variable.min ?? "")}"
             max="${escapeHtml(variable.max ?? "")}"
-            step="${escapeHtml(problem.slug === "suspended-equipment-platform" ? "any" : variable.step ?? "any")}"
+            step="${escapeHtml((problem.slug === "suspended-equipment-platform" || problem.id === "MOS-JIB-001") ? "any" : variable.step ?? "any")}"
           >
           <span>${unitHtml(variable.unit)}</span>
         </span>
@@ -3372,6 +3375,13 @@ function renderPressBuilder(type,embeddedImages={}){
 }
 
 function renderDocumentBody(type, embeddedImages = {}) {
+  if (selectedProblem()?.id === "MOS-JIB-001") {
+    const problem = selectedProblem();
+    return window.JibCranePacket.renderHtml(problem, currentValues, type, {
+      questions: selectedQuestions(problem, type),
+      imageUrl: src => { const url = packetImageUrl(problem, src); return embeddedImages[url] || url; }
+    });
+  }
   if (selectedProblem()?.slug === "suspended-equipment-platform") {
     const problem = selectedProblem();
     return window.PlatformPacket.renderHtml(problem, currentValues, type, {
@@ -3450,9 +3460,9 @@ function renderPreview() {
     packetPreview.innerHTML = renderDocumentBody(activePreview);
     ["download-student-doc", "download-instructor-doc", "print-student-pdf", "print-instructor-pdf"].forEach(id => { document.getElementById(id).disabled = false; });
   } catch (error) {
-    if (!["hydraulic-press-punching-shear", "suspended-equipment-platform"].includes(selectedProblem()?.slug)) throw error;
-    packetPreview.innerHTML = selectedProblem()?.slug === "suspended-equipment-platform" ? window.PlatformPacket.diagnosticHtml(error, activePreview) : `<p class="packet-error" role="alert">${escapeHtml(error.message)}</p>`;
-    statusText.textContent = selectedProblem()?.slug === "suspended-equipment-platform" ? (error.code === "model-warning" ? "Outside the assigned model; standard exports blocked." : "Correct the platform inputs.") : "Correct the fixture inputs.";
+    if (selectedProblem()?.id !== "MOS-JIB-001" && !["hydraulic-press-punching-shear", "suspended-equipment-platform"].includes(selectedProblem()?.slug)) throw error;
+    packetPreview.innerHTML = selectedProblem()?.id === "MOS-JIB-001" ? window.JibCranePacket.diagnosticHtml(error) : selectedProblem()?.slug === "suspended-equipment-platform" ? window.PlatformPacket.diagnosticHtml(error, activePreview) : `<p class="packet-error" role="alert">${escapeHtml(error.message)}</p>`;
+    statusText.textContent = selectedProblem()?.id === "MOS-JIB-001" ? "Correct the jib inputs; numerical answers and exports are blocked." : selectedProblem()?.slug === "suspended-equipment-platform" ? (error.code === "model-warning" ? "Outside the assigned model; standard exports blocked." : "Correct the platform inputs.") : "Correct the fixture inputs.";
     ["download-student-doc", "download-instructor-doc", "print-student-pdf", "print-instructor-pdf"].forEach(id => { document.getElementById(id).disabled = true; });
     return;
   }
@@ -3527,6 +3537,7 @@ async function fetchEmbeddedImage(source) {
 }
 
 async function embeddedPacketImages(problem, questions, type) {
+  if (problem.id === "MOS-JIB-001") window.JibCraneModel.evaluate(problem, currentValues);
   if (problem.slug === "suspended-equipment-platform") window.PlatformModel.assertPacket(window.PlatformModel.evaluate(problem, currentValues));
   const isInstructor = type === "instructor";
   const showIdealizedImage =
@@ -3547,6 +3558,7 @@ async function embeddedPacketImages(problem, questions, type) {
 }
 
 async function fullHtmlDocument(type) {
+  if (selectedProblem()?.id === "MOS-JIB-001") window.JibCraneModel.evaluate(selectedProblem(), currentValues);
   if (selectedProblem()?.slug === "suspended-equipment-platform") window.PlatformModel.assertPacket(window.PlatformModel.evaluate(selectedProblem(), currentValues));
   if (selectedProblem()?.slug === "hydraulic-press-punching-shear") window.PressFixtureModel.evaluate(selectedProblem(), currentValues);
   const problem = selectedProblem();
@@ -3606,6 +3618,9 @@ async function waitForDocumentImages(targetDocument) {
 }
 
 async function printDocument(type) {
+  if (selectedProblem()?.id === "MOS-JIB-001") {
+    try { window.JibCraneModel.evaluate(selectedProblem(), currentValues); } catch { renderPreview(); return; }
+  }
   if (selectedProblem()?.slug === "suspended-equipment-platform") {
     try { window.PlatformModel.assertPacket(window.PlatformModel.evaluate(selectedProblem(), currentValues)); } catch { renderPreview(); return; }
   }

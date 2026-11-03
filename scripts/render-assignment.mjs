@@ -5,6 +5,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import PressFixtureModel from "./press-fixture-model.js";
 import PlatformModel from "./platform-model.js";
 import PlatformPacket from "./platform-packet.js";
+import JibCraneModel from "./jib-crane-model.js";
+import JibCranePacket from "./jib-crane-packet.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const catalogPath = path.join(root, "data", "problem-catalog.json");
@@ -134,6 +136,7 @@ function formatDerived(value, digits = 0) {
 }
 
 function variableMap(problem, currentValues) {
+  if (JibCraneModel.isJib(problem)) return JibCranePacket.values(problem, currentValues);
   if (PlatformModel.isPlatform(problem)) return PlatformPacket.values(problem, currentValues);
   const values = {};
   problem.variables.forEach((variable) => {
@@ -3327,6 +3330,9 @@ function renderPressBody(problem,variant,type){
 }
 
 function renderBody(problem, variant, type) {
+  if (JibCraneModel.isJib(problem)) return JibCranePacket.renderHtml(problem, variant?.variables || {}, type, {
+    questions: selectedQuestions(problem, variant, type), imageUrl: src => pathToFileURL(path.join(root, src)).href
+  });
   if (PlatformModel.isPlatform(problem)) return PlatformPacket.renderHtml(problem, variant?.variables || {}, type, {
     questions: selectedQuestions(problem, variant, type),
     imageUrl: src => pathToFileURL(path.join(root, src)).href
@@ -3399,6 +3405,10 @@ function renderPressQmd(problem,variant,type,outDir){
 }
 
 function qmdDocument(problem, variant, type, outDir) {
+  if (JibCraneModel.isJib(problem)) return JibCranePacket.renderQmd(problem, variant?.variables || {}, type, {
+    questions: selectedQuestions(problem, variant, type),
+    imageUrl: src => path.relative(outDir, path.join(root, src)).split(path.sep).join("/")
+  });
   if (PlatformModel.isPlatform(problem)) return PlatformPacket.renderQmd(problem, variant?.variables || {}, type, {
     questions: selectedQuestions(problem, variant, type),
     imageUrl: src => path.relative(outDir, path.join(root, src)).split(path.sep).join("/"),
@@ -3520,6 +3530,7 @@ if (variantKey && !variant) {
   throw new Error(`Variant not found for ${problem.slug}: ${variantKey}`);
 }
 
+if (JibCraneModel.isJib(problem)) JibCraneModel.evaluate(problem, variant?.variables || {});
 if (PressFixtureModel.isPress(problem)) PressFixtureModel.evaluate(problem, variant?.variables || {});
 
 if (PlatformModel.isPlatform(problem)) PlatformModel.assertPacket(PlatformModel.evaluate(problem, variant?.variables || {}));
@@ -3544,7 +3555,7 @@ if (format === "html") {
     console.log(path.relative(root, qmdPath));
   } else {
     // Use bundled Typst for the press/platform packages; other PDF engines remain unchanged.
-    const quartoFormat = (PressFixtureModel.isPress(problem) || PlatformModel.isPlatform(problem)) && format === "pdf" ? "typst" : format;
+    const quartoFormat = (PressFixtureModel.isPress(problem) || PlatformModel.isPlatform(problem) || JibCraneModel.isJib(problem)) && format === "pdf" ? "typst" : format;
     const quartoArgs = ["render", qmdPath, "--to", quartoFormat];
     if (PlatformModel.isPlatform(problem)) quartoArgs.push("--no-clean");
     const result = spawnSync("quarto", quartoArgs, {

@@ -253,11 +253,13 @@
     "id": "MOS-JIB-001",
     "slug": "jib-crane-battery-pack",
     "title": "Wall-Mounted Swing-Jib Crane for Battery-Pack Handling",
-    "status": "OK",
+    "status": "Review",
     "variables": 23,
     "questions": 12,
     "variants": 3,
-    "warnings": []
+    "warnings": [
+      "Instructional nominal assessment only: brace section axes, physical compression resistance, quantitative model validity and industrial provenance remain unvalidated. Formal Euler and the fixed-cantilever comparison are excluded from acceptance."
+    ]
   },
   {
     "id": "MOS-LADDER-003",

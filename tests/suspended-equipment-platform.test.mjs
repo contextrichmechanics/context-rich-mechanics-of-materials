@@ -424,7 +424,7 @@ test('catalog invalid defaults/variants and CLI pre-output rejection',()=>{
  fs.mkdirSync(scratchParent,{recursive:true});
  const scratch=fs.mkdtempSync(path.join(scratchParent,'config-test-'));
  fs.mkdirSync(path.join(scratch,'scripts'));
- for(const file of ['build-catalog.mjs','render-assignment.mjs','press-fixture-model.js','platform-model.js','platform-packet.js'])fs.copyFileSync(path.join(root,'scripts',file),path.join(scratch,'scripts',file));
+ for(const file of ['build-catalog.mjs','render-assignment.mjs','press-fixture-model.js','platform-model.js','platform-packet.js','jib-crane-model.js','jib-crane-packet.js'])fs.copyFileSync(path.join(root,'scripts',file),path.join(scratch,'scripts',file));
  const pkg=path.join(scratch,'problems',problem.slug);fs.mkdirSync(path.join(pkg,'assets'),{recursive:true});fs.mkdirSync(path.join(pkg,'variants'));
  const meta=JSON.parse(read('problems/'+problem.slug+'/problem.json'));
  const write=(p,o)=>fs.writeFileSync(p,JSON.stringify(o));

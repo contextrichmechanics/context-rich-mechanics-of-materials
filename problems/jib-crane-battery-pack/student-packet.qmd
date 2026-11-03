@@ -1,26 +1,15 @@
 ---
-title: "Student Packet — Wall-Mounted Swing-Jib Crane"
-subtitle: "Battery-Pack Handling on an Automotive Assembly Line"
+title: "Student Packet - Wall-Mounted Swing-Jib Crane"
+subtitle: "Battery-pack handling and engineering idealization"
 author: "Context-Rich Mechanics of Materials Library"
+jib-audience: student
+filters:
+  - ../../scripts/jib-crane-direct.lua
 format:
   html:
+    html-math-method: mathml
     toc: true
-    number-sections: true
+  docx: default
+  typst:
+    fontsize: 10.5pt
 ---
-
-{{< include _student-problem.qmd >}}
-
-```{=html}
-<div id="jib-crane-student-questions"></div>
-<script src="../../data/problem-catalog.js"></script>
-<script src="../../scripts/packet-renderer.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  window.renderProblemPacket({
-    slug: "jib-crane-battery-pack",
-    targetId: "jib-crane-student-questions",
-    type: "student"
-  });
-});
-</script>
-```

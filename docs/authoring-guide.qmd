@@ -375,3 +375,12 @@ The 61-key registry includes signed rotations, numerical zero/tie interpretation
 Initial-input errors block numerical answers and exports. A gross predicted finite-segment inconsistency or an exceeded configured approximation screen is a distinct model warning and blocks standard exports. With both strain/rotation limits null, a normal packet is explicitly unassessed; passing the gross check is not proof of small-deformation validity, material strength or service fitness. No strain, rotation, strength or serviceability threshold is inferred from modulus. Update source first, then regenerate catalog/health artifacts and run platform plus unchanged hydraulic regression tests.
 
 The preserved platform context file contains JPEG bytes despite its historical PNG filename. `nativeContextImage` selects the byte-identical `.jpg` delivery copy for native output; retain the original context and historical instructor files unchanged. The new SVG/PNG diagram pairs are independent student/instructor assets and use symbolic dimensions alongside a current-input key.
+
+
+## Jib-crane common-model packets
+
+MOS-JIB-001 retains 23 input keys. Lb is the horizontal attachment distance a; diagonal brace length and wall spacing are derived. The exact-ID numerical helper computes both complete signed horizontal force/couple cases and the actual idealized braced tip movement. Only five scoped nominal checks enter its unrounded ranking. Formal Euler, K_brace and N_b are sensitivity/diagnostic quantities; compression resistance and section axes remain unvalidated. The fixed-root P-only cantilever is a changed-support comparison.
+
+Keep Q1-Q6, I1, the unsolved authoritative common model with the supplied symbolic displacement method, then M1-M5. Core/exam retain I1 and M1-M5. Direct pages render native Markdown through the same helper, without serializing the instructor answer catalog into student metadata. Completed FBDs, substituted answers and interpretation outputs are instructor-only.
+
+Explicit invalid values never inherit omitted overrides. Validate all 23 inputs, discrete shear planes and 0 < a <= L; block answers/exports and clear stale previews on invalid edits. Equal ratios are labeled co-governing within numerical tolerance without relaxing the raw criterion boundary. Preserve publication status separately from engineering approval; Published is not a validated capacity.

@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import PressFixtureModel from "./press-fixture-model.js";
 import PlatformModel from "./platform-model.js";
+import JibCraneModel from "./jib-crane-model.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const problemsDir = path.join(root, "problems");
@@ -194,7 +195,7 @@ const catalog = problemPackages().flatMap((slug) => {
 
   const questionIds = new Set(questions.map((question) => question.id));
   const variants = readVariants(packageDir, slug, variableKeys, questionIds);
-  if (problem.packetLayout !== undefined && problem.packetLayout !== "geometry-first" && !(PlatformModel.isPlatform(problem) && problem.packetLayout === "platform-common-model")) throw new Error(`${slug} has an unknown packetLayout`);
+  if (problem.packetLayout !== undefined && problem.packetLayout !== "geometry-first" && !(PlatformModel.isPlatform(problem) && problem.packetLayout === "platform-common-model") && !(JibCraneModel.isJib(problem) && problem.packetLayout === "jib-common-model")) throw new Error(`${slug} has an unknown packetLayout`);
   if (PressFixtureModel.isPress(problem)) {
     if (problem.packetLayout !== "geometry-first") throw new Error(`${slug} requires geometry-first layout`);
     if (problem.showIdealizedImageInStudentPacket === true) throw new Error(`${slug} instructor figure must remain instructor-only`);
@@ -215,6 +216,18 @@ const catalog = problemPackages().flatMap((slug) => {
     const modelProblem = { ...problem, variables };
     PlatformModel.assertPacket(PlatformModel.evaluate(modelProblem));
     variants.forEach(variant => PlatformModel.assertPacket(PlatformModel.evaluate(modelProblem, variant.variables || {})));
+  }
+  if (JibCraneModel.isJib(problem)) {
+    if (problem.packetLayout !== "jib-common-model" || problem.showIdealizedImageInStudentPacket !== false) throw new Error(slug + " requires the jib common-model layout and instructor-only FBDs");
+    if (JSON.stringify([...(problem.derivedPlaceholders || [])].sort()) !== JSON.stringify([...JibCraneModel.registry].sort())) throw new Error(slug + " requires the exact 104-key jib registry");
+    requireFields(problem, ["commonModelStatement", "commonModelAssumptions", "contextImageNote", "idealizedImageCaption"], problemPath);
+    if (!Array.isArray(problem.commonModelAssumptions) || problem.commonModelAssumptions.length !== 12) throw new Error(slug + " requires twelve explicit common-model assumptions");
+    if (supplementaryImages.filter(i => i.role === "common-model-geometry").length !== 1) throw new Error(slug + " requires one unsolved authoritative common-model image");
+    const studentFields = [problem.problemStatement, problem.engineeringGoal, problem.commonModelStatement, ...problem.commonModelAssumptions, ...questions.map(q => q.student), ...supplementaryImages.flatMap(i => [i.alt, i.caption])];
+    if (studentFields.some(t => placeholders(t).some(k => (problem.derivedPlaceholders || []).includes(k)))) throw new Error(slug + " student fields may not contain solved output placeholders");
+    const modelProblem = { ...problem, variables };
+    JibCraneModel.evaluate(modelProblem);
+    variants.forEach(v => JibCraneModel.evaluate(modelProblem, v.variables || {}));
   }
   const duplicateVariantIds = duplicateValues(variants.map((variant) => variant.id));
   if (duplicateVariantIds.length > 0) {
@@ -274,6 +287,7 @@ const json = `${JSON.stringify(catalog, null, 2)}\n`;
 const health = catalog.map((problem) => {
   const warnings = [];
   if (PlatformModel.isPlatform(problem) && PlatformModel.evaluate(problem).status === "unassessed") warnings.push("Quantitative strain/rotation screening is unassessed; values and axial stiffness are instructional assignments, not documented industrial specifications.");
+  if (JibCraneModel.isJib(problem)) warnings.push("Instructional nominal assessment only: brace section axes, physical compression resistance, quantitative model validity and industrial provenance remain unvalidated. Formal Euler and the fixed-cantilever comparison are excluded from acceptance.");
   const questionsWithoutTags = problem.questions.filter((question) => !Array.isArray(question.tags) || question.tags.length === 0);
   const questionsWithoutType = problem.questions.filter((question) => !question.type);
   const questionsWithoutDifficulty = problem.questions.filter((question) => !question.difficulty);

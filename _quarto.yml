@@ -9,6 +9,8 @@ project:
     - scripts/press-fixture-model.js
     - scripts/platform-model.js
     - scripts/platform-packet.js
+    - scripts/jib-crane-model.js
+    - scripts/jib-crane-packet.js
     - scripts/packet-renderer.js
     - "problems/*/assets/*"
 

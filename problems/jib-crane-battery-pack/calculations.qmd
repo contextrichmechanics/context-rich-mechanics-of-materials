@@ -1,53 +1,7 @@
 ---
-title: "Calculations — Wall-Mounted Swing-Jib Crane"
-format:
-  html:
-    code-fold: true
-    toc: true
-  pdf:
-    documentclass: scrartcl
-    toc: true
-  ipynb: default
-jupyter: python3
-execute:
-  echo: true
-  warning: false
+title: "Calculations - Wall-Mounted Swing-Jib Crane"
 ---
 
+The authoritative implementation is [jib-crane-model.js](../../scripts/jib-crane-model.js). It validates all 23 effective inputs and computes both complete signed cases, braced movement and five scoped nominal criteria. All routes use this helper. The [instructor guide](instructor-guide.html) provides its current parameterized solution.
 
-# Reference 2D Structural Model
-
-The following idealized side view defines the geometry and variables used in the numerical analysis.
-
-![Two-dimensional idealized swing-jib crane model used for calculations.](assets/jib-crane-industry-2d.png){fig-alt="Idealized swing-jib crane showing geometric variables, wall supports, boom, brace, trolley, and battery-pack mass." width=100%}
-
-# Purpose
-
-This notebook is reserved for calculations added after the conceptual questions are approved.
-
-Potential calculations include:
-
-- design-load estimation;
-- dynamic amplification;
-- support reactions;
-- brace axial force;
-- boom bending stress;
-- pin shear and bearing stress;
-- brace buckling;
-- boom deflection;
-- sensitivity studies.
-
-```{python}
-#| label: setup
-import math
-```
-
-```{python}
-#| label: preliminary-load-model
-
-# Replace these placeholders with approved scenario values.
-battery_weight = None
-fixture_weight = None
-hoist_weight = None
-dynamic_factor = None
-```
+Formal Euler references and the root-fixed P-only comparison are excluded from the braced ranking. Assigned section axes and physical compression resistance remain unvalidated. This page has no separate unfinished numerical implementation.
