@@ -355,6 +355,13 @@
   color: #6c757d;
   font-size: 0.84rem;
 }
+/* Keep the jib's native display equations scrollable without changing print layout. */
+@media screen {
+  .jib-common-model p:has(> math[display="block"]) {
+    overflow-x: auto;
+  }
+}
+
 .health-table-wrap {
   overflow-x: auto;
 }
