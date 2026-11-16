@@ -4,19 +4,19 @@
 
 ### Engineering Context
 
-Suspended work platforms are used in construction and maintenance operations to provide temporary elevated access or to position workers, tools, and equipment. During lifting or suspension, the platform load is transferred through cables, slings, or similar tensile members to an overhead lifting or supporting system.
+<p>Suspended platforms transfer supported loads through tensile suspension members to an overhead lifting or supporting system. Their position and orientation can change as those members extend under load. Load location, suspension geometry and axial stiffness can affect both vertical movement and tilt.</p><p>Use the industry image to interpret the physical system and develop your own idealization in Q1–Q10. A common, unsolved model and its assigned numerical data will then be supplied for M1–M11 so that the quantitative work uses a shared geometry. The image establishes context; it does not establish the assigned dimensions, material properties or load rating.</p>
 
-If the supported load is not centered, the suspension members may carry different tensile forces. Because these members deform elastically, unequal elongation can cause the platform to move vertically and tilt. Engineers therefore need to estimate how load position and suspension-member stiffness affect the position and orientation of the suspended platform.
+![Suspended-platform physical context](assets/platform-industry-context.png){fig-alt="Suspended-platform physical context; numerical dimensions are supplied later." width=72%}
 
-![Suspended work platforms supported by lifting slings during construction or maintenance operations.](assets/platform-industry-context.png){fig-alt="Suspended work platforms supported by lifting slings during construction or maintenance operations." width=72%}
+*Context image only; assigned dimensions, properties and load are not measurements or documented specifications of the illustrated platform.*
 
 ### Main Engineering Goal
 
-Determine how elastic elongation of the suspension members affects the vertical displacement and tilt of the suspended platform under an eccentric load, and identify which suspension member has the greatest influence on the motion.
+<p>Estimate load-point displacement and the rotations of the two members in the supplied common model. Explain how each wire contributes to load-point displacement and make an engineering recommendation limited to the assigned first-order model and its assumptions.</p>
 
 ### System Components
 
 - suspended platform;
-- lifting slings or suspension cables;
+- tensile suspension members;
 - overhead lifting or support system;
 - supported load or payload.

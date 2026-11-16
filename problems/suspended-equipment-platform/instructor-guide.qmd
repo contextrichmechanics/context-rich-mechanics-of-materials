@@ -21,6 +21,8 @@ These answers are representative. Award credit for physical-system interpretatio
 ```{=html}
 <div id="platform-instructor-questions"></div>
 <script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/platform-model.js"></script>
+<script src="../../scripts/platform-packet.js"></script>
 <script src="../../scripts/packet-renderer.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -35,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 # Scope of the Base Problem
 
-The industry image establishes the general context of a suspended work platform supported by tensile lifting members. The instructor reference image is a specific equivalent model for equilibrium, axial-deformation, displacement-compatibility, and tilt analysis. Rigid members are assumed not to deform; suspension members are modeled as straight, vertical, linearly elastic axial members. Self-weight, connector flexibility, local contact effects, cable sag, large rotation, dynamics, fatigue, and strength checks are outside the base problem.
+The unsolved common model and all ten assigned inputs appear after Q10. Q8 remains an independent idealization task; completed free bodies and representative answers are instructor-only. The endpoint-supported rigid members have A below H and B below C. P is an assigned downward load increment on the ideal unstrained, massless reference model. All suspension members have the assigned axial EA; this is not documented rope/chain assembly stiffness.
+
+Use signed rotations, numerical zero/tie rules and weighted wire-elongation contributions to the load-point displacement. Recompute both tilts for load relocation or selective compliance changes. The null strain/rotation screens leave a normal instructional packet explicitly unassessed; a gross finite-segment inconsistency blocks ordinary answer generation and export. Passing that gross check does not establish small-deformation validity or service fitness.
 
 # Supplemental Assessment Structure
 

@@ -2,7 +2,7 @@
   {
     "key": "P",
     "symbol": "P",
-    "label": "Applied compressive load",
+    "label": "Prescribed quasi-static compressive load",
     "value": 40,
     "unit": "kN",
     "min": 1,
@@ -12,7 +12,7 @@
   {
     "key": "d",
     "symbol": "d",
-    "label": "Ram / shaft diameter",
+    "label": "Diameter of flat circular ram face",
     "value": 50,
     "unit": "mm",
     "min": 5,
@@ -32,7 +32,7 @@
   {
     "key": "s",
     "symbol": "s",
-    "label": "Support opening distance",
+    "label": "Clear opening between block inner faces",
     "value": 60,
     "unit": "mm",
     "min": 10,
@@ -42,7 +42,7 @@
   {
     "key": "b",
     "symbol": "b",
-    "label": "Overall plate/support width in idealized view",
+    "label": "Overall plate extent in the front-view span direction",
     "value": 120,
     "unit": "mm",
     "min": 20,
@@ -52,7 +52,7 @@
   {
     "key": "tau_allow",
     "symbol": "tau_allow",
-    "label": "Optional allowable punching shear stress",
+    "label": "Illustrative allowable criterion for nominal circular shear demand",
     "value": 80,
     "unit": "MPa",
     "min": 5,
@@ -62,7 +62,7 @@
   {
     "key": "sigma_bearing_allow",
     "symbol": "sigma_bearing_allow",
-    "label": "Optional allowable bearing stress",
+    "label": "Illustrative allowable criterion for mean ram-face contact pressure",
     "value": 120,
     "unit": "MPa",
     "min": 5,

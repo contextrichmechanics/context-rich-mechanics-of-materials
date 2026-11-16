@@ -26,5 +26,13 @@
     "tau_allow": 80,
     "bearing_allow": 150
   },
-  "selectedQuestions": ["idealization", "q7", "q8", "q9", "q10", "q11"]
+  "selectedQuestions": [
+    "idealization",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11"
+  ],
+  "description": "Preserved assigned inputs and task selection; I1 precedes the authoritative common model and M1-M5. Both signed cases use braced movement. Euler is formal only."
 }

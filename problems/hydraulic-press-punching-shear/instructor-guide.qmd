@@ -10,13 +10,14 @@ format:
 
 # Purpose
 
-These answers are representative, not the only acceptable responses. Award credit for correct stress-surface identification, correct area definitions, consistent N/mm units, and a recommendation that does not overclaim fixture safety without material allowables.
+These representative answers assess a hypothetical cylindrical wall and the full circular contact disk. Award correct surface definitions, equilibrium, units, allowable reserve/utilization, and limited conclusions. The seven values are provisional instructional assumptions. Full circular contact, a free lower core face, and sufficient plate/block depth are stipulated; real bending, indentation, contact redistribution, and complete fixture capacity remain unverified. Do not grade the former two-plane area or unsupported strength factors of safety as correct.
 
 # Generated Question Set and Solutions
 
 ```{=html}
 <div id="press-instructor-questions"></div>
 <script src="../../data/problem-catalog.js"></script>
+<script src="../../scripts/press-fixture-model.js"></script>
 <script src="../../scripts/packet-renderer.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {

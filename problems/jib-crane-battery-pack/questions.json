@@ -1,152 +1,250 @@
 [
   {
     "id": "q1",
-    "title": "Design, Manufacturing, and Commercialization Considerations",
+    "title": "Design, manufacturing and operational requirements",
     "selected": true,
-    "tags": ["design", "safety", "manufacturing"],
+    "tags": [
+      "design",
+      "safety",
+      "manufacturing"
+    ],
     "type": "conceptual",
     "difficulty": "introductory",
-    "learningObjectives": ["Identify design requirements", "Distinguish safety and commercial constraints"],
-    "gradingNotes": "<p>Look for reasoning tied to the crane's actual operating environment, not only a list of generic design words.</p>",
-    "student": "<p>The proposed wall-mounted swing-jib crane will be used to handle a battery pack with mass <strong>{{M}} {{M_unit}}</strong>. The idealized boom length is <strong>{{L}} {{L_unit}}</strong>.</p><p>Identify the functional, safety, manufacturing, installation, maintenance, and commercial considerations that should influence the crane design. Conclude by naming the three most important requirements that must be satisfied before production use.</p>",
-    "instructor": "<p>Strong answers should connect the crane to rated lifting capacity, reach, swing range, trolley travel, positioning accuracy, workspace limits, certified lifting hardware, operator safety, inspection, downtime, cost, and product liability.</p><p>The three most defensible governing requirements are safe support of rated and dynamically amplified loads, acceptable stiffness/positioning accuracy, and adequate reliability or fatigue life under repeated production cycles.</p>",
-    "section": "context"
+    "learningObjectives": [
+      "Identify design requirements",
+      "Distinguish safety and commercial constraints"
+    ],
+    "student": "<p>Assigned payload M = {{M}} {{M_unit}}; assigned reach L = {{L}} {{L_unit}}.</p><p>The proposed crane handles battery packs of assigned mass M and has\nassigned reach L. Identify the functional, safety, manufacturing,\ninstallation, maintenance and commercial considerations that should\ninfluence its design. Name and justify the three requirements you\nconsider most important before production use. Distinguish requirements\nfrom evidence that those requirements have actually been met.</p>",
+    "instructor": "<p>Relevant considerations include payload/rated capacity, reach and\nswing range, trolley travel, workspace/clearance, positioning accuracy,\nrepetitive duty, inspection, maintainability, traceable lifting\nhardware, wall/support adequacy, manufacture, installation, downtime and\ncost. A defensible three-part priority is load-path/strength/stability\nadequacy, stiffness and positioning, and reliability under the specified\nduty. Equivalent priorities supported by the operation are acceptable.\nListing requirements does not prove compliance; no certification or\nactual lifting capacity follows from the exercise.</p>",
+    "section": "context",
+    "displayNumber": "Q1"
   },
   {
     "id": "q2",
-    "title": "Material Selection",
+    "title": "Material selection and property evidence",
     "selected": true,
-    "tags": ["materials", "fatigue", "manufacturing"],
+    "tags": [
+      "materials",
+      "fatigue",
+      "manufacturing"
+    ],
     "type": "conceptual",
     "difficulty": "introductory",
-    "learningObjectives": ["Select materials by component function", "Compare stiffness, strength, fatigue, and manufacturability"],
-    "student": "<p>Recommend appropriate material classes for the boom, brace, pins, mounting plates, bolts, anchors, chain, hook, and hoist hardware. Explain which material properties matter most for each component.</p><p>Your answer should distinguish between stiffness, yielding, ultimate failure, fatigue resistance, toughness, wear resistance, weldability, machinability, cost, and availability.</p>",
-    "instructor": "<p>Representative answers should usually favor structural steel for the boom and brace because stiffness, weldability, availability, and cost matter. Pins may require higher-strength or heat-treated steel because shear, bending, bearing, wear, and fatigue are important.</p><p>Hooks, chains, hoists, and below-the-hook lifting fixtures should be selected as rated and traceable lifting components, not merely sized from nominal material strength.</p>",
-    "section": "context"
+    "learningObjectives": [
+      "Select materials by component function",
+      "Compare stiffness, strength, fatigue, and manufacturability"
+    ],
+    "student": "<p>Recommend appropriate material classes for the boom, brace, pins,\nmounting plates, bolts, anchors, chain, hook and hoist hardware. Explain\nwhich properties matter for each. Distinguish stiffness, yielding,\nultimate failure, fatigue resistance, toughness, wear, weldability,\nmachinability, cost and availability. Identify which selected properties\nor component ratings would require documented evidence.</p>",
+    "instructor": "<p>Structural-steel classes are plausible candidates for boom/brace\nstiffness, fabrication and cost, subject to section and grade selection.\nPin materials/heat treatment require consideration of bending, shear,\nbearing, wear, fatigue and toughness. Welded plates, bolts and wall\nanchors need compatible material/connection and substrate evidence.\nHooks, chains and hoists require rated, traceable components; nominal\nmaterial stress is not a substitute for a component rating. E = {{E}} MPa and sigma_y = {{sigma_y}} MPa are assigned member references, not an identified\nsteel grade or pin specification. Do not infer ultimate strength,\nfatigue resistance, proportional limit or allowables from those two\nnumbers.</p>",
+    "section": "context",
+    "displayNumber": "Q2"
   },
   {
     "id": "q3",
-    "title": "Critical Geometrical Parameters",
+    "title": "Geometry and load path",
     "selected": true,
-    "tags": ["geometry", "load path", "connections"],
+    "tags": [
+      "geometry",
+      "load path",
+      "connections"
+    ],
     "type": "modeling",
     "difficulty": "introductory to intermediate",
-    "learningObjectives": ["Classify system, member, and connection geometry", "Explain how geometry affects load transfer"],
-    "student": "<p>The proposed geometry uses boom length <strong>{{L}} {{L_unit}}</strong>, brace attachment distance <strong>{{Lb}} {{Lb_unit}}</strong>, and brace angle <strong>{{theta}} {{theta_unit}}</strong>.</p><p>Classify the geometrical parameters that most strongly affect load transfer, stress, deflection, stability, fatigue life, and connection performance as system-level, member-level, or connection-level geometry.</p>",
-    "instructor": "<p>System-level dimensions include boom length, trolley/load position, wall-support spacing, brace angle, swing angle, and hook height. Member-level dimensions include area, second moment of area, section modulus, wall thickness, unsupported brace length, radius of gyration, and effective length. Connection-level dimensions include pin diameter, hole diameter, plate thickness, weld size, edge distance, bolt spacing, and eccentricity.</p><p>Increasing load position along the boom increases the wall moment and generally increases boom bending, connection force, and deflection.</p>",
-    "section": "context"
+    "learningObjectives": [
+      "Classify system, member, and connection geometry",
+      "Explain how geometry affects load transfer"
+    ],
+    "student": "<p>Classify the system, member and connection geometry that influences\nload transfer, stress, displacement, stability, fatigue and connection\nbehavior. Distinguish horizontal boom reach L, horizontal attachment\ndistance a, brace angle theta, wall-anchor spacing h and diagonal brace\nlength ell_b. Explain why a trolley coordinate on a fixed boom is\ndifferent from changing L. Identify geometric information that the\ncontext illustration does not reliably supply.</p>",
+    "instructor": "<p>System geometry includes reach, trolley position, support\ncoordinates, attachment distance, brace angle, wall spacing, swing and\nhook position. In the later common model, h = a tan(theta), ell_b =\na/cos(theta); a = {{Lb}} m is horizontal, not diagonal. Section geometry\nincludes A, I, S, axes, thicknesses, unsupported lengths and radii;\nconnection geometry includes pin/hole diameters, lug thickness, shear\nplanes, edge distances, bolt spacing, eccentricity and weld details.\nLoad position changes response according to the selected restraints and\nits interval; do not assume every bending extreme increases\nmonotonically for every inboard load position. The numerical exercise\nfixes the payload at full reach and does not provide an independent\ntrolley-travel coordinate. The historical image labels are not numerical\ngivens.</p>",
+    "section": "context",
+    "displayNumber": "Q3"
   },
   {
     "id": "q4",
-    "title": "Loading Identification and Design Load",
+    "title": "Loading and the limits of the assigned case",
     "selected": true,
-    "tags": ["loading", "estimation", "dynamics"],
+    "tags": [
+      "loading",
+      "estimation",
+      "dynamics"
+    ],
     "type": "estimation",
     "difficulty": "intermediate",
-    "learningObjectives": ["Estimate design loads", "Classify static, dynamic, impact, cyclic, and accidental loads"],
-    "commonMistakes": "<p>Common mistakes include using only battery dead weight, ignoring fixture/hoist weight, and treating dynamic amplification as a universal constant.</p>",
-    "student": "<p>The battery pack mass is <strong>{{M}} {{M_unit}}</strong> and the horizontal service load is estimated as <strong>{{H}} {{H_unit}}</strong>. Develop a preliminary loading model for the crane.</p><p>Classify each relevant load as static, quasi-static, dynamic, impact, cyclic, or accidental. Clearly distinguish nominal service load, maximum expected service load, maximum credible load, and factored design load.</p>",
-    "instructor": "<p>The battery weight is <em>W</em> = <em>Mg</em>, so this variant has <em>W</em> = {{weight_N}} N before fixture, hoist, trolley, self-weight, dynamic amplification, or overload factors are added.</p><p>Good answers include battery weight, fixture weight, hoist/trolley weight, boom/brace self-weight, acceleration, braking, swing, impact, overload, side pull, and repeated operating cycles. A reasonable preliminary design load form is <em>P</em><sub>design</sub> = &gamma;<sub>d</sub>(<em>W</em><sub>battery</sub> + <em>W</em><sub>fixture</sub> + <em>W</em><sub>hoist</sub> + <em>W</em><sub>trolley</sub>) + <em>W</em><sub>structure</sub>, with a separate horizontal load case using <em>H</em> = {{H}} {{H_unit}}.</p>",
-    "section": "context"
+    "learningObjectives": [
+      "Estimate design loads",
+      "Classify static, dynamic, impact, cyclic, and accidental loads"
+    ],
+    "student": "<p>Develop a preliminary loading model for the real handling operation.\nIdentify static, quasi-static, dynamic, impact, cyclic and accidental\nactions. Distinguish nominal service load, maximum expected service\nload, maximum credible load and a factored or amplified instructional\ncase. Identify additional masses and operating information required.\nExplain how the later assigned battery-only numerical case differs from\na complete operational loading model.</p>",
+    "instructor": "<p>Include battery, lifting fixture, hoist/trolley and structural\nweights; acceleration/braking, swing/side pull, impact/overload and duty\nhistory require operational evidence. A project load expression may\ninclude those known or researched masses with explicitly justified\nfactors; they have not been assigned here. The later common case uses\nonly W = Mg = {{weight_N}} N and P = gamma_d Mg = {{P_design_N}} N at full reach,\nwith the prescribed horizontal force/couple pair. The {{gamma_d}} amplification\nand H = {{H}} N are instructional assignments, not validated worst-case\noperating loads. Missing weights are explicitly omitted in that\ncalculation, not assumed physically absent. Do not mix an estimated\nproject mass into the fixed representative answer without defining a new\ninput case.</p>",
+    "section": "context",
+    "displayNumber": "Q4"
   },
   {
     "id": "q5",
-    "title": "Critical Locations and Failure Modes",
+    "title": "Critical locations and omitted modes",
     "selected": true,
-    "tags": ["failure modes", "stiffness", "fatigue"],
+    "tags": [
+      "failure modes",
+      "stiffness",
+      "fatigue"
+    ],
     "type": "conceptual",
     "difficulty": "intermediate",
-    "learningObjectives": ["Identify critical locations", "Separate strength, stiffness, stability, and fatigue concerns"],
-    "student": "<p>Identify the locations most likely to control the design of the crane when the battery mass is <strong>{{M}} {{M_unit}}</strong> and the load may act near the full boom length <strong>{{L}} {{L_unit}}</strong>.</p><p>Separate your discussion into strength-critical, stiffness-critical, stability-critical, and fatigue-critical locations.</p>",
-    "instructor": "<p>Likely strength-critical locations include the boom near the wall bracket, boom-to-brace connection, brace-to-wall connection, pins, pin holes, mounting plates, weld toes, wall anchors, trolley attachment region, hook, chain, and lifting fixture.</p><p>Stability checks should emphasize the brace in compression and slender/thin-walled details. Serviceability checks should emphasize boom-tip displacement, wall bracket rotation, joint clearance, trolley drift, and positioning accuracy. Fatigue checks should emphasize weld toes, holes, repeated-contact regions, and connection details.</p>",
-    "section": "context"
+    "learningObjectives": [
+      "Identify critical locations",
+      "Separate strength, stiffness, stability, and fatigue concerns"
+    ],
+    "student": "<p>Identify potentially critical locations for strength, stiffness,\nstability and fatigue in the physical crane. Distinguish local\nwall/connection effects from the internal forces of a chosen boom model.\nExplain why a critical section or member cannot be selected solely from\nappearance or one force magnitude.</p>",
+    "instructor": "<p>Potential locations include boom-to-brace and wall joints, brace and\nend connections, pins/lugs, anchors/welds, trolley contact, hoist, hook,\nchain and fixture. Brace compression and thin/slender members require\nstability investigation; motion includes member, support and connection\nflexibility; cyclic concentrations occur at holes/welds/contact details.\nIn the supplied pin-root model A has no reaction couple, although actual\nwall/anchor forces remain important. Bending extrema must be determined\nfrom its diagram: rightward maximum at {{right_moment_locations}} and leftward maximum at {{left_moment_locations}} for the current inputs; D or tied locations can govern under changed couples. No complete failure-mode ranking follows\nfrom these nominal calculations alone.</p>",
+    "section": "context",
+    "displayNumber": "Q5"
   },
   {
     "id": "q6",
-    "title": "Numerical Acceptance Criteria",
+    "title": "Assessment criteria and missing evidence",
     "selected": true,
-    "tags": ["criteria", "safety factor", "serviceability"],
+    "tags": [
+      "criteria",
+      "safety factor",
+      "serviceability"
+    ],
     "type": "calculation planning",
     "difficulty": "intermediate",
-    "learningObjectives": ["Define acceptance criteria", "Connect calculated responses to allowable limits"],
-    "student": "<p>Define numerical criteria that could be used to decide whether the crane is acceptable for repeated service. Include yielding, ultimate failure, pin shear, bearing, buckling, fatigue, deflection, proof-load, and rated-load requirements.</p>",
-    "instructor": "<p>Responses should compare calculated stresses, forces, deflections, rotations, slenderness, and fatigue demand against allowable or limiting values with stated factors of safety or design margins.</p><p>Ultimate strength alone is insufficient because the crane is reusable, operator-facing lifting equipment. Yielding, fatigue, buckling, deformation, joint looseness, rated components, and serviceability can govern even when ultimate fracture is not imminent.</p>",
-    "section": "context"
+    "learningObjectives": [
+      "Define acceptance criteria",
+      "Connect calculated responses to allowable limits"
+    ],
+    "student": "<p>Identify numerical criteria and evidence that would be needed to\nassess repeated service, including member yielding, ultimate failure,\nconnection shear/bearing, stability, fatigue, motion, proof-load and\nrated-load requirements. Distinguish supplied instructional criteria\nfrom criteria that cannot yet be evaluated. Do not invent an allowable,\nmaterial grade, duty life or code requirement.</p>",
+    "instructor": "<p>The later numerical exercise can compare nominal bending and brace\naxial stress with the assigned sigma_y/N_y, average pin shear with the\nassigned {{tau_allow}} MPa, main-lug bearing with the assigned {{bearing_allow}} MPa, and\nabsolute braced tip movement with the assigned {{delta_allow}} mm. These are scoped\ninstructional criteria. No validated compression resistance, combined\nboom stress, fatigue criterion/history, ultimate/net-section resistance,\nanchor/wall capacity, proof-test procedure or hardware rating is\nsupplied. The correct response for these missing checks is the required\nevidence and method to establish it, not an invented number. Met nominal\ncriteria do not prove repeated-service safety.</p>",
+    "section": "context",
+    "displayNumber": "Q6"
   },
   {
     "id": "idealization",
-    "title": "Structural Idealization and Free-Body Diagram",
+    "title": "Independent idealization and free-body diagrams",
     "selected": true,
-    "tags": ["idealization", "fbd", "modeling"],
+    "tags": [
+      "idealization",
+      "fbd",
+      "modeling"
+    ],
     "type": "fbd/modeling",
     "difficulty": "intermediate",
-    "learningObjectives": ["Create a two-dimensional idealization", "Draw complete free-body diagrams"],
-    "gradingNotes": "<p>Credit should depend on whether the dominant load path is preserved and assumptions are stated clearly.</p>",
-    "student": "<p>Convert the real crane into a simplified two-dimensional structural model using the symbolic dimensions <strong>L = {{L}} {{L_unit}}</strong>, <strong>L_b = {{Lb}} {{Lb_unit}}</strong>, and <strong>theta = {{theta}} {{theta_unit}}</strong>.</p><p>Draw a complete free-body diagram showing the boom, brace, wall supports, trolley/hoist, suspended load, and horizontal service load. State which effects are included and which are excluded from the 2D model.</p>",
-    "instructor": "<p>A defensible idealization preserves the dominant load path while replacing the real boom and brace with centerline members. The brace may be idealized as a two-force member only if the connections and loading justify that assumption. The boom should generally be treated as a beam because it can carry bending and shear.</p><p>Students should identify omitted 3D torsion, out-of-plane loading, connection eccentricity, wall flexibility, dynamic effects, clearances, and local deformation where appropriate.</p>",
-    "section": "transition"
+    "learningObjectives": [
+      "Create a two-dimensional idealization",
+      "Draw complete free-body diagrams"
+    ],
+    "student": "<p>Using the context illustration, propose your own two-dimensional\nstructural idealization before looking at the supplied numerical common\nmodel. Identify nodes, support restraints and possible force paths. Draw\nthe relevant free-body diagrams and state how the payload, horizontal\naction and any moment would reach the boom and wall. Explain when the\nbrace could be treated as a two-force member and which effects your\nmodel omits. Do not assume a freely suspended chain transmits an\nindependent moment. State what evidence would distinguish your choices\nfrom other defensible models.</p>",
+    "instructor": "<p>Credit an explicit, mechanically consistent proposed model and its\nlimitations, not a guess of the later official layout. A beam boom may\ncarry bending, shear and axial force; an unloaded pin-ended straight\nbrace can be a two-force member. A root pin versus restrained root, wall\nflexibility, load location and force/couple transfer must be stated.\nDifferent defensible choices may be credited for this independent task.\nA freely suspended chain does not establish a couple-transmitting\nattachment. The subsequent common model adopts the approved A/B/C/D\ngeometry and prescribed boom force/couple for comparability; it is an\nassigned model, not proof that the independent model or image has those\njoints. Completed representative FBDs belong only in instructor\noutput.</p>",
+    "section": "transition",
+    "displayNumber": "I1",
+    "workspace": {
+      "kind": "model-sketch"
+    },
+    "gradingNotes": "<p>Credit mechanically consistent independent models and stated evidence gaps. The common model is supplied only after I1; no chain-transmitted couple may be assumed without justified load transfer.</p>"
   },
   {
     "id": "q7",
-    "title": "Establish the Governing Design Load",
+    "title": "Establish both signed common-model load cases",
     "selected": true,
-    "tags": ["loading", "design load", "free-body diagram"],
+    "tags": [
+      "loading",
+      "design load",
+      "free-body diagram"
+    ],
     "type": "calculation",
     "difficulty": "introductory to intermediate",
-    "learningObjectives": ["Convert battery mass to design load", "Identify moment contributions from vertical and horizontal loads"],
-    "commonMistakes": "<p>Common mistakes include using mass as force, omitting the dynamic factor, placing the horizontal load at the wrong line of action, and adding H to the vertical load instead of treating its moment contribution separately.</p>",
-    "student": "<p>The crane lifts a battery pack of mass <strong><em>M</em> = {{M}} {{M_unit}}</strong>. The lifting operation is represented initially using the vertical dynamic amplification factor <strong>&gamma;<sub>d</sub> = {{gamma_d}}</strong>. The horizontal service load is <strong><em>H</em> = {{H}} {{H_unit}}</strong>, and its line of action may be offset by <strong><em>e</em><sub>H</sub> = {{e_H}} {{e_H_unit}}</strong> below the boom centerline.</p><p>Determine the static battery weight <em>W</em> = <em>Mg</em> and the dynamically amplified vertical design load <em>P</em><sub>d</sub> = &gamma;<sub>d</sub><em>Mg</em>. Show the directions and locations of <em>P</em><sub>d</sub> and <em>H</em> on the free-body diagram. Determine the moment produced about the wall pin by <em>P</em><sub>d</sub>. If <em>H</em> acts at vertical offset <em>e</em><sub>H</sub>, determine the additional moment produced by <em>H</em>. State which load combination should be used for the remaining preliminary calculations.</p><p>Required result: express the governing support moment symbolically. When the horizontal load produces an in-plane moment, use <em>M</em><sub>gov</sub> = <em>P</em><sub>d</sub><em>L</em> + <em>H e</em><sub>H</sub>. If <em>H</em> acts through the boom centerline, explain why it contributes force but no in-plane moment about that centerline.</p>",
-    "instructor": "<p>The static battery weight is <em>W</em> = <em>Mg</em> = {{weight_N}} N. The dynamically amplified vertical design load is <em>P</em><sub>d</sub> = &gamma;<sub>d</sub><em>Mg</em> = {{P_design_N}} N.</p><p>The moment from the vertical design load is <em>P</em><sub>d</sub><em>L</em> = {{wall_moment_Nm}} N*m. The additional moment from the horizontal load offset is <em>H e</em><sub>H</sub> = {{horizontal_moment_Nm}} N*m. Therefore the governing preliminary support moment is <em>M</em><sub>gov</sub> = <em>P</em><sub>d</sub><em>L</em> + <em>H e</em><sub>H</sub> = {{governing_support_moment_Nm}} N*m.</p><p>If <em>e</em><sub>H</sub> = 0, the horizontal load acts through the boom centerline for this 2D in-plane model. It still contributes a horizontal force reaction, but it does not add an in-plane moment term <em>H e</em><sub>H</sub> about the boom centerline. For the remaining preliminary calculations, use the combined moment <em>M</em><sub>gov</sub> when <em>e</em><sub>H</sub> is nonzero; otherwise use <em>P</em><sub>d</sub><em>L</em> for the in-plane bending/load-path calculation and check <em>H</em> separately as a horizontal force case.</p>",
-    "section": "analysis"
+    "learningObjectives": [
+      "Convert battery mass to design load",
+      "Identify moment contributions from vertical and horizontal loads"
+    ],
+    "student": "<p>Use the supplied common numerical model. Calculate W = Mg and P =\ngamma_d Mg. At D apply downward P and analyze H_x = +H and H_x = −H\nseparately, each with prescribed couple C_e = H_x e_H, counterclockwise\npositive. Draw or label the applied loads for each case and determine\ntheir signed moment about A. State which weights are omitted and why the\nforce/couple pair is not a moment transmitted by the illustrated chain.\nIs PL a reaction moment at A?</p>",
+    "instructor": "<p>W = Mg = {{weight_N}} N; P = gamma_d Mg = {{P_design_N}} N. The clockwise vertical-load moment magnitude is PL = {{vertical_load_moment_Nm}} N m. Rightward: H_x = {{right_Hx_N}} N, C_e = {{right_Ce_Nm}} N m, and PL - C_e = {{right_required_brace_moment_Nm}} N m. Leftward: H_x = {{left_Hx_N}} N, C_e = {{left_Ce_Nm}} N m, and PL - C_e = {{left_required_brace_moment_Nm}} N m. The signed applied moment about A is C_e - PL.</p><p>A has no reaction moment. The wall anchors and brace equilibrate the prescribed boom loads. Other equipment and structural weights are omitted; the force/couple is not transmitted by the illustrated freely suspended chain. If e_H = 0 the force remains without its couple; if H = 0 the cases coincide.</p>",
+    "section": "analysis",
+    "displayNumber": "M1"
   },
   {
     "id": "q8",
-    "title": "Determine the Brace Force and Wall-Pin Reactions",
+    "title": "Brace action and complete support reactions",
     "selected": true,
-    "tags": ["equilibrium", "brace force", "reactions"],
+    "tags": [
+      "equilibrium",
+      "brace force",
+      "reactions"
+    ],
     "type": "calculation",
     "difficulty": "intermediate",
-    "learningObjectives": ["Apply moment equilibrium to an idealized boom", "Resolve brace force components and wall-pin reactions"],
-    "gradingNotes": "<p>Accept equivalent sign conventions if the force magnitudes and load path are consistent with the free-body diagram.</p>",
-    "student": "<p>Use the idealized boom free-body diagram. The diagonal brace attaches to the boom at horizontal distance <strong><em>x</em><sub>C</sub> = {{Lb}} {{Lb_unit}}</strong> from the wall pin and forms angle <strong>&theta; = {{theta}} {{theta_unit}}</strong> with the horizontal. Neglect boom self-weight unless it is separately provided.</p><p>Apply moment equilibrium about the wall pin to determine the vertical component of the brace force. Determine the axial force in the brace, the horizontal component of the brace force, and the horizontal and vertical reactions at the wall pin. State whether the brace is in tension or compression.</p><p>Required result: report <em>F</em><sub>b</sub>, <em>F</em><sub>bx</sub>, <em>F</em><sub>by</sub>, the wall-pin reactions, and whether the brace is in tension or compression.</p>",
-    "instructor": "<p>Using the governing moment from Question 7, moment equilibrium about the wall pin gives <em>F</em><sub>by</sub><em>x</em><sub>C</sub> = <em>M</em><sub>gov</sub>. Therefore <em>F</em><sub>by</sub> = <em>M</em><sub>gov</sub>/<em>x</em><sub>C</sub> = {{brace_vertical_N}} N.</p><p>Since <em>F</em><sub>by</sub> = <em>F</em><sub>b</sub> sin(&theta;), the brace axial force is <em>F</em><sub>b</sub> = <em>F</em><sub>by</sub>/sin(&theta;) = {{brace_force_N}} N. The horizontal component is <em>F</em><sub>bx</sub> = <em>F</em><sub>b</sub> cos(&theta;) = {{brace_horizontal_N}} N.</p><p>With +<em>x</em> to the right and +<em>y</em> upward, and with <em>H</em> taken as acting to the right, force equilibrium gives <em>A</em><sub>x</sub> = -(<em>F</em><sub>bx</sub> + <em>H</em>) = {{wall_pin_reaction_x_N}} N and <em>A</em><sub>y</sub> = <em>P</em><sub>d</sub> - <em>F</em><sub>by</sub> = {{wall_pin_reaction_y_N}} N. A different sign convention is acceptable if the directions are clearly shown. For the common lower-brace jib geometry, the brace pushes upward on the boom and is therefore in compression.</p>",
-    "section": "analysis"
+    "learningObjectives": [
+      "Apply moment equilibrium to an idealized boom",
+      "Resolve brace force components and wall-pin reactions"
+    ],
+    "student": "<p>For each M1 load case, use signed moment and force equilibrium of the\nboom to calculate R_C, F, C_x, A_x and A_y. Use positive F for brace\ncompression and report tension or zero force when the sign requires it.\nDraw the brace free body and identify the lower-wall reaction. Verify\nboth force balances and moment balance. Do not combine reactions from\nopposite horizontal-force cases.</p>",
+    "instructor": "<p>For each complete case, R_C = (PL - C_e)/a, F = R_C/sin(theta), C_x = F cos(theta), A_x = -(C_x + H_x), A_y = P - R_C. Rightward: R_C = {{right_brace_vertical_N}} N, F = {{right_brace_force_N}} N ({{right_brace_action}}), C_x = {{right_brace_horizontal_N}} N, A_x = {{right_wall_pin_x_N}} N, A_y = {{right_wall_pin_y_N}} N. Leftward: R_C = {{left_brace_vertical_N}} N, F = {{left_brace_force_N}} N ({{left_brace_action}}), C_x = {{left_brace_horizontal_N}} N, A_x = {{left_wall_pin_x_N}} N, A_y = {{left_wall_pin_y_N}} N.</p><p>Check A_x + C_x + H_x = 0, A_y + R_C - P = 0, and R_C a + C_e - PL = 0 with unrounded values. On the brace C applies (-C_x,-R_C), B supplies (C_x,R_C). Negative F reverses the compression reference arrows; do not combine reactions from different cases.</p>",
+    "section": "analysis",
+    "displayNumber": "M2"
   },
   {
     "id": "q9",
-    "title": "Evaluate the Boom for Strength and Serviceability",
+    "title": "Braced boom forces, nominal bending and displacement",
     "selected": true,
-    "tags": ["bending", "deflection", "serviceability"],
+    "tags": [
+      "bending",
+      "deflection",
+      "serviceability"
+    ],
     "type": "calculation",
     "difficulty": "intermediate",
-    "learningObjectives": ["Evaluate boom bending stress", "Compare braced and conservative unbraced models"],
-    "commonMistakes": "<p>Common mistakes include using m with mm-based section properties and comparing deflection only to strength criteria.</p>",
-    "student": "<p>Evaluate the boom using two preliminary models. Keep units consistent: use N and m for moments, and convert moments to N*mm when using mm-based section properties.</p><p><strong>Model A: actual braced configuration.</strong></p><ol><li>Using the forces from Question 8, sketch the boom shear-force and bending-moment diagrams.</li><li>Determine the maximum boom bending moment <em>M</em><sub>max</sub>.</li><li>Calculate &sigma;<sub>max</sub> = <em>M</em><sub>max</sub>/<em>S</em> and check &sigma;<sub>max</sub> &le; &sigma;<sub>y</sub>/<em>N</em><sub>y</sub>.</li><li>State what beam model, energy method, or software model you would use to estimate the braced-system load-point deflection.</li></ol><p><strong>Model B: conservative unbraced comparison.</strong></p><ol><li>Temporarily model the boom as a cantilever carrying <em>P</em><sub>d</sub> at distance <em>L</em>.</li><li>Determine <em>P</em><sub>d</sub><em>L</em>, <em>P</em><sub>d</sub><em>L</em>/<em>S</em>, and <em>P</em><sub>d</sub><em>L</em><sup>3</sup>/(3<em>EI</em>).</li><li>Compare the cantilever deflection with &delta;<sub>allow</sub>.</li></ol><p>Explain why the cantilever model is conservative, why it should not replace the braced-system model, whether strength or serviceability is more likely to govern, and how increasing <em>L</em>, <em>S</em>, or <em>I</em> changes the response.</p>",
-    "instructor": "<p>For the braced configuration, the maximum preliminary boom bending moment occurs at the brace attachment for the idealized point-load model. Its magnitude is <em>M</em><sub>max</sub> = |<em>M</em><sub>gov</sub> - <em>P</em><sub>d</sub><em>x</em><sub>C</sub>| = {{braced_boom_moment_Nm}} N*m. Using <em>S</em> = {{S_boom}} {{S_boom_unit}}, &sigma;<sub>max</sub> = <em>M</em><sub>max</sub>(1000)/<em>S</em> = {{braced_boom_bending_MPa}} MPa. The allowable yield stress is &sigma;<sub>y</sub>/<em>N</em><sub>y</sub> = {{yield_allow_MPa}} MPa, so the boom bending utilization ratio is {{boom_stress_utilization}}.</p><p>For the conservative unbraced comparison, <em>M</em> = <em>P</em><sub>d</sub><em>L</em> = {{wall_moment_Nm}} N*m, &sigma; = <em>P</em><sub>d</sub><em>L</em>(1000)/<em>S</em> = {{boom_bending_MPa}} MPa, and &delta; = <em>P</em><sub>d</sub><em>L</em><sup>3</sup>/(3<em>EI</em>) = {{tip_deflection_mm}} mm. The deflection utilization ratio for the stated allowable deflection is {{deflection_utilization}}.</p><p>The cantilever model is conservative because it ignores the upward support provided by the brace. It should not replace the braced-system model because it gives the wrong internal force distribution and does not provide brace or connection forces. Increasing <em>L</em> increases moment and deflection strongly; increasing <em>S</em> reduces bending stress; increasing <em>I</em> reduces deflection. For the current values, the largest computed utilization may come from {{governing_mode}} with utilization {{governing_utilization}}.</p>",
-    "section": "analysis"
+    "learningObjectives": [
+      "Construct signed shear, moment and axial-force diagrams",
+      "Compute braced movement with beam and brace compliance",
+      "Separate changed-support comparisons from eligible criteria"
+    ],
+    "student": "<p>For both common-model load cases:</p>\n<ol type=\"1\">\n<li>Sketch V(x), M(x) and tension-positive N(x) on AC and CD. Calculate\nthe maximum absolute bending moment and every tied critical location;\ncheck C and the end couple at D.</li>\n<li>Calculate the nominal bending stress M_max/S_boom and its assigned\nbending-only utilization. Explain what is missing for a combined\naxial/bending stress and actual stability check.</li>\n<li>Calculate signed brace extension, v_C, the boom-bending and\nbrace-axial contributions to tip movement, and their signed sum v_D.\nDerive or use the stated unit-work relation in the instructor-supplied\nmethod brief. Compare |v_D| with the assigned limit. State which\ncompliances are omitted.</li>\n<li>Separately calculate the root-fixed P-only cantilever comparison PL,\nPL/S and PL³/(3EI). Explain why it changes the support model and cannot\ncontrol the braced assessment or be assumed universally\nconservative.</li>\n<li>Explain one response-specific effect of changing L, I_boom or\nA_brace, and identify what must be recalculated.</li>\n</ol>",
+    "instructor": "<p>On AC: V = A_y, M(x) = A_y x, N = C_x + H_x. On CD: V = P, M(x) = -P(L-x) + C_e, N = H_x. M(A) = 0; M(C) = -P(L-a) + C_e; M(D) = C_e. M_max = max(|M(C)|,|C_e|); M is continuous at C. Rightward M(C) = {{right_boom_moment_C_Nm}} N m, M(D) = {{right_boom_moment_D_Nm}} N m, maximum {{right_boom_max_moment_Nm}} N m at {{right_moment_locations}}. Leftward M(C) = {{left_boom_moment_C_Nm}} N m, M(D) = {{left_boom_moment_D_Nm}} N m, maximum {{left_boom_max_moment_Nm}} N m at {{left_moment_locations}}.</p><p>Right/left nominal bending = {{right_boom_bending_MPa}} / {{left_boom_bending_MPa}} MPa; assigned criterion sigma_y/N_y = {{yield_criterion_MPa}} MPa; utilizations {{right_boom_bending_utilization}} / {{left_boom_bending_utilization}}. Axial forces AC = {{right_boom_axial_AC_N}} / {{left_boom_axial_AC_N}} N; CD = {{right_boom_axial_CD_N}} / {{left_boom_axial_CD_N}} N (tension positive). A_boom is unavailable, so N/A +/- M/S and complete boom assessment are unassessed.</p><p>Use the supplied unit-work expression. Right/left tensile brace extension = {{right_brace_extension_mm}} / {{left_brace_extension_mm}} mm; C downward movement = {{right_C_down_mm}} / {{left_C_down_mm}} mm. Signed tip bending = {{right_tip_bending_mm}} / {{left_tip_bending_mm}} mm; brace contribution = {{right_tip_brace_mm}} / {{left_tip_brace_mm}} mm. Signed total v_D = {{right_tip_down_mm}} / {{left_tip_down_mm}} mm (right {{right_tip_direction}}; left {{left_tip_direction}}). Absolute-movement utilizations = {{right_tip_displacement_utilization}} / {{left_tip_displacement_utilization}}.</p><p>The separate root-fixed P-only comparison gives PL = {{fixed_cantilever_comparison_moment_Nm}} N m, PL/S = {{fixed_cantilever_comparison_stress_MPa}} MPa, PL^3/(3EI) = {{fixed_cantilever_comparison_deflection_mm}} mm. It changes A's rotational restraint; removing the brace with A still pinned would leave a mechanism. It is excluded from the braced ranking and is not universally conservative: the soft-brace counterexample gives greater braced movement.</p><p>Omitted compliances are assumptions, not verified zeros. More I_boom reduces only the bending term; more A_brace reduces the brace term. Signed cancellation affects the total magnitude. Changing L also changes the full-reach load position and requires reanalysis.</p>",
+    "section": "analysis",
+    "displayNumber": "M3",
+    "commonMistakes": "<p>Do not substitute cantilever movement for the braced demand, hard-code C as the peak, omit signed brace compliance, mix m and mm, or treat M/S as combined boom stress.</p>"
   },
   {
     "id": "q10",
-    "title": "Evaluate the Brace and Its Pin Connection",
+    "title": "Brace and representative connection; critique formal Euler",
     "selected": true,
-    "tags": ["axial stress", "buckling", "pin shear", "bearing"],
+    "tags": [
+      "axial stress",
+      "buckling",
+      "pin shear",
+      "bearing"
+    ],
     "type": "calculation",
     "difficulty": "intermediate",
-    "learningObjectives": ["Check brace axial stress and buckling", "Check pin shear and plate bearing"],
-    "student": "<p>Use the brace axial force <em>F</em><sub>b</sub> from Question 8. Treat the brace and connection checks as preliminary screening calculations, then state what still must be verified in detailed design.</p><ol><li><strong>Brace axial stress:</strong> determine &sigma;<sub>b</sub> = <em>F</em><sub>b</sub>/<em>A</em><sub>b</sub> using <strong><em>A</em><sub>b</sub> = {{A_brace}} {{A_brace_unit}}</strong>. Check |&sigma;<sub>b</sub>| &le; &sigma;<sub>y</sub>/<em>N</em><sub>y</sub>.</li><li><strong>Brace length and buckling:</strong> use <strong><em>x</em><sub>C</sub> = {{Lb}} {{Lb_unit}}</strong> and <strong>&theta; = {{theta}} {{theta_unit}}</strong> to determine <em>L</em><sub>brace</sub> = <em>x</em><sub>C</sub>/cos(&theta;). Then compute <em>K L</em><sub>brace</sub>/<em>r</em><sub>min</sub> and, when Euler buckling is applicable, <em>P</em><sub>cr</sub> = &pi;<sup>2</sup><em>E I</em><sub>b</sub>/(<em>K L</em><sub>brace</sub>)<sup>2</sup>. Check <em>F</em><sub>b</sub> &le; <em>P</em><sub>cr</sub>/<em>N</em><sub>b</sub>.</li><li><strong>Pin shear:</strong> for <strong><em>d</em><sub>p</sub> = {{d_pin}} {{d_pin_unit}}</strong>, calculate <em>A</em><sub>p</sub> = &pi;<em>d</em><sub>p</sub><sup>2</sup>/4 and &tau;<sub>avg</sub> = <em>F</em><sub>b</sub>/(<em>n</em><sub>s</sub><em>A</em><sub>p</sub>), where <strong><em>n</em><sub>s</sub> = {{n_s}}</strong>.</li><li><strong>Plate bearing:</strong> calculate &sigma;<sub>bearing</sub> = <em>F</em><sub>b</sub>/(<em>t d</em><sub>p</sub>) using <strong><em>t</em> = {{t_plate}} {{t_plate_unit}}</strong>. If the force is shared by multiple plates, modify the bearing calculation according to the actual load path.</li></ol><p>Identify at least four additional connection checks, such as pin bending, plate tear-out, net-section rupture, edge distance, fatigue, wear, hole clearance, and retaining-device adequacy.</p>",
-    "instructor": "<p>The brace force from Question 8 is <em>F</em><sub>b</sub> = {{brace_force_N}} N. The average brace stress is &sigma;<sub>brace</sub> = <em>F</em><sub>b</sub>/<em>A</em><sub>b</sub> = {{brace_stress_MPa}} MPa. With &sigma;<sub>y</sub>/<em>N</em><sub>y</sub> = {{yield_allow_MPa}} MPa, the brace yielding utilization ratio is {{brace_yield_utilization}}.</p><p>The brace length is <em>L</em><sub>brace</sub> = <em>x</em><sub>C</sub>/cos(&theta;) = {{brace_length_m}} m. The slenderness ratio is <em>K L</em><sub>brace</sub>/<em>r</em><sub>min</sub> = {{brace_slenderness}}. The Euler buckling estimate is <em>P</em><sub>cr</sub> = {{brace_buckling_N}} N, so <em>P</em><sub>cr</sub>/<em>N</em><sub>b</sub> = {{brace_buckling_allow_N}} N and the buckling utilization ratio is {{brace_buckling_utilization}}. Euler buckling should be used only if the member is slender enough and the assumed end conditions are appropriate.</p><p>The pin area is <em>A</em><sub>p</sub> = &pi;<em>d</em><sub>p</sub><sup>2</sup>/4 = {{pin_area_mm2}} mm<sup>2</sup>. With <em>n</em><sub>s</sub> = {{n_s}}, &tau;<sub>avg</sub> = <em>F</em><sub>b</sub>/(<em>n</em><sub>s</sub><em>A</em><sub>p</sub>) = {{pin_shear_MPa}} MPa. Compared with &tau;<sub>allow</sub> = {{tau_allow}} {{tau_allow_unit}}, the pin shear utilization ratio is {{pin_shear_utilization}}.</p><p>The nominal plate bearing stress is &sigma;<sub>bearing</sub> = <em>F</em><sub>b</sub>/(<em>t d</em><sub>p</sub>) = {{bearing_MPa}} MPa. Compared with &sigma;<sub>bearing,allow</sub> = {{bearing_allow}} {{bearing_allow_unit}}, the bearing utilization ratio is {{bearing_utilization}}. Additional required checks include pin bending, plate tear-out, net-section rupture, edge distance, fatigue, wear, hole clearance, retaining hardware, welds, and whether the connection is truly single or double shear.</p>",
-    "section": "analysis"
+    "learningObjectives": [
+      "Evaluate scoped nominal axial and connection criteria",
+      "Distinguish formal Euler arithmetic from physical resistance",
+      "Identify unverified axes and load sharing"
+    ],
+    "student": "<p>For both M2 cases, calculate tension-positive brace stress −F/A_brace\nand its magnitude-based assigned nominal utilization. For the identified\nbrace-end pin/lug, calculate pin area, n_s effective shear areas,\naverage pin shear, full-load lug bearing and their utilizations. State\nthe connection/load-sharing assumptions; do not use F as the upper\nboom-pin reaction.</p>\n<p>Calculate the physical diagonal brace length. For the supplied formal\ninertia axis compute r_I = sqrt(I_brace/A_brace), K ell_b/r_I and P_E =\npi² E I_brace/(K ell_b)². Separately compute K ell_b/r_min using the\nreported radius and explain the axis discrepancy. Compare the formal\nEuler stress P_E/A_brace with sigma_y; explain why neither P_E nor\nP_E/N_b is an established compression resistance. Classify\ncompression-buckling applicability for each signed force case. Identify\nmissing section, restraint and material evidence and at least four\nadditional connection checks.</p>",
+    "instructor": "<p>Right/left signed brace stress = {{right_brace_axial_signed_MPa}} / {{left_brace_axial_signed_MPa}} MPa (tension positive); actions {{right_brace_action}} / {{left_brace_action}}; magnitude utilizations {{right_brace_axial_utilization}} / {{left_brace_axial_utilization}} against {{yield_criterion_MPa}} MPa. Pin area = {{pin_area_mm2}} mm^2; total effective shear area = {{pin_shear_area_mm2}} mm^2. Pin shear = {{right_pin_shear_MPa}} / {{left_pin_shear_MPa}} MPa; utilizations {{right_pin_shear_utilization}} / {{left_pin_shear_utilization}} against {{tau_allow}} MPa. Full-load main-lug bearing area = {{bearing_area_mm2}} mm^2; bearing = {{right_bearing_MPa}} / {{left_bearing_MPa}} MPa; utilizations {{right_bearing_utilization}} / {{left_bearing_utilization}} against {{bearing_allow}} MPa. Under equal sharing, double shear halves pin demand, not this lug's bearing.</p><p>h = {{wall_spacing_m}} m; ell_b = {{brace_length_m}} m; r_I = {{r_from_I_mm}} mm; reported r_min = {{r_min}} mm. Formal-inertia-axis slenderness = {{formal_slenderness_I}}; reported-radius slenderness = {{formal_slenderness_reported_r}}. {{section_axis_note}}</p><p>P_E = {{formal_Euler_N}} N; P_E/A_brace = {{formal_Euler_stress_MPa}} MPa. Divided formal reference P_E/N_b = {{formal_Euler_divided_reference_N}} N. A_brace sigma_y = {{brace_yield_load_reference_N}} N is a yield reference, not column resistance. {{formal_Euler_note}} Compression resistance status: {{compression_stability_status}}.</p><p>Only F > 0 demands compression stability; F < 0 needs tensile/reversal evidence; F = 0 has no brace compression demand. Evidence includes actual section dimensions/axes, both restraint directions, material/proportional range, imperfections and an approved method. Pin bending, tear-out, net-section, edge distance, fatigue, wear, clearance, retaining hardware, outer cheeks and B/A connections remain unassessed.</p>",
+    "section": "analysis",
+    "displayNumber": "M4"
   },
   {
     "id": "q11",
-    "title": "Make the Preliminary Engineering Decision",
+    "title": "Bounded engineering assessment and targeted changes",
     "selected": true,
-    "tags": ["decision", "utilization ratio", "engineering judgment"],
+    "tags": [
+      "decision",
+      "utilization ratio",
+      "engineering judgment"
+    ],
     "type": "decision",
     "difficulty": "intermediate",
-    "learningObjectives": ["Compare utilization ratios", "Make a defensible preliminary design recommendation"],
-    "student": "<p>Using the results from Questions 7-10, prepare a concise preliminary design recommendation.</p><p>Calculate the applicable utilization ratios for boom bending stress, load-point deflection, brace axial yielding, brace buckling, pin shear, and plate bearing. Identify the largest utilization ratio and the component or failure mode that governs the preliminary design.</p><p>Recommend one of the following: accept the concept for detailed design, modify the concept, or reject the concept. If modification is required, recommend at least two design changes. Identify at least three effects outside the simplified 2D analysis, such as out-of-plane torsion, fatigue, wall-anchor-group behavior, local weld stresses, trolley-wheel contact, joint clearance, load swing, and structural-wall flexibility.</p><p>Final required statement: Based on the preliminary 2D analysis, the crane concept is accepted for detailed design / requires modification / is rejected because the governing criterion is __________ with a utilization ratio of __________. Before final approval, the following additional analyses or data are required: __________.</p>",
-    "instructor": "<p>The computed utilization ratios for the current input set are: boom bending stress = {{boom_stress_utilization}}, load-point deflection = {{deflection_utilization}}, brace axial yielding = {{brace_yield_utilization}}, brace buckling = {{brace_buckling_utilization}}, pin shear = {{pin_shear_utilization}}, and plate bearing = {{bearing_utilization}}.</p><p>The largest utilization ratio is {{governing_utilization}}, governed by {{governing_mode}}. Therefore, based on the preliminary 2D analysis, the crane concept {{design_recommendation}} because the governing criterion is {{governing_mode}} with a utilization ratio of {{governing_utilization}}.</p><p>If modification is required, defensible changes include reducing boom length L, increasing boom section modulus S, increasing boom moment of inertia I, moving the brace attachment farther from the wall, increasing brace angle theta when geometry allows, increasing pin diameter, increasing plate thickness, using double shear, or reducing allowable deflection demand through a stiffer section. Before final approval, students should request or analyze out-of-plane torsion, fatigue, wall-anchor-group behavior, weld details, trolley-wheel contact, joint clearance, load swing, structural-wall flexibility, rated hoist/hook/chain data, inspection requirements, and applicable lifting-device standards.</p>",
-    "section": "analysis"
+    "learningObjectives": [
+      "Compare utilization ratios",
+      "Make a defensible preliminary design recommendation"
+    ],
+    "student": "<p>Using the common-model calculations in M1–M4 (or their equivalent\ncalculations if those tasks were not selected), tabulate the five\neligible nominal utilizations for both directions and their envelopes.\nIdentify all tied largest eligible criteria and their controlling cases\nusing unrounded results. State which assigned criteria are met or\nexceeded and which physical checks remain unavailable. Exclude the\nchanged-support cantilever comparison and formal Euler reference from\nthis ranking.</p>\n<p>Recommend at least two response-specific changes or\nevidence-gathering actions, stating what each targets and what must be\nrecomputed. Do not claim that a single geometry change, a lower raw\nforce or passing these nominal checks establishes overall safety.</p>\n<p>Complete this statement: “In the specified idealized model, the\nassigned nominal criteria are ______. The largest eligible nominal\nutilization(s) are ______ in case(s) ______. The following physical\nchecks or evidence remain unassessed: ______. The next engineering\nactions are ______.”</p>",
+    "instructor": "<p>Envelope nominal utilizations: bending {{env_boom_bending_utilization}} ({{env_boom_bending_cases}}), absolute braced movement {{env_tip_displacement_utilization}} ({{env_tip_displacement_cases}}), brace axial {{env_brace_axial_utilization}} ({{env_brace_axial_cases}}), pin shear {{env_pin_shear_utilization}} ({{env_pin_shear_cases}}), main-lug bearing {{env_bearing_utilization}} ({{env_bearing_cases}}). Largest eligible utilization {{env_governing_utilization}}; mode(s) {{env_governing_modes}}; controlling cases {{env_governing_cases}}.</p><p>{{assessment_text}}</p><p>Document section axes/material/restraints for compression resistance; specify the actual pin/lug and inspect bending/tear-out; obtain wall/anchor, duty and rated-hardware evidence. A larger pin can target nominal connection demand, while I_boom and A_brace target different movement terms. Moving a outward or increasing theta is not a universal improvement: geometry, both complete cases, forces, movement, nominal demands and the unvalidated stability question must be recalculated. Formal Euler and the fixed-cantilever comparison do not enter the decision.</p>",
+    "section": "analysis",
+    "displayNumber": "M5"
   }
 ]

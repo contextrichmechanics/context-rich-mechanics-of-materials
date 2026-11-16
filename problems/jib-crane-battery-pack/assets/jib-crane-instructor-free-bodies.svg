@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1510" viewBox="0 0 1600 1510" role="img" aria-label="Instructor-only signed jib free bodies">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" fill="#173c64"/></marker></defs><rect width="100%" height="100%" fill="white"/><style>text{font-family:Arial,sans-serif;font-size:25px;fill:#172b3a}.title{font-size:32px;font-weight:bold}.small{font-size:22px}.dim{stroke:#5c6b73;stroke-width:2;fill:none}.member{stroke:#344f68;stroke-width:10;fill:none}.force{stroke:#173c64;stroke-width:3;fill:none;marker-end:url(#arrow)}.box{stroke:#cad4dd;stroke-width:2;fill:#f8fafc}.wall{stroke:#667784;stroke-width:10}.pin{stroke:#173c64;stroke-width:3;fill:white}</style>
+<text x="35" y="43" class="title">Instructor free bodies - positive reference axes; signed tables govern</text>
+<text x="35" y="80" class="small">Negative results reverse arrows. F &gt; 0 compression; F &lt; 0 tension. Schematic / not to scale.</text>
+<rect x="45" y="125" width="745" height="350" rx="8" class="box"/>
+<text x="65" y="165" class="title">Boom: rightward case</text>
+<line x1="140" y1="275" x2="665" y2="275" class="member" />
+<circle cx="140" cy="275" r="9" class="pin"/>
+<text x="128" y="255" class="">A</text>
+<circle cx="465" cy="275" r="9" class="pin"/>
+<text x="453" y="255" class="">C</text>
+<circle cx="665" cy="275" r="9" class="pin"/>
+<text x="653" y="255" class="">D</text>
+<line x1="140" y1="275" x2="250" y2="275" class="force" />
+<text x="165" y="310" class="small">A_x</text>
+<line x1="140" y1="275" x2="140" y2="190" class="force" />
+<text x="80" y="225" class="small">A_y</text>
+<line x1="465" y1="275" x2="560" y2="275" class="force" />
+<text x="485" y="310" class="small">C_x</text>
+<line x1="465" y1="275" x2="465" y2="190" class="force" />
+<text x="475" y="215" class="small">R_C</text>
+<line x1="665" y1="275" x2="665" y2="370" class="force" />
+<text x="677" y="350" class="">P</text>
+<line x1="665" y1="195" x2="755" y2="195" class="force" />
+<text x="565" y="165" class="small">H_x = +H</text>
+<path d="M726 300 A26 26 0 1 0 700 326" class="force"/>
+<text x="75" y="410" class="small">C_e = +H e_H (CCW)</text>
+<text x="75" y="450" class="small">A has no reaction couple. AC = a; AD = L.</text>
+<rect x="825" y="125" width="745" height="350" rx="8" class="box"/>
+<text x="845" y="165" class="title">Boom: leftward case</text>
+<line x1="920" y1="275" x2="1445" y2="275" class="member" />
+<circle cx="920" cy="275" r="9" class="pin"/>
+<text x="908" y="255" class="">A</text>
+<circle cx="1245" cy="275" r="9" class="pin"/>
+<text x="1233" y="255" class="">C</text>
+<circle cx="1445" cy="275" r="9" class="pin"/>
+<text x="1433" y="255" class="">D</text>
+<line x1="920" y1="275" x2="1030" y2="275" class="force" />
+<text x="945" y="310" class="small">A_x</text>
+<line x1="920" y1="275" x2="920" y2="190" class="force" />
+<text x="860" y="225" class="small">A_y</text>
+<line x1="1245" y1="275" x2="1340" y2="275" class="force" />
+<text x="1265" y="310" class="small">C_x</text>
+<line x1="1245" y1="275" x2="1245" y2="190" class="force" />
+<text x="1255" y="215" class="small">R_C</text>
+<line x1="1445" y1="275" x2="1445" y2="370" class="force" />
+<text x="1457" y="350" class="">P</text>
+<line x1="1445" y1="195" x2="1355" y2="195" class="force" />
+<text x="1345" y="165" class="small">H_x = -H</text>
+<path d="M1506 300 A26 26 0 1 1 1480 274" class="force"/>
+<text x="855" y="410" class="small">C_e = -H e_H (CW)</text>
+<text x="855" y="450" class="small">A has no reaction couple. AC = a; AD = L.</text>
+<rect x="40" y="500" width="735" height="430" rx="8" class="box"/>
+<text x="65" y="545" class="title">Brace BC: axial two-force member</text>
+<line x1="150" y1="820" x2="600" y2="620" class="member" />
+<circle cx="150" cy="820" r="9" class="pin"/>
+<circle cx="600" cy="620" r="9" class="pin"/>
+<text x="110" y="865" class="">B</text>
+<text x="600" y="595" class="">C</text>
+<line x1="150" y1="820" x2="240" y2="780" class="force" />
+<text x="215" y="830" class="small">(+C_x, +R_C)</text>
+<line x1="600" y1="620" x2="510" y2="660" class="force" />
+<text x="430" y="715" class="small">(-C_x, -R_C)</text>
+<text x="65" y="900" class="small">Positive F reference is compression; reverse for tension.</text>
+<rect x="800" y="500" width="755" height="430" rx="8" class="box"/>
+<text x="825" y="545" class="title">Whole-crane wall reactions</text>
+<text x="825" y="610" class="small">At A: (A_x, A_y); at B: (C_x, R_C)</text>
+<text x="825" y="650" class="small">h C_x + C_e - P L = 0</text>
+<text x="825" y="690" class="small">Force on wall is opposite to reaction on crane.</text>
+<text x="825" y="730" class="small">C = D at a = L: merge the attachment/load nodes.</text>
+<text x="825" y="770" class="small">Do not combine maxima from different load cases.</text>
+<text x="825" y="810" class="small">Formal section axes and compression resistance</text>
+<text x="825" y="850" class="small">are unverified; no capacity is depicted.</text>
+<text x="45" y="990" class="title">Hypothetical brace-end main lug at C</text>
+<text x="45" y="1040" class="">n_s = 1: single shear</text>
+<rect x="165" y="1095" width="45" height="140" fill="#a9c1d5" stroke="#344f68" stroke-width="2"/>
+<rect x="225" y="1095" width="45" height="140" fill="#f6c67a" stroke="#344f68" stroke-width="2"/>
+<line x1="110" y1="1165" x2="375" y2="1165" class="member" />
+<line x1="220" y1="1080" x2="220" y2="1250" class="dim" stroke-dasharray="7 5"/>
+<text x="405" y="1150" class="small">pin d_pin</text>
+<text x="405" y="1190" class="small">main lug t_plate</text>
+<text x="45" y="1280" class="small">One full-load main lug; outer cheek(s) unassessed.</text>
+<line x1="247" y1="1125" x2="247" y2="1055" class="force" />
+<text x="275" y="1085" class="small">|F|</text>
+<text x="45" y="1320" class="small">Total pin shear area: n_s pi d_pin^2/4; lug projection: d_pin t_plate</text>
+<line x1="187" y1="1140" x2="187" y2="1235" class="force" />
+<text x="157" y="1260" class="small">|F|</text>
+<text x="775" y="1040" class="">n_s = 2: symmetric double shear</text>
+<rect x="875" y="1095" width="45" height="140" fill="#a9c1d5" stroke="#344f68" stroke-width="2"/>
+<rect x="955" y="1095" width="45" height="140" fill="#f6c67a" stroke="#344f68" stroke-width="2"/>
+<rect x="1035" y="1095" width="45" height="140" fill="#a9c1d5" stroke="#344f68" stroke-width="2"/>
+<line x1="840" y1="1165" x2="1105" y2="1165" class="member" />
+<line x1="932" y1="1080" x2="932" y2="1250" class="dim" stroke-dasharray="7 5"/>
+<line x1="1024" y1="1080" x2="1024" y2="1250" class="dim" stroke-dasharray="7 5"/>
+<text x="1135" y="1150" class="small">pin d_pin</text>
+<text x="1135" y="1190" class="small">main lug t_plate</text>
+<text x="775" y="1280" class="small">One full-load main lug; outer cheek(s) unassessed.</text>
+<line x1="977" y1="1125" x2="977" y2="1055" class="force" />
+<text x="1005" y="1085" class="small">|F|</text>
+<text x="775" y="1320" class="small">Total pin shear area: n_s pi d_pin^2/4; lug projection: d_pin t_plate</text>
+<line x1="897" y1="1140" x2="897" y2="1235" class="force" />
+<text x="867" y="1260" class="small">|F|/2</text>
+<line x1="1057" y1="1140" x2="1057" y2="1235" class="force" />
+<text x="1027" y="1260" class="small">|F|/2</text>
+<text x="775" y="1357" class="small">Outer cheeks carry |F|/2 each under equal sharing.</text>
+<text x="45" y="1435" class="small">Full-load main-lug bearing is not halved by double shear. Pin bending, tear-out and outer cheeks are unassessed.</text>
+<text x="45" y="1480" class="small">All numeric values are supplied in the current-input and signed-case tables; these masters contain no baseline answers.</text>
+</svg>

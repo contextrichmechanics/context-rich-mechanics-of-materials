@@ -48,6 +48,11 @@ toc: false
 </div>
 
 <script src="data/problem-catalog.js"></script>
+<script src="scripts/press-fixture-model.js"></script>
+<script src="scripts/platform-model.js"></script>
+<script src="scripts/platform-packet.js"></script>
+<script src="scripts/jib-crane-model.js"></script>
+<script src="scripts/jib-crane-packet.js"></script>
 <script>
 let problemCatalog = window.PROBLEM_CATALOG || [];
 const problemSelect = document.getElementById("problem-select");
@@ -110,6 +115,8 @@ function formatDerived(value, digits = 0) {
 }
 
 function variableMap(problem) {
+  if (problem.id === "MOS-JIB-001") return window.JibCranePacket.values(problem, currentValues);
+  if (problem.slug === "suspended-equipment-platform") return window.PlatformPacket.values(problem, currentValues);
   const values = {};
   problem.variables.forEach((variable) => {
     values[variable.key] = currentValues[variable.key] ?? variable.value;
@@ -515,53 +522,8 @@ function variableMap(problem) {
     }
   }
 
-  const pressLoad = numericValue(values, "P");
-  const pressDiameter = numericValue(values, "d");
-  const pressThickness = numericValue(values, "t");
-  const pressShearAllowable = numericValue(values, "tau_allow");
-  const pressBearingAllowable = numericValue(values, "sigma_bearing_allow");
-
-  if (
-    Number.isFinite(pressLoad) &&
-    Number.isFinite(pressDiameter) &&
-    pressDiameter > 0 &&
-    Number.isFinite(pressThickness) &&
-    pressThickness > 0
-  ) {
-    const loadN = pressLoad * 1000;
-    const bearingArea = Math.PI * pressDiameter ** 2 / 4;
-    const punchingArea = 2 * pressDiameter * pressThickness;
-    const bearingStress = loadN / bearingArea;
-    const punchingStress = loadN / punchingArea;
-    values.press_load_N = formatDerived(loadN);
-    values.press_bearing_area_mm2 = formatDerived(bearingArea, 1);
-    values.press_punching_area_mm2 = formatDerived(punchingArea, 1);
-    values.press_bearing_stress_MPa = formatDerived(bearingStress, 2);
-    values.press_punching_shear_MPa = formatDerived(punchingStress, 2);
-    if (punchingStress >= bearingStress) {
-      values.press_larger_stress = "average punching shear stress";
-      values.press_larger_stress_MPa = formatDerived(punchingStress, 2);
-    } else {
-      values.press_larger_stress = "average bearing stress";
-      values.press_larger_stress_MPa = formatDerived(bearingStress, 2);
-    }
-
-    const fosValues = [];
-    if (Number.isFinite(pressShearAllowable) && pressShearAllowable > 0) {
-      const fosShear = pressShearAllowable / punchingStress;
-      values.press_fos_shear = formatDerived(fosShear, 2);
-      fosValues.push(["punching shear", fosShear]);
-    }
-    if (Number.isFinite(pressBearingAllowable) && pressBearingAllowable > 0) {
-      const fosBearing = pressBearingAllowable / bearingStress;
-      values.press_fos_bearing = formatDerived(fosBearing, 2);
-      fosValues.push(["bearing", fosBearing]);
-    }
-    const governingFos = fosValues.sort((left, right) => left[1] - right[1])[0];
-    if (governingFos) {
-      values.press_governing_fos_mode = governingFos[0];
-      values.press_governing_fos = formatDerived(governingFos[1], 2);
-    }
+  if (problem.slug === "hydraulic-press-punching-shear") {
+    Object.assign(values, window.PressFixtureModel.evaluate(problem, currentValues).display);
   }
 
   const boltLoad = numericValue(values, "bolt_V");
@@ -2739,82 +2701,6 @@ function variableMap(problem) {
     values.thermal_dominant_compliance = pipeCompliance >= supportCompliance ? "pipe axial compliance" : "combined turbine-attachment compliance";
   }
 
-  const platformLoad = numericValue(values, "P");
-  const platformWireArea = numericValue(values, "A_w");
-  const platformWireModulus = numericValue(values, "E_w");
-  const platformUpperWireLength = numericValue(values, "L_u");
-  const platformLowerWireLength = numericValue(values, "L_l");
-  const platformUpperSpan = numericValue(values, "L_DC");
-  const platformLowerSpan = numericValue(values, "L_AB");
-  const platformHLocation = numericValue(values, "x_DH");
-  const platformLoadLocation = numericValue(values, "x_P");
-
-  if (
-    Number.isFinite(platformLoad) && platformLoad > 0 &&
-    Number.isFinite(platformWireArea) && platformWireArea > 0 &&
-    Number.isFinite(platformWireModulus) && platformWireModulus > 0 &&
-    Number.isFinite(platformUpperWireLength) && platformUpperWireLength > 0 &&
-    Number.isFinite(platformLowerWireLength) && platformLowerWireLength > 0 &&
-    Number.isFinite(platformUpperSpan) && platformUpperSpan > 0 &&
-    Number.isFinite(platformLowerSpan) && platformLowerSpan > 0 &&
-    Number.isFinite(platformHLocation) && platformHLocation > 0 && platformHLocation < platformUpperSpan &&
-    Number.isFinite(platformLoadLocation) && platformLoadLocation > 0 && platformLoadLocation < platformLowerSpan
-  ) {
-    const modulusPsi = platformWireModulus * 1000;
-    const upperLengthIn = platformUpperWireLength * 12;
-    const lowerLengthIn = platformLowerWireLength * 12;
-    const upperSpanIn = platformUpperSpan * 12;
-    const lowerSpanIn = platformLowerSpan * 12;
-    const forceBC = platformLoad * platformLoadLocation / platformLowerSpan;
-    const forceAH = platformLoad - forceBC;
-    const forceFC = (forceAH * platformHLocation + forceBC * platformUpperSpan) / platformUpperSpan;
-    const forceED = platformLoad - forceFC;
-    const elongationAH = forceAH * lowerLengthIn / (platformWireArea * modulusPsi);
-    const elongationBC = forceBC * lowerLengthIn / (platformWireArea * modulusPsi);
-    const elongationED = forceED * upperLengthIn / (platformWireArea * modulusPsi);
-    const elongationFC = forceFC * upperLengthIn / (platformWireArea * modulusPsi);
-    const displacementH = elongationED + (elongationFC - elongationED) * platformHLocation / platformUpperSpan;
-    const displacementA = displacementH + elongationAH;
-    const displacementB = elongationFC + elongationBC;
-    const loadDisplacement = displacementA + (displacementB - displacementA) * platformLoadLocation / platformLowerSpan;
-    const thetaAB = (displacementB - displacementA) / lowerSpanIn;
-    const thetaDC = (elongationFC - elongationED) / upperSpanIn;
-    const forceEntries = [["AH", forceAH], ["BC", forceBC], ["ED", forceED], ["FC", forceFC]];
-    const elongationEntries = [["AH", elongationAH], ["BC", elongationBC], ["ED", elongationED], ["FC", elongationFC]];
-    const governingForce = forceEntries.sort((left, right) => right[1] - left[1])[0];
-    const governingElongation = elongationEntries.sort((left, right) => right[1] - left[1])[0];
-    values.platform_x_HC_ft = formatDerived(platformUpperSpan - platformHLocation, 2);
-    values.platform_E_w_psi = formatDerived(modulusPsi, 0);
-    values.platform_L_u_in = formatDerived(upperLengthIn, 2);
-    values.platform_L_l_in = formatDerived(lowerLengthIn, 2);
-    values.platform_L_DC_in = formatDerived(upperSpanIn, 2);
-    values.platform_L_AB_in = formatDerived(lowerSpanIn, 2);
-    values.platform_T_AH_lb = formatDerived(forceAH, 1);
-    values.platform_T_BC_lb = formatDerived(forceBC, 1);
-    values.platform_T_ED_lb = formatDerived(forceED, 1);
-    values.platform_T_FC_lb = formatDerived(forceFC, 1);
-    values.platform_delta_AH_in = formatDerived(elongationAH, 5);
-    values.platform_delta_BC_in = formatDerived(elongationBC, 5);
-    values.platform_delta_ED_in = formatDerived(elongationED, 5);
-    values.platform_delta_FC_in = formatDerived(elongationFC, 5);
-    values.platform_delta_H_in = formatDerived(displacementH, 5);
-    values.platform_delta_A_in = formatDerived(displacementA, 5);
-    values.platform_delta_B_in = formatDerived(displacementB, 5);
-    values.platform_delta_load_in = formatDerived(loadDisplacement, 5);
-    values.platform_theta_AB_rad = formatDerived(Math.abs(thetaAB), 7);
-    values.platform_theta_AB_deg = formatDerived(Math.abs(thetaAB) * 180 / Math.PI, 4);
-    values.platform_theta_DC_rad = formatDerived(Math.abs(thetaDC), 8);
-    values.platform_theta_DC_deg = formatDerived(Math.abs(thetaDC) * 180 / Math.PI, 5);
-    values.platform_lower_tilt_direction = thetaAB < 0 ? "downward toward A" : "downward toward B";
-    values.platform_upper_tilt_direction = thetaDC < 0 ? "downward toward D" : "downward toward C";
-    values.platform_governing_wire = governingForce[0];
-    values.platform_governing_force_lb = formatDerived(governingForce[1], 1);
-    values.platform_dominant_wire = governingElongation[0];
-    values.platform_dominant_force_lb = formatDerived(forceEntries.find(([wire]) => wire === governingElongation[0])[1], 1);
-    values.platform_dominant_length_ft = formatDerived(["AH", "BC"].includes(governingElongation[0]) ? platformLowerWireLength : platformUpperWireLength, 2);
-    values.platform_dominant_elongation_in = formatDerived(governingElongation[1], 5);
-  }
-
   const cableMass = numericValue(values, "m");
   const cableGravity = numericValue(values, "g");
   const cableThetaAB = numericValue(values, "theta_AB");
@@ -3290,7 +3176,7 @@ function renderVariableInputs() {
   currentValues = {};
 
   variableInputs.innerHTML = problem.variables.map((variable) => {
-    const value = overrides[variable.key] ?? variable.value;
+    const value = (problem.slug === "suspended-equipment-platform" || problem.id === "MOS-JIB-001") ? (Object.prototype.hasOwnProperty.call(overrides, variable.key) ? overrides[variable.key] : variable.value) : overrides[variable.key] ?? variable.value;
     currentValues[variable.key] = value;
     return `
       <label class="builder-variable">
@@ -3303,7 +3189,7 @@ function renderVariableInputs() {
             value="${escapeHtml(value)}"
             min="${escapeHtml(variable.min ?? "")}"
             max="${escapeHtml(variable.max ?? "")}"
-            step="${escapeHtml(variable.step ?? "any")}"
+            step="${escapeHtml((problem.slug === "suspended-equipment-platform" || problem.id === "MOS-JIB-001") ? "any" : variable.step ?? "any")}"
           >
           <span>${unitHtml(variable.unit)}</span>
         </span>
@@ -3483,7 +3369,27 @@ function renderQuestionImage(problem, question, embeddedImages = {}) {
   `;
 }
 
+function renderPressBuilder(type,embeddedImages={}){
+ const problem=selectedProblem(),model=window.PressFixtureModel;model.evaluate(problem,currentValues);const instructor=type==='instructor';const questions=selectedQuestions(problem,type),numbers=new Map(questions.map((q,i)=>[q.id,i+1]));const key=`<p class="current-input-dimensions">${escapeHtml(model.dimensionKey(problem,currentValues))}</p>`;
+ return `<article class="generated-packet"><header><p class="packet-kicker">${escapeHtml(instructor?problem.instructorDocumentTitle:problem.studentDocumentTitle)}</p><h1>${escapeHtml(problem.title)}</h1><p>${escapeHtml(problem.summary)}</p></header><figure><img src="${escapeHtml(imagePath(problem,embeddedImages))}" alt="Illustrative press fixture"><figcaption>Generated context illustration; dimensions and teaching assumptions are assigned.</figcaption></figure><section><h2>Main Problem Statement</h2>${substitute(problem.problemStatement,problem)}</section><section><h2>Engineering Goal</h2>${substitute(problem.engineeringGoal,problem)}</section>${renderSupplementaryImages(problem,embeddedImages)}${key}<section class="packet-given-data"><h2>Given Data</h2><table><thead><tr><th>Symbol</th><th>Quantity</th><th>Value</th></tr></thead><tbody>${variableRows(problem)}</tbody></table><p>All seven values are provisional instructional assumptions; both criteria have an unverified material basis.</p></section>${renderQuestionSection(problem,questions,questionSections[0],instructor,numbers,embeddedImages)}${renderQuestionSection(problem,questions,questionSections[1],instructor,numbers,embeddedImages)}${instructor?renderIdealizedImage(problem,embeddedImages)+key+'<p>The cylindrical surface is hypothetical; real stress distributions and complete fixture capacity remain unverified.</p>':''}${renderQuestionSection(problem,questions,questionSections[2],instructor,numbers,embeddedImages)}</article>`;
+}
+
 function renderDocumentBody(type, embeddedImages = {}) {
+  if (selectedProblem()?.id === "MOS-JIB-001") {
+    const problem = selectedProblem();
+    return window.JibCranePacket.renderHtml(problem, currentValues, type, {
+      questions: selectedQuestions(problem, type),
+      imageUrl: src => { const url = packetImageUrl(problem, src); return embeddedImages[url] || url; }
+    });
+  }
+  if (selectedProblem()?.slug === "suspended-equipment-platform") {
+    const problem = selectedProblem();
+    return window.PlatformPacket.renderHtml(problem, currentValues, type, {
+      questions: selectedQuestions(problem, type),
+      imageUrl: src => { const url = packetImageUrl(problem, src); return embeddedImages[url] || url; }
+    });
+  }
+  if (selectedProblem()?.slug === "hydraulic-press-punching-shear") return renderPressBuilder(type, embeddedImages);
   const problem = selectedProblem();
   const isInstructor = type === "instructor";
   const showIdealizedImage =
@@ -3550,7 +3456,16 @@ function renderPreview() {
     return;
   }
 
-  packetPreview.innerHTML = renderDocumentBody(activePreview);
+  try {
+    packetPreview.innerHTML = renderDocumentBody(activePreview);
+    ["download-student-doc", "download-instructor-doc", "print-student-pdf", "print-instructor-pdf"].forEach(id => { document.getElementById(id).disabled = false; });
+  } catch (error) {
+    if (selectedProblem()?.id !== "MOS-JIB-001" && !["hydraulic-press-punching-shear", "suspended-equipment-platform"].includes(selectedProblem()?.slug)) throw error;
+    packetPreview.innerHTML = selectedProblem()?.id === "MOS-JIB-001" ? window.JibCranePacket.diagnosticHtml(error) : selectedProblem()?.slug === "suspended-equipment-platform" ? window.PlatformPacket.diagnosticHtml(error, activePreview) : `<p class="packet-error" role="alert">${escapeHtml(error.message)}</p>`;
+    statusText.textContent = selectedProblem()?.id === "MOS-JIB-001" ? "Correct the jib inputs; numerical answers and exports are blocked." : selectedProblem()?.slug === "suspended-equipment-platform" ? (error.code === "model-warning" ? "Outside the assigned model; standard exports blocked." : "Correct the platform inputs.") : "Correct the fixture inputs.";
+    ["download-student-doc", "download-instructor-doc", "print-student-pdf", "print-instructor-pdf"].forEach(id => { document.getElementById(id).disabled = true; });
+    return;
+  }
   statusText.textContent = "Updated";
   studentPreviewTab.classList.toggle("active", activePreview === "student");
   instructorPreviewTab.classList.toggle("active", activePreview === "instructor");
@@ -3622,6 +3537,8 @@ async function fetchEmbeddedImage(source) {
 }
 
 async function embeddedPacketImages(problem, questions, type) {
+  if (problem.id === "MOS-JIB-001") window.JibCraneModel.evaluate(problem, currentValues);
+  if (problem.slug === "suspended-equipment-platform") window.PlatformModel.assertPacket(window.PlatformModel.evaluate(problem, currentValues));
   const isInstructor = type === "instructor";
   const showIdealizedImage =
     isInstructor ||
@@ -3641,6 +3558,9 @@ async function embeddedPacketImages(problem, questions, type) {
 }
 
 async function fullHtmlDocument(type) {
+  if (selectedProblem()?.id === "MOS-JIB-001") window.JibCraneModel.evaluate(selectedProblem(), currentValues);
+  if (selectedProblem()?.slug === "suspended-equipment-platform") window.PlatformModel.assertPacket(window.PlatformModel.evaluate(selectedProblem(), currentValues));
+  if (selectedProblem()?.slug === "hydraulic-press-punching-shear") window.PressFixtureModel.evaluate(selectedProblem(), currentValues);
   const problem = selectedProblem();
   const questions = selectedQuestions(problem, type);
   const embeddedImages = await embeddedPacketImages(problem, questions, type);
@@ -3698,6 +3618,15 @@ async function waitForDocumentImages(targetDocument) {
 }
 
 async function printDocument(type) {
+  if (selectedProblem()?.id === "MOS-JIB-001") {
+    try { window.JibCraneModel.evaluate(selectedProblem(), currentValues); } catch { renderPreview(); return; }
+  }
+  if (selectedProblem()?.slug === "suspended-equipment-platform") {
+    try { window.PlatformModel.assertPacket(window.PlatformModel.evaluate(selectedProblem(), currentValues)); } catch { renderPreview(); return; }
+  }
+  if (selectedProblem()?.slug === "hydraulic-press-punching-shear") {
+    try { window.PressFixtureModel.evaluate(selectedProblem(), currentValues); } catch { renderPreview(); return; }
+  }
   const newWindow = window.open("", "_blank");
   if (!newWindow) {
     statusText.textContent = "Popup blocked";

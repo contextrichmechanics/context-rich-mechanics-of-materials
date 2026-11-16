@@ -1,7 +1,7 @@
 {
   "id": "section-a",
-  "title": "Homework Version A - punching shear and bearing",
-  "description": "Default MEEN 305-style sequence for bearing area, punching shear area, average stresses, and interpretation.",
+  "title": "Homework Version A — nominal circular shear and contact-pressure checks",
+  "description": "Nineteen-question fixture assessment using assigned geometry/load and illustrative allowable criteria, reserves, and utilization; not a cutting-force or complete safety calculation.",
   "selectedQuestions": [
     "q1",
     "q2",

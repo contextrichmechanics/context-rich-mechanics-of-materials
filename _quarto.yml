@@ -1,11 +1,19 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "**/*.{qmd,md,ipynb,Rmd}"
+    - "!docs/reviews/**"
   resources:
     - data/problem-catalog.json
     - data/problem-catalog.js
     - data/problem-health.json
     - data/problem-health.js
+    - scripts/press-fixture-model.js
+    - scripts/platform-model.js
+    - scripts/platform-packet.js
+    - scripts/jib-crane-model.js
+    - scripts/jib-crane-packet.js
     - scripts/packet-renderer.js
     - "problems/*/assets/*"
 

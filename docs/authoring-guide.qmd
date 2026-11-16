@@ -126,7 +126,7 @@ If the problem has an instructor/reference idealized diagram with dimensions, la
 "idealizedImageAlt": "Instructor reference idealization with dimensions and loads."
 ```
 
-The `idealizedImage` appears in student packets, instructor packets, the Instructor Builder preview, and generated HTML/QMD/DOCX/PDF exports in a dedicated **Instructor Reference Idealization and Input Variables** section before the Given Data table. It is inserted after the student has completed the context reasoning and student-generated modeling work, and immediately before the numerical mechanics questions. This image is the official reference model for solving the mechanical-analysis questions.
+The `idealizedImage` is instructor-only by default. It appears in student packets only when `showIdealizedImageInStudentPacket` is explicitly true. Supply necessary student geometry through an unsolved `supplementaryImages` figure. The hydraulic press package uses `packetLayout: "geometry-first"` to place that geometry and current Given Data before context/modeling questions in direct, Builder, and CLI routes, while keeping its instructor reference after modeling and only in instructor output. Other packages retain their existing layout when this field is absent.
 
 Do not attach the instructor/reference idealized diagram to a student-generated idealization question. That question should ask students to sketch or describe their own model first. Put only truly question-specific figures in `questions.json`, such as a zoomed-in detail, alternate failure mode, or extra image needed by one question:
 
@@ -361,3 +361,26 @@ For context-rich mechanics problems, structure the problem package so generated 
 5. Instructor answers, only in instructor output.
 
 The main statement should describe the engineering role, physical system, operating context, and uncertainty. The questions should then ask students to reason, model, calculate, and make a defensible recommendation.
+
+## Suspended platform common model
+
+MOS-PLATFORM-011 uses `packetLayout: platform-common-model`, the pure `scripts/platform-model.js` helper and the audience-aware `scripts/platform-packet.js` layout. This layout applies only to `suspended-equipment-platform`; the hydraulic press keeps its existing geometry-first layout and 20-key model.
+
+Keep Q1-Q10 as the physical-context and independent idealization phase. Supply `commonModelStatement`, eleven `commonModelAssumptions`, the supplementary image with role `common-model-geometry`, a current-input dimension key and Given Data between Q10 and M1. Keep completed instructor free bodies after M1 and before M2, and include them only in instructor packets. Q8 uses a renderer-managed 80 mm drawing region, including native-export equivalents.
+
+Retain the ten compatible input keys. Enforce `L_DC = x_DH + x_HC`, `L_AB = x_HC`, strict interior load location, positive finite range-checked inputs and all four positive wire tensions. Omitted overrides inherit defaults; explicit invalid values do not. Authoring increments are stepping controls, not a ban on valid off-grid rational values.
+
+The 61-key registry includes signed rotations, numerical zero/tie interpretation and weighted wire-elongation contributions to the load-point displacement. Raw extension, maximum force and maximum weighted contribution are separate rankings. All inputs are assigned instructional values.
+
+Initial-input errors block numerical answers and exports. A gross predicted finite-segment inconsistency or an exceeded configured approximation screen is a distinct model warning and blocks standard exports. With both strain/rotation limits null, a normal packet is explicitly unassessed; passing the gross check is not proof of small-deformation validity, material strength or service fitness. No strain, rotation, strength or serviceability threshold is inferred from modulus. Update source first, then regenerate catalog/health artifacts and run platform plus unchanged hydraulic regression tests.
+
+The preserved platform context file contains JPEG bytes despite its historical PNG filename. `nativeContextImage` selects the byte-identical `.jpg` delivery copy for native output; retain the original context and historical instructor files unchanged. The new SVG/PNG diagram pairs are independent student/instructor assets and use symbolic dimensions alongside a current-input key.
+
+
+## Jib-crane common-model packets
+
+MOS-JIB-001 retains 23 input keys. Lb is the horizontal attachment distance a; diagonal brace length and wall spacing are derived. The exact-ID numerical helper computes both complete signed horizontal force/couple cases and the actual idealized braced tip movement. Only five scoped nominal checks enter its unrounded ranking. Formal Euler, K_brace and N_b are sensitivity/diagnostic quantities; compression resistance and section axes remain unvalidated. The fixed-root P-only cantilever is a changed-support comparison.
+
+Keep Q1-Q6, I1, the unsolved authoritative common model with the supplied symbolic displacement method, then M1-M5. Core/exam retain I1 and M1-M5. Direct pages render native Markdown through the same helper, without serializing the instructor answer catalog into student metadata. Completed FBDs, substituted answers and interpretation outputs are instructor-only.
+
+Explicit invalid values never inherit omitted overrides. Validate all 23 inputs, discrete shear planes and 0 < a <= L; block answers/exports and clear stale previews on invalid edits. Equal ratios are labeled co-governing within numerical tolerance without relaxing the raw criterion boundary. Preserve publication status separately from engineering approval; Published is not a validated capacity.
