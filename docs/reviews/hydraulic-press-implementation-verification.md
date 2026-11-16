@@ -80,7 +80,9 @@ Actual HTML/Builder checks and DOCX image hashes confirm separation: student out
 | SVG/PNG consistency | Both decoded-pixel comparisons passed. |
 | JavaScript syntax and Git whitespace | Passed; Git reports only its normal LF/CRLF conversion notices. |
 
-Results are in [unit-tests.txt](../../exports/hydraulic-press-review/unit-tests.txt), [browser-qa.json](../../exports/hydraulic-press-review/browser-qa.json), and [artifact-qa.json](../../exports/hydraulic-press-review/artifact-qa.json). Final PDF page images/contact sheets are in exports/hydraulic-press-review/pdf-pages-final; the earlier pdf-pages folder is superseded QA output and was preserved.
+> Historical artifact note: The following QA files and generated-output directories were generated during local verification and are not included in the committed repository. Their original paths are retained as historical provenance only.
+
+Results are in unit-tests.txt (historical path: `../../exports/hydraulic-press-review/unit-tests.txt`), browser-qa.json (historical path: `../../exports/hydraulic-press-review/browser-qa.json`), and artifact-qa.json (historical path: `../../exports/hydraulic-press-review/artifact-qa.json`). Final PDF page images/contact sheets are in exports/hydraulic-press-review/pdf-pages-final; the earlier pdf-pages folder is superseded QA output and was preserved.
 
 ### Reproduction
 

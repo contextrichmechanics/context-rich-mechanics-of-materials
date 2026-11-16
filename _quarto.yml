@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "**/*.{qmd,md,ipynb,Rmd}"
+    - "!docs/reviews/**"
   resources:
     - data/problem-catalog.json
     - data/problem-catalog.js

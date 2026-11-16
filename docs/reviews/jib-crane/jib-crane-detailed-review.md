@@ -42,7 +42,7 @@ All 51 packages remain. Source variables, questions and saved variants match the
 
 ### 2.2 Original audit findings concerning this package
 
-The original 25 October audit is present only in the sibling original checkout, at [quality-audit-2026-10-25.md][AUDIT]. It was read without modification or copying. Its audited baseline was `772817e496ac66476fce7464dcceebde31aa2588`. Current jib sources retain the relevant findings.
+The original 25 October audit is present only in the sibling original checkout, at `quality-audit-2026-10-25.md` (historical local citation; see Section 16). It was read without modification or copying. Its audited baseline was `772817e496ac66476fce7464dcceebde31aa2588`. Current jib sources retain the relevant findings.
 
 | Original finding | Reassessment |
 |---|---|
@@ -705,7 +705,7 @@ The remaining uncertainties are physical-model intent, material/section/connecti
 
 The following local references are relative to this report. Line anchors identify the inspected source location at the stated HEAD; they are not claims about a future correction.
 
-- [Original audit, problem card/P03 and priority order][AUDIT]: sibling original checkout, especially lines 851–881 and 1515–1533. This local historical link intentionally lies outside the independent clone; the audit was not copied.
+- Original audit, problem card/P03 and priority order (historical local citation): sibling original checkout, especially lines 851–881 and 1515–1533. The original audit was inspected in a sibling local checkout and is not included in the committed archive. No repository copy is available to GitHub readers; the audit was not copied.
 - [Problem metadata][META], [variables][VARS], [all question/answer records][QUESTIONS].
 - [q7 load/moment][Q7], [q8 equilibrium][Q8], [q9 beam/comparison][Q9], [q10 stability/connections][Q10], [q11 decision][Q11].
 - [Static student context/questions][STATIC], [direct packet][STUDENT], [index][INDEX], [guide baseline][GUIDE], [guide idealization][G712], [calculation notebook][NOTEBOOK], [draft notes][NOTES].
@@ -718,7 +718,8 @@ The following local references are relative to this report. Line anchors identif
 - [MIT 2.080J, energy-method solution notes][WEB2], PDF pp. 1–5: direct integration, strain energy and Castigliano methods; these support the independent method, not a certified crane model.
 - [David M. Parks, MIT 2.002 beam/buckling notes][WEB3], especially PDF pp. 7–13: support conditions, beam response and elastic-column idealizations.
 
-[AUDIT]: ../../../../context-rich-mechanics-of-materials/docs/reviews/quality-audit-2026-10-25.md#L851
+**Original historical audit reference (provenance only):** `../../../../context-rich-mechanics-of-materials/docs/reviews/quality-audit-2026-10-25.md#L851`.
+
 [META]: ../../../problems/jib-crane-battery-pack/problem.json
 [VARS]: ../../../problems/jib-crane-battery-pack/variables.json
 [QUESTIONS]: ../../../problems/jib-crane-battery-pack/questions.json

@@ -59,7 +59,9 @@ The endpoint-supported physical model and warning policy were retained. No new m
 | New | [tests/suspended-equipment-platform.test.mjs](../../tests/suspended-equipment-platform.test.mjs) | Independent numerical, registry, input, warning, ranking and regression tests. |
 | New | [docs/reviews/suspended-equipment-platform-implementation-verification.md](../../docs/reviews/suspended-equipment-platform-implementation-verification.md) | This verification and preservation record. |
 
-A machine-readable copy is in [source-manifest.json](../../exports/platform-review/source-manifest.json). The extra platform-packet helper shares only this problem's layout/substitution code; it avoids maintaining three divergent copies of the new phase sequence. Other packages retain their existing layout and mechanics.
+> Historical artifact note: The following QA files and generated-output directories were generated during local verification and are not included in the committed repository. Their original paths are retained as historical provenance only.
+
+A machine-readable copy is in source-manifest.json (historical path: `../../exports/platform-review/source-manifest.json`). The extra platform-packet helper shares only this problem's layout/substitution code; it avoids maintaining three divergent copies of the new phase sequence. Other packages retain their existing layout and mechanics.
 
 ## Before and after engineering findings
 
@@ -167,7 +169,7 @@ Angles below are signed radians. R11's tiny floating-point residual is classifie
 | R14 | 0.0299444945666 | 0.0000279770160491 | 0.0000729146027343 | FC | unassessed |
 | R15 | 612.097959184 | -6.21632653061 | -0.816326530612 | AH | model-warning |
 
-Case definitions and detailed raw results are in [numerical-results.json](../../exports/platform-review/numerical-results.json); the approved input definitions are also in the specification. The [exact-rational result](../../exports/platform-review/exact-oracle-qa.json) records the independent comparison.
+Case definitions and detailed raw results are in numerical-results.json (historical path: `../../exports/platform-review/numerical-results.json`); the approved input definitions are also in the specification. The exact-rational result (historical path: `../../exports/platform-review/exact-oracle-qa.json`) records the independent comparison.
 
 Important counterexamples passed:
 
@@ -243,9 +245,9 @@ Original context SHA-256 remains d1b7fd7c676c926f59e52f8bf21507f7fceef894f48fa81
 | Diff and preservation | Source changes reviewed against the manifest; Git whitespace check has zero findings. No new deletion, unexpected source file, staged change or unrelated mechanics change. |
 | Graphify refresh | Attempted graphify update .; CLI and Python module are unavailable. Existing graph files were preserved and may be stale. No successful refresh is claimed. |
 
-Evidence is under [exports/platform-review](../../exports/platform-review/), especially platform-tests.txt, hydraulic-tests.txt, browser-qa.json, hydraulic-browser/browser-qa.json, artifact-qa.json, figure-qa.json, exact-oracle-qa.json and preservation-qa.json. QA exports and local website outputs are Git-ignored and are outside the source manifest.
+Evidence is under exports/platform-review (historical path: `../../exports/platform-review/`), especially platform-tests.txt, hydraulic-tests.txt, browser-qa.json, hydraulic-browser/browser-qa.json, artifact-qa.json, figure-qa.json, exact-oracle-qa.json and preservation-qa.json. QA exports and local website outputs are Git-ignored and are outside the source manifest.
 
-Native outputs remain in [_site/exports/suspended-equipment-platform/default](../../_site/exports/suspended-equipment-platform/default/). HTML/DOC/QMD sources remain in [exports/suspended-equipment-platform/default](../../exports/suspended-equipment-platform/default/). PDF page images used for review are in exports/platform-review/pdf-pages. No external publication occurred.
+Native outputs remain in _site/exports/suspended-equipment-platform/default (historical path: `../../_site/exports/suspended-equipment-platform/default/`). HTML/DOC/QMD sources remain in exports/suspended-equipment-platform/default (historical path: `../../exports/suspended-equipment-platform/default/`). PDF page images used for review are in exports/platform-review/pdf-pages. No external publication occurred.
 
 ### Issues encountered and resolved during verification
 
